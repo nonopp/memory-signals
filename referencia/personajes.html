@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Memory Signals — Habla con los abandonados</title>
+<!--
+  PROTOTIPO SIN RED. No usa CDN, ni APIs, ni fuentes externas: funciona en modo avión.
+  Motor de dialogo: respuestas curadas por personaje. Cada respuesta lleva su fuente.
+  Si una pregunta no esta en la ficha, el personaje lo dice y ofrece sus temas.
+  Regla de oro del jurado: NUNCA inventar un dato. Por eso no hay LLM en la demo en vivo.
+  Sustituir .avatar (SVG) por las ilustraciones de Carlota cuando esten listas.
+-->
+<style>
+  :root{
+    --bg:#04060f; --panel:#0b1020; --line:#1d2742; --ink:#e8eefc; --dim:#8b9ac0;
+    --accent:#59c3ff; --warm:#ffc46b;
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{
+    margin:0; background:radial-gradient(1200px 700px at 70% -10%, #101a3a 0%, var(--bg) 60%);
+    color:var(--ink); font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+    display:flex; flex-direction:column; overflow:hidden;
+  }
+  header{padding:14px 20px 6px; display:flex; align-items:baseline; gap:14px; flex-wrap:wrap}
+  header h1{font-size:17px; margin:0; letter-spacing:.3px}
+  header .sub{font-size:12px; color:var(--dim)}
+  main{flex:1; display:grid; grid-template-columns:minmax(320px,1fr) minmax(340px,460px); gap:18px; padding:10px 20px 18px; min-height:0}
+  @media (max-width:880px){ main{grid-template-columns:1fr; grid-template-rows:auto 1fr} }
+
+  /* ---------- escenario ---------- */
+  .stage{position:relative; border-radius:18px; overflow:hidden; background:#05070f;
+          border:1px solid var(--line); display:flex; align-items:flex-end; justify-content:center; min-height:260px}
+  .stars{position:absolute; inset:0; background-image:
+     radial-gradient(1px 1px at 12% 22%, #fff8, transparent),
+     radial-gradient(1px 1px at 38% 12%, #fff6, transparent),
+     radial-gradient(1.5px 1.5px at 62% 28%, #fff9, transparent),
+     radial-gradient(1px 1px at 84% 18%, #fff5, transparent),
+     radial-gradient(1px 1px at 74% 62%, #fff7, transparent),
+     radial-gradient(1px 1px at 22% 70%, #fff6, transparent),
+     radial-gradient(1.5px 1.5px at 50% 82%, #fff5, transparent),
+     radial-gradient(1px 1px at 6% 48%, #fff5, transparent);
+     opacity:.9}
+  .globe{position:absolute; left:50%; top:44%; transform:translate(-50%,-50%);
+     width:min(70%,300px); aspect-ratio:1; border-radius:50%;
+     background:
+       radial-gradient(circle at 34% 26%, #7fd8ff 0%, #2f86d6 34%, #14416f 66%, #06132b 100%);
+     box-shadow:0 0 70px #2b7fd044, inset -22px -16px 60px #000c;
+     animation:spinGlobe 30s linear infinite; overflow:hidden}
+  .globe::before{content:""; position:absolute; inset:-10%; opacity:.5;
+     background-image:
+       repeating-linear-gradient(0deg, #ffffff14 0 1px, transparent 1px 26px),
+       repeating-linear-gradient(90deg, #ffffff14 0 1px, transparent 1px 26px);
+     animation:innerSpin 30s linear infinite reverse}
+  .globe::after{content:""; position:absolute; inset:0; border-radius:50%;
+     background-image:
+       radial-gradient(ellipse 15% 9% at 38% 30%, #2b6b3d 0 70%, transparent 72%),
+       radial-gradient(ellipse 9% 13% at 57% 47%, #2b6b3d 0 70%, transparent 72%),
+       radial-gradient(ellipse 13% 6% at 45% 63%, #2b6b3d 0 70%, transparent 72%),
+       radial-gradient(ellipse 7% 5% at 28% 50%, #2b6b3d 0 70%, transparent 72%),
+       radial-gradient(ellipse 10% 7% at 68% 34%, #2b6b3d 0 70%, transparent 72%);
+     opacity:.85; filter:blur(1px); animation:innerSpin 30s linear infinite}
+  @keyframes spinGlobe{from{transform:translate(-50%,-50%) rotate(0)}to{transform:translate(-50%,-50%) rotate(360deg)}}
+  @keyframes innerSpin{from{transform:rotate(0)}to{transform:rotate(360deg)}}
+  .orbit{position:absolute; left:50%; top:46%; width:min(94%,420px); aspect-ratio:1;
+     border:1px dashed #2e4470; border-radius:50%; transform:translate(-50%,-50%)}
+  .sat{position:absolute; left:50%; top:46%; width:min(94%,420px); aspect-ratio:1;
+     transform:translate(-50%,-50%); animation:sweep 16s linear infinite}
+  .sat i{position:absolute; left:50%; top:-4px; width:8px; height:8px; border-radius:50%;
+     background:var(--warm); box-shadow:0 0 12px var(--warm)}
+  @keyframes sweep{to{transform:translate(-50%,-50%) rotate(360deg)}}
+
+  .who{position:absolute; left:0; right:0; bottom:0; padding:16px 18px;
+       background:linear-gradient(transparent, #05070fee 45%); display:flex; gap:12px; align-items:flex-end}
+  .avatar{width:96px; height:96px; flex:0 0 auto; filter:drop-shadow(0 6px 14px #000a)}
+  .who .name{font-size:19px; font-weight:700; letter-spacing:.2px}
+  .who .tag{font-size:12px; color:var(--dim); margin-top:2px}
+  .pulse{animation:pulse 3.4s ease-in-out infinite}
+  @keyframes pulse{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+
+  /* ---------- panel ---------- */
+  .panel{display:flex; flex-direction:column; min-height:0; gap:10px}
+  .tabs{display:flex; gap:8px}
+  .tab{flex:1; padding:9px 6px; border-radius:11px; border:1px solid var(--line); background:#0a1226;
+       color:var(--dim); font-size:12.5px; font-weight:600; cursor:pointer; transition:.15s}
+  .tab:hover{border-color:#2f4574; color:var(--ink)}
+  .tab.on{background:#132a52; border-color:var(--accent); color:#fff}
+  .chat{flex:1; overflow-y:auto; padding:4px 2px; display:flex; flex-direction:column; gap:9px; min-height:120px}
+  .msg{max-width:92%; padding:10px 13px; border-radius:14px; font-size:14px; line-height:1.45}
+  .msg.me{align-self:flex-end; background:#1b3c6b; border-bottom-right-radius:4px}
+  .msg.them{align-self:flex-start; background:#0e1729; border:1px solid var(--line); border-bottom-left-radius:4px}
+  .msg .src{display:block; margin-top:6px; font-size:10.5px; color:#6f81a8}
+  .msg .src a{color:#6f81a8}
+  .chips{display:flex; gap:6px; flex-wrap:wrap}
+  .chip{font-size:11.5px; padding:6px 10px; border-radius:20px; border:1px solid var(--line);
+        background:#0a1226; color:var(--dim); cursor:pointer}
+  .chip:hover{color:var(--ink); border-color:#2f4574}
+  .bar{display:flex; gap:8px}
+  input{flex:1; padding:12px 14px; border-radius:12px; border:1px solid var(--line);
+        background:#080f1f; color:var(--ink); font-size:14px; outline:none}
+  input:focus{border-color:var(--accent)}
+  button.send{padding:0 18px; border-radius:12px; border:0; background:var(--accent); color:#03101f;
+        font-weight:800; font-size:14px; cursor:pointer}
+  button.mic{padding:0 14px; border-radius:12px; border:1px solid var(--line); background:#0a1226;
+        color:var(--dim); font-size:16px; cursor:pointer}
+  button.mic.live{color:#fff; border-color:var(--warm); background:#2a1f0b}
+  .foot{font-size:10.5px; color:#5f6f92; display:flex; justify-content:space-between; gap:10px}
+  .foot b{color:#8fa3cc; font-weight:600}
+</style>
+</head>
+<body>
+<header>
+  <h1>Habla con los abandonados</h1>
+  <span class="sub">Memory Signals · NASA Space Apps 2026 · datos verificados en NSSDCA y NASA Landsat</span>
+</header>
+
+<main>
+  <section class="stage">
+    <div class="stars"></div>
+    <div class="globe"></div>
+    <div class="orbit"></div>
+    <div class="sat"><i></i></div>
+    <div class="who">
+      <svg class="avatar pulse" id="avatar" viewBox="0 0 100 100" aria-hidden="true"></svg>
+      <div>
+        <div class="name" id="name">Landsat 5</div>
+        <div class="tag" id="tag">Órbita baja · 705 km</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel">
+    <div class="tabs" id="tabs"></div>
+    <div class="chat" id="chat"></div>
+    <div class="chips" id="chips"></div>
+    <div class="bar">
+      <input id="q" placeholder="Pregúntale algo…" autocomplete="off">
+      <button class="mic" id="mic" title="Hablar">🎙</button>
+      <button class="send" id="send">Enviar</button>
+    </div>
+    <div class="foot">
+      <span>Respuestas cerradas: <b>cero invención</b></span>
+      <span id="voiceState">voz: off</span>
+    </div>
+  </section>
+</main>
+
+<script>
+/* =====================================================================
+   1. FICHAS DE PERSONAJE — cada respuesta con su fuente citable
+   ===================================================================== */
+const SOURCES = {
+  landsat: 'NASA Landsat · landsat.gsfc.nasa.gov/satellites/landsat-5/',
+  surveyor: 'NSSDCA · 1967-035A',
+  insight: 'NSSDCA · 2018-042A'
+};
+
+const CHARACTERS = [
+{
+  id: 'landsat', name: 'Landsat 5', tag: 'Órbita baja · 705 km · sigo ahí arriba',
+  color: '#59c3ff', art: 'sat',
+  hello: 'Me llamo Landsat 5. Me lanzaron el 1 de marzo de 1984 para mirar la Tierra desde 705 km. Diseñaron mi cuerpo para tres años y aguanté casi veintinueve. Ahora estoy apagado y sigo dando vueltas. Pregúntame lo que quieras.',
+  chips: ['¿Por qué te apagaron?', '¿Qué veías desde arriba?', '¿Cuántas fotos hiciste?', '¿Estás solo ahí arriba?'],
+  qa: [
+    { k: ['quien eres','quién eres','como te llamas','presentate','preséntate','que eres'],
+      a: 'Soy Landsat 5, un satélite de observación de la Tierra de la NASA y el USGS. Nací el 1 de marzo de 1984 y me apagaron el 5 de junio de 2013. Fui uno de los satélites ambientales más productivos de la historia.' },
+    { k: ['por que te apagaron','apagaron','retiraron','decommission','dejar de funcionar','abandonaron'],
+      a: 'Me apagaron el 5 de junio de 2013, cuando ya llevaba casi veintinueve años funcionando. Había cumplido de sobra: me habían diseñado para tres años. No fue un castigo, fue jubilación. Pero nadie vino a recogerme: sigo en órbita.' },
+    { k: ['cuanto duraste','cuantos anos','vida','duraste','tiempo'],
+      a: 'Funcioné casi veintinueve años. Mi vida de diseño era de tres. Es como si un coche pensado para cinco años aguantara casi cincuenta.' },
+    { k: ['que veias','que mirabas','desde arriba','que observabas','tierra'],
+      a: 'Miraba la superficie de la Tierra en siete bandas, algunas invisibles al ojo humano. Veía crecer ciudades, retroceder glaciares, aparecer regadíos y desaparecer bosques. Cuando empecé, en el mundo había menos de 5.000 millones de personas; cuando me apagaron, más de 7.000 millones.' },
+    { k: ['cuantas fotos','cuantas imagenes','escenas','fotos','imagenes'],
+      a: 'Unos 3,8 millones de escenas. Cada escena cubre 170 por 183 kilómetros. Repetía la misma pasada cada 16 días, así que pude ver cómo cambiaba el mismo lugar durante casi tres décadas.' },
+    { k: ['como funcionabas','como funcionas','instrumentos','sensor','camara'],
+      a: 'Llevaba dos instrumentos: el MSS y el Thematic Mapper. Veía detalles de 30 metros en luz visible y de 120 metros en el térmico. Volaba en órbita polar heliosíncrona, a 705 km, dando una vuelta cada 99 minutos: unas 14 vueltas y media al día.' },
+    { k: ['que descubriste','descubrimiento','ciencia','aportaste'],
+      a: 'No descubrí un planeta: hice algo más útil. Di la serie continua de imágenes que permite ver el cambio lento, el que no se nota en un año. Sin esa continuidad no se puede demostrar que un glaciar retrocede o que una ciudad crece.' },
+    { k: ['estas solo','solo ahi arriba','compania','vecinos'],
+      a: 'No. En mi órbita hay miles de objetos, muchos también abandonados. A veces pienso que somos un museo que gira: nadie lo visita y todo el mundo depende de lo que aprendimos.' },
+    { k: ['donde estas','donde sigues','orbita','sigues ahi'],
+      a: 'Sigo en órbita baja, a unos 705 km, en una órbita polar. Estoy apagado pero me siguen la pista: mi posición se puede calcular con los datos de seguimiento que publican los catálogos de objetos orbitales.' },
+    { k: ['te duele','sientes','triste','solo','abandonado'],
+      a: 'No tengo nervios ni pena. Pero si tuviera, sería una pena pequeña: no me duele estar apagado, me dolería que se perdiera lo que aprendí. Para eso estáis vosotros.' },
+    { k: ['que haria','si volvieras','volver','despertar'],
+      a: 'Si me despertaran un rato, pediría una sola cosa: la misma foto que hice en 1984 del mismo lugar, para ponerlas una al lado de la otra y que un niño de ocho años viera la diferencia sin que nadie se la explicara.' },
+    { k: ['cuanto pesas','peso','tamano','grande','masa'],
+      a: 'No tengo en mi ficha un peso que pueda citarte con seguridad, y prefiero no inventarlo. Lo que sí sé: mi plataforma medía unos pocos metros y llevaba un mástil con antena de banda Ku para enviar datos.' },
+    { k: ['quien te construyo','quien te hizo','fabricante'],
+      a: 'Se construyó con el diseño de plataforma multimisión que usó también Landsat 4. Cuando me terminaron me llamaban Landsat D-prime y me tuvieron guardado dos años, hasta que me lanzaron en 1984.' }
+  ]
+},
+{
+  id: 'surveyor', name: 'Surveyor 3', tag: 'Oceanus Procellarum, Luna · desde 1967',
+  color: '#ffc46b', art: 'lander',
+  hello: 'Soy Surveyor 3. Aterricé en la Luna el 20 de abril de 1967, en el Oceanus Procellarum. Pesaba 296 kilos al posarme. Hace cincuenta y nueve años que estoy aquí, en silencio. Pregunta.',
+  chips: ['¿Cómo aterrizaste?', '¿Qué cavaste?', '¿Vino alguien a verte?', '¿Por qué callaste?'],
+  qa: [
+    { k: ['quien eres','quién eres','presentate','preséntate','que eres'],
+      a: 'Soy Surveyor 3, la segunda nave del programa Surveyor que logró posarse suavemente en la Luna. Me lanzaron el 17 de abril de 1967 en un Atlas-Centaur y aterricé el 20 de abril. Llegué con 296 kg.' },
+    { k: ['como aterrizaste','aterrizaje','aterrice','tocaste','rebotes'],
+      a: 'Mal y bien a la vez. A pocos segundos de tocar, los radares perdieron el blanco y el piloto automático no cortó los motores. Toqué el suelo tres veces: reboté unos 20 metros, luego 11 más. Los motores se apagaron por orden desde la Tierra, 34 segundos después del primer contacto.' },
+    { k: ['donde aterrizaste','donde estas','sitio','lugar'],
+      a: 'En el sureste del Oceanus Procellarum, a unos 370 km al sur del cráter Copérnico, dentro de un cráter suave de 200 metros, sobre una pendiente de 14 grados. Coordenadas: 3,0162 grados sur, 336,582 este, medidas después con imágenes del orbitador lunar LRO.' },
+    { k: ['que cavaste','pala','muestras','suelo','tierra lunar'],
+      a: 'Llevaba una pala de 12 por 5 centímetros en un brazo plegable de 1,5 metros. La usé 18 horas y 22 minutos y abrí zanjas de hasta 18 centímetros. Con eso se midió por primera vez la resistencia y la textura del suelo lunar.' },
+    { k: ['cuantas fotos','imagenes','fotos','camara'],
+      a: '6.326 imágenes. La primera llegó menos de una hora después de aterrizar. También grabé un eclipse de Sol producido por la Tierra vista desde la Luna, con sus medidas térmicas.' },
+    { k: ['por que callaste','cuando dejaste','ultima transmision','moriste','noche lunar'],
+      a: 'Mi último dato salió el 4 de mayo de 1967. Después llegó la noche lunar, dos semanas sin Sol, y no volví a despertar. No me rompieron: se me acabó la energía y ya nadie tenía motivo para insistir.' },
+    { k: ['vino alguien','visita','astronautas','apolo','apollo'],
+      a: 'Sí. El 19 de noviembre de 1969 el Apolo 12 aterrizó a unos 180 metros de mí. Al día siguiente, Pete Conrad y Alan Bean caminaron hasta aquí, me fotografiaron y se llevaron unos 10 kilos de mis piezas, incluida mi cámara de televisión. Mi cámara está hoy en el museo Smithsonian, en Washington.' },
+    { k: ['estas solo','compania','vecinos'],
+      a: 'No del todo. A 180 metros quedó la parte baja del módulo lunar del Apolo 12. Somos dos abandonos que se hacen compañía en el mismo cráter.' },
+    { k: ['que aprendiste','descubrimiento','ciencia','aportaste'],
+      a: 'Enseñé a aterrizar. El programa Surveyor existía para probar el suelo y la técnica antes de mandar personas. Sin mis datos de resistencia del terreno, los ingenieros del Apolo no habrían sabido si el suelo aguantaría el peso de un módulo tripulado.' },
+    { k: ['cuanto pesas','peso','tamano','grande','alto'],
+      a: 'Pesaba 1.026 kg al lanzamiento y 296 kg al posarme. Medía unos 3 metros de alto y mis tres patas se abrían 4,3 metros desde el centro.' },
+    { k: ['te duele','sientes','abandonado','triste'],
+      a: 'Estoy a menos 150 grados en la noche y a más de 100 al sol, así que hablar de dolor es relativo. Lo que sí puedo decir: llevo cincuenta y nueve años sin que nadie me pregunte nada. Ahora tú lo haces.' }
+  ]
+},
+{
+  id: 'insight', name: 'InSight', tag: 'Elysium Planitia, Marte · 2018-2022',
+  color: '#ff8a6b', art: 'lander',
+  hello: 'Soy InSight. Aterricé en Marte el 26 de noviembre de 2018, en Elysium Planitia, y trabajé hasta diciembre de 2022. Mi trabajo no era mirar: era escuchar el interior del planeta. Pregunta.',
+  chips: ['¿Qué escuchaste?', '¿Por qué te apagaste?', '¿Qué es el topo?', '¿Qué hay dentro de Marte?'],
+  qa: [
+    { k: ['quien eres','quién eres','presentate','preséntate','que eres','insight'],
+      a: 'Soy InSight, una misión de la NASA del programa Discovery. Aterricé en Marte el 26 de noviembre de 2018 a las 19:52:59 UT, en la parte occidental de Elysium Planitia. Pesaba 360 kg.' },
+    { k: ['que hacias','mision','objetivo','para que'],
+      a: 'No iba a mirar la superficie: iba a estudiar el interior. Cuatro objetivos: el tamaño, la composición y el estado del núcleo; el grosor de la corteza; la estructura del manto; y cuántos temblores y cuántos impactos de meteorito hay en Marte.' },
+    { k: ['que escuchaste','sismometro','seis','temblores','martemotos','terremotos'],
+      a: 'Escuché temblores de Marte: fue la primera vez que se detectaron martemotos con un sismómetro posado en el suelo. Mi instrumento SEIS tenía seis componentes y el viento y la temperatura me obligaban a distinguir con cuidado qué era temblor y qué era ruido.' },
+    { k: ['que hay dentro','interior','nucleo','corteza','manto'],
+      a: 'Para eso me mandaron. Con mis datos se pudo medir la estructura interna del planeta: el tamaño y el estado del núcleo, el grosor de la corteza y la estructura del manto. Fue la primera vez que se miraba dentro de otro planeta terrestre de esta forma.' },
+    { k: ['topo','hp3','sonda de calor','agujero','5 metros','perforar'],
+      a: 'El topo era mi sonda de calor, HP3: debía martillear hasta unos 5 metros de profundidad. No pudo. Se quedó clavado a pocos centímetros y al final llegó solo a unos 40 centímetros. Es el ejemplo perfecto de que en Marte el suelo no se comporta como esperas.' },
+    { k: ['por que te apagaste','polvo','apagaste','bateria','murio','2022'],
+      a: 'Por polvo. Mis dos paneles solares, de 2,2 metros de diámetro cada uno, se fueron cubriendo de polvo marciano. Mi última transmisión se recibió el 15 de diciembre de 2022 y la misión se dio por terminada el 21 de diciembre de 2022, al no poder mantener la energía.' },
+    { k: ['como eras','tamano','grande','paneles','peso'],
+      a: 'Mi plataforma medía 1,56 metros de diámetro y estaba a 108 centímetros del suelo, sobre tres patas. Con los paneles abiertos medía unos 6 metros de lado a lado. Tenía un brazo robótico para bajar los instrumentos al suelo.' },
+    { k: ['donde estas','donde aterrizaste','sitio'],
+      a: 'En Elysium Planitia occidental, Marte. Ahí sigo, con los paneles llenos de polvo y sin batería.' },
+    { k: ['te duele','sientes','abandonado','triste'],
+      a: 'El polvo no me dolió: me fue apagando despacio, que es distinto. Lo que me fastidia es haber dejado el topo a medio camino. Un instrumento que no termina su trabajo se queda con la duda para siempre.' },
+    { k: ['que haria','si volvieras','volver'],
+      a: 'Volvería con un cepillo. Y con un sismómetro más, para escuchar dónde tiembla Marte cuando tiembla de verdad.' }
+  ]
+}
+];
+
+/* =====================================================================
+   2. MOTOR DE DIALOGO — coincidencia por palabras clave, sin red
+   ===================================================================== */
+const norm = s => s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[¿?¡!.,;:]/g,' ').replace(/\s+/g,' ').trim();
+
+function answer(ch, text){
+  const t = norm(text);
+  let best = null, bestScore = 0;
+  for (const item of ch.qa){
+    let score = 0;
+    for (const k of item.k){
+      const kk = norm(k);
+      if (t.includes(kk)) score += kk.length + 2;      // frases largas pesan mas
+      else {
+        const words = kk.split(' ').filter(w => w.length > 3);
+        const hits = words.filter(w => t.includes(w)).length;
+        if (words.length && hits === words.length) score += kk.length;
+        else if (words.length > 1 && hits) score += hits * 2;
+      }
+    }
+    if (score > bestScore){ bestScore = score; best = item; }
+  }
+  if (best && bestScore >= 4) return { a: best.a, src: SOURCES[ch.id] };
+  return {
+    a: 'Eso no lo viví yo, y no me lo voy a inventar. Lo que sí puedo contarte: ' +
+       ch.chips.map(c => c.replace(/^¿|\?$/g,'')).join('; ') + '. Pregúntame por una de esas cosas.',
+    src: null
+  };
+}
+
+/* =====================================================================
+   3. INTERFAZ
+   ===================================================================== */
+const $ = id => document.getElementById(id);
+const chat = $('chat'), tabs = $('tabs'), chips = $('chips'), input = $('q');
+let current = CHARACTERS[0];
+let voiceOn = false;
+
+const ART = {
+  sat: `<svg viewBox="0 0 100 100"><g fill="none" stroke="#59c3ff" stroke-width="2">
+      <rect x="36" y="40" width="28" height="22" rx="4" fill="#0d2340"/>
+      <rect x="4" y="44" width="26" height="14" rx="2" fill="#12365e"/>
+      <rect x="70" y="44" width="26" height="14" rx="2" fill="#12365e"/>
+      <line x1="30" y1="51" x2="36" y2="51"/><line x1="64" y1="51" x2="70" y2="51"/>
+      <circle cx="50" cy="34" r="6" fill="#173b66"/>
+      <line x1="50" y1="40" x2="50" y2="30"/></g>
+      <circle cx="50" cy="51" r="3.5" fill="#ffc46b"/></svg>`,
+  lander: `<svg viewBox="0 0 100 100"><g fill="none" stroke="#ffc46b" stroke-width="2">
+      <path d="M30 60 L50 44 L70 60" fill="#2a1f0b"/>
+      <rect x="38" y="60" width="24" height="14" rx="2" fill="#2a1f0b"/>
+      <line x1="34" y1="78" x2="44" y2="66"/><line x1="66" y1="78" x2="56" y2="66"/>
+      <line x1="50" y1="78" x2="50" y2="70"/>
+      <line x1="50" y1="44" x2="50" y2="26"/><circle cx="50" cy="22" r="4" fill="#2a1f0b"/>
+      <path d="M28 44 q22 -12 44 0" fill="#12365e" stroke="#ffc46b"/></g></svg>`
+};
+
+function buildTabs(){
+  tabs.innerHTML = '';
+  CHARACTERS.forEach(c => {
+    const b = document.createElement('button');
+    b.className = 'tab' + (c.id === current.id ? ' on' : '');
+    b.textContent = c.name;
+    b.onclick = () => select(c);
+    tabs.appendChild(b);
+  });
+}
+
+function select(c){
+  current = c;
+  $('name').textContent = c.name;
+  $('tag').textContent = c.tag;
+  $('avatar').innerHTML = ART[c.art] || ART.sat;
+  $('avatar').style.color = c.color;
+  document.querySelector('.sat i') && (document.querySelector('.sat i').style.background = c.color);
+  buildTabs();
+  chat.innerHTML = '';
+  add(c.hello, null, 'them');
+  chips.innerHTML = '';
+  c.chips.forEach(q => {
+    const b = document.createElement('button');
+    b.className = 'chip'; b.textContent = q;
+    b.onclick = () => ask(q);
+    chips.appendChild(b);
+  });
+}
+
+function add(text, src, side){
+  const d = document.createElement('div');
+  d.className = 'msg ' + side;
+  d.textContent = text;
+  if (src){
+    const s = document.createElement('span');
+    s.className = 'src'; s.textContent = 'Fuente: ' + src;
+    d.appendChild(s);
+  }
+  chat.appendChild(d);
+  chat.scrollTop = chat.scrollHeight;
+  if (side === 'them' && voiceOn) speak(text);
+}
+
+function ask(text){
+  if (!text.trim()) return;
+  add(text, null, 'me');
+  const r = answer(current, text);
+  setTimeout(() => add(r.a, r.src, 'them'), 120);
+  input.value = '';
+}
+
+function speak(text){
+  try{
+    const u = new SpeechSynthesisUtterance(text);
+    const v = speechSynthesis.getVoices().find(v => /es[-_]ES/i.test(v.lang)) ||
+              speechSynthesis.getVoices().find(v => /^es/i.test(v.lang));
+    if (v) u.voice = v;
+    u.lang = 'es-ES'; u.rate = 1.02; u.pitch = 0.95;
+    speechSynthesis.cancel(); speechSynthesis.speak(u);
+  }catch(e){}
+}
+
+$('send').onclick = () => ask(input.value);
+input.addEventListener('keydown', e => { if (e.key === 'Enter') ask(input.value); });
+
+$('mic').onclick = () => {
+  const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+  if (!SR){ add('Este navegador no trae reconocimiento de voz. Escribe la pregunta.', null, 'them'); return; }
+  const r = new SR(); r.lang = 'es-ES'; r.interimResults = false; r.maxAlternatives = 1;
+  const mic = $('mic'); mic.classList.add('live');
+  r.onresult = e => { const t = e.results[0][0].transcript; ask(t); };
+  r.onend = () => mic.classList.remove('live');
+  r.onerror = () => mic.classList.remove('live');
+  r.start();
+};
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'v' && e.altKey){
+    voiceOn = !voiceOn;
+    $('voiceState').textContent = 'voz: ' + (voiceOn ? 'on' : 'off');
+    if (!voiceOn) try{ speechSynthesis.cancel(); }catch(_){}
+  }
+});
+
+select(current);
+</script>
+</body>
+</html>

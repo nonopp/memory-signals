@@ -1,0 +1,602 @@
+{
+  "version": "1.0",
+  "proyecto": {
+    "nombre": "Memory Signals",
+    "reto": "NASA's Discarded Equipment Storytelling",
+    "reto_url": "https://www.spaceappschallenge.org/2026/challenges/nasas-discarded-equipment-storytelling/",
+    "evento": "NASA Space Apps Challenge 2026",
+    "descripcion": "Un astronauta te invita a viajar con él. Al acercarte a tu destino ves destellos de color: son objetos que la NASA dejó allí. Elige uno y deja que te cuente su historia."
+  },
+  "reglas": {
+    "niveles": [
+      "explorador",
+      "cientifico"
+    ],
+    "nivel_por_defecto": "explorador",
+    "nota": "Un guion, dos textos. El turno, el personaje, la pregunta y las opciones son idénticos en los dos niveles: solo cambia el campo de texto."
+  },
+  "astronauta": {
+    "id": "guia",
+    "nombre": "Comandante Iria",
+    "nota": "Personaje de ficción. Guion cerrado: no improvisa y no da datos de misión.",
+    "lineas": {
+      "intro": {
+        "texto_explorador": "Hola. Me alegro de que hayas venido. Llevo años viajando a sitios donde la NASA dejó cosas.",
+        "texto_cientifico": "Bienvenido a bordo. Soy la comandante Iria. Paso los días yendo a lugares donde la NASA dejó equipo que ya no funciona, pero que sigue allí."
+      },
+      "edad_pregunta": {
+        "texto_explorador": "Antes de despegar, dime una cosa: ¿cuántos años tienes?",
+        "texto_cientifico": "Antes de despegar necesito saber con quién hablo: ¿qué edad tienes?"
+      },
+      "gusto_espacio": {
+        "texto_explorador": "¿Y te gusta el espacio?",
+        "texto_cientifico": "¿Te interesa el espacio, o es la primera vez que te lo planteas?"
+      },
+      "destino_pregunta": {
+        "texto_explorador": "Entonces elige adónde vamos. ¿La Luna, Marte o más allá?",
+        "texto_cientifico": "Elige destino. Tenemos tres rutas abiertas: la Luna, Marte y el espacio profundo."
+      },
+      "despegue": {
+        "texto_explorador": "¡Allá vamos! Sujétate, que esto empuja.",
+        "texto_cientifico": "Despegue autorizado. Trayectoria de crucero calculada."
+      },
+      "crucero": {
+        "texto_explorador": "Mira por la ventana. Tardaremos un poco, así que ve mirando las estrellas.",
+        "texto_cientifico": "En crucero. La vista de la ventana es el mejor sitio para esperar."
+      },
+      "destellos": {
+        "texto_explorador": "¿Ves esos brillos de colores? Esos son objetos que se quedaron aquí hace mucho. ¿Qué es eso que brilla?",
+        "texto_cientifico": "Ahí abajo hay destellos de colores: cada uno marca equipo abandonado que sigue en su sitio. ¿Cuál te llama?"
+      },
+      "pausa": {
+        "texto_explorador": "¿Quieres que vayamos a ver otro destello, o prefieres quedarte un rato aquí?",
+        "texto_cientifico": "Podemos seguir con otro objeto, volver a la ficha verificable o quedarnos un momento en silencio."
+      },
+      "despedida": {
+        "texto_explorador": "Cuando quieras volvemos. El espacio no se va a ninguna parte, y estas cosas llevan aquí muchos años.",
+        "texto_cientifico": "Fin de la visita guiada. Todo lo que te he contado lo puedes verificar en las fuentes de cada objeto."
+      }
+    }
+  },
+  "destinos": [
+    {
+      "id": "luna",
+      "nombre": "La Luna",
+      "rumbo": "384.400 km",
+      "color": "#c9d3e0",
+      "globo": "luna",
+      "aparatos": [
+        "surveyor3",
+        "lrv17"
+      ]
+    },
+    {
+      "id": "marte",
+      "nombre": "Marte",
+      "rumbo": "225 millones de km",
+      "color": "#e2764a",
+      "globo": "marte",
+      "aparatos": [
+        "opportunity",
+        "insight"
+      ]
+    },
+    {
+      "id": "espacio",
+      "nombre": "Espacio profundo",
+      "rumbo": "más allá de Plutón",
+      "color": "#7fb7ff",
+      "globo": "espacio",
+      "aparatos": [
+        "voyager1"
+      ]
+    }
+  ],
+  "aparatos": [
+    {
+      "id": "surveyor3",
+      "nombre": "Surveyor 3",
+      "cuerpo": "Luna",
+      "lugar": "Oceanus Procellarum (Océano de las Tormentas)",
+      "anio": 1967,
+      "estado": "muerto",
+      "estado_texto": {
+        "texto_explorador": "Apagado para siempre desde hace casi sesenta años.",
+        "texto_cientifico": "Inactivo desde 1967. Sigue en la superficie, visitado una vez por astronautas."
+      },
+      "ficha_resumen": "Primer aterrizaje estadounidense con visita humana posterior. Le quitaron la cámara y se la llevaron a la Tierra.",
+      "color": "#e8c66a",
+      "personas": [
+        {
+          "nombre": "Pete Conrad",
+          "rol": "comandante del Apolo 12",
+          "fuente": "https://www.nasa.gov/history/55-years-ago-apollo-12-makes-a-pinpoint-landing-on-the-moon/"
+        },
+        {
+          "nombre": "Alan Bean",
+          "rol": "piloto del módulo lunar del Apolo 12",
+          "fuente": "https://www.nasa.gov/history/55-years-ago-apollo-12-makes-a-pinpoint-landing-on-the-moon/"
+        }
+      ],
+      "fuentes": [
+        {
+          "texto": "NASA Science — Surveyor 3",
+          "url": "https://science.nasa.gov/mission/surveyor-3"
+        },
+        {
+          "texto": "LPI — The Surveyor Program (lugar y fecha de aterrizaje)",
+          "url": "https://www.lpi.usra.edu/lunar/missions/surveyor"
+        },
+        {
+          "texto": "NASA History — 55 años del Apolo 12",
+          "url": "https://www.nasa.gov/history/55-years-ago-apollo-12-makes-a-pinpoint-landing-on-the-moon/"
+        }
+      ],
+      "turnos": [
+        {
+          "id": "surveyor3_1",
+          "pregunta": "¿Quién anda ahí? Llevaba sesenta años sin que nadie se asomara.",
+          "opciones": [
+            "Hola, vengo de la Tierra",
+            "¿Cuánto tiempo llevas aquí?"
+          ],
+          "texto_explorador": "Soy Surveyor 3. Bajé aquí en 1967, cuando casi nadie sabía aterrizar sin romperse. Estoy un poco torcido.",
+          "texto_cientifico": "Soy Surveyor 3. Aterricé el 20 de abril de 1967 en el Océano de las Tormentas. Toqué el suelo tres veces antes de quedarme quieto.",
+          "fuente": "https://www.lpi.usra.edu/lunar/missions/surveyor"
+        },
+        {
+          "id": "surveyor3_2",
+          "pregunta": "¿Y cómo acabaste aquí arriba, tan lejos de todo?",
+          "opciones": [
+            "Cuéntame el viaje",
+            "¿Fue difícil llegar?"
+          ],
+          "texto_explorador": "Me subieron a un cohete el 17 de abril. Tres días de viaje y luego bajé despacio, frenando con mis motores.",
+          "texto_cientifico": "Despegué el 17 de abril de 1967. Tres días de vuelo y un descenso frenado con retrocohetes hasta posarme en la superficie lunar.",
+          "fuente": "https://science.nasa.gov/mission/surveyor-3"
+        },
+        {
+          "id": "surveyor3_3",
+          "pregunta": "¿Y qué hacías tú todo el día ahí parado?",
+          "opciones": [
+            "¿Para qué servías?",
+            "Enséñame tu trabajo"
+          ],
+          "texto_explorador": "Miraba el suelo y lo fotografiaba. Mi trabajo era ver si se podía aterrizar sin hundirse, como comprobar el hielo antes de patinar.",
+          "texto_cientifico": "Fotografié la superficie y analicé cómo resistía mi peso. Mi misión era demostrar que el suelo lunar soporta un aterrizaje controlado.",
+          "fuente": "https://science.nasa.gov/mission/surveyor-3"
+        },
+        {
+          "id": "surveyor3_4",
+          "pregunta": "¿Sabes quién vino a verte una vez, dos años y medio después?",
+          "opciones": [
+            "Pete Conrad y Alan Bean",
+            "Nadie ha vuelto nunca"
+          ],
+          "texto_explorador": "¡Pete Conrad y Alan Bean! Bajaron del Apolo 12 y caminaron hasta mí. Se llevaron mi cámara a casa.",
+          "texto_cientifico": "Pete Conrad y Alan Bean, del Apolo 12, aterrizaron en noviembre de 1969 a pocos minutos a pie. Desmontaron mi cámara de televisión y la devolvieron a la Tierra.",
+          "fuente": "https://www.nasa.gov/history/55-years-ago-apollo-12-makes-a-pinpoint-landing-on-the-moon/"
+        },
+        {
+          "id": "surveyor3_5",
+          "pregunta": "¿Y qué descubriste tú, de todo lo que viste?",
+          "opciones": [
+            "¿Qué aprendiste del suelo?",
+            "¿Quedó algo de ti allí?"
+          ],
+          "texto_explorador": "Que la Luna aguanta el peso de una nave. Gracias a eso, después se atrevieron a mandar personas.",
+          "texto_cientifico": "Demostré que la superficie lunar soporta el peso de un módulo de aterrizaje. Ese dato abrió el camino a los alunizajes tripulados del Apolo.",
+          "fuente": "https://www.lpi.usra.edu/lunar/missions/surveyor"
+        },
+        {
+          "id": "surveyor3_6",
+          "pregunta": "Ya te dejo descansar. ¿Quieres decirme una última cosa?",
+          "opciones": [
+            "Despídete",
+            "Ver la ficha con las fuentes"
+          ],
+          "texto_explorador": "Sigo aquí, torcido y apagado. Cuando alguien me mira, me acuerdo de aquel día en que dos personas caminaron hasta mí.",
+          "texto_cientifico": "Sigo en el Océano de las Tormentas, inactivo desde 1967. Mi cámara está en la Tierra y mi chasis, en la Luna. Todo lo que te he contado tiene fuente.",
+          "fuente": "https://science.nasa.gov/mission/surveyor-3"
+        }
+      ]
+    },
+    {
+      "id": "lrv17",
+      "nombre": "Rover lunar del Apolo 17",
+      "cuerpo": "Luna",
+      "lugar": "Valle Taurus-Littrow",
+      "anio": 1972,
+      "estado": "muerto",
+      "estado_texto": {
+        "texto_explorador": "Aparcado para siempre en un valle de la Luna.",
+        "texto_cientifico": "Inactivo desde diciembre de 1972. Última posición conocida: Taurus-Littrow."
+      },
+      "ficha_resumen": "El último vehículo que condujeron personas en la Luna. Recorrió decenas de kilómetros y sigue aparcado allí.",
+      "color": "#f0a35e",
+      "personas": [
+        {
+          "nombre": "Eugene Cernan",
+          "rol": "comandante del Apolo 17, condujo el rover",
+          "fuente": "https://www.nasa.gov/mission/apollo-17/"
+        },
+        {
+          "nombre": "Harrison Schmitt",
+          "rol": "geólogo y piloto del módulo lunar del Apolo 17",
+          "fuente": "https://www.nasa.gov/mission/apollo-17/"
+        }
+      ],
+      "fuentes": [
+        {
+          "texto": "NASA — Apolo 17",
+          "url": "https://www.nasa.gov/mission/apollo-17/"
+        },
+        {
+          "texto": "NASA Science — Lunar Roving Vehicle",
+          "url": "https://science.nasa.gov/resource/lunar-roving-vehicle/"
+        }
+      ],
+      "turnos": [
+        {
+          "id": "lrv17_1",
+          "pregunta": "¿Me has oído? Aquí abajo no hay nadie que escuche desde 1972.",
+          "opciones": [
+            "Te oigo perfectamente",
+            "¿Quién eres?"
+          ],
+          "texto_explorador": "Soy un coche. Un coche que conduce por la Luna. Tengo cuatro ruedas de metal y estoy aparcado en un valle.",
+          "texto_cientifico": "Soy el rover lunar del Apolo 17. Cuatro ruedas de malla metálica, chasis plegable y tracción eléctrica en cada rueda.",
+          "fuente": "https://science.nasa.gov/resource/lunar-roving-vehicle/"
+        },
+        {
+          "id": "lrv17_2",
+          "pregunta": "¿Cómo bajaste hasta aquí, si eres tan grande?",
+          "opciones": [
+            "¿Cabías en el cohete?",
+            "Cuéntame tu llegada"
+          ],
+          "texto_explorador": "Me plegaron como una silla de camping y me metieron en el módulo. Al llegar, Cernan y Schmitt me abrieron como un acordeón.",
+          "texto_cientifico": "Viajé plegado en el módulo lunar y me desplegaron en la superficie en diciembre de 1972, en el valle Taurus-Littrow.",
+          "fuente": "https://www.nasa.gov/mission/apollo-17/"
+        },
+        {
+          "id": "lrv17_3",
+          "pregunta": "¿Y qué hacías cuando te conducían?",
+          "opciones": [
+            "¿Para qué servías?",
+            "Enséñame cómo trabajabas"
+          ],
+          "texto_explorador": "Llevaba a dos personas de un sitio a otro más rápido que andando. Así pudieron ver mucho más y traer piedras de sitios lejanos.",
+          "texto_cientifico": "Amplié el radio de exploración de la tripulación: permitió recorrer decenas de kilómetros y muestrear estaciones geológicas alejadas del módulo.",
+          "fuente": "https://www.nasa.gov/mission/apollo-17/"
+        },
+        {
+          "id": "lrv17_4",
+          "pregunta": "¿Sabes quién se sentó en mí y me condujo?",
+          "opciones": [
+            "Eugene Cernan y Harrison Schmitt",
+            "Un robot sin nombre"
+          ],
+          "texto_explorador": "¡Eugene Cernan y Harrison Schmitt! Cernan era el comandante y Schmitt, un geólogo de verdad. Los dos me condujeron.",
+          "texto_cientifico": "Eugene Cernan, comandante, y Harrison Schmitt, geólogo y piloto del módulo lunar. Fueron los últimos seres humanos en caminar por la Luna.",
+          "fuente": "https://www.nasa.gov/mission/apollo-17/"
+        },
+        {
+          "id": "lrv17_5",
+          "pregunta": "¿Y qué se llevaron de aquí gracias a ti?",
+          "opciones": [
+            "¿Qué encontraron?",
+            "¿Valió la pena llevarme?"
+          ],
+          "texto_explorador": "Piedras muy antiguas. Algunas tenían más de cuatro mil millones de años: son trozos del pasado de la Luna.",
+          "texto_cientifico": "Muestras geológicas de varias estaciones, incluida materia muy antigua de la corteza lunar, que ayudó a datar la historia de la Luna.",
+          "fuente": "https://www.nasa.gov/mission/apollo-17/"
+        },
+        {
+          "id": "lrv17_6",
+          "pregunta": "Me voy a ir. ¿Me dices adiós?",
+          "opciones": [
+            "Hasta luego",
+            "Ver la ficha con las fuentes"
+          ],
+          "texto_explorador": "Adiós. Estoy aparcado aquí arriba, con las ruedas quietas y el polvo encima. Fui el último coche de la Luna.",
+          "texto_cientifico": "Permanezco en Taurus-Littrow desde diciembre de 1972. Fui el último vehículo tripulado sobre la Luna; desde entonces nadie ha vuelto a conducir allí.",
+          "fuente": "https://www.nasa.gov/mission/apollo-17/"
+        }
+      ]
+    },
+    {
+      "id": "opportunity",
+      "nombre": "Opportunity",
+      "cuerpo": "Marte",
+      "lugar": "Meridiani Planum",
+      "anio": 2004,
+      "estado": "muerto",
+      "estado_texto": {
+        "texto_explorador": "Apagado desde 2018 por una tormenta de polvo.",
+        "texto_cientifico": "Sin contacto desde el 10 de junio de 2018. Misión declarada finalizada el 13 de febrero de 2019."
+      },
+      "ficha_resumen": "Iba a durar 90 días y aguantó 5.111 soles. Recorrió 45,16 km antes de que una tormenta de polvo lo apagara.",
+      "color": "#e2764a",
+      "personas": [
+        {
+          "nombre": "Steve Squyres",
+          "rol": "investigador principal de los rovers Spirit y Opportunity",
+          "fuente": "https://www.jpl.nasa.gov/news/nasas-opportunity-rover-mission-on-mars-comes-to-end/"
+        }
+      ],
+      "fuentes": [
+        {
+          "texto": "NASA JPL — Fin de la misión Opportunity",
+          "url": "https://www.jpl.nasa.gov/news/nasas-opportunity-rover-mission-on-mars-comes-to-end/"
+        },
+        {
+          "texto": "The Planetary Society — Mars Exploration Rovers (45,16 km y 5.111 soles)",
+          "url": "https://www.planetary.org/space-missions/mars-exploration-rovers"
+        }
+      ],
+      "turnos": [
+        {
+          "id": "opportunity_1",
+          "pregunta": "¿Hola? ¿Hay alguien? Hace mucho que no oigo nada.",
+          "opciones": [
+            "Te escucho",
+            "¿Quién eres?"
+          ],
+          "texto_explorador": "Me llamo Opportunity. Soy un robot con seis ruedas. Vine a Marte a buscar pistas de agua y me quedé más tiempo del previsto.",
+          "texto_cientifico": "Soy Opportunity, el rover MER-B. Seis ruedas, paneles solares y un conjunto de instrumentos geológicos para buscar evidencias de agua.",
+          "fuente": "https://www.jpl.nasa.gov/news/nasas-opportunity-rover-mission-on-mars-comes-to-end/"
+        },
+        {
+          "id": "opportunity_2",
+          "pregunta": "¿Y cómo llegaste a Marte?",
+          "opciones": [
+            "¿Fue un viaje largo?",
+            "Cuéntame tu aterrizaje"
+          ],
+          "texto_explorador": "Salí de la Tierra el 7 de julio de 2003 y aterricé el 25 de enero de 2004, rebotando dentro de unas bolsas de aire.",
+          "texto_cientifico": "Despegué el 7 de julio de 2003 y aterrizé el 25 de enero de 2004 en Meridiani Planum, con airbags: reboté hasta detenerme.",
+          "fuente": "https://www.jpl.nasa.gov/news/nasas-opportunity-rover-mission-on-mars-comes-to-end/"
+        },
+        {
+          "id": "opportunity_3",
+          "pregunta": "¿Y qué hacías cada día en Marte?",
+          "opciones": [
+            "¿A qué te dedicabas?",
+            "Enséñame tu trabajo"
+          ],
+          "texto_explorador": "Iba despacio mirando piedras. Estudiaba las rocas para ver si antiguamente había habido agua allí.",
+          "texto_cientifico": "Recorría el terreno analizando rocas con mis espectrómetros y mi cámara microscópica, buscando minerales que se forman en presencia de agua.",
+          "fuente": "https://www.planetary.org/space-missions/mars-exploration-rovers"
+        },
+        {
+          "id": "opportunity_4",
+          "pregunta": "¿Sabes quién dirigía mi equipo desde la Tierra?",
+          "opciones": [
+            "Steve Squyres",
+            "Un grupo de astronautas"
+          ],
+          "texto_explorador": "Steve Squyres. Él era el jefe científico y decidía, con su equipo, qué piedra miraríamos cada día.",
+          "texto_cientifico": "Steve Squyres, de la Universidad de Cornell, fue el investigador principal: definía las prioridades científicas diarias del equipo de la misión.",
+          "fuente": "https://news.cornell.edu/stories/2019/02/built-last-90-days-mars-rover-opportunity-ends-mission-after-15-years"
+        },
+        {
+          "id": "opportunity_5",
+          "pregunta": "¿Y qué descubriste tú, de todo lo que viste?",
+          "opciones": [
+            "¿Había agua en Marte?",
+            "¿Qué fue lo más importante?"
+          ],
+          "texto_explorador": "Sí. Encontré pruebas de que hace mucho tiempo hubo agua salada donde yo estaba. Marte fue un lugar húmedo.",
+          "texto_cientifico": "Hallé evidencias de agua líquida en el pasado: minerales y estructuras sedimentarias que se forman en ambientes acuosos salinos.",
+          "fuente": "https://www.planetary.org/space-missions/mars-exploration-rovers"
+        },
+        {
+          "id": "opportunity_6",
+          "pregunta": "Me tengo que ir. ¿Cómo te despides?",
+          "opciones": [
+            "Adiós, Opportunity",
+            "Ver la ficha con las fuentes"
+          ],
+          "texto_explorador": "Iba a durar tres meses y estuve casi quince años. Una tormenta de polvo me tapó el sol y ya no pude cargar. Fue un buen viaje.",
+          "texto_cientifico": "Diseñado para 90 soles, operé 5.111 y recorrí 45,16 km. Una tormenta de polvo global cubrió mis paneles; dejé de responder el 10 de junio de 2018.",
+          "fuente": "https://www.jpl.nasa.gov/news/nasas-opportunity-rover-mission-on-mars-comes-to-end/"
+        }
+      ]
+    },
+    {
+      "id": "insight",
+      "nombre": "InSight",
+      "cuerpo": "Marte",
+      "lugar": "Elysium Planitia",
+      "anio": 2018,
+      "estado": "muerto",
+      "estado_texto": {
+        "texto_explorador": "Se quedó sin energía por el polvo en sus paneles.",
+        "texto_cientifico": "Retirado el 21 de diciembre de 2022 tras cuatro años de datos sísmicos."
+      },
+      "ficha_resumen": "El primer sismómetro puesto en Marte. Escuchó más de 1.300 terremotos marcianos antes de apagarse por el polvo.",
+      "color": "#d96f8f",
+      "personas": [
+        {
+          "nombre": "Bruce Banerdt",
+          "rol": "investigador principal de InSight",
+          "fuente": "https://science.nasa.gov/mission/insight/"
+        }
+      ],
+      "fuentes": [
+        {
+          "texto": "NASA Science — InSight",
+          "url": "https://science.nasa.gov/mission/insight/"
+        },
+        {
+          "texto": "NASA — Retirada de la misión InSight",
+          "url": "https://science.nasa.gov/mission/insight/"
+        }
+      ],
+      "turnos": [
+        {
+          "id": "insight_1",
+          "pregunta": "Silencio... pero te noto. ¿Quién eres?",
+          "opciones": [
+            "Soy un visitante",
+            "¿Qué eres tú?"
+          ],
+          "texto_explorador": "Soy InSight. Vine a Marte a escuchar. No a mirar: a escuchar cómo tiembla el suelo.",
+          "texto_cientifico": "Soy InSight, una estación geofísica. Mi trabajo era escuchar el interior de Marte a través de sus vibraciones.",
+          "fuente": "https://science.nasa.gov/mission/insight/"
+        },
+        {
+          "id": "insight_2",
+          "pregunta": "¿Cómo te posaste aquí sin romperte?",
+          "opciones": [
+            "¿Cómo aterrizaste?",
+            "Cuéntame tu llegada"
+          ],
+          "texto_explorador": "Bajé el 26 de noviembre de 2018 con paracaídas y cohetes. Frené justo antes de tocar el suelo.",
+          "texto_cientifico": "Aterricé el 26 de noviembre de 2018 en Elysium Planitia tras un descenso con escudo térmico, paracaídas y retrocohetes.",
+          "fuente": "https://science.nasa.gov/mission/insight/"
+        },
+        {
+          "id": "insight_3",
+          "pregunta": "¿Y qué hacías cada día ahí quieto?",
+          "opciones": [
+            "¿A qué te dedicabas?",
+            "Enséñame tu instrumento"
+          ],
+          "texto_explorador": "Escuchaba. Mi brazo puso un aparato en el suelo que detecta los temblores más pequeños, como un vaso de agua que vibra.",
+          "texto_cientifico": "Mi brazo robótico depositó el sismómetro SEIS en el suelo y lo protegí con una cúpula contra el viento. Registraba el movimiento del terreno.",
+          "fuente": "https://science.nasa.gov/mission/insight/"
+        },
+        {
+          "id": "insight_4",
+          "pregunta": "¿Sabes quién dirigía mi equipo científico?",
+          "opciones": [
+            "Bruce Banerdt",
+            "Nadie, funcionaba solo"
+          ],
+          "texto_explorador": "Bruce Banerdt. Él era el jefe científico de mi misión y trabajaba en el laboratorio que me construyó.",
+          "texto_cientifico": "Bruce Banerdt, del Jet Propulsion Laboratory, fue el investigador principal de InSight y coordinó el equipo científico.",
+          "fuente": "https://science.nasa.gov/mission/insight/"
+        },
+        {
+          "id": "insight_5",
+          "pregunta": "¿Y qué descubriste escuchando tanto?",
+          "opciones": [
+            "¿Cómo es Marte por dentro?",
+            "¿Qué oíste?"
+          ],
+          "texto_explorador": "Escuché más de mil trescientos temblores. Con ellos descubrimos cómo es Marte por dentro, sin hacer ni un agujero.",
+          "texto_cientifico": "Registré más de 1.300 sismos marcianos. Con su velocidad y recorrido estimamos el grosor de la corteza y el tamaño del núcleo.",
+          "fuente": "https://science.nasa.gov/mission/insight/"
+        },
+        {
+          "id": "insight_6",
+          "pregunta": "Me voy. ¿Algo más antes de despedirte?",
+          "opciones": [
+            "Adiós, InSight",
+            "Ver la ficha con las fuentes"
+          ],
+          "texto_explorador": "El polvo cubrió mis paneles y me quedé sin batería en diciembre de 2022. Pero ya sé cómo suena Marte por dentro.",
+          "texto_cientifico": "El polvo acumulado en los paneles agotó mi energía; la misión se retiró el 21 de diciembre de 2022 tras cuatro años de datos sísmicos.",
+          "fuente": "https://science.nasa.gov/mission/insight/"
+        }
+      ]
+    },
+    {
+      "id": "voyager1",
+      "nombre": "Voyager 1",
+      "cuerpo": "Espacio",
+      "lugar": "En el espacio interestelar",
+      "anio": 1977,
+      "estado": "funciona",
+      "estado_texto": {
+        "texto_explorador": "Ojo: sigue funcionando. No es basura espacial.",
+        "texto_cientifico": "Activa y en contacto con la Tierra desde el espacio interestelar."
+      },
+      "ficha_resumen": "Ojo al criterio: Voyager 1 no está abandonada. Sigue en contacto con la Tierra, pero puede dejar de responder pronto. Se incluye como contraste honesto.",
+      "color": "#7fb7ff",
+      "personas": [
+        {
+          "nombre": "Ed Stone",
+          "rol": "científico del proyecto Voyager durante más de 50 años",
+          "fuente": "https://science.nasa.gov/mission/voyager/"
+        }
+      ],
+      "fuentes": [
+        {
+          "texto": "NASA Science — Voyager",
+          "url": "https://science.nasa.gov/mission/voyager/"
+        }
+      ],
+      "turnos": [
+        {
+          "id": "voyager1_1",
+          "pregunta": "Hola desde muy lejos. Mi señal tarda casi un día en llegar.",
+          "opciones": [
+            "¿Dónde estás?",
+            "¿Cómo puedes hablar conmigo?"
+          ],
+          "texto_explorador": "Soy Voyager 1. Estoy más lejos que cualquier cosa que hayamos enviado. Tardo casi un día en mandar un mensaje a casa.",
+          "texto_cientifico": "Soy Voyager 1. Estoy en el espacio interestelar; mis señales tardan del orden de un día en llegar a la Tierra.",
+          "fuente": "https://science.nasa.gov/mission/voyager/"
+        },
+        {
+          "id": "voyager1_2",
+          "pregunta": "¿Cuándo empezó todo esto?",
+          "opciones": [
+            "¿Cuándo despegaste?",
+            "Cuéntame tu despegue"
+          ],
+          "texto_explorador": "Despegué el 5 de septiembre de 1977, hace casi cincuenta años. Y sigo viajando.",
+          "texto_cientifico": "Despegué el 5 de septiembre de 1977. En agosto de 2012 crucé la heliopausa: el límite donde deja de llegar el viento solar.",
+          "fuente": "https://science.nasa.gov/mission/voyager/"
+        },
+        {
+          "id": "voyager1_3",
+          "pregunta": "¿Y qué haces ahora, tan lejos?",
+          "opciones": [
+            "¿A qué te dedicas?",
+            "¿Sigues trabajando?"
+          ],
+          "texto_explorador": "Mido lo que hay a mi alrededor y sigo hablando con la Tierra. Soy la máquina más lejana que sigue funcionando.",
+          "texto_cientifico": "Sigo midiendo el plasma y los campos del espacio interestelar con los instrumentos aún operativos, con energía de mis generadores de plutonio.",
+          "fuente": "https://science.nasa.gov/mission/voyager/"
+        },
+        {
+          "id": "voyager1_4",
+          "pregunta": "¿Sabes quién fue el científico de mi proyecto durante décadas?",
+          "opciones": [
+            "Ed Stone",
+            "Carl Sagan"
+          ],
+          "texto_explorador": "Ed Stone. Fue el jefe científico de mi misión durante más de cincuenta años y me siguió hasta el final.",
+          "texto_cientifico": "Ed Stone fue el científico del proyecto Voyager durante más de cincuenta años. Carl Sagan presidió el comité del disco de oro que llevo a bordo.",
+          "fuente": "https://science.nasa.gov/mission/voyager/"
+        },
+        {
+          "id": "voyager1_5",
+          "pregunta": "¿Y qué has descubierto tú?",
+          "opciones": [
+            "¿Qué has visto?",
+            "¿Qué hay ahí fuera?"
+          ],
+          "texto_explorador": "He visto lunas con volcanes y mares bajo el hielo. Y he salido del lugar donde llega el viento del Sol.",
+          "texto_cientifico": "Descubrí volcanismo activo en Ío y un océano bajo la corteza de Europa, y fui la primera nave en alcanzar el espacio interestelar.",
+          "fuente": "https://science.nasa.gov/mission/voyager/"
+        },
+        {
+          "id": "voyager1_6",
+          "pregunta": "Aquí no valgo como objeto abandonado, ¿verdad?",
+          "opciones": [
+            "Es verdad, sigues vivo",
+            "Ver la ficha con las fuentes"
+          ],
+          "texto_explorador": "Exacto: yo no estoy abandonado, sigo funcionando. Pero algún día me quedaré sin energía y entonces sí seré un objeto que se quedó fuera.",
+          "texto_cientifico": "Correcto: no estoy abandonada. Mis generadores pierden potencia cada año y el equipo apaga instrumentos para sobrevivir; llegará un momento en que no pueda responder.",
+          "fuente": "https://science.nasa.gov/mission/voyager/"
+        }
+      ]
+    }
+  ]
+}
