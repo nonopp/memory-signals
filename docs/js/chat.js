@@ -110,12 +110,18 @@
 
   var SECCION_POR_TERMINO = [
     { re: /^(quien|quienes|trabajo|trabajaron|trabajaba|equipo|cientifico|cientificos|investigador|investigadores|persona|personas|gente|nombre|construyo|diseno|creo)$/, sec: /^Personas$/i },
-    { re: /^(donde|lugar|sitio|ahora|hoy|posicion|coordenadas|encuentra|encuentras|estas|quedaste)$/, sec: /^Dónde está hoy$/i },
+    { re: /^(donde|lugar|sitio|ahora|hoy|posicion|coordenadas|encuentra|encuentras|estas|quedaste|rodea|rodeaba|rodean|alrededor|alrededores|paisaje|entorno|vista)$/, sec: /^Dónde está hoy$/i },
     { re: /^(llego|llegaste|lanzamiento|lanzaron|despego|viaje|aterrizo|aterrizaste|aterrizaje|llegada|cohete|salida)$/, sec: /^Cómo llegó$/i },
     { re: /^(descubrio|descubriste|descubrimiento|hallazgo|encontro|encontraste|resultado|resultados|ciencia|cientifica|serviste)$/, sec: /^Qué descubrió$/i },
     { re: /^(pesa|pesas|peso|masa|mide|mides|tamano|instrumento|instrumentos|potencia|tecnico|tecnicos|datos|cifra|cifras)$/, sec: /^Datos técnicos$/i },
     { re: /^(hacia|hacias|dia|dias|trabajaba|haciais|rutina|mision|hice|hacias)$/, sec: /^Qué hacía$/i }
   ];
+  /* preguntas de identidad: «¿quién eres?» no pregunta por la tripulación */
+  var SECCION_IDENTIDAD = /quien\s+(eres|es|soy|fue)|que\s+eres|presentate|identificate|como\s+te\s+llamas|quien\s+soy/;
+  function seccionForzada(texto) {
+    return SECCION_IDENTIDAD.test(normaliza(texto)) ? /^Qué es$/i : null;
+  }
+
   function seccionPedida(terminos) {
     for (var i = 0; i < SECCION_POR_TERMINO.length; i++) {
       for (var j = 0; j < terminos.length; j++) {
@@ -354,7 +360,8 @@
             /* los términos que piden sección («dónde», «quién», «cuánto») cuentan aunque sean palabras vacías */
             var deSeccion = palabrasBrutas(pregunta).filter(function (w) { return !!seccionPedida([w]); });
             if (!propios.length || (aciertos === 0 && !deSeccion.length)) return null;
-            return preparar(objetivo, md0, propios.concat(deSeccion), actual ? actual.nombre : null);
+            return preparar(objetivo, md0, propios.concat(deSeccion), actual ? actual.nombre : null,
+              seccionForzada(pregunta));
           });
         }
         if (candidatas.length) elegida = candidatas[0].f;
@@ -364,9 +371,46 @@
     });
   }
 
-  function preparar(ficha, md, terminos, enfoque) {
+  /* cuando la pregunta no encuentra nada (un «hola, ¿quién eres?» del guion), contesta la ficha del
+     aparato que está delante: el modelo dirá que no consta si el fragmento no responde */
+  function responderDelAparato(pregunta, contexto) {
+    return cargarIndice().then(function (idx) {
+      var lista = idx.fichas || [];
+      var idActual = actual ? EQUIVALENCIA[actual.id] : null;
+      var propia = idActual ? lista.filter(function (f) { return f.id === idActual; })[0] : null;
+      if (!propia) return null;
+      return cargarFicha(propia.ruta).then(function (md) {
+        var deSeccion = palabrasBrutas(pregunta).filter(function (w) { return !!seccionPedida([w]); });
+        var terminos = palabrasSinNombres(pregunta).concat(deSeccion);
+        /* si la pregunta es corta («¿fue difícil?») manda el tema que se está contando en el turno */
+        var ctx = contexto || contextoActual();
+        if (ctx) {
+          terminos = terminos.concat(palabrasBrutas(ctx).filter(function (w) { return w.length > 4; }));
+        }
+        /* en el respaldo se manda la ficha entera (sin Personas ni Fuentes): así el modelo
+           encuentra el dato si está, y sigue negándose si no está */
+        var secs = secciones(md);
+        var util = secs.filter(function (s) { return !/^(Personas|Fuentes)$/i.test(s.titulo); });
+        var forzada = seccionForzada(pregunta);
+        var sec = (forzada ? secs.filter(function (s) { return forzada.test(s.titulo); })[0] : null)
+          || elegirSeccion(secs, terminos);
+        var completo = util.map(function (s) { return '## ' + s.titulo + '\n' + s.cuerpo; }).join('\n\n');
+        return {
+          ficha: propia,
+          seccion: sec,
+          texto: sec ? sinFormato(mejoresParrafos(sec.cuerpo, terminos, actual ? actual.nombre : null)).slice(0, 700) : '',
+          fragmento: sinFormato(completo).slice(0, 3500),
+          fuente: fuentePrincipal(md) || propia.fuente_principal || '',
+          verificacion: propia.verificacion
+        };
+      });
+    });
+  }
+
+  function preparar(ficha, md, terminos, enfoque, forzada) {
     var secs = secciones(md);
-    var sec = elegirSeccion(secs, terminos);
+    var sec = (forzada ? secs.filter(function (s) { return forzada.test(s.titulo); })[0] : null)
+      || elegirSeccion(secs, terminos);
     var fragmento = sec ? mejoresParrafos(sec.cuerpo, terminos, enfoque) : md;
     return {
       ficha: ficha,
@@ -378,7 +422,7 @@
     };
   }
 
-  function preguntar(texto) {
+  function preguntar(texto, deSugerencia) {
     if (!texto || ocupado) return;
     if (!panelAbierto) abrir();
     ocupado = true;
@@ -386,6 +430,8 @@
     var esperando = pensando();
 
     responder(texto).then(function (rec) {
+      return rec || (deSugerencia ? responderDelAparato(texto, contextoActual()) : null);
+    }).then(function (rec) {
       if (!rec) {
         if (esperando) esperando.remove();
         burbuja('objeto', 'Eso no consta en mi ficha. Pregúntame por lo que hice, quién me construyó o dónde estoy.');
@@ -437,6 +483,8 @@
      Devuelve { rec, modelo } para poder pintarlo aquí o donde lo pida el contenido. */
   function resolver(texto, contexto) {
     return responder(texto).then(function (rec) {
+      return rec || responderDelAparato(texto, contexto);
+    }).then(function (rec) {
       if (!rec) return { rec: null, modelo: '' };
       var fragmento = rec.fragmento;
       var ctx = contexto || contextoActual();
@@ -485,7 +533,7 @@
     sugerencias.forEach(function (t) {
       var b = document.createElement('button');
       b.type = 'button'; b.textContent = t;
-      b.addEventListener('click', function () { preguntar(t); });
+      b.addEventListener('click', function () { preguntar(t, true); });
       caja.appendChild(b);
     });
     cont.appendChild(caja);
