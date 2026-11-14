@@ -158,13 +158,19 @@
     pintarNivel();
     repintarPantallaActual();
   }
+  /* elegir modo en la portada: fija el nivel aunque coincida con el que ya había */
+  function elegirNivel(nivel) {
+    estado.nivel = nivel;
+    guardar(CLAVE_NIVEL, nivel);
+    pintarNivel();
+  }
+
   /* conmutar el nivel NO reinicia el recorrido: solo cambia el texto */
   function repintarPantallaActual() {
     var activa = $('.pantalla.activa');
     if (!activa) return;
     var id = activa.id.replace('p-', '');
     if (id === 'intro') pintaIntro();
-    else if (id === 'edad') pintaEdad();
     else if (id === 'destino') pintaDestino();
     else if (id === 'crucero') pintaCrucero();
     else if (id === 'destellos') pintaDestellos();
@@ -174,32 +180,25 @@
 
   /* ---------- pantallas ---------- */
   function pintaIntro() {
-    var l = datos.astronauta.lineas.intro;
-    var texto = txt(l) + (estado.visitados.length ? ' ' + (estado.nivel === 'explorador'
-      ? 'Veo que ya has estado aquí antes. ¿Seguimos donde lo dejamos?'
-      : 'Registros de tu visita anterior encontrados. Podemos continuar la exploración.') : '');
+    var l = datos.astronauta.lineas;
+    var texto = txt(l.intro);
+    if (estado.visitados.length) texto += ' ' + txt(l.vuelta);
+    /* la pregunta con la que acaba la portada: de ella salen los dos modos */
+    texto += ' ' + txt(l.elegir_modo);
     $('#txt-intro').textContent = texto;
     hablar(texto);
-  }
 
-  function pintaEdad() {
-    var texto = txt(datos.astronauta.lineas.edad_pregunta);
-    $('#txt-edad').textContent = texto;
-    hablar(texto);
-    var cont = $('#opciones-edad');
-    cont.innerHTML = '';
-    [
-      { etiqueta: 'Menos de 10 años', valor: 'menos', nivel: 'explorador' },
-      { etiqueta: '10 años o más', valor: 'mas', nivel: null }
-    ].forEach(function (o) {
-      var b = document.createElement('button');
-      b.type = 'button'; b.className = 'opcion'; b.textContent = o.etiqueta;
+    /* «Explorar» lee como si tuviera menos de 10 años; «Modo científico», como un adulto.
+       Ya no hay pantalla de edad: se elige aquí. */
+    $$('#acciones-intro [data-modo]').forEach(function (b) {
+      if (b.dataset.listo) return;
+      b.dataset.listo = '1';
       b.addEventListener('click', function () {
-        estado.edad = o.valor;
-        if (o.valor === 'menos') { estado.nivel = 'explorador'; guardar(CLAVE_NIVEL, 'explorador'); pintarNivel(); }
-        ir('destino'); pintaDestino();
+        elegirNivel(b.dataset.modo);
+        estado.edad = b.dataset.modo === 'explorador' ? 'menos' : 'mas';
+        ir('destino');
+        pintaDestino();
       });
-      cont.appendChild(b);
     });
   }
 
@@ -430,8 +429,7 @@
       var id = b.getAttribute('data-ir');
       if (id === 'intro') { reiniciar(); return; }
       ir(id);
-      if (id === 'edad') pintaEdad();
-      else if (id === 'destino') pintaDestino();
+      if (id === 'destino') pintaDestino();
       else if (id === 'destellos') pintaDestellos();
       else if (id === 'pausa') pintaPausa();
     });

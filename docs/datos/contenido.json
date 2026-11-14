@@ -55,6 +55,14 @@
       "despedida": {
         "texto_explorador": "Cuando quieras volvemos. El espacio no se va a ninguna parte, y estas cosas llevan aquí muchos años.",
         "texto_cientifico": "Fin de la visita guiada. Todo lo que te he contado lo puedes verificar en las fuentes de cada objeto."
+      },
+      "elegir_modo": {
+        "texto_explorador": "¿Qué te gustaría?",
+        "texto_cientifico": "¿Qué te gustaría?"
+      },
+      "vuelta": {
+        "texto_explorador": "Veo que ya has estado aquí antes.",
+        "texto_cientifico": "Registros de tu visita anterior encontrados."
       }
     }
   },

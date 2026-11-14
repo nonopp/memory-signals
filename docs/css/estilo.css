@@ -12,12 +12,11 @@
   --fuente:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
 }
 *{box-sizing:border-box}
-html,html,body{overflow-x:clip}
-body{height:100%}
+html{overflow-x:clip;height:100%}
 body{
   margin:0;font-family:var(--fuente);color:var(--texto);
   background:radial-gradient(1200px 800px at 70% -10%,#132043 0%,var(--fondo) 55%) fixed;
-  min-height:100%;display:flex;flex-direction:column;
+  min-height:100vh;display:flex;flex-direction:column;
   -webkit-font-smoothing:antialiased;
 }
 #cielo{position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none;opacity:.9}
@@ -77,8 +76,27 @@ body.con-fondo .velo{opacity:1}
 .icono[aria-pressed="true"]{background:var(--acento);color:#04231d;border-color:transparent}
 
 /* escenario */
-#escenario{position:relative;z-index:10;flex:1;display:flex;align-items:center;justify-content:center;padding:clamp(16px,3vw,34px)}
+#escenario{position:relative;z-index:10;flex:1;display:flex;flex-direction:column;align-items:center;
+  justify-content:flex-start;padding:clamp(16px,3vw,34px)}
+/* margen automático = centrado vertical cuando sobra sitio, 0 cuando la ficha es más alta (no recorta) */
+.pantalla.activa{margin-top:auto;margin-bottom:auto}
 .pantalla{display:none;width:min(880px,100%)}
+
+/* la escena 3D va a sangre, pero los textos NO: cada pantalla es una caja centrada */
+.pantalla:not(#p-objeto){
+  width:min(760px,100%);margin-inline:auto;padding:30px 34px;border-radius:20px;
+  background:linear-gradient(180deg,rgba(22,38,66,.62),rgba(12,20,36,.62));
+  border:1px solid rgba(120,200,230,.18);box-shadow:0 18px 40px rgba(0,0,0,.28);
+  text-align:center;
+}
+.pantalla:not(#p-objeto) .voz-texto,
+.pantalla:not(#p-objeto) p,
+.pantalla:not(#p-objeto) ul,
+.pantalla:not(#p-objeto) ol,
+.pantalla:not(#p-objeto) dl{text-align:left}
+.pantalla:not(#p-objeto) .acciones{justify-content:center}
+.pantalla:not(#p-objeto) .astronauta{margin-left:auto;margin-right:auto}
+#p-objeto{width:min(1140px,100%)}
 .pantalla.activa{display:block;animation:entra .45s ease both}
 @keyframes entra{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
 
@@ -394,6 +412,8 @@ code{background:rgba(255,255,255,.09);padding:2px 6px;border-radius:6px;font-siz
 @media (max-width:520px){
   .ms-widget{right:12px;bottom:12px}
   #p-objeto .visor{height:52vh}
+  .pie{flex-direction:column;gap:2px;text-align:center;padding:10px 14px;font-size:.68rem}
+  .pie span{display:block}
   .ms-panel{right:0;bottom:70px;width:calc(100vw - 24px);height:min(62vh,520px)}
   .ms-panel::after{display:none}
   .ms-burbuja{width:56px;height:56px}
