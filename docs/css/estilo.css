@@ -298,7 +298,7 @@ code{background:rgba(255,255,255,.09);padding:2px 6px;border-radius:6px;font-siz
   grid-template-columns:minmax(230px,300px) minmax(0,1fr) minmax(330px,392px);
 }
 #p-objeto .visor{
-  position:relative;width:100%;margin:0 0 18px;height:clamp(300px,44vh,540px);
+  position:relative;width:100%;margin:0 0 18px;height:clamp(320px,50vh,600px);
   border-radius:var(--radio);border:1px solid var(--borde);overflow:hidden;
   background:radial-gradient(120% 120% at 50% 0%, #16203a 0%, #080b14 62%, #05070f 100%);
 }
