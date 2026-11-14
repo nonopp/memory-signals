@@ -57,6 +57,12 @@
     }).filter(Boolean);
   }
 
+  /* todas las palabras útiles, incluidas las que el mapa de sinónimos usa
+     («dónde», «quién», «cuándo»): sin esto, «¿dónde te posaste?» no encontraba sección */
+  function palabrasBrutas(s) {
+    return normaliza(s).split(' ').filter(function (w) { return w.length > 2; });
+  }
+
   function palabrasSinNombres(s) {
     return (s || '').split(/\s+/).map(function (bruto) {
       var limpio = bruto.replace(/[¿?¡!.,;:()"']/g, '');
@@ -335,8 +341,10 @@
               if (veces >= 2) propios.push(t);
             });
             var aciertos = propios.filter(function (t) { return texto.indexOf(t) !== -1; }).length;
-            if (!propios.length || (aciertos === 0 && !seccionPedida(propios))) return null;
-            return preparar(objetivo, md0, propios, actual ? actual.nombre : null);
+            /* los términos que piden sección («dónde», «quién», «cuánto») cuentan aunque sean palabras vacías */
+            var deSeccion = palabrasBrutas(pregunta).filter(function (w) { return !!seccionPedida([w]); });
+            if (!propios.length || (aciertos === 0 && !deSeccion.length)) return null;
+            return preparar(objetivo, md0, propios.concat(deSeccion), actual ? actual.nombre : null);
           });
         }
         if (candidatas.length) elegida = candidatas[0].f;
