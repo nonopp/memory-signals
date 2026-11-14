@@ -1,0 +1,1726 @@
+{
+ "version": "1.1",
+ "proyecto": "Memory Signals",
+ "reto": "NASA's Discarded Equipment Storytelling",
+ "total": 74,
+ "como_usar": "1) Busca en este índice por palabras_clave, alias o titulo (una sola petición, ~50 KB). 2) Elige el id. 3) Carga SOLO el .md de su ruta. No cargues todas las fichas.",
+ "verificacion": {
+  "verificado": "cotejado contra las fuentes NASA enlazadas (14 objetos oficiales del reto)",
+  "prototipo": "catálogo del prototipo de 60 objetos, sin cotejar con NASA"
+ },
+ "fichas": [
+  {
+   "id": "alsep",
+   "titulo": "Paquete de Experimentos de Superficie Lunar Apolo (ALSEP)",
+   "cuerpo": "Luna",
+   "tipo": "estación científica automática de superficie",
+   "anio": "1969",
+   "estado": "apagado por control desde Tierra el 30 de septiembre de 1977",
+   "verificacion": "verificado",
+   "resumen": "Instrumentos científicos desplegados alrededor de una estación central con energía y radio; se apagaron desde Tierra en 1977.",
+   "alias": [
+    "ALSEP",
+    "Apollo Lunar Surface Experiments Package",
+    "paquete de experimentos"
+   ],
+   "palabras_clave": [
+    "luna",
+    "apolo",
+    "ciencia",
+    "sismómetro",
+    "experimentos",
+    "estación central"
+   ],
+   "ruta": "kb/alsep.md",
+   "fuente_principal": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1969-099C"
+  },
+  {
+   "id": "apolo-modulo-lunar",
+   "titulo": "Módulo Lunar Apolo (LM)",
+   "cuerpo": "Luna",
+   "tipo": "módulo de descenso tripulado",
+   "anio": "1969",
+   "estado": "abandonado sobre la superficie lunar tras el ascenso de la tripulación",
+   "verificacion": "verificado",
+   "resumen": "Módulo tripulado de dos etapas que posó a dos astronautas en la Luna; la etapa de descenso sigue allí y la de ascenso se abandonó.",
+   "alias": [
+    "LM",
+    "Lunar Module",
+    "módulo lunar",
+    "Eagle",
+    "Intrepid",
+    "Falcon"
+   ],
+   "palabras_clave": [
+    "luna",
+    "apolo",
+    "alunizaje",
+    "descenso",
+    "etapa de descenso",
+    "astronautas"
+   ],
+   "ruta": "kb/apolo-modulo-lunar.md",
+   "fuente_principal": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1969-059C"
+  },
+  {
+   "id": "dawn",
+   "titulo": "Dawn",
+   "cuerpo": "asteroide Vesta y planeta enano Ceres",
+   "tipo": "orbitador con propulsión iónica",
+   "anio": "2007",
+   "estado": "misión finalizada el 1 de noviembre de 2018 · la sonda sigue en órbita de Ceres",
+   "verificacion": "verificado",
+   "resumen": "Sonda de propulsión iónica que orbitó el asteroide Vesta y el planeta enano Ceres, y sigue inerte en órbita de Ceres desde 2018.",
+   "alias": [
+    "Dawn"
+   ],
+   "palabras_clave": [
+    "cinturón de asteroides",
+    "Vesta",
+    "Ceres",
+    "propulsión iónica",
+    "planeta enano",
+    "hidracina"
+   ],
+   "ruta": "kb/dawn.md",
+   "fuente_principal": "https://science.nasa.gov/mission/dawn/"
+  },
+  {
+   "id": "ingenuity",
+   "titulo": "Helicóptero marciano Ingenuity",
+   "cuerpo": "Marte (cráter Jezero)",
+   "tipo": "helicóptero",
+   "anio": "2020",
+   "estado": "inoperativo desde enero de 2024 · posado en Marte",
+   "verificacion": "verificado",
+   "resumen": "Primer aparato que voló con motor en otro planeta; hizo 72 vuelos y quedó en Marte con las palas dañadas en enero de 2024.",
+   "alias": [
+    "Ingenuity",
+    "Mars Helicopter",
+    "helicóptero Ingenuity"
+   ],
+   "palabras_clave": [
+    "Marte",
+    "vuelo motorizado",
+    "Jezero",
+    "Perseverance",
+    "dron"
+   ],
+   "ruta": "kb/ingenuity.md",
+   "fuente_principal": "https://science.nasa.gov/mission/mars-2020-perseverance/ingenuity-mars-helicopter/"
+  },
+  {
+   "id": "kepler",
+   "titulo": "Telescopio espacial Kepler",
+   "cuerpo": "espacio profundo",
+   "tipo": "telescopio espacial",
+   "anio": "2009",
+   "estado": "retirado en octubre de 2018 · órbita heliocéntrica",
+   "verificacion": "verificado",
+   "resumen": "Primer cazador de planetas de NASA; halló más de 2.600 exoplanetas y quedó fuera de servicio al agotar el combustible en 2018.",
+   "alias": [
+    "Kepler",
+    "Kepler Space Telescope",
+    "K2"
+   ],
+   "palabras_clave": [
+    "exoplanetas",
+    "tránsito",
+    "fotometría",
+    "Vía Láctea",
+    "K2"
+   ],
+   "ruta": "kb/kepler.md",
+   "fuente_principal": "https://science.nasa.gov/mission/kepler/"
+  },
+  {
+   "id": "near-shoemaker",
+   "titulo": "Sonda NEAR Shoemaker",
+   "cuerpo": "cinturón de asteroides (asteroide 433 Eros)",
+   "tipo": "orbitador y aterrizador de asteroide",
+   "anio": "1996",
+   "estado": "posada en Eros desde 2001 · sin contacto desde el 28 de febrero de 2001",
+   "verificacion": "verificado",
+   "resumen": "Primera nave que orbitó un asteroide y primera que se posó en uno; sigue posada en Eros, sin contacto desde 2001.",
+   "alias": [
+    "NEAR",
+    "NEAR Shoemaker",
+    "Near Earth Asteroid Rendezvous"
+   ],
+   "palabras_clave": [
+    "asteroide",
+    "Eros",
+    "Mathilde",
+    "aterrizaje",
+    "programa Discovery"
+   ],
+   "ruta": "kb/near-shoemaker.md",
+   "fuente_principal": "https://science.nasa.gov/mission/near-shoemaker/"
+  },
+  {
+   "id": "phoenix-insight",
+   "titulo": "Phoenix e InSight",
+   "cuerpo": "Marte",
+   "tipo": "módulo de descenso fijo",
+   "anio": "2007",
+   "estado": "misiones finalizadas · los dos módulos siguen en Marte",
+   "verificacion": "verificado",
+   "resumen": "Dos módulos estáticos en Marte. Phoenix confirmó hielo de agua y percloratos en el Ártico; InSight escuchó más de 1.300 sismos y midió el interior del planeta.",
+   "alias": [
+    "Phoenix",
+    "InSight",
+    "Interior Exploration using Seismic Investigations",
+    "Geodesy and Heat Transport"
+   ],
+   "palabras_clave": [
+    "marte",
+    "sismómetro",
+    "sismos",
+    "geofísica",
+    "hielo de agua",
+    "percloratos",
+    "polvo",
+    "energía solar"
+   ],
+   "ruta": "kb/phoenix-insight.md",
+   "fuente_principal": "https://science.nasa.gov/mission/insight/"
+  },
+  {
+   "id": "phoenix",
+   "titulo": "Phoenix",
+   "cuerpo": "Marte",
+   "tipo": "módulo de descenso fijo",
+   "anio": "2007",
+   "estado": "misión finalizada el 2 de noviembre de 2008 · el módulo sigue en Marte",
+   "verificacion": "verificado",
+   "resumen": "Módulo estático que aterrizó en el Ártico marciano en 2008, confirmó hielo de agua bajo la superficie y detectó percloratos en el suelo.",
+   "alias": [
+    "Phoenix",
+    "Mars Phoenix"
+   ],
+   "palabras_clave": [
+    "marte",
+    "ártico",
+    "hielo de agua",
+    "percloratos",
+    "suelo",
+    "meteorología",
+    "TEGA"
+   ],
+   "ruta": "kb/phoenix.md",
+   "fuente_principal": "https://science.nasa.gov/mission/phoenix/"
+  },
+  {
+   "id": "pioneer-10-11",
+   "titulo": "Sondas Pioneer 10 y Pioneer 11",
+   "cuerpo": "espacio interestelar",
+   "tipo": "sondas de sobrevuelo",
+   "anio": "1972",
+   "estado": "sin contacto desde 1995 y 2003 · trayectoria de escape del sistema solar",
+   "verificacion": "verificado",
+   "resumen": "Primera misión de NASA a los planetas exteriores; cruzaron Neptuno y salieron del sistema solar, sin contacto desde 2003 y 1995.",
+   "alias": [
+    "Pioneer 10",
+    "Pioneer 11",
+    "Pioneer F",
+    "Pioneer G"
+   ],
+   "palabras_clave": [
+    "Júpiter",
+    "Saturno",
+    "placa de Pioneer",
+    "espacio interestelar",
+    "RTG"
+   ],
+   "ruta": "kb/pioneer-10-11.md",
+   "fuente_principal": "https://science.nasa.gov/mission/pioneer-10/"
+  },
+  {
+   "id": "rover-lunar-lrv",
+   "titulo": "Rover Lunar Apolo (LRV)",
+   "cuerpo": "Luna",
+   "tipo": "vehículo eléctrico tripulado de superficie",
+   "anio": "1971",
+   "estado": "dejado en la superficie lunar al final de cada misión; los tres siguen allí",
+   "verificacion": "verificado",
+   "resumen": "Vehículo eléctrico de cuatro ruedas que amplió la exploración de Apolo 15, 16 y 17; los tres se quedaron en la Luna.",
+   "alias": [
+    "LRV",
+    "Lunar Roving Vehicle",
+    "rover lunar",
+    "moon buggy"
+   ],
+   "palabras_clave": [
+    "luna",
+    "apolo",
+    "rover",
+    "vehículo",
+    "movilidad",
+    "travesía geológica"
+   ],
+   "ruta": "kb/rover-lunar-lrv.md",
+   "fuente_principal": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1971-063C"
+  },
+  {
+   "id": "sojourner",
+   "titulo": "Sojourner",
+   "cuerpo": "Marte",
+   "tipo": "rover de exploración",
+   "anio": "1997",
+   "estado": "fuera de servicio · sin señal desde el 27 de septiembre de 1997",
+   "verificacion": "verificado",
+   "resumen": "Primer rover que rodó por Marte, en 1997; pesaba 10,6 kg y halló indicios de agua corriente en el pasado del planeta.",
+   "alias": [
+    "Sojourner",
+    "rover Sojourner",
+    "Mars Pathfinder rover"
+   ],
+   "palabras_clave": [
+    "marte",
+    "rover",
+    "pathfinder",
+    "ares vallis",
+    "airbags"
+   ],
+   "ruta": "kb/sojourner.md",
+   "fuente_principal": "https://science.nasa.gov/mission/mars-pathfinder/"
+  },
+  {
+   "id": "spirit-opportunity",
+   "titulo": "Spirit y Opportunity",
+   "cuerpo": "Marte",
+   "tipo": "par de rovers gemelos",
+   "anio": "2004",
+   "estado": "fuera de servicio · Spirit sin contacto desde marzo de 2010 y Opportunity desde junio de 2018",
+   "verificacion": "verificado",
+   "resumen": "Rovers gemelos que aterrizaron en Marte en 2004 y confirmaron agua líquida duradera; Opportunity rodó 45,16 km antes de callar en 2018.",
+   "alias": [
+    "Spirit",
+    "Opportunity",
+    "MER-A",
+    "MER-B",
+    "Mars Exploration Rovers"
+   ],
+   "palabras_clave": [
+    "marte",
+    "rovers gemelos",
+    "agua",
+    "gusev",
+    "meridiani planum",
+    "opportunity"
+   ],
+   "ruta": "kb/spirit-opportunity.md",
+   "fuente_principal": "https://science.nasa.gov/mission/mars-exploration-rovers-spirit-and-opportunity/"
+  },
+  {
+   "id": "surveyor-3",
+   "titulo": "Surveyor 3",
+   "cuerpo": "Luna",
+   "tipo": "módulo de descenso no tripulado",
+   "anio": "1967",
+   "estado": "fuera de servicio · sigue en la Luna",
+   "verificacion": "verificado",
+   "resumen": "Módulo no tripulado que se posó en la Luna en 1967 y demostró que el suelo aguantaría un módulo Apolo; Apolo 12 recogió piezas en 1969.",
+   "alias": [
+    "Surveyor 3",
+    "Surveyor-C",
+    "Surveyor III"
+   ],
+   "palabras_clave": [
+    "luna",
+    "alunizaje",
+    "apolo 12",
+    "muestreo",
+    "oceanus procellarum"
+   ],
+   "ruta": "kb/surveyor-3.md",
+   "fuente_principal": "https://science.nasa.gov/mission/surveyor-3/"
+  },
+  {
+   "id": "viking",
+   "titulo": "Viking 1 y Viking 2",
+   "cuerpo": "Marte",
+   "tipo": "orbitador y módulo de descenso estático",
+   "anio": "1975",
+   "estado": "misiones finalizadas · los dos módulos siguen en Marte",
+   "verificacion": "verificado",
+   "resumen": "Dos naves de orbitador más módulo de descenso que en 1976 hicieron los primeros aterrizajes plenamente operativos en Marte y buscaron vida en el suelo.",
+   "alias": [
+    "Viking 1",
+    "Viking 2",
+    "Thomas Mutch Memorial Station",
+    "Gerald Soffen Memorial Station"
+   ],
+   "palabras_clave": [
+    "marte",
+    "aterrizaje",
+    "búsqueda de vida",
+    "orbitador",
+    "sismómetro",
+    "Chryse Planitia",
+    "Utopia Planitia"
+   ],
+   "ruta": "kb/viking.md",
+   "fuente_principal": "https://science.nasa.gov/mission/viking-1/"
+  },
+  {
+   "id": "alsep-de-apollo-12-apollo-12",
+   "titulo": "ALSEP de Apollo 12",
+   "cuerpo": "Luna",
+   "tipo": "paquete",
+   "anio": "1969",
+   "estado": "muerto",
+   "verificacion": "prototipo",
+   "resumen": "Conjunto de experimentos sobre el interior y el entorno lunar.",
+   "alias": [
+    "Apollo 12",
+    "ALSEP de Apollo 12"
+   ],
+   "palabras_clave": [
+    "1969",
+    "alsep",
+    "apollo",
+    "luna",
+    "paquete"
+   ],
+   "ruta": "kb/prototipo/alsep-de-apollo-12-apollo-12.md",
+   "fuente_principal": "https://nasa.gesemweb.es/objeto/alsep-de-apollo-12-1969/"
+  },
+  {
+   "id": "alsep-de-apollo-14-apollo-14",
+   "titulo": "ALSEP de Apollo 14",
+   "cuerpo": "Luna",
+   "tipo": "paquete",
+   "anio": "1971",
+   "estado": "muerto",
+   "verificacion": "prototipo",
+   "resumen": "Mediciones geofísicas y del ambiente lunar.",
+   "alias": [
+    "ALSEP de Apollo 14",
+    "Apollo 14"
+   ],
+   "palabras_clave": [
+    "1971",
+    "alsep",
+    "apollo",
+    "luna",
+    "paquete"
+   ],
+   "ruta": "kb/prototipo/alsep-de-apollo-14-apollo-14.md",
+   "fuente_principal": "https://nasa.gesemweb.es/objeto/alsep-de-apollo-14-1971/"
+  },
+  {
+   "id": "alsep-de-apollo-15-apollo-15",
+   "titulo": "ALSEP de Apollo 15",
+   "cuerpo": "Luna",
+   "tipo": "paquete",
+   "anio": "1971",
+   "estado": "muerto",
+   "verificacion": "prototipo",
+   "resumen": "Instrumentos para estudiar sismos, partículas y propiedades físicas lunares.",
+   "alias": [
+    "ALSEP de Apollo 15",
+    "Apollo 15"
+   ],
+   "palabras_clave": [
+    "1971",
+    "alsep",
+    "apollo",
+    "luna",
+    "paquete"
+   ],
+   "ruta": "kb/prototipo/alsep-de-apollo-15-apollo-15.md",
+   "fuente_principal": "https://nasa.gesemweb.es/objeto/alsep-de-apollo-15-1971/"
+  },
+  {
+   "id": "cassini-1997",
+   "titulo": "Cassini",
+   "cuerpo": "Espacio",
+   "tipo": "nave",
+   "anio": "1997",
+   "estado": "muerto",
+   "verificacion": "prototipo",
+   "resumen": "Investigó Saturno y sus anillos; terminó en una inmersión controlada en el planeta.",
+   "alias": [
+    "Cassini"
+   ],
+   "palabras_clave": [
+    "1997",
+    "cassini",
+    "espacio",
+    "nave"
+   ],
+   "ruta": "kb/prototipo/cassini-1997.md",
+   "fuente_principal": "https://nasa.gesemweb.es/objeto/cassini-1997/"
+  },
+  {
+   "id": "chang-8217-e-4-y-rover-yutu-2-chang-e-4",
+   "titulo": "Chang&#8217;e 4 y rover Yutu-2",
+   "cuerpo": "Luna",
+   "tipo": "rover",
+   "anio": "2019",
+   "estado": "dudoso",
+   "verificacion": "prototipo",
+   "resumen": "Aterrizaje en la cara oculta; estudio del suelo y del entorno lunar.",
+   "alias": [
+    "Chang'e 4",
+    "Chang&#8217;e 4 y rover Yutu-2"
+   ],
+   "palabras_clave": [
+    "2019",
+    "chang",
+    "luna",
+    "rover",
+    "yutu"
+   ],
+   "ruta": "kb/prototipo/chang-8217-e-4-y-rover-yutu-2-chang-e-4.md",
+   "fuente_principal": "https://nasa.gesemweb.es/objeto/change-4-y-rover-yutu-2-2019/"
+  },
+  {
+   "id": "chang-8217-e-5-modulo-de-aterrizaje-chang-e-5",
+   "titulo": "Chang&#8217;e 5, módulo de aterrizaje",
+   "cuerpo": "Luna",
+   "tipo": "modulo",
+   "anio": "2020",
+   "estado": "muerto",
+   "verificacion": "prototipo",
+   "resumen": "Recogió muestras lunares; parte del sistema quedó en la superficie.",
+   "alias": [
+    "Chang&#8217;e 5",
+    "módulo de aterrizaje",
+    "Chang'e 5"
+   ],
+   "palabras_clave": [
+    "2020",
+    "aterrizaje",
+    "chang",
+    "luna",
+    "modulo",
+    "módulo"
+   ],
+   "ruta": "kb/prototipo/chang-8217-e-5-modulo-de-aterrizaje-chang-e-5.md",
+   "fuente_principal": "https://nasa.gesemweb.es/objeto/change-5-modulo-de-aterrizaje-2020/"
+  },
+  {
+   "id": "curiosity-curiosity",
+   "titulo": "Curiosity",
+   "cuerpo": "Marte",
+   "tipo": "rover",
+   "anio": "2012",
+   "estado": "funciona",
+   "verificacion": "prototipo",
+   "resumen": "Investiga la habitabilidad pasada y la química de rocas marcianas.",
+   "alias": [
+    "Curiosity"
+   ],
+   "palabras_clave": [
+    "2012",
+    "curiosity",
+    "marte",
+    "rover"
+   ],
+   "ruta": "kb/prototipo/curiosity-curiosity.md",
+   "fuente_principal": "https://nasa.gesemweb.es/objeto/curiosity-2012/"
+  },
+  {
+   "id": "dart-impactador-2021",
+   "titulo": "DART, impactador",
+   "cuerpo": "Espacio",
+   "tipo": "nave",
+   "anio": "2021",
+   "estado": "extraido",
+   "verificacion": "prototipo",
+   "resumen": "Colisionó con Dimorphos para probar la desviación de un asteroide.",
+   "alias": [
+    "DART",
+    "impactador"
+   ],
+   "palabras_clave": [
+    "2021",
+    "dart",
+    "espacio",
+    "impactador",
+    "nave"
+   ],
+   "ruta": "kb/prototipo/dart-impactador-2021.md",
+   "fuente_principal": "https://nasa.gesemweb.es/objeto/dart-impactador-2021/"
+  },
+  {
+   "id": "deep-impact-impactador-2005",
+   "titulo": "Deep Impact, impactador",
+   "cuerpo": "Espacio",
+   "tipo": "nave",
+   "anio": "2005",
+   "estado": "muerto",
+   "verificacion": "prototipo",
+   "resumen": "Chocó contra un cometa para estudiar materiales de su interior.",
+   "alias": [
+    "Deep Impact",
+    "impactador"
+   ],
+   "palabras_clave": [
+    "2005",
+    "deep",
+    "espacio",
+    "impact",
+    "impactador",
+    "nave"
+   ],
+   "ruta": "kb/prototipo/deep-impact-impactador-2005.md",
+   "fuente_principal": "https://nasa.gesemweb.es/objeto/deep-impact-impactador-2005/"
+  },
+  {
+   "id": "etapa-de-descenso-del-modulo-lunar-intrepid-apollo-12",
+   "titulo": "Etapa de descenso del módulo lunar Intrepid",
+   "cuerpo": "Luna",
+   "tipo": "modulo",
+   "anio": "1969",
+   "estado": "muerto",
+   "verificacion": "prototipo",
+   "resumen": "Plataforma de aterrizaje; permanece en el lugar de alunizaje.",
+   "alias": [
+    "Apollo 12",
+    "Etapa de descenso del módulo lunar Intrepid"
+   ],
+   "palabras_clave": [
+    "1969",
+    "descenso",
+    "etapa",
+    "intrepid",
+    "luna",
+    "lunar",
+    "modulo",
+    "módulo"
+   ],
+   "ruta": "kb/prototipo/etapa-de-descenso-del-modulo-lunar-intrepid-apollo-12.md",
+   "fuente_principal": "https://nasa.gesemweb.es/objeto/etapa-de-descenso-del-modulo-lunar-intrepid-1969/"
+  },
+  {
+   "id": "galileo-orbitador-1989",
+   "titulo": "Galileo, orbitador",
+   "cuerpo": "Espacio",
+   "tipo": "nave",
+   "anio": "1989",
+   "estado": "muerto",
+   "verificacion": "prototipo",
+   "resumen": "Investigó Júpiter y sus lunas; terminó con un impacto controlado en el planeta.",
+   "alias": [
+    "Galileo",
+    "orbitador"
+   ],
+   "palabras_clave": [
+    "1989",
+    "espacio",
+    "galileo",
+    "nave",
+    "orbitador"
+   ],
+   "ruta": "kb/prototipo/galileo-orbitador-1989.md",
+   "fuente_principal": "https://nasa.gesemweb.es/objeto/galileo-orbitador-1989/"
+  },
+  {
+   "id": "giotto-1985",
+   "titulo": "Giotto",
+   "cuerpo": "Espacio",
+   "tipo": "nave",
+   "anio": "1985",
+   "estado": "muerto",
+   "verificacion": "prototipo",
+   "resumen": "Sobrevoló el cometa Halley y estudió su núcleo y su entorno.",
+   "alias": [
+    "Giotto"
+   ],
+   "palabras_clave": [
+    "1985",
+    "espacio",
+    "giotto",
+    "nave"
+   ],
+   "ruta": "kb/prototipo/giotto-1985.md",
+   "fuente_principal": "https://nasa.gesemweb.es/objeto/giotto-1985/"
+  },
+  {
+   "id": "hayabusa-capsula-de-retorno-2003",
+   "titulo": "Hayabusa, cápsula de retorno",
+   "cuerpo": "Espacio",
+   "tipo": "nave",
+   "anio": "2003",
+   "estado": "extraido",
+   "verificacion": "prototipo",
+   "resumen": "Trajo muestras del asteroide Itokawa en 2010.",
+   "alias": [
+    "Hayabusa",
+    "cápsula de retorno"
+   ],
+   "palabras_clave": [
+    "2003",
+    "cápsula",
+    "espacio",
+    "hayabusa",
+    "nave",
+    "retorno"
+   ],
+   "ruta": "kb/prototipo/hayabusa-capsula-de-retorno-2003.md",
+   "fuente_principal": "https://nasa.gesemweb.es/objeto/hayabusa-capsula-de-retorno-2003/"
+  },
+  {
+   "id": "hayabusa2-2014",
+   "titulo": "Hayabusa2",
+   "cuerpo": "Espacio",
+   "tipo": "nave",
+   "anio": "2014",
+   "estado": "funciona",
+   "verificacion": "prototipo",
+   "resumen": "Trajo muestras del asteroide Ryugu y continuó su viaje hacia otro objetivo.",
+   "alias": [
+    "Hayabusa2"
+   ],
+   "palabras_clave": [
+    "2014",
+    "espacio",
+    "hayabusa",
+    "nave"
+   ],
+   "ruta": "kb/prototipo/hayabusa2-2014.md",
+   "fuente_principal": "https://nasa.gesemweb.es/objeto/hayabusa2-2014/"
+  },
+  {
+   "id": "huygens-1997",
+   "titulo": "Huygens",
+   "cuerpo": "Espacio",
+   "tipo": "nave",
+   "anio": "1997",
+   "estado": "muerto",
+   "verificacion": "prototipo",
+   "resumen": "Aterrizó en Titán en 2005 y transmitió datos de su atmósfera y superficie.",
+   "alias": [
+    "Huygens"
+   ],
+   "palabras_clave": [
+    "1997",
+    "espacio",
+    "huygens",
+    "nave"
+   ],
+   "ruta": "kb/prototipo/huygens-1997.md",
+   "fuente_principal": "https://nasa.gesemweb.es/objeto/huygens-1997/"
+  },
+  {
+   "id": "ingenuity-perseverance",
+   "titulo": "Ingenuity",
+   "cuerpo": "Marte",
+   "tipo": "helicoptero",
+   "anio": "2021",
+   "estado": "muerto",
+   "verificacion": "prototipo",
+   "resumen": "Helicóptero tecnológico que demostró el vuelo motorizado en otro planeta.",
+   "alias": [
+    "Ingenuity",
+    "Perseverance"
+   ],
+   "palabras_clave": [
+    "2021",
+    "helicoptero",
+    "ingenuity",
+    "marte"
+   ],
+   "ruta": "kb/prototipo/ingenuity-perseverance.md",
+   "fuente_principal": "https://nasa.gesemweb.es/objeto/ingenuity-2021/"
+  },
+  {
+   "id": "insight-insight",
+   "titulo": "InSight",
+   "cuerpo": "Marte",
+   "tipo": "modulo",
+   "anio": "2018",
+   "estado": "muerto",
+   "verificacion": "prototipo",
+   "resumen": "Midió terremotos marcianos y estudió el interior del planeta.",
+   "alias": [
+    "InSight"
+   ],
+   "palabras_clave": [
+    "2018",
+    "insight",
+    "marte",
+    "modulo"
+   ],
+   "ruta": "kb/prototipo/insight-insight.md",
+   "fuente_principal": "https://nasa.gesemweb.es/objeto/insight-2018/"
+  },
+  {
+   "id": "juice-2023",
+   "titulo": "JUICE",
+   "cuerpo": "Espacio",
+   "tipo": "nave",
+   "anio": "2023",
+   "estado": "dudoso",
+   "verificacion": "prototipo",
+   "resumen": "Viaja hacia Júpiter para estudiar sus lunas heladas y su potencial entorno habitable.",
+   "alias": [
+    "JUICE"
+   ],
+   "palabras_clave": [
+    "2023",
+    "espacio",
+    "juice",
+    "nave"
+   ],
+   "ruta": "kb/prototipo/juice-2023.md",
+   "fuente_principal": "https://nasa.gesemweb.es/objeto/juice-2023/"
+  },
+  {
+   "id": "juno-2011",
+   "titulo": "Juno",
+   "cuerpo": "Espacio",
+   "tipo": "nave",
+   "anio": "2011",
+   "estado": "dudoso",
+   "verificacion": "prototipo",
+   "resumen": "Investigó el campo magnético, la atmósfera y la estructura interna de Júpiter.",
+   "alias": [
+    "Juno"
+   ],
+   "palabras_clave": [
+    "2011",
+    "espacio",
+    "juno",
+    "nave"
+   ],
+   "ruta": "kb/prototipo/juno-2011.md",
+   "fuente_principal": "https://nasa.gesemweb.es/objeto/juno-2011/"
+  },
+  {
+   "id": "lucy-2021",
+   "titulo": "Lucy",
+   "cuerpo": "Espacio",
+   "tipo": "nave",
+   "anio": "2021",
+   "estado": "funciona",
+   "verificacion": "prototipo",
+   "resumen": "Investiga asteroides troyanos de Júpiter y la historia temprana del sistema solar.",
+   "alias": [
+    "Lucy"
+   ],
+   "palabras_clave": [
+    "2021",
+    "espacio",
+    "lucy",
+    "nave"
+   ],
+   "ruta": "kb/prototipo/lucy-2021.md",
+   "fuente_principal": "https://nasa.gesemweb.es/objeto/lucy-2021/"
+  },
+  {
+   "id": "lunar-roving-vehicle-apollo-15",
+   "titulo": "Lunar Roving Vehicle",
+   "cuerpo": "Luna",
+   "tipo": "rover",
+   "anio": "1971",
+   "estado": "muerto",
+   "verificacion": "prototipo",
+   "resumen": "Vehículo eléctrico que amplió el radio de exploración de los astronautas.",
+   "alias": [
+    "Lunar Roving Vehicle",
+    "Apollo 15"
+   ],
+   "palabras_clave": [
+    "1971",
+    "luna",
+    "lunar",
+    "rover",
+    "roving",
+    "vehicle"
+   ],
+   "ruta": "kb/prototipo/lunar-roving-vehicle-apollo-15.md",
+   "fuente_principal": "https://nasa.gesemweb.es/objeto/lunar-roving-vehicle-1971/"
+  },
+  {
+   "id": "lunar-roving-vehicle-apollo-16",
+   "titulo": "Lunar Roving Vehicle",
+   "cuerpo": "Luna",
+   "tipo": "rover",
+   "anio": "1972",
+   "estado": "muerto",
+   "verificacion": "prototipo",
+   "resumen": "Permitió recorrer y estudiar una superficie mucho mayor.",
+   "alias": [
+    "Lunar Roving Vehicle",
+    "Apollo 16"
+   ],
+   "palabras_clave": [
+    "1972",
+    "luna",
+    "lunar",
+    "rover",
+    "roving",
+    "vehicle"
+   ],
+   "ruta": "kb/prototipo/lunar-roving-vehicle-apollo-16.md",
+   "fuente_principal": "https://nasa.gesemweb.es/objeto/lunar-roving-vehicle-1972/"
+  },
+  {
+   "id": "lunar-roving-vehicle-apollo-17",
+   "titulo": "Lunar Roving Vehicle",
+   "cuerpo": "Luna",
+   "tipo": "rover",
+   "anio": "1972",
+   "estado": "muerto",
+   "verificacion": "prototipo",
+   "resumen": "Vehículo utilizado para explorar el valle de Taurus-Littrow.",
+   "alias": [
+    "Lunar Roving Vehicle",
+    "Apollo 17"
+   ],
+   "palabras_clave": [
+    "1972",
+    "luna",
+    "lunar",
+    "rover",
+    "roving",
+    "vehicle"
+   ],
+   "ruta": "kb/prototipo/lunar-roving-vehicle-apollo-17.md",
+   "fuente_principal": "https://nasa.gesemweb.es/objeto/lunar-roving-vehicle-1972-2/"
+  },
+  {
+   "id": "lunokhod-1-luna-17",
+   "titulo": "Lunokhod 1",
+   "cuerpo": "Luna",
+   "tipo": "rover",
+   "anio": "1970",
+   "estado": "muerto",
+   "verificacion": "prototipo",
+   "resumen": "Rover teledirigido; investigó el suelo y las propiedades de la superficie.",
+   "alias": [
+    "Luna 17",
+    "Lunokhod 1"
+   ],
+   "palabras_clave": [
+    "1970",
+    "luna",
+    "lunokhod",
+    "rover"
+   ],
+   "ruta": "kb/prototipo/lunokhod-1-luna-17.md",
+   "fuente_principal": "https://nasa.gesemweb.es/objeto/lunokhod-1-1970/"
+  },
+  {
+   "id": "lunokhod-2-luna-21",
+   "titulo": "Lunokhod 2",
+   "cuerpo": "Luna",
+   "tipo": "rover",
+   "anio": "1973",
+   "estado": "muerto",
+   "verificacion": "prototipo",
+   "resumen": "Rover soviético que recorrió y fotografió el terreno lunar.",
+   "alias": [
+    "Lunokhod 2",
+    "Luna 21"
+   ],
+   "palabras_clave": [
+    "1973",
+    "luna",
+    "lunokhod",
+    "rover"
+   ],
+   "ruta": "kb/prototipo/lunokhod-2-luna-21.md",
+   "fuente_principal": "https://nasa.gesemweb.es/objeto/lunokhod-2-1973/"
+  },
+  {
+   "id": "mariner-9-1971",
+   "titulo": "Mariner 9",
+   "cuerpo": "Marte",
+   "tipo": "orbiter",
+   "anio": "1971",
+   "estado": "muerto",
+   "verificacion": "prototipo",
+   "resumen": "Primer orbitador de Marte; cartografió el planeta durante una gran tormenta de polvo.",
+   "alias": [
+    "Mariner 9"
+   ],
+   "palabras_clave": [
+    "1971",
+    "mariner",
+    "marte",
+    "orbiter"
+   ],
+   "ruta": "kb/prototipo/mariner-9-1971.md",
+   "fuente_principal": "https://nasa.gesemweb.es/objeto/mariner-9-1971/"
+  },
+  {
+   "id": "mars-3-modulo-de-aterrizaje-mars-3",
+   "titulo": "Mars 3, módulo de aterrizaje",
+   "cuerpo": "Marte",
+   "tipo": "modulo",
+   "anio": "1971",
+   "estado": "muerto",
+   "verificacion": "prototipo",
+   "resumen": "Primer aterrizaje suave soviético; transmitió durante unos 20 segundos.",
+   "alias": [
+    "Mars 3",
+    "Mars 3",
+    "módulo de aterrizaje"
+   ],
+   "palabras_clave": [
+    "1971",
+    "aterrizaje",
+    "mars",
+    "marte",
+    "modulo",
+    "módulo"
+   ],
+   "ruta": "kb/prototipo/mars-3-modulo-de-aterrizaje-mars-3.md",
+   "fuente_principal": "https://nasa.gesemweb.es/objeto/mars-3-modulo-de-aterrizaje-1971/"
+  },
+  {
+   "id": "mars-5-1973",
+   "titulo": "Mars 5",
+   "cuerpo": "Marte",
+   "tipo": "orbiter",
+   "anio": "1973",
+   "estado": "muerto",
+   "verificacion": "prototipo",
+   "resumen": "Orbitador que obtuvo imágenes y datos atmosféricos.",
+   "alias": [
+    "Mars 5"
+   ],
+   "palabras_clave": [
+    "1973",
+    "mars",
+    "marte",
+    "orbiter"
+   ],
+   "ruta": "kb/prototipo/mars-5-1973.md",
+   "fuente_principal": "https://nasa.gesemweb.es/objeto/mars-5-1973/"
+  },
+  {
+   "id": "mars-pathfinder-mars-pathfinder",
+   "titulo": "Mars Pathfinder",
+   "cuerpo": "Marte",
+   "tipo": "modulo",
+   "anio": "1997",
+   "estado": "muerto",
+   "verificacion": "prototipo",
+   "resumen": "Aterrizador que demostró una nueva técnica de llegada con airbags.",
+   "alias": [
+    "Mars Pathfinder"
+   ],
+   "palabras_clave": [
+    "1997",
+    "mars",
+    "marte",
+    "modulo",
+    "pathfinder"
+   ],
+   "ruta": "kb/prototipo/mars-pathfinder-mars-pathfinder.md",
+   "fuente_principal": "https://nasa.gesemweb.es/objeto/mars-pathfinder-1997/"
+  },
+  {
+   "id": "mars-reconnaissance-orbiter-2006",
+   "titulo": "Mars Reconnaissance Orbiter",
+   "cuerpo": "Marte",
+   "tipo": "orbiter",
+   "anio": "2006",
+   "estado": "funciona",
+   "verificacion": "prototipo",
+   "resumen": "Imágenes de alta resolución, mineralogía y comunicaciones con vehículos de superficie.",
+   "alias": [
+    "Mars Reconnaissance Orbiter"
+   ],
+   "palabras_clave": [
+    "2006",
+    "mars",
+    "marte",
+    "orbiter",
+    "reconnaissance"
+   ],
+   "ruta": "kb/prototipo/mars-reconnaissance-orbiter-2006.md",
+   "fuente_principal": "https://nasa.gesemweb.es/objeto/mars-reconnaissance-orbiter-2006/"
+  },
+  {
+   "id": "maven-2014",
+   "titulo": "MAVEN",
+   "cuerpo": "Marte",
+   "tipo": "orbiter",
+   "anio": "2014",
+   "estado": "funciona",
+   "verificacion": "prototipo",
+   "resumen": "Estudia cómo Marte perdió parte de su atmósfera.",
+   "alias": [
+    "MAVEN"
+   ],
+   "palabras_clave": [
+    "2014",
+    "marte",
+    "maven",
+    "orbiter"
+   ],
+   "ruta": "kb/prototipo/maven-2014.md",
+   "fuente_principal": "https://nasa.gesemweb.es/objeto/maven-2014/"
+  },
+  {
+   "id": "modulo-lunar-antares-etapa-de-descenso-apollo-14",
+   "titulo": "Módulo lunar Antares, etapa de descenso",
+   "cuerpo": "Luna",
+   "tipo": "modulo",
+   "anio": "1971",
+   "estado": "muerto",
+   "verificacion": "prototipo",
+   "resumen": "Estructura de aterrizaje y soporte de la misión.",
+   "alias": [
+    "Módulo lunar Antares",
+    "etapa de descenso",
+    "Apollo 14"
+   ],
+   "palabras_clave": [
+    "1971",
+    "antares",
+    "descenso",
+    "etapa",
+    "luna",
+    "lunar",
+    "modulo",
+    "módulo"
+   ],
+   "ruta": "kb/prototipo/modulo-lunar-antares-etapa-de-descenso-apollo-14.md",
+   "fuente_principal": "https://nasa.gesemweb.es/objeto/modulo-lunar-antares-etapa-de-descenso-1971/"
+  },
+  {
+   "id": "modulo-lunar-challenger-etapa-de-descenso-apollo-17",
+   "titulo": "Módulo lunar Challenger, etapa de descenso",
+   "cuerpo": "Luna",
+   "tipo": "modulo",
+   "anio": "1972",
+   "estado": "muerto",
+   "verificacion": "prototipo",
+   "resumen": "Base de la última misión Apollo que aterrizó en la Luna.",
+   "alias": [
+    "Módulo lunar Challenger",
+    "etapa de descenso",
+    "Apollo 17"
+   ],
+   "palabras_clave": [
+    "1972",
+    "challenger",
+    "descenso",
+    "etapa",
+    "luna",
+    "lunar",
+    "modulo",
+    "módulo"
+   ],
+   "ruta": "kb/prototipo/modulo-lunar-challenger-etapa-de-descenso-apollo-17.md",
+   "fuente_principal": "https://nasa.gesemweb.es/objeto/modulo-lunar-challenger-etapa-de-descenso-1972/"
+  },
+  {
+   "id": "modulo-lunar-eagle-etapa-de-descenso-apollo-11",
+   "titulo": "Módulo lunar Eagle, etapa de descenso",
+   "cuerpo": "Luna",
+   "tipo": "modulo",
+   "anio": "1969",
+   "estado": "muerto",
+   "verificacion": "prototipo",
+   "resumen": "Base del primer alunizaje tripulado; sigue en la superficie.",
+   "alias": [
+    "Módulo lunar Eagle",
+    "etapa de descenso",
+    "Apollo 11"
+   ],
+   "palabras_clave": [
+    "1969",
+    "descenso",
+    "eagle",
+    "etapa",
+    "luna",
+    "lunar",
+    "modulo",
+    "módulo"
+   ],
+   "ruta": "kb/prototipo/modulo-lunar-eagle-etapa-de-descenso-apollo-11.md",
+   "fuente_principal": "https://nasa.gesemweb.es/objeto/modulo-lunar-eagle-etapa-de-descenso-1969/"
+  },
+  {
+   "id": "modulo-lunar-orion-etapa-de-descenso-apollo-16",
+   "titulo": "Módulo lunar Orion, etapa de descenso",
+   "cuerpo": "Luna",
+   "tipo": "modulo",
+   "anio": "1972",
+   "estado": "muerto",
+   "verificacion": "prototipo",
+   "resumen": "Base del alunizaje en la región de Descartes.",
+   "alias": [
+    "Apollo 16",
+    "Módulo lunar Orion",
+    "etapa de descenso"
+   ],
+   "palabras_clave": [
+    "1972",
+    "descenso",
+    "etapa",
+    "luna",
+    "lunar",
+    "modulo",
+    "módulo",
+    "orion"
+   ],
+   "ruta": "kb/prototipo/modulo-lunar-orion-etapa-de-descenso-apollo-16.md",
+   "fuente_principal": "https://nasa.gesemweb.es/objeto/modulo-lunar-orion-etapa-de-descenso-1972/"
+  },
+  {
+   "id": "new-horizons-2006",
+   "titulo": "New Horizons",
+   "cuerpo": "Espacio",
+   "tipo": "nave",
+   "anio": "2006",
+   "estado": "funciona",
+   "verificacion": "prototipo",
+   "resumen": "Sobrevoló Plutón y después el objeto del cinturón de Kuiper Arrokoth.",
+   "alias": [
+    "New Horizons"
+   ],
+   "palabras_clave": [
+    "2006",
+    "espacio",
+    "horizons",
+    "nave"
+   ],
+   "ruta": "kb/prototipo/new-horizons-2006.md",
+   "fuente_principal": "https://nasa.gesemweb.es/objeto/new-horizons-2006/"
+  },
+  {
+   "id": "opportunity-opportunity",
+   "titulo": "Opportunity",
+   "cuerpo": "Marte",
+   "tipo": "rover",
+   "anio": "2004",
+   "estado": "muerto",
+   "verificacion": "prototipo",
+   "resumen": "Encontró evidencias minerales relacionadas con ambientes acuosos antiguos.",
+   "alias": [
+    "Opportunity"
+   ],
+   "palabras_clave": [
+    "2004",
+    "marte",
+    "opportunity",
+    "rover"
+   ],
+   "ruta": "kb/prototipo/opportunity-opportunity.md",
+   "fuente_principal": "https://nasa.gesemweb.es/objeto/opportunity-2004/"
+  },
+  {
+   "id": "osiris-rex-capsula-de-muestras-2016",
+   "titulo": "OSIRIS-REx, cápsula de muestras",
+   "cuerpo": "Espacio",
+   "tipo": "nave",
+   "anio": "2016",
+   "estado": "extraido",
+   "verificacion": "prototipo",
+   "resumen": "Devolvió muestras del asteroide Bennu en 2023.",
+   "alias": [
+    "OSIRIS-REx",
+    "cápsula de muestras"
+   ],
+   "palabras_clave": [
+    "2016",
+    "cápsula",
+    "espacio",
+    "muestras",
+    "nave",
+    "osiris"
+   ],
+   "ruta": "kb/prototipo/osiris-rex-capsula-de-muestras-2016.md",
+   "fuente_principal": "https://nasa.gesemweb.es/objeto/osiris-rex-capsula-de-muestras-2016/"
+  },
+  {
+   "id": "paquete-sismico-psep-apollo-11",
+   "titulo": "Paquete sísmico PSEP",
+   "cuerpo": "Luna",
+   "tipo": "paquete",
+   "anio": "1969",
+   "estado": "muerto",
+   "verificacion": "prototipo",
+   "resumen": "Registró vibraciones y actividad sísmica lunar.",
+   "alias": [
+    "Paquete sísmico PSEP",
+    "Apollo 11"
+   ],
+   "palabras_clave": [
+    "1969",
+    "luna",
+    "paquete",
+    "psep",
+    "sísmico"
+   ],
+   "ruta": "kb/prototipo/paquete-sismico-psep-apollo-11.md",
+   "fuente_principal": "https://nasa.gesemweb.es/objeto/paquete-sismico-psep-1969/"
+  },
+  {
+   "id": "perseverance-perseverance",
+   "titulo": "Perseverance",
+   "cuerpo": "Marte",
+   "tipo": "rover",
+   "anio": "2021",
+   "estado": "funciona",
+   "verificacion": "prototipo",
+   "resumen": "Estudia geología y recoge muestras para una posible recuperación futura.",
+   "alias": [
+    "Perseverance"
+   ],
+   "palabras_clave": [
+    "2021",
+    "marte",
+    "perseverance",
+    "rover"
+   ],
+   "ruta": "kb/prototipo/perseverance-perseverance.md",
+   "fuente_principal": "https://nasa.gesemweb.es/objeto/perseverance-2021/"
+  },
+  {
+   "id": "philae-2004",
+   "titulo": "Philae",
+   "cuerpo": "Espacio",
+   "tipo": "nave",
+   "anio": "2004",
+   "estado": "muerto",
+   "verificacion": "prototipo",
+   "resumen": "Módulo que aterrizó en un cometa; sus rebotes complicaron las operaciones.",
+   "alias": [
+    "Philae"
+   ],
+   "palabras_clave": [
+    "2004",
+    "espacio",
+    "nave",
+    "philae"
+   ],
+   "ruta": "kb/prototipo/philae-2004.md",
+   "fuente_principal": "https://nasa.gesemweb.es/objeto/philae-2004/"
+  },
+  {
+   "id": "phoenix-phoenix",
+   "titulo": "Phoenix",
+   "cuerpo": "Marte",
+   "tipo": "modulo",
+   "anio": "2008",
+   "estado": "muerto",
+   "verificacion": "prototipo",
+   "resumen": "Detectó hielo de agua en el subsuelo polar.",
+   "alias": [
+    "Phoenix"
+   ],
+   "palabras_clave": [
+    "2008",
+    "marte",
+    "modulo",
+    "phoenix"
+   ],
+   "ruta": "kb/prototipo/phoenix-phoenix.md",
+   "fuente_principal": "https://nasa.gesemweb.es/objeto/phoenix-2008/"
+  },
+  {
+   "id": "pioneer-10-1972",
+   "titulo": "Pioneer 10",
+   "cuerpo": "Espacio",
+   "tipo": "nave",
+   "anio": "1972",
+   "estado": "muerto",
+   "verificacion": "prototipo",
+   "resumen": "Primer vehículo que atravesó el cinturón de asteroides y realizó un sobrevuelo de Júpiter.",
+   "alias": [
+    "Pioneer 10"
+   ],
+   "palabras_clave": [
+    "1972",
+    "espacio",
+    "nave",
+    "pioneer"
+   ],
+   "ruta": "kb/prototipo/pioneer-10-1972.md",
+   "fuente_principal": "https://nasa.gesemweb.es/objeto/pioneer-10-1972/"
+  },
+  {
+   "id": "pioneer-11-1973",
+   "titulo": "Pioneer 11",
+   "cuerpo": "Espacio",
+   "tipo": "nave",
+   "anio": "1973",
+   "estado": "muerto",
+   "verificacion": "prototipo",
+   "resumen": "Exploró Júpiter y Saturno; precursor de las grandes misiones planetarias.",
+   "alias": [
+    "Pioneer 11"
+   ],
+   "palabras_clave": [
+    "1973",
+    "espacio",
+    "nave",
+    "pioneer"
+   ],
+   "ruta": "kb/prototipo/pioneer-11-1973.md",
+   "fuente_principal": "https://nasa.gesemweb.es/objeto/pioneer-11-1973/"
+  },
+  {
+   "id": "retroreflector-laser-apollo-11",
+   "titulo": "Retroreflector láser",
+   "cuerpo": "Luna",
+   "tipo": "retro",
+   "anio": "1969",
+   "estado": "funciona",
+   "verificacion": "prototipo",
+   "resumen": "Permite medir con láser la distancia entre la Tierra y la Luna.",
+   "alias": [
+    "Retroreflector láser",
+    "Apollo 11"
+   ],
+   "palabras_clave": [
+    "1969",
+    "luna",
+    "láser",
+    "retro",
+    "retroreflector"
+   ],
+   "ruta": "kb/prototipo/retroreflector-laser-apollo-11.md",
+   "fuente_principal": "https://nasa.gesemweb.es/objeto/retroreflector-laser-1969/"
+  },
+  {
+   "id": "retroreflector-laser-apollo-14",
+   "titulo": "Retroreflector láser",
+   "cuerpo": "Luna",
+   "tipo": "retro",
+   "anio": "1971",
+   "estado": "funciona",
+   "verificacion": "prototipo",
+   "resumen": "Mediciones de alta precisión de la distancia Tierra-Luna.",
+   "alias": [
+    "Retroreflector láser",
+    "Apollo 14"
+   ],
+   "palabras_clave": [
+    "1971",
+    "luna",
+    "láser",
+    "retro",
+    "retroreflector"
+   ],
+   "ruta": "kb/prototipo/retroreflector-laser-apollo-14.md",
+   "fuente_principal": "https://nasa.gesemweb.es/objeto/retroreflector-laser-1971/"
+  },
+  {
+   "id": "retroreflector-laser-apollo-15",
+   "titulo": "Retroreflector láser",
+   "cuerpo": "Luna",
+   "tipo": "retro",
+   "anio": "1971",
+   "estado": "funciona",
+   "verificacion": "prototipo",
+   "resumen": "Uno de los experimentos lunares de larga duración.",
+   "alias": [
+    "Retroreflector láser",
+    "Apollo 15"
+   ],
+   "palabras_clave": [
+    "1971",
+    "luna",
+    "láser",
+    "retro",
+    "retroreflector"
+   ],
+   "ruta": "kb/prototipo/retroreflector-laser-apollo-15.md",
+   "fuente_principal": "https://nasa.gesemweb.es/objeto/retroreflector-laser-1971-2/"
+  },
+  {
+   "id": "rosetta-2004",
+   "titulo": "Rosetta",
+   "cuerpo": "Espacio",
+   "tipo": "nave",
+   "anio": "2004",
+   "estado": "muerto",
+   "verificacion": "prototipo",
+   "resumen": "Orbitó el cometa 67P y estudió su actividad durante meses.",
+   "alias": [
+    "Rosetta"
+   ],
+   "palabras_clave": [
+    "2004",
+    "espacio",
+    "nave",
+    "rosetta"
+   ],
+   "ruta": "kb/prototipo/rosetta-2004.md",
+   "fuente_principal": "https://nasa.gesemweb.es/objeto/rosetta-2004/"
+  },
+  {
+   "id": "schiaparelli-edm-schiaparelli",
+   "titulo": "Schiaparelli EDM",
+   "cuerpo": "Marte",
+   "tipo": "modulo",
+   "anio": "2016",
+   "estado": "muerto",
+   "verificacion": "prototipo",
+   "resumen": "Demostrador de entrada, descenso y aterrizaje que terminó impactando.",
+   "alias": [
+    "Schiaparelli EDM",
+    "Schiaparelli"
+   ],
+   "palabras_clave": [
+    "2016",
+    "marte",
+    "modulo",
+    "schiaparelli"
+   ],
+   "ruta": "kb/prototipo/schiaparelli-edm-schiaparelli.md",
+   "fuente_principal": "https://nasa.gesemweb.es/objeto/schiaparelli-edm-2016/"
+  },
+  {
+   "id": "sojourner-mars-pathfinder",
+   "titulo": "Sojourner",
+   "cuerpo": "Marte",
+   "tipo": "rover",
+   "anio": "1997",
+   "estado": "muerto",
+   "verificacion": "prototipo",
+   "resumen": "Primer rover marciano de la NASA; analizó rocas y suelo.",
+   "alias": [
+    "Sojourner",
+    "Mars Pathfinder"
+   ],
+   "palabras_clave": [
+    "1997",
+    "marte",
+    "rover",
+    "sojourner"
+   ],
+   "ruta": "kb/prototipo/sojourner-mars-pathfinder.md",
+   "fuente_principal": "https://nasa.gesemweb.es/objeto/sojourner-1997/"
+  },
+  {
+   "id": "spirit-spirit",
+   "titulo": "Spirit",
+   "cuerpo": "Marte",
+   "tipo": "rover",
+   "anio": "2004",
+   "estado": "muerto",
+   "verificacion": "prototipo",
+   "resumen": "Exploró indicios geológicos de agua pasada.",
+   "alias": [
+    "Spirit"
+   ],
+   "palabras_clave": [
+    "2004",
+    "marte",
+    "rover",
+    "spirit"
+   ],
+   "ruta": "kb/prototipo/spirit-spirit.md",
+   "fuente_principal": "https://nasa.gesemweb.es/objeto/spirit-2004/"
+  },
+  {
+   "id": "stardust-capsula-de-retorno-1999",
+   "titulo": "Stardust, cápsula de retorno",
+   "cuerpo": "Espacio",
+   "tipo": "nave",
+   "anio": "1999",
+   "estado": "muerto",
+   "verificacion": "prototipo",
+   "resumen": "Trajo a la Tierra muestras de polvo del cometa Wild 2.",
+   "alias": [
+    "Stardust",
+    "cápsula de retorno"
+   ],
+   "palabras_clave": [
+    "1999",
+    "cápsula",
+    "espacio",
+    "nave",
+    "retorno",
+    "stardust"
+   ],
+   "ruta": "kb/prototipo/stardust-capsula-de-retorno-1999.md",
+   "fuente_principal": "https://nasa.gesemweb.es/objeto/stardust-capsula-de-retorno-1999/"
+  },
+  {
+   "id": "telescopio-ultravioleta-lejano-apollo-16",
+   "titulo": "Telescopio ultravioleta lejano",
+   "cuerpo": "Luna",
+   "tipo": "telescopio",
+   "anio": "1972",
+   "estado": "muerto",
+   "verificacion": "prototipo",
+   "resumen": "Observaciones astronómicas desde la superficie lunar.",
+   "alias": [
+    "Apollo 16",
+    "Telescopio ultravioleta lejano"
+   ],
+   "palabras_clave": [
+    "1972",
+    "lejano",
+    "luna",
+    "telescopio",
+    "ultravioleta"
+   ],
+   "ruta": "kb/prototipo/telescopio-ultravioleta-lejano-apollo-16.md",
+   "fuente_principal": "https://nasa.gesemweb.es/objeto/telescopio-ultravioleta-lejano-1972/"
+  },
+  {
+   "id": "viking-1-modulo-de-aterrizaje-viking-1",
+   "titulo": "Viking 1, módulo de aterrizaje",
+   "cuerpo": "Marte",
+   "tipo": "modulo",
+   "anio": "1976",
+   "estado": "muerto",
+   "verificacion": "prototipo",
+   "resumen": "Experimentos pioneros para investigar posibles indicios de vida.",
+   "alias": [
+    "Viking 1",
+    "módulo de aterrizaje",
+    "Viking 1"
+   ],
+   "palabras_clave": [
+    "1976",
+    "aterrizaje",
+    "marte",
+    "modulo",
+    "módulo",
+    "viking"
+   ],
+   "ruta": "kb/prototipo/viking-1-modulo-de-aterrizaje-viking-1.md",
+   "fuente_principal": "https://nasa.gesemweb.es/objeto/viking-1-modulo-de-aterrizaje-1976/"
+  },
+  {
+   "id": "viking-1-orbitador-1976",
+   "titulo": "Viking 1, orbitador",
+   "cuerpo": "Marte",
+   "tipo": "orbiter",
+   "anio": "1976",
+   "estado": "muerto",
+   "verificacion": "prototipo",
+   "resumen": "Cartografía y observación del planeta desde el espacio.",
+   "alias": [
+    "Viking 1",
+    "orbitador"
+   ],
+   "palabras_clave": [
+    "1976",
+    "marte",
+    "orbitador",
+    "orbiter",
+    "viking"
+   ],
+   "ruta": "kb/prototipo/viking-1-orbitador-1976.md",
+   "fuente_principal": "https://nasa.gesemweb.es/objeto/viking-1-orbitador-1976/"
+  },
+  {
+   "id": "viking-2-modulo-de-aterrizaje-viking-2",
+   "titulo": "Viking 2, módulo de aterrizaje",
+   "cuerpo": "Marte",
+   "tipo": "modulo",
+   "anio": "1976",
+   "estado": "muerto",
+   "verificacion": "prototipo",
+   "resumen": "Análisis del suelo y mediciones meteorológicas.",
+   "alias": [
+    "Viking 2",
+    "Viking 2",
+    "módulo de aterrizaje"
+   ],
+   "palabras_clave": [
+    "1976",
+    "aterrizaje",
+    "marte",
+    "modulo",
+    "módulo",
+    "viking"
+   ],
+   "ruta": "kb/prototipo/viking-2-modulo-de-aterrizaje-viking-2.md",
+   "fuente_principal": "https://nasa.gesemweb.es/objeto/viking-2-modulo-de-aterrizaje-1976/"
+  },
+  {
+   "id": "viking-2-orbitador-1976",
+   "titulo": "Viking 2, orbitador",
+   "cuerpo": "Marte",
+   "tipo": "orbiter",
+   "anio": "1976",
+   "estado": "muerto",
+   "verificacion": "prototipo",
+   "resumen": "Imágenes y estudios de la superficie y la atmósfera.",
+   "alias": [
+    "Viking 2",
+    "orbitador"
+   ],
+   "palabras_clave": [
+    "1976",
+    "marte",
+    "orbitador",
+    "orbiter",
+    "viking"
+   ],
+   "ruta": "kb/prototipo/viking-2-orbitador-1976.md",
+   "fuente_principal": "https://nasa.gesemweb.es/objeto/viking-2-orbitador-1976/"
+  },
+  {
+   "id": "voyager-1-1977",
+   "titulo": "Voyager 1",
+   "cuerpo": "Espacio",
+   "tipo": "nave",
+   "anio": "1977",
+   "estado": "funciona",
+   "verificacion": "prototipo",
+   "resumen": "Estudia el entorno interestelar; lleva el disco de oro con sonidos e imágenes de la Tierra.",
+   "alias": [
+    "Voyager 1"
+   ],
+   "palabras_clave": [
+    "1977",
+    "espacio",
+    "nave",
+    "voyager"
+   ],
+   "ruta": "kb/prototipo/voyager-1-1977.md",
+   "fuente_principal": "https://nasa.gesemweb.es/objeto/voyager-1-1977/"
+  },
+  {
+   "id": "voyager-2-1977",
+   "titulo": "Voyager 2",
+   "cuerpo": "Espacio",
+   "tipo": "nave",
+   "anio": "1977",
+   "estado": "funciona",
+   "verificacion": "prototipo",
+   "resumen": "Única nave que ha visitado de cerca Urano y Neptuno.",
+   "alias": [
+    "Voyager 2"
+   ],
+   "palabras_clave": [
+    "1977",
+    "espacio",
+    "nave",
+    "voyager"
+   ],
+   "ruta": "kb/prototipo/voyager-2-1977.md",
+   "fuente_principal": "https://nasa.gesemweb.es/objeto/voyager-2-1977/"
+  },
+  {
+   "id": "zhurong-zhurong",
+   "titulo": "Zhurong",
+   "cuerpo": "Marte",
+   "tipo": "rover",
+   "anio": "2021",
+   "estado": "dudoso",
+   "verificacion": "prototipo",
+   "resumen": "Rover que estudió el terreno y el subsuelo marcianos.",
+   "alias": [
+    "Zhurong"
+   ],
+   "palabras_clave": [
+    "2021",
+    "marte",
+    "rover",
+    "zhurong"
+   ],
+   "ruta": "kb/prototipo/zhurong-zhurong.md",
+   "fuente_principal": "https://nasa.gesemweb.es/objeto/zhurong-2021/"
+  }
+ ]
+}

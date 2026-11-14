@@ -1,0 +1,47 @@
+---
+id: retroreflector-laser-apollo-14
+titulo: "Retroreflector láser"
+cuerpo: "Luna"
+tipo: "retro"
+anio: 1971
+estado: "funciona"
+lugar: "Fra Mauro"
+coordenadas: "-3.645, -17.472"
+mision: "Apollo 14, 1971"
+verificacion: prototipo
+fuente_principal: "https://nasa.gesemweb.es/objeto/retroreflector-laser-1971/"
+otras_fuentes:
+  - "https://images-api.nasa.gov/search?q=Retroreflector+láser"
+alias: ["Retroreflector láser", "Apollo 14"]
+palabras_clave: ["1971", "luna", "láser", "retro", "retroreflector"]
+resumen: "Mediciones de alta precisión de la distancia Tierra-Luna."
+---
+
+# Retroreflector láser
+
+> Ficha generada desde el catálogo del prototipo (60 objetos). **Pendiente de cotejar** con la fuente NASA.
+
+## Qué es
+Retroreflector láser — retro, Apollo 14, 1971. Mediciones de alta precisión de la distancia Tierra-Luna.
+
+## Dónde está
+- Cuerpo: Luna
+- Lugar: Fra Mauro
+- Coordenadas: -3.645, -17.472
+- Estado: funciona (Científicamente utilizable)
+
+## Cronología
+- Año: 1971
+- Misión: Apollo 14, 1971
+- Sitio / programa: Apollo 14
+
+## Pregunta para el visitante
+Retroreflector láser sigue operativo en Fra Mauro desde 1971: 55 años. Averigua qué mide hoy y calcula cuántas veces ha dado la vuelta a su planeta o a la Tierra en ese tiempo.
+
+## Enlaces
+- Ficha del prototipo: https://nasa.gesemweb.es/objeto/retroreflector-laser-1971/
+- Imagen: https://nasa.gesemweb.es/wp-content/uploads/2026/10/07-300x300.jpg
+- Búsqueda de imágenes en la NASA: https://images-api.nasa.gov/search?q=Retroreflector+láser
+
+## Nota de verificación
+Ficha sin cotejar. Antes de usarla como respuesta del chatbot hay que confirmar año, lugar, estado y misión en NASA (NSSDCA NMC, science.nasa.gov o NASA Image Library) y marcar `verificacion: verificado`.

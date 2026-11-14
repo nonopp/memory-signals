@@ -1,5 +1,5 @@
 /* Memory Signals — motor de la experiencia.
-   Máquina de estados: intro → edad → gusto → destino → crucero → destellos → objeto → pausa.
+   Máquina de estados: intro → edad → destino → crucero → destellos → objeto → pausa.
    Todo el texto vive en datos/contenido.json: aquí no hay ni una frase. */
 (function () {
   'use strict';
@@ -57,9 +57,27 @@
     if ('speechSynthesis' in window) { try { window.speechSynthesis.cancel(); } catch (e) {} }
   }
 
-  /* ---------- navegación ---------- */
+  /* ---------- fondo de vídeo: solo en la portada ---------- */
+  var cajaVideo = null, video = null;
+  function controlVideo(esIntro) {
+    if (!cajaVideo) cajaVideo = document.getElementById('fondo-video');
+    if (!video) video = document.getElementById('video-fondo');
+    if (!cajaVideo || !video) return;
+    if (window.Escena && window.Escena.quieto) { cajaVideo.hidden = true; try { video.pause(); } catch (e) {} return; }
+    cajaVideo.hidden = !esIntro;
+    if (esIntro) {
+      if (!video.getAttribute('src') && video.querySelector('source')) {
+        video.load();
+      }
+      try { var p = video.play(); if (p && p.catch) p.catch(function () { cajaVideo.hidden = true; }); } catch (e) {}
+    } else {
+      try { video.pause(); } catch (e) {}
+    }
+  }
+
   function ir(id) {
     $$('.pantalla').forEach(function (p) { p.classList.remove('activa'); });
+    controlVideo(id === 'intro');
     var destino = $('#p-' + id);
     if (destino) {
       destino.classList.add('activa');
@@ -67,6 +85,62 @@
       if (foco) foco.focus({ preventScroll: true });
     }
     if (id !== 'crucero' && id !== 'destellos') window.Escena.parar();
+    pintarMenu();
+  }
+
+  /* ---------- menú de destinos (cabecera) ---------- */
+  var menuListo = false;
+  function etiquetaCorta(d) {
+    if (d.corto) return d.corto;
+    return (d.nombre || '').replace(/^La\s+/i, '').split(' ')[0];
+  }
+  function pintarMenu() {
+    var nav = $('#menu-destinos');
+    if (!nav || !datos) return;
+    if (!menuListo) {
+      nav.innerHTML = '';
+      datos.destinos.forEach(function (d) {
+        var b = document.createElement('button');
+        b.type = 'button';
+        b.setAttribute('data-destino', d.id);
+        b.setAttribute('aria-label', 'Ir a ' + d.nombre);
+        var punto = document.createElement('span');
+        punto.className = 'punto-menu';
+        punto.style.setProperty('--c', d.color || '#ffffff');
+        var t = document.createElement('span');
+        t.textContent = etiquetaCorta(d);
+        b.appendChild(punto); b.appendChild(t);
+        b.addEventListener('click', function () { irADestino(d); });
+        nav.appendChild(b);
+      });
+      menuListo = true;
+    }
+    var activa = $('.pantalla.activa');
+    var pantalla = activa ? activa.id.replace('p-', '') : 'intro';
+    nav.hidden = !estado.destino || ['crucero', 'destellos', 'objeto', 'pausa'].indexOf(pantalla) === -1;
+    Array.prototype.forEach.call(nav.children, function (b) {
+      var actual = estado.destino && b.getAttribute('data-destino') === estado.destino.id;
+      if (actual) b.setAttribute('aria-current', 'true');
+      else b.removeAttribute('aria-current');
+    });
+  }
+  /* saltar de un destino a otro sin reiniciar el viaje ni perder el nivel */
+  function irADestino(d) {
+    if (!d) return;
+    estado.destino = d;
+    estado.aparato = null;
+    estado.turno = 0;
+    ir('destellos');
+    pintaDestellos();
+  }
+  /* volver al principio: la marca de la cabecera hace esto */
+  function reiniciar() {
+    estado.destino = null;
+    estado.aparato = null;
+    estado.turno = 0;
+    callar();
+    ir('intro');
+    pintaIntro();
   }
 
   /* ---------- nivel ---------- */
@@ -91,7 +165,6 @@
     var id = activa.id.replace('p-', '');
     if (id === 'intro') pintaIntro();
     else if (id === 'edad') pintaEdad();
-    else if (id === 'gusto') pintaGusto();
     else if (id === 'destino') pintaDestino();
     else if (id === 'crucero') pintaCrucero();
     else if (id === 'destellos') pintaDestellos();
@@ -124,22 +197,8 @@
       b.addEventListener('click', function () {
         estado.edad = o.valor;
         if (o.valor === 'menos') { estado.nivel = 'explorador'; guardar(CLAVE_NIVEL, 'explorador'); pintarNivel(); }
-        ir('gusto'); pintaGusto();
+        ir('destino'); pintaDestino();
       });
-      cont.appendChild(b);
-    });
-  }
-
-  function pintaGusto() {
-    var texto = txt(datos.astronauta.lineas.gusto_espacio);
-    $('#txt-gusto').textContent = texto;
-    hablar(texto);
-    var cont = $('#opciones-gusto');
-    cont.innerHTML = '';
-    ['Me encanta', 'No mucho, pero tengo curiosidad'].forEach(function (etiqueta) {
-      var b = document.createElement('button');
-      b.type = 'button'; b.className = 'opcion'; b.textContent = etiqueta;
-      b.addEventListener('click', function () { ir('destino'); pintaDestino(); });
       cont.appendChild(b);
     });
   }
@@ -220,6 +279,14 @@
       });
       cont.appendChild(b);
     });
+  }
+
+  /* volver de un objeto a la lista de objetos de ese mismo destino */
+  function volverAObjetos() {
+    estado.aparato = null;
+    estado.turno = 0;
+    ir('destellos');
+    pintaDestellos();
   }
 
   function pintaObjeto() {
@@ -329,13 +396,14 @@
 
   /* ---------- arranque ---------- */
   function conectar() {
+    $('#btn-inicio').addEventListener('click', reiniciar);
     document.addEventListener('click', function (ev) {
       var b = ev.target.closest('[data-ir]');
       if (!b) return;
       var id = b.getAttribute('data-ir');
+      if (id === 'intro') { reiniciar(); return; }
       ir(id);
-      if (id === 'intro') pintaIntro();
-      else if (id === 'edad') pintaEdad();
+      if (id === 'edad') pintaEdad();
       else if (id === 'destino') pintaDestino();
       else if (id === 'destellos') pintaDestellos();
       else if (id === 'pausa') pintaPausa();
@@ -349,6 +417,7 @@
       if (estado.voz) repintarPantallaActual(); else callar();
     });
     $('#btn-ficha').addEventListener('click', abrirFicha);
+    $('#btn-volver-objetos').addEventListener('click', volverAObjetos);
     $('#modal-cerrar').addEventListener('click', cerrarFicha);
     $('#modal').addEventListener('click', function (ev) { if (ev.target === this) cerrarFicha(); });
     document.addEventListener('keydown', function (ev) { if (ev.key === 'Escape') cerrarFicha(); });
@@ -361,6 +430,7 @@
     pintarNivel();
     conectar();
     window.Escena.cielo();
+    controlVideo(true);
     if ('speechSynthesis' in window) {
       window.speechSynthesis.onvoiceschanged = elegirVoz;
       elegirVoz();

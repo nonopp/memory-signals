@@ -14,13 +14,29 @@
 </head>
 <body>
 
+<video class="fondo" id="fondo" autoplay muted loop playsinline preload="auto"
+       poster="media/fondo-poster.jpg" aria-hidden="true" tabindex="-1">
+  <source src="media/fondo.mp4" type="video/mp4">
+</video>
+<div class="velo" aria-hidden="true"></div>
+
 <canvas id="cielo" aria-hidden="true"></canvas>
 
+<!-- Fondo de vídeo de la portada: fuera de .pantalla para que position:fixed no quede atrapado por la animación -->
+<div class="fondo-video" id="fondo-video" aria-hidden="true" hidden>
+  <video id="video-fondo" muted loop playsinline preload="none"
+         poster="datos/fondo-poster.jpg" disablepictureinpicture tabindex="-1">
+    <source src="datos/fondo.mp4" type="video/mp4">
+  </video>
+  <div class="velo"></div>
+</div>
+
 <header class="barra">
-  <div class="marca">
+  <button type="button" class="marca" id="btn-inicio" title="Volver al inicio">
     <span class="punto" aria-hidden="true"></span>
     <span>Memory Signals</span>
-  </div>
+  </button>
+  <nav class="menu-destinos" id="menu-destinos" aria-label="Cambiar de destino" hidden></nav>
   <div class="controles">
     <div class="nivel" role="group" aria-label="Nivel de lectura">
       <button type="button" id="btn-explorador" class="nivel-btn activo" aria-pressed="true">Explorador</button>
@@ -53,14 +69,7 @@
     <div class="acciones columna" id="opciones-edad"></div>
   </section>
 
-  <!-- 3 · GUSTO POR EL ESPACIO -->
-  <section class="pantalla" id="p-gusto" aria-labelledby="t-gusto">
-    <h2 id="t-gusto">Una pregunta rápida</h2>
-    <p class="voz-texto" id="txt-gusto" aria-live="polite"></p>
-    <div class="acciones" id="opciones-gusto"></div>
-  </section>
-
-  <!-- 4 · DESTINO -->
+  <!-- 3 · DESTINO -->
   <section class="pantalla" id="p-destino" aria-labelledby="t-destino">
     <h2 id="t-destino">Elige destino</h2>
     <p class="voz-texto" id="txt-destino" aria-live="polite"></p>
@@ -75,6 +84,7 @@
       <div class="hud" id="hud-crucero">acercándonos…</div>
     </div>
     <div class="acciones">
+      <button type="button" class="secundario" data-ir="destino">← Elegir otro destino</button>
       <button type="button" class="principal" data-ir="destellos">Mirar por la ventana</button>
     </div>
   </section>
@@ -105,6 +115,7 @@
     <blockquote class="dialogo" id="texto-objeto" aria-live="polite"></blockquote>
     <div class="acciones columna" id="opciones-objeto"></div>
     <div class="acciones">
+      <button type="button" class="secundario" id="btn-volver-objetos">← Volver a los objetos</button>
       <button type="button" class="secundario" id="btn-ficha">Ver ficha y fuentes</button>
       <button type="button" class="secundario" data-ir="pausa">Dejarlo aquí</button>
     </div>
