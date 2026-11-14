@@ -271,8 +271,14 @@
               escapar(rec.texto).replace(/\n/g, '<br>');
     }
     if (fuente) {
-      html += '<span class="ms-fuente">Fuente: <a href="' + escapar(fuente) + '" target="_blank" rel="noopener noreferrer">' +
-              escapar(fuente.replace(/^https?:\/\//, '')) + '</a></span>';
+      /* solo se enlaza lo que está cotejado: las URLs del prototipo apuntan a la web
+         vieja y algunas ya no existen, así que se citan sin enlace */
+      if (verificacion === 'verificado') {
+        html += '<span class="ms-fuente">Fuente: <a href="' + escapar(fuente) + '" target="_blank" rel="noopener noreferrer">' +
+                escapar(fuente.replace(/^https?:\/\//, '')) + '</a></span>';
+      } else {
+        html += '<span class="ms-fuente">Fuente: ' + escapar(fuente.replace(/^https?:\/\//, '')) + '</span>';
+      }
     }
     if (verificacion !== 'verificado') {
       html += '<span class="ms-aviso">Ficha del prototipo: sin cotejar con la NASA.</span>';
