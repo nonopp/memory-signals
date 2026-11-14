@@ -290,17 +290,8 @@
       etq.classList.toggle('es-cientifico', nivelActual() !== 'explorador');
     }
     var saludo = modo.saludo || 'Pregúntame lo que quieras de mí: qué hice, quién me construyó o dónde estoy ahora.';
-    var sugerencias = modo.sugerencias || ['¿Qué hiciste?', '¿Quién te construyó?', '¿Dónde estás ahora?'];
     burbuja('objeto', '<strong>' + escapar(nombre) + '</strong><br>' + escapar(saludo));
-    var caja = document.createElement('div');
-    caja.className = 'ms-sugerencias';
-    sugerencias.forEach(function (t) {
-      var b = document.createElement('button');
-      b.type = 'button'; b.textContent = t;
-      b.addEventListener('click', function () { preguntar(t); });
-      caja.appendChild(b);
-    });
-    cont.appendChild(caja);
+    actualizarSugerencias();
   }
 
   function pintarRespuesta(rec, textoModelo, fuente, verificacion) {
@@ -402,13 +393,15 @@
       }
       if (esperando) esperando.remove();
       var esperando2 = pensando();
+      var ctx = contextoActual();
+      var fragmento = rec.fragmento + (ctx ? '\n\nLO QUE ACABO DE DECIRLE AL VISITANTE:\n' + ctx : '');
       return fetch(API, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           pregunta: texto,
           ficha: rec.ficha.titulo,
-          fragmento: rec.fragmento,
+          fragmento: fragmento,
           nivel: nivelActual()
         })
       }).then(function (r) {
@@ -430,7 +423,76 @@
     });
   }
 
+  /* lo que el aparato está diciendo ahora mismo en el contenido, para que la respuesta encaje */
+  function contextoActual() {
+    var e = window.__MS, a = e && e.aparato;
+    if (!a || !a.turnos) return '';
+    var t = a.turnos[e.turno || 0];
+    if (!t) return '';
+    var nivel = nivelActual();
+    return (t.pregunta || '') + ' ' + (t['texto_' + nivel] || t.texto_explorador || '');
+  }
+
+  /* responde con la ficha y, si el servidor puede, con el modelo.
+     Devuelve { rec, modelo } para poder pintarlo aquí o donde lo pida el contenido. */
+  function resolver(texto, contexto) {
+    return responder(texto).then(function (rec) {
+      if (!rec) return { rec: null, modelo: '' };
+      var fragmento = rec.fragmento;
+      var ctx = contexto || contextoActual();
+      if (ctx) fragmento += '\n\nLO QUE ACABO DE DECIRLE AL VISITANTE:\n' + ctx;
+      return fetch(API, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          pregunta: texto,
+          ficha: rec.ficha.titulo,
+          fragmento: fragmento,
+          nivel: nivelActual()
+        })
+      }).then(function (r) {
+        if (!r.ok) throw new Error('HTTP ' + r.status);
+        return r.json();
+      }).then(function (j) { return { rec: rec, modelo: (j && j.respuesta) || '' }; })
+        .catch(function () { return { rec: rec, modelo: '' }; });
+    });
+  }
+
+  /* las preguntas sugeridas salen del turno que se está viendo: contenido y chat dicen lo mismo */
+  function sugerenciasDelTurno() {
+    var e = window.__MS;
+    var a = e && e.aparato;
+    if (!a || !a.turnos) return null;
+    var t = a.turnos[e.turno || 0];
+    if (!t || !t.opciones || !t.opciones.length) return null;
+    var modos = window.__MSmodos || {};
+    var modo = modos[nivelActual()] || {};
+    return (t.opciones || []).concat((modo.sugerencias || []).slice(0, 1));
+  }
+
+  function actualizarSugerencias() {
+    var cont = $('ms-mensajes');
+    if (!cont) return;
+    var viejo = cont.querySelector('.ms-sugerencias');
+    if (viejo) viejo.remove();
+    var sugerencias = sugerenciasDelTurno();
+    if (!sugerencias) {
+      var modos = window.__MSmodos || {};
+      sugerencias = (modos[nivelActual()] || {}).sugerencias || ['¿Qué hiciste?', '¿Quién te construyó?', '¿Dónde estás ahora?'];
+    }
+    var caja = document.createElement('div');
+    caja.className = 'ms-sugerencias';
+    sugerencias.forEach(function (t) {
+      var b = document.createElement('button');
+      b.type = 'button'; b.textContent = t;
+      b.addEventListener('click', function () { preguntar(t); });
+      caja.appendChild(b);
+    });
+    cont.appendChild(caja);
+  }
+
   function activar(a) {
+    var mismo = !!(actual && a && actual.id === a.id);
     actual = a;
     mostrar(!!a);
     if (a) {
@@ -438,7 +500,8 @@
       var t = $('ms-panel-titulo'), s = $('ms-panel-sub');
       if (t) t.textContent = a.nombre || 'Memory Signals';
       if (s) s.textContent = 'habla conmigo: te contesto con mi ficha';
-      saludar();
+      /* al cambiar de turno no se borra la conversación: solo se refrescan las sugerencias */
+      if (mismo) { actualizarSugerencias(); refrescarModo(); } else { saludar(); }
     }
   }
 
@@ -448,5 +511,5 @@
     construir(); mostrar(false);
   }
 
-  window.ChatObjeto = { activar: activar, preguntar: preguntar, abrir: abrir, cerrar: cerrar };
+  window.ChatObjeto = { activar: activar, preguntar: preguntar, resolver: resolver, abrir: abrir, cerrar: cerrar };
 })();

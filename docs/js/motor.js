@@ -394,14 +394,14 @@
     hablar(turno.pregunta + '. ' + txt(turno));
 
     var cont = $('#opciones-objeto');
+    var cajaResp = $('#respuesta-objeto');
     cont.innerHTML = '';
+    if (cajaResp) { cajaResp.hidden = true; cajaResp.innerHTML = ''; }
     (turno.opciones || ['Seguir']).forEach(function (etiqueta) {
       var b = document.createElement('button');
       b.type = 'button'; b.className = 'opcion'; b.textContent = etiqueta;
       b.addEventListener('click', function () {
-        estado.turno += 1;
-        if (estado.turno >= a.turnos.length) { ir('pausa'); pintaPausa(); }
-        else pintaObjeto();
+        responderOpcion(a, etiqueta, turno.pregunta + ' ' + txt(turno));
       });
       cont.appendChild(b);
     });
@@ -417,6 +417,63 @@
       var hermanos = destinoActual ? hermanosDe(destinoActual) : [a];
       window.MapaObjetos.activar(hermanos, a, cambiarAparato);
     }
+  }
+
+  /* la opción pulsada se contesta con la ficha y el chat; después se ofrece seguir el guion */
+  function responderOpcion(a, pregunta, contexto) {
+    var caja = $('#respuesta-objeto');
+    if (!caja) return;
+    $$('#opciones-objeto .opcion').forEach(function (x) { x.disabled = true; });
+    caja.hidden = false;
+    caja.innerHTML = '';
+    var espera = document.createElement('p');
+    espera.className = 'respuesta-espera';
+    espera.textContent = 'Consultando la ficha…';
+    caja.appendChild(espera);
+
+    var resolver = window.ChatObjeto && window.ChatObjeto.resolver;
+    var promesa = resolver ? resolver(pregunta, contexto) : Promise.resolve({ rec: null, modelo: '' });
+
+    promesa.then(function (r) {
+      var texto = (r && r.modelo) || (r && r.rec ? r.rec.texto : '');
+      if (!texto) texto = 'Eso no consta en mi ficha.';
+      caja.innerHTML = '';
+
+      var voz = document.createElement('p');
+      voz.className = 'respuesta-voz';
+      var quien = document.createElement('strong');
+      quien.textContent = a.nombre;
+      voz.appendChild(quien);
+      voz.appendChild(document.createTextNode(' ' + texto.replace(/\s+/g, ' ').trim()));
+      caja.appendChild(voz);
+
+      var fuente = r && r.rec ? r.rec.fuente : '';
+      if (fuente) {
+        var f = document.createElement('p');
+        f.className = 'respuesta-fuente';
+        f.textContent = 'Fuente: ' + fuente;
+        caja.appendChild(f);
+      }
+
+      var acciones = document.createElement('div');
+      acciones.className = 'acciones';
+      var sig = document.createElement('button');
+      sig.type = 'button'; sig.className = 'principal'; sig.id = 'btn-siguiente-objeto';
+      sig.textContent = 'Siguiente pregunta →';
+      sig.addEventListener('click', function () {
+        estado.turno += 1;
+        if (estado.turno >= a.turnos.length) { ir('pausa'); pintaPausa(); }
+        else pintaObjeto();
+      });
+      acciones.appendChild(sig);
+      caja.appendChild(acciones);
+      hablar(texto);
+      caja.scrollIntoView({ block: 'nearest', behavior: quietoAnim() ? 'auto' : 'smooth' });
+    });
+  }
+
+  function quietoAnim() {
+    return window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   }
 
   function pintaPausa() {

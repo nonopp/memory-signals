@@ -97,7 +97,21 @@ body.con-fondo .velo{opacity:1}
 .pantalla:not(#p-objeto) .acciones{justify-content:center}
 .pantalla:not(#p-objeto) .astronauta{margin-left:auto;margin-right:auto}
 
-/* lo que explica cada botón de modo al pasar el ratón por encima */
+/* la respuesta a la opción que se pulsa, debajo del diálogo del aparato */
+.respuesta-objeto{
+  margin:14px 0 4px;padding:16px 18px;border-radius:14px;
+  background:linear-gradient(180deg,rgba(24,42,74,.85),rgba(12,22,40,.85));
+  border:1px solid rgba(99,224,200,.28);box-shadow:0 10px 26px rgba(0,0,0,.28);
+  animation:respuestaEntra .2s ease-out;
+}
+.respuesta-objeto[hidden]{display:none}
+.respuesta-voz{margin:0;font-size:1rem;line-height:1.62;color:var(--texto)}
+.respuesta-voz strong{color:var(--acento)}
+.respuesta-fuente{margin:8px 0 0;font-size:.74rem;color:var(--texto-suave);word-break:break-word}
+.respuesta-espera{margin:0;font-size:.9rem;color:var(--texto-suave);font-style:italic}
+.respuesta-objeto .acciones{margin-top:12px;justify-content:flex-start}
+@keyframes respuestaEntra{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.respuesta-objeto{animation:none}}
 .pista-modo{
   position:fixed;z-index:60;max-width:330px;padding:12px 15px;border-radius:13px;
   background:linear-gradient(180deg,rgba(30,52,92,.985),rgba(14,24,44,.985));
