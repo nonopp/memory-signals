@@ -113,8 +113,8 @@
     { re: /^(donde|lugar|sitio|ahora|hoy|posicion|coordenadas|encuentra|encuentras|estas|quedaste|rodea|rodeaba|rodean|alrededor|alrededores|paisaje|entorno|vista)$/, sec: /^Dónde está hoy$/i },
     { re: /^(llego|llegaste|lanzamiento|lanzaron|despego|viaje|aterrizo|aterrizaste|aterrizaje|llegada|cohete|salida)$/, sec: /^Cómo llegó$/i },
     { re: /^(descubrio|descubriste|descubrimiento|hallazgo|encontro|encontraste|resultado|resultados|ciencia|cientifica|serviste)$/, sec: /^Qué descubrió$/i },
-    { re: /^(pesa|pesas|peso|masa|mide|mides|tamano|instrumento|instrumentos|potencia|tecnico|tecnicos|datos|cifra|cifras)$/, sec: /^Datos técnicos$/i },
-    { re: /^(hacia|hacias|dia|dias|trabajaba|haciais|rutina|mision|hice|hacias)$/, sec: /^Qué hacía$/i }
+    { re: /^(pesa|pesas|peso|pesaba|pesabas|pesaban|pesaste|masa|mide|mides|medias|media|medías|tamano|tamano|instrumento|instrumentos|potencia|tecnico|tecnicos|datos|cifra|cifras)$/, sec: /^Datos técnicos$/i },
+    { re: /^(hacia|hacias|dia|dias|trabajaba|haciais|rutina|mision|hice|hizo|hiciste|hicieron|hacian|estuvo|estuviste|estuvieron|estuvimos)$/, sec: /^Qué hacía$/i }
   ];
   /* preguntas de identidad: «¿quién eres?» no pregunta por la tripulación */
   var SECCION_IDENTIDAD = /quien\s+(eres|es|soy|fue)|que\s+eres|presentate|identificate|como\s+te\s+llamas|quien\s+soy/;
@@ -430,7 +430,7 @@
     var esperando = pensando();
 
     responder(texto).then(function (rec) {
-      return rec || (deSugerencia ? responderDelAparato(texto, contextoActual()) : null);
+      return rec || responderDelAparato(texto, contextoActual());
     }).then(function (rec) {
       if (!rec) {
         if (esperando) esperando.remove();
@@ -539,6 +539,23 @@
     cont.appendChild(caja);
   }
 
+  /* el panel del chat puede ir en su columna de la ficha o volver al botón flotante */
+  function ancorar(destino) {
+    construir();
+    var p = $('ms-panel'), w = $('ms-widget');
+    if (!p || !w) return;
+    if (destino) {
+      if (p.parentNode !== destino) destino.appendChild(p);
+      p.classList.add('en-columna');
+      p.hidden = false;
+      w.classList.add('en-columna');
+    } else {
+      if (p.parentNode !== w) w.appendChild(p);
+      p.classList.remove('en-columna');
+      w.classList.remove('en-columna');
+    }
+  }
+
   function activar(a) {
     var mismo = !!(actual && a && actual.id === a.id);
     actual = a;
@@ -559,5 +576,5 @@
     construir(); mostrar(false);
   }
 
-  window.ChatObjeto = { activar: activar, preguntar: preguntar, resolver: resolver, abrir: abrir, cerrar: cerrar };
+  window.ChatObjeto = { activar: activar, preguntar: preguntar, resolver: resolver, ancorar: ancorar, abrir: abrir, cerrar: cerrar };
 })();

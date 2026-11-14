@@ -93,46 +93,52 @@
 
   <!-- 7 · OBJETO -->
   <section class="pantalla" id="p-objeto" aria-labelledby="t-objeto">
+    <div class="rejilla-objeto">
 
-    <!-- 1 · visor 3D interactivo -->
+      <!-- columna 1 · el mapa del destino con sus puntos -->
+      <div class="col-mapa" id="col-mapa"></div>
+
+      <!-- columna 2 · el objeto en 3D y, debajo, su contenido -->
+      <div class="col-centro">
     <div class="visor" id="visor-objeto">
-      <model-viewer id="mv-objeto" camera-controls touch-action="pan-y" auto-rotate
-                    rotation-per-second="16deg" interaction-prompt="none"
-                    shadow-intensity="0.85" exposure="1.05" alt=""
-                    field-of-view="30deg" min-field-of-view="18deg" max-field-of-view="45deg"
-                    style="width:100%;height:100%;background:transparent"></model-viewer>
-      <div class="visor-sinmodelo" id="visor-sinmodelo" hidden>
-        <img class="visor-foto" id="visor-foto" alt="" hidden>
-        <span class="orbe" aria-hidden="true"></span>
-        <p><span class="sin-modelo-texto">Sin modelo 3D oficial de la NASA para este aparato.</span><br><span class="tenue">La NASA solo publica modelos de algunos objetos.</span></p>
+          <model-viewer id="mv-objeto" camera-controls touch-action="pan-y" auto-rotate
+                        rotation-per-second="16deg" interaction-prompt="none"
+                        shadow-intensity="0.85" exposure="1.05" alt=""
+                        field-of-view="30deg" min-field-of-view="18deg" max-field-of-view="45deg"
+                        style="width:100%;height:100%;background:transparent"></model-viewer>
+          <div class="visor-sinmodelo" id="visor-sinmodelo" hidden>
+            <img class="visor-foto" id="visor-foto" alt="" hidden>
+            <span class="orbe" aria-hidden="true"></span>
+            <p><span class="sin-modelo-texto">Sin modelo 3D oficial de la NASA para este aparato.</span><br><span class="tenue">La NASA solo publica modelos de algunos objetos.</span></p>
+          </div>
+          <button type="button" class="visor-girar" id="visor-girar" aria-pressed="true" title="Parar o reanudar el giro">⟳</button>
+          <span class="visor-credito" id="visor-credito"></span>
+        </div>
+  <div class="objeto-contenido">
+      <div class="cabecera-objeto">
+        <div class="orbe" id="orbe-objeto" aria-hidden="true"></div>
+        <div>
+          <h2 id="t-objeto">Objeto</h2>
+          <p class="meta" id="meta-objeto"></p>
+        </div>
+        <div class="turno" id="turno-objeto" aria-hidden="true"></div>
       </div>
-      <button type="button" class="visor-girar" id="visor-girar" aria-pressed="true" title="Parar o reanudar el giro">⟳</button>
-      <span class="visor-credito" id="visor-credito"></span>
-    </div>
-
-    <!-- 2 · el contenido que ya existía -->
-    <div class="objeto-marco">
-    <div class="objeto-contenido">
-    <div class="cabecera-objeto">
-      <div class="orbe" id="orbe-objeto" aria-hidden="true"></div>
-      <div>
-        <h2 id="t-objeto">Objeto</h2>
-        <p class="meta" id="meta-objeto"></p>
+      <blockquote class="dialogo" id="texto-objeto" aria-live="polite"></blockquote>
+      <div class="acciones columna" id="opciones-objeto"></div>
+      <div class="respuesta-objeto" id="respuesta-objeto" aria-live="polite" hidden></div>
+      <div class="acciones">
+        <button type="button" class="secundario" id="btn-volver-objetos">← Volver a los objetos</button>
+        <button type="button" class="secundario" id="btn-ficha">Ver ficha y fuentes</button>
+        <button type="button" class="secundario" data-ir="pausa">Dejarlo aquí</button>
       </div>
-      <div class="turno" id="turno-objeto" aria-hidden="true"></div>
-    </div>
-    <blockquote class="dialogo" id="texto-objeto" aria-live="polite"></blockquote>
-    <div class="acciones columna" id="opciones-objeto"></div>
-    <div class="respuesta-objeto" id="respuesta-objeto" aria-live="polite" hidden></div>
-    <div class="acciones">
-      <button type="button" class="secundario" id="btn-volver-objetos">← Volver a los objetos</button>
-      <button type="button" class="secundario" id="btn-ficha">Ver ficha y fuentes</button>
-      <button type="button" class="secundario" data-ir="pausa">Dejarlo aquí</button>
-    </div>
-    </div><!-- /objeto-contenido -->
-    </div><!-- /objeto-marco -->
+      </div><!-- /objeto-contenido -->
+      </div><!-- /col-centro -->
 
-    </section>
+      <!-- columna 3 · el chat del objeto -->
+      <div class="col-chat" id="col-chat"></div>
+
+    </div><!-- /rejilla-objeto -->
+  </section>
 
   <!-- 8 · PAUSA -->
   <section class="pantalla" id="p-pausa" aria-labelledby="t-pausa">

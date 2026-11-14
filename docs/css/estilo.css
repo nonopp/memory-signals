@@ -128,7 +128,7 @@ body.con-fondo .velo{opacity:1}
 }
 @keyframes pistaEntra{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
 @media (prefers-reduced-motion:reduce){.pista-modo{animation:none}}
-#p-objeto{width:min(1140px,100%)}
+
 .pantalla.activa{display:block;animation:entra .45s ease both}
 @keyframes entra{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
 
@@ -291,13 +291,34 @@ code{background:rgba(255,255,255,.09);padding:2px 6px;border-radius:6px;font-siz
 @media (prefers-reduced-motion:reduce){.fondo-video video{display:none}}
 
 /* ---------- visor 3D del objeto ---------- */
-/* la escena va a sangre: cubre todo el ancho de la ventana, como en el boceto del equipo */
+/* la ficha del objeto va en tres columnas: mapa · objeto 3D · chat */
+#p-objeto{width:min(1620px,100%)}
+.rejilla-objeto{
+  display:grid;gap:20px;align-items:start;text-align:left;
+  grid-template-columns:minmax(230px,300px) minmax(0,1fr) minmax(330px,392px);
+}
 #p-objeto .visor{
-  position:relative;width:100vw;margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw);
-  height:clamp(340px,62vh,660px);margin-bottom:0;border-radius:0;
-  border:0;border-top:1px solid var(--borde);border-bottom:1px solid var(--borde);
-  overflow:hidden;
+  position:relative;width:100%;margin:0 0 18px;height:clamp(300px,44vh,540px);
+  border-radius:var(--radio);border:1px solid var(--borde);overflow:hidden;
   background:radial-gradient(120% 120% at 50% 0%, #16203a 0%, #080b14 62%, #05070f 100%);
+}
+.col-mapa, .col-centro, .col-chat{min-width:0}
+.col-mapa .mapa-destino{position:sticky;top:14px}
+/* el chat, dentro de su columna: siempre a la vista, sin burbuja ni rabillo */
+.col-chat .ms-panel.en-columna{
+  position:static;width:100%;height:min(74vh,660px);animation:none;
+  border-radius:16px;
+}
+.col-chat .ms-panel.en-columna::after{display:none}
+.ms-widget.en-columna .ms-burbuja{display:none}
+.ms-panel.en-columna .ms-cerrar{display:none}
+.col-chat .ms-panel.en-columna .ms-titulos strong{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.col-chat .ms-panel.en-columna .ms-titulos span{display:none}
+@media (max-width:1100px){
+  .rejilla-objeto{grid-template-columns:minmax(0,1fr)}
+  .col-mapa{order:2}
+  .col-chat{order:3}
+  .col-chat .ms-panel.en-columna{height:min(70vh,560px)}
 }
 .visor{
   position:relative;width:100%;height:min(38vh,320px);margin-bottom:18px;border-radius:var(--radio);

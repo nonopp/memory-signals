@@ -76,6 +76,10 @@
   }
 
   function ir(id) {
+    /* fuera de la ficha del objeto el chat vuelve a ser el botón flotante */
+    if (id !== 'objeto' && window.ChatObjeto && window.ChatObjeto.ancorar) {
+      window.ChatObjeto.ancorar(null);
+    }
     $$('.pantalla').forEach(function (p) { p.classList.remove('activa'); });
     controlVideo(id === 'intro');
     var destino = $('#p-' + id);
@@ -409,7 +413,10 @@
     /* visor 3D arriba, contenido en medio, mapa a la izquierda y chat al lado:
        todos miran al aparato que está delante */
     if (window.Visor3D) window.Visor3D.pintar(a);
-    if (window.ChatObjeto) window.ChatObjeto.activar(a);
+    if (window.ChatObjeto) {
+      window.ChatObjeto.ancorar($('#col-chat'));
+      window.ChatObjeto.activar(a);
+    }
     if (window.MapaObjetos) {
       /* el mapa puede venir de la ventana del crucero: vuelve a su sitio en la ficha */
       window.MapaObjetos.ancorar(null);

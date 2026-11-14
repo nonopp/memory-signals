@@ -24,9 +24,8 @@
         '<div class="mapa-pins" id="mapa-pins"></div>' +
       '</div>' +
       '<p class="mapa-pie" id="mapa-pie">Toca un punto para acercarte a otro aparato.</p>';
-    var pantalla = document.getElementById('p-objeto');
-    var marco = pantalla && pantalla.querySelector('.objeto-marco');
-    if (marco) marco.insertBefore(caja, marco.firstChild);
+    var marco = document.getElementById('col-mapa');
+    if (marco) marco.appendChild(caja);
     lienzo = document.getElementById('mapa-lienzo');
     capa = document.getElementById('mapa-pins');
     titulo = document.getElementById('mapa-titulo');
@@ -263,8 +262,8 @@
       if (caja.parentNode !== destino) destino.appendChild(caja);
     } else {
       caja.classList.remove('en-ventana');
-      var marco = document.querySelector('#p-objeto .objeto-marco');
-      if (marco && caja.parentNode !== marco) marco.insertBefore(caja, marco.firstChild);
+      var marco = document.getElementById('col-mapa');
+      if (marco && caja.parentNode !== marco) marco.appendChild(caja);
     }
     pintar();
   }
