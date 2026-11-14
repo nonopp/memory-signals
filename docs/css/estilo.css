@@ -143,7 +143,27 @@ button.opcion:hover{border-color:var(--acento);background:rgba(99,224,200,.1);tr
 
 /* ventana de crucero */
 .ventana{position:relative;margin-top:18px;border-radius:var(--radio);overflow:hidden;border:1px solid var(--borde);background:#02040a}
-.ventana canvas{display:block;width:100%;height:min(46vh,340px)}
+.ventana canvas{display:block;width:100%;height:min(46vh,340px);transition:opacity .55s ease}
+.ventana canvas.atenuado{opacity:0}
+
+/* el zoom del planeta termina siendo el mapa: los puntos son clicables */
+.ventana-mapa{position:absolute;inset:0;opacity:0;pointer-events:none;
+  display:flex;align-items:center;justify-content:center;transition:opacity .55s ease}
+.ventana-mapa[hidden]{display:none}
+.ventana-mapa.visible{opacity:1;pointer-events:auto}
+.mapa-destino.en-ventana{position:static;padding:0;border:0;background:none;box-shadow:none;
+  width:100%;height:100%;display:flex;align-items:center;justify-content:center;gap:4px}
+.mapa-destino.en-ventana .mapa-titulo{display:none}
+.mapa-destino.en-ventana .mapa-marco{width:auto;height:min(38vh,282px);aspect-ratio:1/1;flex:0 0 auto}
+.mapa-destino.en-ventana .mapa-pie{margin:0 0 0 18px;max-width:38%;font-size:.8rem;line-height:1.45;text-align:left;color:var(--texto-suave)}
+/* en la ventana los puntos se ven con su nombre y laten, para que se note que se pueden tocar */
+.mapa-destino.en-ventana .mapa-pin-etq{opacity:1;transform:none}
+.mapa-destino.en-ventana .mapa-pin-punto{width:14px;height:14px;
+  box-shadow:0 0 0 5px rgba(99,224,200,.16),0 0 20px var(--c,#63e0c8);
+  animation:mapaLate 2.4s ease-in-out infinite}
+@keyframes mapaLate{0%,100%{box-shadow:0 0 0 4px rgba(99,224,200,.14),0 0 16px var(--c,#63e0c8)}
+  50%{box-shadow:0 0 0 9px rgba(99,224,200,.05),0 0 26px var(--c,#63e0c8)}}
+@media (prefers-reduced-motion:reduce){.mapa-destino.en-ventana .mapa-pin-punto{animation:none}}
 .hud{position:absolute;left:14px;bottom:12px;font-size:.82rem;letter-spacing:.16em;text-transform:uppercase;color:var(--acento)}
 
 /* campo de destellos */
@@ -409,6 +429,17 @@ code{background:rgba(255,255,255,.09);padding:2px 6px;border-radius:6px;font-siz
 .ms-enviar:hover{filter:brightness(1.08)}
 .ms-pie{margin:0;padding:0 14px 10px;font-size:.72rem;color:#7d9a95}
 
+/* en el espacio profundo el cielo se funde con la ventana: sin caja ni borde */
+.mapa-destino.en-ventana.es-espacio .mapa-marco{background:transparent;border-radius:12px}
+
+/* el mapa dentro de la ventana del crucero, en pantallas estrechas */
+@media (max-width:600px){
+  .mapa-destino.en-ventana{flex-direction:column;gap:2px}
+  .mapa-destino.en-ventana .mapa-marco{height:min(30vh,210px)}
+  .mapa-destino.en-ventana .mapa-pie{margin:0;max-width:100%;text-align:center;font-size:.74rem}
+  /* cuando el mapa ya está en la ventana, el pie lo dice: el rótulo sobra */
+  .ventana-mapa.visible ~ .hud{display:none}
+}
 @media (max-width:520px){
   .ms-widget{right:12px;bottom:12px}
   #p-objeto .visor{height:52vh}

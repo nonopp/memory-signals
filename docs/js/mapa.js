@@ -253,15 +253,46 @@
     lienzo.addEventListener('pointerleave', function () { arrastrando = false; });
   }
 
+  /* el mismo mapa sirve en la ficha del objeto y en la ventana del crucero:
+     se mueve el nodo a donde toque en vez de duplicarlo */
+  function ancorar(destino) {
+    crear();
+    if (!caja) return;
+    if (destino) {
+      caja.classList.add('en-ventana');
+      if (caja.parentNode !== destino) destino.appendChild(caja);
+    } else {
+      caja.classList.remove('en-ventana');
+      var marco = document.querySelector('#p-objeto .objeto-marco');
+      if (marco && caja.parentNode !== marco) marco.insertBefore(caja, marco.firstChild);
+    }
+    pintar();
+  }
+
+  /* giro inicial: se centra la cara visible en la media de las longitudes,
+     para que los puntos del destino se vean sin tener que arrastrar */
+  function centrar() {
+    var con = aparatos.filter(function (a) { return a.mapa && typeof a.mapa.lat === 'number'; });
+    if (!con.length) return;
+    var sx = 0, sy = 0;
+    con.forEach(function (a) {
+      var lo = a.mapa.lon * Math.PI / 180;
+      sx += Math.cos(lo); sy += Math.sin(lo);
+    });
+    var media = Math.atan2(sy / con.length, sx / con.length);
+    rot = -media;
+  }
+
   function activar(lista, a, cb) {
     aparatos = (lista || []).filter(Boolean);
     actual = a || null;
     alElegir = cb || null;
+    if (tipo() !== 'espacio') centrar();
     pintar();
   }
 
   /* giro continuo suave */
   setInterval(bucle, 40);
 
-  window.MapaObjetos = { activar: activar, pintar: pintar };
+  window.MapaObjetos = { activar: activar, ancorar: ancorar, pintar: pintar };
 })();

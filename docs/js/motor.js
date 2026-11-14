@@ -225,6 +225,29 @@
     });
   }
 
+  function pintCruceroMapa(d) {
+    var capa = $('#ventana-mapa');
+    var lienzo = $('#ventana');
+    var hud = $('#hud-crucero');
+    if (!capa || !lienzo) return;
+    /* al entrar de nuevo, la ventana vuelve a empezar: sale el planeta y se va el mapa */
+    capa.hidden = true;
+    capa.classList.remove('visible');
+    lienzo.classList.remove('atenuado');
+    if (estado.temporizadorMapa) clearTimeout(estado.temporizadorMapa);
+    estado.temporizadorMapa = setTimeout(function () {
+      if (!document.getElementById('p-crucero').classList.contains('activa')) return;
+      var hermanos = hermanosDe(d);
+      window.MapaObjetos.ancorar(capa);
+      window.MapaObjetos.activar(hermanos, null, cambiarAparato);
+      capa.hidden = false;
+      lienzo.classList.add('atenuado');
+      requestAnimationFrame(function () { capa.classList.add('visible'); });
+      if (hud) hud.textContent = 'toca un punto para acercarte';
+      if (window.Escena) window.Escena.parar();
+    }, 2300);
+  }
+
   function pintaCrucero() {
     var d = estado.destino || datos.destinos[0];
     var texto = txt(datos.astronauta.lineas.despegue) + ' ' + txt(datos.astronauta.lineas.crucero);
@@ -234,6 +257,16 @@
     $('#hud-crucero').textContent = 'acercándonos a ' + d.nombre.toLowerCase() + '…';
     /* la escena se dibuja cuando el contenedor ya es visible */
     setTimeout(function () { window.Escena.crucero(d.color, d.globo); }, 60);
+    /* y el zoom del planeta acaba siendo el mapa del destino, con sus puntos */
+    if (window.MapaObjetos) pintCruceroMapa(d);
+  }
+
+  /* los aparatos de un destino, resueltos contra el catálogo */
+  function hermanosDe(d) {
+    if (!d) return [];
+    return (d.aparatos || []).map(function (id) {
+      return datos.aparatos.filter(function (x) { return x.id === id; })[0];
+    }).filter(Boolean);
   }
 
   var POSICIONES = [{ x: 0.3, y: 0.62 }, { x: 0.68, y: 0.72 }, { x: 0.5, y: 0.86 }];
@@ -337,12 +370,10 @@
     if (window.Visor3D) window.Visor3D.pintar(a);
     if (window.ChatObjeto) window.ChatObjeto.activar(a);
     if (window.MapaObjetos) {
+      /* el mapa puede venir de la ventana del crucero: vuelve a su sitio en la ficha */
+      window.MapaObjetos.ancorar(null);
       var destinoActual = datos.destinos.filter(function (x) { return x.id === (estado.destino || {}).id; })[0];
-      var hermanos = destinoActual
-        ? destinoActual.aparatos.map(function (id) {
-            return datos.aparatos.filter(function (x) { return x.id === id; })[0];
-          }).filter(Boolean)
-        : [a];
+      var hermanos = destinoActual ? hermanosDe(destinoActual) : [a];
       window.MapaObjetos.activar(hermanos, a, cambiarAparato);
     }
   }
