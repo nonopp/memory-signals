@@ -1,15 +1,23 @@
-/* Memory Signals — chatbot del objeto.
-   Responde con la base de conocimiento (kb/): índice de 74 fichas + la ficha que toque.
-   Sin modelo de lenguaje y sin inventar: recupera el fragmento que responde y cita la fuente.
-   Si la ficha viene del prototipo y no está cotejada, lo advierte. */
+/* Memory Signals — el objeto te habla.
+   Ventana flotante (como el widget de botu.es): burbuja abajo a la derecha y panel de chat.
+   Dos capas:
+     1. recuperación en el navegador: índice de 74 fichas -> la ficha -> la sección -> los párrafos.
+     2. redacción del modelo: el fragmento viaja a /api/chat.php y vuelve escrito en primera persona.
+   Si el modelo no está (sin red, límite, error), contesta la capa 1: nunca se queda callado. */
 (function () {
   'use strict';
 
-  var indice = null;
-  var actual = null;          // aparato abierto en la app
-  var fichasCargadas = {};    // caché de .md ya leídos
+  /* mismo origen en gesemweb; en GitHub Pages, al endpoint de srv2 */
+  var API = /(^|\.)gesemweb\.es$/.test(location.hostname)
+    ? 'api/chat.php'
+    : 'https://nasa.gesemweb.es/app/api/chat.php';
 
-  /* aparato de la app -> id de ficha en la base de conocimiento */
+  var indice = null;
+  var actual = null;
+  var fichasCargadas = {};
+  var panelAbierto = false;
+  var ocupado = false;
+
   var EQUIVALENCIA = {
     surveyor3: 'surveyor-3',
     lrv17: 'rover-lunar-lrv',
@@ -22,7 +30,7 @@
                 'los', 'las', 'del', 'una', 'unos', 'unas', 'este', 'esta', 'esto', 'eso', 'esa',
                 'the', 'and', 'con', 'sin', 'mas', 'muy', 'fue', 'era', 'son', 'hay',
                 'saber', 'dime', 'cuentame', 'puedes', 'sobre', 'tiene', 'tienen', 'hace', 'hacia',
-                'hecho', 'hecha', 'hiciste', 'hicieron', 'eres', 'fuiste', 'estas', 'estas', 'sirve',
+                'hecho', 'hecha', 'hiciste', 'hicieron', 'eres', 'fuiste', 'estas', 'sirve',
                 'sirves', 'sabes', 'quiero', 'quisiera', 'algo', 'otra', 'otro', 'cual', 'cuales',
                 'hablame', 'hablar', 'dame', 'explica', 'explicame', 'explicar'];
 
@@ -35,14 +43,10 @@
   function palabras(s) {
     return normaliza(s).split(' ').filter(function (w) { return w.length > 2 && VACIAS.indexOf(w) === -1; });
   }
-
-  /* igual, pero descartando los nombres propios (van en mayúscula): «Francia», «Surveyor»…
-     esos los usa la búsqueda de fichas, no la comprobación de si la pregunta va del aparato abierto */
   function palabrasSinNombres(s) {
     return (s || '').split(/\s+/).map(function (bruto) {
       var limpio = bruto.replace(/[¿?¡!.,;:()"']/g, '');
-      if (!limpio) return null;
-      if (/^[A-ZÁÉÍÓÚÑ]/.test(limpio)) return null;
+      if (!limpio || /^[A-ZÁÉÍÓÚÑ]/.test(limpio)) return null;
       var w = normaliza(limpio);
       if (w.length < 3 || VACIAS.indexOf(w) !== -1) return null;
       return w;
@@ -55,7 +59,6 @@
       .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
       .then(function (j) { indice = j; return j; });
   }
-
   function cargarFicha(ruta) {
     if (fichasCargadas[ruta]) return Promise.resolve(fichasCargadas[ruta]);
     return fetch(ruta).then(function (r) {
@@ -64,11 +67,9 @@
     }).then(function (t) { fichasCargadas[ruta] = t; return t; });
   }
 
-  /* puntúa cada ficha contra las palabras de la pregunta */
   function puntuar(ficha, terminos) {
-    var campos = [ficha.titulo, (ficha.alias || []).join(' '), (ficha.palabras_clave || []).join(' '), ficha.resumen, ficha.cuerpo]
-      .join(' ');
-    var texto = normaliza(campos);
+    var texto = normaliza([ficha.titulo, (ficha.alias || []).join(' '),
+      (ficha.palabras_clave || []).join(' '), ficha.resumen, ficha.cuerpo].join(' '));
     var puntos = 0;
     terminos.forEach(function (t) {
       if (texto.indexOf(t) !== -1) puntos += 2;
@@ -77,40 +78,23 @@
     return puntos;
   }
 
-  /* separa la ficha en secciones "## Título" */
   function secciones(md) {
-    var partes = md.split(/\n##\s+/);
-    var salida = [];
-    partes.slice(1).forEach(function (p) {
+    return md.split(/\n##\s+/).slice(1).map(function (p) {
       var i = p.indexOf('\n');
-      var titulo = (i === -1 ? p : p.slice(0, i)).trim();
-      var cuerpo = (i === -1 ? '' : p.slice(i + 1)).trim();
-      salida.push({ titulo: titulo, cuerpo: cuerpo });
+      return { titulo: (i === -1 ? p : p.slice(0, i)).trim(), cuerpo: (i === -1 ? '' : p.slice(i + 1)).trim() };
     });
-    return salida;
   }
-
   function sinFormato(t) {
     return t.replace(/\*\*/g, '').replace(/`/g, '').replace(/^[-*]\s+/gm, '· ').replace(/\n{2,}/g, '\n').trim();
   }
 
-  function recorta(t, max) {
-    t = sinFormato(t);
-    if (t.length <= max) return t;
-    var corte = t.slice(0, max);
-    var punto = corte.lastIndexOf('. ');
-    if (punto > max * 0.5) corte = corte.slice(0, punto + 1);
-    return corte + ' […]';
-  }
-
-  /* sinónimos: el visitante pregunta «quién trabajó», la ficha lo cuenta en «Personas» */
   var SECCION_POR_TERMINO = [
-    { re: /^(quien|quienes|trabajo|trabajaron|trabajaba|equipo|cientifico|cientificos|investigador|investigadores|persona|personas|gente|nombre)$/, sec: /^Personas$/i },
-    { re: /^(donde|lugar|sitio|ahora|hoy|posicion|coordenadas|encuentra|encuentras|estas)$/, sec: /^Dónde está hoy$/i },
-    { re: /^(llego|llegaste|lanzamiento|lanzaron|despego|viaje|aterrizo|aterrizaste|aterrizaje|llegada|cohete)$/, sec: /^Cómo llegó$/i },
-    { re: /^(descubrio|descubriste|descubrimiento|hallazgo|encontro|encontraste|resultado|resultados|ciencia|cientifica)$/, sec: /^Qué descubrió$/i },
+    { re: /^(quien|quienes|trabajo|trabajaron|trabajaba|equipo|cientifico|cientificos|investigador|investigadores|persona|personas|gente|nombre|construyo|diseno|creo)$/, sec: /^Personas$/i },
+    { re: /^(donde|lugar|sitio|ahora|hoy|posicion|coordenadas|encuentra|encuentras|estas|quedaste)$/, sec: /^Dónde está hoy$/i },
+    { re: /^(llego|llegaste|lanzamiento|lanzaron|despego|viaje|aterrizo|aterrizaste|aterrizaje|llegada|cohete|salida)$/, sec: /^Cómo llegó$/i },
+    { re: /^(descubrio|descubriste|descubrimiento|hallazgo|encontro|encontraste|resultado|resultados|ciencia|cientifica|serviste)$/, sec: /^Qué descubrió$/i },
     { re: /^(pesa|pesas|peso|masa|mide|mides|tamano|instrumento|instrumentos|potencia|tecnico|tecnicos|datos|cifra|cifras)$/, sec: /^Datos técnicos$/i },
-    { re: /^(hacia|hacias|dia|dias|trabajaba|haciais|rutina|mision)$/, sec: /^Qué hacía$/i }
+    { re: /^(hacia|hacias|dia|dias|trabajaba|haciais|rutina|mision|hice|hacias)$/, sec: /^Qué hacía$/i }
   ];
   function seccionPedida(terminos) {
     for (var i = 0; i < SECCION_POR_TERMINO.length; i++) {
@@ -121,7 +105,6 @@
     return null;
   }
 
-  /* dentro de la sección, quedarse con los párrafos que responden a la pregunta */
   function mejoresParrafos(cuerpo, terminos, enfoque) {
     var bloques = cuerpo.split(/\n\n|\n(?=[-*·])/).map(function (b) { return b.trim(); }).filter(Boolean);
     if (!bloques.length) return cuerpo;
@@ -129,15 +112,13 @@
     var puntuados = bloques.map(function (b, i) {
       var t = normaliza(b), p = 0;
       terminos.forEach(function (w) { if (t.indexOf(w) !== -1) p += 1; });
-      /* si la ficha cubre varios aparatos, mandan los párrafos del que está delante */
       if (foco && t.indexOf(foco) !== -1) p += 3;
       return { b: b, p: p, i: i };
     });
     var conPuntos = puntuados.filter(function (x) { return x.p > 0; })
-                             .sort(function (a, b) { return b.p - a.p; }).slice(0, 3)
-                             .sort(function (a, b) { return a.i - b.i; });
-    if (conPuntos.length) return conPuntos.map(function (x) { return x.b; }).join('\n');
-    return bloques.slice(0, 2).join('\n');
+      .sort(function (a, b) { return b.p - a.p; }).slice(0, 3)
+      .sort(function (a, b) { return a.i - b.i; });
+    return (conPuntos.length ? conPuntos : puntuados.slice(0, 2)).map(function (x) { return x.b; }).join('\n');
   }
 
   function elegirSeccion(secs, terminos) {
@@ -154,8 +135,7 @@
       if (pedida && pedida.test(s.titulo)) p += 8;
       if (p > mejorPuntos) { mejorPuntos = p; mejor = s; }
     });
-    if (mejor) return mejor;
-    return secs.filter(function (s) { return /^Qué es$/i.test(s.titulo); })[0] || secs[0] || null;
+    return mejor || secs.filter(function (s) { return /^Qué es$/i.test(s.titulo); })[0] || secs[0] || null;
   }
 
   function fuentePrincipal(md) {
@@ -163,78 +143,158 @@
     return m ? m[1].trim() : '';
   }
 
-  function insertar(clase, html) {
-    var cont = document.getElementById('chat-respuesta');
-    if (!cont) return null;
-    var d = document.createElement('div');
-    d.className = 'burbuja' + (clase ? ' ' + clase : '');
-    d.innerHTML = html;
-    cont.appendChild(d);
-    cont.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
-    return d;
-  }
-
+  /* ---------- piezas del widget ---------- */
   function escapar(s) {
     return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
   }
-
-  function sinFicha() {
-    insertar('', 'No tengo ficha de eso. Solo respondo de los objetos del catálogo y de sus fuentes: la Luna, Marte y el espacio profundo.');
+  function $(id) { return document.getElementById(id); }
+  function nivelActual() {
+    try {
+      var v = JSON.parse(localStorage.getItem('ms_nivel') || '"explorador"');
+      return v === 'cientifico' ? 'cientifico' : 'explorador';
+    } catch (e) { return 'explorador'; }
   }
 
-  function contestar(ficha, md, terminos, enfoque) {
-    var secs = secciones(md);
-    var sec = elegirSeccion(secs, terminos);
-    var cuerpo = sec ? recorta(mejoresParrafos(sec.cuerpo, terminos, enfoque), 480) : recorta(md, 480);
-    var fuente = fuentePrincipal(md) || ficha.fuente_principal || '';
-    var html = '<strong>' + escapar(ficha.titulo) + (sec ? ' · ' + escapar(sec.titulo) : '') + '</strong><br>' +
-               escapar(cuerpo).replace(/\n/g, '<br>');
+  function construir() {
+    if ($('ms-widget')) return;
+    var caja = document.createElement('div');
+    caja.className = 'ms-widget';
+    caja.id = 'ms-widget';
+    caja.innerHTML =
+      '<button type="button" class="ms-burbuja" id="ms-burbuja" aria-expanded="false" aria-controls="ms-panel" aria-label="Preguntar al objeto">' +
+        '<svg viewBox="0 0 24 24" aria-hidden="true" width="26" height="26"><path fill="currentColor" d="M4 3h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H9l-5 4v-4H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Zm3 6a1.6 1.6 0 1 0 0 3.2A1.6 1.6 0 0 0 7 9Zm5 0a1.6 1.6 0 1 0 0 3.2A1.6 1.6 0 0 0 12 9Zm5 0a1.6 1.6 0 1 0 0 3.2A1.6 1.6 0 0 0 17 9Z"/></svg>' +
+        '<span class="ms-burbuja-etq">Pregúntame</span>' +
+      '</button>' +
+      '<section class="ms-panel" id="ms-panel" role="dialog" aria-labelledby="ms-panel-titulo" hidden>' +
+        '<header class="ms-cabecera">' +
+          '<span class="ms-punto" aria-hidden="true"></span>' +
+          '<div class="ms-titulos"><strong id="ms-panel-titulo">Memory Signals</strong>' +
+          '<span id="ms-panel-sub">pregunta y te contesto con mi ficha</span></div>' +
+          '<button type="button" class="ms-cerrar" id="ms-cerrar" aria-label="Cerrar la ventana">&times;</button>' +
+        '</header>' +
+        '<div class="ms-mensajes" id="ms-mensajes" aria-live="polite"></div>' +
+        '<form class="ms-form" id="ms-form" autocomplete="off">' +
+          '<label for="ms-input" class="oculto">Tu pregunta</label>' +
+          '<input type="text" id="ms-input" name="pregunta" maxlength="180" placeholder="¿Qué quieres saber de mí?">' +
+          '<button type="submit" class="ms-enviar" aria-label="Enviar pregunta">' +
+            '<svg viewBox="0 0 24 24" aria-hidden="true" width="20" height="20"><path fill="currentColor" d="M3 20.5 21 12 3 3.5v6.3l11 2.2-11 2.2Z"/></svg>' +
+          '</button>' +
+        '</form>' +
+        '<p class="ms-pie">Responde con la ficha del objeto y cita la fuente.</p>' +
+      '</section>';
+    document.body.appendChild(caja);
+
+    $('ms-burbuja').addEventListener('click', function () { panelAbierto ? cerrar() : abrir(); });
+    $('ms-cerrar').addEventListener('click', cerrar);
+    $('ms-form').addEventListener('submit', function (ev) {
+      ev.preventDefault();
+      var entrada = $('ms-input');
+      var texto = (entrada.value || '').trim();
+      if (!texto || ocupado) return;
+      entrada.value = '';
+      preguntar(texto);
+    });
+    document.addEventListener('keydown', function (ev) {
+      if (ev.key === 'Escape' && panelAbierto) cerrar();
+    });
+    /* si el visitante cambia de pantalla, la ventana se cierra sola */
+    document.addEventListener('click', function (ev) {
+      if (ev.target.closest && ev.target.closest('[data-ir]')) mostrar(false);
+    });
+  }
+
+  function abrir() {
+    construir();
+    var p = $('ms-panel');
+    if (!p) return;
+    p.hidden = false;
+    panelAbierto = true;
+    $('ms-burbuja').setAttribute('aria-expanded', 'true');
+    $('ms-widget').classList.add('abierto');
+    setTimeout(function () { var i = $('ms-input'); if (i) i.focus(); }, 60);
+  }
+  function cerrar() {
+    var p = $('ms-panel');
+    if (p) p.hidden = true;
+    panelAbierto = false;
+    if ($('ms-burbuja')) $('ms-burbuja').setAttribute('aria-expanded', 'false');
+    if ($('ms-widget')) $('ms-widget').classList.remove('abierto');
+  }
+  function mostrar(visible) {
+    construir();
+    var w = $('ms-widget');
+    if (!w) return;
+    w.classList.toggle('visible', !!visible);
+    if (!visible) cerrar();
+  }
+
+  function burbuja(clase, html) {
+    var cont = $('ms-mensajes');
+    if (!cont) return null;
+    var d = document.createElement('div');
+    d.className = 'ms-burbuja-txt' + (clase ? ' ' + clase : '');
+    d.innerHTML = html;
+    cont.appendChild(d);
+    cont.scrollTop = cont.scrollHeight;
+    return d;
+  }
+
+  function pensando() {
+    var d = burbuja('objeto pensando', '<span class="ms-puntos"><i></i><i></i><i></i></span>');
+    return d;
+  }
+
+  function saludar() {
+    var cont = $('ms-mensajes');
+    if (!cont || !actual) return;
+    cont.innerHTML = '';
+    var nombre = actual.nombre || 'este aparato';
+    burbuja('objeto', '<strong>' + escapar(nombre) + '</strong><br>Pregúntame lo que quieras de mí: qué hice, quién me construyó o dónde estoy ahora.');
+    var sugerencias = ['¿Qué hiciste?', '¿Quién te construyó?', '¿Dónde estás ahora?'];
+    var caja = document.createElement('div');
+    caja.className = 'ms-sugerencias';
+    sugerencias.forEach(function (t) {
+      var b = document.createElement('button');
+      b.type = 'button'; b.textContent = t;
+      b.addEventListener('click', function () { preguntar(t); });
+      caja.appendChild(b);
+    });
+    cont.appendChild(caja);
+  }
+
+  function pintarRespuesta(rec, textoModelo, fuente, verificacion) {
+    var html = '';
+    if (textoModelo) {
+      html += '<p>' + escapar(textoModelo).replace(/\n/g, '<br>') + '</p>';
+    } else {
+      html += '<strong>' + escapar(rec.ficha.titulo) + (rec.seccion ? ' · ' + escapar(rec.seccion.titulo) : '') + '</strong><br>' +
+              escapar(rec.texto).replace(/\n/g, '<br>');
+    }
     if (fuente) {
-      html += '<span class="fuente">Fuente: <a href="' + escapar(fuente) + '" target="_blank" rel="noopener noreferrer">' +
+      html += '<span class="ms-fuente">Fuente: <a href="' + escapar(fuente) + '" target="_blank" rel="noopener noreferrer">' +
               escapar(fuente.replace(/^https?:\/\//, '')) + '</a></span>';
     }
-    if (ficha.verificacion !== 'verificado') {
-      html += '<span class="aviso">Ficha del prototipo: todavía no está cotejada con la NASA.</span>';
+    if (verificacion !== 'verificado') {
+      html += '<span class="ms-aviso">Ficha del prototipo: sin cotejar con la NASA.</span>';
     }
-    insertar('', html);
-
-    var otras = secs.filter(function (s) { return s !== sec && !/^Fuentes$/i.test(s.titulo); })
-                    .slice(0, 3).map(function (s) { return s.titulo; });
-    if (otras.length) {
-      var chips = document.createElement('div');
-      chips.className = 'acciones';
-      otras.forEach(function (t) {
-        var b = document.createElement('button');
-        b.type = 'button'; b.className = 'secundario';
-        b.style.padding = '10px 16px'; b.style.fontSize = '.86rem';
-        b.textContent = t;
-        b.addEventListener('click', function () { preguntar(t + ' de ' + ficha.titulo); });
-        chips.appendChild(b);
-      });
-      document.getElementById('chat-respuesta').appendChild(chips);
-    }
+    burbuja('objeto', html);
   }
 
+  /* ---------- la pregunta ---------- */
   function responder(pregunta) {
     var terminos = palabras(pregunta);
-    insertar('pregunta', escapar(pregunta));
-
     return cargarIndice().then(function (idx) {
       var lista = idx.fichas || [];
       var idActual = actual ? EQUIVALENCIA[actual.id] : null;
       var propia = idActual ? lista.filter(function (f) { return f.id === idActual; })[0] : null;
 
-      // ¿la pregunta va de otro objeto?
       var candidatas = lista.map(function (f) { return { f: f, p: puntuar(f, terminos) }; })
         .filter(function (x) { return x.p > 0; })
         .sort(function (a, b) { return b.p - a.p; });
 
       var elegida = null;
-      var mejorPuntos = candidatas.length ? candidatas[0].p : 0;
-      if (mejorPuntos >= 4) elegida = candidatas[0].f;
+      if (candidatas.length && candidatas[0].p >= 4) elegida = candidatas[0].f;
 
-      // si la pregunta no nombra otro objeto, se responde del que está delante,
-      // pero solo si sus palabras aparecen de verdad en la ficha
       if (!elegida) {
         var porNombre = (actual && !propia)
           ? lista.filter(function (f) { return normaliza(f.titulo).indexOf(normaliza(actual.nombre)) !== -1; })[0]
@@ -242,55 +302,96 @@
         var objetivo = propia || porNombre;
         if (objetivo) {
           return cargarFicha(objetivo.ruta).then(function (md0) {
-            /* la coincidencia tiene que estar en el contenido del aparato, no en la lista de personas
-               ni en las fuentes: si no, «¿la capital de Francia?» acabaría respondiendo por «Francia»
-               que solo aparece como país del investigador del sismómetro */
             var util = secciones(md0).filter(function (s) { return !/^(Personas|Fuentes)$/i.test(s.titulo); })
-                                     .map(function (s) { return s.cuerpo; }).join(' ');
+              .map(function (s) { return s.cuerpo; }).join(' ');
             var texto = normaliza(util);
             var propios = palabrasSinNombres(pregunta);
             var aciertos = propios.filter(function (t) { return texto.indexOf(t) !== -1; }).length;
-            var haySeccion = !!seccionPedida(propios);
-            if (!propios.length || (aciertos === 0 && !haySeccion)) { sinFicha(); return; }
-            return contestar(objetivo, md0, propios, actual ? actual.nombre : null);
+            if (!propios.length || (aciertos === 0 && !seccionPedida(propios))) return null;
+            return preparar(objetivo, md0, propios, actual ? actual.nombre : null);
           });
         }
         if (candidatas.length) elegida = candidatas[0].f;
       }
-
-      if (!elegida) { sinFicha(); return; }
-
-      return cargarFicha(elegida.ruta).then(function (md) {
-        contestar(elegida, md, terminos);
-      });
-
-    }).catch(function (e) {
-      insertar('', 'No he podido consultar la base de conocimiento (' + escapar(e.message) + ').');
+      if (!elegida) return null;
+      return cargarFicha(elegida.ruta).then(function (md) { return preparar(elegida, md, terminos); });
     });
+  }
+
+  function preparar(ficha, md, terminos, enfoque) {
+    var secs = secciones(md);
+    var sec = elegirSeccion(secs, terminos);
+    var fragmento = sec ? mejoresParrafos(sec.cuerpo, terminos, enfoque) : md;
+    return {
+      ficha: ficha,
+      seccion: sec,
+      texto: sinFormato(fragmento).slice(0, 700),
+      fragmento: sinFormato(fragmento).slice(0, 3500),
+      fuente: fuentePrincipal(md) || ficha.fuente_principal || '',
+      verificacion: ficha.verificacion
+    };
   }
 
   function preguntar(texto) {
-    if (!texto || !texto.trim()) return;
-    var entrada = document.getElementById('chat-input');
-    if (entrada) entrada.value = '';
-    responder(texto.trim());
-  }
+    if (!texto || ocupado) return;
+    if (!panelAbierto) abrir();
+    ocupado = true;
+    burbuja('visita', escapar(texto));
+    var esperando = pensando();
 
-  function conectar() {
-    var form = document.getElementById('chat-form');
-    var entrada = document.getElementById('chat-input');
-    if (!form || !entrada) return;
-    form.addEventListener('submit', function (ev) {
-      ev.preventDefault();
-      preguntar(entrada.value);
+    responder(texto).then(function (rec) {
+      if (!rec) {
+        if (esperando) esperando.remove();
+        burbuja('objeto', 'Eso no consta en mi ficha. Pregúntame por lo que hice, quién me construyó o dónde estoy.');
+        return;
+      }
+      if (esperando) esperando.remove();
+      var esperando2 = pensando();
+      return fetch(API, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          pregunta: texto,
+          ficha: rec.ficha.titulo,
+          fragmento: rec.fragmento,
+          nivel: nivelActual()
+        })
+      }).then(function (r) {
+        if (!r.ok) throw new Error('HTTP ' + r.status);
+        return r.json();
+      }).then(function (j) {
+        if (esperando2) esperando2.remove();
+        pintarRespuesta(rec, (j && j.respuesta) || '', rec.fuente, rec.verificacion);
+      }).catch(function () {
+        /* sin modelo: la ficha responde tal cual, que es mejor que un error */
+        if (esperando2) esperando2.remove();
+        pintarRespuesta(rec, '', rec.fuente, rec.verificacion);
+      });
+    }).catch(function (e) {
+      if (esperando) esperando.remove();
+      burbuja('objeto', 'No he podido consultar la base de conocimiento (' + escapar(e.message) + ').');
+    }).then(function () {
+      ocupado = false;
     });
-    cargarIndice().catch(function () {});   // precalentar el índice
   }
 
-  function activar(a) { actual = a; }
+  function activar(a) {
+    actual = a;
+    mostrar(!!a);
+    if (a) {
+      construir();
+      var t = $('ms-panel-titulo'), s = $('ms-panel-sub');
+      if (t) t.textContent = a.nombre || 'Memory Signals';
+      if (s) s.textContent = 'habla conmigo: te contesto con mi ficha';
+      saludar();
+    }
+  }
 
-  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', conectar);
-  else conectar();
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', function () { construir(); mostrar(false); });
+  } else {
+    construir(); mostrar(false);
+  }
 
-  window.ChatObjeto = { activar: activar, preguntar: preguntar };
+  window.ChatObjeto = { activar: activar, preguntar: preguntar, abrir: abrir, cerrar: cerrar };
 })();
