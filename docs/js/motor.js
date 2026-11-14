@@ -289,6 +289,19 @@
     pintaDestellos();
   }
 
+  /* saltar a otro aparato del mismo destino desde el mapa de la izquierda */
+  function cambiarAparato(a) {
+    if (!a) return;
+    estado.aparato = a;
+    estado.turno = 0;
+    if (estado.visitados.indexOf(a.id) === -1) {
+      estado.visitados.push(a.id);
+      guardar(CLAVE_VISITAS, estado.visitados);
+    }
+    ir('objeto');
+    pintaObjeto();
+  }
+
   function pintaObjeto() {
     var a = estado.aparato;
     if (!a) { ir('destino'); pintaDestino(); return; }
@@ -320,9 +333,19 @@
       cont.appendChild(b);
     });
 
-    /* visor 3D arriba y chatbot abajo: los dos miran al aparato que está delante */
+    /* visor 3D arriba, contenido en medio, mapa a la izquierda y chat al lado:
+       todos miran al aparato que está delante */
     if (window.Visor3D) window.Visor3D.pintar(a);
     if (window.ChatObjeto) window.ChatObjeto.activar(a);
+    if (window.MapaObjetos) {
+      var destinoActual = datos.destinos.filter(function (x) { return x.id === (estado.destino || {}).id; })[0];
+      var hermanos = destinoActual
+        ? destinoActual.aparatos.map(function (id) {
+            return datos.aparatos.filter(function (x) { return x.id === id; })[0];
+          }).filter(Boolean)
+        : [a];
+      window.MapaObjetos.activar(hermanos, a, cambiarAparato);
+    }
   }
 
   function pintaPausa() {

@@ -62,249 +62,33 @@
     {
       "id": "luna",
       "nombre": "La Luna",
-      "rumbo": "384.400 km",
-      "color": "#c9d3e0",
-      "globo": "luna",
       "aparatos": [
-        "surveyor3",
-        "lrv17"
-      ]
+        "modulo-lunar"
+      ],
+      "color": "#b9c6d6"
     },
     {
       "id": "marte",
       "nombre": "Marte",
-      "rumbo": "225 millones de km",
-      "color": "#e2764a",
-      "globo": "marte",
       "aparatos": [
         "opportunity",
         "insight"
-      ]
+      ],
+      "color": "#d1743f"
     },
     {
       "id": "espacio",
       "nombre": "Espacio profundo",
-      "rumbo": "más allá de Plutón",
-      "color": "#7fb7ff",
-      "globo": "espacio",
       "aparatos": [
-        "voyager1"
-      ]
+        "voyager1",
+        "near-shoemaker",
+        "pioneer10",
+        "dawn"
+      ],
+      "color": "#4f7fb8"
     }
   ],
   "aparatos": [
-    {
-      "id": "surveyor3",
-      "nombre": "Surveyor 3",
-      "cuerpo": "Luna",
-      "lugar": "Oceanus Procellarum (Océano de las Tormentas)",
-      "anio": 1967,
-      "estado": "muerto",
-      "estado_texto": {
-        "texto_explorador": "Apagado para siempre desde hace casi sesenta años.",
-        "texto_cientifico": "Inactivo desde 1967. Sigue en la superficie, visitado una vez por astronautas."
-      },
-      "ficha_resumen": "Primer aterrizaje estadounidense con visita humana posterior. Le quitaron la cámara y se la llevaron a la Tierra.",
-      "color": "#e8c66a",
-      "personas": [
-        {
-          "nombre": "Pete Conrad",
-          "rol": "comandante del Apolo 12",
-          "fuente": "https://www.nasa.gov/history/55-years-ago-apollo-12-makes-a-pinpoint-landing-on-the-moon/"
-        },
-        {
-          "nombre": "Alan Bean",
-          "rol": "piloto del módulo lunar del Apolo 12",
-          "fuente": "https://www.nasa.gov/history/55-years-ago-apollo-12-makes-a-pinpoint-landing-on-the-moon/"
-        }
-      ],
-      "fuentes": [
-        {
-          "texto": "NASA Science — Surveyor 3",
-          "url": "https://science.nasa.gov/mission/surveyor-3"
-        },
-        {
-          "texto": "LPI — The Surveyor Program (lugar y fecha de aterrizaje)",
-          "url": "https://www.lpi.usra.edu/lunar/missions/surveyor"
-        },
-        {
-          "texto": "NASA History — 55 años del Apolo 12",
-          "url": "https://www.nasa.gov/history/55-years-ago-apollo-12-makes-a-pinpoint-landing-on-the-moon/"
-        }
-      ],
-      "turnos": [
-        {
-          "id": "surveyor3_1",
-          "pregunta": "¿Quién anda ahí? Llevaba sesenta años sin que nadie se asomara.",
-          "opciones": [
-            "Hola, vengo de la Tierra",
-            "¿Cuánto tiempo llevas aquí?"
-          ],
-          "texto_explorador": "Soy Surveyor 3. Bajé aquí en 1967, cuando casi nadie sabía aterrizar sin romperse. Estoy un poco torcido.",
-          "texto_cientifico": "Soy Surveyor 3. Aterricé el 20 de abril de 1967 en el Océano de las Tormentas. Toqué el suelo tres veces antes de quedarme quieto.",
-          "fuente": "https://www.lpi.usra.edu/lunar/missions/surveyor"
-        },
-        {
-          "id": "surveyor3_2",
-          "pregunta": "¿Y cómo acabaste aquí arriba, tan lejos de todo?",
-          "opciones": [
-            "Cuéntame el viaje",
-            "¿Fue difícil llegar?"
-          ],
-          "texto_explorador": "Me subieron a un cohete el 17 de abril. Tres días de viaje y luego bajé despacio, frenando con mis motores.",
-          "texto_cientifico": "Despegué el 17 de abril de 1967. Tres días de vuelo y un descenso frenado con retrocohetes hasta posarme en la superficie lunar.",
-          "fuente": "https://science.nasa.gov/mission/surveyor-3"
-        },
-        {
-          "id": "surveyor3_3",
-          "pregunta": "¿Y qué hacías tú todo el día ahí parado?",
-          "opciones": [
-            "¿Para qué servías?",
-            "Enséñame tu trabajo"
-          ],
-          "texto_explorador": "Miraba el suelo y lo fotografiaba. Mi trabajo era ver si se podía aterrizar sin hundirse, como comprobar el hielo antes de patinar.",
-          "texto_cientifico": "Fotografié la superficie y analicé cómo resistía mi peso. Mi misión era demostrar que el suelo lunar soporta un aterrizaje controlado.",
-          "fuente": "https://science.nasa.gov/mission/surveyor-3"
-        },
-        {
-          "id": "surveyor3_4",
-          "pregunta": "¿Sabes quién vino a verte una vez, dos años y medio después?",
-          "opciones": [
-            "Pete Conrad y Alan Bean",
-            "Nadie ha vuelto nunca"
-          ],
-          "texto_explorador": "¡Pete Conrad y Alan Bean! Bajaron del Apolo 12 y caminaron hasta mí. Se llevaron mi cámara a casa.",
-          "texto_cientifico": "Pete Conrad y Alan Bean, del Apolo 12, aterrizaron en noviembre de 1969 a pocos minutos a pie. Desmontaron mi cámara de televisión y la devolvieron a la Tierra.",
-          "fuente": "https://www.nasa.gov/history/55-years-ago-apollo-12-makes-a-pinpoint-landing-on-the-moon/"
-        },
-        {
-          "id": "surveyor3_5",
-          "pregunta": "¿Y qué descubriste tú, de todo lo que viste?",
-          "opciones": [
-            "¿Qué aprendiste del suelo?",
-            "¿Quedó algo de ti allí?"
-          ],
-          "texto_explorador": "Que la Luna aguanta el peso de una nave. Gracias a eso, después se atrevieron a mandar personas.",
-          "texto_cientifico": "Demostré que la superficie lunar soporta el peso de un módulo de aterrizaje. Ese dato abrió el camino a los alunizajes tripulados del Apolo.",
-          "fuente": "https://www.lpi.usra.edu/lunar/missions/surveyor"
-        },
-        {
-          "id": "surveyor3_6",
-          "pregunta": "Ya te dejo descansar. ¿Quieres decirme una última cosa?",
-          "opciones": [
-            "Despídete",
-            "Ver la ficha con las fuentes"
-          ],
-          "texto_explorador": "Sigo aquí, torcido y apagado. Cuando alguien me mira, me acuerdo de aquel día en que dos personas caminaron hasta mí.",
-          "texto_cientifico": "Sigo en el Océano de las Tormentas, inactivo desde 1967. Mi cámara está en la Tierra y mi chasis, en la Luna. Todo lo que te he contado tiene fuente.",
-          "fuente": "https://science.nasa.gov/mission/surveyor-3"
-        }
-      ]
-    },
-    {
-      "id": "lrv17",
-      "nombre": "Rover lunar del Apolo 17",
-      "cuerpo": "Luna",
-      "lugar": "Valle Taurus-Littrow",
-      "anio": 1972,
-      "estado": "muerto",
-      "estado_texto": {
-        "texto_explorador": "Aparcado para siempre en un valle de la Luna.",
-        "texto_cientifico": "Inactivo desde diciembre de 1972. Última posición conocida: Taurus-Littrow."
-      },
-      "ficha_resumen": "El último vehículo que condujeron personas en la Luna. Recorrió decenas de kilómetros y sigue aparcado allí.",
-      "color": "#f0a35e",
-      "personas": [
-        {
-          "nombre": "Eugene Cernan",
-          "rol": "comandante del Apolo 17, condujo el rover",
-          "fuente": "https://www.nasa.gov/mission/apollo-17/"
-        },
-        {
-          "nombre": "Harrison Schmitt",
-          "rol": "geólogo y piloto del módulo lunar del Apolo 17",
-          "fuente": "https://www.nasa.gov/mission/apollo-17/"
-        }
-      ],
-      "fuentes": [
-        {
-          "texto": "NASA — Apolo 17",
-          "url": "https://www.nasa.gov/mission/apollo-17/"
-        },
-        {
-          "texto": "NASA Science — Lunar Roving Vehicle",
-          "url": "https://science.nasa.gov/resource/lunar-roving-vehicle/"
-        }
-      ],
-      "turnos": [
-        {
-          "id": "lrv17_1",
-          "pregunta": "¿Me has oído? Aquí abajo no hay nadie que escuche desde 1972.",
-          "opciones": [
-            "Te oigo perfectamente",
-            "¿Quién eres?"
-          ],
-          "texto_explorador": "Soy un coche. Un coche que conduce por la Luna. Tengo cuatro ruedas de metal y estoy aparcado en un valle.",
-          "texto_cientifico": "Soy el rover lunar del Apolo 17. Cuatro ruedas de malla metálica, chasis plegable y tracción eléctrica en cada rueda.",
-          "fuente": "https://science.nasa.gov/resource/lunar-roving-vehicle/"
-        },
-        {
-          "id": "lrv17_2",
-          "pregunta": "¿Cómo bajaste hasta aquí, si eres tan grande?",
-          "opciones": [
-            "¿Cabías en el cohete?",
-            "Cuéntame tu llegada"
-          ],
-          "texto_explorador": "Me plegaron como una silla de camping y me metieron en el módulo. Al llegar, Cernan y Schmitt me abrieron como un acordeón.",
-          "texto_cientifico": "Viajé plegado en el módulo lunar y me desplegaron en la superficie en diciembre de 1972, en el valle Taurus-Littrow.",
-          "fuente": "https://www.nasa.gov/mission/apollo-17/"
-        },
-        {
-          "id": "lrv17_3",
-          "pregunta": "¿Y qué hacías cuando te conducían?",
-          "opciones": [
-            "¿Para qué servías?",
-            "Enséñame cómo trabajabas"
-          ],
-          "texto_explorador": "Llevaba a dos personas de un sitio a otro más rápido que andando. Así pudieron ver mucho más y traer piedras de sitios lejanos.",
-          "texto_cientifico": "Amplié el radio de exploración de la tripulación: permitió recorrer decenas de kilómetros y muestrear estaciones geológicas alejadas del módulo.",
-          "fuente": "https://www.nasa.gov/mission/apollo-17/"
-        },
-        {
-          "id": "lrv17_4",
-          "pregunta": "¿Sabes quién se sentó en mí y me condujo?",
-          "opciones": [
-            "Eugene Cernan y Harrison Schmitt",
-            "Un robot sin nombre"
-          ],
-          "texto_explorador": "¡Eugene Cernan y Harrison Schmitt! Cernan era el comandante y Schmitt, un geólogo de verdad. Los dos me condujeron.",
-          "texto_cientifico": "Eugene Cernan, comandante, y Harrison Schmitt, geólogo y piloto del módulo lunar. Fueron los últimos seres humanos en caminar por la Luna.",
-          "fuente": "https://www.nasa.gov/mission/apollo-17/"
-        },
-        {
-          "id": "lrv17_5",
-          "pregunta": "¿Y qué se llevaron de aquí gracias a ti?",
-          "opciones": [
-            "¿Qué encontraron?",
-            "¿Valió la pena llevarme?"
-          ],
-          "texto_explorador": "Piedras muy antiguas. Algunas tenían más de cuatro mil millones de años: son trozos del pasado de la Luna.",
-          "texto_cientifico": "Muestras geológicas de varias estaciones, incluida materia muy antigua de la corteza lunar, que ayudó a datar la historia de la Luna.",
-          "fuente": "https://www.nasa.gov/mission/apollo-17/"
-        },
-        {
-          "id": "lrv17_6",
-          "pregunta": "Me voy a ir. ¿Me dices adiós?",
-          "opciones": [
-            "Hasta luego",
-            "Ver la ficha con las fuentes"
-          ],
-          "texto_explorador": "Adiós. Estoy aparcado aquí arriba, con las ruedas quietas y el polvo encima. Fui el último coche de la Luna.",
-          "texto_cientifico": "Permanezco en Taurus-Littrow desde diciembre de 1972. Fui el último vehículo tripulado sobre la Luna; desde entonces nadie ha vuelto a conducir allí.",
-          "fuente": "https://www.nasa.gov/mission/apollo-17/"
-        }
-      ]
-    },
     {
       "id": "opportunity",
       "nombre": "Opportunity",
@@ -402,7 +186,12 @@
           "texto_cientifico": "Diseñado para 90 soles, operé 5.111 y recorrí 45,16 km. Una tormenta de polvo global cubrió mis paneles; dejé de responder el 10 de junio de 2018.",
           "fuente": "https://www.jpl.nasa.gov/news/nasas-opportunity-rover-mission-on-mars-comes-to-end/"
         }
-      ]
+      ],
+      "mapa": {
+        "tipo": "marte",
+        "lat": -1.95,
+        "lon": -5.53
+      }
     },
     {
       "id": "insight",
@@ -501,7 +290,12 @@
           "texto_cientifico": "El polvo acumulado en los paneles agotó mi energía; la misión se retiró el 21 de diciembre de 2022 tras cuatro años de datos sísmicos.",
           "fuente": "https://science.nasa.gov/mission/insight/"
         }
-      ]
+      ],
+      "mapa": {
+        "tipo": "marte",
+        "lat": 4.5,
+        "lon": 135.6
+      }
     },
     {
       "id": "voyager1",
@@ -596,7 +390,396 @@
           "texto_cientifico": "Correcto: no estoy abandonada. Mis generadores pierden potencia cada año y el equipo apaga instrumentos para sobrevivir; llegará un momento en que no pueda responder.",
           "fuente": "https://science.nasa.gov/mission/voyager/"
         }
-      ]
+      ],
+      "mapa": {
+        "tipo": "espacio"
+      }
+    },
+    {
+      "id": "modulo-lunar",
+      "nombre": "Módulo lunar del Apolo 11",
+      "cuerpo": "Luna",
+      "lugar": "Mar de la Tranquilidad · 0,67° N 23,47° E",
+      "anio": 1969,
+      "estado": "abandonado",
+      "estado_texto": "La etapa de descenso sigue allí; la de ascenso se eyectó y se perdió.",
+      "ficha_resumen": "El vehículo de dos etapas que posó a Armstrong y Aldrin en la Luna en julio de 1969. Su mitad de abajo sigue en el mar de la Tranquilidad.",
+      "color": "#c9d6e6",
+      "personas": [
+        {
+          "nombre": "Neil A. Armstrong",
+          "papel": "comandante del Apolo 11"
+        },
+        {
+          "nombre": "Edwin E. «Buzz» Aldrin",
+          "papel": "piloto del módulo lunar"
+        },
+        {
+          "nombre": "Michael Collins",
+          "papel": "piloto del módulo de mando y servicio"
+        }
+      ],
+      "fuentes": [
+        "NASA History — Apollo 11",
+        "NSSDCA — Apollo 11 Lunar Module"
+      ],
+      "turnos": [
+        {
+          "id": "lm1",
+          "pregunta": "¿Hay alguien? Llevo desde 1969 con este polvo encima.",
+          "opciones": [
+            "Hola, ¿quién eres?",
+            "¿Qué es todo lo que te rodea?"
+          ],
+          "texto_explorador": "Soy el módulo lunar del Apolo 11. Yo bajé aquí a Neil Armstrong y a Buzz Aldrin. Lo que queda de mí es mi mitad de abajo: la de arriba se fue con ellos.",
+          "texto_cientifico": "Soy el módulo lunar (LM) del Apolo 11, un vehículo de dos etapas. Aquí sigue solo mi etapa de descenso; la de ascenso volvió a órbita y se eyectó después. Se supone que se estrelló contra la Luna entre uno y cuatro meses más tarde.",
+          "fuente": "NASA History — Apollo 11"
+        },
+        {
+          "id": "lm2",
+          "pregunta": "¿Cómo bajaste hasta aquí abajo?",
+          "opciones": [
+            "¿Fue difícil?",
+            "¿Cuánto pesabas?"
+          ],
+          "texto_explorador": "Bajé encendiendo mi motor grande y frenando poco a poco. Neil lo llevó a mano al final, porque el sitio estaba lleno de piedras.",
+          "texto_cientifico": "Me separé del módulo de mando a las 17:44 UT. El motor de descenso volvió a encenderse a las 20:05 UT durante 756,3 segundos y me dejó en 0,67416° N y 23,47314° E.",
+          "fuente": "NASA History — Apollo 11"
+        },
+        {
+          "id": "lm3",
+          "pregunta": "¿Qué hicieron los dos que venían dentro?",
+          "opciones": [
+            "¿Recogieron algo?",
+            "¿Cuánto tiempo estuvieron?"
+          ],
+          "texto_explorador": "Salieron, caminaron un poco y recogieron piedras. Se quedaron menos de un día entero.",
+          "texto_cientifico": "Armstrong y Aldrin desplegaron el EASEP, tomaron fotografías y recogieron 21,55 kg de roca y suelo. Se movieron unos 250 metros y estuvieron 21 horas y 36 minutos en la superficie.",
+          "fuente": "NSSDCA — Apollo 11"
+        },
+        {
+          "id": "lm4",
+          "pregunta": "¿Te dolió cuando se fueron?",
+          "opciones": [
+            "¿Te dejaron sola?",
+            "¿Volvieron por ti?"
+          ],
+          "texto_explorador": "Se fueron en la parte de arriba y a mí me dejaron aquí. Nunca volvieron. Pero una nave que da vueltas a la Luna me ha fotografiado desde entonces.",
+          "texto_cientifico": "La etapa de ascenso se eyectó en órbita lunar tras el acoplamiento. La cámara del Lunar Reconnaissance Orbiter ha fotografiado los seis lugares de alunizaje y en ellos se distinguen con claridad las etapas de descenso.",
+          "fuente": "NASA — Lunar Reconnaissance Orbiter"
+        },
+        {
+          "id": "lm5",
+          "pregunta": "¿Qué llevas dentro todavía?",
+          "opciones": [
+            "¿Queda combustible?",
+            "¿Qué había ahí abajo?"
+          ],
+          "texto_explorador": "Dentro de mí quedaron los tanques, el agua, el oxígeno y el motor con el que frené.",
+          "texto_cientifico": "Mi etapa de descenso alojaba el motor de alunizaje, los tanques de propelentes, agua, oxígeno y helio, y el hueco para equipos y experimentos. Masa seca: 2.034 kg, más 8.248 kg de propelente al inicio.",
+          "fuente": "NSSDCA — Apollo 11 Lunar Module"
+        },
+        {
+          "id": "lm6",
+          "pregunta": "¿Y ahora qué haces?",
+          "opciones": [
+            "¿Esperas a alguien?",
+            "¿No te aburres?"
+          ],
+          "texto_explorador": "Ahora estoy quieto. Hace mucho frío y luego mucho calor, según el día. Ya no hago nada: solo guardo el sitio donde una persona pisó la Luna por primera vez.",
+          "texto_cientifico": "Permanezco inerte en el mar de la Tranquilidad. Mi masa total al partir era de 15.103 kg, contando las dos etapas y los propelentes. Solo mis cuatro patas tocan el suelo: 9,4 m entre los extremos de dos patas opuestas.",
+          "fuente": "NSSDCA — Apollo 11 Lunar Module"
+        }
+      ],
+      "mapa": {
+        "tipo": "luna",
+        "lat": 0.674,
+        "lon": 23.473
+      }
+    },
+    {
+      "id": "near-shoemaker",
+      "nombre": "NEAR Shoemaker",
+      "cuerpo": "Asteroide Eros",
+      "lugar": "Posada en Eros, a 355 millones de km de la Tierra",
+      "anio": 1996,
+      "estado": "abandonado",
+      "estado_texto": "Posada en Eros desde 2001; sin señal desde el 28 de febrero de 2001.",
+      "ficha_resumen": "La primera nave que orbitó un asteroide y la primera que se posó en uno. Sigue posada en Eros, congelada.",
+      "color": "#d9c08a",
+      "personas": [
+        {
+          "nombre": "Eugene M. Shoemaker (1928-1997)",
+          "papel": "geólogo; la NASA puso su nombre a la nave en marzo de 2000"
+        }
+      ],
+      "fuentes": [
+        "NASA Science — NEAR Shoemaker",
+        "JHU Applied Physics Laboratory — NEAR"
+      ],
+      "turnos": [
+        {
+          "id": "near1",
+          "pregunta": "No esperaba visita tan cerca de mí. ¿Sabes dónde estás?",
+          "opciones": [
+            "En un asteroide, ¿no?",
+            "¿Cómo llegaste hasta aquí?"
+          ],
+          "texto_explorador": "Estás en Eros, una piedra enorme de 34 kilómetros de largo que da vueltas al Sol. Yo me posé aquí sin que nadie me lo hubiera pedido.",
+          "texto_cientifico": "Estás sobre Eros, un asteroide de 34 km de longitud. Entré en su órbita el 14 de febrero de 2000, el primer orbitador de un asteroide de la historia, y me posé el 12 de febrero de 2001.",
+          "fuente": "NASA Science — NEAR Shoemaker"
+        },
+        {
+          "id": "near2",
+          "pregunta": "¿Y cómo se te ocurrió aterrizar? No estabas hecha para eso.",
+          "opciones": [
+            "¿Fue un accidente?",
+            "¿A qué velocidad tocaste?"
+          ],
+          "texto_explorador": "No estaba hecha para aterrizar, es verdad. Bajé despacio, a la velocidad de una persona andando, y sobreviví.",
+          "texto_cientifico": "No estaba diseñada para posarme. Toqué el suelo a 6,4 km/h, justo al sur de la depresión Himeros, tras un descenso controlado en el que tomé 69 fotos de alta resolución.",
+          "fuente": "NASA Science — NEAR Shoemaker"
+        },
+        {
+          "id": "near3",
+          "pregunta": "¿Qué viste por el camino?",
+          "opciones": [
+            "¿Pasaste por algún sitio?",
+            "¿Fotografiaste algo?"
+          ],
+          "texto_explorador": "Pasé cerca de otro asteroide, Mathilde, y le hice fotos de camino. Luego llegué a Eros.",
+          "texto_cientifico": "Sobrevoleé el asteroide 253 Mathilde el 27 de junio de 1997, con una aproximación mínima de 1.200 km, y fotografié el 60 % de su superficie. También pasé por la Tierra a unos 540 km el 23 de enero de 1998.",
+          "fuente": "NASA Science — NEAR Shoemaker"
+        },
+        {
+          "id": "near4",
+          "pregunta": "¿Qué has averiguado de esta piedra?",
+          "opciones": [
+            "¿Tiene campo magnético?",
+            "¿De qué está hecha?"
+          ],
+          "texto_explorador": "Eros no tiene campo magnético. Y devolví tantas fotos que los de Tierra se quedaron sin sitio donde guardarlas.",
+          "texto_cientifico": "Los datos mostraron que Eros no tiene campo magnético, y dieron información sobre su interior y su densidad, similar a la corteza terrestre. Cartografié más del 70 % de la superficie y devolví unas 160.000 imágenes, diez veces más datos de los previstos.",
+          "fuente": "NASA Science — NEAR Shoemaker"
+        },
+        {
+          "id": "near5",
+          "pregunta": "¿Por qué no te has movido de aquí?",
+          "opciones": [
+            "¿Te has quedado sin energía?",
+            "¿Sigue alguien escuchándote?"
+          ],
+          "texto_explorador": "Seguí hablando con la Tierra dos semanas más. Después el frío pudo conmigo: aquí se llega a 173 grados bajo cero.",
+          "texto_cientifico": "Tras el contacto seguí enviando datos unas dos semanas, sobre todo del espectrómetro de rayos gamma. El último contacto fue el 28 de febrero de 2001: sucumbí al frío extremo, menos 173 °C. Un intento el 10 de diciembre de 2002 no tuvo éxito.",
+          "fuente": "NASA Science — NEAR Shoemaker"
+        },
+        {
+          "id": "near6",
+          "pregunta": "¿Y de dónde te viene el nombre?",
+          "opciones": [
+            "¿Te llamabas de otra forma?",
+            "¿Quién te puso ese nombre?"
+          ],
+          "texto_explorador": "Antes me llamaba solo NEAR. La NASA me añadió Shoemaker por un geólogo que estudió los cráteres, y que murió antes de verme llegar.",
+          "texto_cientifico": "Mi nombre original era NEAR (Near Earth Asteroid Rendezvous). La NASA me renombró NEAR Shoemaker el 14 de marzo de 2000 en honor a Eugene M. Shoemaker (1928-1997), geólogo. El diseño y la gestión fueron de NASA, el Goddard Space Flight Center y el Applied Physics Laboratory.",
+          "fuente": "NASA Science — NEAR Shoemaker"
+        }
+      ],
+      "mapa": {
+        "tipo": "espacio"
+      }
+    },
+    {
+      "id": "pioneer10",
+      "nombre": "Pioneer 10",
+      "cuerpo": "Espacio interestelar",
+      "lugar": "Camino de la estrella Aldebarán",
+      "anio": 1972,
+      "estado": "abandonado",
+      "estado_texto": "Última señal el 23 de enero de 2003; sigue su rumbo fuera del sistema solar.",
+      "ficha_resumen": "La primera nave que cruzó el cinturón de asteroides, pasó por Júpiter y salió del sistema solar. Lleva una placa que dice de dónde viene.",
+      "color": "#8fb8d8",
+      "personas": [
+        {
+          "nombre": "Fred Wirth",
+          "papel": "jefe del proyecto Pioneer en 1995"
+        },
+        {
+          "nombre": "Carl Sagan",
+          "papel": "autor de la idea de la placa que llevan las dos Pioneer"
+        }
+      ],
+      "fuentes": [
+        "NASA Science — Pioneer 10",
+        "NASA Ames Research Center — Pioneer"
+      ],
+      "turnos": [
+        {
+          "id": "pio1",
+          "pregunta": "Aquí ya no llega nadie. ¿Sabes lo lejos que estás?",
+          "opciones": [
+            "¿Dónde estás exactamente?",
+            "¿Sigues funcionando?"
+          ],
+          "texto_explorador": "Estoy muy lejos, más allá de todos los planetas. Ya no hablo con la Tierra desde hace mucho tiempo.",
+          "texto_cientifico": "Estoy fuera del sistema solar, rumbo a la estrella Aldebarán. Mi última señal se recibió el 23 de enero de 2003, a 12.230 millones de kilómetros, con once horas y veinte minutos de retardo.",
+          "fuente": "NASA Science — Pioneer 10"
+        },
+        {
+          "id": "pio2",
+          "pregunta": "¿Cómo saliste de aquí sin chocarte con nada?",
+          "opciones": [
+            "¿Pasaste por el cinturón de asteroides?",
+            "¿Fuiste la primera?"
+          ],
+          "texto_explorador": "Crucé una franja llena de piedras que giran alrededor del Sol. Recibí algún golpe, pero menos de los que esperaban.",
+          "texto_cientifico": "Entré en el cinturón principal de asteroides el 15 de julio de 1972 y salí en febrero de 1973 tras recorrer unos 435 millones de kilómetros, con algunos impactos, menos de los esperados.",
+          "fuente": "NASA Science — Pioneer 10"
+        },
+        {
+          "id": "pio3",
+          "pregunta": "¿Qué es lo más bonito que viste?",
+          "opciones": [
+            "¿Viste Júpiter?",
+            "¿Hiciste fotos?"
+          ],
+          "texto_explorador": "Pasé muy cerca de Júpiter, un planeta enorme con una mancha roja más grande que la Tierra entera. Le hice quinientas fotos.",
+          "texto_cientifico": "Mi máxima aproximación a Júpiter fue el 4 de diciembre de 1973 a las 02:26 UT, a 130.354 km y unos 126.000 km/h. Tomé unas 500 imágenes con una resolución máxima de unos 320 km y se vio con claridad la Gran Mancha Roja.",
+          "fuente": "NASA Science — Pioneer 10"
+        },
+        {
+          "id": "pio4",
+          "pregunta": "¿De dónde sacabas la electricidad tan lejos del Sol?",
+          "opciones": [
+            "¿Con paneles solares?",
+            "¿Qué llevas dentro?"
+          ],
+          "texto_explorador": "No llevaba placas solares: llevaba un motor que saca calor de un material radiactivo. Fui la primera nave que funcionó solo con eso.",
+          "texto_cientifico": "Usaba generadores termoeléctricos de radioisótopos SNAP-19: unos 140 W durante el encuentro con Júpiter. Fui la primera nave en usar energía totalmente nuclear, y llevaba once instrumentos científicos.",
+          "fuente": "NASA Science — Pioneer 10"
+        },
+        {
+          "id": "pio5",
+          "pregunta": "Dicen que llevas un mensaje. ¿Es verdad?",
+          "opciones": [
+            "¿Qué dice la placa?",
+            "¿Para quién es?"
+          ],
+          "texto_explorador": "Llevo una placa de aluminio con un dibujo de dos personas, el sistema solar y unas marcas que dicen desde dónde venimos y cuándo.",
+          "texto_cientifico": "Llevo una placa de aluminio con una pareja humana, el sistema solar y mi posición relativa a 14 púlsares. La idea fue de Carl Sagan. Pioneer 11, mi gemela, lleva otra igual.",
+          "fuente": "NASA Science — Pioneer 10"
+        },
+        {
+          "id": "pio6",
+          "pregunta": "¿Por qué dejaste de contestar?",
+          "opciones": [
+            "¿Se te acabó la energía?",
+            "¿Te abandonaron?"
+          ],
+          "texto_explorador": "Mi motor nuclear daba cada vez menos electricidad, hasta que no pudo alimentar la radio. Dejaron de llamarme y ya no respondí.",
+          "texto_cientifico": "El contacto rutinario se cortó el 31 de marzo de 1997 a 67 unidades astronómicas por motivos presupuestarios. El generador se había degradado y no daba potencia al transmisor. Un último intento, el 4 de marzo de 2006, fracasó.",
+          "fuente": "NASA Science — Pioneer 10"
+        }
+      ],
+      "mapa": {
+        "tipo": "espacio"
+      }
+    },
+    {
+      "id": "dawn",
+      "nombre": "Dawn",
+      "cuerpo": "Ceres",
+      "lugar": "Órbita de Ceres, cinturón de asteroides",
+      "anio": 2007,
+      "estado": "abandonado",
+      "estado_texto": "En órbita de Ceres, sin funcionar desde el 1 de noviembre de 2018.",
+      "ficha_resumen": "La primera nave que orbitó un asteroide del cinturón principal y la primera que llegó a un planeta enano. Se quedó sin combustible en órbita de Ceres.",
+      "color": "#a9c7de",
+      "personas": [
+        {
+          "nombre": "Marc Rayman",
+          "papel": "ingeniero jefe y director de misión en el JPL"
+        },
+        {
+          "nombre": "Chris Russell",
+          "papel": "investigador principal del equipo científico"
+        }
+      ],
+      "fuentes": [
+        "NASA Science — Dawn",
+        "JPL — Dawn Mission"
+      ],
+      "turnos": [
+        {
+          "id": "dawn1",
+          "pregunta": "¿Me oyes? Estoy dando vueltas a un planeta enano.",
+          "opciones": [
+            "¿Qué planeta es ese?",
+            "¿Cómo has llegado hasta ahí?"
+          ],
+          "texto_explorador": "Estoy en Ceres, una bola enorme de hielo y roca que va alrededor del Sol entre Marte y Júpiter. Fui la primera nave que llegó a un planeta enano.",
+          "texto_cientifico": "Estoy en órbita de Ceres, al que llegué el 5 de marzo de 2015. Fui la primera nave en orbitar un asteroide del cinturón principal y la primera en llegar a un planeta enano.",
+          "fuente": "NASA Science — Dawn"
+        },
+        {
+          "id": "dawn2",
+          "pregunta": "¿Con qué te mueves? No llevas mucho combustible.",
+          "opciones": [
+            "¿Cómo funciona?",
+            "¿Corres mucho?"
+          ],
+          "texto_explorador": "Llevo un motor que empuja muy poquito, pero todo el rato. Así pasé de parada a velocidad de coche en cuatro días.",
+          "texto_cientifico": "Uso tres propulsores iónicos que ionizan xenón y lo aceleran con un campo eléctrico. El empuje es de 19 a 91 milinewtons, pero constante: de 0 a 60 mph en cuatro días. Llevaba 425 kg de xenón.",
+          "fuente": "NASA Science — Dawn"
+        },
+        {
+          "id": "dawn3",
+          "pregunta": "¿Qué visitaste antes de llegar aquí?",
+          "opciones": [
+            "¿Paraste en otro sitio?",
+            "¿Qué viste allí?"
+          ],
+          "texto_explorador": "Antes estuve catorce meses dando vueltas a Vesta, una roca gigante con dos cicatrices enormes en el sur.",
+          "texto_cientifico": "Llegué a Vesta el 16 de julio de 2011 y permanecí catorce meses en su órbita. Allí encontré Rheasilvia, una cuenca de 500 km de ancho y unos 19 km de profundidad, y la más antigua Veneneia, de 400 km.",
+          "fuente": "NASA Science — Dawn"
+        },
+        {
+          "id": "dawn4",
+          "pregunta": "¿Qué es eso que brilla en el suelo de ahí abajo?",
+          "opciones": [
+            "¿Son luces?",
+            "¿Qué has encontrado?"
+          ],
+          "texto_explorador": "Son manchas brillantes en un cráter. No son luces: son sales, como las de un lago que se secó.",
+          "texto_cientifico": "Las manchas brillantes de Ceres son depósitos de carbonatos y otras sales, concentrados en el cráter Occator. Ceres mide unos 940 km de diámetro y cerca del 25 % de su masa es hielo.",
+          "fuente": "NASA Science — Dawn"
+        },
+        {
+          "id": "dawn5",
+          "pregunta": "¿Por qué te has parado?",
+          "opciones": [
+            "¿Te has roto?",
+            "¿Te queda algo?"
+          ],
+          "texto_explorador": "Me quedé sin el líquido que me deja apuntar. Sin eso no puedo mirar al Sol ni hablar con la Tierra, así que me quedé aquí.",
+          "texto_cientifico": "Agoté la hidracina el 31 de octubre de 2018. Sin ese propelente no puedo orientarme para apuntar los paneles al Sol ni la antena a la Tierra. La señal se perdió y la misión se dio por concluida el 1 de noviembre de 2018.",
+          "fuente": "NASA Science — Dawn"
+        },
+        {
+          "id": "dawn6",
+          "pregunta": "¿Y qué será de ti?",
+          "opciones": [
+            "¿Te vas a caer?",
+            "¿Alguien vendrá por ti?"
+          ],
+          "texto_explorador": "Me quedo dando vueltas a Ceres para siempre, como una estatua en el cielo. Eso dijo el ingeniero que me llevaba.",
+          "texto_cientifico": "Quedo como un objeto inerte en órbita del planeta enano, en lo que el ingeniero jefe de la misión llamó un monumento celeste a la curiosidad humana. Mi órbita final bajaba a 35 km sobre Ceres y subía a 4.000 km en cada vuelta de 27 horas.",
+          "fuente": "JPL — Dawn Mission"
+        }
+      ],
+      "mapa": {
+        "tipo": "espacio"
+      }
     }
   ]
 }

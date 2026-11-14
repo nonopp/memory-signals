@@ -44,5 +44,35 @@
     "nombre_modelo": "Fotografía · rover lunar del Apolo 17 en Taurus-Littrow",
     "credito": "NASA · as17-137-20979 (dominio público)",
     "nota": "La NASA no publica un modelo 3D del rover lunar. Se muestra la foto oficial."
+  },
+  "modulo-lunar": {
+    "glb": "modelos/apolo-modulo-lunar.glb",
+    "nombre_modelo": "Módulo lunar Apolo (LM)",
+    "credito": "Modelo 3D: NASA 3D Resources"
+  },
+  "pioneer10": {
+    "glb": "modelos/pioneer-10.glb",
+    "nombre_modelo": "Pioneer 10",
+    "credito": "Modelo 3D: NASA 3D Resources"
+  },
+  "viking-1": {
+    "glb": "modelos/viking-lander.glb",
+    "nombre_modelo": "Viking Lander",
+    "credito": "Modelo 3D: NASA 3D Resources"
+  },
+  "viking-2": {
+    "glb": "modelos/viking-lander.glb",
+    "nombre_modelo": "Viking Lander",
+    "credito": "Modelo 3D: NASA 3D Resources"
+  },
+  "kepler": {
+    "glb": "modelos/kepler.glb",
+    "nombre_modelo": "Kepler (A)",
+    "credito": "Modelo 3D: NASA 3D Resources"
+  },
+  "ingenuity": {
+    "glb": "modelos/ingenuity.glb",
+    "nombre_modelo": "Ingenuity Mars Helicopter",
+    "credito": "Modelo 3D: NASA 3D Resources"
   }
 }

@@ -19,8 +19,10 @@
   var ocupado = false;
 
   var EQUIVALENCIA = {
-    surveyor3: 'surveyor-3',
-    lrv17: 'rover-lunar-lrv',
+    'modulo-lunar': 'apolo-modulo-lunar',
+    'near-shoemaker': 'near-shoemaker',
+    pioneer10: 'pioneer-10-11',
+    dawn: 'dawn',
     opportunity: 'spirit-opportunity',
     insight: 'phoenix-insight',
     voyager1: null
@@ -43,6 +45,18 @@
   function palabras(s) {
     return normaliza(s).split(' ').filter(function (w) { return w.length > 2 && VACIAS.indexOf(w) === -1; });
   }
+  /* palabras que el visitante escribió con mayúscula: pueden ser nombres propios sueltos
+     («Francia») o cosas del propio aparato («Júpiter»). Se decide mirando la ficha. */
+  function palabrasCapitalizadas(s) {
+    return (s || '').split(/\s+/).map(function (bruto) {
+      var limpio = bruto.replace(/[¿?¡!.,;:()"']/g, '');
+      if (!limpio || !/^[A-ZÁÉÍÓÚÑ]/.test(limpio)) return null;
+      var w = normaliza(limpio);
+      if (w.length < 3 || VACIAS.indexOf(w) !== -1) return null;
+      return w;
+    }).filter(Boolean);
+  }
+
   function palabrasSinNombres(s) {
     return (s || '').split(/\s+/).map(function (bruto) {
       var limpio = bruto.replace(/[¿?¡!.,;:()"']/g, '');
@@ -211,6 +225,7 @@
     panelAbierto = true;
     $('ms-burbuja').setAttribute('aria-expanded', 'true');
     $('ms-widget').classList.add('abierto');
+    document.body.classList.add('chat-abierto');
     setTimeout(function () { var i = $('ms-input'); if (i) i.focus(); }, 60);
   }
   function cerrar() {
@@ -219,6 +234,7 @@
     panelAbierto = false;
     if ($('ms-burbuja')) $('ms-burbuja').setAttribute('aria-expanded', 'false');
     if ($('ms-widget')) $('ms-widget').classList.remove('abierto');
+    document.body.classList.remove('chat-abierto');
   }
   function mostrar(visible) {
     construir();
@@ -312,6 +328,12 @@
               .map(function (s) { return s.cuerpo; }).join(' ');
             var texto = normaliza(util);
             var propios = palabrasSinNombres(pregunta);
+            /* un nombre propio se acepta solo si el aparato lo repite: así «Júpiter» entra
+               y «Francia» (que solo era el país de un investigador) no arrastra la respuesta */
+            palabrasCapitalizadas(pregunta).forEach(function (t) {
+              var veces = (texto.match(new RegExp('\\b' + t + '\\b', 'g')) || []).length;
+              if (veces >= 2) propios.push(t);
+            });
             var aciertos = propios.filter(function (t) { return texto.indexOf(t) !== -1; }).length;
             if (!propios.length || (aciertos === 0 && !seccionPedida(propios))) return null;
             return preparar(objetivo, md0, propios, actual ? actual.nombre : null);
