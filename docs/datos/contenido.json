@@ -789,5 +789,27 @@
         "tipo": "espacio"
       }
     }
-  ]
+  ],
+  "modos": {
+    "explorador": {
+      "etiqueta": "Explorar",
+      "pista": "Información más sencilla: frases cortas y palabras claras, como para escolares y estudiantes. El aparato te hablará como si tuvieras menos de 10 años.",
+      "saludo": "Pregúntame lo que quieras de mí: qué hice, quién me construyó o dónde estoy ahora.",
+      "sugerencias": [
+        "¿Qué hiciste?",
+        "¿Quién te construyó?",
+        "¿Dónde estás ahora?"
+      ]
+    },
+    "cientifico": {
+      "etiqueta": "Modo científico",
+      "pista": "Información especializada: datos técnicos, cifras con sus unidades y lenguaje profesional. Las preguntas y las respuestas del chat también serán más técnicas.",
+      "saludo": "Puedes preguntarme por mi instrumentación, por la cronología de la misión o por los resultados que se publicaron.",
+      "sugerencias": [
+        "¿Qué instrumentación llevabas?",
+        "¿Cuál fue la cronología de la misión?",
+        "¿Qué resultados se publicaron?"
+      ]
+    }
+  }
 }

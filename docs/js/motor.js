@@ -149,7 +149,7 @@
     var esExp = estado.nivel === 'explorador';
     ex.classList.toggle('activo', esExp);   ex.setAttribute('aria-pressed', esExp ? 'true' : 'false');
     ci.classList.toggle('activo', !esExp);  ci.setAttribute('aria-pressed', !esExp ? 'true' : 'false');
-    $('#pie-nivel').textContent = 'nivel: ' + (esExp ? 'explorador (8-11)' : 'científico (12-15)');
+    $('#pie-nivel').textContent = esExp ? 'modo explorar · información sencilla' : 'modo científico · información especializada';
   }
   function cambiarNivel(nivel) {
     if (estado.nivel === nivel) return;
@@ -179,7 +179,48 @@
   }
 
   /* ---------- pantallas ---------- */
+  /* al pasar el ratón (o al llegar con el tabulador) los botones de modo se explican */
+  var pistaCaja = null;
+  function conectarPistas() {
+    if (!datos.modos || !document.getElementById('acciones-intro')) return;
+    if (!pistaCaja) {
+      pistaCaja = document.createElement('div');
+      pistaCaja.className = 'pista-modo';
+      pistaCaja.id = 'pista-modo';
+      pistaCaja.setAttribute('role', 'tooltip');
+      pistaCaja.hidden = true;
+      document.body.appendChild(pistaCaja);
+    }
+    $$('#acciones-intro [data-modo]').forEach(function (b) {
+      var modo = datos.modos[b.dataset.modo];
+      if (!modo) return;
+      b.setAttribute('aria-describedby', 'pista-modo');
+      b.setAttribute('aria-label', modo.etiqueta + ': ' + modo.pista);
+      function abrir() {
+        pistaCaja.textContent = modo.pista;
+        pistaCaja.hidden = false;
+        var r = b.getBoundingClientRect();
+        var ancho = Math.min(330, window.innerWidth - 24);
+        pistaCaja.style.width = ancho + 'px';
+        var x = Math.min(Math.max(12, r.left + r.width / 2 - ancho / 2), window.innerWidth - ancho - 12);
+        var alto = pistaCaja.offsetHeight || 96;
+        var y = r.top - alto - 12;
+        if (y < 12) y = r.bottom + 12;
+        pistaCaja.style.left = x + 'px';
+        pistaCaja.style.top = y + 'px';
+        pistaCaja.style.setProperty('--flecha', Math.round(r.left + r.width / 2 - x) + 'px');
+      }
+      function cerrar() { pistaCaja.hidden = true; }
+      b.addEventListener('mouseenter', abrir);
+      b.addEventListener('focus', abrir);
+      b.addEventListener('mouseleave', cerrar);
+      b.addEventListener('blur', cerrar);
+      b.addEventListener('click', cerrar);
+    });
+  }
+
   function pintaIntro() {
+    conectarPistas();
     var l = datos.astronauta.lineas;
     var texto = txt(l.intro);
     if (estado.visitados.length) texto += ' ' + txt(l.vuelta);
@@ -496,7 +537,7 @@
 
   fetch('datos/contenido.json')
     .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
-    .then(function (j) { datos = j; window.__MS = estado; arrancar(); })
+    .then(function (j) { datos = j; window.__MS = estado; window.__MSmodos = j.modos || null; arrancar(); })
     .catch(function (e) {
       $('#txt-intro').textContent = 'No se ha podido cargar el contenido (' + e.message + '). Abre el sitio desde un servidor, no como archivo local.';
     });

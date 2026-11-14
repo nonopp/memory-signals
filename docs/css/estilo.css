@@ -96,6 +96,24 @@ body.con-fondo .velo{opacity:1}
 .pantalla:not(#p-objeto) dl{text-align:left}
 .pantalla:not(#p-objeto) .acciones{justify-content:center}
 .pantalla:not(#p-objeto) .astronauta{margin-left:auto;margin-right:auto}
+
+/* lo que explica cada botón de modo al pasar el ratón por encima */
+.pista-modo{
+  position:fixed;z-index:60;max-width:330px;padding:12px 15px;border-radius:13px;
+  background:linear-gradient(180deg,rgba(30,52,92,.985),rgba(14,24,44,.985));
+  border:1px solid rgba(120,200,230,.40);
+  box-shadow:0 18px 38px rgba(0,0,0,.55),0 0 0 1px rgba(255,255,255,.03) inset;
+  font-size:.84rem;line-height:1.55;color:var(--texto);text-align:left;
+  pointer-events:none;animation:pistaEntra .14s ease-out;
+}
+.pista-modo[hidden]{display:none}
+.pista-modo::after{
+  content:'';position:absolute;left:var(--flecha,50%);bottom:-7px;width:13px;height:13px;margin-left:-6px;
+  background:rgba(18,32,58,.985);border-right:1px solid rgba(120,200,230,.40);
+  border-bottom:1px solid rgba(120,200,230,.40);transform:rotate(45deg);
+}
+@keyframes pistaEntra{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.pista-modo{animation:none}}
 #p-objeto{width:min(1140px,100%)}
 .pantalla.activa{display:block;animation:entra .45s ease both}
 @keyframes entra{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
@@ -363,6 +381,11 @@ code{background:rgba(255,255,255,.09);padding:2px 6px;border-radius:6px;font-siz
 .ms-widget:not(.abierto) .ms-burbuja:hover .ms-burbuja-etq{opacity:1;transform:none}
 
 .ms-panel[hidden]{display:none}
+/* en qué modo está hablando el chat */
+.ms-modo{margin-left:auto;margin-right:8px;padding:2px 9px;border-radius:999px;white-space:nowrap;
+  font-size:.66rem;letter-spacing:.04em;text-transform:uppercase;
+  color:#9be7d4;background:rgba(99,224,200,.12);border:1px solid rgba(99,224,200,.35)}
+.ms-modo.es-cientifico{color:#a9c8ff;background:rgba(120,170,255,.14);border-color:rgba(120,170,255,.40)}
 .ms-panel{
   /* rabillo del bocadillo, como en el boceto: apunta al aparato que está en la escena */
 

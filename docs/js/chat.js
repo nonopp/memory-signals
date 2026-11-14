@@ -190,6 +190,7 @@
           '<span class="ms-punto" aria-hidden="true"></span>' +
           '<div class="ms-titulos"><strong id="ms-panel-titulo">Memory Signals</strong>' +
           '<span id="ms-panel-sub">pregunta y te contesto con mi ficha</span></div>' +
+          '<span class="ms-modo" id="ms-modo">explorar</span>' +
           '<button type="button" class="ms-cerrar" id="ms-cerrar" aria-label="Cerrar la ventana">&times;</button>' +
         '</header>' +
         '<div class="ms-mensajes" id="ms-mensajes" aria-live="polite"></div>' +
@@ -232,6 +233,7 @@
     $('ms-burbuja').setAttribute('aria-expanded', 'true');
     $('ms-widget').classList.add('abierto');
     document.body.classList.add('chat-abierto');
+    refrescarModo();
     setTimeout(function () { var i = $('ms-input'); if (i) i.focus(); }, 60);
   }
   function cerrar() {
@@ -266,13 +268,30 @@
     return d;
   }
 
+  function refrescarModo() {
+    var etq = document.getElementById('ms-modo');
+    if (!etq) return;
+    var exp = nivelActual() === 'explorador';
+    etq.textContent = exp ? 'modo explorar' : 'modo científico';
+    etq.classList.toggle('es-cientifico', !exp);
+  }
+
   function saludar() {
     var cont = $('ms-mensajes');
     if (!cont || !actual) return;
     cont.innerHTML = '';
     var nombre = actual.nombre || 'este aparato';
-    burbuja('objeto', '<strong>' + escapar(nombre) + '</strong><br>Pregúntame lo que quieras de mí: qué hice, quién me construyó o dónde estoy ahora.');
-    var sugerencias = ['¿Qué hiciste?', '¿Quién te construyó?', '¿Dónde estás ahora?'];
+    /* el modo elegido en la portada cambia también cómo habla el chat */
+    var modos = window.__MSmodos || {};
+    var modo = modos[nivelActual()] || {};
+    var etq = document.getElementById('ms-modo');
+    if (etq) {
+      etq.textContent = nivelActual() === 'explorador' ? 'modo explorar' : 'modo científico';
+      etq.classList.toggle('es-cientifico', nivelActual() !== 'explorador');
+    }
+    var saludo = modo.saludo || 'Pregúntame lo que quieras de mí: qué hice, quién me construyó o dónde estoy ahora.';
+    var sugerencias = modo.sugerencias || ['¿Qué hiciste?', '¿Quién te construyó?', '¿Dónde estás ahora?'];
+    burbuja('objeto', '<strong>' + escapar(nombre) + '</strong><br>' + escapar(saludo));
     var caja = document.createElement('div');
     caja.className = 'ms-sugerencias';
     sugerencias.forEach(function (t) {
