@@ -510,12 +510,16 @@
   function sugerenciasDelTurno() {
     var e = window.__MS;
     var a = e && e.aparato;
-    if (!a || !a.turnos) return null;
-    var t = a.turnos[e.turno || 0];
-    if (!t || !t.opciones || !t.opciones.length) return null;
     var modos = window.__MSmodos || {};
     var modo = modos[nivelActual()] || {};
-    return (t.opciones || []).concat((modo.sugerencias || []).slice(0, 1));
+    var base = (modo.sugerencias || []).slice(0, 3);
+    if (!a || !a.turnos) return base.length ? base : null;
+    var t = a.turnos[e.turno || 0];
+    if (!t || !t.opciones) return base.length ? base : null;
+    /* del guion solo valen las que son preguntas: «soy un visitante» es una respuesta, no una pregunta */
+    var preguntas = t.opciones.filter(function (o) { return o.indexOf('?') !== -1; });
+    if (!preguntas.length) return base.length ? base : null;
+    return preguntas.concat(base.filter(function (b) { return preguntas.indexOf(b) === -1; }).slice(0, 1));
   }
 
   function actualizarSugerencias() {

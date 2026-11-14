@@ -382,36 +382,25 @@
   function pintaObjeto() {
     var a = estado.aparato;
     if (!a) { ir('destino'); pintaDestino(); return; }
-    var turno = a.turnos[estado.turno];
-    if (!turno) { ir('pausa'); pintaPausa(); return; }
 
-    $('#t-objeto').textContent = a.nombre;
-    $('#meta-objeto').textContent = a.cuerpo + ' · ' + a.lugar + ' · ' + a.anio;
-    $('#turno-objeto').textContent = 'turno ' + (estado.turno + 1) + ' de ' + a.turnos.length;
+    /* la ficha del objeto ya no lleva guion: el título y el año van arriba de la columna
+       del mapa, el 3D en el centro y las preguntas las hace el chat */
     var orbe = $('#orbe-objeto');
-    orbe.style.setProperty('--c', a.color);
-    orbe.style.background = 'radial-gradient(circle at 34% 30%, #fff, ' + a.color + ' 48%, #12161f 100%)';
+    if (orbe) {
+      orbe.style.setProperty('--c', a.color);
+      orbe.style.background = 'radial-gradient(circle at 34% 30%, #fff, ' + a.color + ' 48%, #12161f 100%)';
+    }
+    if ($('#t-objeto')) $('#t-objeto').textContent = a.nombre;
+    if ($('#meta-objeto')) $('#meta-objeto').textContent = a.cuerpo + ' · ' + a.lugar;
+    var etq = $('#anio-objeto');
+    if (etq) {
+      etq.textContent = (a.anio_tipo === 'llegada' ? 'Llegada · ' : 'Lanzamiento · ') + a.anio;
+      etq.style.setProperty('--c', a.color);
+    }
+    var primero = a.turnos && a.turnos[0];
+    hablar(a.nombre + '. ' + a.cuerpo + '. ' + a.lugar + '. ' + (a.anio_tipo === 'llegada' ? 'Llegada en ' : 'Lanzamiento en ') + a.anio + '.');
 
-    var globo = $('#texto-objeto');
-    globo.style.setProperty('--c', a.color);
-    globo.textContent = turno.pregunta + ' ' + txt(turno);
-    hablar(turno.pregunta + '. ' + txt(turno));
-
-    var cont = $('#opciones-objeto');
-    var cajaResp = $('#respuesta-objeto');
-    cont.innerHTML = '';
-    if (cajaResp) { cajaResp.hidden = true; cajaResp.innerHTML = ''; }
-    (turno.opciones || ['Seguir']).forEach(function (etiqueta) {
-      var b = document.createElement('button');
-      b.type = 'button'; b.className = 'opcion'; b.textContent = etiqueta;
-      b.addEventListener('click', function () {
-        responderOpcion(a, etiqueta, turno.pregunta + ' ' + txt(turno));
-      });
-      cont.appendChild(b);
-    });
-
-    /* visor 3D arriba, contenido en medio, mapa a la izquierda y chat al lado:
-       todos miran al aparato que está delante */
+    /* visor 3D en el centro, mapa a la izquierda y chat a la derecha */
     if (window.Visor3D) window.Visor3D.pintar(a);
     if (window.ChatObjeto) {
       window.ChatObjeto.ancorar($('#col-chat'));
@@ -424,63 +413,6 @@
       var hermanos = destinoActual ? hermanosDe(destinoActual) : [a];
       window.MapaObjetos.activar(hermanos, a, cambiarAparato);
     }
-  }
-
-  /* la opción pulsada se contesta con la ficha y el chat; después se ofrece seguir el guion */
-  function responderOpcion(a, pregunta, contexto) {
-    var caja = $('#respuesta-objeto');
-    if (!caja) return;
-    $$('#opciones-objeto .opcion').forEach(function (x) { x.disabled = true; });
-    caja.hidden = false;
-    caja.innerHTML = '';
-    var espera = document.createElement('p');
-    espera.className = 'respuesta-espera';
-    espera.textContent = 'Consultando la ficha…';
-    caja.appendChild(espera);
-
-    var resolver = window.ChatObjeto && window.ChatObjeto.resolver;
-    var promesa = resolver ? resolver(pregunta, contexto) : Promise.resolve({ rec: null, modelo: '' });
-
-    promesa.then(function (r) {
-      var texto = (r && r.modelo) || (r && r.rec ? r.rec.texto : '');
-      if (!texto) texto = 'Eso no consta en mi ficha.';
-      caja.innerHTML = '';
-
-      var voz = document.createElement('p');
-      voz.className = 'respuesta-voz';
-      var quien = document.createElement('strong');
-      quien.textContent = a.nombre;
-      voz.appendChild(quien);
-      voz.appendChild(document.createTextNode(' ' + texto.replace(/\s+/g, ' ').trim()));
-      caja.appendChild(voz);
-
-      var fuente = r && r.rec ? r.rec.fuente : '';
-      if (fuente) {
-        var f = document.createElement('p');
-        f.className = 'respuesta-fuente';
-        f.textContent = 'Fuente: ' + fuente;
-        caja.appendChild(f);
-      }
-
-      var acciones = document.createElement('div');
-      acciones.className = 'acciones';
-      var sig = document.createElement('button');
-      sig.type = 'button'; sig.className = 'principal'; sig.id = 'btn-siguiente-objeto';
-      sig.textContent = 'Siguiente pregunta →';
-      sig.addEventListener('click', function () {
-        estado.turno += 1;
-        if (estado.turno >= a.turnos.length) { ir('pausa'); pintaPausa(); }
-        else pintaObjeto();
-      });
-      acciones.appendChild(sig);
-      caja.appendChild(acciones);
-      hablar(texto);
-      caja.scrollIntoView({ block: 'nearest', behavior: quietoAnim() ? 'auto' : 'smooth' });
-    });
-  }
-
-  function quietoAnim() {
-    return window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   }
 
   function pintaPausa() {

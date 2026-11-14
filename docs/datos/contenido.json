@@ -199,7 +199,8 @@
         "tipo": "marte",
         "lat": -1.95,
         "lon": -5.53
-      }
+      },
+      "anio_tipo": "llegada"
     },
     {
       "id": "insight",
@@ -303,7 +304,8 @@
         "tipo": "marte",
         "lat": 4.5,
         "lon": 135.6
-      }
+      },
+      "anio_tipo": "llegada"
     },
     {
       "id": "voyager1",
@@ -401,7 +403,8 @@
       ],
       "mapa": {
         "tipo": "espacio"
-      }
+      },
+      "anio_tipo": "lanzamiento"
     },
     {
       "id": "modulo-lunar",
@@ -503,7 +506,8 @@
         "tipo": "luna",
         "lat": 0.674,
         "lon": 23.473
-      }
+      },
+      "anio_tipo": "lanzamiento"
     },
     {
       "id": "near-shoemaker",
@@ -595,7 +599,8 @@
       ],
       "mapa": {
         "tipo": "espacio"
-      }
+      },
+      "anio_tipo": "lanzamiento"
     },
     {
       "id": "pioneer10",
@@ -691,7 +696,8 @@
       ],
       "mapa": {
         "tipo": "espacio"
-      }
+      },
+      "anio_tipo": "lanzamiento"
     },
     {
       "id": "dawn",
@@ -787,7 +793,8 @@
       ],
       "mapa": {
         "tipo": "espacio"
-      }
+      },
+      "anio_tipo": "lanzamiento"
     }
   ],
   "modos": {

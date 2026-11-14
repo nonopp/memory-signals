@@ -303,7 +303,26 @@ code{background:rgba(255,255,255,.09);padding:2px 6px;border-radius:6px;font-siz
   background:radial-gradient(120% 120% at 50% 0%, #16203a 0%, #080b14 62%, #05070f 100%);
 }
 .col-mapa, .col-centro, .col-chat{min-width:0}
+
+/* columna izquierda: el objeto (título y año) arriba y el mapa debajo */
+.col-mapa .cabecera-objeto{
+  display:block;margin:0 0 16px;padding:16px 18px;border-radius:16px;
+  background:linear-gradient(180deg,rgba(26,44,78,.55),rgba(14,24,44,.55));
+  border:1px solid rgba(120,200,230,.20);
+}
+.col-mapa .cabecera-objeto .orbe{width:46px;height:46px;margin-bottom:12px;
+  box-shadow:0 0 26px var(--c, #63e0c8)}
+.col-mapa .cabecera-objeto h2{margin:0 0 6px;font-size:1.16rem;line-height:1.25;letter-spacing:-.01em}
+.col-mapa .cabecera-objeto .meta{font-size:.82rem;line-height:1.45;color:var(--texto-suave)}
+.col-mapa .cabecera-objeto .anio-objeto{
+  margin:10px 0 0;font-size:.76rem;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--c, var(--acento));font-weight:600;
+}
 .col-mapa .mapa-destino{position:sticky;top:14px}
+.col-centro .objeto-acciones{margin-top:2px}
+@media (min-width:1101px){
+  .col-mapa{display:flex;flex-direction:column;gap:0}
+}
 /* el chat, dentro de su columna: siempre a la vista, sin burbuja ni rabillo */
 .col-chat .ms-panel.en-columna{
   position:static;width:100%;height:min(74vh,660px);animation:none;
