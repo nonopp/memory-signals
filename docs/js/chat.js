@@ -507,6 +507,7 @@
   }
 
   /* las preguntas sugeridas salen del turno que se está viendo: contenido y chat dicen lo mismo */
+  var giroSugerencias = 0;
   function sugerenciasDelTurno() {
     var e = window.__MS;
     var a = e && e.aparato;
@@ -514,12 +515,19 @@
     var modo = modos[nivelActual()] || {};
     var base = (modo.sugerencias || []).slice(0, 3);
     if (!a || !a.turnos) return base.length ? base : null;
-    var t = a.turnos[e.turno || 0];
-    if (!t || !t.opciones) return base.length ? base : null;
-    /* del guion solo valen las que son preguntas: «soy un visitante» es una respuesta, no una pregunta */
-    var preguntas = t.opciones.filter(function (o) { return o.indexOf('?') !== -1; });
+    /* del guion solo valen las que son preguntas: «soy un visitante» es una respuesta, no una pregunta.
+       se juntan las de todos los turnos y se van rotando, para no proponer siempre las mismas */
+    var preguntas = [];
+    a.turnos.forEach(function (t) {
+      (t.opciones || []).forEach(function (o) {
+        if (o.indexOf('?') !== -1 && preguntas.indexOf(o) === -1) preguntas.push(o);
+      });
+    });
     if (!preguntas.length) return base.length ? base : null;
-    return preguntas.concat(base.filter(function (b) { return preguntas.indexOf(b) === -1; }).slice(0, 1));
+    var desde = (giroSugerencias++ % preguntas.length);
+    var dos = preguntas.slice(desde, desde + 2);
+    if (dos.length < 2) dos = dos.concat(preguntas.slice(0, 2 - dos.length));
+    return dos.concat(base.filter(function (b) { return dos.indexOf(b) === -1; }).slice(0, 1));
   }
 
   function actualizarSugerencias() {

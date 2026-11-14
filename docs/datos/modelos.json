@@ -1,78 +1,83 @@
 {
-  "_nota": "Modelos 3D oficiales de NASA 3D Resources (github.com/nasa/NASA-3D-Resources), dominio público de uso libre según NASA Images and Media Usage Guidelines.",
-  "_credito": "Modelo 3D: NASA 3D Resources",
-  "opportunity": {
-    "glb": "modelos/opportunity.glb",
-    "nombre_modelo": "Mars Exploration Rover - Opportunity (MER-B)",
-    "verificado": "NASA 3D Resources"
-  },
-  "insight": {
-    "glb": "modelos/insight.glb",
-    "nombre_modelo": "InSight Cruise Lander (panels deployed)",
-    "verificado": "NASA 3D Resources"
-  },
-  "voyager1": {
-    "glb": "modelos/voyager-1.glb",
-    "nombre_modelo": "Voyager Probe (B)",
-    "verificado": "NASA 3D Resources"
-  },
-  "apolo-modulo-lunar": {
-    "glb": "modelos/apolo-modulo-lunar.glb",
-    "nombre_modelo": "Apollo Lunar Module",
-    "verificado": "NASA 3D Resources"
-  },
-  "near-shoemaker": {
-    "glb": "modelos/near-shoemaker.glb",
-    "nombre_modelo": "NEAR Shoemaker",
-    "verificado": "NASA 3D Resources"
-  },
-  "dawn": {
-    "glb": "modelos/dawn.glb",
-    "nombre_modelo": "Dawn",
-    "verificado": "NASA 3D Resources"
-  },
-  "surveyor3": {
-    "glb": null,
-    "foto": "modelos/surveyor-3.jpg",
-    "nombre_modelo": "Fotografía · Surveyor 3 visto por el Apolo 12 en 1969",
-    "credito": "NASA · as12-48-7121 (dominio público)",
-    "nota": "La NASA no publica un modelo 3D de Surveyor 3. Se muestra la foto oficial."
-  },
-  "lrv17": {
-    "glb": null,
-    "foto": "modelos/lrv-apolo17.jpg",
-    "nombre_modelo": "Fotografía · rover lunar del Apolo 17 en Taurus-Littrow",
-    "credito": "NASA · as17-137-20979 (dominio público)",
-    "nota": "La NASA no publica un modelo 3D del rover lunar. Se muestra la foto oficial."
-  },
-  "modulo-lunar": {
-    "glb": "modelos/apolo-modulo-lunar.glb",
-    "nombre_modelo": "Módulo lunar Apolo (LM)",
-    "credito": "Modelo 3D: NASA 3D Resources"
-  },
-  "pioneer10": {
-    "glb": "modelos/pioneer-10.glb",
-    "nombre_modelo": "Pioneer 10",
-    "credito": "Modelo 3D: NASA 3D Resources"
-  },
-  "viking-1": {
-    "glb": "modelos/viking-lander.glb",
-    "nombre_modelo": "Viking Lander",
-    "credito": "Modelo 3D: NASA 3D Resources"
-  },
-  "viking-2": {
-    "glb": "modelos/viking-lander.glb",
-    "nombre_modelo": "Viking Lander",
-    "credito": "Modelo 3D: NASA 3D Resources"
-  },
-  "kepler": {
-    "glb": "modelos/kepler.glb",
-    "nombre_modelo": "Kepler (A)",
-    "credito": "Modelo 3D: NASA 3D Resources"
-  },
-  "ingenuity": {
-    "glb": "modelos/ingenuity.glb",
-    "nombre_modelo": "Ingenuity Mars Helicopter",
-    "credito": "Modelo 3D: NASA 3D Resources"
-  }
+ "_nota": "Modelos 3D oficiales de NASA 3D Resources (github.com/nasa/NASA-3D-Resources), dominio público de uso libre según NASA Images and Media Usage Guidelines.",
+ "_credito": "Modelo 3D: NASA 3D Resources",
+ "opportunity": {
+  "glb": "modelos/opportunity.glb",
+  "nombre_modelo": "Mars Exploration Rover - Opportunity (MER-B)",
+  "verificado": "NASA 3D Resources"
+ },
+ "insight": {
+  "glb": "modelos/insight.glb",
+  "nombre_modelo": "InSight Cruise Lander (panels deployed)",
+  "verificado": "NASA 3D Resources"
+ },
+ "voyager1": {
+  "glb": "modelos/voyager-1.glb",
+  "nombre_modelo": "Voyager Probe (B)",
+  "verificado": "NASA 3D Resources"
+ },
+ "apolo-modulo-lunar": {
+  "glb": "modelos/apolo-modulo-lunar.glb",
+  "nombre_modelo": "Apollo Lunar Module",
+  "verificado": "NASA 3D Resources"
+ },
+ "near-shoemaker": {
+  "glb": "modelos/near-shoemaker.glb",
+  "nombre_modelo": "NEAR Shoemaker",
+  "verificado": "NASA 3D Resources"
+ },
+ "dawn": {
+  "glb": "modelos/dawn.glb",
+  "nombre_modelo": "Dawn",
+  "verificado": "NASA 3D Resources"
+ },
+ "surveyor3": {
+  "glb": null,
+  "foto": "modelos/surveyor-3.jpg",
+  "nombre_modelo": "Fotografía · Surveyor 3 visto por el Apolo 12 en 1969",
+  "credito": "NASA · as12-48-7121 (dominio público)",
+  "nota": "La NASA no publica un modelo 3D de Surveyor 3. Se muestra la foto oficial."
+ },
+ "lrv17": {
+  "glb": null,
+  "foto": "modelos/lrv-apolo17.jpg",
+  "nombre_modelo": "Fotografía · rover lunar del Apolo 17 en Taurus-Littrow",
+  "credito": "NASA · as17-137-20979 (dominio público)",
+  "nota": "La NASA no publica un modelo 3D del rover lunar. Se muestra la foto oficial."
+ },
+ "modulo-lunar": {
+  "glb": "modelos/apolo-modulo-lunar.glb",
+  "nombre_modelo": "Módulo lunar Apolo (LM)",
+  "credito": "Modelo 3D: NASA 3D Resources"
+ },
+ "pioneer10": {
+  "glb": "modelos/pioneer-10.glb",
+  "nombre_modelo": "Pioneer 10",
+  "credito": "Modelo 3D: NASA 3D Resources"
+ },
+ "viking-1": {
+  "glb": "modelos/viking-lander.glb",
+  "nombre_modelo": "Viking Lander",
+  "credito": "Modelo 3D: NASA 3D Resources"
+ },
+ "viking-2": {
+  "glb": "modelos/viking-lander.glb",
+  "nombre_modelo": "Viking Lander",
+  "credito": "Modelo 3D: NASA 3D Resources"
+ },
+ "kepler": {
+  "glb": "modelos/kepler.glb",
+  "nombre_modelo": "Kepler (A)",
+  "verificado": "NASA 3D Resources"
+ },
+ "ingenuity": {
+  "glb": "modelos/ingenuity.glb",
+  "nombre_modelo": "Ingenuity Mars Helicopter",
+  "verificado": "NASA 3D Resources"
+ },
+ "viking": {
+  "glb": "modelos/viking-lander.glb",
+  "nombre_modelo": "Viking Lander",
+  "verificado": "NASA 3D Resources"
+ }
 }
