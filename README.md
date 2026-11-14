@@ -13,11 +13,15 @@ objetos: cómo llegaron, qué hacían cada día, qué descubrieron y **quién tr
 Es una web estática: no necesita servidor, ni base de datos, ni compilación.
 
 ```bash
+cd docs
 python3 -m http.server 8123
 # abre http://127.0.0.1:8123
 ```
 
-Publicado en: https://nonopp.github.io/memory-signals/ *(se actualiza en cada push a `main`)*
+Publicado en **dos sitios**, desde el mismo código:
+
+- https://nonopp.github.io/memory-signals/ — GitHub Pages, se actualiza en cada push a `main`
+- https://nasa.gesemweb.es/app/ — servidor propio, copia estática
 
 ## Qué tiene dentro
 
@@ -36,7 +40,7 @@ Publicado en: https://nonopp.github.io/memory-signals/ *(se actualiza en cada pu
 ## Estructura
 
 ```
-web/
+docs/
   index.html              pantallas y estructura
   css/estilo.css          tema espacial, responsive, accesible
   js/motor.js             máquina de estados, niveles, voz, ficha

@@ -4,7 +4,7 @@ Memory Signals crece añadiendo objetos, no reescribiendo la aplicación.
 
 ## Añadir un objeto nuevo
 
-Edita **solo** `web/datos/contenido.json`.
+Edita **solo** `docs/datos/contenido.json`.
 
 ```json
 {
@@ -60,7 +60,7 @@ Después añade `"surveyor-1"` a la lista `aparatos` del destino correspondiente
 ## Probar los cambios
 
 ```bash
-cd web && python3 -m http.server 8123
+cd docs && python3 -m http.server 8123
 ```
 
 Recorre los tres destinos y las dos versiones de cada turno antes de abrir el pull request.
