@@ -319,6 +319,10 @@
       });
       cont.appendChild(b);
     });
+
+    /* visor 3D arriba y chatbot abajo: los dos miran al aparato que está delante */
+    if (window.Visor3D) window.Visor3D.pintar(a);
+    if (window.ChatObjeto) window.ChatObjeto.activar(a);
   }
 
   function pintaPausa() {

@@ -218,3 +218,77 @@ code{background:rgba(255,255,255,.09);padding:2px 6px;border-radius:6px;font-siz
 #p-intro .voz-texto,#p-intro h1{position:relative}
 #p-intro h1,#p-intro .voz-texto{text-shadow:0 2px 18px rgba(0,0,0,.85),0 1px 3px rgba(0,0,0,.9)}
 @media (prefers-reduced-motion:reduce){.fondo-video video{display:none}}
+
+/* ---------- visor 3D del objeto ---------- */
+.visor{
+  position:relative;width:100%;height:min(38vh,320px);margin-bottom:18px;border-radius:var(--radio);
+  overflow:hidden;border:1px solid var(--borde);
+  background:radial-gradient(120% 120% at 50% 0%, #16203a 0%, #080b14 62%, #05070f 100%);
+}
+.visor model-viewer{display:block}
+.visor-sinmodelo{
+  position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:10px;text-align:center;padding:16px;
+}
+.visor-sinmodelo[hidden]{display:none}
+.visor-sinmodelo .orbe{width:52px;height:52px}
+.visor-sinmodelo p{margin:0;font-size:.86rem;color:var(--texto-suave);line-height:1.5}
+.visor-sinmodelo .tenue{color:#78849a;font-size:.8rem}
+.visor-girar{
+  position:absolute;top:10px;right:10px;appearance:none;border:1px solid var(--borde);
+  background:rgba(5,7,15,.6);color:var(--texto);width:38px;height:38px;border-radius:50%;
+  cursor:pointer;font-size:1.05rem;line-height:1;backdrop-filter:blur(4px);
+}
+.visor-girar[aria-pressed="false"]{opacity:.55}
+.visor-credito{
+  position:absolute;left:12px;bottom:8px;font-size:.68rem;letter-spacing:.06em;
+  color:#8b97ab;text-transform:uppercase;
+}
+
+/* ---------- casilla del chatbot ---------- */
+.chat{display:flex;gap:10px;margin-top:22px}
+.chat input{
+  flex:1;appearance:none;font:inherit;font-size:1rem;color:var(--texto);
+  background:rgba(255,255,255,.07);border:1px solid var(--borde);border-radius:999px;
+  padding:15px 20px;min-width:0;
+}
+.chat input::placeholder{color:#94a1b8}
+.chat input:focus-visible{outline:3px solid var(--acento-2);outline-offset:2px;border-color:transparent}
+.chat-enviar{
+  appearance:none;border:0;cursor:pointer;font:inherit;font-weight:700;
+  background:var(--acento);color:#04231d;border-radius:999px;padding:15px 22px;white-space:nowrap;
+}
+.chat-enviar:hover{filter:brightness(1.06)}
+.chat-ayuda{margin:8px 0 0;font-size:.78rem;color:#78849a}
+.chat-respuesta{margin-top:16px}
+.chat-respuesta:empty{display:none}
+.burbuja{
+  background:var(--cristal);border:1px solid var(--borde);border-left:3px solid var(--acento);
+  border-radius:0 14px 14px 0;padding:16px 18px;margin-bottom:10px;line-height:1.6;font-size:.98rem;
+}
+.burbuja.pregunta{border-left-color:var(--acento-2);font-style:italic;color:var(--texto-suave)}
+.burbuja .fuente{display:block;margin-top:10px;font-size:.8rem;color:#8b97ab}
+.burbuja .fuente a{color:var(--acento-2)}
+.burbuja .aviso{display:block;margin-top:8px;font-size:.78rem;color:var(--calido)}
+.chat-cargando{color:var(--texto-suave);font-size:.9rem}
+
+/* cuando no hay modelo 3D, la foto oficial ocupa el visor */
+.visor-foto{
+  position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+  border-radius:12px;filter:saturate(1.05) contrast(1.02);
+}
+/* con foto: el aviso arriba y el crédito abajo, para que no se pisen */
+.visor-sinmodelo:has(.visor-foto:not([hidden])){
+  background:none;border:0;padding:0;display:block;
+}
+.visor-sinmodelo:has(.visor-foto:not([hidden])) p{
+  position:absolute;left:10px;right:10px;top:8px;margin:0;
+  background:rgba(5,7,15,.78);padding:6px 10px;border-radius:8px;
+  font-size:.78rem;line-height:1.35;text-align:left;
+}
+.visor-sinmodelo:has(.visor-foto:not([hidden])) p .tenue{display:none}
+.visor:has(.visor-foto:not([hidden])) .visor-credito{
+  position:absolute;right:10px;bottom:8px;left:auto;
+  background:rgba(5,7,15,.78);padding:4px 9px;border-radius:8px;
+  font-size:.7rem;letter-spacing:.02em;color:#cfeee7;
+}

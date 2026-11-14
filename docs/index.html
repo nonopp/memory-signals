@@ -14,12 +14,6 @@
 </head>
 <body>
 
-<video class="fondo" id="fondo" autoplay muted loop playsinline preload="auto"
-       poster="media/fondo-poster.jpg" aria-hidden="true" tabindex="-1">
-  <source src="media/fondo.mp4" type="video/mp4">
-</video>
-<div class="velo" aria-hidden="true"></div>
-
 <canvas id="cielo" aria-hidden="true"></canvas>
 
 <!-- Fondo de vídeo de la portada: fuera de .pantalla para que position:fixed no quede atrapado por la animación -->
@@ -104,6 +98,23 @@
 
   <!-- 7 · OBJETO -->
   <section class="pantalla" id="p-objeto" aria-labelledby="t-objeto">
+
+    <!-- 1 · visor 3D interactivo -->
+    <div class="visor" id="visor-objeto">
+      <model-viewer id="mv-objeto" camera-controls touch-action="pan-y" auto-rotate
+                    rotation-per-second="16deg" interaction-prompt="none"
+                    shadow-intensity="0.85" exposure="1.05" alt=""
+                    style="width:100%;height:100%;background:transparent"></model-viewer>
+      <div class="visor-sinmodelo" id="visor-sinmodelo" hidden>
+        <img class="visor-foto" id="visor-foto" alt="" hidden>
+        <span class="orbe" aria-hidden="true"></span>
+        <p><span class="sin-modelo-texto">Sin modelo 3D oficial de la NASA para este aparato.</span><br><span class="tenue">La NASA solo publica modelos de algunos objetos.</span></p>
+      </div>
+      <button type="button" class="visor-girar" id="visor-girar" aria-pressed="true" title="Parar o reanudar el giro">⟳</button>
+      <span class="visor-credito" id="visor-credito"></span>
+    </div>
+
+    <!-- 2 · el contenido que ya existía -->
     <div class="cabecera-objeto">
       <div class="orbe" id="orbe-objeto" aria-hidden="true"></div>
       <div>
@@ -119,6 +130,16 @@
       <button type="button" class="secundario" id="btn-ficha">Ver ficha y fuentes</button>
       <button type="button" class="secundario" data-ir="pausa">Dejarlo aquí</button>
     </div>
+
+    <!-- 3 · casilla del chatbot, debajo de la imagen y del contenido -->
+    <form class="chat" id="chat-form" autocomplete="off">
+      <label for="chat-input" class="oculto">Pregunta al objeto</label>
+      <input type="text" id="chat-input" name="pregunta" placeholder="¿Qué quieres saber de mí?"
+             maxlength="180" aria-describedby="chat-ayuda">
+      <button type="submit" class="chat-enviar" aria-label="Preguntar">Preguntar</button>
+    </form>
+    <p class="chat-ayuda" id="chat-ayuda">Responde con la ficha del objeto y cita la fuente. Si la ficha es del prototipo, te lo advierte.</p>
+    <div class="chat-respuesta" id="chat-respuesta" aria-live="polite"></div>
   </section>
 
   <!-- 8 · PAUSA -->
@@ -147,7 +168,7 @@
 </main>
 
 <footer class="pie">
-  <span>Memory Signals · NASA Space Apps Challenge 2026 · datos de NASA, JPL y LPI</span>
+  <span>Memory Signals · NASA Space Apps Challenge 2026 · datos de NASA, JPL y LPI · modelos 3D de NASA 3D Resources</span>
   <span id="pie-nivel">nivel: explorador</span>
 </footer>
 
@@ -161,6 +182,8 @@
 </div>
 
 <script src="js/escena.js"></script>
+<script src="js/visor3d.js"></script>
+<script src="js/chat.js"></script>
 <script src="js/motor.js"></script>
 </body>
 </html>
