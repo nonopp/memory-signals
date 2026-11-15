@@ -12,6 +12,14 @@ Criterio de numeración:
 
 ---
 
+## v2.1.7 — 15 de noviembre de 2026
+
+- Un punto pegado al borde del disco se veía a medias y **no se podía pulsar**: el marco es redondo y recorta
+  lo que sobresale. Ahora, mientras el giro no lo trae dentro del disco, ese punto se esconde en vez de
+  quedarse ahí como un señuelo. Comprobado: todos los puntos visibles responden al clic en su sitio.
+
+---
+
 ## v2.1.6 — 15 de noviembre de 2026
 
 - Con los nombres siempre visibles, la caja de un nombre podía tapar el punto de otro aparato y el clic se
