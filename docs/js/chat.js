@@ -75,13 +75,13 @@
 
   function cargarIndice() {
     if (indice) return Promise.resolve(indice);
-    return fetch('kb/indice.json')
+    return fetch('kb/indice.json?v=' + (window.__MSV || ''))
       .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
       .then(function (j) { indice = j; return j; });
   }
   function cargarFicha(ruta) {
     if (fichasCargadas[ruta]) return Promise.resolve(fichasCargadas[ruta]);
-    return fetch(ruta).then(function (r) {
+    return fetch(ruta + '?v=' + (window.__MSV || '')).then(function (r) {
       if (!r.ok) throw new Error('HTTP ' + r.status);
       return r.text();
     }).then(function (t) { fichasCargadas[ruta] = t; return t; });

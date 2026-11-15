@@ -23,7 +23,7 @@
 
   function cargarMapa() {
     if (mapa) return Promise.resolve(mapa);
-    return fetch('datos/modelos.json')
+    return fetch('datos/modelos.json?v=' + (window.__MSV || ''))
       .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
       .then(function (j) { mapa = j; return j; })
       .catch(function () { mapa = {}; return mapa; });

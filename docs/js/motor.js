@@ -567,7 +567,8 @@
     pintaIntro();
   }
 
-  fetch('datos/contenido.json')
+  /* la versión la pone index.html en window.__MSV: al subir versión se cambia ahí y en docs/VERSION */
+  fetch('datos/contenido.json?v=' + (window.__MSV || ''))
     .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
     .then(function (j) { datos = j; window.__MS = estado; window.__MSmodos = j.modos || null; arrancar(); })
     .catch(function (e) {
