@@ -12,6 +12,18 @@ Criterio de numeración:
 
 ---
 
+## v2.1.1 — 15 de noviembre de 2026
+
+- **El mapa del objeto se lee mejor.** Los puntos de los *otros* aparatos ahora **laten**: crecen y se
+  encienden cada 2,6 s, cada uno con su propio desfase para que no parpadeen todos a la vez. Así se distingue
+  de un vistazo lo que es un botón de lo que es un cráter o una sombra del planeta.
+- Al pasar el ratón o llegar con el tabulador el latido se acelera, se enciende el punto y aparece el nombre.
+  El aparato que se está viendo queda fijo, más marcado y sin latido: es donde estás.
+- Con «reducir movimiento» activado no hay latido: el punto lleva un anillo fijo más grueso, que se distingue
+  igual sin animación.
+
+---
+
 ## v2.1.0 — 15 de noviembre de 2026
 
 **El aviso de cada propuesta trae los archivos, con enlace.**

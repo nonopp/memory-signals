@@ -153,11 +153,13 @@
     if (!capa) return;
     capa.innerHTML = '';
     bolitas = [];
-    aparatos.forEach(function (a) {
+    aparatos.forEach(function (a, i) {
       var b = document.createElement('button');
       b.type = 'button';
       b.className = 'mapa-pin' + (actual && a.id === actual.id ? ' activo' : '');
       b.style.setProperty('--c', a.color || '#63e0c8');
+      /* desfase del latido: el índice del aparato, para que no vayan todos a la vez */
+      b.style.setProperty('--retardo', ((i % 5) * 0.52).toFixed(2) + 's');
       b.setAttribute('aria-label', 'Ir a ' + a.nombre);
       b.title = a.nombre;
       b.innerHTML = '<span class="mapa-pin-punto"></span><span class="mapa-pin-etq">' + a.nombre + '</span>';
