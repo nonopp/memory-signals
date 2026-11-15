@@ -1,0 +1,136 @@
+/* Memory Signals · página de participa y de privacidad
+   Se apoya en las variables de estilo.css (--fondo, --texto, --acento…) */
+
+.pagina-participa, .pagina-legal{min-height:100vh;display:flex;flex-direction:column}
+
+.barra-simple{position:static;justify-content:space-between;gap:14px;
+  padding:12px clamp(14px,4vw,40px);background:rgba(6,10,22,.72);border-bottom:1px solid rgba(255,255,255,.08)}
+.nav-simple{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.nav-simple a{color:var(--texto-suave);text-decoration:none;font-size:.86rem;font-weight:600;
+  padding:8px 13px;border-radius:999px;border:1px solid transparent;transition:.15s}
+.nav-simple a:hover,.nav-simple a:focus-visible{color:var(--texto);background:rgba(255,255,255,.09);border-color:rgba(255,255,255,.14)}
+
+.caja-form,.caja-legal{width:min(760px,calc(100% - 32px));margin:26px auto 40px;
+  background:rgba(10,16,32,.82);border:1px solid rgba(120,200,230,.20);border-radius:18px;
+  padding:clamp(20px,4vw,38px);box-shadow:0 20px 60px rgba(0,0,0,.35)}
+
+.caja-form h1,.caja-legal h1{font-size:clamp(1.5rem,4vw,2.1rem);margin:0 0 10px;letter-spacing:-.4px}
+.entrada{color:var(--texto-suave);line-height:1.6;margin:0 0 18px}
+
+.aviso-honesto{background:rgba(99,224,200,.09);border:1px solid rgba(99,224,200,.30);
+  border-radius:14px;padding:14px 16px;margin:0 0 26px}
+.aviso-honesto strong{color:var(--acento)}
+.aviso-honesto p{margin:8px 0 0;color:var(--texto-suave);line-height:1.55;font-size:.92rem}
+
+/* ---------- bloques del formulario ---------- */
+
+.bloque{border-top:1px solid rgba(255,255,255,.09);padding-top:22px;margin-top:26px}
+.bloque:first-of-type{border-top:0;padding-top:0;margin-top:0}
+.bloque h2{font-size:1.06rem;margin:0 0 6px;display:flex;align-items:center;gap:10px}
+.bloque h2 .num{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;
+  border-radius:50%;background:rgba(99,224,200,.16);color:var(--acento);font-size:.82rem;font-weight:700;flex:0 0 auto}
+.pista{color:var(--texto-suave);font-size:.88rem;line-height:1.55;margin:0 0 16px}
+
+.campo{margin:0 0 16px}
+.campo label{display:block;font-size:.88rem;font-weight:600;margin-bottom:6px}
+.req{color:#ff9d9d}
+.etiqueta-clave{display:inline-block;margin-left:6px;font-size:.72rem;font-weight:600;color:var(--acento);
+  background:rgba(99,224,200,.12);border:1px solid rgba(99,224,200,.3);border-radius:999px;padding:2px 8px;vertical-align:middle}
+.limite{display:inline-block;margin-left:6px;font-size:.74rem;font-weight:500;color:var(--texto-suave)}
+
+.campo input[type=text],.campo input[type=email],.campo input[type=url],.campo input[type=number],
+.campo select,.campo textarea{
+  width:100%;box-sizing:border-box;background:rgba(4,8,18,.85);color:var(--texto);
+  border:1px solid rgba(255,255,255,.16);border-radius:11px;padding:11px 13px;font:inherit;font-size:.94rem;
+  transition:border-color .15s,box-shadow .15s}
+.campo input:focus,.campo select:focus,.campo textarea:focus{outline:none;border-color:var(--acento);
+  box-shadow:0 0 0 3px rgba(99,224,200,.18)}
+.campo textarea{resize:vertical;min-height:84px}
+.campo input::placeholder,.campo textarea::placeholder{color:#6d7c93}
+.campo.con-error input,.campo.con-error select,.campo.con-error textarea{border-color:#ff8a8a}
+
+.rejilla{display:grid;grid-template-columns:1fr 1fr;gap:0 14px}
+@media (max-width:620px){.rejilla{grid-template-columns:1fr}}
+
+.ayuda{color:var(--texto-suave);font-size:.78rem;margin:6px 0 0;line-height:1.5}
+.contador{color:var(--acento);font-variant-numeric:tabular-nums}
+.error{color:#ffb3b3;font-size:.82rem;margin:6px 0 0;font-weight:600}
+.error-general{background:rgba(255,120,120,.12);border:1px solid rgba(255,120,120,.35);
+  border-radius:10px;padding:11px 13px;margin:16px 0 0}
+
+/* ---------- hitos ---------- */
+
+.hito-fila{display:grid;grid-template-columns:170px 1fr;gap:10px;margin:0 0 12px;
+  padding:12px;border:1px solid rgba(255,255,255,.10);border-radius:13px;background:rgba(255,255,255,.03)}
+.hito-fila .campo{margin:0}
+.hito-fila .hito-texto-fila{grid-column:1 / -1}
+.hito-fila .quitar{grid-column:1 / -1;justify-self:start;background:none;border:0;color:#ffb3b3;
+  font:inherit;font-size:.8rem;font-weight:600;cursor:pointer;padding:2px 0}
+@media (max-width:620px){.hito-fila{grid-template-columns:1fr}}
+
+/* ---------- archivos ---------- */
+
+.zona-arrastre{position:relative;border:2px dashed rgba(120,200,230,.34);border-radius:14px;
+  padding:18px;text-align:center;background:rgba(4,8,18,.5);transition:.15s}
+.zona-arrastre:hover,.zona-arrastre.sobre{border-color:var(--acento);background:rgba(99,224,200,.07)}
+.zona-arrastre input[type=file]{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%}
+.arrastre-texto{margin:0;color:var(--texto-suave);font-size:.9rem}
+.enlace-falso{color:var(--acento);text-decoration:underline}
+.arrastre-estado{margin:8px 0 0;font-size:.82rem;color:var(--texto-suave);font-variant-numeric:tabular-nums}
+.arrastre-estado.ok{color:var(--acento);font-weight:600}
+#documentos{padding:10px;background:rgba(4,8,18,.7);border:1px solid rgba(255,255,255,.16);border-radius:11px;width:100%;box-sizing:border-box;color:var(--texto-suave);font:inherit;font-size:.88rem}
+
+/* ---------- casillas y envío ---------- */
+
+.licencia{color:var(--texto-suave);font-size:.86rem;line-height:1.55;margin:0 0 16px}
+.casilla{display:flex;gap:11px;align-items:flex-start;margin:0 0 14px;font-size:.9rem;line-height:1.5;cursor:pointer}
+.casilla input{flex:0 0 auto;width:19px;height:19px;margin-top:2px;accent-color:var(--acento);cursor:pointer}
+.casilla a{color:var(--acento)}
+.nota-menores{color:var(--texto-suave);font-size:.82rem;margin:2px 0 0}
+
+.envio{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-top:24px;
+  border-top:1px solid rgba(255,255,255,.09);padding-top:22px}
+.envio .principal,.principal{background:linear-gradient(135deg,var(--acento),#4fb6ff);color:#04121a;
+  border:0;border-radius:999px;padding:13px 26px;font:inherit;font-weight:700;font-size:.96rem;cursor:pointer;
+  transition:transform .12s,filter .15s}
+.envio .principal:hover:not(:disabled){transform:translateY(-1px);filter:brightness(1.07)}
+.envio .principal:disabled{opacity:.45;cursor:not-allowed}
+.estado-envio{margin:0;font-size:.86rem;color:var(--texto-suave)}
+.legal-pie{margin:12px 0 0}
+
+.boton-secundario{display:inline-block;background:rgba(255,255,255,.07);color:var(--texto);
+  border:1px solid rgba(255,255,255,.18);border-radius:999px;padding:10px 18px;font:inherit;font-size:.88rem;
+  font-weight:600;cursor:pointer;text-decoration:none;transition:.15s}
+.boton-secundario:hover,.boton-secundario:focus-visible{background:rgba(255,255,255,.13);border-color:rgba(255,255,255,.3)}
+
+.trampa{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
+
+/* ---------- gracias ---------- */
+
+.gracias{text-align:center;padding:8px 0 4px}
+.gracias-icono{width:58px;height:58px;margin:0 auto 14px;border-radius:50%;display:flex;
+  align-items:center;justify-content:center;font-size:1.7rem;color:#04121a;
+  background:linear-gradient(135deg,var(--acento),#4fb6ff)}
+.gracias h2{margin:0 0 10px;font-size:1.3rem}
+.gracias p{color:var(--texto-suave);line-height:1.6;margin:0 0 12px}
+.gracias-lista{text-align:left;max-width:520px;margin:18px auto;padding-left:20px;color:var(--texto-suave);
+  font-size:.9rem;line-height:1.7}
+.gracias-lista strong{color:var(--texto)}
+.volver{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:22px}
+
+/* ---------- privacidad ---------- */
+
+.pagina-legal .caja-legal{line-height:1.65}
+.pagina-legal h2{font-size:1.02rem;margin:26px 0 8px;color:var(--acento)}
+.pagina-legal p,.pagina-legal li{color:var(--texto-suave);font-size:.93rem}
+.pagina-legal strong{color:var(--texto)}
+.pagina-legal a{color:var(--acento)}
+.pagina-legal ul{padding-left:20px;margin:0 0 14px}
+.pagina-legal li{margin:0 0 6px}
+.pagina-legal code{background:rgba(255,255,255,.08);padding:1px 5px;border-radius:5px;font-size:.86em}
+.fecha-legal{font-size:.82rem;margin:0 0 18px}
+.tabla-legal{width:100%;border-collapse:collapse;margin:0 0 16px;font-size:.9rem}
+.tabla-legal th,.tabla-legal td{text-align:left;padding:8px 10px;border-bottom:1px solid rgba(255,255,255,.09);vertical-align:top}
+.tabla-legal th{color:var(--texto);font-weight:600;width:38%}
+
+.pie a{color:var(--acento);text-decoration:none}

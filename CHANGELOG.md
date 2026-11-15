@@ -12,6 +12,50 @@ Criterio de numeración:
 
 ---
 
+## v1.3.0 — 15 de noviembre de 2026
+
+**Formulario «Participa»**
+
+- Botón «Participa» en la cabecera, a la derecha de los controles, y enlace en el pie.
+- Página nueva `participa.html` con las condiciones acordadas: objeto y correo obligatorios; misión,
+  agencia, cuerpo, año, lugar, estado, resumen, fuente y crédito opcionales; hasta tres hitos con su
+  fuente; zip de fotos de 25 MB y hasta tres documentos de 10 MB.
+- Zona de arrastre para el zip con contador de tamaño, errores en línea sin perder lo escrito, botón
+  bloqueado hasta marcar las dos casillas y pantalla de gracias con el identificador del envío.
+- Aviso honesto sobre el 3D: hacen falta entre 40 y 60 fotos con 70 % de solape; no se promete modelo
+  automático.
+- Sin cookies y sin guardar nada en el navegador.
+
+**Recepción en WordPress (srv2)**
+
+- `servidor/mu-plugin/memory-signals-contribuciones.php`, instalado como mu-plugin: ruta pública
+  `POST /wp-json/memory-signals/v1/contribucion`.
+- Guarda cada envío en `/home/gesemweb-nasa/contribuciones/<id>/` con `envio.json` y los adjuntos,
+  **fuera de la carpeta pública** y con permisos restringidos.
+- Comprueba el tipo real de los archivos (no la extensión), valida el zip (sin rutas raras, sin
+  comprimidos dentro, tope de entradas y de imágenes) y renombra todo.
+- Antispam: campo trampa, tiempo mínimo de relleno y límite de 1 envío por hora y 5 al día por IP
+  (guardada cifrada).
+- Aviso por correo con `wp_mail()` y WP Mail SMTP (IONOS), con el correo de quien envía en `Reply-To`.
+  Los adjuntos no viajan por correo: se quedan en el servidor.
+- CORS limitado a los orígenes propios.
+
+**Privacidad**
+
+- `privacidad.html` nueva, con el responsable y el correo `info@gesemweb.net`, RGPD y LOPDGDD,
+  conservación de 12 meses, licencia CC BY-SA 4.0, regla de mayores de 18 años y el detalle real de
+  quién aloja qué: el formulario en Oracle Cloud (Alemania, UE), el correo en IONOS (UE), la copia
+  estática en GitHub (EEUU) y el chat en un proveedor externo de modelos de lenguaje.
+
+**Servidor**
+
+- La raíz de `nasa.gesemweb.es` redirige a `/app/`: quien entre por el dominio ve la aplicación y no
+  WordPress.
+- `client_max_body_size 48m` en el sitio, porque el valor por defecto de nginx (1 MB) habría rechazado
+  cualquier subida.
+
+---
+
 ## v1.2.2 — 15 de noviembre de 2026
 
 - El logotipo crece un 20 %: pasa de 44 a 53 píxeles de alto, 135 de ancho en pantalla de escritorio. La barra

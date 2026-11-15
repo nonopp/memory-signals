@@ -53,6 +53,15 @@ body.con-fondo .velo{opacity:1}
 .marca:hover,.marca:focus-visible{background:rgba(255,255,255,.07)}
 .marca:hover .marca-logo{filter:brightness(1.12)}
 .marca:focus-visible{outline:2px solid var(--acento);outline-offset:3px}
+
+/* botón «Participa» en la cabecera, a la derecha de los controles */
+.btn-participa{display:inline-flex;align-items:center;gap:6px;text-decoration:none;
+  background:linear-gradient(135deg,var(--acento),#4fb6ff);color:#04121a;font-weight:700;
+  font-size:.84rem;padding:9px 15px;border-radius:999px;white-space:nowrap;
+  transition:transform .12s ease,filter .15s ease;flex:0 0 auto}
+.btn-participa:hover{transform:translateY(-1px);filter:brightness(1.07)}
+.btn-participa:focus-visible{outline:2px solid #fff;outline-offset:2px}
+@media (max-width:760px){.btn-participa{font-size:.8rem;padding:8px 12px}}
 .menu-destinos{display:flex;align-items:center;gap:6px;flex:0 1 auto;justify-content:center;max-width:100%}
 .menu-destinos[hidden]{display:none}
 .menu-destinos button{appearance:none;border:1px solid transparent;background:rgba(255,255,255,.05);
