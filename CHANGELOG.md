@@ -12,6 +12,18 @@ Criterio de numeración:
 
 ---
 
+## v1.3.3 — 15 de noviembre de 2026
+
+- **Arreglado: el formulario de «Participa» no se veía.** Nacía con el atributo `hidden` pensado para
+  la pantalla de gracias, y nadie lo quitaba: el visitante solo veía la introducción y el aviso. Ahora
+  el formulario se ve desde el primer momento y lo que se oculta es la pantalla de gracias.
+- El aviso de cada propuesta pasa a **info@nonopp.com**, comprobado de punta a punta: el servidor de
+  nonopp.com recibe el mensaje y lo reenvía a la cuenta de Gmail, que lo acepta.
+- Comprobado el envío completo desde el navegador: formulario relleno, botón bloqueado hasta marcar
+  las dos casillas y pantalla de gracias con el identificador del envío.
+
+---
+
 ## v1.3.2 — 15 de noviembre de 2026
 
 - El chat se cierra solo al cambiar de objeto, de pantalla o al volver al inicio: ya no se queda

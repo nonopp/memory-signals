@@ -25,7 +25,7 @@ if ( ! defined( 'MS_CONTRIB_DIR' ) ) {
 }
 if ( ! defined( 'MS_AVISO_A' ) ) {
 	// A quién se avisa de cada envío. El correo del visitante va en Reply-To, nunca en From.
-	define( 'MS_AVISO_A', array( 'info@gesemweb.net', 'nonopp@gmail.com' ) );
+	define( 'MS_AVISO_A', array( 'info@nonopp.com' ) );
 }
 if ( ! defined( 'MS_ORIGENES' ) ) {
 	define( 'MS_ORIGENES', array(

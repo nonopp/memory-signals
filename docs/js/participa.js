@@ -12,6 +12,10 @@
   var gracias = document.getElementById('gracias');
   if (!form || !gracias) { return; }
 
+  /* el formulario tiene que verse desde el principio: la pantalla de gracias es la que se oculta */
+  form.hidden = false;
+  gracias.hidden = true;
+
   var t0 = Date.now();
   var empezado = false; // el envío es válido a partir de 3 s de relleno
 
