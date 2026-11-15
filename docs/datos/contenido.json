@@ -1319,7 +1319,7 @@
  "modos": {
   "explorador": {
    "etiqueta": "Explorar",
-   "pista": "Información más sencilla: frases cortas y palabras claras, como para escolares y estudiantes. El aparato te hablará como si tuvieras menos de 10 años.",
+   "pista": "Información más sencilla: frases cortas y palabras claras, como para escolares y estudiantes.",
    "saludo": "Pregúntame lo que quieras de mí: qué hice, quién me construyó o dónde estoy ahora.",
    "sugerencias": [
     "¿Qué hiciste?",

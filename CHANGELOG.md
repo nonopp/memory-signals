@@ -12,6 +12,13 @@ Criterio de numeración:
 
 ---
 
+## v2.0.2 — 15 de noviembre de 2026
+
+- La pista del modo «Explorador» ya no dice «El aparato te hablará como si tuvieras menos de 10 años».
+  Queda: «Información más sencilla: frases cortas y palabras claras, como para escolares y estudiantes.»
+
+---
+
 ## v2.0.1 — 15 de noviembre de 2026
 
 - Corregido: si la grabadora se paraba sola (se corta la pista de audio, se alcanza el tope de 30 s o
