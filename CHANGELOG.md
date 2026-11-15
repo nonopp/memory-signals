@@ -12,6 +12,15 @@ Criterio de numeración:
 
 ---
 
+## v2.1.3 — 15 de noviembre de 2026
+
+- En el mapa, los otros aparatos se distinguen por color y por nombre, no solo por el latido: el punto
+  lleva **aro blanco** y la onda va en el **verde de la interfaz**, que no aparece en ningún planeta, así
+  que no se confunde con un cráter (los cráteres se dibujan con aros grises). Y **el nombre se ve siempre**,
+  tenue, y se enciende al pasar el ratón.
+
+---
+
 ## v2.1.2 — 15 de noviembre de 2026
 
 - Corregido lo que rompí en la 2.1.1: el JS del mapa coloca cada pin en cada fotograma con `transform` y

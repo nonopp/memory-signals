@@ -673,10 +673,15 @@ code{background:rgba(255,255,255,.09);padding:2px 6px;border-radius:6px;font-siz
 /* Los otros objetos emiten un anillo que se abre y se apaga: se ve que son botones y no
    cráteres ni sombras. El latido va en un pseudo-elemento porque el JS del mapa mueve el pin
    en cada fotograma con transform y opacity en línea: animar el propio pin lo descuadraría. */
-.mapa-pin:not(.activo) .mapa-pin-punto{position:relative}
+/* el punto lleva aro blanco y la onda va en el verde de la interfaz: en Marte no hay nada de ese
+   color, así que no se confunde con un cráter. El nombre se ve siempre, tenue. */
+.mapa-pin:not(.activo) .mapa-pin-punto{position:relative;
+  box-shadow:0 0 0 2px rgba(255,255,255,.55),0 0 12px rgba(99,224,200,.85)}
+.mapa-pin:not(.activo) .mapa-pin-etq{opacity:.62}
 .mapa-pin:not(.activo) .mapa-pin-punto::after{
   content:'';position:absolute;inset:-3px;border-radius:50%;
-  border:2px solid var(--c,#63e0c8);pointer-events:none;
+  border:2px solid var(--acento,#63e0c8);
+  box-shadow:0 0 10px rgba(99,224,200,.55);pointer-events:none;
   animation:pinOnda 2.2s ease-out infinite;
   animation-delay:var(--retardo,0s)}
 @keyframes pinOnda{
