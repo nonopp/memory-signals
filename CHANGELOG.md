@@ -12,6 +12,14 @@ Criterio de numeración:
 
 ---
 
+## v3.0.5 — 15 de noviembre de 2026
+
+- **Se pulsa el punto, no el nombre**: la caja del botón era tan ancha como el nombre y, cuando dos aparatos
+  caían cerca, el nombre de uno tapaba el punto del otro. Ahora la caja no recibe clics y solo responde el
+  punto con su halo: cada punto se pulsa en su sitio y ninguno roba el clic del vecino.
+
+---
+
 ## v3.0.4 — 15 de noviembre de 2026
 
 - **Los puntos del mapa ya no van por detrás del giro**: el CSS animaba el `transform` durante 200 ms y el giro

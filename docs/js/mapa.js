@@ -173,7 +173,7 @@
         if (alElegir) alElegir(a);
       });
       capa.appendChild(b);
-      bolitas.push({ el: b, a: a });
+      bolitas.push({ el: b, a: a, punto: b.querySelector('.mapa-pin-punto') });
     });
   }
 
@@ -197,16 +197,18 @@
     var g = { cx: t.w / 2, cy: t.h / 2, R: Math.min(t.w, t.h) * 0.42 };
     bolitas.forEach(function (b) {
       var m = b.a.mapa;
-      if (!m || typeof m.lat !== 'number') { b.el.style.opacity = '0'; b.el.style.pointerEvents = 'none'; return; }
+      if (!m || typeof m.lat !== 'number') { b.el.style.opacity = '0'; b.el.style.pointerEvents = 'none'; if (b.punto) b.punto.style.pointerEvents = 'none'; return; }
       var p = proyecta(m.lat, m.lon, g.cx, g.cy, g.R);
-      if (p.z <= 0.02) { b.el.style.opacity = '0'; b.el.style.pointerEvents = 'none'; return; }
+      if (p.z <= 0.02) { b.el.style.opacity = '0'; b.el.style.pointerEvents = 'none'; if (b.punto) b.punto.style.pointerEvents = 'none'; return; }
       /* el marco es redondo y recorta: un punto pegado al borde se ve a medias y no se puede
          pulsar. Si cae fuera del disco, se esconde hasta que el giro lo traiga dentro. */
       var dist = Math.sqrt(Math.pow(p.x - g.cx, 2) + Math.pow(p.y - g.cy, 2));
       var radioMarco = (capa && capa.clientWidth ? capa.clientWidth : Math.min(t.w, t.h)) / 2;
-      if (dist > radioMarco - 9) { b.el.style.opacity = '0'; b.el.style.pointerEvents = 'none'; return; }
+      if (dist > radioMarco - 9) { b.el.style.opacity = '0'; b.el.style.pointerEvents = 'none'; if (b.punto) b.punto.style.pointerEvents = 'none'; return; }
       b.el.style.opacity = String(0.55 + 0.45 * p.z);
-      b.el.style.pointerEvents = 'auto';
+      /* la caja del botón no recibe clics (el nombre es ancho y tapaba puntos vecinos): solo el punto */
+      b.el.style.pointerEvents = 'none';
+      if (b.punto) b.punto.style.pointerEvents = 'auto';
       b.el.style.left = p.x + 'px';
       b.el.style.top = p.y + 'px';
       /* cerca del borde derecho, el nombre va hacia dentro: si no, se sale del marco.
