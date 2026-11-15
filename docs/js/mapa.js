@@ -200,9 +200,11 @@
       b.el.style.pointerEvents = 'auto';
       b.el.style.left = p.x + 'px';
       b.el.style.top = p.y + 'px';
-      /* cerca del borde derecho, el nombre va hacia dentro: si no, se sale del marco */
+      /* cerca del borde derecho, el nombre va hacia dentro: si no, se sale del marco.
+         el punto sigue clavado en su coordenada: con el nombre a la izquierda el ancla pasa a ser
+         el borde derecho de la caja, y eso se compensa en el translate. */
       b.el.classList.toggle('etq-izquierda', p.x > t.w * 0.62);
-      b.el.style.transform = 'translate(-50%,-50%) scale(' + (0.8 + 0.25 * p.z) + ')';
+      b.el.style.transform = 'translate(' + (p.x > t.w * 0.62 ? '-100%' : '-50%') + ',-50%) scale(' + (0.8 + 0.25 * p.z) + ')';
     });
   }
 

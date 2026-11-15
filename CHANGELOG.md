@@ -12,6 +12,14 @@ Criterio de numeración:
 
 ---
 
+## v2.1.5 — 15 de noviembre de 2026
+
+- Corregido lo de la 2.1.4: al poner el nombre a la izquierda con `row-reverse`, el punto se iba al otro
+  extremo de la caja y dejaba de estar sobre su coordenada (y en el borde derecho quedaba fuera del marco,
+  sin poder pulsarse). Ahora el ancla se compensa con el `translate` y el punto sigue clavado en su sitio.
+
+---
+
 ## v2.1.4 — 15 de noviembre de 2026
 
 - El nombre de los puntos pegados al borde derecho del mapa se pone hacia dentro (a la izquierda del punto):
