@@ -559,13 +559,19 @@
     if (destino) {
       if (p.parentNode !== destino) destino.appendChild(p);
       p.classList.add('en-columna');
-      p.hidden = false;
+      /* el botón de abrir viaja también a la columna: cerrado, la columna no queda vacía */
+      if (w.parentNode !== destino) destino.appendChild(w);
       w.classList.add('en-columna');
     } else {
       if (p.parentNode !== w) w.appendChild(p);
+      if (w.parentNode !== document.body) document.body.appendChild(w);
       p.classList.remove('en-columna');
       w.classList.remove('en-columna');
     }
+    /* la ventana solo se ve si está abierta: si está cerrada queda su botón para abrirla.
+       Así, al cambiar de objeto o de pantalla, no se queda abierta encima de lo nuevo. */
+    p.hidden = !panelAbierto;
+    w.classList.toggle('abierto', panelAbierto);
   }
 
   function activar(a) {

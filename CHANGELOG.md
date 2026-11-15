@@ -12,6 +12,17 @@ Criterio de numeración:
 
 ---
 
+## v1.3.2 — 15 de noviembre de 2026
+
+- El chat se cierra solo al cambiar de objeto, de pantalla o al volver al inicio: ya no se queda
+  abierto encima de lo nuevo. Se cierra en el único punto por el que pasan todos los cambios de
+  pantalla, así no hay ruta que se escape.
+- En la ficha, la tercera columna ya no queda vacía con el chat cerrado: muestra una tarjeta
+  «Pregúntame» que lo abre. El chat deja de flotar en esa pantalla y pasa a formar parte de la página.
+- El pie se recoloca en una sola línea: enlaces de Participa y Privacidad, nivel y versión.
+
+---
+
 ## v1.3.1 — 15 de noviembre de 2026
 
 - En el móvil y la tableta, la ficha del objeto cambia de orden: primero el modelo 3D, después el

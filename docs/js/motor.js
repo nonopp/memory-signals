@@ -82,6 +82,11 @@
     if (id !== 'objeto' && window.ChatObjeto && window.ChatObjeto.ancorar) {
       window.ChatObjeto.ancorar(null);
     }
+    /* y al cambiar de pantalla, de objeto o al volver al inicio, la ventana del chat se cierra:
+       no se queda abierta encima de la pantalla nueva */
+    if (window.ChatObjeto && window.ChatObjeto.cerrar) {
+      window.ChatObjeto.cerrar();
+    }
     $$('.pantalla').forEach(function (p) { p.classList.remove('activa'); });
     controlVideo(id === 'intro');
     var destino = $('#p-' + id);
