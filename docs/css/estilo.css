@@ -44,13 +44,15 @@ body.con-fondo .velo{opacity:1}
   background:linear-gradient(180deg,rgba(5,7,15,.92),rgba(5,7,15,.55));
   backdrop-filter:blur(8px);
 }
-.marca{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:.4px}
-.marca{appearance:none;border:0;background:transparent;color:inherit;font:inherit;font-weight:700;
-  letter-spacing:.4px;padding:7px 10px;margin:-7px -10px;border-radius:999px;cursor:pointer;
-  flex:0 0 auto;white-space:nowrap;
-  transition:background .15s ease,color .15s ease}
-.marca:hover,.marca:focus-visible{background:rgba(255,255,255,.08)}
-.marca:hover span:last-child{color:var(--acento)}
+/* el logotipo sustituye al texto de la marca */
+.marca{display:flex;align-items:center;appearance:none;border:0;background:transparent;color:inherit;
+  font:inherit;padding:4px 6px;margin:-4px -6px;border-radius:12px;cursor:pointer;flex:0 0 auto;
+  transition:background .15s ease}
+.marca picture{display:block;line-height:0}
+.marca-logo{display:block;height:clamp(30px,4.2vw,44px);width:auto}
+.marca:hover,.marca:focus-visible{background:rgba(255,255,255,.07)}
+.marca:hover .marca-logo{filter:brightness(1.12)}
+.marca:focus-visible{outline:2px solid var(--acento);outline-offset:3px}
 .menu-destinos{display:flex;align-items:center;gap:6px;flex:0 1 auto;justify-content:center;max-width:100%}
 .menu-destinos[hidden]{display:none}
 .menu-destinos button{appearance:none;border:1px solid transparent;background:rgba(255,255,255,.05);
@@ -250,6 +252,7 @@ code{background:rgba(255,255,255,.09);padding:2px 6px;border-radius:6px;font-siz
 
 @media (max-width:760px){
   .barra{flex-wrap:wrap;gap:8px}
+  .marca-logo{height:34px}
   .menu-destinos{order:3;flex:1 1 100%;justify-content:flex-start;overflow-x:auto;
     scrollbar-width:none;-webkit-overflow-scrolling:touch}
   .menu-destinos::-webkit-scrollbar{display:none}

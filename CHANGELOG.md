@@ -12,6 +12,20 @@ Criterio de numeración:
 
 ---
 
+## v1.2.0 — 15 de noviembre de 2026
+
+**Logotipo**
+
+- El logotipo de Memory Signals sustituye al texto de la marca, arriba a la izquierda.
+- Se ha recortado el fondo oscuro del original y se ha convertido en PNG con transparencia, para que se
+  apoye limpiamente sobre el fondo de la aplicación sin caja ni halo. Se conserva el brillo original.
+- En pantallas pequeñas se muestra solo el emblema redondo, que se lee mejor a ese tamaño.
+- Icono de pestaña y de pantalla de inicio a partir del emblema, y etiquetas para compartir el enlace.
+- Ficheros: `img/logo-memory-signals.png` (logotipo completo), `img/logo-emblem.png` (emblema),
+  `img/favicon-64.png` y `img/apple-touch-icon.png`.
+
+---
+
 ## v1.1.0 — 15 de noviembre de 2026
 
 **Hitos del aparato en bocadillo**
