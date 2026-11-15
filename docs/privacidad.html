@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<script>window.__MSV = '1.3.4';</script>
+<script>window.__MSV = '2.0.0';</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Política de privacidad · Memory Signals</title>
 <meta name="description" content="Qué datos recoge el formulario de contribuciones de Memory Signals, para qué se usan y cómo ejercer tus derechos.">
 <meta name="robots" content="index,follow">
-<link rel="icon" type="image/png" sizes="64x64" href="img/favicon-64.png?v=1.3.4">
+<link rel="icon" type="image/png" sizes="64x64" href="img/favicon-64.png?v=2.0.0">
 <meta name="theme-color" content="#05070f">
-<link rel="stylesheet" href="css/estilo.css?v=1.3.4">
-<link rel="stylesheet" href="css/participa.css?v=1.3.4">
+<link rel="stylesheet" href="css/estilo.css?v=2.0.0">
+<link rel="stylesheet" href="css/participa.css?v=2.0.0">
 </head>
 <body class="pagina-legal">
 
 <header class="barra barra-simple">
   <a class="marca" href="index.html" title="Volver a la aplicación">
     <picture>
-      <source media="(max-width:620px)" srcset="img/logo-emblem.png?v=1.3.4">
-      <img class="marca-logo" src="img/logo-memory-signals.png?v=1.3.4" alt="Memory Signals" width="1272" height="499">
+      <source media="(max-width:620px)" srcset="img/logo-emblem.png?v=2.0.0">
+      <img class="marca-logo" src="img/logo-memory-signals.png?v=2.0.0" alt="Memory Signals" width="1272" height="499">
     </picture>
   </a>
   <nav class="nav-simple">
@@ -56,7 +56,9 @@
     <li><strong>Datos técnicos mínimos:</strong> la dirección IP <em>guardada cifrada (hash)</em>, con la
       única finalidad de limitar envíos abusivos, y la fecha y hora del envío.</li>
   </ul>
-  <p>Del <strong>chat</strong>: el texto de tus preguntas. No pedimos tu nombre ni tu correo para usarlo.</p>
+  <p>Del <strong>chat</strong>: el texto de tus preguntas. Si preguntas <strong>hablando</strong>, se envía
+  también el audio de tu voz, y solo mientras dura la pregunta: se transcribe y <strong>se borra en el acto</strong>,
+  sin guardarse en el servidor ni en ningún otro sitio. No pedimos tu nombre ni tu correo para usar el chat.</p>
   <p>No pedimos edad, DNI, dirección ni teléfono. No usamos cookies de seguimiento ni analítica.</p>
 
   <h2>3. ¿Para qué usamos tus datos?</h2>
@@ -65,6 +67,8 @@
       crear la ficha del objeto y responderte por correo.</li>
     <li><strong>Chat:</strong> para buscar el fragmento de la ficha que responde a tu pregunta y redactar
       la respuesta. No se guarda un historial de conversaciones asociado a ti.</li>
+    <li><strong>Pregunta por voz:</strong> para pasar tu voz a texto y poner la pregunta escrita en la caja del
+      chat, donde puedes revisarla antes de enviarla. El audio no se conserva.</li>
   </ul>
   <p>Nada más. No hay comunicaciones comerciales, ni perfilado, ni cesión a terceros.</p>
 
@@ -95,14 +99,19 @@
       GitHub <strong>no recibe los datos del formulario</strong>: son ficheros estáticos y el envío va
       directamente al servidor del proyecto;</li>
     <li><strong>Ollama</strong>, proveedor del modelo de lenguaje que redacta las respuestas del chat: recibe
-      el texto de tu pregunta y el fragmento de la ficha, sin tu identidad y sin tu dirección.</li>
+      el texto de tu pregunta y el fragmento de la ficha, sin tu identidad y sin tu dirección;</li>
+    <li><strong>OpenAI</strong>, proveedor del transcriptor de voz (<strong>Estados Unidos</strong>), que
+      interviene <em>solo si preguntas hablando</em>: recibe el audio de la pregunta como encargado del
+      tratamiento y lo transcribe; no se le envía ningún dato tuyo más, y el audio se borra de nuestro servidor
+      en el mismo momento de la transcripción.</li>
   </ul>
 
   <h2>7. Cookies y almacenamiento local</h2>
   <p>El sitio <strong>no usa cookies</strong> de publicidad ni de analítica. Guarda en tu propio navegador,
   mediante almacenamiento local, dos datos técnicos para que la visita sea más cómoda: el nivel de lectura
   elegido y qué objetos ya has visitado. <strong>No salen de tu dispositivo y no los vemos nosotros.</strong>
-  Puedes borrarlos limpiando los datos del sitio en tu navegador. El formulario de contribuciones no guarda
+  La voz <strong>no se guarda en tu dispositivo</strong>: la grabación se envía, se transcribe y se descarta.
+  Puedes borrar esos dos datos limpiando los del sitio en tu navegador. El formulario de contribuciones no guarda
   nada en tu navegador.</p>
 
   <h2>8. ¿Qué derechos tienes?</h2>

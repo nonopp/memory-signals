@@ -75,6 +75,8 @@ $pregunta  = trim((string)($datos['pregunta']  ?? ''));
 $ficha     = trim((string)($datos['ficha']     ?? 'el aparato'));
 $fragmento = trim((string)($datos['fragmento'] ?? ''));
 $nivel     = ((string)($datos['nivel'] ?? 'cientifico')) === 'explorador' ? 'explorador' : 'cientifico';
+// respuesta hablada: dos frases, sin listas y sin cifras encadenadas: se escucha mejor y tarda menos
+$voz       = !empty($datos['voz']);
 
 if ($pregunta === '' || $fragmento === '') { salir(400, ['error' => 'Falta la pregunta o la ficha']); }
 if (mb_strlen($pregunta) > MAX_PREGUNTA)   { $pregunta = mb_substr($pregunta, 0, MAX_PREGUNTA); }
@@ -122,6 +124,13 @@ if ($nivel === 'explorador') {
               . "comparaciones cotidianas. Máximo 110 palabras.";
 }
 
+if ($voz) {
+    // lo que se lee en voz alta tiene que caber en un par de frases: nada de listas ni de paréntesis
+    $sistema .= "\n10. ESTA RESPUESTA SE VA A ESCUCHAR EN VOZ ALTA. Escribe como se habla: dos frases, "
+              . "máximo 40 palabras. Sin listas, sin guiones, sin paréntesis, sin URLs y sin símbolos. "
+              . "Los números, en palabras si son fechas o años cortos; las unidades, dichas enteras.";
+}
+
 // pide al modelo y devuelve ['texto' => ..., 'http' => ..., 'error' => ...]
 function pedir_al_modelo($sistema, string $fragmento, string $pregunta, string $clave,
                         float $temp = 0.2, int $tokens = 320): array {
@@ -159,6 +168,7 @@ function pedir_al_modelo($sistema, string $fragmento, string $pregunta, string $
 $inicio = microtime(true);
 $temp   = ($nivel === 'explorador') ? 0.55 : 0.15;   // el explorador tiene que parafrasear, no copiar
 $tokens = ($nivel === 'explorador') ? 230 : 400;
+if ($voz) { $tokens = 140; }   // hablado y corto: menos espera hasta que empieza a sonar
 $intento = pedir_al_modelo($sistema, $fragmento, $pregunta, $clave, $temp, $tokens);
 
 if ($intento['http'] !== 200) {

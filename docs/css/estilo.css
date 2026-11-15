@@ -548,6 +548,14 @@ code{background:rgba(255,255,255,.09);padding:2px 6px;border-radius:6px;font-siz
 .ms-titulos{display:flex;flex-direction:column;line-height:1.25;min-width:0}
 .ms-titulos strong{font-size:.95rem;color:#eafaf6;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .ms-titulos span{font-size:.76rem;color:#8fb3ad}
+.ms-voz{flex:none;width:30px;height:30px;display:flex;align-items:center;justify-content:center;
+  background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:9px;
+  color:#cfe6e1;font-size:.92rem;line-height:1;cursor:pointer;padding:0}
+.ms-voz:hover{background:rgba(255,255,255,.12);color:#fff}
+.ms-voz[aria-pressed="true"]{background:rgba(99,224,200,.20);border-color:rgba(99,224,200,.55);color:#eafcf8}
+.ms-voz[aria-pressed="true"] span{animation:ms-voz-latido 1.6s ease-in-out infinite}
+@keyframes ms-voz-latido{0%,100%{opacity:.75}50%{opacity:1}}
+
 .ms-cerrar{margin-left:auto;background:none;border:0;color:#9db9b4;font-size:1.5rem;
   line-height:1;cursor:pointer;padding:2px 6px;border-radius:8px}
 .ms-cerrar:hover{background:rgba(255,255,255,.08);color:#fff}
@@ -580,10 +588,25 @@ code{background:rgba(255,255,255,.09);padding:2px 6px;border-radius:6px;font-siz
   border-radius:12px;padding:11px 13px;color:#eef7f5;font-family:inherit;font-size:.9rem;min-width:0}
 .ms-form input::placeholder{color:#8aa9a4}
 .ms-form input:focus{outline:none;border-color:rgba(99,224,200,.55);background:rgba(99,224,200,.08)}
+.ms-micro{width:44px;height:44px;flex:none;border-radius:12px;cursor:pointer;padding:0;
+  display:flex;align-items:center;justify-content:center;
+  background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);color:#cfe6e1}
+.ms-micro:hover{background:rgba(255,255,255,.12);color:#fff}
+.ms-micro[hidden]{display:none}
+.ms-micro.escuchando{background:rgba(255,96,96,.20);border-color:rgba(255,120,120,.65);color:#ffd9d9;
+  animation:ms-micro-latido 1.1s ease-in-out infinite}
+@keyframes ms-micro-latido{0%,100%{box-shadow:0 0 0 0 rgba(255,96,96,.42)}50%{box-shadow:0 0 0 7px rgba(255,96,96,0)}}
+.ms-pista{margin:0;padding:7px 14px 0;font-size:.74rem;color:#9be7d4;line-height:1.35}
+.ms-pista[hidden]{display:none}
+.ms-pista.es-error{color:#ffb4b4}
 .ms-enviar{width:44px;height:44px;flex:none;border:0;border-radius:12px;cursor:pointer;
   background:linear-gradient(160deg,#63e0c8,#2f9d8c);color:#04222a;display:flex;align-items:center;justify-content:center}
 .ms-enviar:hover{filter:brightness(1.08)}
 .ms-pie{margin:0;padding:0 14px 10px;font-size:.72rem;color:#7d9a95}
+@media (max-width:600px){
+  .ms-micro,.ms-enviar{width:40px;height:40px}
+  .ms-pista{padding:6px 12px 0;font-size:.72rem}
+}
 
 /* en el espacio profundo el cielo se funde con la ventana: sin caja ni borde */
 .mapa-destino.en-ventana.es-espacio .mapa-marco{background:transparent;border-radius:12px}

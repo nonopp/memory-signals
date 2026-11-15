@@ -59,6 +59,34 @@
     if ('speechSynthesis' in window) { try { window.speechSynthesis.cancel(); } catch (e) {} }
   }
 
+  /* ---------- la voz es una sola para toda la app: la cabecera y el chat la comparten ---------- */
+  var oyentesVoz = [];
+  function avisarVoz() {
+    oyentesVoz.forEach(function (f) { try { f(!!estado.voz); } catch (e) {} });
+  }
+  function pintaBotonVoz() {
+    var b = document.getElementById('btn-voz');
+    if (!b) return;
+    b.setAttribute('aria-pressed', estado.voz ? 'true' : 'false');
+    if (b.firstChild) b.firstChild.nodeValue = estado.voz ? '🔊' : '🔇';
+  }
+  /* silencioso = no repintar la pantalla (el chat no quiere que le lea todo el objeto encima) */
+  function alternarVoz(silencioso) {
+    estado.voz = !estado.voz;
+    pintaBotonVoz();
+    avisarVoz();
+    if (estado.voz) { if (!silencioso) repintarPantallaActual(); } else callar();
+    return estado.voz;
+  }
+  window.MS_Voz = {
+    hablar: hablar,
+    callar: callar,
+    activa: function () { return !!estado.voz; },
+    alternar: alternarVoz,
+    encender: function (silencioso) { if (!estado.voz) { estado.voz = true; pintaBotonVoz(); avisarVoz(); if (!silencioso) repintarPantallaActual(); } return estado.voz; },
+    alCambiar: function (f) { if (typeof f === 'function') oyentesVoz.push(f); }
+  };
+
   /* ---------- fondo de vídeo: solo en la portada ---------- */
   var cajaVideo = null, video = null;
   function controlVideo(esIntro) {
@@ -413,6 +441,9 @@
     if (window.ChatObjeto) {
       window.ChatObjeto.ancorar($('#col-chat'));
       window.ChatObjeto.activar(a);
+      /* la ficha de un objeto abre el chat sola: no hay que buscar «Pregúntame».
+         sin foco, para que en el móvil no salga el teclado encima del modelo */
+      window.ChatObjeto.abrir(true);
     }
     if (window.MapaObjetos) {
       /* el mapa puede venir de la ventana del crucero: vuelve a su sitio en la ficha */
@@ -530,12 +561,7 @@
     });
     $('#btn-explorador').addEventListener('click', function () { cambiarNivel('explorador'); });
     $('#btn-cientifico').addEventListener('click', function () { cambiarNivel('cientifico'); });
-    $('#btn-voz').addEventListener('click', function () {
-      estado.voz = !estado.voz;
-      this.setAttribute('aria-pressed', estado.voz ? 'true' : 'false');
-      this.firstChild.nodeValue = estado.voz ? '🔊' : '🔇';
-      if (estado.voz) repintarPantallaActual(); else callar();
-    });
+    $('#btn-voz').addEventListener('click', function () { alternarVoz(false); });
     $('#btn-ficha').addEventListener('click', abrirFicha);
     $('#btn-volver-objetos').addEventListener('click', volverAObjetos);
     $('#modal-cerrar').addEventListener('click', cerrarFicha);

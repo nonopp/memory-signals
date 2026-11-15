@@ -12,6 +12,26 @@ Criterio de numeración:
 
 ---
 
+## v2.0.0 — 15 de noviembre de 2026
+
+**El chat se usa hablando.**
+
+- **Micrófono en el chat.** Se dicta la pregunta y el texto aparece escrito en la caja, donde se puede
+  corregir antes de enviar. La transcripción la hace `gpt-transcribe` (OpenAI) desde un endpoint propio
+  (`/app/api/voz.php`); el audio **se borra en el acto** y no se guarda en ningún sitio.
+- **El objeto contesta en voz alta.** Al recibir una respuesta se lee con la voz del sistema, sin servicios
+  de pago. El altavoz de la cabecera del chat y el de la cabecera de la página son **el mismo interruptor**.
+  El dictado enciende la voz solo, para que la conversación sea de ida y vuelta.
+- **Respuestas habladas más cortas.** Cuando la voz está puesta, la petición viaja con `voz:1` y el modelo
+  contesta en dos frases y menos de 40 palabras, con los números dichos enteros («setecientos cincuenta y
+  seis segundos»), que es lo que se puede escuchar con sentido.
+- **La ficha de un objeto abre el chat sola.** Ya no hay que buscar el botón «Pregúntame»; se abre sin
+  llevarse el foco, para que en el móvil no aparezca el teclado encima del modelo. Sigue cerrándose al
+  cambiar de objeto, de pantalla o al volver al inicio, y al cerrar se calla la voz y se suelta el micrófono.
+- **Privacidad** actualizada: qué audio se envía, a quién, para qué y que se borra al transcribirlo.
+
+---
+
 ## v1.3.4 — 15 de noviembre de 2026
 
 - El aviso de cada propuesta vuelve a **nonopp@gmail.com**, como estaba: el correo de la primera prueba

@@ -11,12 +11,21 @@
   var API = /(^|\.)gesemweb\.es$/.test(location.hostname)
     ? 'api/chat.php'
     : 'https://nasa.gesemweb.es/app/api/chat.php';
+  /* el micrófono usa su propio endpoint: transcribe y borra el audio */
+  var API_VOZ = /(^|\.)gesemweb\.es$/.test(location.hostname)
+    ? 'api/voz.php'
+    : 'https://nasa.gesemweb.es/app/api/voz.php';
 
   var indice = null;
   var actual = null;
   var fichasCargadas = {};
   var panelAbierto = false;
   var ocupado = false;
+  var grabadora = null;       // MediaRecorder mientras se dicta
+  var trozos = [];
+  var microStream = null;
+  var pararSolo = null;       // tope de duración del dictado
+  var dictando = false;
 
   var EQUIVALENCIA = {
     'modulo-lunar': 'apolo-modulo-lunar',
@@ -196,6 +205,8 @@
           '<span class="ms-punto" aria-hidden="true"></span>' +
           '<div class="ms-titulos"><strong id="ms-panel-titulo">Memory Signals</strong>' +
           '<span id="ms-panel-sub">pregunta y te contesto con mi ficha</span></div>' +
+          '<button type="button" class="ms-voz" id="ms-voz" aria-pressed="false" title="Leer las respuestas en voz alta" aria-label="Leer las respuestas en voz alta">' +
+            '<span aria-hidden="true">🔈</span></button>' +
           '<span class="ms-modo" id="ms-modo">explorar</span>' +
           '<button type="button" class="ms-cerrar" id="ms-cerrar" aria-label="Cerrar la ventana">&times;</button>' +
         '</header>' +
@@ -203,16 +214,40 @@
         '<form class="ms-form" id="ms-form" autocomplete="off">' +
           '<label for="ms-input" class="oculto">Tu pregunta</label>' +
           '<input type="text" id="ms-input" name="pregunta" maxlength="180" placeholder="¿Qué quieres saber de mí?">' +
+          '<button type="button" class="ms-micro" id="ms-micro" aria-pressed="false" hidden aria-label="Dictar la pregunta con el micrófono" title="Dictar la pregunta">' +
+            '<svg viewBox="0 0 24 24" aria-hidden="true" width="20" height="20"><path fill="currentColor" d="M12 14a3 3 0 0 0 3-3V5a3 3 0 0 0-6 0v6a3 3 0 0 0 3 3Zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V21h2v-3.08A7 7 0 0 0 19 11Z"/></svg>' +
+          '</button>' +
           '<button type="submit" class="ms-enviar" aria-label="Enviar pregunta">' +
             '<svg viewBox="0 0 24 24" aria-hidden="true" width="20" height="20"><path fill="currentColor" d="M3 20.5 21 12 3 3.5v6.3l11 2.2-11 2.2Z"/></svg>' +
           '</button>' +
         '</form>' +
+        '<p class="ms-pista" id="ms-pista" hidden></p>' +
         '<p class="ms-pie">Responde con la ficha del objeto y cita la fuente.</p>' +
       '</section>';
     document.body.appendChild(caja);
 
     $('ms-burbuja').addEventListener('click', function () { panelAbierto ? cerrar() : abrir(); });
     $('ms-cerrar').addEventListener('click', cerrar);
+
+    /* voz: el mismo estado que el altavoz de la cabecera de la página */
+    if ($('ms-voz')) {
+      $('ms-voz').addEventListener('click', function () {
+        if (window.MS_Voz) { window.MS_Voz.alternar(true); sincronizarVoz(); }
+      });
+    }
+    if (window.MS_Voz && window.MS_Voz.alCambiar) window.MS_Voz.alCambiar(sincronizarVoz);
+    sincronizarVoz();
+
+    /* micrófono: solo si el navegador puede grabar */
+    var micro = $('ms-micro');
+    if (micro) {
+      if (!soporteMicro()) {
+        micro.hidden = true;
+      } else {
+        micro.hidden = false;
+        micro.addEventListener('click', function () { dictando ? acabarDictado() : empezarDictado(); });
+      }
+    }
     $('ms-form').addEventListener('submit', function (ev) {
       ev.preventDefault();
       var entrada = $('ms-input');
@@ -230,7 +265,139 @@
     });
   }
 
-  function abrir() {
+  /* ---------- voz de salida: la misma del altavoz de la cabecera ---------- */
+  function vozActiva() { return !!(window.MS_Voz && window.MS_Voz.activa()); }
+  function sincronizarVoz() {
+    var b = $('ms-voz');
+    if (!b) return;
+    var on = vozActiva();
+    b.setAttribute('aria-pressed', on ? 'true' : 'false');
+    b.title = on ? 'Dejar de leer las respuestas' : 'Leer las respuestas en voz alta';
+    var s = b.firstElementChild || b;
+    s.textContent = on ? '🔊' : '🔈';
+  }
+  /* lee la respuesta si el visitante tiene la voz puesta */
+  function decir(t) {
+    if (!vozActiva() || !window.MS_Voz || !t) return;
+    var limpio = String(t).replace(/\s+/g, ' ').trim().slice(0, 700);
+    if (limpio) window.MS_Voz.hablar(limpio);
+  }
+
+  /* ---------- voz de entrada: grabar, transcribir, borrar ---------- */
+  function soporteMicro() {
+    return !!(navigator.mediaDevices && navigator.mediaDevices.getUserMedia
+      && window.MediaRecorder && window.FormData && window.fetch);
+  }
+  function tipoAudio() {
+    var pruebas = ['audio/webm;codecs=opus', 'audio/webm', 'audio/mp4', 'audio/ogg;codecs=opus'];
+    if (!window.MediaRecorder || !MediaRecorder.isTypeSupported) return '';
+    for (var i = 0; i < pruebas.length; i++) {
+      if (MediaRecorder.isTypeSupported(pruebas[i])) return pruebas[i];
+    }
+    return '';
+  }
+  function pista(texto, esError) {
+    var p = $('ms-pista');
+    if (!p) return;
+    if (!texto) { p.hidden = true; p.textContent = ''; p.classList.remove('es-error'); return; }
+    p.hidden = false;
+    p.textContent = texto;
+    p.classList.toggle('es-error', !!esError);
+  }
+  function marcarDictado(on) {
+    dictando = !!on;
+    var b = $('ms-micro'), i = $('ms-input');
+    if (b) {
+      b.classList.toggle('escuchando', !!on);
+      b.setAttribute('aria-pressed', on ? 'true' : 'false');
+      b.title = on ? 'Parar de dictar' : 'Dictar la pregunta';
+    }
+    if (i) i.placeholder = on ? 'Te escucho…' : '¿Qué quieres saber de mí?';
+  }
+  function soltarMicro() {
+    if (microStream) {
+      microStream.getTracks().forEach(function (t) { try { t.stop(); } catch (e) {} });
+      microStream = null;
+    }
+    grabadora = null;
+    trozos = [];
+    if (pararSolo) { clearTimeout(pararSolo); pararSolo = null; }
+  }
+  function empezarDictado() {
+    if (dictando || ocupado) return;
+    if (!soporteMicro()) { pista('Este navegador no puede grabar. Escribe la pregunta.', true); return; }
+    /* si estaba hablando, se calla: no se escucha a sí mismo */
+    if (window.MS_Voz && window.MS_Voz.callar) window.MS_Voz.callar();
+    pista('Preparando el micrófono…', false);
+
+    navigator.mediaDevices.getUserMedia({ audio: { channelCount: 1, echoCancellation: true, noiseSuppression: true } })
+      .then(function (flujo) {
+        microStream = flujo;
+        var tipo = tipoAudio();
+        try {
+          grabadora = tipo ? new MediaRecorder(flujo, { mimeType: tipo }) : new MediaRecorder(flujo);
+        } catch (e) {
+          soltarMicro();
+          pista('Este navegador no puede grabar. Escribe la pregunta.', true);
+          return;
+        }
+        trozos = [];
+        grabadora.ondataavailable = function (ev) { if (ev.data && ev.data.size) trozos.push(ev.data); };
+        grabadora.onstop = enviarDictado;
+        grabadora.start();
+        marcarDictado(true);
+        pista('Habla ahora y pulsa el micrófono otra vez al terminar.', false);
+        pararSolo = setTimeout(function () { if (dictando) acabarDictado(); }, 30000);
+      })
+      .catch(function (e) {
+        marcarDictado(false);
+        var m = (e && e.name === 'NotAllowedError')
+          ? 'No has dado permiso al micrófono. Puedes escribir la pregunta.'
+          : 'No he podido abrir el micrófono. Escribe la pregunta.';
+        pista(m, true);
+      });
+  }
+  function acabarDictado() {
+    if (!dictando || !grabadora) return;
+    marcarDictado(false);
+    if (pararSolo) { clearTimeout(pararSolo); pararSolo = null; }
+    try { grabadora.stop(); } catch (e) { soltarMicro(); }
+    pista('Escuchando la grabación…', false);
+  }
+  function enviarDictado() {
+    var datos = new FormData();
+    var trozo = new Blob(trozos, { type: (grabadora && grabadora.mimeType) || trozos[0] && trozos[0].type || 'audio/webm' });
+    soltarMicro();
+    if (!trozo || !trozo.size) { pista('No te he oído nada. Prueba otra vez o escríbela.', true); return; }
+    datos.append('audio', trozo, 'pregunta.webm');
+    var nombres = [];
+    if (actual) { nombres.push(actual.nombre || ''); if (actual.anio) nombres.push(String(actual.anio)); }
+    datos.append('terminos', nombres.join(', ').slice(0, 190));
+
+    fetch(API_VOZ, { method: 'POST', body: datos })
+      .then(function (r) { return r.json().then(function (j) { return { ok: r.ok, j: j }; }); })
+      .then(function (res) {
+        if (!res.ok || !res.j || !res.j.texto) {
+          pista((res.j && (res.j.error || res.j.error)) || 'No se ha podido transcribir. Escribe la pregunta.', true);
+          return;
+        }
+        var entrada = $('ms-input');
+        if (entrada) {
+          entrada.value = res.j.texto;
+          entrada.focus();
+          try { entrada.setSelectionRange(entrada.value.length, entrada.value.length); } catch (e) {}
+        }
+        /* se dicta pero no se envía: el visitante revisa y pulsa enviar */
+        pista('Revisa la pregunta y pulsa enviar.', false);
+        /* si ha hablado, se le contesta hablando */
+        if (!vozActiva() && window.MS_Voz && window.MS_Voz.encender) { window.MS_Voz.encender(true); sincronizarVoz(); }
+      })
+      .catch(function () {
+        pista('No se ha podido transcribir. Escribe la pregunta.', true);
+      });
+  }
+
+  function abrir(sinFoco) {
     construir();
     var p = $('ms-panel');
     if (!p) return;
@@ -240,12 +407,20 @@
     $('ms-widget').classList.add('abierto');
     document.body.classList.add('chat-abierto');
     refrescarModo();
-    setTimeout(function () { var i = $('ms-input'); if (i) i.focus(); }, 60);
+    sincronizarVoz();
+    /* al abrir la ficha de un objeto se abre sola y NO se lleva el foco:
+       en el móvil eso sacaría el teclado encima del modelo */
+    if (!sinFoco) setTimeout(function () { var i = $('ms-input'); if (i) i.focus(); }, 60);
   }
   function cerrar() {
     var p = $('ms-panel');
     if (p) p.hidden = true;
     panelAbierto = false;
+    /* al cerrar se calla y se suelta el micrófono: nada sigue grabando ni hablando */
+    if (window.MS_Voz && window.MS_Voz.callar) window.MS_Voz.callar();
+    if (dictando) { marcarDictado(false); }
+    soltarMicro();
+    pista('', false);
     if ($('ms-burbuja')) $('ms-burbuja').setAttribute('aria-expanded', 'false');
     if ($('ms-widget')) $('ms-widget').classList.remove('abierto');
     document.body.classList.remove('chat-abierto');
@@ -322,6 +497,8 @@
       html += '<span class="ms-aviso">Ficha del prototipo: sin cotejar con la NASA.</span>';
     }
     burbuja('objeto', html);
+    /* se lee solo el texto de la respuesta, no la fuente ni los avisos */
+    decir(textoModelo || (rec.ficha.titulo + '. ' + rec.texto));
   }
 
   /* ---------- la pregunta ---------- */
@@ -426,6 +603,8 @@
     if (!texto || ocupado) return;
     if (!panelAbierto) abrir();
     ocupado = true;
+    if (window.MS_Voz && window.MS_Voz.callar) window.MS_Voz.callar();
+    pista('', false);
     burbuja('visita', escapar(texto));
     var esperando = pensando();
 
@@ -435,6 +614,7 @@
       if (!rec) {
         if (esperando) esperando.remove();
         burbuja('objeto', 'Eso no consta en mi ficha. Pregúntame por lo que hice, quién me construyó o dónde estoy.');
+        decir('Eso no consta en mi ficha.');
         return;
       }
       if (esperando) esperando.remove();
@@ -448,7 +628,8 @@
           pregunta: texto,
           ficha: rec.ficha.titulo,
           fragmento: fragmento,
-          nivel: nivelActual()
+          nivel: nivelActual(),
+          voz: vozActiva() ? 1 : 0
         })
       }).then(function (r) {
         if (!r.ok) throw new Error('HTTP ' + r.status);
@@ -496,7 +677,8 @@
           pregunta: texto,
           ficha: rec.ficha.titulo,
           fragmento: fragmento,
-          nivel: nivelActual()
+          nivel: nivelActual(),
+          voz: vozActiva() ? 1 : 0
         })
       }).then(function (r) {
         if (!r.ok) throw new Error('HTTP ' + r.status);
