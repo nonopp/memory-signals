@@ -12,6 +12,13 @@ Criterio de numeración:
 
 ---
 
+## v1.2.1 — 15 de noviembre de 2026
+
+- Fuera el icono redondo que había encima del titular de la portada. Con él se va su código de estilo.
+- Se actualizan las descripciones del sitio, que ya no hablan de un astronauta de bienvenida.
+
+---
+
 ## v1.2.0 — 15 de noviembre de 2026
 
 **Logotipo**
