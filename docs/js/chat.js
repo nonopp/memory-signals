@@ -215,7 +215,7 @@
           '<button type="button" class="ms-voz" id="ms-voz" aria-pressed="false" title="' + (T('chat.voz.off') || 'Leer las respuestas en voz alta') + '" aria-label="' + (T('chat.voz.off') || 'Leer las respuestas en voz alta') + '">' +
             '<span aria-hidden="true">🔈</span></button>' +
           '<span class="ms-modo" id="ms-modo">explorar</span>' +
-          '<button type="button" class="ms-cerrar" id="ms-cerrar" aria-label="Cerrar la ventana">&times;</button>' +
+          '<button type="button" class="ms-cerrar" id="ms-cerrar" aria-label="' + (T('chat.cerrar') || 'Cerrar la ventana') + '">&times;</button>' +
         '</header>' +
         '<div class="ms-mensajes" id="ms-mensajes" aria-live="polite"></div>' +
         '<form class="ms-form" id="ms-form" autocomplete="off">' +
@@ -224,12 +224,12 @@
           '<button type="button" class="ms-micro" id="ms-micro" aria-pressed="false" hidden aria-label="' + (T('chat.micro.titulo') || 'Dictar la pregunta con el micrófono') + '" title="' + (T('chat.micro') || 'Dictar la pregunta') + '">' +
             '<svg viewBox="0 0 24 24" aria-hidden="true" width="20" height="20"><path fill="currentColor" d="M12 14a3 3 0 0 0 3-3V5a3 3 0 0 0-6 0v6a3 3 0 0 0 3 3Zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V21h2v-3.08A7 7 0 0 0 19 11Z"/></svg>' +
           '</button>' +
-          '<button type="submit" class="ms-enviar" aria-label="Enviar pregunta">' +
+          '<button type="submit" class="ms-enviar" aria-label="' + (T('chat.enviar') || 'Enviar pregunta') + '">' +
             '<svg viewBox="0 0 24 24" aria-hidden="true" width="20" height="20"><path fill="currentColor" d="M3 20.5 21 12 3 3.5v6.3l11 2.2-11 2.2Z"/></svg>' +
           '</button>' +
         '</form>' +
         '<p class="ms-pista" id="ms-pista" hidden></p>' +
-        '<p class="ms-pie">Responde con la ficha del objeto y cita la fuente.</p>' +
+        '<p class="ms-pie">' + (T('chat.pie') || 'Responde con la ficha del objeto y cita la fuente.') + '</p>' +
       '</section>';
     document.body.appendChild(caja);
 
@@ -488,6 +488,12 @@
     actualizarSugerencias();
   }
 
+  /* la fuente no se enseña por defecto: solo si el visitante la pide */
+  var ultimaPregunta = '';
+  function pideFuente(t) {
+    return /fuente|source|quelle|cita|referencia|bibliograf|procedencia|enlace|link|de d[oó]nde|d[oó]nde lo (has )?le[íi]do|qui[eé]n lo dice|justifica/i.test(t || '');
+  }
+
   function pintarRespuesta(rec, textoModelo, fuente, verificacion) {
     var html = '';
     if (textoModelo) {
@@ -496,7 +502,7 @@
       html += '<strong>' + escapar(rec.ficha.titulo) + (rec.seccion ? ' · ' + escapar(rec.seccion.titulo) : '') + '</strong><br>' +
               escapar(rec.texto).replace(/\n/g, '<br>');
     }
-    if (fuente) {
+    if (fuente && pideFuente(ultimaPregunta)) {
       /* solo se enlaza lo que está cotejado: las URLs del prototipo apuntan a la web
          vieja y algunas ya no existen, así que se citan sin enlace */
       if (verificacion === 'verificado') {
@@ -516,6 +522,7 @@
 
   /* ---------- la pregunta ---------- */
   function responder(pregunta) {
+    ultimaPregunta = pregunta || '';
     var terminos = palabras(pregunta);
     return cargarIndice().then(function (idx) {
       var lista = idx.fichas || [];
@@ -779,7 +786,7 @@
       construir();
       var t = $('ms-panel-titulo'), s = $('ms-panel-sub');
       if (t) t.textContent = a.nombre || 'Memory Signals';
-      if (s) s.textContent = 'habla conmigo: te contesto con mi ficha';
+      if (s) s.textContent = T('chat.sub.objeto') || 'habla conmigo: te contesto con mi ficha';
       /* al cambiar de turno no se borra la conversación: solo se refrescan las sugerencias */
       if (mismo) { actualizarSugerencias(); refrescarModo(); } else { saludar(); }
     }
@@ -791,5 +798,17 @@
     construir(); mostrar(false);
   }
 
-  window.ChatObjeto = { activar: activar, preguntar: preguntar, resolver: resolver, ancorar: ancorar, abrir: abrir, cerrar: cerrar };
+  /* al cambiar de idioma hay que rehacer el panel entero: los rótulos ya están escritos en el DOM */
+  function rehacer() {
+    construir();
+    if (!actual) { mostrar(false); return; }
+    mostrar(true);
+    var t = $('ms-panel-titulo'), s = $('ms-panel-sub');
+    if (t) t.textContent = actual.nombre || 'Memory Signals';
+    if (s) s.textContent = T('chat.sub.objeto') || 'habla conmigo: te contesto con mi ficha';
+    actualizarSugerencias();
+    saludar();
+  }
+
+  window.ChatObjeto = { activar: activar, rehacer: rehacer, preguntar: preguntar, resolver: resolver, ancorar: ancorar, abrir: abrir, cerrar: cerrar };
 })();

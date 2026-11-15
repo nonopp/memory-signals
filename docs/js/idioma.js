@@ -86,6 +86,13 @@
       "chat.sug3": "¿Dónde estás ahora?",
       "chat.micro.titulo": "Dictar la pregunta con el micrófono",
       "chat.escribe": "Escribe la pregunta.",
+            "mapa.titulo": "Dónde estamos",
+      "mapa.luna": "El mapa de la Luna",
+      "mapa.marte": "El mapa de Marte",
+      "mapa.espacio": "Hacia fuera del sistema solar",
+      "mapa.pie.espacio": "Ordenados por año de salida. Toca un punto para acercarte.",
+      "mapa.pie": "Toca un punto para acercarte a otro aparato. Arrastra para girar.",
+      "hud.toca": "toca un punto para acercarte",
       'comun': 'Común'
     },
     en: {
@@ -164,6 +171,13 @@
       "chat.sug3": "Where are you now?",
       "chat.micro.titulo": "Dictate the question with the microphone",
       "chat.escribe": "Type the question.",
+            "mapa.titulo": "Where we are",
+      "mapa.luna": "The map of the Moon",
+      "mapa.marte": "The map of Mars",
+      "mapa.espacio": "Out beyond the solar system",
+      "mapa.pie.espacio": "Ordered by launch year. Tap a point to move closer.",
+      "mapa.pie": "Tap a point to move to another object. Drag to rotate.",
+      "hud.toca": "tap a point to move closer",
       'comun': 'Shared'
     },
     de: {
@@ -242,6 +256,13 @@
       "chat.sug3": "Wo bist du jetzt?",
       "chat.micro.titulo": "Die Frage mit dem Mikrofon diktieren",
       "chat.escribe": "Tippe die Frage.",
+            "mapa.titulo": "Wo wir sind",
+      "mapa.luna": "Die Karte des Mondes",
+      "mapa.marte": "Die Karte des Mars",
+      "mapa.espacio": "Hinaus aus dem Sonnensystem",
+      "mapa.pie.espacio": "Nach Startjahr geordnet. Tippe auf einen Punkt, um näher zu kommen.",
+      "mapa.pie": "Tippe auf einen Punkt, um zu einem anderen Gerät zu kommen. Ziehen zum Drehen.",
+      "hud.toca": "tippe auf einen Punkt",
       'comun': 'Gemeinsam'
     }
   };

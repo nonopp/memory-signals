@@ -383,7 +383,7 @@
       capa.hidden = false;
       lienzo.classList.add('atenuado');
       requestAnimationFrame(function () { capa.classList.add('visible'); });
-      if (hud) hud.textContent = 'toca un punto para acercarte';
+      if (hud) hud.textContent = T('hud.toca') || 'toca un punto para acercarte';
       if (window.Escena) window.Escena.parar();
     }, 2300);
   }
@@ -690,6 +690,7 @@
         datos = j;
         window.__MSmodos = j.modos || null;
         if (typeof repintarPantallaActual === 'function') repintarPantallaActual();
+        if (window.ChatObjeto && window.ChatObjeto.rehacer) window.ChatObjeto.rehacer();
         if (enObjeto() && estado.aparato) {
           avisoInactividadDicho = '';
           saludoDichoEn = estado.aparato.id;

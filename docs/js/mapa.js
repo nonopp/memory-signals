@@ -18,7 +18,7 @@
     caja.className = 'mapa-destino';
     caja.id = 'mapa-destino';
     caja.innerHTML =
-      '<h2 class="mapa-titulo" id="mapa-titulo">Dónde estamos</h2>' +
+      '<h2 class="mapa-titulo" id="mapa-titulo">' + (T('mapa.titulo') || 'Dónde estamos') + '</h2>' +
       '<div class="mapa-marco">' +
         '<canvas id="mapa-lienzo" aria-hidden="true"></canvas>' +
         '<div class="mapa-pins" id="mapa-pins"></div>' +
@@ -234,14 +234,14 @@
     var c = tipo();
     caja.classList.toggle('es-espacio', c === 'espacio');
     if (titulo) {
-      titulo.textContent = c === 'luna' ? 'El mapa de la Luna'
-        : c === 'marte' ? 'El mapa de Marte' : 'Hacia fuera del sistema solar';
+      titulo.textContent = c === 'luna' ? (T('mapa.luna') || 'El mapa de la Luna')
+        : c === 'marte' ? (T('mapa.marte') || 'El mapa de Marte') : (T('mapa.espacio') || 'Hacia fuera del sistema solar');
     }
     var pie = document.getElementById('mapa-pie');
     if (pie) {
       pie.textContent = c === 'espacio'
-        ? 'Ordenados por año de salida. Toca un punto para acercarte.'
-        : 'Toca un punto para acercarte a otro aparato. Arrastra para girar.';
+        ? (T('mapa.pie.espacio') || 'Ordenados por año de salida. Toca un punto para acercarte.')
+        : (T('mapa.pie') || 'Toca un punto para acercarte a otro aparato. Arrastra para girar.');
     }
     colocar();
     dibujar();

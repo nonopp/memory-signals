@@ -12,6 +12,17 @@ Criterio de numeración:
 
 ---
 
+## v3.0.1 — 15 de noviembre de 2026
+
+- **El planeta queda centrado** al acabar el zoom del crucero: fuera el texto que iba al lado del mapa y que
+  lo empujaba a la izquierda. La pista «toca un punto para acercarte» baja al pie de la ventana y va centrada.
+- **El chat ya no enseña la fuente en cada respuesta**: solo aparece si el visitante la pide («fuente», «de
+  dónde», «quién lo dice», «source», «Quelle»…). El aviso de ficha sin cotejar se mantiene.
+- **Al cambiar de idioma se rehace el panel del chat**: rótulos, sugerencias y saludo salen en el idioma nuevo,
+  y los textos del mapa (título, pie y pista del crucero) también se traducen.
+
+---
+
 ## v3.0.0 — 15 de noviembre de 2026
 
 - **Multidiomas: español, inglés y alemán**, de texto y de voz. Selector **ES · EN · DE** en la cabecera;
