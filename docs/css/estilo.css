@@ -320,6 +320,50 @@ code{background:rgba(255,255,255,.09);padding:2px 6px;border-radius:6px;font-siz
 }
 .col-mapa .mapa-destino{position:sticky;top:14px}
 .col-centro .objeto-acciones{margin-top:2px}
+
+/* hitos del aparato: bocadillo con rabillo arriba a la izquierda, con los colores del chat */
+.hitos{position:relative;margin:0 0 14px}
+.hitos[hidden]{display:none}
+.hitos-pista{position:relative;min-height:108px}
+.hito{
+  position:absolute;left:0;top:0;width:100%;
+  display:flex;flex-direction:column;justify-content:center;gap:6px;
+  padding:16px 18px 15px 20px;
+  background:linear-gradient(180deg,rgba(26,44,78,.97),rgba(18,32,60,.97));
+  border:1px solid rgba(120,200,230,.42);border-radius:16px;
+  opacity:0;visibility:hidden;transform:translateY(6px);
+  transition:opacity .35s ease,transform .35s ease;
+}
+.hito.activa{position:relative;opacity:1;visibility:visible;transform:none}
+/* el rabillo: apunta hacia arriba, al objeto que está hablando */
+.hito::before{
+  content:'';position:absolute;left:24px;top:-8px;width:14px;height:14px;
+  background:rgba(26,44,78,.97);
+  border-left:1px solid rgba(120,200,230,.42);border-top:1px solid rgba(120,200,230,.42);
+  border-top-left-radius:3px;transform:rotate(45deg);
+}
+.hito-titulo{margin:0;font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;
+  color:#8fd0e6;font-weight:600}
+.hito-texto{margin:0;font-size:.96rem;line-height:1.4;color:var(--texto);max-width:52ch}
+.hitos-nav{display:flex;align-items:center;justify-content:center;gap:10px;margin-top:9px}
+.hito-flecha{
+  width:26px;height:26px;padding:0;line-height:1;cursor:pointer;font-size:1rem;
+  color:#9fc6dd;background:transparent;border:1px solid rgba(120,200,230,.30);border-radius:50%;
+}
+.hito-flecha:hover,.hito-flecha:focus-visible{border-color:rgba(120,200,230,.65);color:#fff}
+.hitos-puntos{display:flex;gap:7px}
+.hito-punto{width:7px;height:7px;padding:0;cursor:pointer;border-radius:50%;
+  background:transparent;border:1px solid rgba(120,200,230,.55)}
+.hito-punto.activo{background:#8fd0e6;border-color:#8fd0e6}
+@media (prefers-reduced-motion:reduce){.hito{transition:none}}
+@media (max-width:760px){
+  .hitos-pista{min-height:124px}
+  .hito-texto{font-size:.92rem}
+  /* en el móvil el dedo necesita más sitio */
+  .hito-flecha{width:36px;height:36px;font-size:1.1rem}
+  .hitos-puntos{gap:9px}
+  .hito-punto{width:9px;height:9px}
+}
 @media (min-width:1101px){
   .col-mapa{display:flex;flex-direction:column;gap:0}
 }

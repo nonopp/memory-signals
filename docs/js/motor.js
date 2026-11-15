@@ -402,6 +402,7 @@
 
     /* visor 3D en el centro, mapa a la izquierda y chat a la derecha */
     if (window.Visor3D) window.Visor3D.pintar(a);
+    if (window.Hitos) window.Hitos.pintar(a);
     if (window.ChatObjeto) {
       window.ChatObjeto.ancorar($('#col-chat'));
       window.ChatObjeto.activar(a);

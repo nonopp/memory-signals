@@ -510,7 +510,24 @@
     "lat": 0.674,
     "lon": 23.473
    },
-   "anio_tipo": "lanzamiento"
+   "anio_tipo": "lanzamiento",
+   "hitos": [
+    {
+     "titulo": "Mi encargo",
+     "texto": "Ganar la carrera a la Unión Soviética y dejar a dos hombres sobre la Luna antes de 1970.",
+     "fuente": "NASA History — Apollo Program"
+    },
+    {
+     "titulo": "Mi motor",
+     "texto": "Frené 756 segundos; Armstrong tomó el mando a mano para esquivar un cráter.",
+     "fuente": "NSSDCA — Apollo 11 Lunar Module (1969-059C) · Apollo 11 Mission Report"
+    },
+    {
+     "titulo": "El velcro",
+     "texto": "El velcro no lo inventó la NASA, pero el Apolo lo llevó a la ropa y las zapatillas.",
+     "fuente": "The Velcro Companies (velcro.com) · swissinfo — Velcro: how the space race helped it catch on"
+    }
+   ]
   },
   {
    "id": "near-shoemaker",

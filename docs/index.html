@@ -123,6 +123,15 @@
                 <button type="button" class="visor-girar" id="visor-girar" aria-pressed="true" title="Parar o reanudar el giro">⟳</button>
                 <span class="visor-credito" id="visor-credito"></span>
               </div>
+        <!-- los hitos del aparato, en bocadillo: habla él -->
+        <div class="hitos" id="hitos-objeto" hidden>
+          <div class="hitos-pista" id="hitos-pista"></div>
+          <div class="hitos-nav">
+            <button type="button" class="hito-flecha" id="hitos-prev" aria-label="Hito anterior">‹</button>
+            <div class="hitos-puntos" id="hitos-puntos"></div>
+            <button type="button" class="hito-flecha" id="hitos-next" aria-label="Hito siguiente">›</button>
+          </div>
+        </div>
         <div class="acciones objeto-acciones">
           <button type="button" class="secundario" id="btn-volver-objetos">← Volver a los objetos</button>
           <button type="button" class="secundario" id="btn-ficha">Ver ficha y fuentes</button>
@@ -179,6 +188,7 @@
 <script src="js/escena.js"></script>
 <script src="js/visor3d.js"></script>
 <script src="js/mapa.js"></script>
+<script src="js/hitos.js"></script>
 <script src="js/chat.js"></script>
 <script src="js/motor.js"></script>
 </body>
