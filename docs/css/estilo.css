@@ -344,7 +344,13 @@ code{background:rgba(255,255,255,.09);padding:2px 6px;border-radius:6px;font-siz
 }
 .hito-titulo{margin:0;font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;
   color:#8fd0e6;font-weight:600}
-.hito-texto{margin:0;font-size:.96rem;line-height:1.45;color:var(--texto)}
+/* justificado con partición de palabras: las líneas llegan al borde derecho del bocadillo
+   y no queda el pico irregular a la derecha (la última línea sí queda corta, como debe ser) */
+.hito-texto{
+  margin:0;font-size:.96rem;line-height:1.45;color:var(--texto);
+  text-align:justify;text-justify:inter-word;
+  hyphens:auto;-webkit-hyphens:auto;
+}
 .hitos-nav{display:flex;align-items:center;justify-content:center;gap:10px;margin-top:9px}
 .hito-flecha{
   width:26px;height:26px;padding:0;line-height:1;cursor:pointer;font-size:1rem;
