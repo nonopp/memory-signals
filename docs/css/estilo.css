@@ -49,7 +49,7 @@ body.con-fondo .velo{opacity:1}
   font:inherit;padding:4px 6px;margin:-4px -6px;border-radius:12px;cursor:pointer;flex:0 0 auto;
   transition:background .15s ease}
 .marca picture{display:block;line-height:0}
-.marca-logo{display:block;height:clamp(30px,4.2vw,44px);width:auto}
+.marca-logo{display:block;height:clamp(36px,5vw,53px);width:auto}
 .marca:hover,.marca:focus-visible{background:rgba(255,255,255,.07)}
 .marca:hover .marca-logo{filter:brightness(1.12)}
 .marca:focus-visible{outline:2px solid var(--acento);outline-offset:3px}
@@ -246,7 +246,7 @@ code{background:rgba(255,255,255,.09);padding:2px 6px;border-radius:6px;font-siz
 
 @media (max-width:760px){
   .barra{flex-wrap:wrap;gap:8px}
-  .marca-logo{height:34px}
+  .marca-logo{height:41px}
   .menu-destinos{order:3;flex:1 1 100%;justify-content:flex-start;overflow-x:auto;
     scrollbar-width:none;-webkit-overflow-scrolling:touch}
   .menu-destinos::-webkit-scrollbar{display:none}

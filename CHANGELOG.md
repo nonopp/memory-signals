@@ -12,6 +12,14 @@ Criterio de numeración:
 
 ---
 
+## v1.2.2 — 15 de noviembre de 2026
+
+- El logotipo crece un 20 %: pasa de 44 a 53 píxeles de alto, 135 de ancho en pantalla de escritorio. La barra
+  superior sube de 72 a 81 píxeles y el texto del logotipo se lee con holgura.
+- En el móvil el emblema pasa de 34 a 41 píxeles.
+
+---
+
 ## v1.2.1 — 15 de noviembre de 2026
 
 - Fuera el icono redondo que había encima del titular de la portada. Con él se va su código de estilo.
