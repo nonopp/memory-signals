@@ -12,6 +12,14 @@ Criterio de numeración:
 
 ---
 
+## v2.1.6 — 15 de noviembre de 2026
+
+- Con los nombres siempre visibles, la caja de un nombre podía tapar el punto de otro aparato y el clic se
+  iba al equivocado. Ahora el nombre **no recibe clics** y el punto tiene una **zona de pulsación de 29 px**
+  a su alrededor: se acierta en el punto, y el nombre solo sirve para leer.
+
+---
+
 ## v2.1.5 — 15 de noviembre de 2026
 
 - Corregido lo de la 2.1.4: al poner el nombre a la izquierda con `row-reverse`, el punto se iba al otro
