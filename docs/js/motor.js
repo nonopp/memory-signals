@@ -189,6 +189,12 @@
     ex.classList.toggle('activo', esExp);   ex.setAttribute('aria-pressed', esExp ? 'true' : 'false');
     ci.classList.toggle('activo', !esExp);  ci.setAttribute('aria-pressed', !esExp ? 'true' : 'false');
     $('#pie-nivel').textContent = esExp ? 'modo explorar · información sencilla' : 'modo científico · información especializada';
+    /* en la portada, el elegido va encendido y el otro apagado, igual que en la cabecera */
+    $$('#acciones-intro [data-modo]').forEach(function (b) {
+      var sel = (b.dataset.modo === 'explorador') === esExp;
+      b.classList.toggle('activo', sel);
+      b.setAttribute('aria-pressed', sel ? 'true' : 'false');
+    });
   }
   function cambiarNivel(nivel) {
     if (estado.nivel === nivel) return;

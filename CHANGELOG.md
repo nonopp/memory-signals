@@ -12,6 +12,21 @@ Criterio de numeración:
 
 ---
 
+## v2.2.0 — 15 de noviembre de 2026
+
+**Portada más clara.**
+
+- El botón de la portada pasa a llamarse **«Modo explorador»**, igual que «Modo científico»: antes decía
+  «Explorar» y parecía una acción, no un modo.
+- **El modo elegido va encendido y el otro apagado**, como en la cabecera: antes los dos salían con el mismo
+  relleno verde y no se sabía cuál estaba puesto.
+- **Fuera el botón «¿Qué es esto?»** de la portada: el enlace baja al pie, junto a Participa y Privacidad.
+- En el mapa, los puntos que caen fuera del disco ya no se quedan visibles sin poder pulsarse (el marco es
+  redondo y recorta): se ocultan hasta que el giro los trae dentro. Barrido de 12 muestras seguidas: todos
+  los puntos visibles responden al clic.
+
+---
+
 ## v2.1.7 — 15 de noviembre de 2026
 
 - Un punto pegado al borde del disco se veía a medias y **no se podía pulsar**: el marco es redondo y recorta

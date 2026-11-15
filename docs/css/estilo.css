@@ -158,6 +158,16 @@ button.principal,button.secundario,button.opcion{
 }
 button.principal{background:var(--acento);color:#04231d;border:0;box-shadow:0 10px 30px -10px var(--acento)}
 button.principal:hover{transform:translateY(-2px)}
+/* en la portada, el modo elegido va encendido y el otro apagado (como en la cabecera) */
+#acciones-intro button.principal:not(.activo){
+  background:transparent;color:var(--texto);border:1px solid var(--borde);box-shadow:none}
+#acciones-intro button.principal:not(.activo):hover{
+  border-color:var(--acento);color:var(--acento)}
+.pie-derecha .pie-link{
+  appearance:none;background:none;border:0;padding:0;font:inherit;cursor:pointer;
+  color:var(--texto-suave);text-decoration:none;border-bottom:1px solid rgba(255,255,255,.18);border-radius:0}
+.pie-derecha .pie-link:hover,.pie-derecha .pie-link:focus-visible{
+  color:var(--acento);border-bottom-color:var(--acento)}
 button.secundario{background:transparent;color:var(--texto);border:1px solid var(--borde)}
 button.secundario:hover{border-color:var(--acento);color:var(--acento)}
 button.opcion{

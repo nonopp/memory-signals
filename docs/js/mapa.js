@@ -199,7 +199,8 @@
       /* el marco es redondo y recorta: un punto pegado al borde se ve a medias y no se puede
          pulsar. Si cae fuera del disco, se esconde hasta que el giro lo traiga dentro. */
       var dist = Math.sqrt(Math.pow(p.x - g.cx, 2) + Math.pow(p.y - g.cy, 2));
-      if (dist > Math.min(t.w, t.h) * 0.47) { b.el.style.opacity = '0'; b.el.style.pointerEvents = 'none'; return; }
+      var radioMarco = (capa && capa.clientWidth ? capa.clientWidth : Math.min(t.w, t.h)) / 2;
+      if (dist > radioMarco - 9) { b.el.style.opacity = '0'; b.el.style.pointerEvents = 'none'; return; }
       b.el.style.opacity = String(0.55 + 0.45 * p.z);
       b.el.style.pointerEvents = 'auto';
       b.el.style.left = p.x + 'px';

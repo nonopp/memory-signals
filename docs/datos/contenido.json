@@ -1318,7 +1318,7 @@
  ],
  "modos": {
   "explorador": {
-   "etiqueta": "Explorar",
+   "etiqueta": "Modo explorador",
    "pista": "Información más sencilla: frases cortas y palabras claras, como para escolares y estudiantes.",
    "saludo": "Pregúntame lo que quieras de mí: qué hice, quién me construyó o dónde estoy ahora.",
    "sugerencias": [
