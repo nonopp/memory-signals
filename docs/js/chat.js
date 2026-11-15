@@ -445,6 +445,8 @@
     d.innerHTML = html;
     cont.appendChild(d);
     cont.scrollTop = cont.scrollHeight;
+    /* avisa al motor: hay movimiento en el chat, así que no toca preguntar «¿sigues ahí?» */
+    try { document.dispatchEvent(new CustomEvent('ms:chat')); } catch (e) {}
     return d;
   }
 

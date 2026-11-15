@@ -38,6 +38,13 @@
 
   /* ---------- voz ---------- */
   var vozES = null;
+  /* saludo del objeto y aviso de inactividad: una vez por visita, y sin insistir si el visitante
+     ha apagado la voz a mano */
+  var mudoPorUsuario = false;
+  var saludoDichoEn = '';
+  var avisoInactividadDicho = '';
+  var temporizadorInactividad = null;
+  var ultimaActividad = 0;
   function elegirVoz() {
     if (!('speechSynthesis' in window)) return;
     var voces = window.speechSynthesis.getVoices() || [];
@@ -73,11 +80,41 @@
   /* silencioso = no repintar la pantalla (el chat no quiere que le lea todo el objeto encima) */
   function alternarVoz(silencioso) {
     estado.voz = !estado.voz;
+    mudoPorUsuario = !estado.voz;
     pintaBotonVoz();
     avisarVoz();
     if (estado.voz) { if (!silencioso) repintarPantallaActual(); } else callar();
     return estado.voz;
   }
+  /* «Hola, soy <objeto>. Pregúntame lo que quieras de mí.» */
+  function saludoDelObjeto(a) {
+    return 'Hola, soy ' + a.nombre + '. Pregúntame lo que quieras de mí.';
+  }
+  function enObjeto() {
+    var p = document.getElementById('p-objeto');
+    return !!(p && p.classList.contains('activa'));
+  }
+  /* 20 s sin mover el ratón, sin teclear y sin mensajes nuevos en el chat */
+  function armarInactividad() {
+    if (temporizadorInactividad) { clearTimeout(temporizadorInactividad); temporizadorInactividad = null; }
+    if (!enObjeto() || !estado.aparato) return;
+    temporizadorInactividad = setTimeout(function () {
+      temporizadorInactividad = null;
+      if (!enObjeto() || !estado.aparato) return;
+      if (mudoPorUsuario) return;                                   // lo ha apagado: se calla
+      if (avisoInactividadDicho === estado.aparato.id) return;        // solo una vez por objeto
+      avisoInactividadDicho = estado.aparato.id;
+      if (!estado.voz) alternarVoz(true);                            // se enciende para poder decirlo
+      hablar('¿Sigues ahí? ' + saludoDelObjeto(estado.aparato));
+    }, 20000);
+  }
+  function hayActividad() {
+    var ahora = Date.now();
+    if (ahora - ultimaActividad < 400) return;   // no rearmar en cada píxel que se mueve el ratón
+    ultimaActividad = ahora;
+    armarInactividad();
+  }
+
   window.MS_Voz = {
     hablar: hablar,
     callar: callar,
@@ -114,6 +151,12 @@
        no se queda abierta encima de la pantalla nueva */
     if (window.ChatObjeto && window.ChatObjeto.cerrar) {
       window.ChatObjeto.cerrar();
+    }
+    if (id !== 'objeto') {
+      /* fuera de la ficha no hay saludo ni aviso pendiente */
+      saludoDichoEn = '';
+      avisoInactividadDicho = '';
+      if (temporizadorInactividad) { clearTimeout(temporizadorInactividad); temporizadorInactividad = null; }
     }
     $$('.pantalla').forEach(function (p) { p.classList.remove('activa'); });
     controlVideo(id === 'intro');
@@ -439,7 +482,19 @@
       etq.style.setProperty('--c', a.color);
     }
     var primero = a.turnos && a.turnos[0];
-    hablar(a.nombre + '. ' + a.cuerpo + '. ' + a.lugar + '. ' + (a.anio_tipo === 'llegada' ? 'Llegada en ' : 'Lanzamiento en ') + a.anio + '.');
+    /* Al entrar en un objeto se enciende la voz y saluda. Al repintar por cambiar de modo no se
+       repite: solo saluda cuando el objeto es otro o cuando se vuelve a entrar. */
+    if (saludoDichoEn !== a.id) {
+      saludoDichoEn = a.id;
+      avisoInactividadDicho = '';
+      armarInactividad();
+      if (!mudoPorUsuario && window.MS_Voz && window.MS_Voz.encender) {
+        window.MS_Voz.encender(true);   // sin repintar: ya estamos pintando
+      }
+      hablar(saludoDelObjeto(a));
+    } else {
+      armarInactividad();
+    }
 
     /* visor 3D en el centro, mapa a la izquierda y chat a la derecha */
     if (window.Visor3D) window.Visor3D.pintar(a);
@@ -565,6 +620,11 @@
       else if (id === 'destellos') pintaDestellos();
       else if (id === 'pausa') pintaPausa();
     });
+    /* la inactividad se mide con esto: ratón, teclado, rueda, tacto y lo que pase en el chat */
+    ['mousemove', 'mousedown', 'keydown', 'wheel', 'touchstart', 'scroll'].forEach(function (ev) {
+      document.addEventListener(ev, hayActividad, { passive: true });
+    });
+    document.addEventListener('ms:chat', hayActividad);
     $('#btn-explorador').addEventListener('click', function () { cambiarNivel('explorador'); });
     $('#btn-cientifico').addEventListener('click', function () { cambiarNivel('cientifico'); });
     $('#btn-voz').addEventListener('click', function () { alternarVoz(false); });

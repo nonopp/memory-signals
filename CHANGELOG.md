@@ -12,6 +12,20 @@ Criterio de numeración:
 
 ---
 
+## v2.2.1 — 15 de noviembre de 2026
+
+- **Al entrar en un objeto, la voz se enciende sola y el aparato se presenta**: «Hola, soy <nombre del
+  objeto>. Pregúntame lo que quieras de mí.» Antes se leía la ficha entera del tirón.
+- **Aviso de inactividad**: si pasan **20 segundos** en la ficha del objeto sin mover el ratón, sin teclear
+  y sin mensajes nuevos en el chat, se dice «¿Sigues ahí?» y se repite la presentación. **Una sola vez por
+  visita**: ni cada 20 s, ni al volver a moverse. Al cambiar de objeto o volver a entrar, la cuenta empieza
+  de nuevo.
+- Si el visitante **apaga la voz a mano**, se respeta: ni el saludo ni el aviso de inactividad suenan. Ese
+  apagado vale para toda la sesión de la página.
+- El saludo no se repite al cambiar de modo (explorador/científico): solo al entrar, no en cada repintado.
+
+---
+
 ## v2.2.0 — 15 de noviembre de 2026
 
 **Portada más clara.**
