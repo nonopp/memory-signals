@@ -514,18 +514,18 @@
    "hitos": [
     {
      "titulo": "Mi encargo",
-     "texto": "Ganar la carrera a la Unión Soviética y dejar a dos hombres sobre la Luna antes de 1970.",
-     "fuente": "NASA History — Apollo Program"
+     "texto": "Me construyeron para ganar la carrera a la Unión Soviética: poner a dos hombres sobre la Luna y traerlos de vuelta sanos y salvos antes de que acabara la década. Kennedy fijó la meta en 1961 y la cumplí con cinco meses de margen.",
+     "fuente": "NASA History — Apollo Program · discurso de Kennedy ante el Congreso, 25 de mayo de 1961"
     },
     {
      "titulo": "Mi motor",
-     "texto": "Frené 756 segundos; Armstrong tomó el mando a mano para esquivar un cráter.",
+     "texto": "Mi motor de descenso podía regular su empuje y volver a encenderse, algo que ningún motor de alunizaje había hecho antes. Estuvo frenando 756,3 segundos y, en los últimos metros, Armstrong tuvo que tomar el mando a mano para no caer en un cráter sembrado de piedras.",
      "fuente": "NSSDCA — Apollo 11 Lunar Module (1969-059C) · Apollo 11 Mission Report"
     },
     {
      "titulo": "El velcro",
-     "texto": "El velcro no lo inventó la NASA, pero el Apolo lo llevó a la ropa y las zapatillas.",
-     "fuente": "The Velcro Companies (velcro.com) · swissinfo — Velcro: how the space race helped it catch on"
+     "texto": "El velcro no lo inventó la NASA: lo patentó el suizo George de Mestral en los años cincuenta y al principio nadie le veía futuro. Dentro de mí se usó por todas partes, para sujetar herramientas y trajes, y desde ahí saltó a las zapatillas y a la ropa de todo el mundo.",
+     "fuente": "The Velcro Companies (velcro.com) · swissinfo — Velcro: how the space race helped a Swiss invention catch on"
     }
    ]
   },

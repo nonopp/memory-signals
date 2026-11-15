@@ -5,7 +5,7 @@
 (function () {
   'use strict';
 
-  var MS_HITO = 5000;
+  var MS_HITO = 15000;   /* quince segundos por tarjeta, con la pausa de lectura de un párrafo */
   var reloj = null;
   var actual = 0;
   var tarjetas = [];
@@ -133,6 +133,20 @@
       caja.appendChild(t);
       tarjetas.push(t);
     });
+
+    /* la pista se queda con la altura de la tarjeta más alta: ni saltos al cambiar ni frases recortadas */
+    var pista = document.getElementById('hitos-pista');
+    if (pista) {
+      pista.style.minHeight = '0px';
+      var alto = 0;
+      tarjetas.forEach(function (t) {
+        var eraActiva = t.classList.contains('activa');
+        t.classList.add('activa');
+        alto = Math.max(alto, t.offsetHeight);
+        if (!eraActiva) t.classList.remove('activa');
+      });
+      pista.style.minHeight = alto + 'px';
+    }
 
     pintarPuntos();
     arrancarReloj();
