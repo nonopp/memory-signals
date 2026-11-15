@@ -12,6 +12,34 @@ Criterio de numeración:
 
 ---
 
+## v1.1.0 — 15 de noviembre de 2026
+
+**Hitos del aparato en bocadillo**
+
+- Cada uno de los diez aparatos tiene tres tarjetas con hitos de su historia, en la columna central,
+  debajo del modelo 3D y encima de los botones.
+- Forma de bocadillo con rabillo arriba a la izquierda, fondo azul marino y borde azul claro, los del chat:
+  parece que habla el propio aparato.
+- Contenido: el objetivo o el motivo de la misión, el avance o el hito del aparato y la consecuencia o el
+  descubrimiento. Un solo registro, lenguaje llano, entre 23 y 53 palabras por tarjeta.
+- Quince segundos por tarjeta, con puntos y flechas, se detiene al pasar el ratón o al enfocar, se pasa con
+  el dedo en el móvil y respeta la preferencia de reducir movimiento.
+- El texto va justificado con partición de palabras: las líneas llegan al borde derecho.
+- Cada tarjeta guarda su fuente en los datos. Los mitos se cuentan con la corrección dentro: el velcro lo
+  patentó George de Mestral y fue el Apolo el que lo popularizó, no al revés.
+
+**Arreglos**
+
+- En la ficha del objeto, el papel de las personas salía como «undefined» en siete aparatos: el dato venía
+  como `rol` en unos y como `papel` en otros.
+- La lista «Fuentes de este objeto» salía vacía: ahora cada fuente lleva su enlace, sacado de la ficha del
+  aparato, y si un aparato no tiene fuentes lo dice en vez de dejar el título solo.
+- La frase de estado del aparato no se mostraba cuando venía como una sola frase, y el resumen salía repetido.
+- Todos los recursos llevan la versión en la dirección (`?v=1.1.0`), así el navegador no puede servir una
+  copia vieja del CSS o del JS después de un despliegue.
+
+---
+
 ## v1.0.0 — 15 de noviembre de 2026
 
 Primera versión cerrada y numerada. Es la aplicación completa y funcionando, publicada en

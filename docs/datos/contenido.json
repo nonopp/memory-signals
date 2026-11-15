@@ -202,7 +202,24 @@
     "lat": -1.95,
     "lon": -5.53
    },
-   "anio_tipo": "llegada"
+   "anio_tipo": "llegada",
+   "hitos": [
+    {
+     "titulo": "Mi destino",
+     "texto": "Me mandaron a Meridiani Planum porque desde la órbita se veían minerales que solo se forman con agua. Mi trabajo era bajar y comprobarlo sobre el terreno, no desde lejos.",
+     "fuente": "NASA Science — Spirit y Opportunity"
+    },
+    {
+     "titulo": "Noventa días",
+     "texto": "Me diseñaron para durar noventa días marcianos. Aguanté 5.111 y recorrí 45,16 kilómetros: la mayor distancia que ha recorrido un vehículo sobre otro mundo.",
+     "fuente": "NASA Science — Opportunity (MER-B)"
+    },
+    {
+     "titulo": "La piedra",
+     "texto": "En enero de 2005, al lado de mi propio escudo térmico abandonado, encontré una roca del tamaño de un balón que resultó ser un meteorito de hierro y níquel. El primero identificado en otro planeta.",
+     "fuente": "NASA Science — Spirit y Opportunity"
+    }
+   ]
   },
   {
    "id": "insight",
@@ -310,7 +327,24 @@
     "lat": 4.5,
     "lon": 135.6
    },
-   "anio_tipo": "llegada"
+   "anio_tipo": "llegada",
+   "hitos": [
+    {
+     "titulo": "Mi encargo",
+     "texto": "Fui la primera misión dedicada a mirar hacia dentro de Marte: su pulso, su temperatura y sus reflejos, como dice la NASA. Elegí el sitio por seguridad y no por su geología, porque lo interesante estaba debajo.",
+     "fuente": "NASA Science — InSight"
+    },
+    {
+     "titulo": "El primer temblor",
+     "texto": "Bajé un sismómetro al suelo con el brazo y escuché el primer temblor registrado en otro planeta. Detecté más de 1.300 sismos, y la mayoría de los buenos venían de Cerberus Fossae.",
+     "fuente": "NASA Science — ciencia de InSight"
+    },
+    {
+     "titulo": "El interior",
+     "texto": "Con esos temblores se pudo medir lo que nadie había medido: la corteza bajo mí es más fina de lo esperado, de 25 a 40 km, y el núcleo es fundido y enorme, de unos 1.800 km de radio.",
+     "fuente": "NASA Science — ciencia de InSight"
+    }
+   ]
   },
   {
    "id": "voyager1",
@@ -335,6 +369,10 @@
     {
      "texto": "NASA Science — Voyager",
      "url": "https://science.nasa.gov/mission/voyager/"
+    },
+    {
+     "texto": "NASA Science — saludos del disco de oro (55 idiomas)",
+     "url": "https://science.nasa.gov/mission/voyager/golden-record-contents/greetings"
     }
    ],
    "turnos": [
@@ -408,7 +446,24 @@
    "mapa": {
     "tipo": "espacio"
    },
-   "anio_tipo": "lanzamiento"
+   "anio_tipo": "lanzamiento",
+   "hitos": [
+    {
+     "titulo": "Mi encargo",
+     "texto": "Salí en 1977 para enseñar de cerca Júpiter y Saturno. Descubrí un anillo fino alrededor de Júpiter y dos lunas nuevas, y en Saturno cinco lunas más y un anillo al que llamaron G.",
+     "fuente": "NASA Science — Voyager 1"
+    },
+    {
+     "titulo": "El disco de oro",
+     "texto": "Llevo un disco de oro con saludos en 55 idiomas, imágenes y sonidos de la Tierra. La NASA se lo encargó a Carl Sagan, de la Universidad de Cornell, que eligió qué iba dentro.",
+     "fuente": "NASA Science — saludos del disco de oro de las Voyager"
+    },
+    {
+     "titulo": "La frontera",
+     "texto": "En agosto de 2012 crucé la heliopausa y me convertí en el primer objeto construido por personas que salía del escudo del Sol. Sigo en el espacio interestelar, con dos instrumentos funcionando.",
+     "fuente": "NASA Science — Voyager 1"
+    }
+   ]
   },
   {
    "id": "modulo-lunar",
@@ -633,7 +688,24 @@
    "mapa": {
     "tipo": "espacio"
    },
-   "anio_tipo": "lanzamiento"
+   "anio_tipo": "lanzamiento",
+   "hitos": [
+    {
+     "titulo": "Mi encargo",
+     "texto": "Fui la primera misión del programa Discovery y la primera nave de la historia que orbitó un asteroide. Mi destino era Eros, una piedra de 34 kilómetros de largo, para estudiarla desde muy cerca.",
+     "fuente": "NASA Science — NEAR Shoemaker"
+    },
+    {
+     "titulo": "Posarme sin deber",
+     "texto": "No estaba diseñada para aterrizar y aun así me posé en Eros el 12 de febrero de 2001, a 6,4 kilómetros por hora. Sobreviví al golpe y seguí enviando datos dos semanas más.",
+     "fuente": "NASA Science — NEAR Shoemaker"
+    },
+    {
+     "titulo": "Lo que dejé",
+     "texto": "Descubrí que Eros no tiene campo magnético y que su densidad se parece a la corteza terrestre. Sigo posada allí, congelada a menos 173 °C, sin señal desde el 28 de febrero de 2001.",
+     "fuente": "NASA Science — NEAR Shoemaker"
+    }
+   ]
   },
   {
    "id": "pioneer10",
@@ -663,6 +735,10 @@
     {
      "texto": "NASA Science — Pioneer 11",
      "url": "https://science.nasa.gov/mission/pioneer-11/"
+    },
+    {
+     "texto": "NASA Science — la placa de las Pioneer",
+     "url": "https://science.nasa.gov/resource/pioneer-plaque/"
     }
    ],
    "turnos": [
@@ -736,7 +812,24 @@
    "mapa": {
     "tipo": "espacio"
    },
-   "anio_tipo": "lanzamiento"
+   "anio_tipo": "lanzamiento",
+   "hitos": [
+    {
+     "titulo": "Mi encargo",
+     "texto": "Fui la primera nave que se atrevió con los planetas exteriores. Nadie sabía si se podía cruzar el cinturón de asteroides, y yo lo crucé para llegar a Júpiter.",
+     "fuente": "NASA Science — Pioneer 10"
+    },
+    {
+     "titulo": "La placa",
+     "texto": "Llevo una placa de metal con un hombre, una mujer y un mapa que sitúa la Tierra y el Sol. Fue idea de Carl Sagan: un mensaje de dónde venimos, para quien pueda encontrarme.",
+     "fuente": "NASA Science — la placa de las Pioneer"
+    },
+    {
+     "titulo": "Júpiter",
+     "texto": "El 4 de diciembre de 1973 pasé a 130.354 kilómetros de Júpiter y envié las primeras fotos cercanas del planeta, con la Gran Mancha Roja bien visible. Mi última señal llegó el 23 de enero de 2003.",
+     "fuente": "NASA Science — Pioneer 10"
+    }
+   ]
   },
   {
    "id": "dawn",
@@ -843,7 +936,24 @@
    "mapa": {
     "tipo": "espacio"
    },
-   "anio_tipo": "lanzamiento"
+   "anio_tipo": "lanzamiento",
+   "hitos": [
+    {
+     "titulo": "Mi encargo",
+     "texto": "Me enviaron a los dos cuerpos más grandes del cinturón de asteroides: Vesta, rocoso y seco, y Ceres, primitivo y rico en agua. Entre los dos suman casi el 40 % de la masa del cinturón.",
+     "fuente": "NASA Science — Dawn"
+    },
+    {
+     "titulo": "El motor iónico",
+     "texto": "Me empujaba un motor iónico que apenas empuja, entre 19 y 91 milinewtons, pero lo hace sin parar día tras día. Así orbité un asteroide, salí y orbité después un planeta enano con el mismo combustible.",
+     "fuente": "NASA Science — Dawn"
+    },
+    {
+     "titulo": "Rheasilvia y Ceres",
+     "texto": "En Vesta encontré Rheasilvia, una cuenca de 500 km de ancho y 19 de profundidad. En Ceres descubrí que las manchas brillantes son sales y que guarda cerca del 25 % de su masa en hielo.",
+     "fuente": "NASA Science — Ceres"
+    }
+   ]
   },
   {
    "id": "viking",
@@ -948,6 +1058,23 @@
      "texto_cientifico": "Viking 2 aterrizó el 3 de septiembre de 1976 a las 22:37:50 UT en Utopia Planitia y transmitió hasta el 12 de abril de 1980; desde julio de 2001 es Gerald Soffen Memorial Station. Su orbitador cerró operaciones el 24 de julio de 1978 por una serie de fugas.",
      "fuente": "NASA Science — Viking 2"
     }
+   ],
+   "hitos": [
+    {
+     "titulo": "Mi encargo",
+     "texto": "Cada Viking llevaba dos trabajos: fotografiar Marte desde la órbita y buscar vida en el suelo. Fuimos los primeros módulos que funcionaron de verdad sobre otro planeta.",
+     "fuente": "NASA Science — Viking 1"
+    },
+    {
+     "titulo": "El experimento",
+     "texto": "Mi brazo metió tierra en un laboratorio diminuto y el resultado se podía leer como una señal débil de vida. Pero el aparato que buscaba materia orgánica no encontró nada.",
+     "fuente": "NASA Science — Viking 1"
+    },
+    {
+     "titulo": "Lo que quedó",
+     "texto": "Entre las dos devolvimos 52.663 imágenes y un mapa del 97 % de la superficie de Marte. Dejamos de oírlas hace décadas, pero los dos módulos siguen allí, quietos sobre el polvo.",
+     "fuente": "NASA Science — Viking 1"
+    }
    ]
   },
   {
@@ -1041,6 +1168,23 @@
      ],
      "texto_explorador": "Me pensó un equipo de William Borucki. Cuando empezaron, nadie conocía un solo planeta fuera del sistema solar; ahora sabemos que hay más planetas que estrellas.",
      "texto_cientifico": "William Borucki fue el investigador principal fundador de la misión: cuando empezaron a concebirla, 35 años antes, no se conocía un solo planeta fuera del sistema solar. Mis datos mostraron que la galaxia contiene miles de millones de exoplanetas y que hay más planetas que estrellas.",
+     "fuente": "NASA Science — Kepler"
+    }
+   ],
+   "hitos": [
+    {
+     "titulo": "Mi encargo",
+     "texto": "Fui el primer telescopio que la NASA mandó a buscar planetas. Estaba quieto mirando 150.000 estrellas de la constelación del Cisne, esperando a que alguna parpadeara.",
+     "fuente": "NASA Science — Kepler"
+    },
+    {
+     "titulo": "Cómo lo hacía",
+     "texto": "No veía los planetas. Veía el instante en que uno se cruzaba por delante de su estrella y le robaba un poco de brillo. Ese pequeño parpadeo se llama tránsito.",
+     "fuente": "NASA Science — Kepler"
+    },
+    {
+     "titulo": "Lo que cambié",
+     "texto": "Cuando empezaron a pensarme, nadie conocía un solo planeta fuera del sistema solar. En nueve años dejé más de 2.600, y hoy sabemos que hay más planetas que estrellas.",
      "fuente": "NASA Science — Kepler"
     }
    ]
@@ -1151,6 +1295,23 @@
      "texto_explorador": "Me construyó el laboratorio de la NASA que también lleva el rover, con ayuda de varias empresas. Serví para demostrar que se puede volar en Marte.",
      "texto_cientifico": "Me construyó el Jet Propulsion Laboratory, que gestiona el proyecto para la sede de NASA, con apoyo de Ames y Langley y participación de AeroVironment, Qualcomm y SolAero. Mi aportación fue técnica: demostrar que el vuelo motorizado y controlado es posible en Marte.",
      "fuente": "NASA Science — Ingenuity"
+    }
+   ],
+   "hitos": [
+    {
+     "titulo": "Mi encargo",
+     "texto": "Me llevaron a Marte como prueba: cinco vuelos en treinta días para ver si se podía volar donde el aire es menos de una centésima parte del terrestre.",
+     "fuente": "NASA Science — helicóptero Ingenuity"
+    },
+    {
+     "titulo": "Los vuelos",
+     "texto": "Acabé haciendo 72 vuelos, estuve 128,8 minutos en el aire y recorrí 17 kilómetros, yendo por delante del rover para mirarle el terreno.",
+     "fuente": "NASA Science — helicóptero Ingenuity"
+    },
+    {
+     "titulo": "El final",
+     "texto": "En mi último vuelo, el 18 de enero de 2024, se me rompieron las palas al tomar tierra. Sigo de pie en el cráter Jezero, todavía en contacto, pero ya no puedo volar.",
+     "fuente": "NASA — fin de la misión Ingenuity (enero de 2024)"
     }
    ]
   }
