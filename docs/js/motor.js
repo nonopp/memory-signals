@@ -31,6 +31,8 @@
   /* un guion, dos textos */
   function txt(objeto) {
     if (!objeto) return '';
+    /* algunos textos vienen con los dos niveles y otros son una sola frase: antes la frase se perdía */
+    if (typeof objeto === 'string') return objeto;
     return objeto['texto_' + estado.nivel] || objeto[estado.nivel] || '';
   }
 
@@ -457,31 +459,50 @@
     cuerpo.appendChild(meta);
 
     var estadoTxt = document.createElement('p');
-    estadoTxt.textContent = txt(a.estado_texto) || a.ficha_resumen;
+    var donde = txt(a.estado_texto) || a.ficha_resumen;
+    estadoTxt.textContent = donde;
     cuerpo.appendChild(estadoTxt);
 
-    var resumen = document.createElement('p');
-    resumen.textContent = a.ficha_resumen;
-    cuerpo.appendChild(resumen);
+    /* el resumen solo si aporta algo: antes salía repetido cuando faltaba el estado */
+    if (a.ficha_resumen && a.ficha_resumen !== donde) {
+      var resumen = document.createElement('p');
+      resumen.textContent = a.ficha_resumen;
+      cuerpo.appendChild(resumen);
+    }
 
     var h3p = document.createElement('h3'); h3p.textContent = 'Quién trabajó en su misión';
     cuerpo.appendChild(h3p);
     var ul = document.createElement('ul');
     (a.personas || []).forEach(function (p) {
       var li = document.createElement('li');
-      li.innerHTML = '<strong>' + p.nombre + '</strong> — ' + p.rol;
+      var quien = document.createElement('strong');
+      quien.textContent = p.nombre || '';
+      li.appendChild(quien);
+      /* el papel viene como «papel» en unos aparatos y como «rol» en otros: antes salía «undefined» */
+      var papel = p.papel || p.rol || p.cargo || '';
+      if (papel) li.appendChild(document.createTextNode(' — ' + papel));
       ul.appendChild(li);
     });
     cuerpo.appendChild(ul);
 
     var h3f = document.createElement('h3'); h3f.textContent = 'Fuentes de este objeto';
     cuerpo.appendChild(h3f);
-    (a.fuentes || []).forEach(function (f) {
-      var a2 = document.createElement('a');
-      a2.className = 'fuente-item';
-      a2.href = f.url; a2.target = '_blank'; a2.rel = 'noopener noreferrer';
-      a2.textContent = f.texto;
-      cuerpo.appendChild(a2);
+    var fuentes = a.fuentes || [];
+    if (!fuentes.length) {
+      var sinFuentes = document.createElement('p');
+      sinFuentes.className = 'tenue';
+      sinFuentes.textContent = 'No consta en las fuentes consultadas.';
+      cuerpo.appendChild(sinFuentes);
+    }
+    fuentes.forEach(function (f) {
+      /* admite la forma nueva {texto, url} y la vieja, que era solo el texto */
+      var et = (typeof f === 'string') ? f : (f.texto || '');
+      var u = (typeof f === 'string') ? '' : (f.url || '');
+      var nodo = document.createElement(u ? 'a' : 'span');
+      nodo.className = 'fuente-item';
+      if (u) { nodo.href = u; nodo.target = '_blank'; nodo.rel = 'noopener noreferrer'; }
+      nodo.textContent = et || u;
+      cuerpo.appendChild(nodo);
     });
 
     modal.hidden = false;

@@ -116,18 +116,17 @@
    "personas": [
     {
      "nombre": "Steve Squyres",
-     "rol": "investigador principal de los rovers Spirit y Opportunity",
-     "fuente": "https://www.jpl.nasa.gov/news/nasas-opportunity-rover-mission-on-mars-comes-to-end/"
+     "papel": "investigador principal de los rovers Spirit y Opportunity"
     }
    ],
    "fuentes": [
     {
-     "texto": "NASA JPL — Fin de la misión Opportunity",
-     "url": "https://www.jpl.nasa.gov/news/nasas-opportunity-rover-mission-on-mars-comes-to-end/"
+     "texto": "NASA Science — Spirit y Opportunity",
+     "url": "https://science.nasa.gov/mission/mars-exploration-rovers-spirit-and-opportunity/"
     },
     {
-     "texto": "The Planetary Society — Mars Exploration Rovers (45,16 km y 5.111 soles)",
-     "url": "https://www.planetary.org/space-missions/mars-exploration-rovers"
+     "texto": "NASA Science — Opportunity (MER-B)",
+     "url": "https://science.nasa.gov/mission/mer-opportunity/"
     }
    ],
    "turnos": [
@@ -221,8 +220,7 @@
    "personas": [
     {
      "nombre": "Bruce Banerdt",
-     "rol": "investigador principal de InSight",
-     "fuente": "https://science.nasa.gov/mission/insight/"
+     "papel": "investigador principal de InSight"
     }
    ],
    "fuentes": [
@@ -231,8 +229,12 @@
      "url": "https://science.nasa.gov/mission/insight/"
     },
     {
-     "texto": "NASA — Retirada de la misión InSight",
-     "url": "https://science.nasa.gov/mission/insight/"
+     "texto": "NASA Science — ciencia de InSight",
+     "url": "https://science.nasa.gov/mission/insight/science/"
+    },
+    {
+     "texto": "NASA — el orbitador fotografía el InSight retirado",
+     "url": "https://www.nasa.gov/missions/insight/nasa-mars-orbiter-spots-retired-insight-lander-to-study-dust-movement/"
     }
    ],
    "turnos": [
@@ -326,8 +328,7 @@
    "personas": [
     {
      "nombre": "Ed Stone",
-     "rol": "científico del proyecto Voyager durante más de 50 años",
-     "fuente": "https://science.nasa.gov/mission/voyager/"
+     "papel": "científico del proyecto Voyager durante más de 50 años"
     }
    ],
    "fuentes": [
@@ -434,8 +435,18 @@
     }
    ],
    "fuentes": [
-    "NASA History — Apollo 11",
-    "NSSDCA — Apollo 11 Lunar Module"
+    {
+     "texto": "NSSDCA — módulo lunar del Apolo 11 (1969-059C)",
+     "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1969-059C"
+    },
+    {
+     "texto": "NSSDCA — módulo lunar del Apolo 12 (1969-099C)",
+     "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1969-099C"
+    },
+    {
+     "texto": "NSSDCA — módulo lunar del Apolo 15 (1971-063C)",
+     "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1971-063C"
+    }
    ],
    "turnos": [
     {
@@ -546,8 +557,10 @@
     }
    ],
    "fuentes": [
-    "NASA Science — NEAR Shoemaker",
-    "JHU Applied Physics Laboratory — NEAR"
+    {
+     "texto": "NASA Science — NEAR Shoemaker",
+     "url": "https://science.nasa.gov/mission/near-shoemaker/"
+    }
    ],
    "turnos": [
     {
@@ -643,8 +656,14 @@
     }
    ],
    "fuentes": [
-    "NASA Science — Pioneer 10",
-    "NASA Ames Research Center — Pioneer"
+    {
+     "texto": "NASA Science — Pioneer 10",
+     "url": "https://science.nasa.gov/mission/pioneer-10/"
+    },
+    {
+     "texto": "NASA Science — Pioneer 11",
+     "url": "https://science.nasa.gov/mission/pioneer-11/"
+    }
    ],
    "turnos": [
     {
@@ -740,8 +759,18 @@
     }
    ],
    "fuentes": [
-    "NASA Science — Dawn",
-    "JPL — Dawn Mission"
+    {
+     "texto": "NASA Science — Dawn",
+     "url": "https://science.nasa.gov/mission/dawn/"
+    },
+    {
+     "texto": "NASA Science — objetivos de Dawn",
+     "url": "https://science.nasa.gov/mission/dawn/objectives/"
+    },
+    {
+     "texto": "NASA Science — Ceres",
+     "url": "https://science.nasa.gov/mission/dawn/science/ceres/"
+    }
    ],
    "turnos": [
     {
@@ -838,8 +867,14 @@
     }
    ],
    "fuentes": [
-    "NASA Science — Viking 1",
-    "NASA Science — Viking 2"
+    {
+     "texto": "NASA Science — Viking 1",
+     "url": "https://science.nasa.gov/mission/viking-1/"
+    },
+    {
+     "texto": "NASA Science — Viking 2",
+     "url": "https://science.nasa.gov/mission/viking-2/"
+    }
    ],
    "mapa": {
     "tipo": "marte",
@@ -933,7 +968,10 @@
     }
    ],
    "fuentes": [
-    "NASA Science — Kepler"
+    {
+     "texto": "NASA Science — Kepler",
+     "url": "https://science.nasa.gov/mission/kepler/"
+    }
    ],
    "mapa": {
     "tipo": "espacio"
@@ -1033,8 +1071,14 @@
     }
    ],
    "fuentes": [
-    "NASA Science — Mars 2020 / Ingenuity",
-    "NASA — fin de la misión Ingenuity (enero de 2024)"
+    {
+     "texto": "NASA Science — helicóptero Ingenuity",
+     "url": "https://science.nasa.gov/mission/mars-2020-perseverance/ingenuity-mars-helicopter/"
+    },
+    {
+     "texto": "NASA — fin de la misión Ingenuity (enero de 2024)",
+     "url": "https://www.nasa.gov/news-release/after-three-years-on-mars-nasas-ingenuity-helicopter-mission-ends/"
+    }
    ],
    "mapa": {
     "tipo": "marte",
