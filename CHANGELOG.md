@@ -12,6 +12,13 @@ Criterio de numeración:
 
 ---
 
+## v2.1.4 — 15 de noviembre de 2026
+
+- El nombre de los puntos pegados al borde derecho del mapa se pone hacia dentro (a la izquierda del punto):
+  antes, como el nombre estaba casi siempre oculto, no se notaba; ahora que se ve siempre, se salía del marco.
+
+---
+
 ## v2.1.3 — 15 de noviembre de 2026
 
 - En el mapa, los otros aparatos se distinguen por color y por nombre, no solo por el latido: el punto

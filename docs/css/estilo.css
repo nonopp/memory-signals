@@ -678,6 +678,8 @@ code{background:rgba(255,255,255,.09);padding:2px 6px;border-radius:6px;font-siz
 .mapa-pin:not(.activo) .mapa-pin-punto{position:relative;
   box-shadow:0 0 0 2px rgba(255,255,255,.55),0 0 12px rgba(99,224,200,.85)}
 .mapa-pin:not(.activo) .mapa-pin-etq{opacity:.62}
+/* el nombre hacia el otro lado cuando el punto está pegado al borde derecho del mapa */
+.mapa-pin.etq-izquierda{flex-direction:row-reverse}
 .mapa-pin:not(.activo) .mapa-pin-punto::after{
   content:'';position:absolute;inset:-3px;border-radius:50%;
   border:2px solid var(--acento,#63e0c8);
