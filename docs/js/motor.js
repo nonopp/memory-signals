@@ -516,7 +516,21 @@
     document.addEventListener('keydown', function (ev) { if (ev.key === 'Escape') cerrarFicha(); });
   }
 
+  /* la versión sale del fichero VERSION, para no tener el número escrito en dos sitios */
+  function pintaVersion() {
+    var nodo = $('#pie-version');
+    if (!nodo) return;
+    fetch('VERSION', { cache: 'no-store' })
+      .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.text(); })
+      .then(function (v) {
+        v = (v || '').trim();
+        if (v) { nodo.textContent = 'v' + v; nodo.title = 'versión ' + v; }
+      })
+      .catch(function () { nodo.textContent = ''; });
+  }
+
   function arrancar() {
+    pintaVersion();
     estado.nivel = leer(CLAVE_NIVEL, 'explorador');
     if (datos.reglas && datos.reglas.niveles.indexOf(estado.nivel) === -1) estado.nivel = 'explorador';
     estado.visitados = leer(CLAVE_VISITAS, []);
