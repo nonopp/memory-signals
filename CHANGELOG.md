@@ -12,6 +12,14 @@ Criterio de numeración:
 
 ---
 
+## v3.0.4 — 15 de noviembre de 2026
+
+- **Los puntos del mapa ya no van por detrás del giro**: el CSS animaba el `transform` durante 200 ms y el giro
+  reescribe la posición cada 40 ms, así que el punto (y su zona de pulsación) se quedaba atrás justo cuando
+  cambiaba de lado el nombre. Ahora solo se anima la opacidad.
+
+---
+
 ## v3.0.3 — 15 de noviembre de 2026
 
 - **Arreglado el mapa**: en la 3.0.1 se quedó sin definir la función de traducción dentro de `mapa.js`, así que
