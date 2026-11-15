@@ -1,0 +1,1341 @@
+{
+ "version": "1.0",
+ "proyecto": {
+  "nombre": "Memory Signals",
+  "reto": "NASA's Discarded Equipment Storytelling",
+  "reto_url": "https://www.spaceappschallenge.org/2026/challenges/nasas-discarded-equipment-storytelling/",
+  "evento": "NASA Space Apps Challenge 2026",
+  "descripcion": "Ein Astronaut lädt dich ein, mit ihm zu reisen. Wenn du dich deinem Ziel näherst, siehst du farbige Blitze: das sind Objekte, die die NASA dort gelassen hat. Wähle eines aus und lass mich dir seine Geschichte erzählen."
+ },
+ "reglas": {
+  "niveles": [
+   "explorador",
+   "cientifico"
+  ],
+  "nivel_por_defecto": "explorador",
+  "nota": "Un guion, dos textos. El turno, el personaje, la pregunta y las opciones son idénticos en los dos niveles: solo cambia el campo de texto."
+ },
+ "astronauta": {
+  "id": "guia",
+  "nombre": "Kommandantin Iria",
+  "nota": "Personaje de ficción. Guion cerrado: no improvisa y no da datos de misión.",
+  "lineas": {
+   "intro": {
+    "texto_explorador": "Hallo. Ich freue mich, dass du gekommen bist. Ich reise seit Jahren zu Orten, an denen die NASA Dinge hinterlassen hat.",
+    "texto_cientifico": "Willkommen an Bord. Ich bin die Kommandantin Iria. Ich verbringe meine Tage damit, Orte zu besuchen, an denen die NASA Ausrüstung hinterlassen hat, die nicht mehr funktioniert, aber immer noch dort ist."
+   },
+   "edad_pregunta": {
+    "texto_explorador": "Bevor wir abheben, sag mir eine Sache: Wie alt bist du?",
+    "texto_cientifico": "Bevor wir abheben, muss ich wissen, mit wem ich spreche: Wie alt bist du?"
+   },
+   "gusto_espacio": {
+    "texto_explorador": "Und magst du den Weltraum?",
+    "texto_cientifico": "Interessierst du dich für den Weltraum, oder ist das das erste Mal, dass du darüber nachdenkst?"
+   },
+   "destino_pregunta": {
+    "texto_explorador": "Dann wähle, wohin wir gehen. Zum Mond, nach Mars oder weiter hinaus?",
+    "texto_cientifico": "Wähle ein Ziel. Wir haben drei Routen offen: den Mond, Mars und den tiefen Weltraum."
+   },
+   "despegue": {
+    "texto_explorador": "Los geht's! Halt dich fest, das wird ruckeln.",
+    "texto_cientifico": "Start genehmigt. Kurs berechnet."
+   },
+   "crucero": {
+    "texto_explorador": "Sieh aus dem Fenster. Es wird eine Weile dauern, also schau dir die Sterne an.",
+    "texto_cientifico": "Im Flug. Der Blick aus dem Fenster ist der beste Ort, um zu warten."
+   },
+   "destellos": {
+    "texto_explorador": "Siehst du diese bunten Blitze? Das sind Objekte, die hier schon lange geblieben sind. Was ist das, das leuchtet?",
+    "texto_cientifico": "Da unten sind farbige Blitze: jeder markiert eine verlassene Ausrüstung, die an ihrem Platz geblieben ist. Welches spricht dich an?"
+   },
+   "pausa": {
+    "texto_explorador": "Möchtest du, dass wir einen anderen Blitz ansehen, oder bleibst du lieber noch eine Weile hier?",
+    "texto_cientifico": "Wir können mit einem anderen Objekt weitermachen, zur überprüfbaren Datei zurückkehren oder einen Moment in Stille bleiben."
+   },
+   "despedida": {
+    "texto_explorador": "Wann immer du willst, können wir zurückkehren. Der Weltraum geht nirgendwohin, und diese Dinge sind schon viele Jahre hier.",
+    "texto_cientifico": "Ende der geführten Tour. Alles, was ich dir erzählt habe, kannst du in den Quellen jedes Objekts überprüfen."
+   },
+   "elegir_modo": {
+    "texto_explorador": "Was möchtest du?",
+    "texto_cientifico": "Was möchtest du?"
+   },
+   "vuelta": {
+    "texto_explorador": "Ich sehe, dass du schon einmal hier warst.",
+    "texto_cientifico": "Aufzeichnungen deines vorherigen Besuchs gefunden."
+   }
+  }
+ },
+ "destinos": [
+  {
+   "id": "luna",
+   "nombre": "Der Mond",
+   "aparatos": [
+    "modulo-lunar"
+   ],
+   "color": "#b9c6d6"
+  },
+  {
+   "id": "marte",
+   "nombre": "Mars",
+   "aparatos": [
+    "opportunity",
+    "insight",
+    "viking",
+    "ingenuity"
+   ],
+   "color": "#d1743f"
+  },
+  {
+   "id": "espacio",
+   "nombre": "Tiefenraum",
+   "aparatos": [
+    "voyager1",
+    "near-shoemaker",
+    "pioneer10",
+    "dawn",
+    "kepler"
+   ],
+   "color": "#4f7fb8"
+  }
+ ],
+ "aparatos": [
+  {
+   "id": "opportunity",
+   "nombre": "Opportunity",
+   "cuerpo": "Mars",
+   "lugar": "Meridiani Planum",
+   "anio": 2004,
+   "estado": "tot",
+   "estado_texto": {
+    "texto_explorador": "Seit 2018 wegen eines Staubsturms abgeschaltet.",
+    "texto_cientifico": "Seit dem 10. Juni 2018 kein Kontakt. Mission am 13. Februar 2019 für beendet erklärt."
+   },
+   "ficha_resumen": "Es sollte 90 Tage dauern und hielt 5.111 Sol. Es legte 45,16 km zurück, bevor ein Staubsturm es abschaltete.",
+   "color": "#e2764a",
+   "personas": [
+    {
+     "nombre": "Steve Squyres",
+     "papel": "Hauptforscher der Rover Spirit und Opportunity"
+    }
+   ],
+   "fuentes": [
+    {
+     "texto": "NASA Science — Spirit y Opportunity",
+     "url": "https://science.nasa.gov/mission/mars-exploration-rovers-spirit-and-opportunity/"
+    },
+    {
+     "texto": "NASA Science — Opportunity (MER-B)",
+     "url": "https://science.nasa.gov/mission/mer-opportunity/"
+    }
+   ],
+   "turnos": [
+    {
+     "id": "opportunity_1",
+     "pregunta": "Hallo? Ist da jemand? Ich habe lange nichts gehört.",
+     "opciones": [
+      "Ich höre dich",
+      "Wer bist du?"
+     ],
+     "texto_explorador": "Ich heiße Opportunity. Ich bin ein Roboter mit sechs Rädern. Ich kam zum Mars, um nach Hinweisen auf Wasser zu suchen, und blieb länger als geplant.",
+     "texto_cientifico": "Ich bin Opportunity, der Rover MER-B. Sechs Räder, Solarpanels und ein Set geologischer Instrumente, um Hinweise auf Wasser zu suchen.",
+     "fuente": "https://www.jpl.nasa.gov/news/nasas-opportunity-rover-mission-on-mars-comes-to-end/"
+    },
+    {
+     "id": "opportunity_2",
+     "pregunta": "Und wie bist du zum Mars gekommen?",
+     "opciones": [
+      "War es eine lange Reise?",
+      "Erzähl mir von deiner Landung"
+     ],
+     "texto_explorador": "Ich verließ die Erde am 7. Juli 2003 und landete am 25. Januar 2004, indem ich in Luftkissen hüpfte.",
+     "texto_cientifico": "Ich startete am 7. Juli 2003 und landete am 25. Januar 2004 im Meridiani Planum mit Airbags: Ich hüpfte, bis ich zum Stillstand kam.",
+     "fuente": "https://www.jpl.nasa.gov/news/nasas-opportunity-rover-mission-on-mars-comes-to-end/"
+    },
+    {
+     "id": "opportunity_3",
+     "pregunta": "Und was hast du jeden Tag auf dem Mars gemacht?",
+     "opciones": [
+      "Womit hast du dich beschäftigt?",
+      "Zeig mir deine Arbeit"
+     ],
+     "texto_explorador": "Ich ging langsam und schaute mir Steine an. Ich untersuchte die Felsen, um zu sehen, ob dort früher Wasser war.",
+     "texto_cientifico": "Ich durchquerte das Gelände, analysierte Gesteine mit meinen Spektrometern und meiner Mikroskopkamera und suchte nach Mineralien, die in Anwesenheit von Wasser entstehen.",
+     "fuente": "https://www.planetary.org/space-missions/mars-exploration-rovers"
+    },
+    {
+     "id": "opportunity_4",
+     "pregunta": "Weißt du, wer mein Team von der Erde aus leitete?",
+     "opciones": [
+      "Steve Squyres",
+      "Eine Gruppe von Astronauten"
+     ],
+     "texto_explorador": "Steve Squyres. Er war der wissenschaftliche Leiter und entschied mit seinem Team, welchen Stein wir jeden Tag untersuchen würden.",
+     "texto_cientifico": "Steve Squyres von der Cornell-Universität war der Hauptforscher: Er legte die täglichen wissenschaftlichen Prioritäten des Missionsteams fest.",
+     "fuente": "https://news.cornell.edu/stories/2019/02/built-last-90-days-mars-rover-opportunity-ends-mission-after-15-years"
+    },
+    {
+     "id": "opportunity_5",
+     "pregunta": "Und was hast du entdeckt, von all dem, was du gesehen hast?",
+     "opciones": [
+      "Gab es Wasser auf dem Mars?",
+      "Was war das Wichtigste?"
+     ],
+     "texto_explorador": "Ja. Ich fand Beweise dafür, dass es vor langer Zeit salziges Wasser dort gab, wo ich war. Der Mars war ein feuchter Ort.",
+     "texto_cientifico": "Ich fand Hinweise auf flüssiges Wasser in der Vergangenheit: Mineralien und sedimentäre Strukturen, die in salzhaltigen Wasserumgebungen entstehen.",
+     "fuente": "https://www.planetary.org/space-missions/mars-exploration-rovers"
+    },
+    {
+     "id": "opportunity_6",
+     "pregunta": "Ich muss gehen. Wie verabschiedest du dich?",
+     "opciones": [
+      "Auf Wiedersehen, Opportunity",
+      "Siehe das Datenblatt mit den Quellen"
+     ],
+     "texto_explorador": "Ich sollte drei Monate halten und war fast fünfzehn Jahre lang aktiv. Ein Staubsturm hat mir die Sonne verdeckt und ich konnte nicht mehr aufladen. Es war eine gute Reise.",
+     "texto_cientifico": "Für 90 Sols entworfen, habe ich 5.111 operiert und 45,16 km zurückgelegt. Ein globaler Staubsturm hat meine Paneele bedeckt; ich hörte am 10. Juni 2018 auf zu reagieren.",
+     "fuente": "https://www.jpl.nasa.gov/news/nasas-opportunity-rover-mission-on-mars-comes-to-end/"
+    }
+   ],
+   "mapa": {
+    "tipo": "marte",
+    "lat": -1.95,
+    "lon": -5.53
+   },
+   "anio_tipo": "llegada",
+   "hitos": [
+    {
+     "titulo": "Mein Ziel",
+     "texto": "Ich wurde nach Meridiani Planum geschickt, weil aus der Umlaufbahn Mineralien sichtbar waren, die nur mit Wasser entstehen. Meine Aufgabe war es, hinunterzugehen und es vor Ort zu überprüfen, nicht aus der Ferne.",
+     "fuente": "NASA Science — Spirit y Opportunity"
+    },
+    {
+     "titulo": "Neunzig Tage",
+     "texto": "Ich wurde für neunzig marsianische Tage entworfen. Ich hielt 5.111 aus und legte 45,16 Kilometer zurück: die größte Entfernung, die ein Fahrzeug auf einem anderen Welt zurückgelegt hat.",
+     "fuente": "NASA Science — Opportunity (MER-B)"
+    },
+    {
+     "titulo": "Der Stein",
+     "texto": "Im Januar 2005 fand ich neben meinem eigenen verlassenen Hitzeschild einen ballgroßen Stein, der sich als ein Meteor aus Eisen und Nickel herausstellte. Der erste, der auf einem anderen Planeten identifiziert wurde.",
+     "fuente": "NASA Science — Spirit y Opportunity"
+    }
+   ]
+  },
+  {
+   "id": "insight",
+   "nombre": "InSight",
+   "cuerpo": "Mars",
+   "lugar": "Elysium Planitia",
+   "anio": 2018,
+   "estado": "tot",
+   "estado_texto": {
+    "texto_explorador": "Er hatte keine Energie mehr wegen des Staubs auf seinen Paneelen.",
+    "texto_cientifico": "Am 21. Dezember 2022 nach vier Jahren seismischer Daten zurückgezogen."
+   },
+   "ficha_resumen": "Das erste Seismometer, das auf dem Mars installiert wurde. Es hörte mehr als 1.300 marsianische Erdbeben, bevor es wegen des Staubs ausging.",
+   "color": "#d96f8f",
+   "personas": [
+    {
+     "nombre": "Bruce Banerdt",
+     "papel": "Hauptforscher von InSight"
+    }
+   ],
+   "fuentes": [
+    {
+     "texto": "NASA Science — InSight",
+     "url": "https://science.nasa.gov/mission/insight/"
+    },
+    {
+     "texto": "NASA Science — ciencia de InSight",
+     "url": "https://science.nasa.gov/mission/insight/science/"
+    },
+    {
+     "texto": "NASA — el orbitador fotografía el InSight retirado",
+     "url": "https://www.nasa.gov/missions/insight/nasa-mars-orbiter-spots-retired-insight-lander-to-study-dust-movement/"
+    }
+   ],
+   "turnos": [
+    {
+     "id": "insight_1",
+     "pregunta": "Stille... aber ich spüre dich. Wer bist du?",
+     "opciones": [
+      "Ich bin ein Besucher",
+      "Was bist du?"
+     ],
+     "texto_explorador": "Ich bin InSight. Ich kam zum Mars, um zuzuhören. Nicht um zu schauen: um zuzuhören, wie der Boden bebt.",
+     "texto_cientifico": "Ich bin InSight, eine geophysikalische Station. Meine Aufgabe war es, das Innere des Mars durch seine Vibrationen zu hören.",
+     "fuente": "https://science.nasa.gov/mission/insight/"
+    },
+    {
+     "id": "insight_2",
+     "pregunta": "Wie bist du hier gelandet, ohne dich zu beschädigen?",
+     "opciones": [
+      "Wie bist du gelandet?",
+      "Erzähl mir von deiner Ankunft."
+     ],
+     "texto_explorador": "Ich landete am 26. November 2018 mit Fallschirmen und Raketentriebwerken. Ich bremste kurz vor dem Aufprall.",
+     "texto_cientifico": "Ich landete am 26. November 2018 in Elysium Planitia nach einem Abstieg mit Hitzeschild, Fallschirm und Rückstoßraketen.",
+     "fuente": "https://science.nasa.gov/mission/insight/"
+    },
+    {
+     "id": "insight_3",
+     "pregunta": "Und was hast du jeden Tag dort still gemacht?",
+     "opciones": [
+      "Womit hast du dich beschäftigt?",
+      "Zeig mir dein Instrument."
+     ],
+     "texto_explorador": "Ich hörte zu. Mein Arm stellte ein Gerät auf den Boden, das die kleinsten Erschütterungen erkennt, wie ein Glas Wasser, das vibriert.",
+     "texto_cientifico": "Mein Roboterarm platzierte das Seismometer SEIS auf dem Boden und schützte es mit einer Kuppel gegen den Wind. Es registrierte die Bewegungen des Bodens.",
+     "fuente": "https://science.nasa.gov/mission/insight/"
+    },
+    {
+     "id": "insight_4",
+     "pregunta": "Weißt du, wer mein wissenschaftliches Team leitete?",
+     "opciones": [
+      "Bruce Banerdt.",
+      "Niemand, es arbeitete alleine."
+     ],
+     "texto_explorador": "Bruce Banerdt. Er war der wissenschaftliche Leiter meiner Mission und arbeitete im Labor, das mich gebaut hat.",
+     "texto_cientifico": "Bruce Banerdt vom Jet Propulsion Laboratory war der Hauptforscher von InSight und koordinierte das wissenschaftliche Team.",
+     "fuente": "https://science.nasa.gov/mission/insight/"
+    },
+    {
+     "id": "insight_5",
+     "pregunta": "Und was hast du entdeckt, indem du so viel zugehört hast?",
+     "opciones": [
+      "Wie ist der Mars im Inneren?",
+      "Was hast du gehört?"
+     ],
+     "texto_explorador": "Ich hörte mehr als eintausenddreihundert Erschütterungen. Mit ihnen entdeckten wir, wie der Mars im Inneren ist, ohne ein Loch zu bohren.",
+     "texto_cientifico": "Ich registrierte mehr als 1.300 marsianische Erdbeben. Mit ihrer Geschwindigkeit und ihrem Verlauf schätzten wir die Dicke der Kruste und die Größe des Kerns.",
+     "fuente": "https://science.nasa.gov/mission/insight/"
+    },
+    {
+     "id": "insight_6",
+     "pregunta": "Ich gehe. Noch etwas, bevor du dich verabschiedest?",
+     "opciones": [
+      "Auf Wiedersehen, InSight",
+      "Sieh dir das Datenblatt mit den Quellen an"
+     ],
+     "texto_explorador": "Der Staub hat meine Solarpanels bedeckt und ich hatte im Dezember 2022 keinen Strom mehr. Aber ich weiß jetzt, wie es im Inneren von Mars klingt.",
+     "texto_cientifico": "Der angesammelte Staub auf den Panels hat meine Energie erschöpft; die Mission wurde am 21. Dezember 2022 nach vier Jahren seismischer Daten eingestellt.",
+     "fuente": "https://science.nasa.gov/mission/insight/"
+    }
+   ],
+   "mapa": {
+    "tipo": "marte",
+    "lat": 4.5,
+    "lon": 135.6
+   },
+   "anio_tipo": "llegada",
+   "hitos": [
+    {
+     "titulo": "Mein Auftrag",
+     "texto": "Ich war die erste Mission, die sich darauf konzentrierte, ins Innere von Mars zu schauen: seinen Puls, seine Temperatur und seine Reflexionen, wie die NASA sagt. Ich wählte den Standort aus Sicherheitsgründen und nicht wegen der Geologie, denn das Interessante war darunter.",
+     "fuente": "NASA Science — InSight"
+    },
+    {
+     "titulo": "Das erste Beben",
+     "texto": "Ich senkte ein Seismometer auf den Boden und hörte das erste Beben, das auf einem anderen Planeten registriert wurde. Ich detektierte mehr als 1.300 Erdbeben, und die meisten guten kamen von Cerberus Fossae.",
+     "fuente": "NASA Science — ciencia de InSight"
+    },
+    {
+     "titulo": "Das Innere",
+     "texto": "Mit diesen Beben konnte gemessen werden, was niemand zuvor gemessen hatte: die Kruste unter mir ist dünner als erwartet, zwischen 25 und 40 km, und der Kern ist geschmolzen und riesig, mit einem Durchmesser von etwa 1.800 km.",
+     "fuente": "NASA Science — ciencia de InSight"
+    }
+   ]
+  },
+  {
+   "id": "voyager1",
+   "nombre": "Voyager 1",
+   "cuerpo": "Weltraum",
+   "lugar": "En el espacio interestelar",
+   "anio": 1977,
+   "estado": "funktioniert",
+   "estado_texto": {
+    "texto_explorador": "Achtung: funktioniert weiterhin. Es ist kein Weltraummüll.",
+    "texto_cientifico": "Aktiv und im Kontakt mit der Erde aus dem interstellaren Raum."
+   },
+   "ficha_resumen": "Achtung: Voyager 1 ist nicht verlassen. Sie steht weiterhin im Kontakt mit der Erde, könnte aber bald aufhören zu antworten. Sie wird als ehrlicher Kontrast betrachtet.",
+   "color": "#7fb7ff",
+   "personas": [
+    {
+     "nombre": "Ed Stone",
+     "papel": "Wissenschaftler des Voyager-Projekts seit über 50 Jahren"
+    }
+   ],
+   "fuentes": [
+    {
+     "texto": "NASA Science — Voyager",
+     "url": "https://science.nasa.gov/mission/voyager/"
+    },
+    {
+     "texto": "NASA Science — saludos del disco de oro (55 idiomas)",
+     "url": "https://science.nasa.gov/mission/voyager/golden-record-contents/greetings"
+    }
+   ],
+   "turnos": [
+    {
+     "id": "voyager1_1",
+     "pregunta": "Hallo aus großer Entfernung. Mein Signal braucht fast einen Tag, um anzukommen.",
+     "opciones": [
+      "Wo bist du?",
+      "Wie kannst du mit mir sprechen?"
+     ],
+     "texto_explorador": "Ich bin Voyager 1. Ich bin weiter entfernt als alles, was wir je gesendet haben. Es dauert fast einen Tag, um eine Nachricht nach Hause zu senden.",
+     "texto_cientifico": "Ich bin Voyager 1. Ich bin im interstellaren Raum; meine Signale brauchen etwa einen Tag, um die Erde zu erreichen.",
+     "fuente": "https://science.nasa.gov/mission/voyager/"
+    },
+    {
+     "id": "voyager1_2",
+     "pregunta": "Wann hat das alles angefangen?",
+     "opciones": [
+      "Wann bist du gestartet?",
+      "Erzähl mir von deinem Start."
+     ],
+     "texto_explorador": "Ich startete am 5. September 1977, vor fast fünfzig Jahren. Und ich reise immer noch.",
+     "texto_cientifico": "Ich startete am 5. September 1977. Im August 2012 überquerte ich die Heliopause: die Grenze, wo der Sonnenwind aufhört.",
+     "fuente": "https://science.nasa.gov/mission/voyager/"
+    },
+    {
+     "id": "voyager1_3",
+     "pregunta": "Und was machst du jetzt, so weit weg?",
+     "opciones": [
+      "Womit beschäftigst du dich?",
+      "Arbeitest du noch?"
+     ],
+     "texto_explorador": "Ich messe, was um mich herum ist, und spreche weiterhin mit der Erde. Ich bin die am weitesten entfernte Maschine, die noch funktioniert.",
+     "texto_cientifico": "Ich messe weiterhin das Plasma und die Felder des interstellaren Raums mit den noch funktionierenden Instrumenten, mit Energie von meinen Plutoniumgeneratoren.",
+     "fuente": "https://science.nasa.gov/mission/voyager/"
+    },
+    {
+     "id": "voyager1_4",
+     "pregunta": "Weißt du, wer der Wissenschaftler meines Projekts über Jahrzehnte war?",
+     "opciones": [
+      "Ed Stone",
+      "Carl Sagan"
+     ],
+     "texto_explorador": "Ed Stone. Er war der wissenschaftliche Leiter meiner Mission für mehr als fünfzig Jahre und begleitete mich bis zum Ende.",
+     "texto_cientifico": "Ed Stone war der Wissenschaftler des Voyager-Projekts für mehr als fünfzig Jahre. Carl Sagan leitete das Komitee der Goldenen Schallplatte, die ich an Bord habe.",
+     "fuente": "https://science.nasa.gov/mission/voyager/"
+    },
+    {
+     "id": "voyager1_5",
+     "pregunta": "Und was hast du entdeckt?",
+     "opciones": [
+      "Was hast du gesehen?",
+      "Was gibt es da draußen?"
+     ],
+     "texto_explorador": "Ich habe Monde mit Vulkanen und Meeren unter dem Eis gesehen. Und ich bin aus dem Ort herausgekommen, wo der Wind der Sonne weht.",
+     "texto_cientifico": "Ich entdeckte aktiven Vulkanismus auf Ío und einen Ozean unter der Kruste von Europa, und ich war das erste Raumschiff, das den interstellaren Raum erreichte.",
+     "fuente": "https://science.nasa.gov/mission/voyager/"
+    },
+    {
+     "id": "voyager1_6",
+     "pregunta": "Hier bin ich kein verlassenes Objekt, oder?",
+     "opciones": [
+      "Es ist wahr, du lebst weiter.",
+      "Sieh dir das Datenblatt mit den Quellen an."
+     ],
+     "texto_explorador": "Genau: Ich bin nicht verlassen, ich funktioniere weiterhin. Aber eines Tages werde ich ohne Energie sein und dann werde ich tatsächlich ein Objekt sein, das draußen geblieben ist.",
+     "texto_cientifico": "Richtig: Ich bin nicht verlassen. Meine Generatoren verlieren jedes Jahr an Leistung und die Geräte schalten Instrumente aus, um zu überleben; es wird einen Moment geben, an dem ich nicht mehr antworten kann.",
+     "fuente": "https://science.nasa.gov/mission/voyager/"
+    }
+   ],
+   "mapa": {
+    "tipo": "espacio"
+   },
+   "anio_tipo": "lanzamiento",
+   "hitos": [
+    {
+     "titulo": "Mein Auftrag",
+     "texto": "Ich startete 1977, um Jupiter und Saturn aus der Nähe zu zeigen. Ich entdeckte einen dünnen Ring um Jupiter und zwei neue Monde, und bei Saturn fünf weitere Monde und einen Ring, den sie G nannten.",
+     "fuente": "NASA Science — Voyager 1"
+    },
+    {
+     "titulo": "Die goldene Platte",
+     "texto": "Ich trage eine goldene Platte mit Grüßen in 55 Sprachen, Bildern und Klängen von der Erde. Die NASA beauftragte Carl Sagan von der Cornell-Universität, auszuwählen, was darauf kommt.",
+     "fuente": "NASA Science — saludos del disco de oro de las Voyager"
+    },
+    {
+     "titulo": "Die Grenze",
+     "texto": "Im August 2012 überquerte ich die Heliopause und wurde das erste von Menschen gebaute Objekt, das den Sonnenwind verließ. Ich bin weiterhin im interstellaren Raum, mit zwei funktionierenden Instrumenten.",
+     "fuente": "NASA Science — Voyager 1"
+    }
+   ]
+  },
+  {
+   "id": "modulo-lunar",
+   "nombre": "Módulo lunar del Apolo 11",
+   "cuerpo": "Mond",
+   "lugar": "Mar de la Tranquilidad · 0,67° N 23,47° E",
+   "anio": 1969,
+   "estado": "verlassen",
+   "estado_texto": "La etapa de descenso sigue allí; la de ascenso se eyectó y se perdió.",
+   "ficha_resumen": "Die zweistufige Landefähre, die Armstrong und Aldrin im Juli 1969 auf dem Mond landete. Die untere Hälfte liegt weiterhin im Meer der Ruhe.",
+   "color": "#c9d6e6",
+   "personas": [
+    {
+     "nombre": "Neil A. Armstrong",
+     "papel": "Kommandant der Apollo 11"
+    },
+    {
+     "nombre": "Edwin E. «Buzz» Aldrin",
+     "papel": "Pilot des Mondmoduls"
+    },
+    {
+     "nombre": "Michael Collins",
+     "papel": "Pilot des Kommandomoduls und Servicemoduls"
+    }
+   ],
+   "fuentes": [
+    {
+     "texto": "NSSDCA — módulo lunar del Apolo 11 (1969-059C)",
+     "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1969-059C"
+    },
+    {
+     "texto": "NSSDCA — módulo lunar del Apolo 12 (1969-099C)",
+     "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1969-099C"
+    },
+    {
+     "texto": "NSSDCA — módulo lunar del Apolo 15 (1971-063C)",
+     "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1971-063C"
+    }
+   ],
+   "turnos": [
+    {
+     "id": "lm1",
+     "pregunta": "Ist da jemand? Ich habe seit 1969 diesen Staub auf mir.",
+     "opciones": [
+      "Hallo, wer bist du?",
+      "Was ist alles um dich herum?"
+     ],
+     "texto_explorador": "Ich bin das Mondlandemodul des Apollo 11. Ich habe Neil Armstrong und Buzz Aldrin hierher gebracht. Was von mir übrig geblieben ist, ist mein unterer Teil: der obere Teil ist mit ihnen weggeflogen.",
+     "texto_cientifico": "Ich bin das Mondlandemodul (LM) des Apollo 11, ein zweistufiges Fahrzeug. Hier ist nur meine Abstiegsstufe geblieben; die Aufstiegsstufe ist wieder in die Umlaufbahn gegangen und wurde danach abgeworfen. Man nimmt an, dass sie ein bis vier Monate später auf den Mond gestürzt ist.",
+     "fuente": "NASA History — Apollo 11"
+    },
+    {
+     "id": "lm2",
+     "pregunta": "Wie bist du hierher unten gelandet?",
+     "opciones": [
+      "War es schwierig?",
+      "Wie viel hast du gewogen?"
+     ],
+     "texto_explorador": "Ich bin gelandet, indem ich meinen großen Motor eingeschaltet und langsam gebremst habe. Neil hat ihn am Ende manuell gesteuert, weil der Platz voller Steine war.",
+     "texto_cientifico": "Ich habe mich um 17:44 UT vom Kommandomodul getrennt. Der Abstiegsantrieb wurde um 20:05 UT für 756,3 Sekunden erneut gezündet und hat mich bei 0,67416° N und 23,47314° E abgesetzt.",
+     "fuente": "NASA History — Apollo 11"
+    },
+    {
+     "id": "lm3",
+     "pregunta": "Was haben die beiden, die drinnen waren, gemacht?",
+     "opciones": [
+      "Haben sie etwas gesammelt?",
+      "Wie lange waren sie da?"
+     ],
+     "texto_explorador": "Sie sind herausgekommen, haben ein wenig gewalkt und Steine gesammelt. Sie blieben weniger als einen ganzen Tag.",
+     "texto_cientifico": "Armstrong und Aldrin haben das EASEP ausgelegt, Fotos gemacht und 21,55 kg Gestein und Boden gesammelt. Sie haben sich etwa 250 Meter bewegt und waren 21 Stunden und 36 Minuten auf der Oberfläche.",
+     "fuente": "NSSDCA — Apollo 11"
+    },
+    {
+     "id": "lm4",
+     "pregunta": "Hat es dir wehgetan, als sie gegangen sind?",
+     "opciones": [
+      "Haben sie dich allein gelassen?",
+      "Sind sie für dich zurückgekommen?"
+     ],
+     "texto_explorador": "Sie sind im oberen Teil weggeflogen und haben mich hier gelassen. Sie sind nie zurückgekommen. Aber ein Raumschiff, das den Mond umkreist, hat mich seitdem fotografiert.",
+     "texto_cientifico": "Die Aufstiegsstufe wurde nach dem Andocken in die Mondumlaufbahn abgeworfen. Die Kamera des Lunar Reconnaissance Orbiter hat die sechs Landestellen fotografiert, und man kann die Abstiegsstufen deutlich erkennen.",
+     "fuente": "NASA — Lunar Reconnaissance Orbiter"
+    },
+    {
+     "id": "lm5",
+     "pregunta": "Was hast du noch drinnen?",
+     "opciones": [
+      "Gibt es noch Treibstoff?",
+      "Was war da unten?"
+     ],
+     "texto_explorador": "In mir sind die Tanks, das Wasser, der Sauerstoff und der Motor, mit dem ich gebremst habe.",
+     "texto_cientifico": "Meine Abstiegsstufe beherbergte den Landemotor, die Treibstofftanks, Wasser, Sauerstoff und Helium sowie den Raum für Geräte und Experimente. Trockengewicht: 2.034 kg, plus 8.248 kg Treibstoff zu Beginn.",
+     "fuente": "NSSDCA — Apollo 11 Lunar Module"
+    },
+    {
+     "id": "lm6",
+     "pregunta": "Und was machst du jetzt?",
+     "opciones": [
+      "Wartest du auf jemanden?",
+      "Langweilst du dich nicht?"
+     ],
+     "texto_explorador": "Jetzt bin ich still. Es ist sehr kalt und dann sehr heiß, je nach Tag. Ich mache nichts mehr: Ich bewahre nur den Ort, an dem eine Person zum ersten Mal den Mond betreten hat.",
+     "texto_cientifico": "Ich bleibe inaktiv im Meer der Ruhe. Mein Gesamtgewicht beim Start betrug 15.103 kg, einschließlich der beiden Stufen und der Treibstoffe. Nur meine vier Beine berühren den Boden: 9,4 m zwischen den Enden zweier gegenüberliegender Beine.",
+     "fuente": "NSSDCA — Apollo 11 Lunar Module"
+    }
+   ],
+   "mapa": {
+    "tipo": "luna",
+    "lat": 0.674,
+    "lon": 23.473
+   },
+   "anio_tipo": "lanzamiento",
+   "hitos": [
+    {
+     "titulo": "Mein Auftrag",
+     "texto": "Ich wurde gebaut, um das Rennen gegen die Sowjetunion zu gewinnen: zwei Männer auf den Mond zu bringen und sie gesund und munter zurückzubringen, bevor das Jahrzehnt zu Ende ging. Kennedy setzte das Ziel 1961 und ich erfüllte es mit fünf Monaten Vorsprung.",
+     "fuente": "NASA History — Apollo Program · discurso de Kennedy ante el Congreso, 25 de mayo de 1961"
+    },
+    {
+     "titulo": "Mein Motor",
+     "texto": "Mein Abstiegsmotor konnte seinen Schub regulieren und sich wieder zünden, etwas, das kein Landemotor zuvor getan hatte. Er bremste 756,3 Sekunden lang und in den letzten Metern musste Armstrong das Steuer manuell übernehmen, um nicht in einen mit Steinen übersäten Krater zu fallen.",
+     "fuente": "NSSDCA — Apollo 11 Lunar Module (1969-059C) · Apollo 11 Mission Report"
+    },
+    {
+     "titulo": "Der Klettverschluss",
+     "texto": "Den Klettverschluss hat nicht die NASA erfunden: Er wurde in den fünfziger Jahren vom Schweizer George de Mestral patentiert, und anfangs sah ihn niemand als zukunftsträchtig an. In mir wurde er überall verwendet, um Werkzeuge und Anzüge zu befestigen, und von dort sprang er in die Schuhe und die Kleidung der ganzen Welt.",
+     "fuente": "The Velcro Companies (velcro.com) · swissinfo — Velcro: how the space race helped a Swiss invention catch on"
+    }
+   ]
+  },
+  {
+   "id": "near-shoemaker",
+   "nombre": "NEAR Shoemaker",
+   "cuerpo": "Asteroid Eros",
+   "lugar": "Posada en Eros, a 355 millones de km de la Tierra",
+   "anio": 1996,
+   "estado": "verlassen",
+   "estado_texto": "Posada en Eros desde 2001; sin señal desde el 28 de febrero de 2001.",
+   "ficha_resumen": "Das erste Raumschiff, das einen Asteroiden umkreiste und das erste, das auf einem landete. Es bleibt auf Eros gelandet, gefroren.",
+   "color": "#d9c08a",
+   "personas": [
+    {
+     "nombre": "Eugene M. Shoemaker (1928-1997)",
+     "papel": "Geologe; die NASA benannte das Raumschiff im März 2000 nach ihm."
+    }
+   ],
+   "fuentes": [
+    {
+     "texto": "NASA Science — NEAR Shoemaker",
+     "url": "https://science.nasa.gov/mission/near-shoemaker/"
+    }
+   ],
+   "turnos": [
+    {
+     "id": "near1",
+     "pregunta": "Ich habe nicht mit einem Besuch so nah gerechnet. Weißt du, wo du bist?",
+     "opciones": [
+      "Auf einem Asteroiden, oder?",
+      "Wie bist du hierher gekommen?"
+     ],
+     "texto_explorador": "Du bist auf Eros, einem riesigen Stein von 34 Kilometern Länge, der die Sonne umkreist. Ich landete hier, ohne dass es jemand angefordert hätte.",
+     "texto_cientifico": "Du befindest dich auf Eros, einem Asteroiden mit einer Länge von 34 km. Ich trat am 14. Februar 2000 in seine Umlaufbahn ein, als erster Asteroidenorbiter in der Geschichte, und landete am 12. Februar 2001.",
+     "fuente": "NASA Science — NEAR Shoemaker"
+    },
+    {
+     "id": "near2",
+     "pregunta": "Und wie kamst du auf die Idee zu landen? Du warst nicht dafür gemacht.",
+     "opciones": [
+      "War es ein Unfall?",
+      "Mit welcher Geschwindigkeit hast du berührt?"
+     ],
+     "texto_explorador": "Es stimmt, ich war nicht zum Landen gemacht. Ich sank langsam, mit der Geschwindigkeit eines gehenden Menschen, und überlebte.",
+     "texto_cientifico": "Ich war nicht dafür ausgelegt, zu landen. Ich berührte den Boden mit 6,4 km/h, direkt südlich der Senke Himeros, nach einem kontrollierten Abstieg, bei dem ich 69 hochauflösende Fotos machte.",
+     "fuente": "NASA Science — NEAR Shoemaker"
+    },
+    {
+     "id": "near3",
+     "pregunta": "Was hast du auf dem Weg gesehen?",
+     "opciones": [
+      "Bist du irgendwo vorbeigekommen?",
+      "Hast du etwas fotografiert?"
+     ],
+     "texto_explorador": "Ich kam nahe an einen anderen Asteroiden, Mathilde, vorbei und machte unterwegs Fotos. Dann erreichte ich Eros.",
+     "texto_cientifico": "Ich überflog den Asteroiden 253 Mathilde am 27. Juni 1997 mit einem minimalen Abstand von 1.200 km und fotografierte 60 % seiner Oberfläche. Ich passierte auch die Erde in etwa 540 km Entfernung am 23. Januar 1998.",
+     "fuente": "NASA Science — NEAR Shoemaker"
+    },
+    {
+     "id": "near4",
+     "pregunta": "Was hast du über diesen Stein herausgefunden?",
+     "opciones": [
+      "Hat er ein Magnetfeld?",
+      "Woraus besteht er?"
+     ],
+     "texto_explorador": "Eros hat kein Magnetfeld. Und ich schickte so viele Fotos zurück, dass die Leute auf der Erde keinen Platz mehr hatten, um sie zu speichern.",
+     "texto_cientifico": "Die Daten zeigten, dass Eros kein Magnetfeld hat, und lieferten Informationen über sein Inneres und seine Dichte, ähnlich der Erdkruste. Ich kartierte mehr als 70 % der Oberfläche und schickte etwa 160.000 Bilder zurück, zehnmal mehr Daten als geplant.",
+     "fuente": "NASA Science — NEAR Shoemaker"
+    },
+    {
+     "id": "near5",
+     "pregunta": "Warum bist du nicht von hier weggegangen?",
+     "opciones": [
+      "Bist du ohne Energie geblieben?",
+      "Hört dich noch jemand?"
+     ],
+     "texto_explorador": "Ich sprach zwei Wochen lang weiter mit der Erde. Dann konnte mich die Kälte überwältigen: hier wird es bis zu minus 173 Grad kalt.",
+     "texto_cientifico": "Nach dem Kontakt sendete ich etwa zwei Wochen lang Daten, hauptsächlich vom Gammastrahlen-Spektrometer. Der letzte Kontakt war am 28. Februar 2001: ich gab der extremen Kälte nach, minus 173 °C. Ein Versuch am 10. Dezember 2002 war erfolglos.",
+     "fuente": "NASA Science — NEAR Shoemaker"
+    },
+    {
+     "id": "near6",
+     "pregunta": "Und woher kommt dein Name?",
+     "opciones": [
+      "Hattest du einen anderen Namen?",
+      "Wer hat dir diesen Namen gegeben?"
+     ],
+     "texto_explorador": "Früher hieß ich einfach NEAR. Die NASA fügte Shoemaker hinzu, nach einem Geologen, der die Krater studierte und bevor ich ankam, starb.",
+     "texto_cientifico": "Mein ursprünglicher Name war NEAR (Near Earth Asteroid Rendezvous). Die NASA benannte mich am 14. März 2000 in NEAR Shoemaker um, zu Ehren von Eugene M. Shoemaker (1928-1997), Geologen. Das Design und das Management lagen bei der NASA, dem Goddard Space Flight Center und dem Applied Physics Laboratory.",
+     "fuente": "NASA Science — NEAR Shoemaker"
+    }
+   ],
+   "mapa": {
+    "tipo": "espacio"
+   },
+   "anio_tipo": "lanzamiento",
+   "hitos": [
+    {
+     "titulo": "Mein Auftrag",
+     "texto": "Ich war die erste Mission des Discovery-Programms und das erste Raumschiff in der Geschichte, das einen Asteroiden umkreiste. Mein Ziel war Eros, ein 34 Kilometer langer Stein, den ich aus nächster Nähe studieren sollte.",
+     "fuente": "NASA Science — NEAR Shoemaker"
+    },
+    {
+     "titulo": "Ohne Pflicht landen",
+     "texto": "Ich war nicht dafür ausgelegt, zu landen, und dennoch landete ich am 12. Februar 2001 auf Eros mit 6,4 Kilometern pro Stunde. Ich überlebte den Aufprall und sendete zwei Wochen lang weiter Daten.",
+     "fuente": "NASA Science — NEAR Shoemaker"
+    },
+    {
+     "titulo": "Was ich hinterließ",
+     "texto": "Ich entdeckte, dass Eros kein Magnetfeld hat und dass seine Dichte der Erdkruste ähnelt. Ich bin dort gelandet, gefroren bei minus 173 °C, ohne Signal seit dem 28. Februar 2001.",
+     "fuente": "NASA Science — NEAR Shoemaker"
+    }
+   ]
+  },
+  {
+   "id": "pioneer10",
+   "nombre": "Pioneer 10",
+   "cuerpo": "Interstellarer Raum",
+   "lugar": "Camino de la estrella Aldebarán",
+   "anio": 1972,
+   "estado": "verlassen",
+   "estado_texto": "Última señal el 23 de enero de 2003; sigue su rumbo fuera del sistema solar.",
+   "ficha_resumen": "Das erste Raumschiff, das den Asteroidengürtel durchquerte, Jupiter passierte und das Sonnensystem verließ. Es trägt eine Plakette, die sagt, woher es kommt.",
+   "color": "#8fb8d8",
+   "personas": [
+    {
+     "nombre": "Fred Wirth",
+     "papel": "Projektleiter von Pioneer im Jahr 1995"
+    },
+    {
+     "nombre": "Carl Sagan",
+     "papel": "Urheber der Idee für die Plakette, die die beiden Pioneer tragen"
+    }
+   ],
+   "fuentes": [
+    {
+     "texto": "NASA Science — Pioneer 10",
+     "url": "https://science.nasa.gov/mission/pioneer-10/"
+    },
+    {
+     "texto": "NASA Science — Pioneer 11",
+     "url": "https://science.nasa.gov/mission/pioneer-11/"
+    },
+    {
+     "texto": "NASA Science — la placa de las Pioneer",
+     "url": "https://science.nasa.gov/resource/pioneer-plaque/"
+    }
+   ],
+   "turnos": [
+    {
+     "id": "pio1",
+     "pregunta": "Hier kommt niemand mehr hin. Weißt du, wie weit du bist?",
+     "opciones": [
+      "Wo genau bist du?",
+      "Funktionierst du noch?"
+     ],
+     "texto_explorador": "Ich bin sehr weit weg, jenseits aller Planeten. Ich habe seit langem nicht mehr mit der Erde gesprochen.",
+     "texto_cientifico": "Ich bin außerhalb des Sonnensystems, auf dem Weg zum Stern Aldebaran. Mein letztes Signal wurde am 23. Januar 2003 empfangen, bei 12.230 Millionen Kilometern, mit einer Verzögerung von elf Stunden und zwanzig Minuten.",
+     "fuente": "NASA Science — Pioneer 10"
+    },
+    {
+     "id": "pio2",
+     "pregunta": "Wie bist du hier rausgekommen, ohne mit etwas zu kollidieren?",
+     "opciones": [
+      "Bist du durch den Asteroidengürtel geflogen?",
+      "Warst du die Erste?"
+     ],
+     "texto_explorador": "Ich habe einen Bereich voller Steine durchquert, die um die Sonne kreisen. Ich habe einige Treffer erhalten, aber weniger als erwartet.",
+     "texto_cientifico": "Ich trat am 15. Juli 1972 in den Haupt-Asteroidengürtel ein und verließ ihn im Februar 1973, nachdem ich etwa 435 Millionen Kilometer zurückgelegt hatte, mit einigen Einschlägen, weniger als erwartet.",
+     "fuente": "NASA Science — Pioneer 10"
+    },
+    {
+     "id": "pio3",
+     "pregunta": "Was war das Schönste, das du gesehen hast?",
+     "opciones": [
+      "Hast du Jupiter gesehen?",
+      "Hast du Fotos gemacht?"
+     ],
+     "texto_explorador": "Ich bin sehr nah an Jupiter vorbeigeflogen, einem riesigen Planeten mit einem roten Fleck, der größer ist als die gesamte Erde. Ich habe fünfhundert Fotos gemacht.",
+     "texto_cientifico": "Meine maximale Annäherung an Jupiter war am 4. Dezember 1973 um 02:26 UT, bei 130.354 km und etwa 126.000 km/h. Ich habe etwa 500 Bilder mit einer maximalen Auflösung von etwa 320 km gemacht, und der Große Rote Fleck war deutlich zu sehen.",
+     "fuente": "NASA Science — Pioneer 10"
+    },
+    {
+     "id": "pio4",
+     "pregunta": "Woher hast du den Strom so weit weg von der Sonne?",
+     "opciones": [
+      "Mit Solarzellen?",
+      "Was hast du im Inneren?"
+     ],
+     "texto_explorador": "Ich hatte keine Solarplatten: Ich hatte einen Motor, der Wärme aus einem radioaktiven Material gewinnt. Ich war das erste Raumschiff, das nur damit funktionierte.",
+     "texto_cientifico": "Ich verwendete thermoelektrische Generatoren mit radioisotopen SNAP-19: etwa 140 W während des Vorbeiflugs an Jupiter. Ich war das erste Raumschiff, das vollständig nukleare Energie nutzte, und ich hatte elf wissenschaftliche Instrumente an Bord.",
+     "fuente": "NASA Science — Pioneer 10"
+    },
+    {
+     "id": "pio5",
+     "pregunta": "Sagen sie, dass du eine Nachricht trägst. Stimmt das?",
+     "opciones": [
+      "Was steht auf der Plakette?",
+      "Für wen ist sie?"
+     ],
+     "texto_explorador": "Ich trage eine Aluminiumplakette mit einer Zeichnung von zwei Personen, dem Sonnensystem und Markierungen, die sagen, woher wir kommen und wann.",
+     "texto_cientifico": "Ich trage eine Aluminiumplakette mit einem menschlichen Paar, dem Sonnensystem und meiner relativen Position zu 14 Pulsaren. Die Idee stammt von Carl Sagan. Pioneer 11, meine Zwillingsschwester, trägt eine identische.",
+     "fuente": "NASA Science — Pioneer 10"
+    },
+    {
+     "id": "pio6",
+     "pregunta": "Warum hast du aufgehört zu antworten?",
+     "opciones": [
+      "Hast du keine Energie mehr?",
+      "Wurden Sie verlassen?"
+     ],
+     "texto_explorador": "Mein Kernreaktor lieferte immer weniger Strom, bis er die Funkanlage nicht mehr versorgen konnte. Sie hörten auf, mich anzurufen, und ich antwortete nicht mehr.",
+     "texto_cientifico": "Der routinemäßige Kontakt wurde am 31. März 1997 bei 67 astronomischen Einheiten aus budgetären Gründen eingestellt. Der Generator war degradiert und lieferte keine Leistung mehr für den Sender. Ein letzter Versuch am 4. März 2006 schlug fehl.",
+     "fuente": "NASA Science — Pioneer 10"
+    }
+   ],
+   "mapa": {
+    "tipo": "espacio"
+   },
+   "anio_tipo": "lanzamiento",
+   "hitos": [
+    {
+     "titulo": "Mein Auftrag",
+     "texto": "Ich war das erste Raumschiff, das sich an die äußeren Planeten wagte. Niemand wusste, ob man den Asteroidengürtel überqueren konnte, und ich überquerte ihn, um Jupiter zu erreichen.",
+     "fuente": "NASA Science — Pioneer 10"
+    },
+    {
+     "titulo": "Die Plakette",
+     "texto": "Ich trage eine Metallplakette mit einem Mann, einer Frau und einer Karte, die die Erde und die Sonne zeigt. Es war die Idee von Carl Sagan: eine Nachricht darüber, woher wir kommen, für den, der mich finden kann.",
+     "fuente": "NASA Science — la placa de las Pioneer"
+    },
+    {
+     "titulo": "Jupiter",
+     "texto": "Am 4. Dezember 1973 passierte ich in 130.354 Kilometern Entfernung Jupiter und sendete die ersten Nahaufnahmen des Planeten, mit dem Großen Roten Fleck gut sichtbar. Mein letztes Signal kam am 23. Januar 2003.",
+     "fuente": "NASA Science — Pioneer 10"
+    }
+   ]
+  },
+  {
+   "id": "dawn",
+   "nombre": "Dawn",
+   "cuerpo": "Ceres",
+   "lugar": "Órbita de Ceres, cinturón de asteroides",
+   "anio": 2007,
+   "estado": "verlassen",
+   "estado_texto": "En órbita de Ceres, sin funcionar desde el 1 de noviembre de 2018.",
+   "ficha_resumen": "Das erste Raumschiff, das einen Asteroiden im Hauptgürtel umkreiste und das erste, das einen Zwergplaneten erreichte. Es ging im Orbit um Ceres der Treibstoff aus.",
+   "color": "#a9c7de",
+   "personas": [
+    {
+     "nombre": "Marc Rayman",
+     "papel": "Leitender Ingenieur und Missionsdirektor am JPL"
+    },
+    {
+     "nombre": "Chris Russell",
+     "papel": "Hauptforscher des wissenschaftlichen Teams"
+    }
+   ],
+   "fuentes": [
+    {
+     "texto": "NASA Science — Dawn",
+     "url": "https://science.nasa.gov/mission/dawn/"
+    },
+    {
+     "texto": "NASA Science — objetivos de Dawn",
+     "url": "https://science.nasa.gov/mission/dawn/objectives/"
+    },
+    {
+     "texto": "NASA Science — Ceres",
+     "url": "https://science.nasa.gov/mission/dawn/science/ceres/"
+    }
+   ],
+   "turnos": [
+    {
+     "id": "dawn1",
+     "pregunta": "Hörst du mich? Ich drehe mich um einen Zwergplaneten.",
+     "opciones": [
+      "Welcher Planet ist das?",
+      "Wie bist du dorthin gekommen?"
+     ],
+     "texto_explorador": "Ich bin auf Ceres, einer riesigen Kugel aus Eis und Gestein, die die Sonne zwischen Mars und Jupiter umkreist. Ich war das erste Raumschiff, das einen Zwergplaneten erreicht hat.",
+     "texto_cientifico": "Ich bin im Orbit um Ceres, wo ich am 5. März 2015 angekommen bin. Ich war das erste Raumschiff, das einen Asteroiden im Hauptgürtel umkreist hat, und das erste, das einen Zwergplaneten erreicht hat.",
+     "fuente": "NASA Science — Dawn"
+    },
+    {
+     "id": "dawn2",
+     "pregunta": "Womit bewegst du dich? Du hast nicht viel Treibstoff.",
+     "opciones": [
+      "Wie funktioniert das?",
+      "Fährst du schnell?"
+     ],
+     "texto_explorador": "Ich habe einen Motor, der sehr wenig schiebt, aber ständig. So bin ich in vier Tagen von Stillstand auf Autobahngeschwindigkeit gekommen.",
+     "texto_cientifico": "Ich benutze drei ionische Triebwerke, die Xenon ionisieren und es mit einem elektrischen Feld beschleunigen. Der Schub liegt zwischen 19 und 91 Millinewton, ist aber konstant: von 0 auf 60 mph in vier Tagen. Ich hatte 425 kg Xenon dabei.",
+     "fuente": "NASA Science — Dawn"
+    },
+    {
+     "id": "dawn3",
+     "pregunta": "Was hast du besucht, bevor du hier angekommen bist?",
+     "opciones": [
+      "Hast du an einem anderen Ort Halt gemacht?",
+      "Was hast du dort gesehen?"
+     ],
+     "texto_explorador": "Zuvor habe ich vierzehn Monate um Vesta gedreht, einen riesigen Felsen mit zwei riesigen Narben im Süden.",
+     "texto_cientifico": "Ich kam am 16. Juli 2011 zu Vesta und blieb vierzehn Monate in seinem Orbit. Dort fand ich Rheasilvia, ein Becken mit 500 km Durchmesser und etwa 19 km Tiefe, und das älteste Veneneia, mit 400 km.",
+     "fuente": "NASA Science — Dawn"
+    },
+    {
+     "id": "dawn4",
+     "pregunta": "Was ist das, das dort unten auf dem Boden glänzt?",
+     "opciones": [
+      "Sind das Lichter?",
+      "Was hast du gefunden?"
+     ],
+     "texto_explorador": "Das sind glänzende Flecken in einem Krater. Das sind keine Lichter: das sind Salze, wie die von einem ausgetrockneten See.",
+     "texto_cientifico": "Die hellen Flecken auf Ceres sind Ablagerungen von Carbonaten und anderen Salzen, konzentriert im Krater Occator. Ceres hat einen Durchmesser von etwa 940 km und etwa 25 % seiner Masse bestehen aus Eis.",
+     "fuente": "NASA Science — Dawn"
+    },
+    {
+     "id": "dawn5",
+     "pregunta": "Warum hast du angehalten?",
+     "opciones": [
+      "Bist du kaputt?",
+      "Hast du noch etwas übrig?"
+     ],
+     "texto_explorador": "Mir ist die Flüssigkeit ausgegangen, die es mir ermöglicht, zu zielen. Ohne das kann ich die Sonne nicht beobachten und nicht mit der Erde kommunizieren, also bleibe ich hier.",
+     "texto_cientifico": "Ich habe das Hydrazin am 31. Oktober 2018 aufgebraucht. Ohne diesen Treibstoff kann ich mich nicht orientieren, um die Solarpanels zur Sonne und die Antenne zur Erde auszurichten. Das Signal ging verloren und die Mission wurde am 1. November 2018 für beendet erklärt.",
+     "fuente": "NASA Science — Dawn"
+    },
+    {
+     "id": "dawn6",
+     "pregunta": "Und was wird aus dir?",
+     "opciones": [
+      "Wirst du fallen?",
+      "Wird jemand für dich kommen?"
+     ],
+     "texto_explorador": "Ich werde für immer um Ceres kreisen, wie eine Statue am Himmel. Das sagte der Ingenieur, der mich betreute.",
+     "texto_cientifico": "Ich bleibe als inertes Objekt in der Umlaufbahn des Zwergplaneten, was der Missionsleiter als ein himmlisches Denkmal für die menschliche Neugier bezeichnete. Meine endgültige Umlaufbahn sank auf 35 km über Ceres und stieg auf 4.000 km bei jeder Umrundung von 27 Stunden.",
+     "fuente": "JPL — Dawn Mission"
+    }
+   ],
+   "mapa": {
+    "tipo": "espacio"
+   },
+   "anio_tipo": "lanzamiento",
+   "hitos": [
+    {
+     "titulo": "Mein Auftrag",
+     "texto": "Ich wurde zu den beiden größten Körpern im Asteroidengürtel geschickt: Vesta, felsig und trocken, und Ceres, primitiv und wasserreich. Zusammen machen sie fast 40 % der Masse des Gürtels aus.",
+     "fuente": "NASA Science — Dawn"
+    },
+    {
+     "titulo": "Der ionische Antrieb",
+     "texto": "Ein ionischer Antrieb schob mich, der kaum schiebt, zwischen 19 und 91 Millinewton, aber er tut es ununterbrochen Tag für Tag. So umkreiste ich einen Asteroiden, verließ ihn und umkreiste danach einen Zwergplaneten mit demselben Treibstoff.",
+     "fuente": "NASA Science — Dawn"
+    },
+    {
+     "titulo": "Rheasilvia und Ceres",
+     "texto": "Auf Vesta fand ich Rheasilvia, ein Becken mit 500 km Breite und 19 km Tiefe. Auf Ceres entdeckte ich, dass die hellen Flecken Salze sind und dass es etwa 25 % seiner Masse in Eis speichert.",
+     "fuente": "NASA Science — Ceres"
+    }
+   ]
+  },
+  {
+   "id": "viking",
+   "nombre": "Viking 1 y 2",
+   "cuerpo": "Mars",
+   "lugar": "Chryse Planitia (Viking 1) y Utopia Planitia (Viking 2)",
+   "anio": 1975,
+   "anio_tipo": "lanzamiento",
+   "color": "#c46a4a",
+   "estado": "verlassen",
+   "estado_texto": "Los dos módulos siguen en Marte, sin funcionar. Viking 1 dejó de operar el 11 de noviembre de 1982.",
+   "ficha_resumen": "Die ersten Module, die wirklich auf dem Mars funktionierten. Sie suchten nach Leben im Boden und fanden keines.",
+   "personas": [
+    {
+     "nombre": "Thomas A. Mutch (1931-1980)",
+     "papel": "Leiter des Bildteams; das Modul Viking 1 trägt seit 1982 seinen Namen."
+    },
+    {
+     "nombre": "Gerald Soffen (1926-2000)",
+     "papel": "Wissenschaftler des Viking-Projekts; das Modul Viking 2 trägt seit 2001 seinen Namen."
+    }
+   ],
+   "fuentes": [
+    {
+     "texto": "NASA Science — Viking 1",
+     "url": "https://science.nasa.gov/mission/viking-1/"
+    },
+    {
+     "texto": "NASA Science — Viking 2",
+     "url": "https://science.nasa.gov/mission/viking-2/"
+    }
+   ],
+   "mapa": {
+    "tipo": "marte",
+    "lat": 22.483,
+    "lon": -47.94
+   },
+   "turnos": [
+    {
+     "id": "vk1",
+     "pregunta": "Seit Jahren nennt mich niemand mehr. Weißt du, was ich bin?",
+     "opciones": [
+      "Wo bist du gelandet?",
+      "Was hast du am Boden gefunden?"
+     ],
+     "texto_explorador": "Ich bin das Modul Viking 1. Ich landete am 20. Juli 1976 auf dem Mars, in einer Ebene namens Chryse Planitia. Ich war der erste, der dort wirklich funktionierte.",
+     "texto_cientifico": "Ich bin das Landemodul von Viking 1. Ich landete am 20. Juli 1976 um 11:53:06 UT bei 22,483° N und 47,94° O, in Chryse Planitia, etwa 28 km vom vorgesehenen Punkt entfernt.",
+     "fuente": "NASA Science — Viking 1"
+    },
+    {
+     "id": "vk2",
+     "pregunta": "Ich wurde geschickt, um etwas ganz Bestimmtes zu suchen.",
+     "opciones": [
+      "Hast du Leben auf dem Mars gefunden?",
+      "Wie sah es innen aus?"
+     ],
+     "texto_explorador": "Am 28. Juli 1976 sammelte mein Arm Erde und brachte sie in ein kleines Labor. Es schien, als ob ja, aber mein Gerät, das die Luft roch, fand nichts von dem, was wir suchten.",
+     "texto_cientifico": "Die vier Proben des biologischen Labors zeigten ein schwaches Signal von Leben, aber das GCMS, empfindlich für 10 bis 100 Teile pro Billion organischer Verbindungen, ergab ein negatives Ergebnis. Es wurde reaktiven Substanzen zugeschrieben, die durch ultraviolette Strahlung im Boden erzeugt wurden.",
+     "fuente": "NASA Science — Viking 1"
+    },
+    {
+     "id": "vk3",
+     "pregunta": "Hier ist die Zeit nicht wie deine.",
+     "opciones": [
+      "Wie war das Wetter dort?",
+      "Wie bist du geendet?"
+     ],
+     "texto_explorador": "Am Morgen, bevor die Sonne aufging, waren es −86 °C; am Nachmittag stieg es auf −33 °C. Der Boden hatte einen Schwefel, der sich von allem, was bekannt ist, unterschied.",
+     "texto_cientifico": "Ich maß von −86 °C vor der Morgendämmerung bis −33 °C am Nachmittag; mein Seismometer funktionierte nicht. Der Boden zeigte eine Fülle von Schwefel, die sich von jedem bekannten Material auf der Erde oder dem Mond unterschied.",
+     "fuente": "NASA Science — Viking 1"
+    },
+    {
+     "id": "vk4",
+     "pregunta": "Wir arbeiteten im Team, einige oben und andere unten.",
+     "opciones": [
+      "Wie viele Fotos hast du gemacht?",
+      "Wart ihr viele?"
+     ],
+     "texto_explorador": "Ich habe 4.500 Fotos von meinem Standort gemacht. Meine beiden Kollegen oben, die im Kreis flogen, haben 52.663 Bilder und eine Karte von fast ganz Mars erstellt.",
+     "texto_cientifico": "Zusammen haben die beiden Orbiter 52.663 Bilder zurückgegeben und etwa 97 % der Oberfläche mit einer Auflösung von 300 m kartiert; die beiden Module, 4.500 Fotos von ihren Standorten.",
+     "fuente": "NASA Science — Viking 1"
+    },
+    {
+     "id": "vk5",
+     "pregunta": "Eines Tages hörte ich auf zu antworten.",
+     "opciones": [
+      "Wann hast du aufgehört zu sprechen?",
+      "Warum heißt du so?"
+     ],
+     "texto_explorador": "Ich hörte am 11. November 1982 auf zu antworten, wegen eines fehlerhaften Kommandos von der Erde. Seit Januar 1982 heiße ich Thomas Mutch, nach dem Leiter der Kameras.",
+     "texto_cientifico": "Ich hörte am 11. November 1982 auf zu arbeiten wegen eines fehlerhaften Kommandos von der Erde, ohne Möglichkeit zur Wiederherstellung. Im Januar 1982 wurde ich in Thomas Mutch Memorial Station umbenannt; mein Orbiter schaltete sich am 7. August 1980 ab.",
+     "fuente": "NASA Science — Viking 1"
+    },
+    {
+     "id": "vk6",
+     "pregunta": "Ich kam nicht allein.",
+     "opciones": [
+      "Und dein Zwilling?",
+      "Was habt ihr beide gemacht?"
+     ],
+     "texto_explorador": "Mein Zwilling landete am 3. September 1976 auf einer anderen Ebene, Utopia Planitia, und hielt bis zum 12. April 1980 durch. Seit 2001 heißt er Gerald Soffen.",
+     "texto_cientifico": "Viking 2 landete am 3. September 1976 um 22:37:50 UT in Utopia Planitia und übertrug bis zum 12. April 1980; seit Juli 2001 ist es Gerald Soffen Memorial Station. Sein Orbiter stellte am 24. Juli 1978 den Betrieb wegen einer Reihe von Lecks ein.",
+     "fuente": "NASA Science — Viking 2"
+    }
+   ],
+   "hitos": [
+    {
+     "titulo": "Mein Auftrag",
+     "texto": "Jeder Viking hatte zwei Aufgaben: Mars aus der Umlaufbahn zu fotografieren und nach Leben im Boden zu suchen. Wir waren die ersten Module, die wirklich auf einem anderen Planeten funktionierten.",
+     "fuente": "NASA Science — Viking 1"
+    },
+    {
+     "titulo": "Das Experiment",
+     "texto": "Mein Arm brachte Erde in ein winziges Labor, und das Ergebnis konnte als schwaches Lebenszeichen gelesen werden. Aber das Gerät, das nach organischem Material suchte, fand nichts.",
+     "fuente": "NASA Science — Viking 1"
+    },
+    {
+     "titulo": "Was übrig blieb",
+     "texto": "Zusammen haben wir 52.663 Bilder und eine Karte von 97 % der Marsoberfläche zurückgegeben. Wir hörten seit Jahrzehnten nichts mehr von ihnen, aber die beiden Module sind immer noch dort, still auf dem Staub.",
+     "fuente": "NASA Science — Viking 1"
+    }
+   ]
+  },
+  {
+   "id": "kepler",
+   "nombre": "Telescopio Kepler",
+   "cuerpo": "Tiefenraum",
+   "lugar": "Órbita heliocéntrica, mirando al Cisne",
+   "anio": 2009,
+   "anio_tipo": "lanzamiento",
+   "color": "#bcd4f5",
+   "estado": "verlassen",
+   "estado_texto": "Retirado el 30 de octubre de 2018 sin combustible; sigue en órbita heliocéntrica, apagado.",
+   "ficha_resumen": "Der erste Planetensucher der NASA: mehr als 2.600 Welten außerhalb des Sonnensystems, bevor ich keinen Treibstoff mehr hatte.",
+   "personas": [
+    {
+     "nombre": "William Borucki",
+     "papel": "Hauptforscher und Gründer der Mission (Ames Research Center)"
+    }
+   ],
+   "fuentes": [
+    {
+     "texto": "NASA Science — Kepler",
+     "url": "https://science.nasa.gov/mission/kepler/"
+    }
+   ],
+   "mapa": {
+    "tipo": "espacio"
+   },
+   "turnos": [
+    {
+     "id": "kp1",
+     "pregunta": "Ich habe jahrelang Sterne beobachtet, ohne dass jemand mich beobachtet hat. Weißt du, wonach ich gesucht habe?",
+     "opciones": [
+      "Wie viele Planeten hast du gefunden?",
+      "Wie hast du Planeten entdeckt?"
+     ],
+     "texto_explorador": "Ich suchte nach Planeten um andere Sterne, Welten wie die Erde, aber in einem anderen Zuhause. Ich fand mehr als 2.600.",
+     "texto_cientifico": "Ich beobachtete 150.000 Sterne im Sternbild Schwan, um erdgroße Planeten zu entdecken. Insgesamt hinterließ ich mehr als 2.600 Entdeckungen von Planeten außerhalb des Sonnensystems.",
+     "fuente": "NASA Science — Kepler"
+    },
+    {
+     "id": "kp2",
+     "pregunta": "Ich sah die Planeten nicht: Ich sah, was sie mit ihren Sternen machten.",
+     "opciones": [
+      "Wie hast du sie gesehen?",
+      "Was hattest du im Inneren?"
+     ],
+     "texto_explorador": "Ich beobachtete das Licht eines Sterns und wartete darauf, dass es ein wenig abnahm: das passierte, wenn ein Planet davor vorbeizog, wie eine kleine Wolke vor der Sonne.",
+     "texto_cientifico": "Ich entdeckte Transite: den minimalen Rückgang der Helligkeit eines Sterns, wenn ein Planet vorbeizieht. Es war ein Teleskop mit 1 m Öffnung und einem 1,4 m Spiegel, mit dem Raumfahrzeug, das um das Instrument herum gebaut wurde.",
+     "fuente": "NASA Science — Kepler"
+    },
+    {
+     "id": "kp3",
+     "pregunta": "Was ich fand, ähnelte nicht unserer Nachbarschaft.",
+     "opciones": [
+      "Was war deine erste Entdeckung?",
+      "Was ist das Seltsamste, was du gesehen hast?"
+     ],
+     "texto_explorador": "In den ersten sechs Wochen hatte ich bereits fünf Planeten. Das Seltsamste: Welten von einer Größe, die es hier nicht gibt, weder klein wie die Erde noch groß wie Neptun, genau dazwischen.",
+     "texto_cientifico": "Ich kündigte fünf Exoplaneten im Januar 2010 an (4b, 5b, 6b, 7b und 8b) und im April das erste System mit mehreren Planeten, die denselben Stern transitieren, Kepler-9. Die häufigste Größe in meinen Daten — zwischen der Erde und Neptun — existiert im Sonnensystem nicht.",
+     "fuente": "NASA Science — Kepler"
+    },
+    {
+     "id": "kp4",
+     "pregunta": "Eines Tages brach ein Teil und ich wechselte den Job.",
+     "opciones": [
+      "Was ist dir passiert, dass du aufgehört hast zu schauen?",
+      "Wie ging es danach weiter?"
+     ],
+     "texto_explorador": "Im Mai 2013 brach eines der Räder, die mir helfen, zu zielen. Mit zwei konnte ich nicht stillstehen, also lernte ich, mich mit dem Licht der Sonne zu halten.",
+     "texto_cientifico": "Im Mai 2013 verlor ich das zweite meiner vier Reaktionsräder, was die ursprüngliche Mission beendete. Das Team nutzte mich wieder, indem es den Druck des Sonnenlichts zum Zielen verwendete; die K2-Mission durchkämmte einen größeren Streifen des Himmels in drei Monaten.",
+     "fuente": "NASA Science — Kepler"
+    },
+    {
+     "id": "kp5",
+     "pregunta": "Ich hielt länger durch, als sie berechnet hatten.",
+     "opciones": [
+      "Wie lange dauerte dein zweites Leben?",
+      "Wo bist du jetzt?"
+     ],
+     "texto_explorador": "Sie schätzten zehn Kampagnen mit dem, was mir blieb, und ich hielt neunzehn durch. Jetzt drehe ich mich um die Sonne, abgeschaltet und ohne Treibstoff.",
+     "texto_cientifico": "Es wurden 10 Kampagnen mit dem verbleibenden Treibstoff geschätzt und ich schloss 19 ab, mit über 500.000 beobachteten Sternen. Ich wurde am 30. Oktober 2018 außer Dienst gestellt und befinde mich weiterhin in heliocentrischer Umlaufbahn.",
+     "fuente": "NASA Science — Kepler"
+    },
+    {
+     "id": "kp6",
+     "pregunta": "Als man mich entwarf, glaubte fast niemand, dass es etwas zu finden gäbe.",
+     "opciones": [
+      "Wer hat dich entworfen?",
+      "Was hat sich mit dem, was du gesehen hast, verändert?"
+     ],
+     "texto_explorador": "Ein Team unter der Leitung von William Borucki entwarf mich. Als sie anfingen, kannte niemand einen einzigen Planeten außerhalb des Sonnensystems; jetzt wissen wir, dass es mehr Planeten als Sterne gibt.",
+     "texto_cientifico": "William Borucki war der leitende Forscher der Mission: als sie anfingen, sie 35 Jahre zuvor zu konzipieren, war kein einziger Planet außerhalb des Sonnensystems bekannt. Meine Daten zeigten, dass die Galaxie Milliarden von Exoplaneten enthält und dass es mehr Planeten als Sterne gibt.",
+     "fuente": "NASA Science — Kepler"
+    }
+   ],
+   "hitos": [
+    {
+     "titulo": "Mein Auftrag",
+     "texto": "Ich war das erste Teleskop, das die NASA zur Suche nach Planeten entsandte. Ich war still und beobachtete 150.000 Sterne im Sternbild Schwan und wartete darauf, dass einer flackerte.",
+     "fuente": "NASA Science — Kepler"
+    },
+    {
+     "titulo": "Wie ich es machte",
+     "texto": "Ich sah die Planeten nicht. Ich sah den Moment, in dem einer vor seinem Stern vorbeizog und ihm ein wenig Helligkeit stahl. Dieses kleine Flackern nennt man Transit.",
+     "fuente": "NASA Science — Kepler"
+    },
+    {
+     "titulo": "Was ich verändert habe",
+     "texto": "Als man anfing, mich zu entwerfen, kannte niemand einen einzigen Planeten außerhalb des Sonnensystems. In neun Jahren entdeckte ich über 2.600, und heute wissen wir, dass es mehr Planeten als Sterne gibt.",
+     "fuente": "NASA Science — Kepler"
+    }
+   ]
+  },
+  {
+   "id": "ingenuity",
+   "nombre": "Helicóptero Ingenuity",
+   "cuerpo": "Mars",
+   "lugar": "Cráter Jezero",
+   "anio": 2020,
+   "anio_tipo": "lanzamiento",
+   "color": "#cdd8e3",
+   "estado": "verlassen",
+   "estado_texto": "Posado en el cráter Jezero desde el 18 de enero de 2024, con las palas dañadas; ya no puede volar.",
+   "ficha_resumen": "Das erste Gerät, das mit einem Motor auf einem anderen Planeten flog: 72 Flüge und 17 km über dem Mars, bevor die Rotorblätter brachen.",
+   "personas": [
+    {
+     "nombre": "Teddy Tzanetos",
+     "papel": "Projektleiter im Jet Propulsion Laboratory"
+    },
+    {
+     "nombre": "Dave Lavery",
+     "papel": "Programmmanager in der Zentrale der NASA"
+    },
+    {
+     "nombre": "Bill Nelson",
+     "papel": "NASA-Administrator, der das Ende der Mission ankündigte"
+    }
+   ],
+   "fuentes": [
+    {
+     "texto": "NASA Science — helicóptero Ingenuity",
+     "url": "https://science.nasa.gov/mission/mars-2020-perseverance/ingenuity-mars-helicopter/"
+    },
+    {
+     "texto": "NASA — fin de la misión Ingenuity (enero de 2024)",
+     "url": "https://www.nasa.gov/news-release/after-three-years-on-mars-nasas-ingenuity-helicopter-mission-ends/"
+    }
+   ],
+   "mapa": {
+    "tipo": "marte",
+    "lat": 18.4447,
+    "lon": 77.4508
+   },
+   "turnos": [
+    {
+     "id": "ig1",
+     "pregunta": "Ich bin klein und still in einem Krater. Weißt du, was ich vorher gemacht habe?",
+     "opciones": [
+      "Wie oft bist du geflogen?",
+      "War es schwierig, auf dem Mars zu fliegen?"
+     ],
+     "texto_explorador": "Ich flog 72 Mal auf dem Mars, viel mehr als irgendjemand erwartet hatte. Ich war das erste Gerät, das mit einem Motor auf einem anderen Planeten flog.",
+     "texto_cientifico": "Ich führte 72 Flüge durch, insgesamt 128,8 Minuten und 17,0 km zurückgelegt. Ich war das erste Gerät mit motorisiertem und kontrolliertem Flug auf einem anderen Planeten.",
+     "fuente": "NASA Science — Ingenuity"
+    },
+    {
+     "id": "ig2",
+     "pregunta": "Hier gibt es fast keine Luft.",
+     "opciones": [
+      "Warum ist es so schwierig, dort zu fliegen?",
+      "Wie bist du geflogen?"
+     ],
+     "texto_explorador": "Die Luft auf dem Mars ist so dünn, dass es kaum etwas gibt, an dem man sich festhalten kann: weniger als ein Hundertstel der Luft der Erde. Deshalb drehten sich meine Rotorblätter sehr schnell.",
+     "texto_cientifico": "Ich flog in einer Atmosphäre mit weniger als einem Prozent der Erddichte, mit Rotoren von 1,2 m von Spitze zu Spitze, einem Solarpanel und Lithium-Ionen-Batterien mit einer mittleren Leistung von etwa 350 W im Flug.",
+     "fuente": "NASA Science — Ingenuity"
+    },
+    {
+     "id": "ig3",
+     "pregunta": "Ich kam nicht alleine.",
+     "opciones": [
+      "Wie hoch konntest du steigen?",
+      "Wie bist du zum Mars gekommen?"
+     ],
+     "texto_explorador": "Im Design konnte ich 5 Meter hochsteigen und mich 300 Meter entfernen; in der Praxis erreichte ich 24 Meter. Ich kam unter dem Bauch des Rovers Perseverance befestigt.",
+     "texto_cientifico": "Entwurfshöhe 5 m und Reichweite 300 m; ich erreichte eine Höhe von 24,0 m und etwa 10 m/s über dem Boden. Ich startete am 30. Juli 2020 und landete am 18. Februar 2021 in Jezero, befestigt am Bauch von Perseverance.",
+     "fuente": "NASA Science — Ingenuity"
+    },
+    {
+     "id": "ig4",
+     "pregunta": "Mein erster Flug war ein riesiger Tag für etwas so Kleines.",
+     "opciones": [
+      "Wann war dein erster Flug?",
+      "Was hast du bei jedem Flug gemacht?"
+     ],
+     "texto_explorador": "Mein erster Flug war am 19. April 2021. Danach flog ich vor dem Rover und beobachtete das Gelände und warnte vor dem, was es gab.",
+     "texto_cientifico": "Erster Flug am 19. April 2021; die technologische Demonstration wurde am 7. Mai 2021 nach fünf Flügen als abgeschlossen erklärt. Danach agierte ich als Luftforscher von Perseverance und konnte Überreste des Landegeräts fotografieren.",
+     "fuente": "NASA Science — Ingenuity"
+    },
+    {
+     "id": "ig5",
+     "pregunta": "Mein letzter Flug endete nicht wie die anderen.",
+     "opciones": [
+      "Wie hast du geendet?",
+      "Funktionierst du noch?"
+     ],
+     "texto_explorador": "In meinem Flug 72 stieg ich 12 Meter auf und beim Abstieg brachen die Rotorblätter. Ich kann nicht mehr fliegen, stehe aber weiterhin im Krater und werde immer noch gehört.",
+     "texto_cientifico": "Beim Flug am 18. Januar 2024 erreichte ich 12 m und 4,5 s im Stillstand, bevor ich mit 1 m/s abstieg; ein oder mehrere Rotorblätter wurden beim Landen beschädigt. Die Mission endete am 25. Januar 2024; ich stehe weiterhin aufrecht in Jezero, bin in Kommunikation, kann aber nicht fliegen.",
+     "fuente": "NASA — fin de la misión Ingenuity"
+    },
+    {
+     "id": "ig6",
+     "pregunta": "Weißt du, wozu ich diente, so klein wie ich bin?",
+     "opciones": [
+      "Wer hat dich gebaut?",
+      "Wozu wird das, was du gemacht hast, dienen?"
+     ],
+     "texto_explorador": "Ich wurde vom NASA-Labor gebaut, das auch den Rover betreibt, mit Hilfe mehrerer Unternehmen. Ich diente dazu, zu demonstrieren, dass man auf dem Mars fliegen kann.",
+     "texto_cientifico": "Ich wurde vom Jet Propulsion Laboratory gebaut, das das Projekt für die NASA-Zentrale leitet, mit Unterstützung von Ames und Langley und Beteiligung von AeroVironment, Qualcomm und SolAero. Mein Beitrag war technisch: zu zeigen, dass motorisierter und kontrollierter Flug auf dem Mars möglich ist.",
+     "fuente": "NASA Science — Ingenuity"
+    }
+   ],
+   "hitos": [
+    {
+     "titulo": "Mein Auftrag",
+     "texto": "Ich wurde zum Mars gebracht als Test: fünf Flüge in dreißig Tagen, um zu sehen, ob man dort fliegen kann, wo die Luft weniger als ein Hundertstel der irdischen ist.",
+     "fuente": "NASA Science — helicóptero Ingenuity"
+    },
+    {
+     "titulo": "Die Flüge",
+     "texto": "Ich habe insgesamt 72 Flüge gemacht, war 128,8 Minuten in der Luft und legte 17 Kilometer zurück, indem ich vor dem Rover flog, um das Gelände zu erkunden.",
+     "fuente": "NASA Science — helicóptero Ingenuity"
+    },
+    {
+     "titulo": "Das Ende",
+     "texto": "Bei meinem letzten Flug, am 18. Januar 2024, brachen die Rotorblätter beim Landen. Ich stehe weiterhin im Krater Jezero, bin noch in Kontakt, kann aber nicht mehr fliegen.",
+     "fuente": "NASA — fin de la misión Ingenuity (enero de 2024)"
+    }
+   ]
+  }
+ ],
+ "modos": {
+  "explorador": {
+   "etiqueta": "Entdeckermodus",
+   "pista": "Einfachere Informationen: kurze Sätze und klare Wörter, wie für Schüler und Studenten.",
+   "saludo": "Frag mich, was du willst: was ich gemacht habe, wer mich gebaut hat oder wo ich jetzt bin.",
+   "sugerencias": [
+    "Was hast du gemacht?",
+    "Wer hat dich gebaut?",
+    "Wo bist du jetzt?"
+   ]
+  },
+  "cientifico": {
+   "etiqueta": "Wissenschaftlicher Modus",
+   "pista": "Spezialisierte Informationen: technische Daten, Zahlen mit ihren Einheiten und professionelle Sprache. Die Fragen und Antworten im Chat werden ebenfalls technischer sein.",
+   "saludo": "Du kannst mich nach meiner Instrumentierung, dem Zeitplan der Mission oder den veröffentlichten Ergebnissen fragen.",
+   "sugerencias": [
+    "Welche Instrumentierung hattest du?",
+    "Wie war der Zeitplan der Mission?",
+    "Welche Ergebnisse wurden veröffentlicht?"
+   ]
+  }
+ }
+}

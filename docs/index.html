@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<script>window.__MSV = '2.2.1';</script>
+<script>window.__MSV = '3.0.0';</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Memory Signals · objetos abandonados de la NASA</title>
-<link rel="icon" type="image/png" sizes="64x64" href="img/favicon-64.png?v=2.2.1">
-<link rel="apple-touch-icon" href="img/apple-touch-icon.png?v=2.2.1">
+<link rel="icon" type="image/png" sizes="64x64" href="img/favicon-64.png?v=3.0.0">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png?v=3.0.0">
 <meta name="theme-color" content="#05070f">
 <meta property="og:title" content="Memory Signals">
 <meta property="og:description" content="Los aparatos abandonados de la NASA cuentan su historia en primera persona.">
@@ -18,7 +18,7 @@
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="datos/icono.svg" type="image/svg+xml">
-<link rel="stylesheet" href="css/estilo.css?v=2.2.1">
+<link rel="stylesheet" href="css/estilo.css?v=3.0.0">
 </head>
 <body>
 
@@ -36,20 +36,25 @@
 <header class="barra">
   <button type="button" class="marca" id="btn-inicio" title="Volver al inicio">
     <picture>
-      <source media="(max-width:620px)" srcset="img/logo-emblem.png?v=2.2.1">
-      <img class="marca-logo" src="img/logo-memory-signals.png?v=2.2.1"
+      <source media="(max-width:620px)" srcset="img/logo-emblem.png?v=3.0.0">
+      <img class="marca-logo" src="img/logo-memory-signals.png?v=3.0.0"
            alt="Memory Signals" width="1272" height="499">
     </picture>
   </button>
   <nav class="menu-destinos" id="menu-destinos" aria-label="Cambiar de destino" hidden></nav>
   <div class="controles">
-    <div class="nivel" role="group" aria-label="Nivel de lectura">
-      <button type="button" id="btn-explorador" class="nivel-btn activo" aria-pressed="true">Explorador</button>
-      <button type="button" id="btn-cientifico" class="nivel-btn" aria-pressed="false">Científico</button>
+    <div class="idiomas" role="group" aria-label="Idioma" data-i18n-aria="idioma">
+      <button type="button" class="idioma-btn activo" data-idioma="es" aria-pressed="true" title="Español">ES</button>
+      <button type="button" class="idioma-btn" data-idioma="en" aria-pressed="false" title="English">EN</button>
+      <button type="button" class="idioma-btn" data-idioma="de" aria-pressed="false" title="Deutsch">DE</button>
     </div>
-    <button type="button" id="btn-voz" class="icono" aria-pressed="false" title="Activar o silenciar la voz">🔇<span class="oculto">Voz</span></button>
-    <a class="btn-participa" href="participa.html" title="Propón un objeto olvidado y aporta material">
-      <span aria-hidden="true">＋</span> Participa<span class="oculto"> · propón un objeto olvidado</span>
+    <div class="nivel" role="group" aria-label="Nivel de lectura" data-i18n-aria="objeto.nivel">
+      <button type="button" id="btn-explorador" class="nivel-btn activo" aria-pressed="true" data-i18n="explorador">Explorador</button>
+      <button type="button" id="btn-cientifico" class="nivel-btn" aria-pressed="false" data-i18n="cientifico">Científico</button>
+    </div>
+    <button type="button" id="btn-voz" class="icono" aria-pressed="false" title="Activar o silenciar la voz" data-i18n-title="voz.titulo">🔇<span class="oculto">Voz</span></button>
+    <a class="btn-participa" href="participa.html" title="Propón un objeto olvidado y aporta material" data-i18n-title="participa.titulo">
+      <span aria-hidden="true">＋</span> <span data-i18n="participa">Participa</span><span class="oculto"> · propón un objeto olvidado</span>
     </a>
   </div>
 </header>
@@ -58,32 +63,32 @@
 
   <!-- 1 · INTRO -->
   <section class="pantalla activa" id="p-intro" aria-labelledby="t-intro">
-    <h1 id="t-intro">Hay cosas nuestras<br>todavía ahí fuera</h1>
+    <h1 id="t-intro" data-i18n-html="titulo">Hay cosas nuestras<br>todavía ahí fuera</h1>
     <p class="voz-texto" id="txt-intro" aria-live="polite"></p>
     <div class="acciones" id="acciones-intro">
-      <button type="button" class="principal activo" data-modo="explorador" aria-pressed="true">Modo explorador</button>
-      <button type="button" class="principal" data-modo="cientifico" aria-pressed="false">Modo científico</button>
+      <button type="button" class="principal activo" data-modo="explorador" aria-pressed="true" data-i18n="modo.explorador">Modo explorador</button>
+      <button type="button" class="principal" data-modo="cientifico" aria-pressed="false" data-i18n="modo.cientifico">Modo científico</button>
     </div>
   </section>
 
   <!-- 3 · DESTINO -->
   <section class="pantalla" id="p-destino" aria-labelledby="t-destino">
-    <h2 id="t-destino">Elige destino</h2>
+    <h2 id="t-destino" data-i18n="destino.titulo">Elige destino</h2>
     <p class="voz-texto" id="txt-destino" aria-live="polite"></p>
     <div class="destinos" id="lista-destinos"></div>
   </section>
 
   <!-- 5 · CRUCERO -->
   <section class="pantalla" id="p-crucero" aria-labelledby="t-crucero">
-    <h2 id="t-crucero">En crucero</h2>
+    <h2 id="t-crucero" data-i18n="crucero.titulo">En crucero</h2>
     <p class="voz-texto" id="txt-crucero" aria-live="polite"></p>
     <div class="ventana"><canvas id="ventana" aria-hidden="true"></canvas>
       <div class="ventana-mapa" id="ventana-mapa" hidden></div>
       <div class="hud" id="hud-crucero">acercándonos…</div>
     </div>
     <div class="acciones">
-      <button type="button" class="secundario" data-ir="destino">← Elegir otro destino</button>
-      <button type="button" class="principal" data-ir="destellos">Mirar por la ventana</button>
+      <button type="button" class="secundario" data-ir="destino" data-i18n="destino.otro">← Elegir otro destino</button>
+      <button type="button" class="principal" data-ir="destellos" data-i18n="mirar.ventana">Mirar por la ventana</button>
     </div>
   </section>
 
@@ -96,7 +101,7 @@
       <div class="marcadores" id="marcadores" role="group" aria-label="Objetos que brillan"></div>
     </div>
     <div class="acciones">
-      <button type="button" class="secundario" data-ir="destino">Cambiar de destino</button>
+      <button type="button" class="secundario" data-ir="destino" data-i18n="destino.cambiar">Cambiar de destino</button>
     </div>
   </section>
 
@@ -144,7 +149,7 @@
         <div class="acciones objeto-acciones">
           <button type="button" class="secundario" id="btn-volver-objetos">← Volver a los objetos</button>
           <button type="button" class="secundario" id="btn-ficha">Ver ficha y fuentes</button>
-          <button type="button" class="secundario" data-ir="pausa">Dejarlo aquí</button>
+          <button type="button" class="secundario" data-ir="pausa" data-i18n="pausa.dejarlo">Dejarlo aquí</button>
         </div>
       </div><!-- /col-centro -->
 
@@ -156,37 +161,37 @@
 
   <!-- 8 · PAUSA -->
   <section class="pantalla" id="p-pausa" aria-labelledby="t-pausa">
-    <h2 id="t-pausa">Un momento de calma</h2>
+    <h2 id="t-pausa" data-i18n="pausa.titulo">Un momento de calma</h2>
     <p class="voz-texto" id="txt-pausa" aria-live="polite"></p>
     <div class="acciones columna" id="opciones-pausa"></div>
   </section>
 
   <!-- 9 · FICHA DEL PROYECTO -->
   <section class="pantalla" id="p-ficha-proyecto" aria-labelledby="t-ficha-proyecto">
-    <h2 id="t-ficha-proyecto">Qué estás viendo</h2>
-    <p>Esto es <strong>Memory Signals</strong>, un proyecto del reto <em>NASA's Discarded Equipment Storytelling</em> del NASA Space Apps Challenge 2026.</p>
-    <p>La NASA dejó en la Luna, en Marte y más allá equipo que ya no funciona pero que sigue en su sitio. Aquí puedes viajar hasta allí y hablar con esos objetos: te cuentan cómo llegaron, qué hacían cada día, qué descubrieron y quién trabajó en su misión.</p>
+    <h2 id="t-ficha-proyecto" data-i18n="que.titulo">Qué estás viendo</h2>
+    <p data-i18n-html="que.p1">Esto es <strong>Memory Signals</strong>, un proyecto del reto <em>NASA's Discarded Equipment Storytelling</em> del NASA Space Apps Challenge 2026.</p>
+    <p data-i18n-html="que.p2">La NASA dejó en la Luna, en Marte y más allá equipo que ya no funciona pero que sigue en su sitio. Aquí puedes viajar hasta allí y hablar con esos objetos: te cuentan cómo llegaron, qué hacían cada día, qué descubrieron y quién trabajó en su misión.</p>
     <ul class="lista">
-      <li><strong>Dos niveles de lectura:</strong> Explorador y Científico. El conmutador está siempre arriba a la derecha y no reinicia el viaje.</li>
-      <li><strong>Todo verificado:</strong> cada turno tiene su fuente (NASA, JPL, LPI). Si un dato no se puede citar, no se cuenta.</li>
-      <li><strong>Ampliable:</strong> el contenido vive en <code>datos/contenido.json</code>. Cualquiera puede añadir un objeto sin tocar el motor.</li>
-      <li><strong>Sin escribir nada:</strong> toda la navegación es con clics o toques. La voz es opcional.</li>
+      <li data-i18n-html="que.l1"><strong>Dos niveles de lectura:</strong> Explorador y Científico. El conmutador está siempre arriba a la derecha y no reinicia el viaje.</li>
+      <li data-i18n-html="que.l2"><strong>Todo verificado:</strong> cada turno tiene su fuente (NASA, JPL, LPI). Si un dato no se puede citar, no se cuenta.</li>
+      <li data-i18n-html="que.l3"><strong>Ampliable:</strong> el contenido vive en <code>datos/contenido.json</code>. Cualquiera puede añadir un objeto sin tocar el motor.</li>
+      <li data-i18n-html="que.l4"><strong>Sin escribir nada:</strong> toda la navegación es con clics o toques. La voz es opcional.</li>
     </ul>
     <div class="acciones">
-      <button type="button" class="principal" data-ir="intro">Volver al inicio</button>
+      <button type="button" class="principal" data-ir="intro" data-i18n="inicio">Volver al inicio</button>
     </div>
   </section>
 
 </main>
 
 <footer class="pie">
-  <span>Memory Signals · NASA Space Apps Challenge 2026 · datos de NASA, JPL y LPI · modelos 3D de NASA 3D Resources</span>
+  <span data-i18n="pie.datos">Memory Signals · NASA Space Apps Challenge 2026 · datos de NASA, JPL y LPI · modelos 3D de NASA 3D Resources</span>
   <span class="pie-derecha">
-    <button type="button" class="pie-link" data-ir="ficha-proyecto">¿Qué es esto?</button>
-    <a href="participa.html">Participa</a>
-    <a href="privacidad.html">Privacidad</a>
+    <button type="button" class="pie-link" data-ir="ficha-proyecto" data-i18n="que.es.esto">¿Qué es esto?</button>
+    <a href="participa.html" data-i18n="participa">Participa</a>
+    <a href="privacidad.html" data-i18n="privacidad">Privacidad</a>
     <span id="pie-nivel">nivel: explorador</span>
-    <span id="pie-version" title="versión de la aplicación">v—</span>
+    <span id="pie-version" title="versión de la aplicación" data-i18n-title="pie.version">v—</span>
   </span>
 </footer>
 
@@ -199,11 +204,12 @@
   </div>
 </div>
 
-<script src="js/escena.js?v=2.2.1"></script>
-<script src="js/visor3d.js?v=2.2.1"></script>
-<script src="js/mapa.js?v=2.2.1"></script>
-<script src="js/hitos.js?v=2.2.1"></script>
-<script src="js/chat.js?v=2.2.1"></script>
-<script src="js/motor.js?v=2.2.1"></script>
+<script src="js/idioma.js?v=3.0.0"></script>
+<script src="js/escena.js?v=3.0.0"></script>
+<script src="js/visor3d.js?v=3.0.0"></script>
+<script src="js/mapa.js?v=3.0.0"></script>
+<script src="js/hitos.js?v=3.0.0"></script>
+<script src="js/chat.js?v=3.0.0"></script>
+<script src="js/motor.js?v=3.0.0"></script>
 </body>
 </html>

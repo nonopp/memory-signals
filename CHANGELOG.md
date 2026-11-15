@@ -12,6 +12,25 @@ Criterio de numeración:
 
 ---
 
+## v3.0.0 — 15 de noviembre de 2026
+
+- **Multidiomas: español, inglés y alemán**, de texto y de voz. Selector **ES · EN · DE** en la cabecera;
+  el idioma se recuerda entre visitas y la primera vez se deduce del navegador.
+- **Contenido traducido entero**: los 10 aparatos, los 30 hitos, los textos de los dos niveles, las
+  presentaciones y las sugerencias del chat viajan en `datos/contenido.json` (español),
+  `datos/contenido.en.json` y `datos/contenido.de.json`. La estructura es idéntica y **no se ha tocado ni
+  una cifra, un nombre de nave ni una fecha**: se comprobó que los números de cada frase son los mismos
+  que en el original.
+- **La interfaz también**: títulos, botones del pie, conmutador de nivel, pantalla «Qué estás viendo» y
+  todos los avisos del chat y del micrófono.
+- **Voz en el idioma elegido**: el navegador usa su voz española, inglesa o alemana, y el saludo del objeto
+  y el aviso de inactividad se dicen en ese idioma.
+- **El chat contesta en el idioma del visitante**: el fragmento de la ficha sigue en español y el modelo
+  lo redacta en inglés o alemán sin cambiar nombres propios ni cifras.
+- Las páginas **Participa** y **Privacidad** siguen solo en español (son textos legales).
+
+---
+
 ## v2.2.1 — 15 de noviembre de 2026
 
 - **Al entrar en un objeto, la voz se enciende sola y el aparato se presenta**: «Hola, soy <nombre del

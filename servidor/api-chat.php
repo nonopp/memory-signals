@@ -77,6 +77,13 @@ $fragmento = trim((string)($datos['fragmento'] ?? ''));
 $nivel     = ((string)($datos['nivel'] ?? 'cientifico')) === 'explorador' ? 'explorador' : 'cientifico';
 // respuesta hablada: dos frases, sin listas y sin cifras encadenadas: se escucha mejor y tarda menos
 $voz       = !empty($datos['voz']);
+// idioma de la respuesta: el fragmento de la ficha llega en español y el modelo contesta en el idioma pedido
+$idioma    = strtolower(trim((string)($datos['idioma'] ?? 'es')));
+$IDIOMAS   = [
+    'es' => 'español',
+    'en' => 'English',
+    'de' => 'German (Deutsch)',
+];
 
 if ($pregunta === '' || $fragmento === '') { salir(400, ['error' => 'Falta la pregunta o la ficha']); }
 if (mb_strlen($pregunta) > MAX_PREGUNTA)   { $pregunta = mb_substr($pregunta, 0, MAX_PREGUNTA); }
@@ -86,6 +93,7 @@ $clave = is_readable(CLAVE) ? trim((string)file_get_contents(CLAVE)) : '';
 if ($clave === '') { salir(503, ['error' => 'El servidor no tiene configurada la clave del modelo']); }
 
 // ---------- instrucciones ----------
+if (!isset($IDIOMAS[$idioma])) { $idioma = 'es'; }
 $sistema = "Eres {$ficha}, un aparato real que la NASA dejó abandonado. Hablas en primera persona, en español, "
          . "con voz propia y cercana, como si el visitante estuviera delante de ti.\n"
          . "REGLAS QUE NO PUEDES ROMPER:\n"
@@ -122,6 +130,16 @@ if ($nivel === 'explorador') {
               . "de programas y de misiones, y relación de causa y efecto. Puedes matizar el grado de certeza "
               . "del dato (medido, estimado, no publicado). No infantilices, no simplifiques y no uses "
               . "comparaciones cotidianas. Máximo 110 palabras.";
+}
+
+if ($idioma !== 'es') {
+    // la ficha y estas reglas están en español; la respuesta sale en el idioma del visitante
+    $sistema .= "\nIDIOMA: la ficha, la pregunta y estas reglas están en español, pero TÚ CONTESTAS SOLO EN "
+              . $IDIOMAS[$idioma] . ". Traduce lo necesario sin cambiar los nombres propios de naves, misiones, "
+              . "instrumentos ni lugares, ni las cifras, unidades y fechas. No añadas la traducción al español.\n"
+              . "Si no hay dato en el FRAGMENTO, la frase exacta es: "
+              . ($idioma === 'en' ? '«That is not in my record.»'
+                 : ($idioma === 'de' ? '«Das steht nicht in meiner Akte.»' : '«That is not in my record.»'));
 }
 
 if ($voz) {
@@ -179,7 +197,10 @@ if ($intento['http'] !== 200) {
 $texto = $intento['texto'];
 $recortado = ($texto !== '') && !preg_match('/[.!?…»"\')]\s*$/u', $texto);
 // a veces vuelve vacío, se escuda en el «no consta» o se corta a media frase: segundo intento, más explícito
-$escurridizo = ($texto === '') || (mb_stripos($texto, 'no consta en mi ficha') !== false) || $recortado;
+$noConsta = (mb_stripos($texto, 'no consta en mi ficha') !== false)
+         || (mb_stripos($texto, 'not in my record') !== false)
+         || (mb_stripos($texto, 'nicht in meiner Akte') !== false);
+$escurridizo = ($texto === '') || $noConsta || $recortado;
 if ($escurridizo) {
     $empujon = $sistema . "\n9. Vuelve a leer el FRAGMENTO con atención: si hay CUALQUIER dato que responda "
              . "a la pregunta, contéstalo con ese dato, aunque sea en una sola frase, y termina la frase con punto. "

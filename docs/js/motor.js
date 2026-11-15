@@ -45,17 +45,26 @@
   var avisoInactividadDicho = '';
   var temporizadorInactividad = null;
   var ultimaActividad = 0;
+  var LANG = { es: 'es-ES', en: 'en-GB', de: 'de-DE' };
+  function idiomaActual() {
+    return (window.MS_Idioma && window.MS_Idioma.actual && window.MS_Idioma.actual()) || 'es';
+  }
+  function T(clave, datos) {
+    if (window.MS_Idioma && window.MS_Idioma.t) return window.MS_Idioma.t(clave, datos);
+    return '';
+  }
   function elegirVoz() {
     if (!('speechSynthesis' in window)) return;
+    var pre = idiomaActual();
     var voces = window.speechSynthesis.getVoices() || [];
-    vozES = voces.filter(function (v) { return /^es/i.test(v.lang); })[0] || null;
+    vozES = voces.filter(function (v) { return String(v.lang || '').toLowerCase().indexOf(pre) === 0; })[0] || null;
   }
   function hablar(texto) {
     if (!estado.voz || !('speechSynthesis' in window) || !texto) return;
     try {
       window.speechSynthesis.cancel();
       var u = new SpeechSynthesisUtterance(texto);
-      u.lang = 'es-ES';
+      u.lang = LANG[idiomaActual()] || 'es-ES';
       u.rate = 0.98;
       u.pitch = 1;
       if (vozES) u.voice = vozES;
@@ -88,7 +97,8 @@
   }
   /* «Hola, soy <objeto>. Pregúntame lo que quieras de mí.» */
   function saludoDelObjeto(a) {
-    return 'Hola, soy ' + a.nombre + '. Pregúntame lo que quieras de mí.';
+    var t = T('saludo', { objeto: a.nombre });
+    return t || ('Hola, soy ' + a.nombre + '. Pregúntame lo que quieras de mí.');
   }
   function enObjeto() {
     var p = document.getElementById('p-objeto');
@@ -105,7 +115,7 @@
       if (avisoInactividadDicho === estado.aparato.id) return;        // solo una vez por objeto
       avisoInactividadDicho = estado.aparato.id;
       if (!estado.voz) alternarVoz(true);                            // se enciende para poder decirlo
-      hablar('¿Sigues ahí? ' + saludoDelObjeto(estado.aparato));
+      hablar((T('sigues.ahi') || '¿Sigues ahí? ') + saludoDelObjeto(estado.aparato));
     }, 20000);
   }
   function hayActividad() {
@@ -231,7 +241,8 @@
     var esExp = estado.nivel === 'explorador';
     ex.classList.toggle('activo', esExp);   ex.setAttribute('aria-pressed', esExp ? 'true' : 'false');
     ci.classList.toggle('activo', !esExp);  ci.setAttribute('aria-pressed', !esExp ? 'true' : 'false');
-    $('#pie-nivel').textContent = esExp ? 'modo explorar · información sencilla' : 'modo científico · información especializada';
+    $('#pie-nivel').textContent = T(esExp ? 'pie.nivel.explorador' : 'pie.nivel.cientifico') ||
+      (esExp ? 'modo explorar · información sencilla' : 'modo científico · información especializada');
     /* en la portada, el elegido va encendido y el otro apagado, igual que en la cabecera */
     $$('#acciones-intro [data-modo]').forEach(function (b) {
       var sel = (b.dataset.modo === 'explorador') === esExp;
@@ -665,7 +676,32 @@
   }
 
   /* la versión la pone index.html en window.__MSV: al subir versión se cambia ahí y en docs/VERSION */
-  fetch('datos/contenido.json?v=' + (window.__MSV || ''))
+  function ficheroContenido() {
+    var l = idiomaActual();
+    return 'datos/contenido' + (l === 'es' ? '' : '.' + l) + '.json?v=' + (window.__MSV || '');
+  }
+  /* al cambiar de idioma se recarga el contenido y se repinta la pantalla; si estamos
+     dentro de un objeto, se vuelve a presentar en el idioma nuevo */
+  document.addEventListener('ms:idioma', function () {
+    elegirVoz();
+    fetch(ficheroContenido(), { cache: 'no-store' })
+      .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+      .then(function (j) {
+        datos = j;
+        window.__MSmodos = j.modos || null;
+        if (typeof repintarPantallaActual === 'function') repintarPantallaActual();
+        if (enObjeto() && estado.aparato) {
+          avisoInactividadDicho = '';
+          saludoDichoEn = estado.aparato.id;
+          if (!mudoPorUsuario) window.MS_Voz.encender(true);
+          hablar(saludoDelObjeto(estado.aparato));
+          armarInactividad();
+        }
+      })
+      .catch(function (e) { console.warn('idioma: ' + e.message); });
+  });
+
+  fetch(ficheroContenido())
     .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
     .then(function (j) { datos = j; window.__MS = estado; window.__MSmodos = j.modos || null; arrancar(); })
     .catch(function (e) {

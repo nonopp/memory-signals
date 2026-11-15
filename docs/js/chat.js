@@ -183,6 +183,13 @@
     return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
   }
   function $(id) { return document.getElementById(id); }
+  /* textos de la interfaz en el idioma elegido (los pone js/idioma.js) */
+  function T(clave) {
+    return (window.MS_Idioma && window.MS_Idioma.t) ? window.MS_Idioma.t(clave) : '';
+  }
+  function idiomaChat() {
+    return (window.MS_Idioma && window.MS_Idioma.actual) ? window.MS_Idioma.actual() : 'es';
+  }
   function nivelActual() {
     try {
       var v = JSON.parse(localStorage.getItem('ms_nivel') || '"explorador"');
@@ -198,14 +205,14 @@
     caja.innerHTML =
       '<button type="button" class="ms-burbuja" id="ms-burbuja" aria-expanded="false" aria-controls="ms-panel" aria-label="Preguntar al objeto">' +
         '<svg viewBox="0 0 24 24" aria-hidden="true" width="26" height="26"><path fill="currentColor" d="M4 3h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H9l-5 4v-4H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Zm3 6a1.6 1.6 0 1 0 0 3.2A1.6 1.6 0 0 0 7 9Zm5 0a1.6 1.6 0 1 0 0 3.2A1.6 1.6 0 0 0 12 9Zm5 0a1.6 1.6 0 1 0 0 3.2A1.6 1.6 0 0 0 17 9Z"/></svg>' +
-        '<span class="ms-burbuja-etq">Pregúntame</span>' +
+        '<span class="ms-burbuja-etq">' + (T('chat.preguntame') || 'Pregúntame') + '</span>' +
       '</button>' +
       '<section class="ms-panel" id="ms-panel" role="dialog" aria-labelledby="ms-panel-titulo" hidden>' +
         '<header class="ms-cabecera">' +
           '<span class="ms-punto" aria-hidden="true"></span>' +
           '<div class="ms-titulos"><strong id="ms-panel-titulo">Memory Signals</strong>' +
           '<span id="ms-panel-sub">pregunta y te contesto con mi ficha</span></div>' +
-          '<button type="button" class="ms-voz" id="ms-voz" aria-pressed="false" title="Leer las respuestas en voz alta" aria-label="Leer las respuestas en voz alta">' +
+          '<button type="button" class="ms-voz" id="ms-voz" aria-pressed="false" title="' + (T('chat.voz.off') || 'Leer las respuestas en voz alta') + '" aria-label="' + (T('chat.voz.off') || 'Leer las respuestas en voz alta') + '">' +
             '<span aria-hidden="true">🔈</span></button>' +
           '<span class="ms-modo" id="ms-modo">explorar</span>' +
           '<button type="button" class="ms-cerrar" id="ms-cerrar" aria-label="Cerrar la ventana">&times;</button>' +
@@ -213,8 +220,8 @@
         '<div class="ms-mensajes" id="ms-mensajes" aria-live="polite"></div>' +
         '<form class="ms-form" id="ms-form" autocomplete="off">' +
           '<label for="ms-input" class="oculto">Tu pregunta</label>' +
-          '<input type="text" id="ms-input" name="pregunta" maxlength="180" placeholder="¿Qué quieres saber de mí?">' +
-          '<button type="button" class="ms-micro" id="ms-micro" aria-pressed="false" hidden aria-label="Dictar la pregunta con el micrófono" title="Dictar la pregunta">' +
+          '<input type="text" id="ms-input" name="pregunta" maxlength="180" placeholder="' + (T('chat.placeholder') || '¿Qué quieres saber de mí?') + '">' +
+          '<button type="button" class="ms-micro" id="ms-micro" aria-pressed="false" hidden aria-label="' + (T('chat.micro.titulo') || 'Dictar la pregunta con el micrófono') + '" title="' + (T('chat.micro') || 'Dictar la pregunta') + '">' +
             '<svg viewBox="0 0 24 24" aria-hidden="true" width="20" height="20"><path fill="currentColor" d="M12 14a3 3 0 0 0 3-3V5a3 3 0 0 0-6 0v6a3 3 0 0 0 3 3Zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V21h2v-3.08A7 7 0 0 0 19 11Z"/></svg>' +
           '</button>' +
           '<button type="submit" class="ms-enviar" aria-label="Enviar pregunta">' +
@@ -312,7 +319,7 @@
       b.setAttribute('aria-pressed', on ? 'true' : 'false');
       b.title = on ? 'Parar de dictar' : 'Dictar la pregunta';
     }
-    if (i) i.placeholder = on ? 'Te escucho…' : '¿Qué quieres saber de mí?';
+    if (i) i.placeholder = on ? (T('chat.placeholder.escucho') || 'Te escucho…') : (T('chat.placeholder') || '¿Qué quieres saber de mí?');
   }
   function soltarMicro() {
     if (microStream) {
@@ -325,10 +332,10 @@
   }
   function empezarDictado() {
     if (dictando || ocupado) return;
-    if (!soporteMicro()) { pista('Este navegador no puede grabar. Escribe la pregunta.', true); return; }
+    if (!soporteMicro()) { pista(T('micro.no.graba') || 'Este navegador no puede grabar. Escribe la pregunta.', true); return; }
     /* si estaba hablando, se calla: no se escucha a sí mismo */
     if (window.MS_Voz && window.MS_Voz.callar) window.MS_Voz.callar();
-    pista('Preparando el micrófono…', false);
+    pista(T('micro.preparando') || 'Preparando el micrófono…', false);
 
     navigator.mediaDevices.getUserMedia({ audio: { channelCount: 1, echoCancellation: true, noiseSuppression: true } })
       .then(function (flujo) {
@@ -338,7 +345,7 @@
           grabadora = tipo ? new MediaRecorder(flujo, { mimeType: tipo }) : new MediaRecorder(flujo);
         } catch (e) {
           soltarMicro();
-          pista('Este navegador no puede grabar. Escribe la pregunta.', true);
+          pista(T('micro.no.graba') || 'Este navegador no puede grabar. Escribe la pregunta.', true);
           return;
         }
         trozos = [];
@@ -346,14 +353,14 @@
         grabadora.onstop = enviarDictado;
         grabadora.start();
         marcarDictado(true);
-        pista('Habla ahora y pulsa el micrófono otra vez al terminar.', false);
+        pista(T('micro.habla') || 'Habla ahora y pulsa el micrófono otra vez al terminar.', false);
         pararSolo = setTimeout(function () { if (dictando) acabarDictado(); }, 30000);
       })
       .catch(function (e) {
         marcarDictado(false);
         var m = (e && e.name === 'NotAllowedError')
-          ? 'No has dado permiso al micrófono. Puedes escribir la pregunta.'
-          : 'No he podido abrir el micrófono. Escribe la pregunta.';
+          ? (T('micro.sin.permiso') || 'No has dado permiso al micrófono. Puedes escribir la pregunta.')
+          : (T('micro.sin.micro') || 'No he podido abrir el micrófono. Escribe la pregunta.');
         pista(m, true);
       });
   }
@@ -362,7 +369,7 @@
     marcarDictado(false);
     if (pararSolo) { clearTimeout(pararSolo); pararSolo = null; }
     try { grabadora.stop(); } catch (e) { soltarMicro(); }
-    pista('Escuchando la grabación…', false);
+    pista(T('micro.escuchando') || 'Escuchando la grabación…', false);
   }
   function enviarDictado() {
     /* la grabadora puede pararse sola (se corta la pista, se acaba el tope):
@@ -372,7 +379,7 @@
     var datos = new FormData();
     var trozo = new Blob(trozos, { type: (grabadora && grabadora.mimeType) || trozos[0] && trozos[0].type || 'audio/webm' });
     soltarMicro();
-    if (!trozo || !trozo.size) { pista('No te he oído nada. Prueba otra vez o escríbela.', true); return; }
+    if (!trozo || !trozo.size) { pista(T('micro.vacio') || 'No te he oído nada. Prueba otra vez o escríbela.', true); return; }
     datos.append('audio', trozo, 'pregunta.webm');
     var nombres = [];
     if (actual) { nombres.push(actual.nombre || ''); if (actual.anio) nombres.push(String(actual.anio)); }
@@ -382,7 +389,7 @@
       .then(function (r) { return r.json().then(function (j) { return { ok: r.ok, j: j }; }); })
       .then(function (res) {
         if (!res.ok || !res.j || !res.j.texto) {
-          pista((res.j && (res.j.error || res.j.error)) || 'No se ha podido transcribir. Escribe la pregunta.', true);
+          pista((res.j && (res.j.error || res.j.error)) || (T('micro.no.transcribe') || 'No se ha podido transcribir. Escribe la pregunta.'), true);
           return;
         }
         var entrada = $('ms-input');
@@ -392,12 +399,12 @@
           try { entrada.setSelectionRange(entrada.value.length, entrada.value.length); } catch (e) {}
         }
         /* se dicta pero no se envía: el visitante revisa y pulsa enviar */
-        pista('Revisa la pregunta y pulsa enviar.', false);
+        pista(T('micro.revisa') || 'Revisa la pregunta y pulsa enviar.', false);
         /* si ha hablado, se le contesta hablando */
         if (!vozActiva() && window.MS_Voz && window.MS_Voz.encender) { window.MS_Voz.encender(true); sincronizarVoz(); }
       })
       .catch(function () {
-        pista('No se ha podido transcribir. Escribe la pregunta.', true);
+        pista(T('micro.no.transcribe') || 'No se ha podido transcribir. Escribe la pregunta.', true);
       });
   }
 
@@ -459,7 +466,7 @@
     var etq = document.getElementById('ms-modo');
     if (!etq) return;
     var exp = nivelActual() === 'explorador';
-    etq.textContent = exp ? 'modo explorar' : 'modo científico';
+    etq.textContent = exp ? (T('chat.modo.explorar') || 'modo explorar') : (T('chat.modo.cientifico') || 'modo científico');
     etq.classList.toggle('es-cientifico', !exp);
   }
 
@@ -473,10 +480,10 @@
     var modo = modos[nivelActual()] || {};
     var etq = document.getElementById('ms-modo');
     if (etq) {
-      etq.textContent = nivelActual() === 'explorador' ? 'modo explorar' : 'modo científico';
+      etq.textContent = nivelActual() === 'explorador' ? (T('chat.modo.explorar') || 'modo explorar') : (T('chat.modo.cientifico') || 'modo científico');
       etq.classList.toggle('es-cientifico', nivelActual() !== 'explorador');
     }
-    var saludo = modo.saludo || 'Pregúntame lo que quieras de mí: qué hice, quién me construyó o dónde estoy ahora.';
+    var saludo = modo.saludo || T('chat.saludo') || 'Pregúntame lo que quieras de mí: qué hice, quién me construyó o dónde estoy ahora.';
     burbuja('objeto', '<strong>' + escapar(nombre) + '</strong><br>' + escapar(saludo));
     actualizarSugerencias();
   }
@@ -493,14 +500,14 @@
       /* solo se enlaza lo que está cotejado: las URLs del prototipo apuntan a la web
          vieja y algunas ya no existen, así que se citan sin enlace */
       if (verificacion === 'verificado') {
-        html += '<span class="ms-fuente">Fuente: <a href="' + escapar(fuente) + '" target="_blank" rel="noopener noreferrer">' +
+        html += '<span class="ms-fuente">' + (T('chat.fuente') || 'Fuente: ') + '<a href="' + escapar(fuente) + '" target="_blank" rel="noopener noreferrer">' +
                 escapar(fuente.replace(/^https?:\/\//, '')) + '</a></span>';
       } else {
-        html += '<span class="ms-fuente">Fuente: ' + escapar(fuente.replace(/^https?:\/\//, '')) + '</span>';
+        html += '<span class="ms-fuente">' + (T('chat.fuente') || 'Fuente: ') + escapar(fuente.replace(/^https?:\/\//, '')) + '</span>';
       }
     }
     if (verificacion !== 'verificado') {
-      html += '<span class="ms-aviso">Ficha del prototipo: sin cotejar con la NASA.</span>';
+      html += '<span class="ms-aviso">' + (T('chat.aviso') || 'Ficha del prototipo: sin cotejar con la NASA.') + '</span>';
     }
     burbuja('objeto', html);
     /* se lee solo el texto de la respuesta, no la fuente ni los avisos */
@@ -619,7 +626,7 @@
     }).then(function (rec) {
       if (!rec) {
         if (esperando) esperando.remove();
-        burbuja('objeto', 'Eso no consta en mi ficha. Pregúntame por lo que hice, quién me construyó o dónde estoy.');
+        burbuja('objeto', (T('chat.no.consta') || 'Eso no consta en mi ficha. Pregúntame por lo que hice, quién me construyó o dónde estoy.'));
         decir('Eso no consta en mi ficha.');
         return;
       }
@@ -635,7 +642,8 @@
           ficha: rec.ficha.titulo,
           fragmento: fragmento,
           nivel: nivelActual(),
-          voz: vozActiva() ? 1 : 0
+          voz: vozActiva() ? 1 : 0,
+          idioma: idiomaChat()
         })
       }).then(function (r) {
         if (!r.ok) throw new Error('HTTP ' + r.status);
@@ -684,7 +692,8 @@
           ficha: rec.ficha.titulo,
           fragmento: fragmento,
           nivel: nivelActual(),
-          voz: vozActiva() ? 1 : 0
+          voz: vozActiva() ? 1 : 0,
+          idioma: idiomaChat()
         })
       }).then(function (r) {
         if (!r.ok) throw new Error('HTTP ' + r.status);
