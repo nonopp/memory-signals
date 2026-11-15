@@ -10,6 +10,10 @@
   var aparatos = [], actual = null, alElegir = null;
   var rot = 0.6, girando = true, arrastrando = false, xInicial = 0, rotInicial = 0;
   var bolitas = [];
+  /* textos de la interfaz en el idioma elegido (los pone js/idioma.js) */
+  function T(clave) {
+    return (window.MS_Idioma && window.MS_Idioma.t) ? window.MS_Idioma.t(clave) : '';
+  }
   var quieto = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   function crear() {

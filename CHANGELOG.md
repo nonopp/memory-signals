@@ -12,6 +12,14 @@ Criterio de numeración:
 
 ---
 
+## v3.0.3 — 15 de noviembre de 2026
+
+- **Arreglado el mapa**: en la 3.0.1 se quedó sin definir la función de traducción dentro de `mapa.js`, así que
+  el mapa no llegaba a construirse y después del zoom solo se veía el planeta, sin puntos donde pulsar. Ahora
+  vuelve a salir el mapa con sus puntos en la Luna, en Marte y en el espacio profundo.
+
+---
+
 ## v3.0.2 — 15 de noviembre de 2026
 
 - **Resumen semanal por correo de las preguntas sin respuesta.** Cuando un objeto contesta «eso no consta en mi
