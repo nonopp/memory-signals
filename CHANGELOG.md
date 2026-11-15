@@ -12,6 +12,14 @@ Criterio de numeración:
 
 ---
 
+## v2.0.1 — 15 de noviembre de 2026
+
+- Corregido: si la grabadora se paraba sola (se corta la pista de audio, se alcanza el tope de 30 s o
+  falla el dispositivo) el botón del micrófono se quedaba en rojo, como si siguiera escuchando. Ahora el
+  estado se apaga siempre al enviar la grabación, venga de donde venga el final.
+
+---
+
 ## v2.0.0 — 15 de noviembre de 2026
 
 **El chat se usa hablando.**

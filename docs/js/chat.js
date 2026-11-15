@@ -365,6 +365,10 @@
     pista('Escuchando la grabación…', false);
   }
   function enviarDictado() {
+    /* la grabadora puede pararse sola (se corta la pista, se acaba el tope):
+       el estado visual se apaga aquí, pase lo que pase */
+    if (pararSolo) { clearTimeout(pararSolo); pararSolo = null; }
+    marcarDictado(false);
     var datos = new FormData();
     var trozo = new Blob(trozos, { type: (grabadora && grabadora.mimeType) || trozos[0] && trozos[0].type || 'audio/webm' });
     soltarMicro();
