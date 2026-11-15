@@ -150,6 +150,25 @@ if ($voz) {
 }
 
 // pide al modelo y devuelve ['texto' => ..., 'http' => ..., 'error' => ...]
+/**
+ * Apunta las preguntas que el objeto no ha sabido contestar, para el resumen semanal.
+ * NO se guarda la IP ni ningún dato del visitante: solo el objeto, la pregunta, el idioma y el nivel.
+ */
+function apuntar_sin_respuesta($ficha, $pregunta, $idioma, $nivel) {
+    $dir = '/home/gesemweb-nasa/ms-sin-respuesta';
+    if (!is_dir($dir)) { @mkdir($dir, 0750, true); }
+    $linea = json_encode([
+        'fecha'    => gmdate('c'),
+        'objeto'   => mb_substr((string)$ficha, 0, 120),
+        'idioma'   => $idioma,
+        'nivel'    => $nivel,
+        'pregunta' => mb_substr(trim((string)$pregunta), 0, 300),
+    ], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
+    if ($linea !== false) {
+        @file_put_contents($dir . '/preguntas.jsonl', $linea . "\n", FILE_APPEND | LOCK_EX);
+    }
+}
+
 function pedir_al_modelo($sistema, string $fragmento, string $pregunta, string $clave,
                         float $temp = 0.2, int $tokens = 320): array {
     $cuerpo = [
@@ -213,6 +232,12 @@ if ($escurridizo) {
     }
 }
 if ($texto === '') { salir(503, ['error' => 'El modelo devolvió una respuesta vacía']); }
+
+// si al final no hay respuesta, queda apuntada para el resumen semanal
+$quedoSinRespuesta = (mb_stripos($texto, 'no consta en mi ficha') !== false)
+                  || (mb_stripos($texto, 'not in my record') !== false)
+                  || (mb_stripos($texto, 'nicht in meiner Akte') !== false);
+if ($quedoSinRespuesta) { apuntar_sin_respuesta($ficha, $pregunta, $idioma, $nivel); }
 
 salir(200, [
     'respuesta' => $texto,

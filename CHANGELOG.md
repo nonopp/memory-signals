@@ -12,6 +12,19 @@ Criterio de numeración:
 
 ---
 
+## v3.0.2 — 15 de noviembre de 2026
+
+- **Resumen semanal por correo de las preguntas sin respuesta.** Cuando un objeto contesta «eso no consta en mi
+  ficha» (en cualquiera de los tres idiomas), la pregunta queda apuntada **sin ningún dato del visitante**: solo
+  el objeto, el texto, el idioma y la fecha. Cada **lunes a las 08:00** (hora de Madrid) sale un correo a
+  **nonopp@gmail.com** con: cuántos intentos y preguntas distintas hubo, qué objetos acumulan más huecos y una
+  tabla con cada pregunta, cuántas veces se repitió, cuándo fue la última vez y en qué idioma.
+  El fichero de la semana se archiva en el servidor y el contador vuelve a cero.
+- **Política de privacidad actualizada**: se dice qué se guarda de esas preguntas sin respuesta (nada personal,
+  sin IP), para qué y cuánto tiempo (12 meses).
+
+---
+
 ## v3.0.1 — 15 de noviembre de 2026
 
 - **El planeta queda centrado** al acabar el zoom del crucero: fuera el texto que iba al lado del mapa y que
