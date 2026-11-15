@@ -391,8 +391,17 @@ code{background:rgba(255,255,255,.09);padding:2px 6px;border-radius:6px;font-siz
 .col-chat .ms-panel.en-columna .ms-titulos span{display:none}
 @media (max-width:1100px){
   .rejilla-objeto{grid-template-columns:minmax(0,1fr)}
-  .col-mapa{order:2}
-  .col-chat{order:3}
+  /* una sola columna: el orden lo manda el contenido, no el HTML.
+     Las columnas dejan de ser cajas (display:contents) para que sus hijos
+     se puedan ordenar sueltos. */
+  .col-centro,.col-mapa{display:contents}
+  #p-objeto .visor{order:1;margin-bottom:0}
+  .col-mapa .cabecera-objeto{order:2;margin:0}
+  .col-chat{order:3;display:block}
+  .hitos{order:4;margin:0}
+  .objeto-acciones{order:5}
+  .col-mapa .mapa-destino{order:6;position:static}
+  .rejilla-objeto{gap:18px}
   .col-chat .ms-panel.en-columna{height:min(70vh,560px)}
 }
 .visor{

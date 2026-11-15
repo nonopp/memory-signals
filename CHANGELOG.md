@@ -12,6 +12,17 @@ Criterio de numeración:
 
 ---
 
+## v1.3.1 — 15 de noviembre de 2026
+
+- En el móvil y la tableta, la ficha del objeto cambia de orden: primero el modelo 3D, después el
+  título y el año, luego el chat, después el carrusel de hitos y por último los botones. El mapa, que
+  no estaba en la lista, queda al final.
+- En pantalla grande no cambia nada: siguen las tres columnas de 300, 800 y 392 píxeles.
+- Se consigue con `display:contents` en las columnas y orden explícito, sin duplicar contenido ni
+  tocar el HTML.
+
+---
+
 ## v1.3.0 — 15 de noviembre de 2026
 
 **Formulario «Participa»**
