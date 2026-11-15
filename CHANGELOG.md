@@ -12,6 +12,15 @@ Criterio de numeración:
 
 ---
 
+## v1.3.4 — 15 de noviembre de 2026
+
+- El aviso de cada propuesta vuelve a **nonopp@gmail.com**, como estaba: el correo de la primera prueba
+  sí había llegado, solo que Gmail lo clasificó y apareció en otra pestaña de la bandeja.
+- Comprobado con un registro temporal en WordPress: el aviso sale `para=nonopp@gmail.com` y con el
+  correo de quien envía en `Reply-To`, que es lo que hace la respuesta directa.
+
+---
+
 ## v1.3.3 — 15 de noviembre de 2026
 
 - **Arreglado: el formulario de «Participa» no se veía.** Nacía con el atributo `hidden` pensado para
