@@ -12,6 +12,23 @@ Criterio de numeración:
 
 ---
 
+## v2.1.0 — 15 de noviembre de 2026
+
+**El aviso de cada propuesta trae los archivos, con enlace.**
+
+- Nuevo **`/app/api/descarga.php`**: sirve los adjuntos de una propuesta desde fuera de la carpeta pública,
+  solo con un **enlace firmado** (HMAC-SHA256 con una clave guardada en el servidor, `~/.ms/descarga.key`, 600).
+  El enlace **caduca a los 30 días**, y no vale ni con la firma cambiada, ni caducado, ni con otra ruta, ni
+  con un identificador inventado: 404 en todos esos casos (probado).
+- El correo de aviso ya no dice solo «1 zip y 3 documentos»: lista cada archivo con su nombre y su enlace de
+  descarga, y advierte de que los enlaces no se publican.
+- La carpeta de propuestas **sigue cerrada a la web** (`/contribuciones/…` da 404); lo que se abre es el
+  enlace firmado, uno por archivo.
+- Probado con un envío real de fotos (zip con 3 imágenes), un PDF, un MD y un TXT: los cuatro enlaces
+  descargan el archivo exacto (sha256 idéntico al original).
+
+---
+
 ## v2.0.2 — 15 de noviembre de 2026
 
 - La pista del modo «Explorador» ya no dice «El aparato te hablará como si tuvieras menos de 10 años».

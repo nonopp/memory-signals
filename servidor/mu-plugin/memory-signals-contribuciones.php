@@ -23,6 +23,15 @@ if ( ! defined( 'MS_CONTRIB_DIR' ) ) {
 	// Fuera de la carpeta pública (el webroot es .../htdocs/nasa.gesemweb.es).
 	define( 'MS_CONTRIB_DIR', '/home/gesemweb-nasa/contribuciones' );
 }
+if ( ! defined( 'MS_CLAVE_DESCARGA' ) ) {
+	define( 'MS_CLAVE_DESCARGA', '/home/gesemweb-nasa/.ms/descarga.key' );  // fuera del docroot, 600
+}
+if ( ! defined( 'MS_DESCARGA_URL' ) ) {
+	define( 'MS_DESCARGA_URL', 'https://nasa.gesemweb.es/app/api/descarga.php' );
+}
+if ( ! defined( 'MS_DIAS_ENLACE' ) ) {
+	define( 'MS_DIAS_ENLACE', 30 );   // los enlaces del aviso caducan
+}
 if ( ! defined( 'MS_AVISO_A' ) ) {
 	// A quién se avisa de cada envío. El correo del visitante va en Reply-To, nunca en From.
 	define( 'MS_AVISO_A', array( 'nonopp@gmail.com' ) );
@@ -204,6 +213,43 @@ function ms_guardar_adjunto( $tmp, $destino, $ext ) {
 	}
 	@chmod( $destino, 0640 );
 	return true;
+}
+
+/* -------------------------------------------------------------------------
+ *  Enlaces de descarga, firmados y con caducidad
+ *  Los adjuntos siguen fuera de la carpeta pública: solo se bajan con el
+ *  enlace que viaja en el aviso, y solo mientras no caduque.
+ * ---------------------------------------------------------------------- */
+
+function ms_clave_descarga() {
+	static $clave = null;
+	if ( null !== $clave ) {
+		return $clave;
+	}
+	$clave = '';
+	if ( is_readable( MS_CLAVE_DESCARGA ) ) {
+		$leida = trim( (string) file_get_contents( MS_CLAVE_DESCARGA ) );
+		if ( strlen( $leida ) >= 32 ) {
+			$clave = $leida;
+		}
+	}
+	return $clave;
+}
+
+function ms_enlace_descarga( $id, $fichero, $etiqueta ) {
+	$clave = ms_clave_descarga();
+	if ( '' === $clave ) {
+		return $etiqueta . ': ' . $fichero . ' (sin enlace: falta la clave de descarga en el servidor)';
+	}
+	$expira = time() + ( MS_DIAS_ENLACE * DAY_IN_SECONDS );
+	$firma  = hash_hmac( 'sha256', $id . '|' . $fichero . '|' . $expira, $clave );
+	$url    = MS_DESCARGA_URL . '?' . http_build_query( array(
+		'id' => $id,
+		'f'  => $fichero,
+		'e'  => $expira,
+		't'  => $firma,
+	) );
+	return $etiqueta . ': ' . $url;
 }
 
 /* -------------------------------------------------------------------------
@@ -462,10 +508,23 @@ function ms_recibir_contribucion( WP_REST_Request $r ) {
 		}
 	}
 	$lineas[] = '';
-	$lineas[] = 'Adjuntos guardados en el servidor: ' . ( $adjuntos['fotos'] ? '1 zip de fotos' : 'sin fotos' )
-		. ', ' . count( $adjuntos['documentos'] ) . ' documento(s).';
+	$lineas[] = '';
+	if ( $adjuntos['fotos'] || $adjuntos['documentos'] ) {
+		$lineas[] = 'Archivos que ha enviado (enlaces privados, caducan en ' . MS_DIAS_ENLACE . ' días):';
+		if ( $adjuntos['fotos'] ) {
+			$lineas[] = '  ' . ms_enlace_descarga( $id, $adjuntos['fotos'], 'zip de fotos' );
+		}
+		foreach ( $adjuntos['documentos'] as $doc ) {
+			$etiqueta = 'documento' . ( $doc['original'] !== $doc['guardado'] ? ' «' . $doc['original'] . '»' : '' );
+			$lineas[] = '  ' . ms_enlace_descarga( $id, $doc['guardado'], $etiqueta );
+		}
+		$lineas[] = 'Los enlaces se pueden reenviar al equipo, pero no publicar: dan acceso al archivo.';
+	} else {
+		$lineas[] = 'Adjuntos: ninguno.';
+	}
+	$lineas[] = '';
 	$lineas[] = 'Correo de quien envía (para responder): ' . $datos['email'];
-	$lineas[] = 'Ruta: ' . $dir;
+	$lineas[] = 'Ruta en el servidor: ' . $dir;
 
 	$enviado = wp_mail(
 		MS_AVISO_A,
