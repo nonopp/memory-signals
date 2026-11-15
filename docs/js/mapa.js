@@ -196,7 +196,7 @@
       if (!m || typeof m.lat !== 'number') { b.el.style.opacity = '0'; b.el.style.pointerEvents = 'none'; return; }
       var p = proyecta(m.lat, m.lon, g.cx, g.cy, g.R);
       if (p.z <= 0.02) { b.el.style.opacity = '0'; b.el.style.pointerEvents = 'none'; return; }
-      b.el.style.opacity = String(0.35 + 0.65 * p.z);
+      b.el.style.opacity = String(0.55 + 0.45 * p.z);
       b.el.style.pointerEvents = 'auto';
       b.el.style.left = p.x + 'px';
       b.el.style.top = p.y + 'px';

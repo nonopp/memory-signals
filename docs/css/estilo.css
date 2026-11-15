@@ -670,31 +670,34 @@ code{background:rgba(255,255,255,.09);padding:2px 6px;border-radius:6px;font-siz
 .mapa-pin.activo .mapa-pin-punto{box-shadow:0 0 0 4px rgba(99,224,200,.35),0 0 18px var(--c,#63e0c8)}
 .mapa-pin.activo{cursor:default}
 
-/* los otros objetos laten: así se ve que son botones y no cráteres ni sombras.
-   Cada uno con su retardo (--retardo) para que no parpadeen todos a la vez. */
-.mapa-pin:not(.activo) .mapa-pin-punto{
-  animation:pinLate 2.6s ease-in-out infinite;
-  animation-delay:var(--retardo,0s);
-  box-shadow:0 0 0 2px rgba(255,255,255,.24),0 0 10px var(--c,#63e0c8)}
-@keyframes pinLate{
-  0%,100%{transform:scale(.9);opacity:.68;
-    box-shadow:0 0 0 2px rgba(255,255,255,.20),0 0 9px var(--c,#63e0c8)}
-  50%{transform:scale(1.18);opacity:1;
-    box-shadow:0 0 0 6px rgba(255,255,255,.10),0 0 20px var(--c,#63e0c8)}}
-/* al pasar el ratón o llegar con el tabulador, late más deprisa y se enciende */
-.mapa-pin:not(.activo):hover .mapa-pin-punto,
-.mapa-pin:not(.activo):focus-visible .mapa-pin-punto{
-  animation-duration:.85s; animation-delay:0s; opacity:1}
+/* Los otros objetos emiten un anillo que se abre y se apaga: se ve que son botones y no
+   cráteres ni sombras. El latido va en un pseudo-elemento porque el JS del mapa mueve el pin
+   en cada fotograma con transform y opacity en línea: animar el propio pin lo descuadraría. */
+.mapa-pin:not(.activo) .mapa-pin-punto{position:relative}
+.mapa-pin:not(.activo) .mapa-pin-punto::after{
+  content:'';position:absolute;inset:-3px;border-radius:50%;
+  border:2px solid var(--c,#63e0c8);pointer-events:none;
+  animation:pinOnda 2.2s ease-out infinite;
+  animation-delay:var(--retardo,0s)}
+@keyframes pinOnda{
+  0%{transform:scale(.65);opacity:.95}
+  70%{transform:scale(2.2);opacity:0}
+  100%{transform:scale(2.2);opacity:0}}
+/* al pasar el ratón o llegar con el tabulador, la onda va más deprisa y el nombre se queda */
+.mapa-pin:not(.activo):hover .mapa-pin-punto::after,
+.mapa-pin:not(.activo):focus-visible .mapa-pin-punto::after{
+  animation-duration:.85s;animation-delay:0s}
 .mapa-pin:not(.activo):hover .mapa-pin-etq,
 .mapa-pin:not(.activo):focus-visible .mapa-pin-etq{opacity:1}
-/* quien pide menos movimiento ve un anillo fijo, más marcado: se distingue igual */
+.mapa-pin:not(.activo):hover .mapa-pin-punto,
+.mapa-pin:not(.activo):focus-visible .mapa-pin-punto{
+  box-shadow:0 0 0 4px rgba(255,255,255,.34),0 0 20px var(--c,#63e0c8)}
+/* quien pide menos movimiento ve un anillo fijo, más grueso: se distingue igual */
 @media (prefers-reduced-motion:reduce){
-  .mapa-pin:not(.activo) .mapa-pin-punto{
-    animation:none;transform:none;opacity:1;
-    box-shadow:0 0 0 4px rgba(255,255,255,.30),0 0 16px var(--c,#63e0c8)}
-  .mapa-pin:not(.activo):hover .mapa-pin-punto,
-  .mapa-pin:not(.activo):focus-visible .mapa-pin-punto{
-    box-shadow:0 0 0 6px rgba(255,255,255,.42),0 0 22px var(--c,#63e0c8)}
+  .mapa-pin:not(.activo) .mapa-pin-punto::after{
+    animation:none;transform:scale(1.7);opacity:1;border-width:2px}
+  .mapa-pin:not(.activo):hover .mapa-pin-punto::after,
+  .mapa-pin:not(.activo):focus-visible .mapa-pin-punto::after{transform:scale(2)}
 }
 .mapa-pie{margin:10px 0 0;font-size:.72rem;color:#8fb3ad;line-height:1.4}
 

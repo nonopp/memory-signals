@@ -12,6 +12,17 @@ Criterio de numeración:
 
 ---
 
+## v2.1.2 — 15 de noviembre de 2026
+
+- Corregido lo que rompí en la 2.1.1: el JS del mapa coloca cada pin en cada fotograma con `transform` y
+  `opacity` en línea, así que animar el propio pin lo sacaba de su sitio y le quitaba el fundido por
+  profundidad. El latido pasa a un **anillo en un pseudo-elemento** del punto: se abre y se apaga como un
+  radar, sin tocar la posición ni el tamaño que calcula el mapa.
+- Los puntos de la cara visible del planeta ya no se apagan tanto al girar (opacidad mínima de 0,35 → 0,55):
+  siguen teniendo profundidad, pero se leen.
+
+---
+
 ## v2.1.1 — 15 de noviembre de 2026
 
 - **El mapa del objeto se lee mejor.** Los puntos de los *otros* aparatos ahora **laten**: crecen y se
