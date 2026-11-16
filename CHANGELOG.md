@@ -1,3 +1,9 @@
+## v3.5.6 — 2026-11-16
+
+- **Infografía española del módulo lunar, traducida de la inglesa corregida** con un pliego de 44 cadenas cerradas: cabecera, seis paneles y las diez etiquetas de la barra de datos. Números a la española (15.103 · 2.445 · 8.248 · 6,65 m³ · 45.000 N · 21,55 kg · 0,67416° N), «Apolo» por «Apollo» y ningún rover: el panel 5 lleva la antena de radar y el ordenador.
+- Quedan dos defectos conocidos en la imagen, a la espera de decidir si se remiendan o se regeneran: el panel 2 dice «2,0 m de alto» cuando son 2,8 m, y la celda del alunizaje de la barra conserva el rótulo inglés («Moon Landing: Alunizaje: 20 de July 20, 1969, 20:17:40 UT»).
+- Las tres infografías del Apolo 11 (es, en, de) están publicadas y con el visor arreglado (enlace celeste, aspa sin montarse, barra fija).
+
 ## v3.5.5 — 2026-11-16
 
 - El enlace **«Descargar»** del visor de infografías pasa de azul oscuro a **celeste claro** (#8fd8ff, y #d0f0ff al pasar por encima): sobre el fondo negro del visor no se leía.
