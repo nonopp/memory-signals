@@ -1,3 +1,7 @@
+## v3.5.2 — 2026-11-16
+
+- El botón de la ficha pasa a llamarse **«Ver ficha»** («See record», «Akte ansehen») en los tres idiomas. Con el botón nuevo de la infografía, el nombre largo se partía en dos líneas. Los cuatro botones de la ficha del objeto caben ahora en una línea, comprobado en español, inglés y alemán y en pantalla de móvil.
+
 ## v3.5.1 — 2026-11-16
 
 - Infografía del módulo lunar del Apolo 11 en **los tres idiomas**: español, inglés y alemán.
