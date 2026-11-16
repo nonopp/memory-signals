@@ -496,6 +496,12 @@
 
   function pintarRespuesta(rec, textoModelo, fuente, verificacion) {
     var html = '';
+    /* si el modelo no encontró el dato, la frase se cambia por la que además invita a seguir preguntando.
+       El aviso se guarda ANTES de cambiar el texto: si no, al testear luego el texto ya no coincide. */
+    var sinDato = !!(textoModelo && SIN_DATO.test(textoModelo));
+    if (sinDato) {
+      textoModelo = T('chat.sin.datos') || 'Eso no está en mi ficha. Pero puedo contarte otras cosas:';
+    }
     if (textoModelo) {
       html += '<p>' + escapar(textoModelo).replace(/\n/g, '<br>') + '</p>';
     } else {
@@ -516,6 +522,8 @@
       html += '<span class="ms-aviso">' + (T('chat.aviso') || 'Ficha del prototipo: sin cotejar con la NASA.') + '</span>';
     }
     burbuja('objeto', html);
+    /* si el modelo no encontró el dato en la ficha, no se deja la puerta cerrada: se ofrecen salidas */
+    if (sinDato) darSalidas(ultimaPregunta);
     /* se lee solo el texto de la respuesta, no la fuente ni los avisos */
     decir(textoModelo || (rec.ficha.titulo + '. ' + rec.texto));
   }
@@ -633,8 +641,10 @@
     }).then(function (rec) {
       if (!rec) {
         if (esperando) esperando.remove();
-        burbuja('objeto', (T('chat.no.consta') || 'Eso no consta en mi ficha. Pregúntame por lo que hice, quién me construyó o dónde estoy.'));
-        decir('Eso no consta en mi ficha.');
+        burbuja('objeto', (T('chat.sin.datos') || 'Eso no está en mi ficha. Pero puedo contarte otras cosas:'));
+        decir(T('chat.no.consta.voz') || 'Eso no consta en mi ficha.');
+        darSalidas(texto);
+        apuntarSinFragmento(texto);
         return;
       }
       if (esperando) esperando.remove();
@@ -708,6 +718,70 @@
       }).then(function (j) { return { rec: rec, modelo: (j && j.respuesta) || '' }; })
         .catch(function () { return { rec: rec, modelo: '' }; });
     });
+  }
+
+  /* ---------- cuando la ficha no tiene el dato: dar salidas, no cerrar la puerta ---------- */
+  /* las tres frases con las que el aparato dice que no lo sabe (español, inglés y alemán) */
+  var SIN_DATO = /no consta en mi ficha|not in my record|nicht in meiner Akte/i;
+
+  /* lo que sí puede contar: preguntas del guion del aparato y del modo, sin la que acaba de fallar */
+  function preguntasQueSiConstan(excluir) {
+    var salida = [];
+    var a = window.__MS && window.__MS.aparato;
+    if (a && a.turnos) {
+      a.turnos.forEach(function (t) {
+        (t.opciones || []).forEach(function (o) {
+          if (o.indexOf('?') !== -1 && o !== excluir && salida.indexOf(o) === -1) salida.push(o);
+        });
+      });
+    }
+    var modos = window.__MSmodos || {};
+    ((modos[nivelActual()] || {}).sugerencias || []).forEach(function (s) {
+      if (s !== excluir && salida.indexOf(s) === -1) salida.push(s);
+    });
+    return salida.slice(0, 3);
+  }
+
+  /* en vez de «no consta» y punto: qué sí puede contar y dónde aportar el dato que falta */
+  function darSalidas(excluir) {
+    var cont = $('ms-mensajes');
+    if (!cont) return;
+    /* la fila de salidas sustituye a la de sugerencias: dos filas seguidas sobran */
+    Array.prototype.forEach.call(cont.querySelectorAll('.ms-sugerencias'), function (v) { v.remove(); });
+    var lista = preguntasQueSiConstan(excluir);
+    if (!lista.length) return;
+    var caja = document.createElement('div');
+    caja.className = 'ms-sugerencias ms-salidas';
+    lista.forEach(function (t) {
+      var b = document.createElement('button');
+      b.type = 'button'; b.textContent = t;
+      b.addEventListener('click', function () { caja.remove(); preguntar(t, true); });
+      caja.appendChild(b);
+    });
+    var pie = document.createElement('a');
+    pie.className = 'ms-aporta';
+    pie.href = 'participa.html';
+    pie.textContent = T('chat.sin.aporta') || '¿Tienes tú el dato? Cuéntamelo en «Participa»';
+    caja.appendChild(pie);
+    cont.appendChild(caja);
+    cont.scrollTop = cont.scrollHeight;
+  }
+
+  /* una pregunta que ni la ficha ni el guion pueden contestar también se apunta para el resumen semanal */
+  function apuntarSinFragmento(texto) {
+    try {
+      fetch(API, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          pregunta: texto,
+          ficha: (actual && actual.nombre) || 'el aparato',
+          sin_fragmento: 1,
+          nivel: nivelActual(),
+          idioma: idiomaChat()
+        })
+      }).catch(function () {});
+    } catch (e) {}
   }
 
   /* las preguntas sugeridas salen del turno que se está viendo: contenido y chat dicen lo mismo */

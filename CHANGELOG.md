@@ -12,6 +12,21 @@ Criterio de numeración:
 
 ---
 
+## v3.1.0 — 16 de noviembre de 2026
+
+- **Cuando la ficha no tiene la respuesta, el aparato ya no cierra la puerta.** En vez de un «Eso no consta
+  en mi ficha» y punto, ofrece **tres preguntas que sí puede contestar** (sacadas de su propio guion y del
+  modo activo) y un enlace a **Participa** para aportar el dato que falta.
+- Se hace en los dos caminos: cuando el motor del navegador no encuentra nada y cuando el modelo contesta que
+  no consta, con las tres frases (español, inglés y alemán).
+- Las preguntas que **no encuentran fragmento** también se apuntan al registro del resumen semanal; antes solo
+  se anotaban las que llegaban al modelo y volvían con «no consta», así que el correo de los lunes se perdía
+  justo las más difíciles.
+- Corregida la frase de la regla 9 del prompt, que en español devolvía la versión inglesa.
+- Textos nuevos en los tres idiomas: `chat.sin.datos` y `chat.sin.aporta`.
+
+---
+
 ## v3.0.5 — 15 de noviembre de 2026
 
 - **Se pulsa el punto, no el nombre**: la caja del botón era tan ancha como el nombre y, cuando dos aparatos

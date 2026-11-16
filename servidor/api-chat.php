@@ -85,6 +85,15 @@ $IDIOMAS   = [
     'de' => 'German (Deutsch)',
 ];
 
+// pregunta que ni la ficha ni el guion pueden contestar: el navegador no manda fragmento.
+// Se apunta igual, para que el resumen semanal las vea, y no se llama al modelo: no hay sobre qué redactar.
+if (!empty($datos['sin_fragmento'])) {
+    if ($pregunta === '') { salir(400, ['error' => 'Falta la pregunta']); }
+    if (!isset($IDIOMAS[$idioma])) { $idioma = 'es'; }
+    apuntar_sin_respuesta($ficha, $pregunta, $idioma, $nivel);
+    salir(200, ['sin_fragmento' => true, 'respuesta' => '']);
+}
+
 if ($pregunta === '' || $fragmento === '') { salir(400, ['error' => 'Falta la pregunta o la ficha']); }
 if (mb_strlen($pregunta) > MAX_PREGUNTA)   { $pregunta = mb_substr($pregunta, 0, MAX_PREGUNTA); }
 if (mb_strlen($fragmento) > MAX_FRAGMENTO) { $fragmento = mb_substr($fragmento, 0, MAX_FRAGMENTO); }
@@ -139,7 +148,7 @@ if ($idioma !== 'es') {
               . "instrumentos ni lugares, ni las cifras, unidades y fechas. No añadas la traducción al español.\n"
               . "Si no hay dato en el FRAGMENTO, la frase exacta es: "
               . ($idioma === 'en' ? '«That is not in my record.»'
-                 : ($idioma === 'de' ? '«Das steht nicht in meiner Akte.»' : '«That is not in my record.»'));
+                 : ($idioma === 'de' ? '«Das steht nicht in meiner Akte.»' : '«Eso no consta en mi ficha.»'));
 }
 
 if ($voz) {

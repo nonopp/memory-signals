@@ -598,6 +598,10 @@ code{background:rgba(255,255,255,.09);padding:2px 6px;border-radius:6px;font-siz
 .ms-sugerencias button{background:rgba(255,255,255,.05);border:1px solid rgba(99,224,200,.3);
   color:#c9f2e8;border-radius:999px;padding:7px 12px;font-size:.78rem;cursor:pointer;font-family:inherit}
 .ms-sugerencias button:hover{background:rgba(99,224,200,.16)}
+/* la salida cuando la ficha no tiene el dato: enlace para aportarlo */
+.ms-salidas{flex-direction:row}
+.ms-aporta{flex:0 0 100%;margin-top:2px;font-size:.75rem;color:#8fb3ad;text-decoration:underline}
+.ms-aporta:hover{color:#63e0c8}
 .ms-puntos{display:inline-flex;gap:4px}
 .ms-puntos i{width:6px;height:6px;border-radius:50%;background:#63e0c8;opacity:.5;
   animation:msPunto 1s infinite ease-in-out}
