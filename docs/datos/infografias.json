@@ -10,13 +10,6 @@
    "titulo": "Módulo lunar Apolo 11",
    "creditos": "Fuentes: NASA NSSDCA (1969-059C) · NASA, Apollo 11 Mission Overview"
   },
-  "en": {
-   "archivo": "infografias/modulo-lunar.en.webp",
-   "ancho": 714,
-   "alto": 1280,
-   "titulo": "Apollo 11 Lunar Module",
-   "creditos": "Sources: NASA NSSDCA (1969-059C) · NASA, Apollo 11 Mission Overview"
-  },
   "de": {
    "archivo": "infografias/modulo-lunar.de.webp",
    "ancho": 714,
@@ -24,5 +17,6 @@
    "titulo": "Apollo 11 Mondfähre",
    "creditos": "Quellen: NASA NSSDCA (1969-059C) · NASA, Apollo 11 Mission Overview"
   }
- }
+ },
+ "_nota_en": "La versión inglesa está retirada: trae rótulos en español y palabras corruptas en los paneles 5 y 6. Mientras no llegue regenerada, en inglés se enseña la española con el aviso."
 }

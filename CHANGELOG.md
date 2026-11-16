@@ -1,3 +1,8 @@
+## v3.5.3 — 2026-11-16
+
+- La infografía inglesa del módulo lunar **se retira temporalmente**: sus paneles 5 y 6 traen rótulos en español («Astronauta», «Retrorreflector laser a 5 m al NNO») y palabras corruptas («communimental», «Coracimos de condonción órcastes», «Comentanios retroreflectons»), además de un «Rover transport» que el Apolo 11 no llevaba. En inglés se enseña la española con el aviso de idioma, que es lo honesto.
+- Se mantienen la española y la alemana. La alemana está limpia; la española tiene tres rótulos corruptos en el panel 6 (detalle en el informe del 16-11).
+
 ## v3.5.2 — 2026-11-16
 
 - El botón de la ficha pasa a llamarse **«Ver ficha»** («See record», «Akte ansehen») en los tres idiomas. Con el botón nuevo de la infografía, el nombre largo se partía en dos líneas. Los cuatro botones de la ficha del objeto caben ahora en una línea, comprobado en español, inglés y alemán y en pantalla de móvil.
