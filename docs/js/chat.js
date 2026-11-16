@@ -513,7 +513,8 @@
       html += '<strong>' + escapar(rec.ficha.titulo) + (rec.seccion ? ' · ' + escapar(rec.seccion.titulo) : '') + '</strong><br>' +
               escapar(rec.texto).replace(/\n/g, '<br>');
     }
-    if (fuente) {
+    /* la fuente se enseña siempre... salvo cuando la respuesta es «no consta»: ahí no hay nada que citar */
+    if (fuente && !sinDato) {
       /* solo se enlaza lo que está cotejado: las URLs del prototipo apuntan a la web
          vieja y algunas ya no existen, así que se citan sin enlace */
       if (verificacion === 'verificado') {

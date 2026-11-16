@@ -12,6 +12,14 @@ Criterio de numeración:
 
 ---
 
+## v3.2.3 — 16 de noviembre de 2026
+
+- Cuando la respuesta es «Eso no está en mi ficha», **ya no se cita ninguna fuente**: no hay nada que citar
+  y resultaba contradictorio. La cita sale en las respuestas que sí salen de la ficha y en las búsquedas
+  externas.
+
+---
+
 ## v3.2.2 — 16 de noviembre de 2026
 
 - Al cambiar de idioma con el chat abierto **ya no se pierde la conversación**: se reescriben los rótulos,
