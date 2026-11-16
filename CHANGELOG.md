@@ -12,6 +12,14 @@ Criterio de numeración:
 
 ---
 
+## v3.3.3 — 16 de noviembre de 2026
+
+- **El menú de destinos se quedaba en español al cambiar de idioma.** Se construye una sola vez y no se
+  rehacía, así que los nombres cortos nuevos no llegaban a verse hasta recargar. Ahora se reconstruye con
+  el idioma elegido.
+
+---
+
 ## v3.3.2 — 16 de noviembre de 2026
 
 - **El pie de página se quedaba en el idioma anterior.** Al cambiar de idioma, el rótulo del nivel

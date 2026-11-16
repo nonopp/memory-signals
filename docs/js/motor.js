@@ -692,6 +692,9 @@
         if (typeof repintarPantallaActual === 'function') repintarPantallaActual();
         /* el pie y el rótulo del modo se escriben aparte: hay que rehacerlos o se quedan en el idioma anterior */
         if (typeof pintarNivel === 'function') pintarNivel();
+        /* el menú de destinos se construye una sola vez: hay que forzar que se rehaga con los nombres nuevos */
+        menuListo = false;
+        if (typeof pintarMenu === 'function') pintarMenu();
         if (window.ChatObjeto && window.ChatObjeto.rehacer) window.ChatObjeto.rehacer();
         if (enObjeto() && estado.aparato) {
           avisoInactividadDicho = '';
