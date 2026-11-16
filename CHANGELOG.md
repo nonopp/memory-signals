@@ -12,6 +12,17 @@ Criterio de numeración:
 
 ---
 
+## v3.3.1 — 16 de noviembre de 2026
+
+- **La cabecera ya no corta los destinos en inglés y alemán.** El menú usaba la primera palabra del nombre,
+  que en español funciona («La Luna» → «Luna») pero en inglés dejaba «The» y «Deep», y en alemán «Der». Ahora
+  cada destino lleva su nombre corto en los tres idiomas: Luna/Moon/Mond, Marte/Mars/Mars,
+  Espacio/Deep space/Tiefenraum.
+- **«← Volver a los objetos» se traduce.** Era el único botón de la aplicación sin marca de traducción y se
+  quedaba en español con la interfaz en inglés o alemán.
+
+---
+
 ## v3.3.0 — 16 de noviembre de 2026
 
 - **El formulario «Participa» y la política de privacidad hablan los tres idiomas** (español, inglés y alemán),
