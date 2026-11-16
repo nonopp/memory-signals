@@ -941,14 +941,43 @@
     construir(); mostrar(false);
   }
 
-  /* al cambiar de idioma hay que rehacer el panel entero: los rótulos ya están escritos en el DOM */
+  /* los rótulos del panel se escriben una sola vez al construirlo: al cambiar de idioma hay que
+     reescribirlos a mano, porque construir() no vuelve a hacer nada si el panel ya existe.
+     La conversación NO se toca. */
+  function refrescarRotulos() {
+    var i = $('ms-input');
+    if (i) i.placeholder = (microStream ? T('chat.placeholder.escucho') : T('chat.placeholder')) || '¿Qué quieres saber de mí?';
+    var s = $('ms-panel-sub');
+    if (s) s.textContent = actual ? (T('chat.sub.objeto') || 'habla conmigo: te contesto con mi ficha')
+                                  : (T('chat.sub') || 'pregunta y te contesto con mi ficha');
+    var etq = document.querySelector('.ms-burbuja-etq');
+    if (etq) etq.textContent = T('chat.preguntame') || 'Pregúntame';
+    var bur = $('ms-burbuja');
+    if (bur) bur.setAttribute('aria-label', T('chat.abrir') || 'Preguntar al objeto');
+    var voz = $('ms-voz');
+    if (voz) {
+      var on = voz.getAttribute('aria-pressed') === 'true';
+      var rotulo = on ? (T('chat.voz.on') || 'Dejar de leer las respuestas') : (T('chat.voz.off') || 'Leer las respuestas en voz alta');
+      voz.title = rotulo; voz.setAttribute('aria-label', rotulo);
+    }
+    var mic = $('ms-micro');
+    if (mic) {
+      var dictando = mic.getAttribute('aria-pressed') === 'true';
+      var r2 = dictando ? (T('chat.micro.parar') || 'Parar de dictar') : (T('chat.micro') || 'Dictar la pregunta');
+      mic.title = r2; mic.setAttribute('aria-label', T('chat.micro.titulo') || 'Dictar la pregunta con el micrófono');
+    }
+    var env = document.querySelector('.ms-enviar');   /* el botón de enviar no tiene id: se busca por clase */
+    if (env) env.setAttribute('aria-label', T('chat.enviar') || 'Enviar pregunta');
+    var cer = $('ms-cerrar');
+    if (cer) cer.setAttribute('aria-label', T('chat.cerrar') || 'Cerrar la ventana');
+    refrescarModo();
+  }
+
+  /* al cambiar de idioma se rehacen los rótulos y las sugerencias; la conversación se queda */
   function rehacer() {
-    construir();
+    refrescarRotulos();
     if (!actual) { mostrar(false); return; }
     mostrar(true);
-    var t = $('ms-panel-titulo'), s = $('ms-panel-sub');
-    if (t) t.textContent = actual.nombre || 'Memory Signals';
-    if (s) s.textContent = T('chat.sub.objeto') || 'habla conmigo: te contesto con mi ficha';
     actualizarSugerencias();
     saludar();
   }

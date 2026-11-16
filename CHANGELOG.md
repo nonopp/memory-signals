@@ -12,6 +12,16 @@ Criterio de numeración:
 
 ---
 
+## v3.2.1 — 16 de noviembre de 2026
+
+- **Arreglado: al cambiar de idioma con el chat abierto, los rótulos se quedaban en el idioma anterior**
+  (el campo de preguntar seguía diciendo «¿Qué quieres saber de mí?» con la interfaz en alemán). La función
+  que debía rehacer el panel no hacía nada porque el panel ya existía. Ahora se reescriben los rótulos, el
+  botón del micrófono, el altavoz y las sugerencias, y **la conversación se conserva**.
+- El botón de enviar no tenía identificador, así que su rótulo de accesibilidad tampoco se refrescaba.
+
+---
+
 ## v3.2.0 — 16 de noviembre de 2026
 
 - **Vuelve la cita en todas las respuestas del chat.** Desde la 3.0.1 la fuente solo salía si se pedía;
