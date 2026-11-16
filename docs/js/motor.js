@@ -393,8 +393,14 @@
     var texto = txt(datos.astronauta.lineas.despegue) + ' ' + txt(datos.astronauta.lineas.crucero);
     $('#txt-crucero').textContent = texto;
     hablar(texto);
-    $('#t-crucero').textContent = T('crucero.hacia', { destino: d.corto || d.nombre });
-    $('#hud-crucero').textContent = 'acercándonos a ' + d.nombre.toLowerCase() + '…';
+    /* el nombre del destino lleva artículo en español e inglés («la Luna», «the Moon») y no en
+       alemán, donde el artículo lo pone la plantilla («zum Mond»). Se elige la forma que lee bien. */
+    var i = idiomaActual();
+    var nombreDestino = (i === 'de')
+      ? (d.corto || d.nombre)
+      : (d.nombre || d.corto || '').replace(/^./, function (c) { return c.toLowerCase(); });
+    $('#t-crucero').textContent = T('crucero.hacia', { destino: nombreDestino });
+    $('#hud-crucero').textContent = T('hud.acercandonos', { destino: nombreDestino });
     /* la escena se dibuja cuando el contenedor ya es visible */
     setTimeout(function () { window.Escena.crucero(d.color, d.globo); }, 60);
     /* y el zoom del planeta acaba siendo el mapa del destino, con sus puntos */

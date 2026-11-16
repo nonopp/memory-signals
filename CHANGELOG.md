@@ -12,6 +12,16 @@ Criterio de numeración:
 
 ---
 
+## v3.4.1 — 16 de noviembre de 2026
+
+- **«En crucero hacia Luna»** se leía mal: al usar el nombre corto del destino se perdía el artículo.
+  Ahora en español e inglés se usa el nombre completo («la Luna», «the Moon») y en alemán la
+  plantilla pone el artículo («zum Mond»).
+- **El rótulo de aproximación** del crucero («acercándonos a …») estaba escrito en español a mano;
+  ahora es una cadena más y se traduce.
+
+---
+
 ## v3.4.0 — 16 de noviembre de 2026
 
 **Primera tanda de objetos nuevos: de 10 a 22 aparatos, todos con modelo 3D oficial de la NASA.**
