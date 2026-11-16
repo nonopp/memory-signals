@@ -1,0 +1,13 @@
+{
+ "_nota": "Infografías descargables por aparato. Un fichero por idioma: <id>.<idioma>.webp dentro de docs/infografias/. Si falta el idioma del visitante, se enseña el español y se avisa. El original sin comprimir se guarda en fuentes/infografias/ (no se publica).",
+ "_generado": "2026-11-16",
+ "modulo-lunar": {
+  "es": {
+   "archivo": "infografias/modulo-lunar.es.webp",
+   "ancho": 941,
+   "alto": 1672,
+   "titulo": "Módulo lunar Apolo 11",
+   "creditos": "Fuentes: NASA NSSDCA (1969-059C) · NASA, Apollo 11 Mission Overview"
+  }
+ }
+}

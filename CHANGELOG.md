@@ -1,3 +1,26 @@
+## v3.5.0 — 2026-11-16
+
+**Infografías descargables, traducciones completas y modelos ligeros.**
+
+### Añadido
+- Infografía descargable por aparato: botón **Ver infografía** en la ficha, entre «Ver ficha y fuentes» y «Dejarlo aquí». Solo aparece si ese aparato tiene infografía.
+- Visor a pantalla completa con aspa, cierre con Escape o tocando el fondo, y botón de **descarga** del original.
+- Índice `datos/infografias.json`: un fichero por idioma (`infografias/<id>.<idioma>.webp`). Si falta el idioma del visitante se enseña la española y se avisa. El original sin comprimir se guarda en `fuentes/infografias/`, fuera de lo publicado.
+- Primera infografía: módulo lunar del Apolo 11, en español. Contenido verificado contra la ficha del NSSDCA de la nave 1969-059C.
+- Cuarto botón en «Dejarlo aquí»: **Volver al objeto visitado**. Antes no había forma de regresar al objeto desde esa pantalla.
+
+### Corregido
+- Los tres botones de «Dejarlo aquí» y el «Volver al inicio» estaban escritos en español en el JS: ahora salen de claves en los tres idiomas.
+- El botón «Ver ficha y fuentes» no tenía `data-i18n`, por eso se quedaba en español en inglés y alemán.
+- Los dos rótulos de la ficha verificable, el «No consta en las fuentes consultadas», el «Fuente:» del carrusel de hitos, cinco textos del visor 3D y el año del objeto («Lanzamiento ·», «Llegada ·»), también en español a mano: pasados a los tres idiomas.
+- Al cambiar de idioma, la pantalla y la ficha se quedaban en el idioma anterior porque el estado seguía apuntando a los objetos viejos. Ahora se vuelven a enlazar por su id y se repinta todo, ficha e infografía abiertas incluidas.
+- Traducciones que faltaban: **112 cadenas en inglés y 38 en alemán**. Incluye el `estado_texto` en texto plano de siete aparatos (Apolo 11, NEAR Shoemaker, Pioneer 10, Dawn, Viking, Kepler e Ingenuity), que salía en español en los tres idiomas, y las fichas enteras de Intrepid, Antares, Huygens, Magellan y Skylab.
+- «Apolo» → «Apollo» en inglés y alemán (15 apariciones), y etiquetas de fuentes mal traducidas.
+
+### Cambiado
+- Los 19 modelos 3D pasan de **27,1 MB a 5,0 MB** (81 % menos): texturas duplicadas que la NASA dejó sin usar eliminadas, las que quedan en WebP a 2k y geometría con Draco. La geometría no se ha tocado. Originales guardados en `fuentes/` del respaldo local.
+- `herramientas/verifica-estado.py`: retrato del estado de la aplicación para comparar antes y después de un cambio ajeno.
+
 # Historial de versiones — Memory Signals
 
 La versión vive en `docs/VERSION` y se muestra en el pie de la aplicación.

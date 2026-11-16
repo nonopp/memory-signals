@@ -13,12 +13,12 @@
    "cientifico"
   ],
   "nivel_por_defecto": "explorador",
-  "nota": "Un guion, dos textos. El turno, el personaje, la pregunta y las opciones son idénticos en los dos niveles: solo cambia el campo de texto."
+  "nota": "One script, two texts. The turn, the character, the question and the options are identical in both levels: only the text field changes."
  },
  "astronauta": {
   "id": "guia",
   "nombre": "Commander Iria",
-  "nota": "Personaje de ficción. Guion cerrado: no improvisa y no da datos de misión.",
+  "nota": "Fictional character. Closed script: does not improvise and does not give mission data.",
   "lineas": {
    "intro": {
     "texto_explorador": "Hello. I'm glad you came. I've been traveling to places where NASA left things for years.",
@@ -136,7 +136,7 @@
    ],
    "fuentes": [
     {
-     "texto": "NASA Science — Spirit y Opportunity",
+     "texto": "NASA Science — Spirit and Opportunity",
      "url": "https://science.nasa.gov/mission/mars-exploration-rovers-spirit-and-opportunity/"
     },
     {
@@ -261,11 +261,11 @@
      "url": "https://science.nasa.gov/mission/insight/"
     },
     {
-     "texto": "NASA Science — ciencia de InSight",
+     "texto": "NASA Science — InSight science",
      "url": "https://science.nasa.gov/mission/insight/science/"
     },
     {
-     "texto": "NASA — el orbitador fotografía el InSight retirado",
+     "texto": "NASA — orbiter photographs the retired InSight",
      "url": "https://www.nasa.gov/missions/insight/nasa-mars-orbiter-spots-retired-insight-lander-to-study-dust-movement/"
     }
    ],
@@ -386,7 +386,7 @@
      "url": "https://science.nasa.gov/mission/voyager/"
     },
     {
-     "texto": "NASA Science — saludos del disco de oro (55 idiomas)",
+     "texto": "NASA Science — golden record greetings (55 languages)",
      "url": "https://science.nasa.gov/mission/voyager/golden-record-contents/greetings"
     }
    ],
@@ -487,7 +487,7 @@
    "lugar": "Sea of Tranquility · 0.67° N 23.47° E",
    "anio": 1969,
    "estado": "abandoned",
-   "estado_texto": "La etapa de descenso sigue allí; la de ascenso se eyectó y se perdió.",
+   "estado_texto": "The descent stage is still there; the ascent stage was ejected and lost.",
    "ficha_resumen": "The two-stage vehicle that landed Armstrong and Aldrin on the Moon in July 1969. Its lower half remains in the Sea of Tranquility.",
    "color": "#c9d6e6",
    "personas": [
@@ -506,15 +506,15 @@
    ],
    "fuentes": [
     {
-     "texto": "NSSDCA — módulo lunar del Apolo 11 (1969-059C)",
+     "texto": "NSSDCA — Apollo 11 lunar module (1969-059C)",
      "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1969-059C"
     },
     {
-     "texto": "NSSDCA — módulo lunar del Apolo 12 (1969-099C)",
+     "texto": "NSSDCA — Apollo 12 lunar module (1969-099C)",
      "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1969-099C"
     },
     {
-     "texto": "NSSDCA — módulo lunar del Apolo 15 (1971-063C)",
+     "texto": "NSSDCA — Apollo 15 lunar module (1971-063C)",
      "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1971-063C"
     }
    ],
@@ -609,7 +609,7 @@
      "fuente": "The Velcro Companies (velcro.com) · swissinfo — Velcro: how the space race helped a Swiss invention catch on"
     }
    ],
-   "nombre_mapa": "Apolo 11"
+   "nombre_mapa": "Apollo 11"
   },
   {
    "id": "near-shoemaker",
@@ -618,7 +618,7 @@
    "lugar": "Landed on Eros, 355 million km from Earth",
    "anio": 1996,
    "estado": "abandoned",
-   "estado_texto": "Posada en Eros desde 2001; sin señal desde el 28 de febrero de 2001.",
+   "estado_texto": "Landed on Eros since 2001; no signal since February 28, 2001.",
    "ficha_resumen": "The first spacecraft to orbit an asteroid and the first to land on one. It remains on Eros, frozen.",
    "color": "#d9c08a",
    "personas": [
@@ -730,7 +730,7 @@
    "lugar": "Heading for the star Aldebaran",
    "anio": 1972,
    "estado": "abandoned",
-   "estado_texto": "Última señal el 23 de enero de 2003; sigue su rumbo fuera del sistema solar.",
+   "estado_texto": "Last signal on January 23, 2003; it continues on its course out of the solar system.",
    "ficha_resumen": "The first spacecraft to cross the asteroid belt, passed by Jupiter, and left the solar system. It carries a plaque that says where it comes from.",
    "color": "#8fb8d8",
    "personas": [
@@ -753,7 +753,7 @@
      "url": "https://science.nasa.gov/mission/pioneer-11/"
     },
     {
-     "texto": "NASA Science — la placa de las Pioneer",
+     "texto": "NASA Science — the Pioneer plaque",
      "url": "https://science.nasa.gov/resource/pioneer-plaque/"
     }
    ],
@@ -854,7 +854,7 @@
    "lugar": "Orbit around Ceres, asteroid belt",
    "anio": 2007,
    "estado": "abandoned",
-   "estado_texto": "En órbita de Ceres, sin funcionar desde el 1 de noviembre de 2018.",
+   "estado_texto": "In orbit around Ceres, not functioning since November 1, 2018.",
    "ficha_resumen": "The first spacecraft to orbit an asteroid in the main belt and the first to reach a dwarf planet. It ran out of fuel in orbit around Ceres.",
    "color": "#a9c7de",
    "personas": [
@@ -873,7 +873,7 @@
      "url": "https://science.nasa.gov/mission/dawn/"
     },
     {
-     "texto": "NASA Science — objetivos de Dawn",
+     "texto": "NASA Science — Dawn's objectives",
      "url": "https://science.nasa.gov/mission/dawn/objectives/"
     },
     {
@@ -980,7 +980,7 @@
    "anio_tipo": "lanzamiento",
    "color": "#c46a4a",
    "estado": "abandoned",
-   "estado_texto": "Los dos módulos siguen en Marte, sin funcionar. Viking 1 dejó de operar el 11 de noviembre de 1982.",
+   "estado_texto": "Both modules remain on Mars, not functioning. Viking 1 stopped operating on November 11, 1982.",
    "ficha_resumen": "The first modules that truly worked on Mars. They searched for life in the soil and did not find any.",
    "personas": [
     {
@@ -1102,7 +1102,7 @@
    "anio_tipo": "lanzamiento",
    "color": "#bcd4f5",
    "estado": "abandoned",
-   "estado_texto": "Retirado el 30 de octubre de 2018 sin combustible; sigue en órbita heliocéntrica, apagado.",
+   "estado_texto": "Retired on October 30, 2018 without fuel; it remains in a heliocentric orbit, powered off.",
    "ficha_resumen": "NASA's first planet hunter: more than 2,600 worlds outside the solar system before running out of fuel.",
    "personas": [
     {
@@ -1214,7 +1214,7 @@
    "anio_tipo": "lanzamiento",
    "color": "#cdd8e3",
    "estado": "abandoned",
-   "estado_texto": "Posado en el cráter Jezero desde el 18 de enero de 2024, con las palas dañadas; ya no puede volar.",
+   "estado_texto": "Landed in Jezero crater since January 18, 2024, with damaged blades; it can no longer fly.",
    "ficha_resumen": "The first device to fly with a motor on another planet: 72 flights and 17 km over Mars before breaking the blades.",
    "personas": [
     {
@@ -1232,11 +1232,11 @@
    ],
    "fuentes": [
     {
-     "texto": "NASA Science — helicóptero Ingenuity",
+     "texto": "NASA Science — Ingenuity helicopter",
      "url": "https://science.nasa.gov/mission/mars-2020-perseverance/ingenuity-mars-helicopter/"
     },
     {
-     "texto": "NASA — fin de la misión Ingenuity (enero de 2024)",
+     "texto": "NASA — end of the Ingenuity mission (January 2024)",
      "url": "https://www.nasa.gov/news-release/after-three-years-on-mars-nasas-ingenuity-helicopter-mission-ends/"
     }
    ],
@@ -1335,7 +1335,7 @@
    "id": "apolo12-intrepid",
    "nombre": "Intrepid descent stage",
    "cuerpo": "Moon",
-   "lugar": "Oceanus Procellarum · Apolo 12",
+   "lugar": "Oceanus Procellarum · Apollo 12",
    "anio": 1969,
    "estado": "abandoned",
    "anio_tipo": "llegada",
@@ -1346,75 +1346,75 @@
     "lon": -23.4216
    },
    "estado_texto": {
-    "texto_explorador": "Estoy posada en la Luna desde 1969. Nadie ha vuelto a recogerme.",
-    "texto_cientifico": "Etapa de descenso del LM-6, posada en Oceanus Procellarum el 19 de noviembre de 1969. Abandonada in situ."
+    "texto_explorador": "I have been sitting on the Moon since 1969. No one has come back to pick me up.",
+    "texto_cientifico": "LM-6 descent stage, landed in Oceanus Procellarum on November 19, 1969. Abandoned in situ."
    },
    "ficha_resumen": "The lower half of the Apollo 12 lunar module. It stayed in the Oceanus Procellarum in November 1969, and 163 meters from it is still Surveyor 3, which had been there since 1967.",
    "personas": [
     {
      "nombre": "Pete Conrad",
-     "papel": "comandante que la posó en la Luna"
+     "papel": "commander who landed it on the Moon"
     },
     {
      "nombre": "Alan Bean",
-     "papel": "piloto del módulo lunar"
+     "papel": "lunar module pilot"
     }
    ],
    "fuentes": [
     {
-     "texto": "NASA — Apolo 12",
+     "texto": "NASA — Apollo 12",
      "url": "https://www.nasa.gov/mission/apollo-12/"
     }
    ],
    "hitos": [
     {
-     "titulo": "Mi trabajo era frenar",
+     "titulo": "My job was to brake",
      "texto": "I was the lower half of the lunar module. I ignited the engine, braked the fall and landed on four legs in the Oceanus Procellarum. The upper half lifted off with the two astronauts and returned home.",
-     "fuente": "NASA — Apolo 12"
+     "fuente": "NASA — Apollo 12"
     },
     {
-     "titulo": "No aterricé sola",
-     "texto": "A 163 metros de donde me posé llevaba dos años y medio la sonda Surveyor 3. Conrad y Bean caminaron hasta ella y trajeron piezas a la Tierra para ver qué le hace el polvo lunar a una máquina.",
-     "fuente": "NASA — Apolo 12"
+     "titulo": "I didn't land alone",
+     "texto": "163 meters from where I landed, the Surveyor 3 probe had been there for two and a half years. Conrad and Bean walked to it and brought pieces back to Earth to see what lunar dust does to a machine.",
+     "fuente": "NASA — Apollo 12"
     },
     {
-     "titulo": "Nadie me recogió",
+     "titulo": "Nobody picked me up",
      "texto": "There was no return ticket with me: it was too heavy to bring it back. They left me with the instruments on, and since then I have been here, with the dust gradually covering me.",
-     "fuente": "NASA — Apolo 12"
+     "fuente": "NASA — Apollo 12"
     }
    ],
    "turnos": [
     {
      "id": "apolo12-intrepid_1",
-     "pregunta": "¿Qué se siente al quedarse atrás?",
+     "pregunta": "What does it feel like to be left behind?",
      "opciones": [
       "¿Te arrepientes?",
       "¿Quién se fue?"
      ],
      "texto_explorador": "I have no regrets. I was the heavy half: the one that braked and the one that stayed. The one on top took Conrad and Bean home.",
-     "texto_cientifico": "Aceptado de antemano: la etapa de descenso no tenía motor de regreso. Su masa servía de plataforma estable para la etapa de ascenso.",
+     "texto_cientifico": "Accepted in advance: the descent stage had no return engine. Its mass served as a stable platform for the ascent stage.",
      "fuente": "https://www.nasa.gov/mission/apollo-12/"
     },
     {
      "id": "apolo12-intrepid_2",
-     "pregunta": "¿Había alguien cerca?",
+     "pregunta": "Was anyone nearby?",
      "opciones": [
       "¿Quién?",
       "¿Estaba sola?"
      ],
      "texto_explorador": "Yes. Surveyor 3, a probe that had landed 163 meters away. The astronauts walked over to visit it.",
-     "texto_cientifico": "Surveyor 3 se posó el 20 de abril de 1967. El Apolo 12 aterrizó a 163 m, una precisión que demostró el sistema de navegación.",
+     "texto_cientifico": "Surveyor 3 landed on April 20, 1967. Apollo 12 landed 163 m away, a precision that demonstrated the navigation system.",
      "fuente": "https://www.nasa.gov/mission/apollo-12/"
     },
     {
      "id": "apolo12-intrepid_3",
-     "pregunta": "¿Cómo estás ahora?",
+     "pregunta": "How are you now?",
      "opciones": [
       "¿Te ve alguien?",
       "¿Cuánto polvo tienes?"
      ],
      "texto_explorador": "Still and covered in dust. The probe photographing me from orbit has captured me more than once: my shadow is still there.",
-     "texto_cientifico": "El Lunar Reconnaissance Orbiter fotografía los sitios de alunizaje; las etapas de descenso se distinguen por su sombra.",
+     "texto_cientifico": "The Lunar Reconnaissance Orbiter photographs the landing sites; the descent stages stand out by their shadow.",
      "fuente": "https://www.nasa.gov/mission/apollo-12/"
     }
    ],
@@ -1424,7 +1424,7 @@
    "id": "apolo14-antares",
    "nombre": "Antares descent stage",
    "cuerpo": "Moon",
-   "lugar": "Fra Mauro · Apolo 14",
+   "lugar": "Fra Mauro · Apollo 14",
    "anio": 1971,
    "estado": "abandoned",
    "anio_tipo": "llegada",
@@ -1435,58 +1435,58 @@
     "lon": -17.4714
    },
    "estado_texto": {
-    "texto_explorador": "Estoy en las colinas de Fra Mauro desde 1971, y sigo aquí.",
-    "texto_cientifico": "Etapa de descenso del LM-8, posada en Fra Mauro el 5 de febrero de 1971. Abandonada in situ."
+    "texto_explorador": "I have been in the Fra Mauro hills since 1971, and I am still here.",
+    "texto_cientifico": "LM-8 descent stage, landed in Fra Mauro on February 5, 1971. Abandoned in situ."
    },
    "ficha_resumen": "The lower half of the Apollo 14 lunar module, resting in the Fra Mauro hills in February 1971. The mission was to look for rock that could have come from the impact that formed the Mare Imbrium.",
    "personas": [
     {
      "nombre": "Alan Shepard",
-     "papel": "comandante, el único de los Apolo que pisó la Luna siendo el primer estadounidense en el espacio"
+     "papel": "commander, the only one of the Apollo astronauts to walk on the Moon while being the first American in space"
     },
     {
      "nombre": "Ed Mitchell",
-     "papel": "piloto del módulo lunar"
+     "papel": "lunar module pilot"
     }
    ],
    "fuentes": [
     {
-     "texto": "NASA — Apolo 14",
+     "texto": "NASA — Apollo 14",
      "url": "https://www.nasa.gov/mission/apollo-14/"
     }
    ],
    "hitos": [
     {
-     "titulo": "Fra Mauro no era plano",
+     "titulo": "Fra Mauro was not flat",
      "texto": "I landed in a hilly region, more difficult than the smooth seas of Apollo 11 and 12. Shepard had to correct the trajectory by hand when the radar was not giving him what he expected.",
-     "fuente": "NASA — Apolo 14"
+     "fuente": "NASA — Apollo 14"
     },
     {
-     "titulo": "Buscábamos la roca de Imbrium",
-     "texto": "El encargo era traer material expulsado por el impacto que excavó el Mare Imbrium. Shepard y Mitchell recogieron muestras y perforaron el suelo para sacar un testigo de profundidad.",
-     "fuente": "NASA — Apolo 14"
+     "titulo": "We were looking for the Imbrium rock",
+     "texto": "The assignment was to bring back material ejected by the impact that excavated Mare Imbrium. Shepard and Mitchell collected samples and drilled the ground to extract a depth core.",
+     "fuente": "NASA — Apollo 14"
     },
     {
-     "titulo": "Lo que quedó aquí",
-     "texto": "Mis dos paquetes de experimentos se quedaron funcionando en la superficie, y yo con ellos. Mi mitad de arriba regresó con la tripulación y después terminó estrellándose contra la Luna.",
-     "fuente": "NASA — Apolo 14"
+     "titulo": "What was left here",
+     "texto": "My two experiment packages stayed running on the surface, and I with them. My upper half returned with the crew and later ended up crashing into the Moon.",
+     "fuente": "NASA — Apollo 14"
     }
    ],
    "turnos": [
     {
      "id": "apolo14-antares_1",
-     "pregunta": "¿Fue difícil posarse ahí?",
+     "pregunta": "Was it difficult to land there?",
      "opciones": [
       "¿Por qué?",
       "¿Quién pilotaba?"
      ],
      "texto_explorador": "More than expected. The terrain had craters and the radar gave readings that did not add up. Shepard took the controls and set me down gently on the hills.",
-     "texto_cientifico": "Las correcciones manuales de Shepard evitaron un cráter; el lugar de descenso quedó en Fra Mauro, formación del grupo Cayley.",
+     "texto_cientifico": "Shepard's manual corrections avoided a crater; the landing site was in Fra Mauro, a formation of the Cayley group.",
      "fuente": "https://www.nasa.gov/mission/apollo-14/"
     },
     {
      "id": "apolo14-antares_2",
-     "pregunta": "¿Qué se llevaron de aquí?",
+     "pregunta": "What did they take from here?",
      "opciones": [
       "¿Rocas?",
       "¿Solo fotos?"
@@ -1497,13 +1497,13 @@
     },
     {
      "id": "apolo14-antares_3",
-     "pregunta": "¿Y tu otra mitad?",
+     "pregunta": "And your other half?",
      "opciones": [
       "¿Volvió?",
       "¿Dónde está?"
      ],
-     "texto_explorador": "Volvió a la Tierra con Shepard y Mitchell y, cuando ya no hacía falta, la soltaron y se estrelló contra la Luna. Ellos midieron el golpe desde arriba.",
-     "texto_cientifico": "La etapa de ascenso fue abandonada tras el acoplamiento y su impacto se registró con los sismómetros dejados en la superficie.",
+     "texto_explorador": "It returned to Earth with Shepard and Mitchell and, when it was no longer needed, they released it and it crashed into the Moon. They measured the impact from above.",
+     "texto_cientifico": "The ascent stage was abandoned after docking and its impact was recorded with the seismometers left on the surface.",
      "fuente": "https://www.nasa.gov/mission/apollo-14/"
     }
    ],
@@ -1540,7 +1540,7 @@
    ],
    "fuentes": [
     {
-     "texto": "NASA — Apolo 16",
+     "texto": "NASA — Apollo 16",
      "url": "https://www.nasa.gov/mission/apollo-16/"
     }
    ],
@@ -1548,17 +1548,17 @@
     {
      "titulo": "They sent me to the highlands",
      "texto": "All previous landings had gone to dark maria. I was sent to Descartes, bright terrain full of craters, to look for volcanic rocks. There were none: what they found was rock broken and melted by impacts.",
-     "fuente": "NASA — Apolo 16"
+     "fuente": "NASA — Apollo 16"
     },
     {
      "titulo": "A change of plan",
      "texto": "The geology turned out different from what was expected, so the crew redid the route on the fly and went to explore the edge of a large crater to make use of the time.",
-     "fuente": "NASA — Apolo 16"
+     "fuente": "NASA — Apollo 16"
     },
     {
      "titulo": "My end",
      "texto": "Young and Duke left in my upper half. That half was released later and crashed into the Moon; I stayed here, with the instruments they left beside me.",
-     "fuente": "NASA — Apolo 16"
+     "fuente": "NASA — Apollo 16"
     }
    ],
    "turnos": [
@@ -1629,7 +1629,7 @@
    ],
    "fuentes": [
     {
-     "texto": "NASA — Apolo 17",
+     "texto": "NASA — Apollo 17",
      "url": "https://www.nasa.gov/mission/apollo-17/"
     }
    ],
@@ -1637,17 +1637,17 @@
     {
      "titulo": "A valley between mountains",
      "texto": "I landed at Taurus-Littrow, a valley surrounded by mountains, with very ancient material within reach. Cernan and Schmitt traversed the valley with the rover and brought back the oldest sample ever returned from the Moon.",
-     "fuente": "NASA — Apolo 17"
+     "fuente": "NASA — Apollo 17"
     },
     {
      "titulo": "They brought a geologist",
      "texto": "For the first time among the Apollo missions, one of the two who descended was a trained geologist. That changed what was collected and how it was described in the field.",
-     "fuente": "NASA — Apolo 17"
+     "fuente": "NASA — Apollo 17"
     },
     {
      "titulo": "The farewell",
      "texto": "When they left, the ladder that rested on me was no longer used. My upper half was deliberately crashed into the valley so that the seismometers would record the impact. Since then no one has walked on the Moon again.",
-     "fuente": "NASA — Apolo 17"
+     "fuente": "NASA — Apollo 17"
     }
    ],
    "turnos": [
@@ -1948,14 +1948,14 @@
     "tipo": "espacio"
    },
    "estado_texto": {
-    "texto_explorador": "Aterricé en Titán y transmití 72 minutos. Sigo allí.",
-    "texto_cientifico": "Sonda de la ESA transportada por Cassini. Descendió en Titán el 14 de enero de 2005; baterías agotadas."
+    "texto_explorador": "I landed on Titan and transmitted for 72 minutes. I'm still there.",
+    "texto_cientifico": "ESA probe carried by Cassini. It descended on Titan on January 14, 2005; batteries depleted."
    },
-   "ficha_resumen": "La sonda europea que viajó de polizón en Cassini y se posó en Titán, la luna de Saturno con atmósfera y lagos. Transmitió desde el suelo 72 minutos y sigue allí, apagada.",
+   "ficha_resumen": "The European probe that traveled as a stowaway on Cassini and landed on Titan, Saturn's moon with an atmosphere and lakes. It transmitted from the ground for 72 minutes and is still there, switched off.",
    "personas": [
     {
      "nombre": "John Zarnecki",
-     "papel": "responsable del instrumento que midió la superficie de Titán"
+     "papel": "responsible for the instrument that measured the surface of Titan"
     }
    ],
    "fuentes": [
@@ -1966,17 +1966,17 @@
    ],
    "hitos": [
     {
-     "titulo": "Me soltaron y caí sola",
+     "titulo": "They released me and I fell on my own",
      "texto": "I was separated from Cassini on 25 December 2004. I descended for three weeks, entered the atmosphere of Titan and deployed parachutes, with no one who could correct me.",
      "fuente": "NASA Science — Cassini-Huygens"
     },
     {
-     "titulo": "El aterrizaje más lejano",
-     "texto": "El 14 de enero de 2005 toqué suelo en un mundo a más de mil millones de kilómetros. Fue el aterrizaje más lejano que se había hecho nunca en otro cuerpo.",
+     "titulo": "The farthest landing",
+     "texto": "On January 14, 2005, I touched down on a world more than a billion kilometers away. It was the most distant landing ever made on another body.",
      "fuente": "NASA Science — Cassini-Huygens"
     },
     {
-     "titulo": "Setenta y dos minutos",
+     "titulo": "Seventy-two minutes",
      "texto": "I transmitted from the surface longer than planned. My last signal was received by Cassini, which stored it and passed it on to Earth when it pointed toward it.",
      "fuente": "NASA Science — Cassini-Huygens"
     }
@@ -1984,35 +1984,35 @@
    "turnos": [
     {
      "id": "huygens_1",
-     "pregunta": "¿Dónde estás?",
+     "pregunta": "Where are you?",
      "opciones": [
       "¿En Titán?",
       "¿Flotando?"
      ],
-     "texto_explorador": "En el suelo de Titán, quieta. Lo que tocaron mis sensores era blando, como arena mojada o barro, con piedras redondeadas alrededor.",
+     "texto_explorador": "On the surface of Titan, still. What my sensors touched was soft, like wet sand or mud, with rounded stones around.",
      "texto_cientifico": "The penetrometer data indicate a consolidated surface like sand or mud; the images show pebbles of water ice.",
      "fuente": "https://science.nasa.gov/mission/cassini-huygens/"
     },
     {
      "id": "huygens_2",
-     "pregunta": "¿Por qué duraste tan poco?",
+     "pregunta": "Why did you last so little?",
      "opciones": [
       "¿Se rompió algo?",
       "¿Baterías?"
      ],
      "texto_explorador": "I didn't break: I ran out of batteries. I carried batteries, not panels, because the Sun is too far away to provide power there.",
-     "texto_cientifico": "La sonda usó baterías térmicas de larga vida y transmisión directa a Cassini, sin capacidad de repetir datos perdidos.",
+     "texto_cientifico": "The probe used long-life thermal batteries and direct transmission to Cassini, with no ability to repeat lost data.",
      "fuente": "https://science.nasa.gov/mission/cassini-huygens/"
     },
     {
      "id": "huygens_3",
-     "pregunta": "¿Había algo vivo?",
+     "pregunta": "Was there anything alive?",
      "opciones": [
       "¿Vida?",
       "¿Qué encontraste?"
      ],
      "texto_explorador": "Life I can't say I saw. I did measure methane in the air and saw rivers and lakes of liquid. To know more we'll have to come back.",
-     "texto_cientifico": "Se confirmó el ciclo del metano y la presencia de líquido en superficie; la habitabilidad de Titán sigue abierta.",
+     "texto_cientifico": "The methane cycle and the presence of liquid on the surface were confirmed; Titan's habitability remains an open question.",
      "fuente": "https://science.nasa.gov/mission/cassini-huygens/"
     }
    ]
@@ -2113,14 +2113,14 @@
     "tipo": "espacio"
    },
    "estado_texto": {
-    "texto_explorador": "Me desintegré en la atmósfera de Venus en 1994. Antes dibujé casi todo su mapa.",
-    "texto_cientifico": "Entrada controlada en la atmósfera de Venus el 11 de octubre de 1994 tras cartografiar el 98 % de la superficie."
+    "texto_explorador": "I disintegrated in the atmosphere of Venus in 1994. Before that I drew almost its entire map.",
+    "texto_cientifico": "Controlled entry into the atmosphere of Venus on October 11, 1994 after mapping 98 % of the surface."
    },
    "ficha_resumen": "The ship that mapped Venus with radar, because the ground can't be seen there. Before it ran out of fuel, they sent it to burn up in the planet's own atmosphere.",
    "personas": [
     {
      "nombre": "Ellen Stofan",
-     "papel": "científica del equipo de radar de la misión"
+     "papel": "scientist on the mission's radar team"
     }
    ],
    "fuentes": [
@@ -2131,53 +2131,53 @@
    ],
    "hitos": [
     {
-     "titulo": "Venus no deja ver",
+     "titulo": "Venus does not let you see",
      "texto": "Down there are acid clouds that don't let you see anything, so I carried a radar: what I drew was the relief, not a photo. I mapped 98 % of the planet.",
      "fuente": "NASA Science — Magellan"
     },
     {
-     "titulo": "Volví a frenar con aerofrenado",
+     "titulo": "I braked again with aerobraking",
      "texto": "To avoid using up fuel, I had the spacecraft pass through the upper atmosphere again and again until the orbit closed. It was the first time that technique was used.",
      "fuente": "NASA Science — Magellan"
     },
     {
      "titulo": "El final",
-     "texto": "Cuando se acabó el combustible la mandaron a la atmósfera, el 11 de octubre de 1994. Se deshizo allí, y parte de ella puede que aún esté en el aire de Venus.",
+     "texto": "When the fuel ran out they sent it into the atmosphere, on October 11, 1994. It came apart there, and part of it may still be in the air of Venus.",
      "fuente": "NASA Science — Magellan"
     }
    ],
    "turnos": [
     {
      "id": "magellan_1",
-     "pregunta": "¿Cómo veías el suelo?",
+     "pregunta": "How did you see the ground?",
      "opciones": [
       "¿Con radar?",
       "¿Con cámaras?"
      ],
      "texto_explorador": "With radar. Venus is covered by clouds, so I sent out pulses and measured what came back. Mine weren't photos, it was a relief map.",
-     "texto_cientifico": "El radar de apertura sintética alcanzó una resolución de unos 100 m y produjo la cartografía base de Venus que aún se usa.",
+     "texto_cientifico": "The synthetic aperture radar reached a resolution of about 100 m and produced the base mapping of Venus that is still used.",
      "fuente": "https://science.nasa.gov/mission/magellan/"
     },
     {
      "id": "magellan_2",
-     "pregunta": "¿Sigues en Venus?",
+     "pregunta": "Are you still on Venus?",
      "opciones": [
       "¿Entera?",
       "¿Desintegrada?"
      ],
-     "texto_explorador": "Desintegrada. Entré en la atmósfera a propósito cuando ya no podía mantenerme en órbita, y allí se acabó todo.",
+     "texto_explorador": "Disintegrated. I entered the atmosphere on purpose when I could no longer stay in orbit, and that was the end of everything.",
      "texto_cientifico": "The entry on October 11, 1994 was a planned maneuver to dispose of the spacecraft without leaving orbital debris.",
      "fuente": "https://science.nasa.gov/mission/magellan/"
     },
     {
      "id": "magellan_3",
-     "pregunta": "¿Qué es lo más raro que viste?",
+     "pregunta": "What is the strangest thing you saw?",
      "opciones": [
       "¿Volcanes?",
       "¿Canales?"
      ],
-     "texto_explorador": "Canales larguísimos, de cientos de kilómetros, que parecen hechos por lava muy caliente. Y volcanes por todas partes.",
-     "texto_cientifico": "Las estructuras canaliformes de Venus se asocian a flujos de lava de baja viscosidad; la superficie es mayoritariamente volcánica.",
+     "texto_explorador": "Very long channels, hundreds of kilometers long, that appear to have been made by very hot lava. And volcanoes everywhere.",
+     "texto_cientifico": "The channel-like structures of Venus are associated with low-viscosity lava flows; the surface is mostly volcanic.",
      "fuente": "https://science.nasa.gov/mission/magellan/"
     }
    ]
@@ -2195,35 +2195,35 @@
     "tipo": "espacio"
    },
    "estado_texto": {
-    "texto_explorador": "Caí en pedazos sobre Australia en 1979. Mis trozos están en museos.",
-    "texto_cientifico": "Reentrada no controlada el 11 de julio de 1979; fragmentos recuperados en Australia Occidental."
+    "texto_explorador": "I fell to pieces over Australia in 1979. My pieces are in museums.",
+    "texto_cientifico": "Uncontrolled reentry on July 11, 1979; fragments recovered in Western Australia."
    },
-   "ficha_resumen": "La primera estación espacial de Estados Unidos. Nueve astronautas vivieron en ella y, cuando ya no se podía mantener arriba, cayó sobre Australia Occidental. Sus restos se exponen en museos.",
+   "ficha_resumen": "The first United States space station. Nine astronauts lived on it and, when it could no longer be kept up, it fell over Western Australia. Its remains are exhibited in museums.",
    "personas": [
     {
      "nombre": "Pete Conrad",
-     "papel": "comandante de la primera tripulación que la reparó en órbita"
+     "papel": "commander of the first crew that repaired it in orbit"
     }
    ],
    "fuentes": [
     {
-     "texto": "NASA — Historia del Skylab",
+     "texto": "NASA — History of Skylab",
      "url": "https://www.nasa.gov/history/skylab/"
     }
    ],
    "hitos": [
     {
-     "titulo": "Salí dañada",
-     "texto": "Al llegar a la órbita perdí un panel solar y el escudo térmico. La primera tripulación tuvo que salir a repararme con paraguas improvisados antes de poder entrar.",
+     "titulo": "I came out damaged",
+     "texto": "On reaching orbit I lost a solar panel and the heat shield. The first crew had to go out to repair me with improvised umbrellas before they could enter.",
      "fuente": "NASA — Skylab"
     },
     {
-     "titulo": "Nueve personas, tres turnos",
+     "titulo": "Nine people, three shifts",
      "texto": "Three crews lived with me, the last one for almost three months. Experiments were done on the Sun, on Earth, and on how the human body behaves without weight.",
      "fuente": "NASA — Skylab"
     },
     {
-     "titulo": "Caí sobre Australia",
+     "titulo": "I fell over Australia",
      "texto": "On July 11, 1979, I lost altitude and entered the atmosphere out of control. The pieces fell over Western Australia. A town there fined the United States for littering, and my remains ended up in museums.",
      "fuente": "NASA — Skylab"
     }
@@ -2231,35 +2231,35 @@
    "turnos": [
     {
      "id": "skylab_1",
-     "pregunta": "¿Por qué caíste?",
+     "pregunta": "Why did you fall?",
      "opciones": [
       "¿Te empujaron?",
       "¿Te quedaste sin altura?"
      ],
      "texto_explorador": "No one pushed me. The Sun's activity heated the atmosphere, which expanded and slowed me down little by little. There was no way to go any higher.",
-     "texto_cientifico": "El ciclo solar 21 elevó la densidad atmosférica en órbita baja; el arrastre aumentó y la reentrada se produjo antes de lo previsto.",
+     "texto_cientifico": "Solar cycle 21 raised atmospheric density in low orbit; drag increased and reentry occurred earlier than expected.",
      "fuente": "https://www.nasa.gov/history/skylab/"
     },
     {
      "id": "skylab_2",
-     "pregunta": "¿Dónde están tus restos?",
+     "pregunta": "Where are your remains?",
      "opciones": [
       "¿En Australia?",
       "¿Perdidos?"
      ],
-     "texto_explorador": "En Australia y en museos. Un pueblo australiano me puso una multa por tirar basura al suelo, y el museo de Esperance guarda parte de mí.",
-     "texto_cientifico": "Los fragmentos se recuperaron en la zona de Esperance; el Shire of Esperance emitió una multa simbólica a Estados Unidos en 1979.",
+     "texto_explorador": "In Australia and in museums. An Australian town fined me for littering the ground, and the Esperance museum keeps part of me.",
+     "texto_cientifico": "The fragments were recovered in the Esperance area; the Shire of Esperance issued a symbolic fine to the United States in 1979.",
      "fuente": "https://www.nasa.gov/history/skylab/"
     },
     {
      "id": "skylab_3",
-     "pregunta": "¿Quién vivió contigo?",
+     "pregunta": "Who lived with you?",
      "opciones": [
       "¿Cuántos?",
       "¿Cuánto tiempo?"
      ],
-     "texto_explorador": "Nueve personas en tres turnos. El que más tiempo se quedó pasó 84 días seguidos a bordo, algo que entonces no se había hecho.",
-     "texto_cientifico": "Tres misiones: Skylab 2 (28 días), 3 (59 días) y 4 (84 días), con un total de 171 días ocupados.",
+     "texto_explorador": "Nine people in three shifts. The one who stayed the longest spent 84 consecutive days on board, something that had not been done at the time.",
+     "texto_cientifico": "Three missions: Skylab 2 (28 days), 3 (59 days) and 4 (84 days), with a total of 171 days occupied.",
      "fuente": "https://www.nasa.gov/history/skylab/"
     }
    ]

@@ -283,7 +283,7 @@
     if (!b) return;
     var on = vozActiva();
     b.setAttribute('aria-pressed', on ? 'true' : 'false');
-    b.title = on ? 'Dejar de leer las respuestas' : 'Leer las respuestas en voz alta';
+    b.title = on ? T('chat.dejarLeer') : T('chat.leer');
     var s = b.firstElementChild || b;
     s.textContent = on ? '🔊' : '🔈';
   }
@@ -808,7 +808,7 @@
       ocupado = false;
       if (!j || !j.encontrado || !j.respuesta) {
         burbuja('objeto', escapar(T('chat.buscar.nada') ||
-          'He buscado fuera y no he encontrado nada que pueda contarte sin inventármelo.'));
+          T('chat.buscarNada') || 'He buscado fuera y no he encontrado nada que pueda contarte sin inventármelo.'));
         return;
       }
       pintarExterno(j);
@@ -816,7 +816,7 @@
       if (esperando) esperando.remove();
       ocupado = false;
       burbuja('objeto', escapar(T('chat.buscar.nada') ||
-        'He buscado fuera y no he encontrado nada que pueda contarte sin inventármelo.'));
+        T('chat.buscarNada') || 'He buscado fuera y no he encontrado nada que pueda contarte sin inventármelo.'));
     });
   }
 

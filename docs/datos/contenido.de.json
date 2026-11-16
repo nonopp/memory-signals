@@ -13,12 +13,12 @@
    "cientifico"
   ],
   "nivel_por_defecto": "explorador",
-  "nota": "Un guion, dos textos. El turno, el personaje, la pregunta y las opciones son idénticos en los dos niveles: solo cambia el campo de texto."
+  "nota": "Ein Skript, zwei Texte. Der Turn, die Figur, die Frage und die Optionen sind in beiden Stufen identisch: Nur das Textfeld ändert sich."
  },
  "astronauta": {
   "id": "guia",
   "nombre": "Kommandantin Iria",
-  "nota": "Personaje de ficción. Guion cerrado: no improvisa y no da datos de misión.",
+  "nota": "Fiktive Figur. Geschlossenes Skript: improvisiert nicht und gibt keine Missionsdaten preis.",
   "lineas": {
    "intro": {
     "texto_explorador": "Hallo. Ich freue mich, dass du gekommen bist. Ich reise seit Jahren zu Orten, an denen die NASA Dinge hinterlassen hat.",
@@ -136,7 +136,7 @@
    ],
    "fuentes": [
     {
-     "texto": "NASA Science — Spirit y Opportunity",
+     "texto": "NASA Science — Spirit und Opportunity",
      "url": "https://science.nasa.gov/mission/mars-exploration-rovers-spirit-and-opportunity/"
     },
     {
@@ -261,11 +261,11 @@
      "url": "https://science.nasa.gov/mission/insight/"
     },
     {
-     "texto": "NASA Science — ciencia de InSight",
+     "texto": "NASA Science — Wissenschaft von InSight",
      "url": "https://science.nasa.gov/mission/insight/science/"
     },
     {
-     "texto": "NASA — el orbitador fotografía el InSight retirado",
+     "texto": "NASA — der Orbiter fotografiert den außer Dienst gestellten InSight",
      "url": "https://www.nasa.gov/missions/insight/nasa-mars-orbiter-spots-retired-insight-lander-to-study-dust-movement/"
     }
    ],
@@ -386,7 +386,7 @@
      "url": "https://science.nasa.gov/mission/voyager/"
     },
     {
-     "texto": "NASA Science — saludos del disco de oro (55 idiomas)",
+     "texto": "NASA Science — Grüße der Goldenen Schallplatte (55 Sprachen)",
      "url": "https://science.nasa.gov/mission/voyager/golden-record-contents/greetings"
     }
    ],
@@ -482,12 +482,12 @@
   },
   {
    "id": "modulo-lunar",
-   "nombre": "Apolo-11-Mondlandefähre",
+   "nombre": "Apollo-11-Mondlandefähre",
    "cuerpo": "Mond",
    "lugar": "Meer der Ruhe · 0,67° N 23,47° O",
    "anio": 1969,
    "estado": "verlassen",
-   "estado_texto": "La etapa de descenso sigue allí; la de ascenso se eyectó y se perdió.",
+   "estado_texto": "Die Abstiegsstufe ist noch dort; die Aufstiegsstufe wurde abgeworfen und ging verloren.",
    "ficha_resumen": "Die zweistufige Landefähre, die Armstrong und Aldrin im Juli 1969 auf dem Mond landete. Die untere Hälfte liegt weiterhin im Meer der Ruhe.",
    "color": "#c9d6e6",
    "personas": [
@@ -506,15 +506,15 @@
    ],
    "fuentes": [
     {
-     "texto": "NSSDCA — módulo lunar del Apolo 11 (1969-059C)",
+     "texto": "NSSDCA — Mondlandefähre von Apollo 11 (1969-059C)",
      "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1969-059C"
     },
     {
-     "texto": "NSSDCA — módulo lunar del Apolo 12 (1969-099C)",
+     "texto": "NSSDCA — Mondlandefähre von Apollo 12 (1969-099C)",
      "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1969-099C"
     },
     {
-     "texto": "NSSDCA — módulo lunar del Apolo 15 (1971-063C)",
+     "texto": "NSSDCA — Mondlandefähre von Apollo 15 (1971-063C)",
      "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1971-063C"
     }
    ],
@@ -609,7 +609,7 @@
      "fuente": "The Velcro Companies (velcro.com) · swissinfo — Velcro: how the space race helped a Swiss invention catch on"
     }
    ],
-   "nombre_mapa": "Apolo 11"
+   "nombre_mapa": "Apollo 11"
   },
   {
    "id": "near-shoemaker",
@@ -618,7 +618,7 @@
    "lugar": "Auf Eros gelandet, 355 Millionen km von der Erde",
    "anio": 1996,
    "estado": "verlassen",
-   "estado_texto": "Posada en Eros desde 2001; sin señal desde el 28 de febrero de 2001.",
+   "estado_texto": "Seit 2001 auf Eros gelandet; kein Signal seit dem 28. Februar 2001.",
    "ficha_resumen": "Das erste Raumschiff, das einen Asteroiden umkreiste und das erste, das auf einem landete. Es bleibt auf Eros gelandet, gefroren.",
    "color": "#d9c08a",
    "personas": [
@@ -730,7 +730,7 @@
    "lugar": "Unterwegs zum Stern Aldebaran",
    "anio": 1972,
    "estado": "verlassen",
-   "estado_texto": "Última señal el 23 de enero de 2003; sigue su rumbo fuera del sistema solar.",
+   "estado_texto": "Letztes Signal am 23. Januar 2003; setzt seinen Kurs außerhalb des Sonnensystems fort.",
    "ficha_resumen": "Das erste Raumschiff, das den Asteroidengürtel durchquerte, Jupiter passierte und das Sonnensystem verließ. Es trägt eine Plakette, die sagt, woher es kommt.",
    "color": "#8fb8d8",
    "personas": [
@@ -753,7 +753,7 @@
      "url": "https://science.nasa.gov/mission/pioneer-11/"
     },
     {
-     "texto": "NASA Science — la placa de las Pioneer",
+     "texto": "NASA Science — die Pioneer-Plakette",
      "url": "https://science.nasa.gov/resource/pioneer-plaque/"
     }
    ],
@@ -854,7 +854,7 @@
    "lugar": "Umlaufbahn um Ceres, Asteroidengürtel",
    "anio": 2007,
    "estado": "verlassen",
-   "estado_texto": "En órbita de Ceres, sin funcionar desde el 1 de noviembre de 2018.",
+   "estado_texto": "Im Orbit um Ceres, seit dem 1. November 2018 außer Betrieb.",
    "ficha_resumen": "Das erste Raumschiff, das einen Asteroiden im Hauptgürtel umkreiste und das erste, das einen Zwergplaneten erreichte. Es ging im Orbit um Ceres der Treibstoff aus.",
    "color": "#a9c7de",
    "personas": [
@@ -980,7 +980,7 @@
    "anio_tipo": "lanzamiento",
    "color": "#c46a4a",
    "estado": "verlassen",
-   "estado_texto": "Los dos módulos siguen en Marte, sin funcionar. Viking 1 dejó de operar el 11 de noviembre de 1982.",
+   "estado_texto": "Die beiden Module sind weiterhin auf dem Mars, außer Betrieb. Viking 1 stellte den Betrieb am 11. November 1982 ein.",
    "ficha_resumen": "Die ersten Module, die wirklich auf dem Mars funktionierten. Sie suchten nach Leben im Boden und fanden keines.",
    "personas": [
     {
@@ -1102,7 +1102,7 @@
    "anio_tipo": "lanzamiento",
    "color": "#bcd4f5",
    "estado": "verlassen",
-   "estado_texto": "Retirado el 30 de octubre de 2018 sin combustible; sigue en órbita heliocéntrica, apagado.",
+   "estado_texto": "Am 30. Oktober 2018 ohne Treibstoff außer Dienst gestellt; befindet sich weiterhin in einer heliozentrischen Umlaufbahn, abgeschaltet.",
    "ficha_resumen": "Der erste Planetensucher der NASA: mehr als 2.600 Welten außerhalb des Sonnensystems, bevor ich keinen Treibstoff mehr hatte.",
    "personas": [
     {
@@ -1214,7 +1214,7 @@
    "anio_tipo": "lanzamiento",
    "color": "#cdd8e3",
    "estado": "verlassen",
-   "estado_texto": "Posado en el cráter Jezero desde el 18 de enero de 2024, con las palas dañadas; ya no puede volar.",
+   "estado_texto": "Seit dem 18. Januar 2024 im Jezero-Krater gelandet, mit beschädigten Rotorblättern; kann nicht mehr fliegen.",
    "ficha_resumen": "Das erste Gerät, das mit einem Motor auf einem anderen Planeten flog: 72 Flüge und 17 km über dem Mars, bevor die Rotorblätter brachen.",
    "personas": [
     {
@@ -1232,11 +1232,11 @@
    ],
    "fuentes": [
     {
-     "texto": "NASA Science — helicóptero Ingenuity",
+     "texto": "NASA Science — Hubschrauber Ingenuity",
      "url": "https://science.nasa.gov/mission/mars-2020-perseverance/ingenuity-mars-helicopter/"
     },
     {
-     "texto": "NASA — fin de la misión Ingenuity (enero de 2024)",
+     "texto": "NASA — Ende der Mission Ingenuity (Januar 2024)",
      "url": "https://www.nasa.gov/news-release/after-three-years-on-mars-nasas-ingenuity-helicopter-mission-ends/"
     }
    ],
@@ -1362,7 +1362,7 @@
    ],
    "fuentes": [
     {
-     "texto": "NASA — Apolo 12",
+     "texto": "NASA — Apollo 12",
      "url": "https://www.nasa.gov/mission/apollo-12/"
     }
    ],
@@ -1370,17 +1370,17 @@
     {
      "titulo": "Meine Aufgabe war zu bremsen",
      "texto": "Ich war die untere Hälfte der Mondlandefähre. Ich zündete das Triebwerk, bremste den Fall und setzte mich auf vier Beinen im Oceanus Procellarum ab. Die obere Hälfte hob mit den beiden Astronauten ab und kehrte nach Hause zurück.",
-     "fuente": "NASA — Apolo 12"
+     "fuente": "NASA — Apollo 12"
     },
     {
      "titulo": "Ich landete nicht allein",
      "texto": "163 Meter von meinem Landeplatz entfernt war seit zweieinhalb Jahren die Sonde Surveyor 3. Conrad und Bean gingen zu ihr und brachten Teile zur Erde, um zu sehen, was der Mondstaub mit einer Maschine macht.",
-     "fuente": "NASA — Apolo 12"
+     "fuente": "NASA — Apollo 12"
     },
     {
      "titulo": "Niemand holte mich ab",
      "texto": "Für mich gab es keine Rückfahrkarte: Ich war zu schwer, um mitgenommen zu werden. Man ließ mich mit eingeschalteten Instrumenten zurück, und seitdem bin ich hier, während der Staub mich nach und nach bedeckt.",
-     "fuente": "NASA — Apolo 12"
+     "fuente": "NASA — Apollo 12"
     }
    ],
    "turnos": [
@@ -1451,7 +1451,7 @@
    ],
    "fuentes": [
     {
-     "texto": "NASA — Apolo 14",
+     "texto": "NASA — Apollo 14",
      "url": "https://www.nasa.gov/mission/apollo-14/"
     }
    ],
@@ -1459,17 +1459,17 @@
     {
      "titulo": "Fra Mauro war nicht flach",
      "texto": "Ich landete in einer Hügelregion, schwieriger als die glatten Mare des Apollo 11 und 12. Shepard musste die Flugbahn von Hand korrigieren, als das Radar nicht das lieferte, was er erwartete.",
-     "fuente": "NASA — Apolo 14"
+     "fuente": "NASA — Apollo 14"
     },
     {
      "titulo": "Wir suchten das Imbrium-Gestein",
      "texto": "Der Auftrag war, Material zu bringen, das vom Einschlag ausgeschleudert wurde, der das Mare Imbrium aushob. Shepard und Mitchell sammelten Proben und bohrten den Boden, um einen Tiefenkern zu entnehmen.",
-     "fuente": "NASA — Apolo 14"
+     "fuente": "NASA — Apollo 14"
     },
     {
      "titulo": "Was hier blieb",
      "texto": "Meine beiden Experimentpakete blieben auf der Oberfläche in Betrieb, und ich mit ihnen. Meine obere Hälfte kehrte mit der Besatzung zurück und zerschellte später am Mond.",
-     "fuente": "NASA — Apolo 14"
+     "fuente": "NASA — Apollo 14"
     }
    ],
    "turnos": [
@@ -1540,7 +1540,7 @@
    ],
    "fuentes": [
     {
-     "texto": "NASA — Apolo 16",
+     "texto": "NASA — Apollo 16",
      "url": "https://www.nasa.gov/mission/apollo-16/"
     }
    ],
@@ -1548,17 +1548,17 @@
     {
      "titulo": "Man schickte mich ins Hochland",
      "texto": "Alle früheren Landungen waren in dunklen Mare-Regionen. Mich schickte man nach Descartes, helles, kraterreiches Gelände, um Vulkangestein zu suchen. Es gab keines: Was man fand, war durch Einschläge zerbrochenes und geschmolzenes Gestein.",
-     "fuente": "NASA — Apolo 16"
+     "fuente": "NASA — Apollo 16"
     },
     {
      "titulo": "Ein Planwechsel",
      "texto": "Die Geologie erwies sich anders als vorhergesagt, also änderten die Astronauten die Route spontan und erkundeten den Rand eines großen Kraters, um die Zeit zu nutzen.",
-     "fuente": "NASA — Apolo 16"
+     "fuente": "NASA — Apollo 16"
     },
     {
      "titulo": "Mein Ende",
      "texto": "Young und Duke flogen in meiner oberen Hälfte davon. Diese Hälfte löste sich später und schlug auf dem Mond auf; ich blieb hier, mit den Instrumenten, die sie neben mir zurückließen.",
-     "fuente": "NASA — Apolo 16"
+     "fuente": "NASA — Apollo 16"
     }
    ],
    "turnos": [
@@ -1629,7 +1629,7 @@
    ],
    "fuentes": [
     {
-     "texto": "NASA — Apolo 17",
+     "texto": "NASA — Apollo 17",
      "url": "https://www.nasa.gov/mission/apollo-17/"
     }
    ],
@@ -1637,17 +1637,17 @@
     {
      "titulo": "Ein Tal zwischen Bergen",
      "texto": "Ich landete in Taurus-Littrow, einem von Bergen umgebenen Tal, mit sehr altem Material in Reichweite. Cernan und Schmitt durchquerten das Tal mit dem Rover und brachten die älteste Probe mit, die je vom Mond geholt wurde.",
-     "fuente": "NASA — Apolo 17"
+     "fuente": "NASA — Apollo 17"
     },
     {
      "titulo": "Sie hatten einen Geologen dabei",
      "texto": "Zum ersten Mal bei den Apollo-Missionen war einer der beiden, die ausstiegen, ausgebildeter Geologe. Das veränderte, was gesammelt und wie es vor Ort beschrieben wurde.",
-     "fuente": "NASA — Apolo 17"
+     "fuente": "NASA — Apollo 17"
     },
     {
      "titulo": "Der Abschied",
      "texto": "Als sie gingen, wurde die Leiter, die auf mir stand, nicht mehr benutzt. Meine obere Hälfte wurde absichtlich zum Absturz ins Tal gebracht, damit die Seismometer den Einschlag registrierten. Seitdem hat niemand mehr den Mond betreten.",
-     "fuente": "NASA — Apolo 17"
+     "fuente": "NASA — Apollo 17"
     }
    ],
    "turnos": [
@@ -2207,7 +2207,7 @@
    ],
    "fuentes": [
     {
-     "texto": "NASA — Historia del Skylab",
+     "texto": "NASA — Geschichte von Skylab",
      "url": "https://www.nasa.gov/history/skylab/"
     }
    ],

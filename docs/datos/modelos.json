@@ -36,19 +36,25 @@
   "foto": "modelos/surveyor-3.jpg",
   "nombre_modelo": "Fotografía · Surveyor 3 visto por el Apolo 12 en 1969",
   "credito": "NASA · as12-48-7121 (dominio público)",
-  "nota": "La NASA no publica un modelo 3D de Surveyor 3. Se muestra la foto oficial."
+  "nota": "La NASA no publica un modelo 3D de Surveyor 3. Se muestra la foto oficial.",
+  "nombre_modelo_en": "Photograph · Surveyor 3 seen by Apollo 12 in 1969",
+  "nombre_modelo_de": "Foto · Surveyor 3, gesehen von Apollo 12 im Jahr 1969"
  },
  "lrv17": {
   "glb": null,
   "foto": "modelos/lrv-apolo17.jpg",
   "nombre_modelo": "Fotografía · rover lunar del Apolo 17 en Taurus-Littrow",
   "credito": "NASA · as17-137-20979 (dominio público)",
-  "nota": "La NASA no publica un modelo 3D del rover lunar. Se muestra la foto oficial."
+  "nota": "La NASA no publica un modelo 3D del rover lunar. Se muestra la foto oficial.",
+  "nombre_modelo_en": "Photograph · Apollo 17 lunar rover at Taurus-Littrow",
+  "nombre_modelo_de": "Foto · Mondfahrzeug von Apollo 17 in Taurus-Littrow"
  },
  "modulo-lunar": {
   "glb": "modelos/apolo-modulo-lunar.glb",
   "nombre_modelo": "Módulo lunar Apolo (LM)",
-  "credito": "Modelo 3D: NASA 3D Resources"
+  "credito": "Modelo 3D: NASA 3D Resources",
+  "nombre_modelo_en": "Apollo Lunar Module (LM)",
+  "nombre_modelo_de": "Apollo-Mondlandefähre (LM)"
  },
  "pioneer10": {
   "glb": "modelos/pioneer-10.glb",

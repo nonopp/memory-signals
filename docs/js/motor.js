@@ -520,7 +520,7 @@
     if ($('#meta-objeto')) $('#meta-objeto').textContent = a.cuerpo + ' · ' + a.lugar;
     var etq = $('#anio-objeto');
     if (etq) {
-      etq.textContent = (a.anio_tipo === 'llegada' ? 'Llegada · ' : 'Lanzamiento · ') + a.anio;
+      etq.textContent = (a.anio_tipo === 'llegada' ? T('anio.llegada') : T('anio.lanzamiento')) + ' · ' + a.anio;
       etq.style.setProperty('--c', a.color);
     }
     var primero = a.turnos && a.turnos[0];
@@ -539,6 +539,7 @@
     }
 
     /* visor 3D en el centro, mapa a la izquierda y chat a la derecha */
+    pintarBotonInfografia(a);
     if (window.Visor3D) window.Visor3D.pintar(a);
     if (window.Hitos) window.Hitos.pintar(a);
     if (window.ChatObjeto) {
@@ -563,22 +564,35 @@
     hablar(texto);
     var cont = $('#opciones-pausa');
     cont.innerHTML = '';
-    var opciones = [
-      { etiqueta: 'Viajar a otro destino', accion: function () { ir('destino'); pintaDestino(); } },
-      { etiqueta: 'Ver otro objeto de aquí', accion: function () { ir('destellos'); pintaDestellos(); } },
-      { etiqueta: 'Terminar la visita', accion: function () {
+    var opciones = [];
+    /* primero, volver al objeto que se estaba viendo: antes no había forma de regresar */
+    if (estado.aparato) {
+      opciones.push({ etiqueta: T('pausa.volverObjeto'), principal: true, accion: function () {
+          ir('objeto'); pintaObjeto();
+        } });
+    }
+    opciones.push(
+      { etiqueta: T('pausa.otroDestino'), accion: function () { ir('destino'); pintaDestino(); } },
+      { etiqueta: T('pausa.otroObjeto'), accion: function () { ir('destellos'); pintaDestellos(); } },
+      { etiqueta: T('pausa.terminar'), accion: function () {
           var d = txt(datos.astronauta.lineas.despedida);
           $('#txt-pausa').textContent = d; hablar(d);
           cont.innerHTML = '';
           var b = document.createElement('button');
-          b.type = 'button'; b.className = 'principal'; b.textContent = 'Volver al inicio';
+          b.type = 'button'; b.className = 'principal'; b.textContent = T('pausa.inicio');
           b.addEventListener('click', function () { ir('intro'); pintaIntro(); });
           cont.appendChild(b);
+          if (estado.aparato) {
+            var bv = document.createElement('button');
+            bv.type = 'button'; bv.className = 'opcion'; bv.textContent = T('pausa.volverObjeto');
+            bv.addEventListener('click', function () { ir('objeto'); pintaObjeto(); });
+            cont.appendChild(bv);
+          }
         } }
-    ];
+    );
     opciones.forEach(function (o) {
       var b = document.createElement('button');
-      b.type = 'button'; b.className = 'opcion'; b.textContent = o.etiqueta;
+      b.type = 'button'; b.className = 'opcion' + (o.principal ? ' principal' : ''); b.textContent = o.etiqueta;
       b.addEventListener('click', o.accion);
       cont.appendChild(b);
     });
@@ -609,7 +623,7 @@
       cuerpo.appendChild(resumen);
     }
 
-    var h3p = document.createElement('h3'); h3p.textContent = 'Quién trabajó en su misión';
+    var h3p = document.createElement('h3'); h3p.textContent = T('ficha.quien');
     cuerpo.appendChild(h3p);
     var ul = document.createElement('ul');
     (a.personas || []).forEach(function (p) {
@@ -624,13 +638,13 @@
     });
     cuerpo.appendChild(ul);
 
-    var h3f = document.createElement('h3'); h3f.textContent = 'Fuentes de este objeto';
+    var h3f = document.createElement('h3'); h3f.textContent = T('ficha.fuentes');
     cuerpo.appendChild(h3f);
     var fuentes = a.fuentes || [];
     if (!fuentes.length) {
       var sinFuentes = document.createElement('p');
       sinFuentes.className = 'tenue';
-      sinFuentes.textContent = 'No consta en las fuentes consultadas.';
+      sinFuentes.textContent = T('ficha.noConsta');
       cuerpo.appendChild(sinFuentes);
     }
     fuentes.forEach(function (f) {
@@ -648,6 +662,69 @@
     $('#modal-cerrar').focus();
   }
   function cerrarFicha() { $('#modal').hidden = true; }
+
+  /* ---------- infografía descargable ---------- */
+  var infografiasListas = null;
+  var infografiaDe = null;   /* la que se está enseñando, para el botón de descargar */
+
+  function cargarInfografias() {
+    if (infografiasListas) return infografiasListas;
+    infografiasListas = fetch('datos/infografias.json?v=' + (window.__MSV || ''))
+      .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+      .catch(function () { return {}; });
+    return infografiasListas;
+  }
+
+  /* devuelve la infografía del aparato en el idioma pedido; si no la hay, la española y aviso */
+  function infografiaPara(aparato) {
+    return cargarInfografias().then(function (todas) {
+      var e = todas && todas[aparato.id];
+      if (!e) return null;
+      var l = idiomaActual();
+      var elegida = e[l] || e.es;
+      if (!elegida) return null;
+      return { datos: elegida, idioma: e[l] ? l : 'es', objeto: aparato };
+    });
+  }
+
+  function abrirInfografia() {
+    if (!infografiaDe) return;
+    var d = infografiaDe.datos;
+    var img = $('#infografia-imagen');
+    $('#infografia-titulo').textContent = d.titulo || T('infografia.titulo');
+    $('#infografia-imagen').src = d.archivo + '?v=' + (window.__MSV || '');
+    img.alt = T('infografia.alt', { objeto: infografiaDe.objeto.nombre });
+    var enlace = $('#infografia-descargar');
+    enlace.href = d.archivo;
+    enlace.setAttribute('download', d.archivo.split('/').pop());
+    $('#infografia-credito').textContent = d.creditos || '';
+    var aviso = $('#infografia-aviso');
+    if (infografiaDe.idioma !== idiomaActual()) {
+      aviso.textContent = T('infografia.soloEs');
+      aviso.hidden = false;
+    } else {
+      aviso.hidden = true;
+      aviso.textContent = '';
+    }
+    $('#visor-infografia').hidden = false;
+    $('#infografia-cerrar').focus();
+  }
+  function cerrarInfografia() {
+    $('#visor-infografia').hidden = true;
+    $('#infografia-imagen').removeAttribute('src');
+  }
+  function pintarBotonInfografia(a) {
+    var boton = $('#btn-infografia');
+    if (!boton) return;
+    boton.hidden = true;
+    infografiaDe = null;
+    infografiaPara(a).then(function (inf) {
+      /* si el visitante ya ha cambiado de objeto mientras se cargaba el índice, no se toca */
+      if (!inf || !estado.aparato || estado.aparato.id !== a.id) return;
+      infografiaDe = inf;
+      boton.hidden = false;
+    });
+  }
 
   /* ---------- arranque ---------- */
   function conectar() {
@@ -671,6 +748,18 @@
     $('#btn-cientifico').addEventListener('click', function () { cambiarNivel('cientifico'); });
     $('#btn-voz').addEventListener('click', function () { alternarVoz(false); });
     $('#btn-ficha').addEventListener('click', abrirFicha);
+    if ($('#btn-infografia')) $('#btn-infografia').addEventListener('click', abrirInfografia);
+    if ($('#infografia-cerrar')) $('#infografia-cerrar').addEventListener('click', cerrarInfografia);
+    if ($('#visor-infografia')) {
+      $('#visor-infografia').addEventListener('click', function (ev) {
+        if (ev.target === this || ev.target.classList.contains('infografia-lienzo')) cerrarInfografia();
+      });
+    }
+    document.addEventListener('keydown', function (ev) {
+      if (ev.key !== 'Escape') return;
+      if ($('#visor-infografia') && !$('#visor-infografia').hidden) { cerrarInfografia(); return; }
+      if ($('#modal') && !$('#modal').hidden) cerrarFicha();
+    });
     $('#btn-volver-objetos').addEventListener('click', volverAObjetos);
     $('#modal-cerrar').addEventListener('click', cerrarFicha);
     $('#modal').addEventListener('click', function (ev) { if (ev.target === this) cerrarFicha(); });
@@ -718,8 +807,20 @@
     fetch(ficheroContenido(), { cache: 'no-store' })
       .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
       .then(function (j) {
+        /* los objetos guardados en el estado son los del idioma anterior: se vuelven a enlazar
+           con los nuevos por su id, o la pantalla y la ficha seguirían en el idioma de antes */
+        var idAparato = estado.aparato ? estado.aparato.id : null;
+        var idDestino = estado.destino ? estado.destino.id : null;
         datos = j;
         window.__MSmodos = j.modos || null;
+        if (idDestino) {
+          var dNuevo = (j.destinos || []).filter(function (x) { return x.id === idDestino; })[0];
+          if (dNuevo) estado.destino = dNuevo;
+        }
+        if (idAparato) {
+          var aNuevo = (j.aparatos || []).filter(function (x) { return x.id === idAparato; })[0];
+          estado.aparato = aNuevo || null;
+        }
         if (typeof repintarPantallaActual === 'function') repintarPantallaActual();
         /* el pie y el rótulo del modo se escriben aparte: hay que rehacerlos o se quedan en el idioma anterior */
         if (typeof pintarNivel === 'function') pintarNivel();
@@ -727,6 +828,17 @@
         menuListo = false;
         if (typeof pintarMenu === 'function') pintarMenu();
         if (window.ChatObjeto && window.ChatObjeto.rehacer) window.ChatObjeto.rehacer();
+        /* si la ficha verificable estaba abierta, se rehace en el idioma nuevo */
+        if ($('#visor-infografia') && !$('#visor-infografia').hidden) {
+          /* la infografía abierta se vuelve a resolver: cambia el idioma de la imagen y el aviso */
+          infografiaPara(estado.aparato).then(function (inf) {
+            if (!inf) { cerrarInfografia(); return; }
+            infografiaDe = inf;
+            abrirInfografia();
+          });
+        }
+        var modalAbierto = $('#modal') && !$('#modal').hidden;
+        if (modalAbierto && typeof abrirFicha === 'function' && estado.aparato) abrirFicha();
         if (enObjeto() && estado.aparato) {
           avisoInactividadDicho = '';
           saludoDichoEn = estado.aparato.id;

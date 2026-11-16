@@ -4,6 +4,19 @@
 (function () {
   'use strict';
 
+  /* texto de interfaz en el idioma activo */
+  function T(clave, datos) {
+    if (window.MS_Idioma && window.MS_Idioma.t) return window.MS_Idioma.t(clave, datos);
+    return '';
+  }
+
+  /* nombre del modelo o de la foto en el idioma activo: si solo hay uno, se usa ese */
+  function nombreModelo(e) {
+    if (!e) return '';
+    var l = (window.MS_Idioma && window.MS_Idioma.actual) ? window.MS_Idioma.actual() : 'es';
+    return e['nombre_modelo_' + l] || e.nombre_modelo || '';
+  }
+
   var mapa = null;
   var girando = true;
 
@@ -49,16 +62,16 @@
         if (foto) {
           if (e && e.foto) {
             foto.src = e.foto;
-            foto.alt = (e.nombre_modelo || 'Fotografía oficial') + ' de ' + a.nombre;
+            foto.alt = nombreModelo(e) ? (nombreModelo(e) + ' · ' + a.nombre) : T('visor.fotoAlt', { objeto: a.nombre });
             foto.hidden = false;
             sin.querySelector('.sin-modelo-texto').textContent = e.nota || '';
             sin.querySelector('.orbe').style.display = 'none';
             cred.style.display = '';
-            cred.textContent = e.credito || 'Fotografía: NASA';
+            cred.textContent = e.credito || T('visor.fotoCredito');
           } else {
             foto.hidden = true; foto.removeAttribute('src');
             sin.querySelector('.orbe').style.display = '';
-            sin.querySelector('.sin-modelo-texto').textContent = 'Sin modelo 3D oficial de la NASA para este aparato.';
+            sin.querySelector('.sin-modelo-texto').textContent = T('visor.sinModelo');
           }
         }
         var orbe = sin.querySelector('.orbe');
@@ -71,8 +84,8 @@
       sin.hidden = true;
       if (foto) { foto.hidden = true; }
       cred.style.display = '';
-      cred.textContent = (m._credito || 'Modelo 3D: NASA') + ' · ' + e.nombre_modelo;
-      mv.setAttribute('alt', 'Modelo 3D interactivo de ' + a.nombre);
+      cred.textContent = T('visor.modeloCredito') + ' 3D Resources' + (nombreModelo(e) ? ' · ' + nombreModelo(e) : '');
+      mv.setAttribute('alt', T('visor.modeloAlt', { objeto: a.nombre }));
       if (mv.getAttribute('src') !== e.glb) mv.setAttribute('src', e.glb);
       try { mv.autoRotate = girando; } catch (err) {}
     });

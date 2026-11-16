@@ -5,6 +5,12 @@
 (function () {
   'use strict';
 
+  /* texto de interfaz en el idioma activo */
+  function T(clave, datos) {
+    if (window.MS_Idioma && window.MS_Idioma.t) return window.MS_Idioma.t(clave, datos);
+    return '';
+  }
+
   var MS_HITO = 15000;   /* quince segundos por tarjeta, con la pausa de lectura de un párrafo */
   var reloj = null;
   var actual = 0;
@@ -120,7 +126,7 @@
       t.setAttribute('aria-hidden', i === 0 ? 'false' : 'true');
       t.setAttribute('role', 'group');
       t.setAttribute('aria-label', 'Hito ' + (i + 1) + ' de ' + lista.length);
-      if (h.fuente) t.title = 'Fuente: ' + h.fuente;
+      if (h.fuente) t.title = T('hitos.fuente') + ': ' + h.fuente;
 
       var tit = document.createElement('h3');
       tit.className = 'hito-titulo';

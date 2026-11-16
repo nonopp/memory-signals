@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="es" data-i18n-doc-titulo="doc.titulo">
 <head>
-<script>window.__MSV = '3.4.3';</script>
+<script>window.__MSV = '3.5.0';</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Memory Signals · objetos abandonados de la NASA</title>
-<link rel="icon" type="image/png" sizes="64x64" href="img/favicon-64.png?v=3.4.3">
-<link rel="apple-touch-icon" href="img/apple-touch-icon.png?v=3.4.3">
+<link rel="icon" type="image/png" sizes="64x64" href="img/favicon-64.png?v=3.5.0">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png?v=3.5.0">
 <meta name="theme-color" content="#05070f">
 <meta property="og:title" content="Memory Signals">
 <meta property="og:description" content="Los aparatos abandonados de la NASA cuentan su historia en primera persona.">
@@ -18,7 +18,7 @@
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="datos/icono.svg" type="image/svg+xml">
-<link rel="stylesheet" href="css/estilo.css?v=3.4.3">
+<link rel="stylesheet" href="css/estilo.css?v=3.5.0">
 </head>
 <body>
 
@@ -36,8 +36,8 @@
 <header class="barra">
   <button type="button" class="marca" id="btn-inicio" title="Volver al inicio">
     <picture>
-      <source media="(max-width:620px)" srcset="img/logo-emblem.png?v=3.4.3">
-      <img class="marca-logo" src="img/logo-memory-signals.png?v=3.4.3"
+      <source media="(max-width:620px)" srcset="img/logo-emblem.png?v=3.5.0">
+      <img class="marca-logo" src="img/logo-memory-signals.png?v=3.5.0"
            alt="Memory Signals" width="1272" height="499">
     </picture>
   </button>
@@ -148,7 +148,8 @@
         </div>
         <div class="acciones objeto-acciones">
           <button type="button" class="secundario" id="btn-volver-objetos" data-i18n="destino.volver">← Volver a los objetos</button>
-          <button type="button" class="secundario" id="btn-ficha">Ver ficha y fuentes</button>
+          <button type="button" class="secundario" id="btn-ficha" data-i18n="objeto.ficha">Ver ficha y fuentes</button>
+          <button type="button" class="secundario" id="btn-infografia" data-i18n="objeto.infografia" hidden>Ver infografía</button>
           <button type="button" class="secundario" data-ir="pausa" data-i18n="pausa.dejarlo">Dejarlo aquí</button>
         </div>
       </div><!-- /col-centro -->
@@ -195,6 +196,20 @@
   </span>
 </footer>
 
+<!-- Visor de la infografía -->
+<div class="visor-infografia" id="visor-infografia" role="dialog" aria-modal="true" aria-labelledby="infografia-titulo" hidden>
+  <div class="infografia-barra">
+    <h2 id="infografia-titulo">Infografía</h2>
+    <div class="infografia-acciones">
+      <a class="secundario" id="infografia-descargar" href="#" download data-i18n="infografia.descargar">Descargar</a>
+      <button type="button" class="cerrar" id="infografia-cerrar" aria-label="Cerrar" data-i18n-aria="infografia.cerrar">✕</button>
+    </div>
+  </div>
+  <p class="infografia-aviso" id="infografia-aviso" hidden></p>
+  <div class="infografia-lienzo"><img id="infografia-imagen" alt=""></div>
+  <p class="infografia-credito" id="infografia-credito"></p>
+</div>
+
 <!-- Modal de ficha -->
 <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-titulo" hidden>
   <div class="modal-caja">
@@ -204,12 +219,12 @@
   </div>
 </div>
 
-<script src="js/idioma.js?v=3.4.3"></script>
-<script src="js/escena.js?v=3.4.3"></script>
-<script src="js/visor3d.js?v=3.4.3"></script>
-<script src="js/mapa.js?v=3.4.3"></script>
-<script src="js/hitos.js?v=3.4.3"></script>
-<script src="js/chat.js?v=3.4.3"></script>
-<script src="js/motor.js?v=3.4.3"></script>
+<script src="js/idioma.js?v=3.5.0"></script>
+<script src="js/escena.js?v=3.5.0"></script>
+<script src="js/visor3d.js?v=3.5.0"></script>
+<script src="js/mapa.js?v=3.5.0"></script>
+<script src="js/hitos.js?v=3.5.0"></script>
+<script src="js/chat.js?v=3.5.0"></script>
+<script src="js/motor.js?v=3.5.0"></script>
 </body>
 </html>
