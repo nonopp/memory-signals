@@ -243,6 +243,8 @@ button.opcion:hover{border-color:var(--acento);background:rgba(99,224,200,.1);tr
   font-size:.74rem;font-weight:700;color:#fff;white-space:nowrap;
   background:rgba(3,6,14,.78);border:1px solid rgba(255,255,255,.2);
   padding:4px 10px;border-radius:999px;backdrop-filter:blur(4px);
+  /* los nombres largos (en alemán, sobre todo) se salían del marco y se montaban entre ellos */
+  max-width:190px;overflow:hidden;text-overflow:ellipsis;
 }
 @keyframes late{0%,100%{transform:scale(.85);opacity:.8}50%{transform:scale(1.18);opacity:1}}
 .marcador:hover .punto-glow,.marcador:focus-visible .punto-glow{animation-duration:.9s}
@@ -702,6 +704,10 @@ code{background:rgba(255,255,255,.09);padding:2px 6px;border-radius:6px;font-siz
   padding:2px 7px;border-radius:999px;white-space:nowrap;opacity:0;
   transition:opacity .18s ease;border:1px solid rgba(160,220,240,.22)}
 .mapa-pin:hover .mapa-pin-etq,.mapa-pin.activo .mapa-pin-etq{opacity:1}
+/* el nombre que chocaría con otro se esconde; el del objeto abierto no, y al pasar el ratón vuelve.
+   Necesita el :not(.activo) para ganar en especificidad a la regla de los nombres tenues. */
+.mapa-pin.etq-tapada:not(.activo) .mapa-pin-etq{opacity:0}
+.mapa-pin.etq-tapada:hover .mapa-pin-etq,.mapa-pin.etq-tapada:focus-visible .mapa-pin-etq{opacity:1}
 .mapa-pin.activo .mapa-pin-punto{box-shadow:0 0 0 4px rgba(99,224,200,.35),0 0 18px var(--c,#63e0c8)}
 .mapa-pin.activo{cursor:default}
 

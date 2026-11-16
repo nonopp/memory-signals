@@ -393,7 +393,7 @@
     var texto = txt(datos.astronauta.lineas.despegue) + ' ' + txt(datos.astronauta.lineas.crucero);
     $('#txt-crucero').textContent = texto;
     hablar(texto);
-    $('#t-crucero').textContent = 'En crucero hacia ' + d.nombre.toLowerCase();
+    $('#t-crucero').textContent = T('crucero.hacia', { destino: d.corto || d.nombre });
     $('#hud-crucero').textContent = 'acercándonos a ' + d.nombre.toLowerCase() + '…';
     /* la escena se dibuja cuando el contenedor ya es visible */
     setTimeout(function () { window.Escena.crucero(d.color, d.globo); }, 60);
@@ -411,6 +411,24 @@
 
   var POSICIONES = [{ x: 0.3, y: 0.62 }, { x: 0.68, y: 0.72 }, { x: 0.5, y: 0.86 }];
 
+  /* Sitios donde aparecen los destellos. Con tres objetos valían tres posiciones fijas; en cuanto
+     un destino tiene más, se repetían y los nombres se montaban unos encima de otros. Ahora se
+     reparten en filas de tres, y si hay pocos se usan las de siempre. */
+  function posicionesDestellos(n) {
+    if (n <= POSICIONES.length) return POSICIONES.slice(0, n);
+    var filas = Math.ceil(n / 3);
+    var salida = [];
+    for (var i = 0; i < n; i++) {
+      var fila = Math.floor(i / 3), col = i % 3;
+      var enFila = Math.min(3, n - fila * 3);
+      /* si la última fila lleva uno o dos, se centran */
+      var centro = enFila === 1 ? 0.5 : (enFila === 2 ? 0.38 + col * 0.24 : 0.2 + col * 0.3);
+      var y = filas === 1 ? 0.72 : 0.4 + (fila / (filas - 1)) * 0.5;
+      salida.push({ x: centro + (fila % 2 ? 0.03 : -0.03), y: y });
+    }
+    return salida;
+  }
+
   function pintaDestellos() {
     var d = estado.destino || datos.destinos[0];
     var texto = txt(datos.astronauta.lineas.destellos);
@@ -420,16 +438,16 @@
       return datos.aparatos.filter(function (a) { return a.id === id; })[0];
     }).filter(Boolean);
 
+    var sitios = posicionesDestellos(aparatos.length);
     var puntos = aparatos.map(function (a, i) {
-      var p = POSICIONES[i % POSICIONES.length];
-      return { x: p.x, y: p.y, color: a.color };
+      return { x: sitios[i].x, y: sitios[i].y, color: a.color };
     });
     setTimeout(function () { window.Escena.superficie(d.color, puntos); }, 60);
 
     var cont = $('#marcadores');
     cont.innerHTML = '';
     aparatos.forEach(function (a, i) {
-      var p = POSICIONES[i % POSICIONES.length];
+      var p = sitios[i];
       var b = document.createElement('button');
       b.type = 'button'; b.className = 'marcador';
       b.style.left = (p.x * 100) + '%';

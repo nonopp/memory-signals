@@ -12,6 +12,41 @@ Criterio de numeración:
 
 ---
 
+## v3.4.0 — 16 de noviembre de 2026
+
+**Primera tanda de objetos nuevos: de 10 a 22 aparatos, todos con modelo 3D oficial de la NASA.**
+
+El reto pide objetos abandonados, así que solo entran aparatos que se quedaron, murieron o se
+destruyeron al final de su misión. Nada que siga en activo.
+
+- **Luna (4 nuevos, 5 en total).** Las etapas de descenso del Intrepid (Apolo 12), Antares (Apolo 14),
+  Orion (Apolo 16) y Challenger (Apolo 17). Están posadas donde las dejaron, con sus coordenadas reales.
+- **Marte (1 nuevo, 5 en total).** Spirit, atascado en la arena desde 2009 y sin señal desde marzo de 2010.
+- **Espacio profundo (7 nuevos, 12 en total).** Galileo y Cassini, desintegradas a propósito en Júpiter y
+  Saturno; Huygens, apagada en Titán; MESSENGER, estrellada contra Mercurio; Magellan, quemada en la
+  atmósfera de Venus; Skylab, caída sobre Australia en 1979; y Deep Impact, en silencio desde 2013.
+- **Modelos.** Los doce salen de NASA 3D Resources y se sirven desde `docs/modelos/`. Los cuatro módulos
+  lunares comparten un único `apollo-lm-descenso.glb` (el modelo genérico del LM) y el Spirit usa el del
+  vehículo gemelo; las dos cosas se dicen en el crédito.
+- **Contenido en tres idiomas.** Ficha, tres hitos y tres turnos por objeto, traducidos al inglés y al
+  alemán. Se corrigieron 24 textos ingleses que el traductor había dejado en español.
+- **El nombre que chocaba con otro se esconde.** Con cinco puntos en la Luna y doce en el cielo, los
+  nombres se montaban unos sobre otros. Ahora se coloca primero el del objeto abierto y se ocultan los
+  que chocan; al pasar el ratón vuelven. Los puntos del mapa llevan nombre corto (Intrepid, Antares,
+  Orion, Challenger, Apolo 11).
+- **Los destellos se reparten.** Las tres posiciones fijas de la pantalla de destellos se repetían a
+  partir del cuarto objeto. Ahora se reparten en filas de tres.
+- **El título del crucero estaba escrito en español a mano** («En crucero hacia …»): en inglés y en
+  alemán salía en español. Ahora es una cadena más del diccionario.
+- **El título de la pantalla de destellos** tampoco estaba traducido.
+- **Nombres y lugares de los diez objetos anteriores** seguían en español en los ficheros inglés y
+  alemán (Módulo lunar del Apolo 11, Mar de la Tranquilidad, Telescopio Kepler…). Corregidos.
+- **La dirección de los recursos** llevaba la versión antigua grabada a mano en `index.html`, y
+  `window.__MSV` se había quedado en 3.3.3, con lo que los JSON se servían de caché vieja. Ahora hay un
+  script, `herramientas/sella-version.py`, que lo pone todo al día desde `docs/VERSION`.
+
+---
+
 ## v3.3.3 — 16 de noviembre de 2026
 
 - **El menú de destinos se quedaba en español al cambiar de idioma.** Se construye una sola vez y no se

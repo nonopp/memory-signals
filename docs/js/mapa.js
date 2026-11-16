@@ -9,6 +9,8 @@
   var caja, lienzo, ctx, capa, titulo;
   var aparatos = [], actual = null, alElegir = null;
   var rot = 0.6, girando = true, arrastrando = false, xInicial = 0, rotInicial = 0;
+  /* ancho de cada nombre, medido una vez: leerlo en cada fotograma obligaría a recalcular el diseño */
+  var anchosEtq = (typeof WeakMap === 'function') ? new WeakMap() : { get: function () { return null; }, set: function () {} };
   var bolitas = [];
   /* textos de la interfaz en el idioma elegido (los pone js/idioma.js) */
   function T(clave) {
@@ -166,7 +168,10 @@
       b.style.setProperty('--retardo', ((i % 5) * 0.52).toFixed(2) + 's');
       b.setAttribute('aria-label', 'Ir a ' + a.nombre);
       b.title = a.nombre;
-      b.innerHTML = '<span class="mapa-pin-punto"></span><span class="mapa-pin-etq">' + a.nombre + '</span>';
+      /* en el mapa manda el nombre corto: con varios objetos en el mismo sitio los
+         nombres largos se pisaban entre ellos */
+      b.innerHTML = '<span class="mapa-pin-punto"></span><span class="mapa-pin-etq">' +
+                    (a.nombre_mapa || a.nombre) + '</span>';
       b.addEventListener('click', function (ev) {
         ev.stopPropagation();
         if (actual && a.id === actual.id) return;
@@ -177,11 +182,35 @@
     });
   }
 
+  /* Con varios objetos juntos los nombres se pisaban unos a otros (los cuatro sitios del Apolo
+     caben en un puño, y en el cielo profundo se alinean doce). Se coloca primero el nombre del
+     objeto abierto y después los demás de delante hacia atrás; el que choca con uno ya puesto se
+     queda sin nombre hasta que se pasa el ratón por encima. */
+  function reparteEtiquetas(visibles) {
+    var puestos = [];
+    visibles.sort(function (x, y) { return (y.activo ? 1 : 0) - (x.activo ? 1 : 0) || y.z - x.z; })
+      .forEach(function (v) {
+        var ancho = anchosEtq.get(v.el);
+        if (!ancho) {
+          var etq = v.el.querySelector('.mapa-pin-etq');
+          ancho = (etq && etq.offsetWidth) || 72;
+          anchosEtq.set(v.el, ancho);
+        }
+        var r = { x1: v.x - ancho / 2, x2: v.x + ancho / 2, y1: v.y - 9, y2: v.y + 9 };
+        var choca = puestos.some(function (c) {
+          return !(r.x2 < c.x1 || r.x1 > c.x2 || r.y2 < c.y1 || r.y1 > c.y2);
+        });
+        if (choca && !v.activo) { v.el.classList.add('etq-tapada'); }
+        else { v.el.classList.remove('etq-tapada'); puestos.push(r); }
+      });
+  }
+
   function moverPins(t) {
     if (!bolitas.length) return;
     if (tipo() === 'espacio') {
       var lista = aparatos.slice().sort(function (x, y) { return (x.anio || 0) - (y.anio || 0); });
       var n = lista.length;
+      var enCielo = [];
       lista.forEach(function (a, i) {
         var b = bolitas.filter(function (x) { return x.a.id === a.id; })[0];
         if (!b) return;
@@ -191,10 +220,14 @@
         b.el.style.top = (fy * t.h) + 'px';
         b.el.style.opacity = '1';
         b.el.style.transform = 'translate(-50%,-50%)';
+        enCielo.push({ el: b.el, x: fx * t.w, y: fy * t.h, z: 1 - i / (n + 1),
+                       activo: b.el.classList.contains('activo') });
       });
+      reparteEtiquetas(enCielo);
       return;
     }
     var g = { cx: t.w / 2, cy: t.h / 2, R: Math.min(t.w, t.h) * 0.42 };
+    var visibles = [];
     bolitas.forEach(function (b) {
       var m = b.a.mapa;
       if (!m || typeof m.lat !== 'number') { b.el.style.opacity = '0'; b.el.style.pointerEvents = 'none'; if (b.punto) b.punto.style.pointerEvents = 'none'; return; }
@@ -216,7 +249,9 @@
          el borde derecho de la caja, y eso se compensa en el translate. */
       b.el.classList.toggle('etq-izquierda', p.x > t.w * 0.62);
       b.el.style.transform = 'translate(' + (p.x > t.w * 0.62 ? '-100%' : '-50%') + ',-50%) scale(' + (0.8 + 0.25 * p.z) + ')';
+      visibles.push({ el: b.el, x: p.x, y: p.y, z: p.z, activo: b.el.classList.contains('activo') });
     });
+    reparteEtiquetas(visibles);
   }
 
   function dibujar() {

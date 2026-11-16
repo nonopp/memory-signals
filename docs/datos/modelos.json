@@ -79,5 +79,77 @@
   "glb": "modelos/viking-lander.glb",
   "nombre_modelo": "Viking Lander",
   "verificado": "NASA 3D Resources"
+ },
+ "apolo12-intrepid": {
+  "glb": "modelos/apollo-lm-descenso.glb",
+  "nombre_modelo": "Apollo Lunar Module",
+  "credito": "NASA 3D Resources · Apollo Lunar Module",
+  "nota": null
+ },
+ "apolo14-antares": {
+  "glb": "modelos/apollo-lm-descenso.glb",
+  "nombre_modelo": "Apollo Lunar Module",
+  "credito": "NASA 3D Resources · Apollo Lunar Module",
+  "nota": null
+ },
+ "apolo16-orion": {
+  "glb": "modelos/apollo-lm-descenso.glb",
+  "nombre_modelo": "Apollo Lunar Module",
+  "credito": "NASA 3D Resources · Apollo Lunar Module",
+  "nota": null
+ },
+ "apolo17-challenger": {
+  "glb": "modelos/apollo-lm-descenso.glb",
+  "nombre_modelo": "Apollo Lunar Module",
+  "credito": "NASA 3D Resources · Apollo Lunar Module",
+  "nota": null
+ },
+ "spirit": {
+  "glb": "modelos/mer-spirit.glb",
+  "nombre_modelo": "Mars Exploration Rover (MER-B)",
+  "credito": "NASA 3D Resources · Mars Exploration Rover - Opportunity (MER-B)",
+  "nota": null
+ },
+ "galileo": {
+  "glb": "modelos/galileo.glb",
+  "nombre_modelo": "Galileo",
+  "credito": "NASA 3D Resources · Galileo",
+  "nota": null
+ },
+ "cassini": {
+  "glb": "modelos/cassini.glb",
+  "nombre_modelo": "Cassini (Cassini-Huygens)",
+  "credito": "NASA 3D Resources · Cassini-Huygens (A) (without Hyugens)",
+  "nota": null
+ },
+ "huygens": {
+  "glb": "modelos/huygens.glb",
+  "nombre_modelo": "Huygens (Cassini-Huygens)",
+  "credito": "NASA 3D Resources · Cassini-Huygens (A) (without Cassini)",
+  "nota": null
+ },
+ "messenger": {
+  "glb": "modelos/messenger.glb",
+  "nombre_modelo": "MESSENGER",
+  "credito": "NASA 3D Resources · MESSENGER",
+  "nota": null
+ },
+ "magellan": {
+  "glb": "modelos/magellan.glb",
+  "nombre_modelo": "Magellan",
+  "credito": "NASA 3D Resources · Magellan",
+  "nota": null
+ },
+ "skylab": {
+  "glb": "modelos/skylab.glb",
+  "nombre_modelo": "Skylab",
+  "credito": "NASA 3D Resources · Skylab",
+  "nota": null
+ },
+ "deep-impact": {
+  "glb": "modelos/deep-impact.glb",
+  "nombre_modelo": "Deep Impact (EPOXI)",
+  "credito": "NASA 3D Resources · Deep Impact",
+  "nota": null
  }
 }
