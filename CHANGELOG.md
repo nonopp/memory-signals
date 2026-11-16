@@ -1,3 +1,9 @@
+## v3.5.4 — 2026-11-16
+
+- **Vuelve la infografía inglesa del módulo lunar**, regenerada y corregida. Se retiró en la 3.5.3 porque traía rótulos en español («Astronauta», «Retrorreflector laser a 5 m al NNO»), palabras corruptas («communimental», «Coracimos de condonción órcastes», «Comentanios retroreflectons»), un «aerozine aerozine» duplicado y un rover dibujado en el panel 5 que el Apolo 11 no llevaba. Corregidos los nueve fallos en tres rondas: ahora el panel 5 lleva una antena de radar y un ordenador en lugar del rover, y el panel 6 dice «No rover on board».
+- El original inglés llega a 1536 × 2752 (el triple que las otras dos), así que al ampliarla se lee bien.
+- Las tres infografías del módulo lunar (es, en, de) están publicadas. Se acabó el aviso de «solo disponible en español».
+
 ## v3.5.3 — 2026-11-16
 
 - La infografía inglesa del módulo lunar **se retira temporalmente**: sus paneles 5 y 6 traen rótulos en español («Astronauta», «Retrorreflector laser a 5 m al NNO») y palabras corruptas («communimental», «Coracimos de condonción órcastes», «Comentanios retroreflectons»), además de un «Rover transport» que el Apolo 11 no llevaba. En inglés se enseña la española con el aviso de idioma, que es lo honesto.
