@@ -396,9 +396,14 @@
     /* el nombre del destino lleva artículo en español e inglés («la Luna», «the Moon») y no en
        alemán, donde el artículo lo pone la plantilla («zum Mond»). Se elige la forma que lee bien. */
     var i = idiomaActual();
+    var largo = d.nombre || d.corto || '';
+    /* solo se pasa a minúscula el artículo («la Luna», «the Moon»): los nombres propios de planeta
+       van con mayúscula, «Marte» no «marte» */
     var nombreDestino = (i === 'de')
       ? (d.corto || d.nombre)
-      : (d.nombre || d.corto || '').replace(/^./, function (c) { return c.toLowerCase(); });
+      : (/^(La|El|Los|Las|The|Der|Die|Das)\s/.test(largo)
+          ? largo.replace(/^./, function (c) { return c.toLowerCase(); })
+          : largo);
     $('#t-crucero').textContent = T('crucero.hacia', { destino: nombreDestino });
     $('#hud-crucero').textContent = T('hud.acercandonos', { destino: nombreDestino });
     /* la escena se dibuja cuando el contenedor ya es visible */

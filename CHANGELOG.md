@@ -12,6 +12,13 @@ Criterio de numeración:
 
 ---
 
+## v3.4.2 — 16 de noviembre de 2026
+
+- **«En crucero hacia marte»**: al pasar el nombre a minúscula se comía la mayúscula de los planetas.
+  Ahora solo se pasa a minúscula el artículo («la Luna», «the Moon»); «Marte» va con mayúscula.
+
+---
+
 ## v3.4.1 — 16 de noviembre de 2026
 
 - **«En crucero hacia Luna»** se leía mal: al usar el nombre corto del destino se perdía el artículo.
