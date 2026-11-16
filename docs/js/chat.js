@@ -492,7 +492,8 @@
     actualizarSugerencias();
   }
 
-  /* la fuente no se enseña por defecto: solo si el visitante la pide */
+  /* pideFuente() se conserva por si alguna respuesta necesita saberlo, pero desde la 3.2.0
+     la cita se enseña SIEMPRE al pie de la respuesta. */
   var ultimaPregunta = '';
   function pideFuente(t) {
     return /fuente|source|quelle|cita|referencia|bibliograf|procedencia|enlace|link|de d[oó]nde|d[oó]nde lo (has )?le[íi]do|qui[eé]n lo dice|justifica/i.test(t || '');
@@ -970,16 +971,20 @@
     if (env) env.setAttribute('aria-label', T('chat.enviar') || 'Enviar pregunta');
     var cer = $('ms-cerrar');
     if (cer) cer.setAttribute('aria-label', T('chat.cerrar') || 'Cerrar la ventana');
+    var pie = document.querySelector('.ms-pie');
+    if (pie) pie.textContent = T('chat.pie') || 'Responde con la ficha del objeto y cita la fuente.';
     refrescarModo();
   }
 
-  /* al cambiar de idioma se rehacen los rótulos y las sugerencias; la conversación se queda */
+  /* al cambiar de idioma se rehacen los rótulos y las sugerencias; la conversación se queda como está */
   function rehacer() {
     refrescarRotulos();
     if (!actual) { mostrar(false); return; }
     mostrar(true);
-    actualizarSugerencias();
-    saludar();
+    var cont = $('ms-mensajes');
+    var vacio = !cont || !cont.children.length;
+    /* si aún no se ha hablado, se vuelve a saludar en el idioma nuevo; si ya hay conversación, no se toca */
+    if (vacio) { saludar(); } else { actualizarSugerencias(); }
   }
 
   window.ChatObjeto = { activar: activar, rehacer: rehacer, preguntar: preguntar, resolver: resolver, ancorar: ancorar, abrir: abrir, cerrar: cerrar };

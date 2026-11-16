@@ -12,6 +12,16 @@ Criterio de numeración:
 
 ---
 
+## v3.2.2 — 16 de noviembre de 2026
+
+- Al cambiar de idioma con el chat abierto **ya no se pierde la conversación**: se reescriben los rótulos,
+  las sugerencias y el pie del panel, y los mensajes se quedan. Solo se vuelve a saludar si aún no se había
+  hablado.
+- También se refresca el pie del panel («Responde con la ficha del objeto y cita la fuente»), que se quedaba
+  en el idioma anterior.
+
+---
+
 ## v3.2.1 — 16 de noviembre de 2026
 
 - **Arreglado: al cambiar de idioma con el chat abierto, los rótulos se quedaban en el idioma anterior**
