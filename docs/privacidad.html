@@ -7,18 +7,18 @@
 <title>Política de privacidad · Memory Signals</title>
 <meta name="description" content="Qué datos recoge el formulario de contribuciones de Memory Signals, para qué se usan y cómo ejercer tus derechos.">
 <meta name="robots" content="index,follow">
-<link rel="icon" type="image/png" sizes="64x64" href="img/favicon-64.png?v=3.1.0">
+<link rel="icon" type="image/png" sizes="64x64" href="img/favicon-64.png?v=3.2.0">
 <meta name="theme-color" content="#05070f">
-<link rel="stylesheet" href="css/estilo.css?v=3.1.0">
-<link rel="stylesheet" href="css/participa.css?v=3.1.0">
+<link rel="stylesheet" href="css/estilo.css?v=3.2.0">
+<link rel="stylesheet" href="css/participa.css?v=3.2.0">
 </head>
 <body class="pagina-legal">
 
 <header class="barra barra-simple">
   <a class="marca" href="index.html" title="Volver a la aplicación">
     <picture>
-      <source media="(max-width:620px)" srcset="img/logo-emblem.png?v=3.1.0">
-      <img class="marca-logo" src="img/logo-memory-signals.png?v=3.1.0" alt="Memory Signals" width="1272" height="499">
+      <source media="(max-width:620px)" srcset="img/logo-emblem.png?v=3.2.0">
+      <img class="marca-logo" src="img/logo-memory-signals.png?v=3.2.0" alt="Memory Signals" width="1272" height="499">
     </picture>
   </a>
   <nav class="nav-simple">
@@ -107,12 +107,24 @@
       GitHub <strong>no recibe los datos del formulario</strong>: son ficheros estáticos y el envío va
       directamente al servidor del proyecto;</li>
     <li><strong>Ollama</strong>, proveedor del modelo de lenguaje que redacta las respuestas del chat: recibe
-      el texto de tu pregunta y el fragmento de la ficha, sin tu identidad y sin tu dirección;</li>
+      el texto de tu pregunta y el fragmento de la ficha, sin tu identidad y sin tu dirección. Es también
+      quien hace la <strong>búsqueda en internet</strong> cuando tú la pides con el botón «Buscar fuera de mi
+      ficha»: en ese caso recibe además tu pregunta como consulta de búsqueda;</li>
     <li><strong>OpenAI</strong>, proveedor del transcriptor de voz (<strong>Estados Unidos</strong>), que
       interviene <em>solo si preguntas hablando</em>: recibe el audio de la pregunta como encargado del
       tratamiento y lo transcribe; no se le envía ningún dato tuyo más, y el audio se borra de nuestro servidor
       en el mismo momento de la transcripción.</li>
   </ul>
+
+  <h2>6 bis. La búsqueda fuera de la ficha</h2>
+  <p>El chat contesta con la ficha de cada objeto y <strong>siempre dice de qué fuente sale el dato</strong>.
+  Si preguntas algo que no está en la ficha, se te ofrecen preguntas que sí constan y, <strong>solo si tú
+  pulsas «Buscar fuera de mi ficha»</strong>, se busca en internet: tu pregunta se envía como consulta al
+  buscador de Ollama y las respuestas se redactan únicamente con lo que devuelvan esas fuentes, que se citan
+  con su enlace. Esas respuestas se marcan como <strong>fuente externa</strong> y nunca se presentan como si
+  estuvieran en la ficha. Las preguntas buscadas se guardan sin ningún dato personal (objeto, pregunta, idioma
+  y resultado) durante <strong>12 meses</strong>, para saber qué falta en la base de conocimiento, y las
+  respuestas se conservan en una caché de <strong>7 días</strong> para no repetir la misma búsqueda.</p>
 
   <h2>7. Cookies y almacenamiento local</h2>
   <p>El sitio <strong>no usa cookies</strong> de publicidad ni de analítica. Guarda en tu propio navegador,

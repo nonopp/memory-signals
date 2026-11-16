@@ -12,6 +12,25 @@ Criterio de numeración:
 
 ---
 
+## v3.2.0 — 16 de noviembre de 2026
+
+- **Vuelve la cita en todas las respuestas del chat.** Desde la 3.0.1 la fuente solo salía si se pedía;
+  ahora sale siempre, al pie de la respuesta, en pequeño.
+- **La fuente ya no compite en tamaño con nada:** baja de `.74rem` a `.62rem` (de 11,8 a 9,9 píxeles),
+  se parte si es una dirección larga y usa un gris más discreto. El resultado de «búsqueda externa»
+  lleva su propio aviso en el mismo tamaño pequeño.
+- **Botón «🔎 Buscar fuera de mi ficha»** dentro de la tarjeta de salidas. Solo busca si el visitante lo
+  pulsa: la pregunta se manda al buscador de Ollama Cloud (tarifa plana) y el modelo **solo puede redactar
+  con lo que traigan esas fuentes**, citando `[1]`, `[2]`… Si no cita al menos una fuente real, no hay
+  respuesta: se dice que no se ha encontrado nada y no se inventa nada.
+- Salvaguardas del servidor (`api/buscar.php`): respuestas **cacheadas 7 días** por pregunta e idioma,
+  **8 búsquedas cada 10 minutos por visitante**, **400 al día en total**, se prefieren dominios de la NASA,
+  el JPL, el LPI, la ESA y enciclopedias, y solo se enlazan las fuentes que el modelo cita de verdad.
+- Cada búsqueda queda anotada en `busquedas.jsonl` (objeto, pregunta, idioma y resultado) para saber qué
+  preguntas sigue sin cubrir la base.
+
+---
+
 ## v3.1.0 — 16 de noviembre de 2026
 
 - **Cuando la ficha no tiene la respuesta, el aparato ya no cierra la puerta.** En vez de un «Eso no consta

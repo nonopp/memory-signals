@@ -15,6 +15,10 @@
   var API_VOZ = /(^|\.)gesemweb\.es$/.test(location.hostname)
     ? 'api/voz.php'
     : 'https://nasa.gesemweb.es/app/api/voz.php';
+  /* buscar fuera de la ficha: solo cuando el visitante lo pide con el botón */
+  var API_BUSCAR = /(^|\.)gesemweb\.es$/.test(location.hostname)
+    ? 'api/buscar.php'
+    : 'https://nasa.gesemweb.es/app/api/buscar.php';
 
   var indice = null;
   var actual = null;
@@ -508,7 +512,7 @@
       html += '<strong>' + escapar(rec.ficha.titulo) + (rec.seccion ? ' · ' + escapar(rec.seccion.titulo) : '') + '</strong><br>' +
               escapar(rec.texto).replace(/\n/g, '<br>');
     }
-    if (fuente && pideFuente(ultimaPregunta)) {
+    if (fuente) {
       /* solo se enlaza lo que está cotejado: las URLs del prototipo apuntan a la web
          vieja y algunas ya no existen, así que se citan sin enlace */
       if (verificacion === 'verificado') {
@@ -758,6 +762,17 @@
       b.addEventListener('click', function () { caja.remove(); preguntar(t, true); });
       caja.appendChild(b);
     });
+    /* lo que la ficha no tiene, se puede buscar fuera: solo si el visitante lo pide */
+    var buscar = document.createElement('button');
+    buscar.type = 'button';
+    buscar.className = 'ms-buscar';
+    buscar.textContent = T('chat.buscar.fuera') || '🔎 Buscar fuera de mi ficha';
+    buscar.addEventListener('click', function () {
+      caja.remove();
+      buscarFuera(excluir);
+    });
+    caja.appendChild(buscar);
+
     var pie = document.createElement('a');
     pie.className = 'ms-aporta';
     pie.href = 'participa.html';
@@ -765,6 +780,60 @@
     caja.appendChild(pie);
     cont.appendChild(caja);
     cont.scrollTop = cont.scrollHeight;
+  }
+
+  /* ---------- buscar fuera de la ficha (solo a petición del visitante) ---------- */
+  function buscarFuera(pregunta) {
+    if (!pregunta || ocupado) return;
+    ocupado = true;
+    if (window.MS_Voz && window.MS_Voz.callar) window.MS_Voz.callar();
+    var esperando = burbuja('objeto pensando', '<span class="ms-puntos"><i></i><i></i><i></i></span> ' +
+      '<span class="ms-buscando">' + escapar(T('chat.buscar.buscando') || 'buscando fuera de mi ficha…') + '</span>');
+    fetch(API_BUSCAR, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        pregunta: pregunta,
+        ficha: (actual && actual.nombre) || 'el aparato',
+        idioma: idiomaChat(),
+        nivel: nivelActual()
+      })
+    }).then(function (r) {
+      if (!r.ok) throw new Error('HTTP ' + r.status);
+      return r.json();
+    }).then(function (j) {
+      if (esperando) esperando.remove();
+      ocupado = false;
+      if (!j || !j.encontrado || !j.respuesta) {
+        burbuja('objeto', escapar(T('chat.buscar.nada') ||
+          'He buscado fuera y no he encontrado nada que pueda contarte sin inventármelo.'));
+        return;
+      }
+      pintarExterno(j);
+    }).catch(function () {
+      if (esperando) esperando.remove();
+      ocupado = false;
+      burbuja('objeto', escapar(T('chat.buscar.nada') ||
+        'He buscado fuera y no he encontrado nada que pueda contarte sin inventármelo.'));
+    });
+  }
+
+  /* respuesta con fuente externa: se dice de dónde viene y se enlazan solo las fuentes citadas */
+  function pintarExterno(j) {
+    var html = '<p>' + escapar(j.respuesta).replace(/\n/g, '<br>') + '</p>';
+    html += '<span class="ms-aviso ms-externo">' +
+      escapar(T('chat.buscar.externo') || 'Esto no está en mi ficha: lo he buscado fuera y viene de estas fuentes.') +
+      '</span>';
+    (j.fuentes || []).forEach(function (f, i) {
+      var nombre = f.titulo || f.url || '';
+      /* el número es el que lleva la respuesta en el texto, para que se puedan casar */
+      var num = (typeof f.n === 'number') ? f.n : (i + 1);
+      html += '<span class="ms-fuente">[' + num + '] <a href="' + escapar(f.url) + '" target="_blank" rel="noopener noreferrer">' +
+        escapar(nombre) + '</a></span>';
+    });
+    burbuja('objeto', html);
+    /* se lee la respuesta, nunca la lista de fuentes */
+    decir(j.respuesta);
   }
 
   /* una pregunta que ni la ficha ni el guion pueden contestar también se apunta para el resumen semanal */
