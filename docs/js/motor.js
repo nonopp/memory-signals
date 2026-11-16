@@ -469,7 +469,9 @@
       punto.className = 'punto-glow';
       var etq = document.createElement('span');
       etq.className = 'etq';
-      etq.textContent = a.nombre;
+      /* en el campo de destellos manda el nombre corto: los largos se cortaban todos igual y no
+         se distinguían entre ellos */
+      etq.textContent = a.nombre_mapa || a.nombre;
       b.appendChild(punto); b.appendChild(etq);
       b.addEventListener('click', function () {
         estado.aparato = a; estado.turno = 0;

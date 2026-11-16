@@ -12,6 +12,14 @@ Criterio de numeración:
 
 ---
 
+## v3.4.3 — 16 de noviembre de 2026
+
+- **Los nombres del campo de destellos se cortaban todos igual** («Etapa de descenso del …» cuatro
+  veces) y no había forma de distinguirlos. Ahí también manda el nombre corto: Intrepid, Antares,
+  Orion y Challenger.
+
+---
+
 ## v3.4.2 — 16 de noviembre de 2026
 
 - **«En crucero hacia marte»**: al pasar el nombre a minúscula se comía la mayúscula de los planetas.
