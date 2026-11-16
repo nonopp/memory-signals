@@ -770,10 +770,13 @@ code{background:rgba(255,255,255,.09);padding:2px 6px;border-radius:6px;font-siz
 /* ---------- visor de la infografía ---------- */
 .visor-infografia{position:fixed;inset:0;z-index:70;background:rgba(8,12,20,.96);display:flex;flex-direction:column;padding:12px 12px 8px;overflow:auto}
 .visor-infografia[hidden]{display:none}
-.infografia-barra{display:flex;align-items:center;justify-content:space-between;gap:12px;max-width:1100px;width:100%;margin:0 auto 8px;flex-wrap:wrap}
+.infografia-barra{display:flex;align-items:center;justify-content:space-between;gap:12px;max-width:1100px;width:100%;margin:0 auto 8px;flex-wrap:wrap;position:sticky;top:0;z-index:2;background:rgba(8,12,20,.96);padding:4px 0}
 .infografia-barra h2{margin:0;font-size:1rem;color:#eaf2ff;font-weight:600}
 .infografia-acciones{display:flex;align-items:center;gap:10px}
-.infografia-acciones .secundario{text-decoration:none;display:inline-block}
+/* el aspa va en la fila, no flotando: al fijar la barra arriba dejó de tener sentido el anclaje absoluto */
+.infografia-acciones .cerrar{position:static;top:auto;right:auto;flex:0 0 auto}
+.infografia-acciones .secundario{text-decoration:none;display:inline-block;color:#8fd8ff;font-weight:600}
+.infografia-acciones .secundario:hover,.infografia-acciones .secundario:focus-visible{color:#d0f0ff}
 .infografia-acciones .secundario[hidden]{display:none}
 .infografia-lienzo{flex:0 0 auto;display:flex;justify-content:center;align-items:flex-start;width:100%}
 .infografia-lienzo img{max-width:min(100%,860px);height:auto;border-radius:10px;box-shadow:0 18px 50px rgba(0,0,0,.55);background:#0d131f}
@@ -783,6 +786,10 @@ code{background:rgba(255,255,255,.09);padding:2px 6px;border-radius:6px;font-siz
 @media (max-width:640px){
   .visor-infografia{padding:8px 6px 6px}
   .infografia-barra h2{font-size:.9rem}
+  /* en el móvil el aspa deja de flotar: se coloca detrás de «Descargar» */
+  .infografia-barra{gap:8px;padding-right:0}
+  .infografia-acciones{gap:8px;margin-left:auto}
+  .infografia-acciones .cerrar{position:static;top:auto;right:auto;width:34px;height:34px;flex:0 0 auto;font-size:.95rem}
   .infografia-lienzo img{border-radius:6px}
 }
 

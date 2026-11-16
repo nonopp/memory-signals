@@ -1,3 +1,8 @@
+## v3.5.5 — 2026-11-16
+
+- El enlace **«Descargar»** del visor de infografías pasa de azul oscuro a **celeste claro** (#8fd8ff, y #d0f0ff al pasar por encima): sobre el fondo negro del visor no se leía.
+- En el móvil el **aspa de cerrar ya no se superpone** al enlace de descarga: deja de flotar en la esquina y se coloca en la misma fila, detrás de «Descargar».
+
 ## v3.5.4 — 2026-11-16
 
 - **Vuelve la infografía inglesa del módulo lunar**, regenerada y corregida. Se retiró en la 3.5.3 porque traía rótulos en español («Astronauta», «Retrorreflector laser a 5 m al NNO»), palabras corruptas («communimental», «Coracimos de condonción órcastes», «Comentanios retroreflectons»), un «aerozine aerozine» duplicado y un rover dibujado en el panel 5 que el Apolo 11 no llevaba. Corregidos los nueve fallos en tres rondas: ahora el panel 5 lleva una antena de radar y un ordenador en lugar del rover, y el panel 6 dice «No rover on board».
