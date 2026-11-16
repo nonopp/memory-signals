@@ -1,13 +1,28 @@
 {
- "_nota": "Infografías descargables por aparato. Un fichero por idioma: <id>.<idioma>.webp dentro de docs/infografias/. Si falta el idioma del visitante, se enseña el español y se avisa. El original sin comprimir se guarda en fuentes/infografias/ (no se publica).",
+ "_nota": "Infografías descargables por aparato. Un fichero por idioma: <id>.<idioma>.webp dentro de docs/infografias/. Si falta el idioma del visitante se enseña el español y se avisa. Si el aparato no tiene ninguna, el botón enseña la fecha de 'próximamente'. El original sin comprimir se guarda en fuentes/infografias/ (no se publica).",
  "_generado": "2026-11-16",
+ "_proximamente": "2026-11-23",
  "modulo-lunar": {
   "es": {
    "archivo": "infografias/modulo-lunar.es.webp",
-   "ancho": 941,
-   "alto": 1672,
+   "ancho": 714,
+   "alto": 1280,
    "titulo": "Módulo lunar Apolo 11",
    "creditos": "Fuentes: NASA NSSDCA (1969-059C) · NASA, Apollo 11 Mission Overview"
+  },
+  "en": {
+   "archivo": "infografias/modulo-lunar.en.webp",
+   "ancho": 714,
+   "alto": 1280,
+   "titulo": "Apollo 11 Lunar Module",
+   "creditos": "Sources: NASA NSSDCA (1969-059C) · NASA, Apollo 11 Mission Overview"
+  },
+  "de": {
+   "archivo": "infografias/modulo-lunar.de.webp",
+   "ancho": 714,
+   "alto": 1280,
+   "titulo": "Apollo 11 Mondfähre",
+   "creditos": "Quellen: NASA NSSDCA (1969-059C) · NASA, Apollo 11 Mission Overview"
   }
  }
 }

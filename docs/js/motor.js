@@ -687,14 +687,39 @@
     });
   }
 
+  /* el visor sirve para dos casos: enseñar la infografía o anunciar cuándo estará */
+  function abrirProximamente() {
+    var img = $('#infografia-imagen');
+    img.hidden = true;
+    img.removeAttribute('src');
+    $('#infografia-titulo').textContent = T('infografia.titulo');
+    $('#infografia-descargar').hidden = true;
+    $('#infografia-credito').textContent = '';
+    var aviso = $('#infografia-aviso');
+    aviso.hidden = false;
+    aviso.className = 'infografia-aviso infografia-proximamente';
+    aviso.textContent = T('infografia.proximamente');
+    var nota = $('#infografia-nota');
+    if (nota) {
+      nota.hidden = false;
+      nota.textContent = T('infografia.proximamente.nota');
+    }
+    $('#visor-infografia').hidden = false;
+    $('#infografia-cerrar').focus();
+  }
+
   function abrirInfografia() {
-    if (!infografiaDe) return;
+    if (!infografiaDe) { abrirProximamente(); return; }
     var d = infografiaDe.datos;
     var img = $('#infografia-imagen');
     $('#infografia-titulo').textContent = d.titulo || T('infografia.titulo');
     $('#infografia-imagen').src = d.archivo + '?v=' + (window.__MSV || '');
     img.alt = T('infografia.alt', { objeto: infografiaDe.objeto.nombre });
+    img.hidden = false;
+    var avisoN = $('#infografia-nota'); if (avisoN) { avisoN.hidden = true; avisoN.textContent = ''; }
+    var avisoCaja = $('#infografia-aviso'); avisoCaja.className = 'infografia-aviso';
     var enlace = $('#infografia-descargar');
+    enlace.hidden = false;
     enlace.href = d.archivo;
     enlace.setAttribute('download', d.archivo.split('/').pop());
     $('#infografia-credito').textContent = d.creditos || '';
@@ -716,13 +741,13 @@
   function pintarBotonInfografia(a) {
     var boton = $('#btn-infografia');
     if (!boton) return;
-    boton.hidden = true;
+    /* el botón sale siempre: si el aparato aún no tiene infografía, al pulsarlo se anuncia la fecha */
+    boton.hidden = false;
     infografiaDe = null;
     infografiaPara(a).then(function (inf) {
       /* si el visitante ya ha cambiado de objeto mientras se cargaba el índice, no se toca */
       if (!inf || !estado.aparato || estado.aparato.id !== a.id) return;
       infografiaDe = inf;
-      boton.hidden = false;
     });
   }
 
@@ -832,8 +857,7 @@
         if ($('#visor-infografia') && !$('#visor-infografia').hidden) {
           /* la infografía abierta se vuelve a resolver: cambia el idioma de la imagen y el aviso */
           infografiaPara(estado.aparato).then(function (inf) {
-            if (!inf) { cerrarInfografia(); return; }
-            infografiaDe = inf;
+            infografiaDe = inf || null;
             abrirInfografia();
           });
         }

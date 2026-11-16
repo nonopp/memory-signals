@@ -1,3 +1,12 @@
+## v3.5.1 — 2026-11-16
+
+- Infografía del módulo lunar del Apolo 11 en **los tres idiomas**: español, inglés y alemán.
+- El botón **Ver infografía** sale en todos los aparatos. En los que aún no la tienen, al pulsarlo anuncia **«Próximamente disponible 23-11-2026»** con una nota que remite a la ficha, las fuentes y el modelo 3D. La fecha se cambia en un solo sitio: `_proximamente` de `datos/infografias.json`.
+- El visor se ha reordenado: el crédito de fuentes ya no se monta encima de la imagen y la descarga se oculta cuando no hay nada que descargar.
+
+### Pendiente de la imagen del Apolo 11
+Los datos son correctos y están cotejados con el NSSDCA, pero quedan rótulos corruptos en las ilustraciones pequeñas de los paneles 5 y 6 (detalle en el informe del 16-11). Se corregirán cuando llegue la versión regenerada.
+
 ## v3.5.0 — 2026-11-16
 
 **Infografías descargables, traducciones completas y modelos ligeros.**
