@@ -12,6 +12,14 @@ Criterio de numeración:
 
 ---
 
+## v3.3.2 — 16 de noviembre de 2026
+
+- **El pie de página se quedaba en el idioma anterior.** Al cambiar de idioma, el rótulo del nivel
+  («modo explorar · información sencilla») seguía escrito en el idioma de antes, porque se pinta en una
+  función aparte que no se volvía a llamar. Ahora se rehace con el resto.
+
+---
+
 ## v3.3.1 — 16 de noviembre de 2026
 
 - **La cabecera ya no corta los destinos en inglés y alemán.** El menú usaba la primera palabra del nombre,

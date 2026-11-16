@@ -690,6 +690,8 @@
         datos = j;
         window.__MSmodos = j.modos || null;
         if (typeof repintarPantallaActual === 'function') repintarPantallaActual();
+        /* el pie y el rótulo del modo se escriben aparte: hay que rehacerlos o se quedan en el idioma anterior */
+        if (typeof pintarNivel === 'function') pintarNivel();
         if (window.ChatObjeto && window.ChatObjeto.rehacer) window.ChatObjeto.rehacer();
         if (enObjeto() && estado.aparato) {
           avisoInactividadDicho = '';
