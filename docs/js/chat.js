@@ -777,7 +777,7 @@
 
     var pie = document.createElement('a');
     pie.className = 'ms-aporta';
-    pie.href = 'participa.html';
+    pie.href = window.MS_Idioma ? 'participa.html?lang=' + window.MS_Idioma.actual() : 'participa.html';
     pie.textContent = T('chat.sin.aporta') || '¿Tienes tú el dato? Cuéntamelo en «Participa»';
     caja.appendChild(pie);
     cont.appendChild(caja);

@@ -12,6 +12,26 @@ Criterio de numeración:
 
 ---
 
+## v3.3.0 — 16 de noviembre de 2026
+
+- **El formulario «Participa» y la política de privacidad hablan los tres idiomas** (español, inglés y alemán),
+  como el resto de la aplicación. Si alguien navega en inglés y pulsa «Take part», el formulario sale en inglés:
+  rótulos, ayudas, opciones de los desplegables, avisos de validación, mensajes de archivos y pantalla de gracias.
+- El selector **ES · EN · DE** está también en la cabecera de las dos páginas, y el idioma viaja en la dirección
+  (`?lang=en`) para que un enlace compartido abra el formulario ya traducido.
+- El título de la pestaña y la descripción de las páginas se traducen con el resto, y los enlaces internos
+  conservan el idioma al saltar de la aplicación al formulario y de ahí a la política de privacidad.
+- Los textos de página viven en `js/idioma-paginas.js` (diccionario propio, cargado solo en esas dos páginas);
+  `js/idioma.js` gana `MS_Idioma.anadir()` y el soporte de `?lang=`.
+- Al cambiar de idioma con el formulario a medio rellenar **no se pierde nada**: se repintan rótulos,
+  ayudas y filas de hitos, y lo escrito se queda.
+- Corregido de paso: si se quitaba un hito del medio y se añadía otro, se repetían los identificadores
+  de los campos (`hito-titulo-3` dos veces).
+- Los avisos de error que devuelve el servidor siguen llegando en español; el formulario envía el campo
+  `idioma` para que el mu-plugin pueda contestar en el idioma del visitante cuando se actualice.
+
+---
+
 ## v3.2.3 — 16 de noviembre de 2026
 
 - Cuando la respuesta es «Eso no está en mi ficha», **ya no se cita ninguna fuente**: no hay nada que citar

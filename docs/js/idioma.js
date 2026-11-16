@@ -20,6 +20,8 @@
       'voz.titulo': 'Activar o silenciar la voz',
       'participa.titulo': 'Propón un objeto olvidado y aporta material',
       'participa': 'Participa',
+      'participa.oculto': ' · propón un objeto olvidado',
+      'doc.titulo': 'Memory Signals · objetos abandonados de la NASA',
       'privacidad': 'Privacidad',
       'que.es.esto': '¿Qué es esto?',
       'mirar.ventana': 'Mirar por la ventana',
@@ -111,6 +113,8 @@
       'voz.titulo': 'Turn the voice on or off',
       'participa.titulo': 'Propose a forgotten object and contribute material',
       'participa': 'Take part',
+      'participa.oculto': ' · propose a forgotten object',
+      'doc.titulo': 'Memory Signals · abandoned NASA objects',
       'privacidad': 'Privacy',
       'que.es.esto': 'What is this?',
       'mirar.ventana': 'Look out of the window',
@@ -202,6 +206,8 @@
       'voz.titulo': 'Stimme ein- oder ausschalten',
       'participa.titulo': 'Schlage ein vergessenes Objekt vor und liefere Material',
       'participa': 'Mitmachen',
+      'participa.oculto': ' · schlage ein vergessenes Objekt vor',
+      'doc.titulo': 'Memory Signals · verlassene Objekte der NASA',
       'privacidad': 'Datenschutz',
       'que.es.esto': 'Was ist das?',
       'mirar.ventana': 'Aus dem Fenster schauen',
@@ -285,8 +291,22 @@
     }
   };
 
-  /* el idioma del navegador sirve de pista la primera vez */
+  /* el idioma del navegador sirve de pista la primera vez;
+     un ?lang=en en la dirección manda sobre lo guardado (enlaces compartidos) */
   function leer() {
+    var enlace = null;
+    try {
+      var q = String(window.location.search || '');
+      var m = q.match(/[?&](?:lang|idioma)=([a-zA-Z-]{2,5})/);
+      if (m) {
+        var corto = m[1].slice(0, 2).toLowerCase();
+        if (IDIOMAS.indexOf(corto) !== -1) { enlace = corto; }
+      }
+    } catch (e) {}
+    if (enlace) {
+      try { localStorage.setItem(CLAVE, enlace); } catch (e) {}
+      return enlace;
+    }
     var guardado = null;
     try { guardado = localStorage.getItem(CLAVE); } catch (e) {}
     if (guardado && IDIOMAS.indexOf(guardado) !== -1) return guardado;
@@ -323,8 +343,36 @@
       b.classList.toggle('activo', sel);
       b.setAttribute('aria-pressed', sel ? 'true' : 'false');
     });
+    Array.prototype.forEach.call(document.querySelectorAll('[data-i18n-ph]'), function (el) {
+      el.setAttribute('placeholder', t(el.getAttribute('data-i18n-ph')));
+    });
+    /* título de la pestaña y descripción de las páginas con formulario */
+    var docTitulo = document.querySelector('[data-i18n-doc-titulo]');
+    if (docTitulo) { document.title = t(docTitulo.getAttribute('data-i18n-doc-titulo')); }
+    var docMeta = document.querySelector('[data-i18n-doc-meta]');
+    if (docMeta) {
+      var meta = document.querySelector('meta[name="description"]');
+      if (meta) { meta.setAttribute('content', t(docMeta.getAttribute('data-i18n-doc-meta'))); }
+    }
+    /* los enlaces internos conservan el idioma en la dirección */
+    Array.prototype.forEach.call(document.querySelectorAll('a[href$=".html"]'), function (a) {
+      var href = a.getAttribute('href');
+      if (!href || href.indexOf('?') !== -1) { return; }
+      a.setAttribute('href', href + '?lang=' + actual);
+    });
     var rotulo = document.getElementById('idioma-actual');
     if (rotulo) rotulo.textContent = actual.toUpperCase();
+  }
+
+  /* diccionarios de página: cada página suma los suyos antes de aplicar */
+  function anadir(extra) {
+    Object.keys(extra).forEach(function (idioma) {
+      if (!TEXTOS[idioma]) { TEXTOS[idioma] = {}; }
+      Object.keys(extra[idioma]).forEach(function (clave) {
+        TEXTOS[idioma][clave] = extra[idioma][clave];
+      });
+    });
+    aplicar();
   }
 
   function poner(idioma) {
@@ -340,6 +388,7 @@
     nombres: NOMBRES,
     actual: function () { return actual; },
     t: t,
+    anadir: anadir,
     poner: poner,
     aplicar: aplicar
   };

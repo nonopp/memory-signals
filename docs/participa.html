@@ -1,41 +1,46 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-i18n-doc-titulo="p.doc.titulo" data-i18n-doc-meta="p.doc.meta">
 <head>
-<script>window.__MSV = '3.0.5';</script>
+<script>window.__MSV = '3.3.0';</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Participa · propón un objeto olvidado · Memory Signals</title>
 <meta name="description" content="Propón un objeto abandonado de la exploración espacial y aporta fotos o documentos para ampliar Memory Signals.">
-<link rel="icon" type="image/png" sizes="64x64" href="img/favicon-64.png?v=3.2.3">
+<link rel="icon" type="image/png" sizes="64x64" href="img/favicon-64.png?v=3.3.0">
 <meta name="theme-color" content="#05070f">
-<link rel="stylesheet" href="css/estilo.css?v=3.2.3">
-<link rel="stylesheet" href="css/participa.css?v=3.2.3">
+<link rel="stylesheet" href="css/estilo.css?v=3.3.0">
+<link rel="stylesheet" href="css/participa.css?v=3.3.0">
 </head>
 <body class="pagina-participa">
 
 <header class="barra barra-simple">
-  <a class="marca" href="index.html" title="Volver a la aplicación">
+  <a class="marca" href="index.html" title="Volver a la aplicación" data-i18n-title="p.nav.volver">
     <picture>
-      <source media="(max-width:620px)" srcset="img/logo-emblem.png?v=3.2.3">
-      <img class="marca-logo" src="img/logo-memory-signals.png?v=3.2.3" alt="Memory Signals" width="1272" height="499">
+      <source media="(max-width:620px)" srcset="img/logo-emblem.png?v=3.3.0">
+      <img class="marca-logo" src="img/logo-memory-signals.png?v=3.3.0" alt="Memory Signals" width="1272" height="499">
     </picture>
   </a>
   <nav class="nav-simple">
-    <a href="privacidad.html">Privacidad</a>
-    <a href="index.html">Volver a la aplicación</a>
+    <div class="idiomas" role="group" aria-label="Idioma" data-i18n-aria="idioma">
+      <button type="button" class="idioma-btn activo" data-idioma="es" aria-pressed="true" title="Español">ES</button>
+      <button type="button" class="idioma-btn" data-idioma="en" aria-pressed="false" title="English">EN</button>
+      <button type="button" class="idioma-btn" data-idioma="de" aria-pressed="false" title="Deutsch">DE</button>
+    </div>
+    <a href="privacidad.html" data-i18n="p.nav.privacidad">Privacidad</a>
+    <a href="index.html" data-i18n="p.nav.volver">Volver a la aplicación</a>
   </nav>
 </header>
 
 <main class="caja-form">
 
-  <h1>Participa</h1>
-  <p class="entrada">Memory Signals cuenta la historia de diez aparatos que la NASA dejó donde llegó.
+  <h1 data-i18n="p.h1">Participa</h1>
+  <p class="entrada" data-i18n="p.entrada">Memory Signals cuenta la historia de diez aparatos que la NASA dejó donde llegó.
   Hay muchos más: sondas olvidadas, restos de misiones, piezas en museos. Si conoces uno y sabes dónde
   está la fuente que lo demuestra, esto es el sitio.</p>
 
   <div class="aviso-honesto">
-    <strong>Antes de empezar, dos cosas claras.</strong>
-    <p>Esto no publica nada solo: cada propuesta la lee una persona, se comprueba la fuente y solo entonces
+    <strong data-i18n="p.aviso.titulo">Antes de empezar, dos cosas claras.</strong>
+    <p data-i18n-html="p.aviso.texto">Esto no publica nada solo: cada propuesta la lee una persona, se comprueba la fuente y solo entonces
     se convierte en ficha. Y para la reconstrucción en 3D hacen falta <strong>entre 40 y 60 fotos del objeto,
     con un 70 % de solape y luz uniforme</strong>: con tres fotos no se puede. Si tus fotos sirven, lo
     intentamos; no prometemos un modelo 3D automático.</p>
@@ -44,179 +49,177 @@
   <!-- pantalla de gracias: oculta hasta que el envío sale bien -->
   <section class="gracias" id="gracias" hidden aria-live="polite">
     <div class="gracias-icono" aria-hidden="true">✓</div>
-    <h2>Propuesta recibida</h2>
+    <h2 data-i18n="p.gracias.h2">Propuesta recibida</h2>
     <p id="gracias-texto"></p>
-    <ul class="gracias-lista">
-      <li>Queda en la cola de revisión, con el identificador <strong id="gracias-id">—</strong>.</li>
-      <li>Se comprueba la fuente antes de aceptarla.</li>
-      <li>Si entra en la aplicación, se publica con licencia CC BY-SA 4.0 y el crédito que indicaste.</li>
-      <li>Te escribiremos al correo que has dejado.</li>
-    </ul>
+    <!-- la lista de la pantalla de gracias la escribe participa.js en el idioma activo -->
+    <ul class="gracias-lista" id="gracias-lista"></ul>
     <p class="volver">
-      <a class="boton-secundario" href="index.html">Volver a la aplicación</a>
-      <button type="button" class="boton-secundario" id="otra">Enviar otra propuesta</button>
+      <a class="boton-secundario" href="index.html" data-i18n="p.volver.app">Volver a la aplicación</a>
+      <button type="button" class="boton-secundario" id="otra" data-i18n="p.gracias.otra">Enviar otra propuesta</button>
     </p>
   </section>
 
   <form id="form-contribucion" novalidate>
 
     <section class="bloque">
-      <h2><span class="num">1</span> Lo imprescindible</h2>
-      <p class="pista">Solo estos dos campos son obligatorios. El resto ayuda a que la ficha se pueda montar.</p>
+      <h2><span class="num">1</span> <span data-i18n="p.b1.h">Lo imprescindible</span></h2>
+      <p class="pista" data-i18n="p.b1.pista">Solo estos dos campos son obligatorios. El resto ayuda a que la ficha se pueda montar.</p>
 
       <div class="campo">
-        <label for="objeto">Nombre del objeto <span class="req" aria-hidden="true">*</span></label>
+        <label for="objeto"><span data-i18n="p.objeto.label">Nombre del objeto</span> <span class="req" aria-hidden="true">*</span></label>
         <input type="text" id="objeto" name="objeto" maxlength="80" required
                placeholder="Surveyor 4, el rover de Lunojod 1, la antena del Apolo 12…"
+               data-i18n-ph="p.objeto.ph"
                aria-describedby="objeto-ayuda objeto-error">
-        <p class="ayuda" id="objeto-ayuda">Entre 3 y 80 caracteres. <span class="contador"><span id="objeto-cuenta">0</span>/80</span></p>
+        <p class="ayuda" id="objeto-ayuda"><span data-i18n="p.objeto.ayuda">Entre 3 y 80 caracteres.</span> <span class="contador"><span id="objeto-cuenta">0</span>/80</span></p>
         <p class="error" id="objeto-error" hidden></p>
       </div>
 
       <div class="campo">
-        <label for="email">Tu correo electrónico <span class="req" aria-hidden="true">*</span></label>
+        <label for="email"><span data-i18n="p.email.label">Tu correo electrónico</span> <span class="req" aria-hidden="true">*</span></label>
         <input type="email" id="email" name="email" required autocomplete="email"
-               placeholder="para responderte y pedirte permiso" aria-describedby="email-ayuda email-error">
-        <p class="ayuda" id="email-ayuda">No se publica nunca. Solo se usa para responderte.</p>
+               placeholder="para responderte y pedirte permiso" data-i18n-ph="p.email.ph"
+               aria-describedby="email-ayuda email-error">
+        <p class="ayuda" id="email-ayuda" data-i18n="p.email.ayuda">No se publica nunca. Solo se usa para responderte.</p>
         <p class="error" id="email-error" hidden></p>
       </div>
     </section>
 
     <section class="bloque">
-      <h2><span class="num">2</span> Cuéntanos qué es</h2>
-      <p class="pista">Todo opcional, pero sin estos datos la ficha no se puede montar.</p>
+      <h2><span class="num">2</span> <span data-i18n="p.b2.h">Cuéntanos qué es</span></h2>
+      <p class="pista" data-i18n="p.b2.pista">Todo opcional, pero sin estos datos la ficha no se puede montar.</p>
 
       <div class="rejilla">
         <div class="campo">
-          <label for="mision">Misión</label>
-          <input type="text" id="mision" name="mision" maxlength="80" placeholder="Apolo 11, Mars Pathfinder…">
+          <label for="mision" data-i18n="p.mision.label">Misión</label>
+          <input type="text" id="mision" name="mision" maxlength="80" placeholder="Apolo 11, Mars Pathfinder…" data-i18n-ph="p.mision.ph">
         </div>
         <div class="campo">
-          <label for="anio">Año de llegada o lanzamiento</label>
-          <input type="number" id="anio" name="anio" min="1900" max="2100" inputmode="numeric" placeholder="1967">
+          <label for="anio" data-i18n="p.anio.label">Año de llegada o lanzamiento</label>
+          <input type="number" id="anio" name="anio" min="1900" max="2100" inputmode="numeric" placeholder="1967" data-i18n-ph="p.anio.ph">
         </div>
         <div class="campo">
-          <label for="agencia">Agencia</label>
+          <label for="agencia" data-i18n="p.agencia.label">Agencia</label>
           <select id="agencia" name="agencia">
-            <option value="">Sin especificar</option>
+            <option value="" data-i18n="p.vacio">Sin especificar</option>
             <option>NASA</option>
             <option>ESA</option>
             <option>JAXA</option>
-            <option>URSS / Rusia</option>
-            <option>Otra</option>
+            <option data-i18n="p.agencia.urss">URSS / Rusia</option>
+            <option data-i18n="p.agencia.otra">Otra</option>
           </select>
         </div>
         <div class="campo">
-          <label for="cuerpo">Dónde está</label>
+          <label for="cuerpo" data-i18n="p.cuerpo.label">Dónde está</label>
           <select id="cuerpo" name="cuerpo">
-            <option value="">Sin especificar</option>
-            <option>Luna</option>
-            <option>Marte</option>
-            <option>Espacio profundo</option>
-            <option>Órbita terrestre</option>
-            <option>Tierra (museo o almacén)</option>
+            <option value="" data-i18n="p.vacio">Sin especificar</option>
+            <option data-i18n="p.cuerpo.luna">Luna</option>
+            <option data-i18n="p.cuerpo.marte">Marte</option>
+            <option data-i18n="p.cuerpo.espacio">Espacio profundo</option>
+            <option data-i18n="p.cuerpo.orbita">Órbita terrestre</option>
+            <option data-i18n="p.cuerpo.tierra">Tierra (museo o almacén)</option>
           </select>
         </div>
         <div class="campo">
-          <label for="lugar">Sitio o coordenadas</label>
-          <input type="text" id="lugar" name="lugar" maxlength="120" placeholder="Océano de las Tormentas, 2,47° N 43,34° O">
+          <label for="lugar" data-i18n="p.lugar.label">Sitio o coordenadas</label>
+          <input type="text" id="lugar" name="lugar" maxlength="120" placeholder="Océano de las Tormentas, 2,47° N 43,34° O" data-i18n-ph="p.lugar.ph">
         </div>
         <div class="campo">
-          <label for="estado_objeto">Estado</label>
+          <label for="estado_objeto" data-i18n="p.estado.label">Estado</label>
           <select id="estado_objeto" name="estado_objeto">
-            <option value="">Por confirmar</option>
-            <option>Funciona</option>
-            <option>Muerto</option>
-            <option>Recuperado</option>
-            <option>Por confirmar</option>
+            <option value="" data-i18n="p.estado.confirmar">Por confirmar</option>
+            <option data-i18n="p.estado.funciona">Funciona</option>
+            <option data-i18n="p.estado.muerto">Muerto</option>
+            <option data-i18n="p.estado.recuperado">Recuperado</option>
+            <option data-i18n="p.estado.confirmar">Por confirmar</option>
           </select>
         </div>
       </div>
 
       <div class="campo">
-        <label for="resumen">Qué es, en una o dos frases</label>
+        <label for="resumen" data-i18n="p.resumen.label">Qué es, en una o dos frases</label>
         <textarea id="resumen" name="resumen" rows="3" maxlength="600"
-                  placeholder="Una sonda que aterrizó en 1967 y dejó de responder a los pocos días…"></textarea>
+                  placeholder="Una sonda que aterrizó en 1967 y dejó de responder a los pocos días…" data-i18n-ph="p.resumen.ph"></textarea>
       </div>
 
       <div class="campo">
-        <label for="fuente_url">¿Cómo lo sabes? <span class="etiqueta-clave">lo que hace verificable la propuesta</span></label>
-        <input type="url" id="fuente_url" name="fuente_url" placeholder="https://science.nasa.gov/mission/…"
+        <label for="fuente_url"><span data-i18n="p.fuente.label">¿Cómo lo sabes?</span> <span class="etiqueta-clave" data-i18n="p.fuente.etiqueta">lo que hace verificable la propuesta</span></label>
+        <input type="url" id="fuente_url" name="fuente_url" placeholder="https://science.nasa.gov/mission/…" data-i18n-ph="p.fuente.ph"
                aria-describedby="fuente-ayuda fuente-error">
-        <p class="ayuda" id="fuente-ayuda">Una dirección oficial (NASA, ESA, NSSDCA, un museo, un informe). Sin fuente, la ficha no se acepta.</p>
+        <p class="ayuda" id="fuente-ayuda" data-i18n="p.fuente.ayuda">Una dirección oficial (NASA, ESA, NSSDCA, un museo, un informe). Sin fuente, la ficha no se acepta.</p>
         <p class="error" id="fuente-error" hidden></p>
       </div>
     </section>
 
     <section class="bloque">
-      <h2><span class="num">3</span> Hitos para el carrusel</h2>
-      <p class="pista">Hasta tres. Un título corto y una frase de 12 a 18 palabras, con su fuente. Es el mismo
+      <h2><span class="num">3</span> <span data-i18n="p.b3.h">Hitos para el carrusel</span></h2>
+      <p class="pista" data-i18n="p.b3.pista">Hasta tres. Un título corto y una frase de 12 a 18 palabras, con su fuente. Es el mismo
       formato que usan los diez aparatos de la aplicación, así no hay que reescribirlo después.</p>
       <div id="hitos-lista"></div>
-      <button type="button" class="boton-secundario" id="anadir-hito">+ Añadir otro hito</button>
+      <button type="button" class="boton-secundario" id="anadir-hito" data-i18n="p.hito.anadir">+ Añadir otro hito</button>
     </section>
 
     <section class="bloque">
-      <h2><span class="num">4</span> Fotos y documentos</h2>
-      <p class="pista">Los dos son opcionales, pero es donde está el valor: sin material, la ficha se queda en texto.</p>
+      <h2><span class="num">4</span> <span data-i18n="p.b4.h">Fotos y documentos</span></h2>
+      <p class="pista" data-i18n="p.b4.pista">Los dos son opcionales, pero es donde está el valor: sin material, la ficha se queda en texto.</p>
 
       <div class="campo">
-        <label for="fotos">Fotos en un <code>.zip</code> <span class="limite">máximo 25 MB · hasta 60 imágenes</span></label>
+        <label for="fotos" data-i18n-html="p.fotos.label">Fotos en un <code>.zip</code> <span class="limite">máximo 25 MB · hasta 60 imágenes</span></label>
         <div class="zona-arrastre" id="zona-fotos">
           <input type="file" id="fotos" name="fotos" accept=".zip,application/zip">
-          <p class="arrastre-texto">Arrastra aquí el zip o <span class="enlace-falso">búscalo en tu equipo</span></p>
-          <p class="arrastre-estado" id="fotos-estado">Ningún archivo elegido.</p>
+          <p class="arrastre-texto" data-i18n-html="p.fotos.arrastra">Arrastra aquí el zip o <span class="enlace-falso">búscalo en tu equipo</span></p>
+          <p class="arrastre-estado" id="fotos-estado" data-i18n="p.estado.vacio">Ningún archivo elegido.</p>
         </div>
         <p class="error" id="fotos-error" hidden></p>
       </div>
 
       <div class="campo">
-        <label for="documentos">Documentos <span class="limite">hasta 3 · 10 MB cada uno · PDF, DOC, DOCX, TXT o MD</span></label>
+        <label for="documentos" data-i18n-html="p.docs.label">Documentos <span class="limite">hasta 3 · 10 MB cada uno · PDF, DOC, DOCX, TXT o MD</span></label>
         <input type="file" id="documentos" name="documentos" multiple
                accept=".pdf,.doc,.docx,.txt,.md,application/pdf">
-        <p class="arrastre-estado" id="docs-estado">Ningún archivo elegido.</p>
+        <p class="arrastre-estado" id="docs-estado" data-i18n="p.estado.vacio">Ningún archivo elegido.</p>
         <p class="error" id="documentos-error" hidden></p>
       </div>
     </section>
 
     <section class="bloque">
-      <h2><span class="num">5</span> Crédito y permiso</h2>
+      <h2><span class="num">5</span> <span data-i18n="p.b5.h">Crédito y permiso</span></h2>
 
       <div class="campo">
-        <label for="credito">Cómo quieres aparecer</label>
-        <input type="text" id="credito" name="credito" maxlength="80" placeholder="Anónimo">
-        <p class="ayuda">Si lo dejas en blanco, aparecerá «Anónimo».</p>
+        <label for="credito" data-i18n="p.credito.label">Cómo quieres aparecer</label>
+        <input type="text" id="credito" name="credito" maxlength="80" placeholder="Anónimo" data-i18n-ph="p.credito.ph">
+        <p class="ayuda" data-i18n="p.credito.ayuda">Si lo dejas en blanco, aparecerá «Anónimo».</p>
       </div>
 
-      <p class="licencia">Si tu propuesta se publica, el material se publicará con licencia
+      <p class="licencia" data-i18n-html="p.licencia">Si tu propuesta se publica, el material se publicará con licencia
       <strong>Creative Commons BY-SA 4.0</strong>: cualquiera podrá reutilizarlo citando la fuente.</p>
 
       <label class="casilla">
         <input type="checkbox" id="acepta_privacidad" name="acepta_privacidad" required>
-        <span>He leído y acepto la <a href="privacidad.html" target="_blank" rel="noopener">política de privacidad</a>.</span>
+        <span data-i18n-html="p.acepta">He leído y acepto la <a href="privacidad.html" target="_blank" rel="noopener">política de privacidad</a>.</span>
       </label>
 
       <label class="casilla">
         <input type="checkbox" id="mayor_de_edad" name="mayor_de_edad" required>
-        <span>Declaro que soy <strong>mayor de 18 años</strong> y que tengo derecho a compartir el material que envío.</span>
+        <span data-i18n-html="p.mayor">Declaro que soy <strong>mayor de 18 años</strong> y que tengo derecho a compartir el material que envío.</span>
       </label>
 
-      <p class="nota-menores">Si eres menor, pídele a un adulto que lo envíe con tu nombre en el crédito.</p>
+      <p class="nota-menores" data-i18n="p.menores">Si eres menor, pídele a un adulto que lo envíe con tu nombre en el crédito.</p>
     </section>
 
     <!-- campo trampa: invisible para las personas, los bots lo rellenan -->
     <div class="trampa" aria-hidden="true">
-      <label for="web">No rellenar</label>
+      <label for="web" data-i18n="p.trampa">No rellenar</label>
       <input type="text" id="web" name="web" tabindex="-1" autocomplete="off">
     </div>
 
     <p class="error error-general" id="error-general" hidden></p>
 
     <div class="envio">
-      <button type="submit" class="principal" id="enviar" disabled>Enviar propuesta</button>
+      <button type="submit" class="principal" id="enviar" disabled data-i18n="p.enviar">Enviar propuesta</button>
       <p class="estado-envio" id="estado-envio" aria-live="polite"></p>
     </div>
-    <p class="ayuda legal-pie">Al enviar aceptas la política de privacidad y la licencia CC BY-SA 4.0.
+    <p class="ayuda legal-pie" data-i18n="p.pie.legal">Al enviar aceptas la política de privacidad y la licencia CC BY-SA 4.0.
     Nada se publica automáticamente.</p>
   </form>
 
@@ -224,9 +227,11 @@
 
 <footer class="pie">
   <span>Memory Signals · NASA Space Apps Challenge 2026</span>
-  <span><a href="privacidad.html">Política de privacidad</a></span>
+  <span><a href="privacidad.html" data-i18n="p.footer.politica">Política de privacidad</a></span>
 </footer>
 
-<script src="js/participa.js?v=3.2.3"></script>
+<script src="js/idioma.js?v=3.3.0"></script>
+<script src="js/idioma-paginas.js?v=3.3.0"></script>
+<script src="js/participa.js?v=3.3.0"></script>
 </body>
 </html>
