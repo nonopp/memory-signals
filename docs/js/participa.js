@@ -326,7 +326,12 @@
         }
         idEnvio = j.id || '—';
         pintarGracias();
-        $('gracias-texto').textContent = (idioma() === 'es' && j.mensaje) ? j.mensaje : tr('p.gracias.texto');
+        /* el agradecimiento y el aviso de contacto salen siempre; si el servidor manda
+           además un mensaje propio (en español), se pone delante */
+        var partes = [];
+        if (idioma() === 'es' && j.mensaje) { partes.push(j.mensaje); }
+        partes.push(tr('p.gracias.texto'));
+        $('gracias-texto').textContent = partes.join(' ');
         enviando = false;
         form.hidden = true;
         gracias.hidden = false;

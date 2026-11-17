@@ -234,6 +234,83 @@
      "texto": "En enero de 2005, al lado de mi propio escudo térmico abandonado, encontré una roca del tamaño de un balón que resultó ser un meteorito de hierro y níquel. El primero identificado en otro planeta.",
      "fuente": "NASA Science — Spirit y Opportunity"
     }
+   ],
+   "puntos3d": [
+    {
+     "id": "lugar",
+     "pos": [
+      0.25,
+      3.09,
+      6.3
+     ],
+     "normal": [
+      0.02,
+      0.2,
+      1
+     ],
+     "titulo": "Meridiani Planum",
+     "texto": "Me mandaron a Meridiani Planum: desde la órbita se veían minerales que solo se forman con agua. Mi trabajo era bajar y comprobarlo sobre el terreno."
+    },
+    {
+     "id": "noventa",
+     "pos": [
+      0.06,
+      1.41,
+      7.89
+     ],
+     "normal": [
+      0.0,
+      0.02,
+      1
+     ],
+     "titulo": "Noventa días",
+     "texto": "Me diseñaron para durar noventa días marcianos. Aguanté 5.111 y recorrí 45,16 kilómetros, la mayor distancia recorrida por un vehículo sobre otro mundo."
+    },
+    {
+     "id": "meteorito",
+     "pos": [
+      -1.97,
+      0.57,
+      6.3
+     ],
+     "normal": [
+      -0.19,
+      -0.07,
+      1
+     ],
+     "titulo": "El meteorito",
+     "texto": "En enero de 2005, junto a mi propio escudo térmico abandonado, encontré una roca del tamaño de un balón: hierro y níquel caídos del cielo, el primer meteorito identificado en otro planeta."
+    },
+    {
+     "id": "tormenta",
+     "pos": [
+      2.09,
+      0.57,
+      6.3
+     ],
+     "normal": [
+      0.19,
+      -0.07,
+      1
+     ],
+     "titulo": "La tormenta",
+     "texto": "Una tormenta de polvo me apagó. Sin contacto desde el 10 de junio de 2018, y la NASA dio la misión por terminada el 13 de febrero de 2019."
+    },
+    {
+     "id": "squyres",
+     "pos": [
+      0.06,
+      -0.6,
+      6.94
+     ],
+     "normal": [
+      0.0,
+      -0.2,
+      1
+     ],
+     "titulo": "Steve Squyres",
+     "texto": "Steve Squyres fue el investigador principal de los dos rovers gemelos, Opportunity y Spirit, que aterrizaron en Marte en enero de 2004."
+    }
    ]
   },
   {
@@ -359,6 +436,98 @@
      "texto": "Con esos temblores se pudo medir lo que nadie había medido: la corteza bajo mí es más fina de lo esperado, de 25 a 40 km, y el núcleo es fundido y enorme, de unos 1.800 km de radio.",
      "fuente": "NASA Science — ciencia de InSight"
     }
+   ],
+   "puntos3d": [
+    {
+     "id": "sitio",
+     "pos": [
+      0.13,
+      0.56,
+      0.67
+     ],
+     "normal": [
+      0.02,
+      0.2,
+      1
+     ],
+     "titulo": "Elysium Planitia",
+     "texto": "Me posé en Elysium Planitia, un sitio elegido por seguridad y no por su geología: lo interesante no estaba al lado, estaba debajo de mí."
+    },
+    {
+     "id": "sismometro",
+     "pos": [
+      0.0,
+      0.19,
+      1.02
+     ],
+     "normal": [
+      0.0,
+      0.02,
+      1
+     ],
+     "titulo": "El sismómetro",
+     "texto": "Bajé un sismómetro al suelo con el brazo y escuché el primer temblor registrado en otro planeta. Detecté más de 1.300 sismos; los mejores venían de Cerberus Fossae."
+    },
+    {
+     "id": "corteza",
+     "pos": [
+      -1.43,
+      0.01,
+      0.67
+     ],
+     "normal": [
+      -0.19,
+      -0.07,
+      1
+     ],
+     "titulo": "La corteza",
+     "texto": "Con esos temblores se midió lo que nadie había medido: la corteza bajo mí es más fina de lo esperado, de 25 a 40 kilómetros."
+    },
+    {
+     "id": "nucleo",
+     "pos": [
+      1.43,
+      0.01,
+      0.67
+     ],
+     "normal": [
+      0.19,
+      -0.07,
+      1
+     ],
+     "titulo": "El núcleo",
+     "texto": "El núcleo de Marte es fundido y enorme, de unos 1.800 kilómetros de radio. Lo supimos por cómo le llegaban los temblores."
+    },
+    {
+     "id": "polvo",
+     "pos": [
+      0.0,
+      -0.24,
+      0.81
+     ],
+     "normal": [
+      0.0,
+      -0.2,
+      1
+     ],
+     "titulo": "El polvo",
+     "texto": "Me quedé sin energía porque el polvo cubrió mis paneles solares. Dejé de responder y la misión terminó."
+    },
+    {
+     "id": "banerdt",
+     "pos": [
+      0.52,
+      -0.06,
+      1.04
+     ],
+     "normal": [
+      0.07,
+      -0.11,
+      1
+     ],
+     "titulo": "Bruce Banerdt",
+     "texto": "Bruce Banerdt fue el investigador principal de la primera misión dedicada a mirar hacia dentro de Marte: su pulso, su temperatura y sus reflejos."
+    }
    ]
   },
   {
@@ -477,6 +646,83 @@
      "titulo": "La frontera",
      "texto": "En agosto de 2012 crucé la heliopausa y me convertí en el primer objeto construido por personas que salía del escudo del Sol. Sigo en el espacio interestelar, con dos instrumentos funcionando.",
      "fuente": "NASA Science — Voyager 1"
+    }
+   ],
+   "puntos3d": [
+    {
+     "id": "jupiter",
+     "pos": [
+      -0.0,
+      6.28,
+      10.16
+     ],
+     "normal": [
+      0.0,
+      0.2,
+      1
+     ],
+     "titulo": "Júpiter y Saturno",
+     "texto": "Salí en 1977 a enseñar de cerca Júpiter y Saturno. En Júpiter descubrí un anillo fino y dos lunas nuevas; en Saturno, cinco lunas más y un anillo al que llamaron G."
+    },
+    {
+     "id": "disco",
+     "pos": [
+      -0.0,
+      3.23,
+      11.86
+     ],
+     "normal": [
+      0.0,
+      -0.02,
+      1
+     ],
+     "titulo": "El disco de oro",
+     "texto": "Llevo un disco de oro con saludos en 55 idiomas, imágenes y sonidos de la Tierra. La NASA se lo encargó a Carl Sagan, que eligió qué iba dentro."
+    },
+    {
+     "id": "heliopausa",
+     "pos": [
+      -1.98,
+      2.72,
+      8.9
+     ],
+     "normal": [
+      -0.2,
+      -0.06,
+      1
+     ],
+     "titulo": "La heliopausa",
+     "texto": "En agosto de 2012 crucé la heliopausa: fui el primer objeto construido por personas que salía del escudo del Sol."
+    },
+    {
+     "id": "sigo",
+     "pos": [
+      1.97,
+      2.72,
+      8.9
+     ],
+     "normal": [
+      0.2,
+      -0.06,
+      1
+     ],
+     "titulo": "Sigo respondiendo",
+     "texto": "Sigo en el espacio interestelar, en contacto con la Tierra y con dos instrumentos funcionando. Ojo: no estoy abandonada."
+    },
+    {
+     "id": "contraste",
+     "pos": [
+      -0.0,
+      0.69,
+      10.59
+     ],
+     "normal": [
+      0.0,
+      -0.2,
+      1
+     ],
+     "titulo": "El contraste",
+     "texto": "Estoy en este catálogo como contraste honesto: el criterio es que el aparato ya no sirva, y yo todavía respondo. Puede que deje de hacerlo pronto."
     }
    ]
   },
@@ -813,6 +1059,83 @@
      "texto": "Descubrí que Eros no tiene campo magnético y que su densidad se parece a la corteza terrestre. Sigo posada allí, congelada a menos 173 °C, sin señal desde el 28 de febrero de 2001.",
      "fuente": "NASA Science — NEAR Shoemaker"
     }
+   ],
+   "puntos3d": [
+    {
+     "id": "eros",
+     "pos": [
+      0.0,
+      0.72,
+      1.85
+     ],
+     "normal": [
+      0.0,
+      0.2,
+      1
+     ],
+     "titulo": "Eros",
+     "texto": "Eros es una piedra de 34 kilómetros de largo. Fui la primera nave de la historia que orbitó un asteroide y la primera misión del programa Discovery."
+    },
+    {
+     "id": "posada",
+     "pos": [
+      0.0,
+      -0.07,
+      2.38
+     ],
+     "normal": [
+      0.0,
+      -0.02,
+      1
+     ],
+     "titulo": "Posada sin deber",
+     "texto": "No estaba diseñada para aterrizar y aun así me posé en Eros el 12 de febrero de 2001, a 6,4 kilómetros por hora. Sobreviví al golpe."
+    },
+    {
+     "id": "magnetismo",
+     "pos": [
+      -1.35,
+      -0.2,
+      1.46
+     ],
+     "normal": [
+      -0.2,
+      -0.06,
+      1
+     ],
+     "titulo": "Sin campo magnético",
+     "texto": "Descubrí que Eros no tiene campo magnético y que su densidad se parece a la de la corteza terrestre."
+    },
+    {
+     "id": "congelada",
+     "pos": [
+      1.35,
+      -0.2,
+      1.46
+     ],
+     "normal": [
+      0.2,
+      -0.06,
+      1
+     ],
+     "titulo": "Congelada",
+     "texto": "Sigo posada en Eros, a menos 173 °C y sin señal desde el 28 de febrero de 2001."
+    },
+    {
+     "id": "shoemaker",
+     "pos": [
+      0.0,
+      -0.72,
+      1.99
+     ],
+     "normal": [
+      0.0,
+      -0.2,
+      1
+     ],
+     "titulo": "Eugene Shoemaker",
+     "texto": "Eugene M. Shoemaker fue el geólogo que estudió los cráteres y los impactos. La NASA puso su nombre a la nave en marzo de 2000, tres años después de su muerte."
+    }
    ]
   },
   {
@@ -936,6 +1259,83 @@
      "titulo": "Júpiter",
      "texto": "El 4 de diciembre de 1973 pasé a 130.354 kilómetros de Júpiter y envié las primeras fotos cercanas del planeta, con la Gran Mancha Roja bien visible. Mi última señal llegó el 23 de enero de 2003.",
      "fuente": "NASA Science — Pioneer 10"
+    }
+   ],
+   "puntos3d": [
+    {
+     "id": "cinturon",
+     "pos": [
+      0.0,
+      1.1,
+      0.4
+     ],
+     "normal": [
+      0,
+      0,
+      1
+     ],
+     "titulo": "El cinturón",
+     "texto": "Fui la primera nave que se atrevió con los planetas exteriores. Nadie sabía si se podía cruzar el cinturón de asteroides, y yo lo crucé para llegar a Júpiter."
+    },
+    {
+     "id": "placa",
+     "pos": [
+      0.0,
+      0.4,
+      0.8
+     ],
+     "normal": [
+      0,
+      0,
+      1
+     ],
+     "titulo": "La placa",
+     "texto": "Llevo una placa de metal con un hombre, una mujer y un mapa que sitúa la Tierra y el Sol. Fue idea de Carl Sagan: un mensaje de dónde venimos."
+    },
+    {
+     "id": "jupiter",
+     "pos": [
+      -0.4,
+      1.3,
+      0.2
+     ],
+     "normal": [
+      0,
+      0,
+      1
+     ],
+     "titulo": "Júpiter",
+     "texto": "El 4 de diciembre de 1973 pasé a 130.354 kilómetros de Júpiter y envié las primeras fotos cercanas del planeta, con la Gran Mancha Roja bien visible."
+    },
+    {
+     "id": "silencio",
+     "pos": [
+      -1.6,
+      0.7,
+      0.3
+     ],
+     "normal": [
+      0,
+      0,
+      1
+     ],
+     "titulo": "Sin señal",
+     "texto": "Mi última señal llegó el 23 de enero de 2003. Sigo mi rumbo hacia la estrella Aldebarán, en silencio."
+    },
+    {
+     "id": "wirth",
+     "pos": [
+      1.6,
+      0.7,
+      0.3
+     ],
+     "normal": [
+      0,
+      0,
+      1
+     ],
+     "titulo": "Fred Wirth",
+     "texto": "Fred Wirth era el jefe del proyecto Pioneer en 1995, más de veinte años después de que yo saliera de la Tierra."
     }
    ]
   },
@@ -1061,6 +1461,98 @@
      "texto": "En Vesta encontré Rheasilvia, una cuenca de 500 km de ancho y 19 de profundidad. En Ceres descubrí que las manchas brillantes son sales y que guarda cerca del 25 % de su masa en hielo.",
      "fuente": "NASA Science — Ceres"
     }
+   ],
+   "puntos3d": [
+    {
+     "id": "destino",
+     "pos": [
+      -5.19,
+      -0.0,
+      0.72
+     ],
+     "normal": [
+      -0.21,
+      0.0,
+      1
+     ],
+     "titulo": "Vesta y Ceres",
+     "texto": "Me enviaron a los dos cuerpos más grandes del cinturón de asteroides: Vesta, rocoso y seco, y Ceres, primitivo y rico en agua. Entre los dos suman casi el 40 % de la masa del cinturón."
+    },
+    {
+     "id": "ionico",
+     "pos": [
+      -0.0,
+      -0.0,
+      1.02
+     ],
+     "normal": [
+      0.0,
+      0.0,
+      1
+     ],
+     "titulo": "El motor iónico",
+     "texto": "Me empujaba un motor iónico que apenas empuja, entre 19 y 91 milinewtons, pero lo hace sin parar día tras día. Con ese empuje orbité un asteroide y luego un planeta enano."
+    },
+    {
+     "id": "rheasilvia",
+     "pos": [
+      5.19,
+      -0.0,
+      0.72
+     ],
+     "normal": [
+      0.21,
+      0.0,
+      1
+     ],
+     "titulo": "Rheasilvia",
+     "texto": "En Vesta encontré Rheasilvia, una cuenca de 500 kilómetros de ancho y 19 de profundidad."
+    },
+    {
+     "id": "manchas",
+     "pos": [
+      -0.0,
+      0.61,
+      0.72
+     ],
+     "normal": [
+      0.0,
+      0.22,
+      1
+     ],
+     "titulo": "Las manchas de Ceres",
+     "texto": "En Ceres descubrí que las manchas brillantes son sales y que guarda cerca del 25 % de su masa en hielo."
+    },
+    {
+     "id": "sin-combustible",
+     "pos": [
+      -2.51,
+      -0.56,
+      0.72
+     ],
+     "normal": [
+      -0.1,
+      -0.2,
+      1
+     ],
+     "titulo": "Sin combustible",
+     "texto": "Me quedé sin combustible en órbita de Ceres. No funciono desde el 1 de noviembre de 2018."
+    },
+    {
+     "id": "equipo",
+     "pos": [
+      2.51,
+      -0.56,
+      0.72
+     ],
+     "normal": [
+      0.1,
+      -0.2,
+      1
+     ],
+     "titulo": "Rayman y Russell",
+     "texto": "Marc Rayman fue el ingeniero jefe y director de misión en el JPL; Chris Russell, el investigador principal del equipo científico."
+    }
    ]
   },
   {
@@ -1183,6 +1675,83 @@
      "texto": "Entre las dos devolvimos 52.663 imágenes y un mapa del 97 % de la superficie de Marte. Dejamos de oírlas hace décadas, pero los dos módulos siguen allí, quietos sobre el polvo.",
      "fuente": "NASA Science — Viking 1"
     }
+   ],
+   "puntos3d": [
+    {
+     "id": "dos-trabajos",
+     "pos": [
+      2.75,
+      6.76,
+      3.45
+     ],
+     "normal": [
+      0.02,
+      0.18,
+      1
+     ],
+     "titulo": "Dos trabajos",
+     "texto": "Cada Viking llevaba dos trabajos: fotografiar Marte desde la órbita y buscar vida en el suelo. Fuimos los primeros módulos que funcionaron de verdad sobre otro planeta."
+    },
+    {
+     "id": "experimento",
+     "pos": [
+      -1.52,
+      3.54,
+      3.64
+     ],
+     "normal": [
+      -0.19,
+      -0.1,
+      1
+     ],
+     "titulo": "El experimento",
+     "texto": "Mi brazo metió tierra en un laboratorio diminuto y el resultado se podía leer como una señal débil de vida. Pero el aparato que buscaba materia orgánica no encontró nada."
+    },
+    {
+     "id": "imagenes",
+     "pos": [
+      2.4,
+      2.13,
+      2.57
+     ],
+     "normal": [
+      0.0,
+      -0.23,
+      1
+     ],
+     "titulo": "52.663 imágenes",
+     "texto": "Entre las dos devolvimos 52.663 imágenes y un mapa del 97 % de la superficie de Marte."
+    },
+    {
+     "id": "quietos",
+     "pos": [
+      5.74,
+      2.96,
+      3.26
+     ],
+     "normal": [
+      0.16,
+      -0.15,
+      1
+     ],
+     "titulo": "Quietos en el polvo",
+     "texto": "Viking 1 dejó de operar el 11 de noviembre de 1982. Los dos módulos siguen allí, sobre el polvo."
+    },
+    {
+     "id": "nombres",
+     "pos": [
+      3.53,
+      7.75,
+      1.57
+     ],
+     "normal": [
+      0.05,
+      0.27,
+      1
+     ],
+     "titulo": "Mutch y Soffen",
+     "texto": "El módulo Viking 1 lleva el nombre de Thomas A. Mutch desde 1982 y el Viking 2 el de Gerald Soffen desde 2001."
+    }
    ]
   },
   {
@@ -1294,6 +1863,98 @@
      "titulo": "Lo que cambié",
      "texto": "Cuando empezaron a pensarme, nadie conocía un solo planeta fuera del sistema solar. En nueve años dejé más de 2.600, y hoy sabemos que hay más planetas que estrellas.",
      "fuente": "NASA Science — Kepler"
+    }
+   ],
+   "puntos3d": [
+    {
+     "id": "cisne",
+     "pos": [
+      0.01,
+      1.62,
+      0.64
+     ],
+     "normal": [
+      0.0,
+      0.26,
+      1
+     ],
+     "titulo": "150.000 estrellas",
+     "texto": "Estaba quieto mirando 150.000 estrellas de la constelación del Cisne, esperando a que alguna parpadeara."
+    },
+    {
+     "id": "transito",
+     "pos": [
+      -0.22,
+      0.7,
+      0.78
+     ],
+     "normal": [
+      -0.07,
+      0.11,
+      1
+     ],
+     "titulo": "El tránsito",
+     "texto": "No veía los planetas: veía el instante en que uno se cruzaba por delante de su estrella y le robaba un poco de brillo. Ese parpadeo se llama tránsito."
+    },
+    {
+     "id": "mundos",
+     "pos": [
+      0.12,
+      -1.03,
+      0.91
+     ],
+     "normal": [
+      0.03,
+      -0.17,
+      1
+     ],
+     "titulo": "2.600 mundos",
+     "texto": "Cuando empezaron a pensarme, nadie conocía un solo planeta fuera del sistema solar. En nueve años dejé más de 2.600."
+    },
+    {
+     "id": "cambio",
+     "pos": [
+      -0.5,
+      -0.45,
+      0.71
+     ],
+     "normal": [
+      -0.15,
+      -0.07,
+      1
+     ],
+     "titulo": "Más planetas que estrellas",
+     "texto": "Hoy sabemos que hay más planetas que estrellas. Ese cambio de idea empezó con los parpadeos que yo anoté."
+    },
+    {
+     "id": "apagado",
+     "pos": [
+      0.51,
+      -0.22,
+      0.71
+     ],
+     "normal": [
+      0.15,
+      -0.04,
+      1
+     ],
+     "titulo": "Apagado",
+     "texto": "Me retiraron el 30 de octubre de 2018, sin combustible. Sigo en órbita heliocéntrica, apagado."
+    },
+    {
+     "id": "borucki",
+     "pos": [
+      0.06,
+      -1.61,
+      0.84
+     ],
+     "normal": [
+      0.02,
+      -0.26,
+      1
+     ],
+     "titulo": "William Borucki",
+     "texto": "William Borucki fue el investigador principal fundador de la misión, en el Ames Research Center."
     }
    ]
   },
@@ -1421,6 +2082,83 @@
      "texto": "En mi último vuelo, el 18 de enero de 2024, se me rompieron las palas al tomar tierra. Sigo de pie en el cráter Jezero, todavía en contacto, pero ya no puedo volar.",
      "fuente": "NASA — fin de la misión Ingenuity (enero de 2024)"
     }
+   ],
+   "puntos3d": [
+    {
+     "id": "prueba",
+     "pos": [
+      0.13,
+      0.46,
+      0.46
+     ],
+     "normal": [
+      0.07,
+      0.26,
+      1
+     ],
+     "titulo": "La prueba",
+     "texto": "Me llevaron a Marte como prueba: cinco vuelos en treinta días para ver si se podía volar donde el aire es menos de una centésima parte del terrestre."
+    },
+    {
+     "id": "vuelos",
+     "pos": [
+      -0.1,
+      0.35,
+      0.54
+     ],
+     "normal": [
+      -0.05,
+      0.11,
+      1
+     ],
+     "titulo": "72 vuelos",
+     "texto": "Acabé haciendo 72 vuelos, estuve 128,8 minutos en el aire y recorrí 17 kilómetros, yendo por delante del rover para mirarle el terreno."
+    },
+    {
+     "id": "palas",
+     "pos": [
+      0.06,
+      0.31,
+      0.65
+     ],
+     "normal": [
+      0.03,
+      0.06,
+      1
+     ],
+     "titulo": "Las palas",
+     "texto": "En mi último vuelo, el 18 de enero de 2024, se me rompieron las palas al tomar tierra."
+    },
+    {
+     "id": "jezero",
+     "pos": [
+      -0.26,
+      0.16,
+      0.5
+     ],
+     "normal": [
+      -0.14,
+      -0.17,
+      1
+     ],
+     "titulo": "De pie en Jezero",
+     "texto": "Sigo de pie en el cráter Jezero, todavía en contacto, pero ya no puedo volar."
+    },
+    {
+     "id": "equipo",
+     "pos": [
+      0.25,
+      0.16,
+      0.5
+     ],
+     "normal": [
+      0.14,
+      -0.17,
+      1
+     ],
+     "titulo": "El equipo",
+     "texto": "Teddy Tzanetos fue el jefe de proyecto en el Jet Propulsion Laboratory, Dave Lavery el ejecutivo del programa en la sede y Bill Nelson el administrador que anunció el final."
+    }
    ]
   },
   {
@@ -1510,7 +2248,99 @@
      "fuente": "https://www.nasa.gov/mission/apollo-12/"
     }
    ],
-   "nombre_mapa": "Intrepid"
+   "nombre_mapa": "Intrepid",
+   "puntos3d": [
+    {
+     "id": "posarme",
+     "pos": [
+      -1.5,
+      1.96,
+      2.28
+     ],
+     "normal": [
+      -0.19,
+      -0.1,
+      1
+     ],
+     "titulo": "Frenar y posarme",
+     "texto": "Yo era la mitad de abajo del módulo lunar del Apolo 12. Encendí el motor, frené la caída y me posé sobre cuatro patas en el Oceanus Procellarum."
+    },
+    {
+     "id": "surveyor",
+     "pos": [
+      1.28,
+      1.64,
+      2.09
+     ],
+     "normal": [
+      0.16,
+      -0.15,
+      1
+     ],
+     "titulo": "Surveyor 3",
+     "texto": "A 163 metros de donde me posé llevaba dos años y medio la sonda Surveyor 3. Conrad y Bean caminaron hasta ella y trajeron piezas a la Tierra."
+    },
+    {
+     "id": "polvo",
+     "pos": [
+      -0.0,
+      1.18,
+      1.73
+     ],
+     "normal": [
+      0.0,
+      -0.23,
+      1
+     ],
+     "titulo": "El polvo sobre una máquina",
+     "texto": "Aquellas piezas sirvieron para ver qué le hace el polvo lunar a un aparato que lleva años parado en la superficie."
+    },
+    {
+     "id": "vuelta",
+     "pos": [
+      0.3,
+      0.88,
+      1.99
+     ],
+     "normal": [
+      0.04,
+      -0.28,
+      1
+     ],
+     "titulo": "Sin billete de vuelta",
+     "texto": "Conmigo no había vuelta: era demasiado pesada para traerla. Me dejaron con los instrumentos encendidos."
+    },
+    {
+     "id": "tripulacion",
+     "pos": [
+      0.14,
+      2.61,
+      2.18
+     ],
+     "normal": [
+      0.02,
+      0.0,
+      1
+     ],
+     "titulo": "Conrad y Bean",
+     "texto": "Pete Conrad me posó en la Luna y Alan Bean era el piloto del módulo lunar en noviembre de 1969."
+    },
+    {
+     "id": "nadie",
+     "pos": [
+      0.14,
+      3.76,
+      2.18
+     ],
+     "normal": [
+      0.02,
+      0.18,
+      1
+     ],
+     "titulo": "Nadie ha vuelto",
+     "texto": "Estoy posada en la Luna desde 1969 y el polvo me va cubriendo poco a poco. Nadie ha vuelto a recogerme."
+    }
+   ]
   },
   {
    "id": "apolo14-antares",
@@ -1599,7 +2429,99 @@
      "fuente": "https://www.nasa.gov/mission/apollo-14/"
     }
    ],
-   "nombre_mapa": "Antares"
+   "nombre_mapa": "Antares",
+   "puntos3d": [
+    {
+     "id": "framauro",
+     "pos": [
+      -1.5,
+      1.96,
+      2.28
+     ],
+     "normal": [
+      -0.19,
+      -0.1,
+      1
+     ],
+     "titulo": "Fra Mauro",
+     "texto": "Me posé en una región de colinas, más difícil que los mares lisos del Apolo 11 y el 12. Shepard tuvo que corregir la trayectoria a mano."
+    },
+    {
+     "id": "imbrium",
+     "pos": [
+      1.28,
+      1.64,
+      2.09
+     ],
+     "normal": [
+      0.16,
+      -0.15,
+      1
+     ],
+     "titulo": "La roca de Imbrium",
+     "texto": "El encargo era traer material expulsado por el impacto que excavó el Mare Imbrium."
+    },
+    {
+     "id": "perforar",
+     "pos": [
+      -0.0,
+      1.18,
+      1.73
+     ],
+     "normal": [
+      0.0,
+      -0.23,
+      1
+     ],
+     "titulo": "Perforar el suelo",
+     "texto": "Shepard y Mitchell recogieron muestras y perforaron el suelo para sacar un testigo de profundidad."
+    },
+    {
+     "id": "paquetes",
+     "pos": [
+      0.3,
+      0.88,
+      1.99
+     ],
+     "normal": [
+      0.04,
+      -0.28,
+      1
+     ],
+     "titulo": "Mis paquetes",
+     "texto": "Mis dos paquetes de experimentos se quedaron funcionando en la superficie, y yo con ellos."
+    },
+    {
+     "id": "otra-mitad",
+     "pos": [
+      0.14,
+      2.61,
+      2.18
+     ],
+     "normal": [
+      0.02,
+      0.0,
+      1
+     ],
+     "titulo": "La otra mitad",
+     "texto": "Mi mitad de arriba regresó con la tripulación y después terminó estrellándose contra la Luna."
+    },
+    {
+     "id": "shepard",
+     "pos": [
+      0.14,
+      3.76,
+      2.18
+     ],
+     "normal": [
+      0.02,
+      0.18,
+      1
+     ],
+     "titulo": "Alan Shepard",
+     "texto": "Alan Shepard era el comandante y el único de los Apolo que pisó la Luna siendo el primer estadounidense en el espacio."
+    }
+   ]
   },
   {
    "id": "apolo16-orion",
@@ -1688,7 +2610,99 @@
      "fuente": "https://www.nasa.gov/mission/apollo-16/"
     }
    ],
-   "nombre_mapa": "Orion"
+   "nombre_mapa": "Orion",
+   "puntos3d": [
+    {
+     "id": "descartes",
+     "pos": [
+      -1.5,
+      1.96,
+      2.28
+     ],
+     "normal": [
+      -0.19,
+      -0.1,
+      1
+     ],
+     "titulo": "Las tierras altas",
+     "texto": "Todos los alunizajes anteriores habían ido a mares oscuros. A mí me mandaron a Descartes, terreno claro y lleno de cráteres, a buscar rocas volcánicas."
+    },
+    {
+     "id": "no-habia",
+     "pos": [
+      1.28,
+      1.64,
+      2.09
+     ],
+     "normal": [
+      0.16,
+      -0.15,
+      1
+     ],
+     "titulo": "No las había",
+     "texto": "Lo que encontraron fue roca rota y fundida por impactos, no volcánica. La geología salió distinta de la prevista."
+    },
+    {
+     "id": "plan",
+     "pos": [
+      -0.0,
+      1.18,
+      1.73
+     ],
+     "normal": [
+      0.0,
+      -0.23,
+      1
+     ],
+     "titulo": "Cambio de plan",
+     "texto": "La tripulación rehízo el recorrido sobre la marcha y se fue a explorar el borde de un cráter grande para aprovechar el tiempo."
+    },
+    {
+     "id": "aqui",
+     "pos": [
+      0.3,
+      0.88,
+      1.99
+     ],
+     "normal": [
+      0.04,
+      -0.28,
+      1
+     ],
+     "titulo": "Me quedé aquí",
+     "texto": "Young y Duke se fueron en mi mitad de arriba. Yo me quedé en las tierras altas de Descartes desde abril de 1972."
+    },
+    {
+     "id": "otra-mitad",
+     "pos": [
+      0.14,
+      2.61,
+      2.18
+     ],
+     "normal": [
+      0.02,
+      0.0,
+      1
+     ],
+     "titulo": "La otra mitad",
+     "texto": "Esa mitad de arriba se soltó después y se estrelló contra la Luna."
+    },
+    {
+     "id": "tripulacion",
+     "pos": [
+      0.14,
+      3.76,
+      2.18
+     ],
+     "normal": [
+      0.02,
+      0.18,
+      1
+     ],
+     "titulo": "Young y Duke",
+     "texto": "John Young me posó en el suelo y Charlie Duke era el piloto del módulo lunar."
+    }
+   ]
   },
   {
    "id": "apolo17-challenger",
@@ -1777,7 +2791,99 @@
      "fuente": "https://www.nasa.gov/mission/apollo-17/"
     }
    ],
-   "nombre_mapa": "Challenger"
+   "nombre_mapa": "Challenger",
+   "puntos3d": [
+    {
+     "id": "valle",
+     "pos": [
+      -1.5,
+      1.96,
+      2.28
+     ],
+     "normal": [
+      -0.19,
+      -0.1,
+      1
+     ],
+     "titulo": "Un valle entre montañas",
+     "texto": "Me posé en Taurus-Littrow, un valle rodeado de montañas, con material muy antiguo al alcance."
+    },
+    {
+     "id": "rover",
+     "pos": [
+      1.28,
+      1.64,
+      2.09
+     ],
+     "normal": [
+      0.16,
+      -0.15,
+      1
+     ],
+     "titulo": "El rover",
+     "texto": "Cernan y Schmitt recorrieron el valle con el rover y trajeron la muestra más antigua que se ha traído de la Luna."
+    },
+    {
+     "id": "geologo",
+     "pos": [
+      -0.0,
+      1.18,
+      1.73
+     ],
+     "normal": [
+      0.0,
+      -0.23,
+      1
+     ],
+     "titulo": "Un geólogo a bordo",
+     "texto": "Por primera vez entre los Apolo, uno de los dos que bajaban era geólogo de formación. Eso cambió lo que se recogió y cómo se describió."
+    },
+    {
+     "id": "despedida",
+     "pos": [
+      0.3,
+      0.88,
+      1.99
+     ],
+     "normal": [
+      0.04,
+      -0.28,
+      1
+     ],
+     "titulo": "La despedida",
+     "texto": "Cuando se fueron, la escalera que apoyaba en mí dejó de usarse. Desde entonces nadie ha vuelto a pisar la Luna."
+    },
+    {
+     "id": "golpe",
+     "pos": [
+      0.14,
+      2.61,
+      2.18
+     ],
+     "normal": [
+      0.02,
+      0.0,
+      1
+     ],
+     "titulo": "El golpe a propósito",
+     "texto": "Mi mitad de arriba se estrelló a propósito contra el valle para que los sismómetros registraran el golpe."
+    },
+    {
+     "id": "tripulacion",
+     "pos": [
+      0.14,
+      3.76,
+      2.18
+     ],
+     "normal": [
+      0.02,
+      0.18,
+      1
+     ],
+     "titulo": "Cernan y Schmitt",
+     "texto": "Gene Cernan era el comandante y la última persona en pisar la Luna; Harrison Schmitt, el piloto del módulo y geólogo."
+    }
+   ]
   },
   {
    "id": "spirit",
@@ -1861,6 +2967,98 @@
      "texto_cientifico": "La NASA la declaró inactiva el 24 de mayo de 2011 tras más de 1.300 intentos de contacto sin respuesta.",
      "fuente": "https://science.nasa.gov/mission/mer-spirit/"
     }
+   ],
+   "puntos3d": [
+    {
+     "id": "gusev",
+     "pos": [
+      0.25,
+      3.09,
+      6.3
+     ],
+     "normal": [
+      0.02,
+      0.2,
+      1
+     ],
+     "titulo": "Cráter Gusev",
+     "texto": "Aterricé en el cráter Gusev en enero de 2004 con un plan de noventa días."
+    },
+    {
+     "id": "anios",
+     "pos": [
+      0.06,
+      1.41,
+      7.89
+     ],
+     "normal": [
+      0.0,
+      0.02,
+      1
+     ],
+     "titulo": "Seis años y medio",
+     "texto": "Trabajé seis años y medio y recorrí casi ocho kilómetros, mucho más de lo que nadie esperaba de mí."
+    },
+    {
+     "id": "agua",
+     "pos": [
+      -1.97,
+      0.57,
+      6.3
+     ],
+     "normal": [
+      -0.19,
+      -0.07,
+      1
+     ],
+     "titulo": "Agua en Columbia",
+     "texto": "En las colinas Columbia aparecieron minerales que se forman con agua y rocas alteradas por ella."
+    },
+    {
+     "id": "arena",
+     "pos": [
+      2.09,
+      0.57,
+      6.3
+     ],
+     "normal": [
+      0.19,
+      -0.07,
+      1
+     ],
+     "titulo": "La trampa de arena",
+     "texto": "En 2009 una rueda se hundió en una bolsa de arena suelta. Desde entonces quedé inmóvil, con el Sol cada vez más bajo."
+    },
+    {
+     "id": "silencio",
+     "pos": [
+      0.06,
+      -0.6,
+      6.94
+     ],
+     "normal": [
+      0.0,
+      -0.2,
+      1
+     ],
+     "titulo": "El silencio",
+     "texto": "En marzo de 2010 dejé de contestar, y la NASA dio la misión por terminada en mayo."
+    },
+    {
+     "id": "squyres",
+     "pos": [
+      0.8,
+      0.24,
+      8.02
+     ],
+     "normal": [
+      0.07,
+      -0.11,
+      1
+     ],
+     "titulo": "Steve Squyres",
+     "texto": "Steve Squyres fue el investigador principal de los dos rovers gemelos, Spirit y Opportunity."
+    }
    ]
   },
   {
@@ -1942,6 +3140,98 @@
      "texto_explorador": "Nada de directo: pasé por Venus, dos veces por la Tierra y por dos asteroides. Y mi antena grande nunca se abrió, así que hablaba con una voz muy baja.",
      "texto_cientifico": "La maniobra VEEGA incluyó un sobrevuelo de Venus, dos de la Tierra y dos de asteroides. La antena de alto ganancia no desplegó y la misión se replanteó con la de bajo ganancia.",
      "fuente": "https://science.nasa.gov/mission/galileo/"
+    }
+   ],
+   "puntos3d": [
+    {
+     "id": "antena",
+     "pos": [
+      -5.0,
+      -30.0,
+      20.0
+     ],
+     "normal": [
+      0,
+      0,
+      1
+     ],
+     "titulo": "La antena",
+     "texto": "La antena principal no se abrió y tuve que trabajar con la pequeña. Aun así llegué a Júpiter en 1995."
+    },
+    {
+     "id": "sonda",
+     "pos": [
+      10.0,
+      60.0,
+      10.0
+     ],
+     "normal": [
+      0,
+      0,
+      1
+     ],
+     "titulo": "La sonda",
+     "texto": "Solté una sonda que se metió en la atmósfera de Júpiter y aguantó casi una hora antes de dejar de transmitir."
+    },
+    {
+     "id": "europa",
+     "pos": [
+      -40.0,
+      -30.0,
+      10.0
+     ],
+     "normal": [
+      0,
+      0,
+      1
+     ],
+     "titulo": "El océano de Europa",
+     "texto": "Mis medidas del campo magnético indicaron que bajo la corteza helada de Europa hay una capa de agua salada."
+    },
+    {
+     "id": "ocho-anios",
+     "pos": [
+      30.0,
+      -30.0,
+      10.0
+     ],
+     "normal": [
+      0,
+      0,
+      1
+     ],
+     "titulo": "Ocho años",
+     "texto": "Me quedé ocho años dando vueltas a Júpiter, y ese hallazgo cambió lo que buscamos en el sistema solar."
+    },
+    {
+     "id": "final",
+     "pos": [
+      0.0,
+      -45.0,
+      20.0
+     ],
+     "normal": [
+      0,
+      0,
+      1
+     ],
+     "titulo": "El final elegido",
+     "texto": "Me quedaba poco combustible y podía caer sin control en Europa. La NASA me estrelló contra Júpiter el 21 de septiembre de 2003."
+    },
+    {
+     "id": "alexander",
+     "pos": [
+      5.0,
+      110.0,
+      0.0
+     ],
+     "normal": [
+      0,
+      0,
+      1
+     ],
+     "titulo": "Claudia Alexander",
+     "texto": "Claudia Alexander fue la científica que dirigió la misión durante su tramo final."
     }
    ]
   },
@@ -2025,6 +3315,98 @@
      "texto_cientifico": "Huygens se separó el 25 de diciembre de 2004 y descendió el 14 de enero de 2005; fue el primer aterrizaje en el sistema saturniano.",
      "fuente": "https://science.nasa.gov/mission/cassini/"
     }
+   ],
+   "puntos3d": [
+    {
+     "id": "huygens",
+     "pos": [
+      -0.01,
+      0.51,
+      0.07
+     ],
+     "normal": [
+      0.0,
+      0.2,
+      1
+     ],
+     "titulo": "Huygens",
+     "texto": "Pasé trece años en Saturno. En mi costado viajaba Huygens, de la ESA, que solté en diciembre de 2004 para que bajara a Titán."
+    },
+    {
+     "id": "geiseres",
+     "pos": [
+      -0.01,
+      -2.71,
+      1.38
+     ],
+     "normal": [
+      0.0,
+      -0.02,
+      1
+     ],
+     "titulo": "Los géiseres",
+     "texto": "Vi columnas de vapor y hielo saliendo del polo sur de Encélado y las atravesé varias veces. Dentro había moléculas que apuntan a agua líquida debajo."
+    },
+    {
+     "id": "gran-final",
+     "pos": [
+      -4.59,
+      -3.24,
+      -0.91
+     ],
+     "normal": [
+      -0.2,
+      -0.06,
+      1
+     ],
+     "titulo": "El Gran Final",
+     "texto": "Me quedaba poco combustible, así que trazaron 22 órbitas que pasaban entre Saturno y el borde de los anillos."
+    },
+    {
+     "id": "zambullida",
+     "pos": [
+      4.58,
+      -3.24,
+      -0.91
+     ],
+     "normal": [
+      0.2,
+      -0.06,
+      1
+     ],
+     "titulo": "La última zambullida",
+     "texto": "La última órbita me metió en la atmósfera de Saturno el 15 de septiembre de 2017. Me deshice allí a propósito."
+    },
+    {
+     "id": "sin-contaminar",
+     "pos": [
+      -0.01,
+      -5.39,
+      0.4
+     ],
+     "normal": [
+      0.0,
+      -0.2,
+      1
+     ],
+     "titulo": "Sin contaminar",
+     "texto": "El final se eligió así para que ninguna luna con posible vida quedara contaminada por lo que yo llevaba."
+    },
+    {
+     "id": "porco",
+     "pos": [
+      1.52,
+      -1.64,
+      1.51
+     ],
+     "normal": [
+      0.07,
+      0.06,
+      1
+     ],
+     "titulo": "Carolyn Porco",
+     "texto": "Carolyn Porco fue la responsable del equipo de imágenes durante toda la misión."
+    }
    ]
   },
   {
@@ -2106,6 +3488,98 @@
      "texto_explorador": "Vida no puedo decir que viera. Sí medí metano en el aire y vi ríos y lagos de líquido. Para saber más habrá que volver.",
      "texto_cientifico": "Se confirmó el ciclo del metano y la presencia de líquido en superficie; la habitabilidad de Titán sigue abierta.",
      "fuente": "https://science.nasa.gov/mission/cassini-huygens/"
+    }
+   ],
+   "puntos3d": [
+    {
+     "id": "polizon",
+     "pos": [
+      0.0,
+      0.84,
+      0.78
+     ],
+     "normal": [
+      0.0,
+      0.26,
+      1
+     ],
+     "titulo": "De polizón",
+     "texto": "Viajé de polizón en Cassini, del que me separaron el 25 de diciembre de 2004."
+    },
+    {
+     "id": "caida",
+     "pos": [
+      -0.08,
+      0.36,
+      0.92
+     ],
+     "normal": [
+      -0.07,
+      0.11,
+      1
+     ],
+     "titulo": "Tres semanas de caída",
+     "texto": "Bajé durante tres semanas, entré en la atmósfera de Titán y desplegué paracaídas, sin nadie que pudiera corregirme."
+    },
+    {
+     "id": "aterrizaje",
+     "pos": [
+      0.04,
+      -0.54,
+      1.05
+     ],
+     "normal": [
+      0.03,
+      -0.17,
+      1
+     ],
+     "titulo": "El aterrizaje más lejano",
+     "texto": "El 14 de enero de 2005 toqué suelo en un mundo a más de mil millones de kilómetros: el aterrizaje más lejano hecho nunca en otro cuerpo."
+    },
+    {
+     "id": "minutos",
+     "pos": [
+      -0.19,
+      -0.24,
+      0.85
+     ],
+     "normal": [
+      -0.15,
+      -0.07,
+      1
+     ],
+     "titulo": "Setenta y dos minutos",
+     "texto": "Transmití desde la superficie más tiempo del previsto. Mi última señal la recibió Cassini, que la guardó y me la pasó a la Tierra."
+    },
+    {
+     "id": "sigo",
+     "pos": [
+      0.19,
+      -0.12,
+      0.85
+     ],
+     "normal": [
+      0.15,
+      -0.04,
+      1
+     ],
+     "titulo": "Sigo allí",
+     "texto": "Sigo en Titán, apagada, en una luna con atmósfera y lagos."
+    },
+    {
+     "id": "zarnecki",
+     "pos": [
+      0.02,
+      -0.84,
+      0.98
+     ],
+     "normal": [
+      0.02,
+      -0.26,
+      1
+     ],
+     "titulo": "John Zarnecki",
+     "texto": "John Zarnecki fue el responsable del instrumento que midió la superficie de Titán."
     }
    ]
   },
@@ -2190,7 +3664,99 @@
      "fuente": "https://science.nasa.gov/mission/messenger/"
     }
    ],
-   "nombre_mapa": "MESSENGER"
+   "nombre_mapa": "MESSENGER",
+   "puntos3d": [
+    {
+     "id": "vueltas",
+     "pos": [
+      -1.13,
+      0.07,
+      2.78
+     ],
+     "normal": [
+      0.09,
+      0.0,
+      1
+     ],
+     "titulo": "No se puede ir directo",
+     "texto": "El Sol tira demasiado: pasé por la Tierra, dos veces por Venus y tres por Mercurio antes de poder frenar y quedarme en órbita en 2011."
+    },
+    {
+     "id": "hielo",
+     "pos": [
+      -2.7,
+      0.19,
+      1.91
+     ],
+     "normal": [
+      -0.15,
+      0.04,
+      1
+     ],
+     "titulo": "Hielo en los polos",
+     "texto": "Encontré hielo de agua en cráteres de los polos donde nunca da el Sol."
+    },
+    {
+     "id": "volcanes",
+     "pos": [
+      -1.25,
+      0.74,
+      2.43
+     ],
+     "normal": [
+      0.07,
+      0.2,
+      1
+     ],
+     "titulo": "Volcanes antiguos",
+     "texto": "Los volcanes que vi reescribieron la historia del planeta; también confirmé que su núcleo es enorme y en parte líquido."
+    },
+    {
+     "id": "caida",
+     "pos": [
+      -1.25,
+      -0.6,
+      2.43
+     ],
+     "normal": [
+      0.07,
+      -0.2,
+      1
+     ],
+     "titulo": "El aterrizaje forzoso",
+     "texto": "El 30 de abril de 2015 se me acabó el combustible y caí contra la cara que mira al Sol."
+    },
+    {
+     "id": "crater",
+     "pos": [
+      -2.03,
+      -0.18,
+      2.78
+     ],
+     "normal": [
+      -0.05,
+      -0.07,
+      1
+     ],
+     "titulo": "Mi cráter",
+     "texto": "El cráter donde quedé lleva mi nombre."
+    },
+    {
+     "id": "solomon",
+     "pos": [
+      -1.02,
+      0.31,
+      3.2
+     ],
+     "normal": [
+      0.1,
+      0.07,
+      1
+     ],
+     "titulo": "Sean Solomon",
+     "texto": "Sean Solomon fue el investigador principal de la primera nave que se puso en órbita alrededor de Mercurio."
+    }
+   ]
   },
   {
    "id": "magellan",
@@ -2271,6 +3837,98 @@
      "texto_explorador": "Canales larguísimos, de cientos de kilómetros, que parecen hechos por lava muy caliente. Y volcanes por todas partes.",
      "texto_cientifico": "Las estructuras canaliformes de Venus se asocian a flujos de lava de baja viscosidad; la superficie es mayoritariamente volcánica.",
      "fuente": "https://science.nasa.gov/mission/magellan/"
+    }
+   ],
+   "puntos3d": [
+    {
+     "id": "nubes",
+     "pos": [
+      -0.0,
+      1.7,
+      1.29
+     ],
+     "normal": [
+      0.0,
+      0.2,
+      1
+     ],
+     "titulo": "Nubes de ácido",
+     "texto": "En Venus no se ve el suelo: hay nubes de ácido que no dejan ver nada. Por eso llevaba un radar."
+    },
+    {
+     "id": "mapa",
+     "pos": [
+      -0.0,
+      0.45,
+      1.66
+     ],
+     "normal": [
+      0.0,
+      -0.02,
+      1
+     ],
+     "titulo": "El 98 % del mapa",
+     "texto": "Lo que dibujé fue el relieve, no una foto. Cartografié el 98 % del planeta."
+    },
+    {
+     "id": "aerofrenado",
+     "pos": [
+      -2.27,
+      0.24,
+      1.02
+     ],
+     "normal": [
+      -0.2,
+      -0.06,
+      1
+     ],
+     "titulo": "Aerofrenado",
+     "texto": "Para no gastar combustible hice pasar la nave por la parte alta de la atmósfera una y otra vez hasta que la órbita se cerró: fue la primera vez que se usó esa técnica."
+    },
+    {
+     "id": "final",
+     "pos": [
+      2.27,
+      0.24,
+      1.02
+     ],
+     "normal": [
+      0.2,
+      -0.06,
+      1
+     ],
+     "titulo": "El final",
+     "texto": "Cuando se acabó el combustible me mandaron a la atmósfera, el 11 de octubre de 1994. Me deshice allí."
+    },
+    {
+     "id": "aire",
+     "pos": [
+      -0.0,
+      -0.59,
+      1.39
+     ],
+     "normal": [
+      0.0,
+      -0.2,
+      1
+     ],
+     "titulo": "Puede que siga allí",
+     "texto": "Parte de mí puede que aún esté en el aire de Venus."
+    },
+    {
+     "id": "stofan",
+     "pos": [
+      0.76,
+      0.87,
+      1.7
+     ],
+     "normal": [
+      0.07,
+      0.06,
+      1
+     ],
+     "titulo": "Ellen Stofan",
+     "texto": "Ellen Stofan era científica del equipo de radar de la misión."
     }
    ]
   },
@@ -2353,6 +4011,98 @@
      "texto_explorador": "Nueve personas en tres turnos. El que más tiempo se quedó pasó 84 días seguidos a bordo, algo que entonces no se había hecho.",
      "texto_cientifico": "Tres misiones: Skylab 2 (28 días), 3 (59 días) y 4 (84 días), con un total de 171 días ocupados.",
      "fuente": "https://www.nasa.gov/history/skylab/"
+    }
+   ],
+   "puntos3d": [
+    {
+     "id": "danada",
+     "pos": [
+      -12.38,
+      35.34,
+      11.18
+     ],
+     "normal": [
+      -0.21,
+      0.0,
+      1
+     ],
+     "titulo": "Salí dañada",
+     "texto": "Al llegar a la órbita perdí un panel solar y el escudo térmico. La primera tripulación tuvo que salir a repararme con paraguas improvisados."
+    },
+    {
+     "id": "nueve",
+     "pos": [
+      -2.17,
+      35.34,
+      15.21
+     ],
+     "normal": [
+      0.0,
+      0.0,
+      1
+     ],
+     "titulo": "Nueve personas",
+     "texto": "Tres tripulaciones vivieron conmigo, la última casi tres meses."
+    },
+    {
+     "id": "experimentos",
+     "pos": [
+      8.03,
+      35.34,
+      11.18
+     ],
+     "normal": [
+      0.21,
+      0.0,
+      1
+     ],
+     "titulo": "Los experimentos",
+     "texto": "Se hicieron experimentos del Sol, de la Tierra y de cómo se comporta el cuerpo humano sin peso."
+    },
+    {
+     "id": "caida",
+     "pos": [
+      -2.17,
+      38.59,
+      11.18
+     ],
+     "normal": [
+      0.0,
+      0.22,
+      1
+     ],
+     "titulo": "Caí sobre Australia",
+     "texto": "El 11 de julio de 1979 perdí altura y entré en la atmósfera sin control. Los trozos cayeron sobre Australia Occidental."
+    },
+    {
+     "id": "multa",
+     "pos": [
+      -7.11,
+      32.36,
+      11.18
+     ],
+     "normal": [
+      -0.1,
+      -0.2,
+      1
+     ],
+     "titulo": "La multa",
+     "texto": "Un pueblo de Australia Occidental multó a Estados Unidos por tirar basura."
+    },
+    {
+     "id": "museos",
+     "pos": [
+      2.77,
+      32.36,
+      11.18
+     ],
+     "normal": [
+      0.1,
+      -0.2,
+      1
+     ],
+     "titulo": "En museos",
+     "texto": "Mis restos acabaron en museos. Pete Conrad fue el comandante de la primera tripulación que me reparó en órbita."
     }
    ]
   },
@@ -2437,7 +4187,99 @@
      "fuente": "https://science.nasa.gov/mission/deep-impact-epoxi/"
     }
    ],
-   "nombre_mapa": "Deep Impact"
+   "nombre_mapa": "Deep Impact",
+   "puntos3d": [
+    {
+     "id": "proyectil",
+     "pos": [
+      0.0,
+      0.27,
+      0.3
+     ],
+     "normal": [
+      0.0,
+      0.2,
+      1
+     ],
+     "titulo": "Le disparé a un cometa",
+     "texto": "El 4 de julio de 2005 solté un proyectil de casi 400 kilos contra el cometa Tempel 1."
+    },
+    {
+     "id": "crater",
+     "pos": [
+      0.0,
+      -0.04,
+      0.39
+     ],
+     "normal": [
+      0.0,
+      0.0,
+      1
+     ],
+     "titulo": "El cráter",
+     "texto": "El cometa no se enteró, pero el cráter que abrió dejó ver material de dentro."
+    },
+    {
+     "id": "segundo",
+     "pos": [
+      -0.31,
+      0.01,
+      0.26
+     ],
+     "normal": [
+      -0.2,
+      0.04,
+      1
+     ],
+     "titulo": "Segundo trabajo",
+     "texto": "Con la misión ya cumplida me reutilizaron: pasé cerca de la Tierra, busqué planetas fuera del sistema solar y volví a visitar otro cometa."
+    },
+    {
+     "id": "perdi",
+     "pos": [
+      0.32,
+      0.01,
+      0.26
+     ],
+     "normal": [
+      0.2,
+      0.04,
+      1
+     ],
+     "titulo": "Me perdí",
+     "texto": "En 2013 la antena dejó de apuntar bien y perdí el contacto."
+    },
+    {
+     "id": "silencio",
+     "pos": [
+      0.0,
+      -0.36,
+      0.32
+     ],
+     "normal": [
+      0.0,
+      -0.2,
+      1
+     ],
+     "titulo": "No sé si sigo entera",
+     "texto": "Voy por ahí, en una órbita alrededor del Sol, en silencio. Nadie sabe exactamente dónde estoy."
+    },
+    {
+     "id": "ahearn",
+     "pos": [
+      0.11,
+      -0.16,
+      0.39
+     ],
+     "normal": [
+      0.07,
+      -0.07,
+      1
+     ],
+     "titulo": "Michael A'Hearn",
+     "texto": "Michael A'Hearn fue el investigador principal de la misión."
+    }
+   ]
   }
  ],
  "modos": {

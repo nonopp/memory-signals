@@ -1,3 +1,10 @@
+## v3.8.0 — 2026-11-17
+
+- **Puntos interactivos en los 21 aparatos restantes** (120 puntos nuevos, 5 o 6 por aparato, 126 en total con los seis del módulo lunar), en los tres idiomas: cada punto lleva un título corto y un texto de una o dos frases salido **solo de la ficha del propio aparato** —su resumen, sus tres hitos, su estado y las personas que aparecen en ella—, sin datos de fuera. Se colocan sobre el modelo en coordenadas del propio GLB, sacadas de su caja envolvente y, donde el mástil o los brazos largos descuadraban la caja, puestas a mano y comprobadas sobre la figura.
+- **La cabecera en móvil pasa a dos líneas**: arriba el logotipo completo —ya no solo el emblema— a la izquierda y el selector de idiomas alineado a la derecha; debajo, en una sola línea que se desliza si no cabe, el nivel de lectura, la voz, «Participa» y, cuando toca, el menú de destinos. Antes las opciones se amontonaban y descuadraban la pantalla; en escritorio la barra sigue igual, en una línea.
+- **Las tres tarjetas de destino van en horizontal en móvil**: el icono a la izquierda y el nombre del destino a la derecha, en lugar del icono encima del título.
+- **Pantalla de gracias del formulario**: al enviarse una propuesta se agradece la colaboración («¡Gracias por tu colaboración!») y se avisa de que **nos pondremos en contacto con esa persona lo antes posible, una vez valorada su aportación**, en los tres idiomas. El aviso sale siempre, también cuando el servidor añade su propio mensaje.
+
 ## v3.7.2 — 2026-11-17
 
 - **El bocadillo del chat se traduce al cambiar de idioma**: si aún no se ha hablado, el saludo y las sugerencias se rehacen en el idioma nuevo. Si ya hay conversación, se respeta lo escrito y solo cambian los rótulos y las sugerencias. Antes el saludo se quedaba en el idioma anterior porque el propio saludo contaba como conversación.

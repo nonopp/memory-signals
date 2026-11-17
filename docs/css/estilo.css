@@ -62,7 +62,8 @@ body.con-fondo .velo{opacity:1}
 .btn-participa:hover{transform:translateY(-1px);filter:brightness(1.07)}
 .btn-participa:focus-visible{outline:2px solid #fff;outline-offset:2px}
 @media (max-width:760px){.btn-participa{font-size:.8rem;padding:8px 12px}}
-.menu-destinos{display:flex;align-items:center;gap:6px;flex:0 1 auto;justify-content:center;max-width:100%}
+.opciones{display:contents}
+.menu-destinos{display:flex;align-items:center;gap:6px;flex:0 1 auto;justify-content:center;max-width:100%;order:1}
 .menu-destinos[hidden]{display:none}
 .menu-destinos button{appearance:none;border:1px solid transparent;background:rgba(255,255,255,.05);
   color:var(--texto-suave);font:inherit;font-size:.84rem;font-weight:600;padding:7px 13px;
@@ -72,7 +73,7 @@ body.con-fondo .velo{opacity:1}
 .menu-destinos button[aria-current="true"]{background:rgba(255,255,255,.16);color:var(--texto);border-color:var(--borde)}
 .menu-destinos .punto-menu{width:8px;height:8px;border-radius:50%;background:var(--c);flex:0 0 auto}
 .punto{width:10px;height:10px;border-radius:50%;background:var(--acento);box-shadow:0 0 14px var(--acento)}
-.controles{display:flex;align-items:center;gap:10px;position:relative}
+.controles{display:flex;align-items:center;gap:10px;position:relative;order:3}
 /* texto contextual del altavoz: aparece al pasar el ratón, no es un menú ni un diálogo */
 .ayuda-voz{
   position:absolute;top:calc(100% + 12px);right:0;z-index:60;
@@ -93,7 +94,7 @@ body.con-fondo .velo{opacity:1}
 .ayuda-voz-estado.encendida{color:#63e0c8}
 .nivel{display:flex;background:rgba(255,255,255,.07);border:1px solid var(--borde);border-radius:999px;padding:3px}
 /* selector de idioma: misma forma que el conmutador de nivel, más estrecho */
-.idiomas{display:flex;background:rgba(255,255,255,.07);border:1px solid var(--borde);border-radius:999px;padding:3px;gap:2px}
+.idiomas{display:flex;background:rgba(255,255,255,.07);border:1px solid var(--borde);border-radius:999px;padding:3px;gap:2px;order:2}
 .idioma-btn{
   font:inherit;font-size:.76rem;font-weight:700;letter-spacing:.04em;
   padding:6px 9px;border:0;border-radius:999px;cursor:pointer;
@@ -301,12 +302,26 @@ code{background:rgba(255,255,255,.09);padding:2px 6px;border-radius:6px;font-siz
 .oculto{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 
 @media (max-width:760px){
-  .barra{flex-wrap:wrap;gap:8px}
-  .marca-logo{height:41px}
-  .menu-destinos{order:3;flex:1 1 100%;justify-content:flex-start;overflow-x:auto;
-    scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  /* dos líneas: logotipo completo a la izquierda y selector de idiomas a la derecha;
+     debajo, el resto de opciones y —cuando toca— el menú de destinos */
+  .barra{flex-wrap:wrap;gap:8px 10px;align-items:center}
+  .marca{order:0;flex:0 1 auto;min-width:0;padding:4px 6px}
+  .marca-logo{height:38px}
+  .idiomas{order:1;margin-left:auto;flex:0 0 auto}
+  /* segunda línea: las opciones y, si toca, el menú de destinos, todo seguido y deslizable */
+  .opciones{display:flex;order:2;flex:1 1 100%;align-items:center;gap:8px;
+    overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;padding-bottom:2px}
+  .opciones::-webkit-scrollbar{display:none}
+  .controles{order:1;flex:0 0 auto;gap:8px}
+  .menu-destinos{order:2;flex:0 0 auto;justify-content:flex-start;overflow:visible}
+  .btn-participa{white-space:nowrap}
   .menu-destinos::-webkit-scrollbar{display:none}
   .menu-destinos button{padding:6px 11px;font-size:.78rem}
+  /* destino: el icono a la izquierda y el título a la derecha, nunca en vertical */
+  .destino{display:grid;grid-template-columns:auto 1fr;column-gap:14px;row-gap:2px;
+    align-items:center;padding:14px 16px}
+  .destino .bola{grid-row:1 / span 2;width:44px;height:44px;margin-bottom:0}
+  .destino strong{margin-bottom:0}
 }
 @media (max-width:560px){
   .barra{padding:10px 14px}
