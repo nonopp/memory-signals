@@ -34,6 +34,7 @@
   var empezado = false; // el envío es válido a partir de 3 s de relleno
   var enviando = false; // hay una petición en curso: no se tocan avisos ni estados
   var idEnvio = null;   // identificador de la propuesta enviada, para repintar la pantalla de gracias
+  var mensajeServidor = ''; // lo que contesta el servidor, si contesta algo (solo se usa en español)
 
   function $(id) { return document.getElementById(id); }
 
@@ -212,6 +213,14 @@
 
   /* ---------- pantalla de gracias (se reescribe en el idioma activo) ---------- */
   function pintarGracias() {
+    /* el agradecimiento y el aviso de contacto se reescriben aquí, en el idioma activo */
+    var parrafo = $('gracias-texto');
+    if (parrafo) {
+      var partes = [];
+      if (mensajeServidor) { partes.push(mensajeServidor); }
+      partes.push(tr('p.gracias.texto'));
+      parrafo.textContent = partes.join(' ');
+    }
     var ul = $('gracias-lista');
     if (!ul) { return; }
     ul.innerHTML = '';
@@ -328,10 +337,7 @@
         pintarGracias();
         /* el agradecimiento y el aviso de contacto salen siempre; si el servidor manda
            además un mensaje propio (en español), se pone delante */
-        var partes = [];
-        if (idioma() === 'es' && j.mensaje) { partes.push(j.mensaje); }
-        partes.push(tr('p.gracias.texto'));
-        $('gracias-texto').textContent = partes.join(' ');
+        mensajeServidor = (idioma() === 'es' && j.mensaje) ? j.mensaje : '';
         enviando = false;
         form.hidden = true;
         gracias.hidden = false;

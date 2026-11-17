@@ -1,3 +1,7 @@
+## v3.8.2 — 2026-11-17
+
+- **El agradecimiento del formulario se traduce al cambiar de idioma**: el título y la lista de la pantalla de gracias ya cambiaban, pero el párrafo del medio se quedaba en el idioma en que se envió la propuesta. Ahora se reescribe con el resto de la pantalla, así que quien envíe en español y luego cambie a alemán ve el agradecimiento y el aviso de contacto en alemán.
+
 ## v3.8.1 — 2026-11-17
 
 - **Los puntos se recolocan sobre los aparatos**: el reparto automático se hacía desde la caja envolvente de cada modelo, y en los que llevan mástiles o brazos largos —Voyager 1, Cassini, MESSENGER, Pioneer 10, Skylab— el centro de esa caja cae en el aire, así que algunos puntos quedaban flotando fuera de la figura. Ahora el centro y el tamaño salen de **los vértices reales del modelo** (media y percentiles 5–95 %, leídos tras descomprimir los GLB), de modo que el cuerpo del aparato manda y los salientes finos casi no cuentan; los cuatro modelos más tercos (Voyager 1, Pioneer 10 y Galileo) llevan además las coordenadas puestas a mano. Los 126 puntos se comprobaron uno a uno sobre la figura, con la misma cámara de la aplicación.
