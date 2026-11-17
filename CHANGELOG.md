@@ -1,3 +1,7 @@
+## v3.8.3 — 2026-11-17
+
+- **La página ya no se queda en una versión vieja**: si el navegador guardó `index.html` en caché y el servidor tiene otra versión, la propia página pregunta por `VERSION` al cargarse y, si no coincide con la suya, se recarga una sola vez con un parámetro nuevo. Antes había que forzar la recarga a mano: quien tuviera la aplicación abierta desde antes seguía viendo el menú y la cabecera antiguos aunque lo publicado ya fuera lo nuevo.
+
 ## v3.8.2 — 2026-11-17
 
 - **El agradecimiento del formulario se traduce al cambiar de idioma**: el título y la lista de la pantalla de gracias ya cambiaban, pero el párrafo del medio se quedaba en el idioma en que se envió la propuesta. Ahora se reescribe con el resto de la pantalla, así que quien envíe en español y luego cambie a alemán ve el agradecimiento y el aviso de contacto en alemán.
