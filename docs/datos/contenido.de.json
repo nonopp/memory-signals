@@ -2251,94 +2251,79 @@
    "nombre_mapa": "Intrepid",
    "puntos3d": [
     {
-     "id": "posarme",
+     "id": "descenso",
      "pos": [
-      -0.99,
-      1.94,
-      1.59
+      -1.75,
+      1.9,
+      1.15
      ],
      "normal": [
-      -0.19,
+      -0.8,
+      0,
+      0.6
+     ],
+     "titulo": "Abstiegsstufe",
+     "texto": "Ich war die untere Hälfte der Mondlandefähre von Apollo 12: Ich zündete das Triebwerk, bremste den Fall ab und landete im Oceanus Procellarum."
+    },
+    {
+     "id": "motor",
+     "pos": [
+      0.0,
+      1.05,
+      0.62
+     ],
+     "normal": [
+      0,
+      -0.2,
+      1
+     ],
+     "titulo": "Abstiegstriebwerk",
+     "texto": "Das Triebwerk, das den Fall abbremste, bevor ich auf vier Beinen im Oceanus Procellarum landete."
+    },
+    {
+     "id": "patas",
+     "pos": [
+      0.35,
+      0.75,
+      0.85
+     ],
+     "normal": [
+      0,
       -0.1,
       1
      ],
-     "titulo": "Bremsen und landen",
-     "texto": "Ich war die untere Hälfte der Apollo-12-Mondlandefähre. Ich zündete den Motor, bremste den Fall ab und setzte mit vier Beinen im Oceanus Procellarum auf."
+     "titulo": "Vier Beine",
+     "texto": "Ich landete im November 1969 auf vier Beinen. Ich bin noch hier, und der Staub bedeckt mich nach und nach."
     },
     {
-     "id": "surveyor",
+     "id": "ascenso",
      "pos": [
-      0.84,
-      1.64,
-      1.46
+      0.15,
+      3.85,
+      1.05
      ],
      "normal": [
-      0.16,
-      -0.15,
-      1
-     ],
-     "titulo": "Surveyor 3",
-     "texto": "163 Meter von meinem Landeplatz entfernt stand seit zweieinhalb Jahren die Sonde Surveyor 3. Conrad und Bean gingen zu ihr und brachten Teile zur Erde."
-    },
-    {
-     "id": "polvo",
-     "pos": [
-      0.0,
-      1.21,
-      1.22
-     ],
-     "normal": [
-      0.0,
-      -0.23,
-      1
-     ],
-     "titulo": "Staub auf einer Maschine",
-     "texto": "Diese Teile zeigten, was Mondstaub mit einem Gerät macht, das jahrelang auf der Oberfläche stillsteht."
-    },
-    {
-     "id": "vuelta",
-     "pos": [
       0.2,
-      0.93,
-      1.4
-     ],
-     "normal": [
-      0.04,
-      -0.28,
+      0.6,
       1
      ],
-     "titulo": "Kein Rückfahrtticket",
-     "texto": "Mit mir gab es keine Rückkehr: Ich war zu schwer, um mitgenommen zu werden. Man ließ mich mit eingeschalteten Instrumenten zurück."
+     "titulo": "Aufstiegsstufe",
+     "texto": "Die obere Hälfte hob mit Conrad und Bean ab und kehrte nach Hause zurück; für mich gab es kein Rückfahrticket."
     },
     {
-     "id": "tripulacion",
+     "id": "instrumentos",
      "pos": [
-      0.09,
-      2.54,
-      1.53
+      1.5,
+      1.55,
+      0.95
      ],
      "normal": [
-      0.02,
-      0.0,
-      1
+      0.6,
+      0,
+      0.8
      ],
-     "titulo": "Conrad und Bean",
-     "texto": "Pete Conrad setzte mich im November 1969 auf dem Mond ab, und Alan Bean war der Pilot der Mondlandefähre."
-    },
-    {
-     "id": "nadie",
-     "pos": [
-      0.09,
-      3.61,
-      1.53
-     ],
-     "normal": [
-      0.02,
-      0.18,
-      1
-     ],
-     "titulo": "Niemand ist zurückgekehrt",
-     "texto": "Seit 1969 stehe ich auf dem Mond, und der Staub bedeckt mich nach und nach. Niemand ist zurückgekommen, um mich abzuholen."
+     "titulo": "Instrumente",
+     "texto": "Sie ließen mich mit eingeschalteten Instrumenten zurück, als sie gingen: Ich war zu schwer, um zur Erde zurückzukehren."
     }
    ]
   },
@@ -2432,94 +2417,64 @@
    "nombre_mapa": "Antares",
    "puntos3d": [
     {
-     "id": "framauro",
+     "id": "descenso",
      "pos": [
-      -0.99,
-      1.94,
-      1.59
+      -1.75,
+      1.9,
+      1.15
      ],
      "normal": [
-      -0.19,
-      -0.1,
-      1
+      -0.8,
+      0,
+      0.6
      ],
-     "titulo": "Fra Mauro",
-     "texto": "Ich landete in einer Hügelregion, schwieriger als die glatten Meere von Apollo 11 und 12. Shepard musste die Flugbahn von Hand korrigieren."
+     "titulo": "Abstiegsstufe",
+     "texto": "Die untere Hälfte der Mondlandefähre von Apollo 14, im Februar 1971 in den Fra-Mauro-Hügeln gelandet."
     },
     {
-     "id": "imbrium",
+     "id": "radar",
      "pos": [
-      0.84,
-      1.64,
-      1.46
+      0.5,
+      4.45,
+      0.1
      ],
      "normal": [
-      0.16,
-      -0.15,
-      1
+      0.3,
+      0.9,
+      0.3
      ],
-     "titulo": "Der Fels von Imbrium",
-     "texto": "Der Auftrag war, Material zu bringen, das durch den Einschlag ausgeschleudert wurde, der das Mare Imbrium aushob."
-    },
-    {
-     "id": "perforar",
-     "pos": [
-      0.0,
-      1.21,
-      1.22
-     ],
-     "normal": [
-      0.0,
-      -0.23,
-      1
-     ],
-     "titulo": "Den Boden durchbohren",
-     "texto": "Shepard und Mitchell sammelten Proben und bohrten in den Boden, um einen Tiefenkern zu entnehmen."
+     "titulo": "Landungsradar",
+     "texto": "Das Radar lieferte Shepard nicht das Erwartete, und er musste die Flugbahn von Hand korrigieren, um mich zu landen."
     },
     {
      "id": "paquetes",
      "pos": [
-      0.2,
-      0.93,
-      1.4
+      1.5,
+      1.55,
+      0.95
      ],
      "normal": [
-      0.04,
-      -0.28,
-      1
+      0.6,
+      0,
+      0.8
      ],
-     "titulo": "Meine Pakete",
+     "titulo": "Experimentierpakete",
      "texto": "Meine beiden Experimentierpakete blieben auf der Oberfläche in Betrieb, und ich mit ihnen."
     },
     {
-     "id": "otra-mitad",
+     "id": "ascenso",
      "pos": [
-      0.09,
-      2.54,
-      1.53
+      0.15,
+      3.85,
+      1.05
      ],
      "normal": [
-      0.02,
-      0.0,
+      0.2,
+      0.6,
       1
      ],
-     "titulo": "Die andere Hälfte",
-     "texto": "Meine obere Hälfte kehrte mit der Besatzung zurück und schlug später auf dem Mond ein."
-    },
-    {
-     "id": "shepard",
-     "pos": [
-      0.09,
-      3.61,
-      1.53
-     ],
-     "normal": [
-      0.02,
-      0.18,
-      1
-     ],
-     "titulo": "Alan Shepard",
-     "texto": "Alan Shepard war der Kommandant und der einzige der Apollo-Astronauten, der als erster Amerikaner im Weltraum den Mond betrat."
+     "titulo": "Aufstiegsstufe",
+     "texto": "Meine obere Hälfte kehrte mit der Besatzung zurück und schlug später gegen den Mond ein."
     }
    ]
   },
@@ -2613,94 +2568,49 @@
    "nombre_mapa": "Orion",
    "puntos3d": [
     {
-     "id": "descartes",
+     "id": "descenso",
      "pos": [
-      -0.99,
-      1.94,
-      1.59
+      -1.75,
+      1.9,
+      1.15
      ],
      "normal": [
-      -0.19,
-      -0.1,
-      1
+      -0.8,
+      0,
+      0.6
      ],
-     "titulo": "Das Hochland",
-     "texto": "Alle früheren Mondlandungen waren in dunklen Meeren gelandet. Ich wurde nach Descartes geschickt, helles, kraterreiches Gelände, um Vulkangestein zu suchen."
+     "titulo": "Abstiegsstufe",
+     "texto": "Die untere Hälfte der Mondlandefähre von Apollo 16, die am 21. April 1972 im Hochland von Descartes gelandet ist."
     },
     {
-     "id": "no-habia",
+     "id": "instrumentos",
      "pos": [
-      0.84,
-      1.64,
-      1.46
+      1.5,
+      1.55,
+      0.95
      ],
      "normal": [
-      0.16,
-      -0.15,
-      1
+      0.6,
+      0,
+      0.8
      ],
-     "titulo": "Es gab keine",
-     "texto": "Was sie fanden, war durch Einschläge zerbrochenes und geschmolzenes Gestein, kein vulkanisches. Die Geologie war anders als vorhergesagt."
+     "titulo": "Instrumente",
+     "texto": "Die Instrumente, die sie neben mir zurückgelassen haben, blieben hier bei mir, im Hochland von Descartes."
     },
     {
-     "id": "plan",
+     "id": "ascenso",
      "pos": [
-      0.0,
-      1.21,
-      1.22
+      0.15,
+      3.85,
+      1.05
      ],
      "normal": [
-      0.0,
-      -0.23,
-      1
-     ],
-     "titulo": "Planänderung",
-     "texto": "Die Besatzung stellte die Route spontan um und erkundete den Rand eines großen Kraters, um die Zeit zu nutzen."
-    },
-    {
-     "id": "aqui",
-     "pos": [
       0.2,
-      0.93,
-      1.4
-     ],
-     "normal": [
-      0.04,
-      -0.28,
+      0.6,
       1
      ],
-     "titulo": "Hier blieb ich",
-     "texto": "Young und Duke fuhren in meiner oberen Hälfte davon. Ich blieb seit April 1972 im Hochland von Descartes."
-    },
-    {
-     "id": "otra-mitad",
-     "pos": [
-      0.09,
-      2.54,
-      1.53
-     ],
-     "normal": [
-      0.02,
-      0.0,
-      1
-     ],
-     "titulo": "Die andere Hälfte",
-     "texto": "Diese obere Hälfte löste sich später und schlug auf dem Mond ein."
-    },
-    {
-     "id": "tripulacion",
-     "pos": [
-      0.09,
-      3.61,
-      1.53
-     ],
-     "normal": [
-      0.02,
-      0.18,
-      1
-     ],
-     "titulo": "Young und Duke",
-     "texto": "John Young setzte mich auf den Boden und Charlie Duke war der Pilot der Mondlandefähre."
+     "titulo": "Aufstiegsstufe",
+     "texto": "Young und Duke flogen in meiner oberen Hälfte davon; diese Hälfte löste sich später ab und schlug auf dem Mond ein."
     }
    ]
   },
@@ -2794,94 +2704,79 @@
    "nombre_mapa": "Challenger",
    "puntos3d": [
     {
-     "id": "valle",
+     "id": "descenso",
      "pos": [
-      -0.99,
-      1.94,
-      1.59
+      -1.75,
+      1.9,
+      1.15
      ],
      "normal": [
-      -0.19,
+      -0.8,
+      0,
+      0.6
+     ],
+     "titulo": "Abstiegsstufe",
+     "texto": "Die untere Hälfte der Mondlandefähre von Apollo 17, am 11. Dezember 1972 in Taurus-Littrow gelandet."
+    },
+    {
+     "id": "escalerilla",
+     "pos": [
+      0.35,
+      0.75,
+      0.85
+     ],
+     "normal": [
+      0,
       -0.1,
       1
      ],
-     "titulo": "Ein Tal zwischen Bergen",
-     "texto": "Ich landete in Taurus-Littrow, einem von Bergen umgebenen Tal, mit sehr altem Material in Reichweite."
+     "titulo": "Leiter",
+     "texto": "Die Leiter, die sich an mir abstützte, wurde nicht mehr benutzt, als sie gingen. Seitdem hat niemand mehr den Mond betreten."
+    },
+    {
+     "id": "sismometros",
+     "pos": [
+      1.5,
+      1.55,
+      0.95
+     ],
+     "normal": [
+      0.6,
+      0,
+      0.8
+     ],
+     "titulo": "Seismometer",
+     "texto": "Die Seismometer, die neben mir zurückblieben, registrierten den Aufprall meiner oberen Hälfte auf das Tal."
+    },
+    {
+     "id": "ascenso",
+     "pos": [
+      0.15,
+      3.85,
+      1.05
+     ],
+     "normal": [
+      0.2,
+      0.6,
+      1
+     ],
+     "titulo": "Aufstiegsstufe",
+     "texto": "Meine obere Hälfte schlug absichtlich auf das Tal auf, damit die Seismometer den Aufprall registrierten."
     },
     {
      "id": "rover",
      "pos": [
-      0.84,
-      1.64,
-      1.46
+      0.0,
+      1.05,
+      0.62
      ],
      "normal": [
-      0.16,
-      -0.15,
+      0,
+      -0.2,
       1
      ],
      "titulo": "Der Rover",
      "texto": "Cernan und Schmitt durchquerten das Tal mit dem Rover und brachten die älteste Probe mit, die je vom Mond geholt wurde."
-    },
-    {
-     "id": "geologo",
-     "pos": [
-      0.0,
-      1.21,
-      1.22
-     ],
-     "normal": [
-      0.0,
-      -0.23,
-      1
-     ],
-     "titulo": "Ein Geologe an Bord",
-     "texto": "Erstmals bei den Apollo-Missionen war einer der beiden Aussteigenden ausgebildeter Geologe. Das veränderte, was gesammelt und wie es beschrieben wurde."
-    },
-    {
-     "id": "despedida",
-     "pos": [
-      0.2,
-      0.93,
-      1.4
-     ],
-     "normal": [
-      0.04,
-      -0.28,
-      1
-     ],
-     "titulo": "Der Abschied",
-     "texto": "Als sie gingen, wurde die Leiter, die sich auf mich stützte, nicht mehr benutzt. Seitdem hat niemand mehr den Mond betreten."
-    },
-    {
-     "id": "golpe",
-     "pos": [
-      0.09,
-      2.54,
-      1.53
-     ],
-     "normal": [
-      0.02,
-      0.0,
-      1
-     ],
-     "titulo": "Der absichtliche Einschlag",
-     "texto": "Meine obere Hälfte schlug absichtlich im Tal ein, damit die Seismometer den Einschlag registrierten."
-    },
-    {
-     "id": "tripulacion",
-     "pos": [
-      0.09,
-      3.61,
-      1.53
-     ],
-     "normal": [
-      0.02,
-      0.18,
-      1
-     ],
-     "titulo": "Cernan und Schmitt",
-     "texto": "Gene Cernan war der Kommandant und die letzte Person auf dem Mond; Harrison Schmitt, der Pilot der Mondfähre und Geologe."
     }
    ]
   },

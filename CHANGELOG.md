@@ -1,3 +1,8 @@
+## v3.9.1 — 2026-11-17
+
+- **Los puntos de los cuatro módulos lunares ya nombran piezas**, no momentos de la misión. Los del Apolo 12, 14, 16 y 17 decían cosas como «Fra Mauro», «La despedida» o «Cambio de plan» —textos de relato, como los del carrusel—. Ahora señalan la **etapa de descenso**, el **motor**, las **patas**, la **escalerilla**, los **instrumentos**, el **radar de aterrizaje**, los **paquetes de experimentos**, los **sismómetros** o el **rover**, con la explicación tomada de la ficha de cada aparato. Los seis del módulo lunar del Apolo 11 no se han tocado.
+- El modelo 3D de los cuatro es el mismo que el del módulo lunar del Apolo 11, así que las piezas se colocan en las mismas posiciones ya comprobadas; los puntos que sobran en cada aparato simplemente no se ponen (el Orion se queda con tres: no hay más piezas de las que hable su ficha).
+
 ## v3.9.0 — 2026-11-17
 
 - **El título de cada punto del 3D se enciende al pasar por el centro**: como el modelo gira solo, cada poco se mira en qué parte de la pantalla está cada punto y el que entra en la banda del **10 % central** muestra su título —«Etapa de descenso», «Retrorreflector láser», «Carolyn Porco»— encima de la gota. Se enciende uno solo, el más centrado, para que no se amontonen; al pulsarlo se abre la caja con la explicación, como antes.
