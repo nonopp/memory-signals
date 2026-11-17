@@ -1,3 +1,9 @@
+## v3.6.1 — 2026-11-17
+
+- **Imagen de vista previa para redes** (`img/og-memory-signals.jpg`, 1200 × 630 con el logotipo sobre el fondo #040d14): es la que se ve al compartir el enlace en WhatsApp, Telegram, X o Facebook. **No sustituye al logotipo de la cabecera**, que sigue siendo `logo-memory-signals.png`.
+- **Metadatos de compartición limpios**: había dos `og:title`, dos `og:description` y dos `og:type` duplicados; ahora hay un juego solo, con `og:url`, `og:site_name`, `og:locale`, dimensiones y texto alternativo de la imagen, más el juego completo de Twitter (`twitter:title`, `twitter:description`, `twitter:image`) y `<link rel="canonical">`.
+- **Meta descripción reescrita** con lo que la app ofrece de verdad: 22 aparatos, ficha, modelo 3D, fuentes verificables y tres idiomas.
+
 ## v3.6.0 — 2026-11-17
 
 - **Los puntos del mapa cambian de color**: el tono claro (casi blanco) se perdía sobre la cara iluminada de la Luna. Ahora van en **celeste con aro azul oscuro** en la Luna y en **rojo oscuro con aro claro** en Marte, y la onda del latido va en ese mismo color.
