@@ -1,3 +1,7 @@
+## v3.8.1 — 2026-11-17
+
+- **Los puntos se recolocan sobre los aparatos**: el reparto automático se hacía desde la caja envolvente de cada modelo, y en los que llevan mástiles o brazos largos —Voyager 1, Cassini, MESSENGER, Pioneer 10, Skylab— el centro de esa caja cae en el aire, así que algunos puntos quedaban flotando fuera de la figura. Ahora el centro y el tamaño salen de **los vértices reales del modelo** (media y percentiles 5–95 %, leídos tras descomprimir los GLB), de modo que el cuerpo del aparato manda y los salientes finos casi no cuentan; los cuatro modelos más tercos (Voyager 1, Pioneer 10 y Galileo) llevan además las coordenadas puestas a mano. Los 126 puntos se comprobaron uno a uno sobre la figura, con la misma cámara de la aplicación.
+
 ## v3.8.0 — 2026-11-17
 
 - **Puntos interactivos en los 21 aparatos restantes** (120 puntos nuevos, 5 o 6 por aparato, 126 en total con los seis del módulo lunar), en los tres idiomas: cada punto lleva un título corto y un texto de una o dos frases salido **solo de la ficha del propio aparato** —su resumen, sus tres hitos, su estado y las personas que aparecen en ella—, sin datos de fuera. Se colocan sobre el modelo en coordenadas del propio GLB, sacadas de su caja envolvente y, donde el mástil o los brazos largos descuadraban la caja, puestas a mano y comprobadas sobre la figura.
