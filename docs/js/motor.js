@@ -37,7 +37,12 @@
   }
 
   /* ---------- voz ---------- */
-  var vozES = null;
+  /* ---------- elección de la voz: fuera las roncas y las de broma ---------- */
+  /* Antes se cogía la PRIMERA voz del idioma que apareciera en la lista; en macOS y en iOS
+     eso suele ser «Albert», que suena ronco. Ahora se puntúan todas y se elige la mejor. */
+  var VOCES = {};          /* idioma → voz elegida */
+  var VOZ_RONCA = /albert|bad ?news|bahh|bells|boing|bubbles|cellos|deranged|fred|good ?news|hysterical|jester|organ|superstar|trinoids|whisper|wobble|zarvox|ralph|kathy|princess|junior|grandma|grandpa|rocko|shelley|sandy|flo|eddy|reed|grandmaster|novelty|pipe/i;
+  var VOZ_CLARA = /google|samantha|ava|allison|susan|serena|daniel|karen|moira|tessa|fiona|alex|tom|aria|zira|guy|jenny|sonia|libby|ryan|diego|m[oó]nica|paulina|marisol|jorge|helena|katja|anna|petra|conchita|luc[ií]a|valentina|elvira|estrella|sabina|am[ée]lie|audrey|natural|neural/i;
   /* saludo del objeto y aviso de inactividad: una vez por visita, y sin insistir si el visitante
      ha apagado la voz a mano */
   var mudoPorUsuario = false;
@@ -53,11 +58,30 @@
     if (window.MS_Idioma && window.MS_Idioma.t) return window.MS_Idioma.t(clave, datos);
     return '';
   }
+  function puntuaVoz(v, pre, exacto) {
+    var n = String(v.name || ''), l = String(v.lang || '').toLowerCase().replace(/_/g, '-');
+    if (VOZ_RONCA.test(n)) return -100;          /* voces roncas o de broma: nunca */
+    var s;
+    if (l === exacto) s = 6;                     /* el idioma exacto, por delante */
+    else if (l.indexOf(pre) === 0) s = 3;        /* mismo idioma, otra región */
+    else return -1;
+    if (VOZ_CLARA.test(n)) s += 5;               /* voces que suenan bien conocidas */
+    if (/natural|neural|premium|enhanced/i.test(n)) s += 4;
+    if (!v.localService) s += 2;                 /* las de red suenan mejor en casi todos los equipos */
+    if (/compact|eloquence|espeak/i.test(n)) s -= 3;
+    return s;
+  }
   function elegirVoz() {
     if (!('speechSynthesis' in window)) return;
-    var pre = idiomaActual();
     var voces = window.speechSynthesis.getVoices() || [];
-    vozES = voces.filter(function (v) { return String(v.lang || '').toLowerCase().indexOf(pre) === 0; })[0] || null;
+    Object.keys(LANG).forEach(function (idi) {
+      var mejor = null, mejorPuntos = 0;
+      voces.forEach(function (v) {
+        var pts = puntuaVoz(v, idi, String(LANG[idi]).toLowerCase());
+        if (pts > mejorPuntos) { mejorPuntos = pts; mejor = v; }
+      });
+      VOCES[idi] = mejor;   /* si no hay ninguna buena, se queda la del sistema */
+    });
   }
   function hablar(texto) {
     if (!estado.voz || !('speechSynthesis' in window) || !texto) return;
@@ -67,7 +91,8 @@
       u.lang = LANG[idiomaActual()] || 'es-ES';
       u.rate = 0.98;
       u.pitch = 1;
-      if (vozES) u.voice = vozES;
+      var v = VOCES[idiomaActual()];
+      if (v) u.voice = v;
       window.speechSynthesis.speak(u);
     } catch (e) {}
   }

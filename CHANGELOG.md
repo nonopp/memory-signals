@@ -1,3 +1,9 @@
+## v3.9.2 — 2026-11-17
+
+- **La voz ya no se elige a ciegas.** Antes se cogía la **primera** voz que apareciera en el idioma; en macOS y en iOS esa primera suele ser «Albert», que suena ronco y apagado — de ahí la sensación de afonía en inglés. Ahora se puntúan todas las voces del equipo y se elige la mejor: se descartan las roncas y las de broma (Albert, Fred, Zarvox, Whisper, Bells…), se prefieren las que suenan bien conocidas (Google, Samantha, Daniel, Serena, Zira, Sabina, Anna, Helena, Mónica, Diego…) y las «natural», «neural», «premium» o «enhanced», y en igualdad se prefiere la de red, que en casi todos los equipos suena mejor.
+- Cada idioma tiene su propia voz: español, inglés y alemán se eligen por separado y se vuelven a elegir al cambiar de idioma. Si en un equipo no hay ninguna voz aceptable, se deja la del sistema antes que poner una ronca.
+- Comprobado con las listas de voces típicas de macOS/iOS, Chrome, Android y Windows: donde antes salía «Albert» ahora sale Daniel en inglés, Diego en español y Anna en alemán.
+
 ## v3.9.1 — 2026-11-17
 
 - **Los puntos de los cuatro módulos lunares ya nombran piezas**, no momentos de la misión. Los del Apolo 12, 14, 16 y 17 decían cosas como «Fra Mauro», «La despedida» o «Cambio de plan» —textos de relato, como los del carrusel—. Ahora señalan la **etapa de descenso**, el **motor**, las **patas**, la **escalerilla**, los **instrumentos**, el **radar de aterrizaje**, los **paquetes de experimentos**, los **sismómetros** o el **rover**, con la explicación tomada de la ficha de cada aparato. Los seis del módulo lunar del Apolo 11 no se han tocado.
