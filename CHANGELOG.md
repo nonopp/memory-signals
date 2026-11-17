@@ -1,3 +1,7 @@
+## v3.7.2 — 2026-11-17
+
+- **El bocadillo del chat se traduce al cambiar de idioma**: si aún no se ha hablado, el saludo y las sugerencias se rehacen en el idioma nuevo. Si ya hay conversación, se respeta lo escrito y solo cambian los rótulos y las sugerencias. Antes el saludo se quedaba en el idioma anterior porque el propio saludo contaba como conversación.
+
 ## v3.7.1 — 2026-11-17
 
 - **El mapa enseña todos los nombres al abrirse**, durante 5 segundos, repartidos en tres alturas según su longitud para que se lean aunque los objetos estén amontonados. Después se apagan y vuelve el turno de los que el giro lleva al centro.

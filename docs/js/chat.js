@@ -455,6 +455,9 @@
     d.className = 'ms-burbuja-txt' + (clase ? ' ' + clase : '');
     d.innerHTML = html;
     cont.appendChild(d);
+    /* cualquier burbuja nueva cuenta como conversación empezada; saludar() vuelve a marcar
+       el saludo como tal después de escribirlo */
+    cont.setAttribute('data-saludo', '0');
     cont.scrollTop = cont.scrollHeight;
     /* avisa al motor: hay movimiento en el chat, así que no toca preguntar «¿sigues ahí?» */
     try { document.dispatchEvent(new CustomEvent('ms:chat')); } catch (e) {}
@@ -489,6 +492,8 @@
     }
     var saludo = modo.saludo || T('chat.saludo') || 'Pregúntame lo que quieras de mí: qué hice, quién me construyó o dónde estoy ahora.';
     burbuja('objeto', '<strong>' + escapar(nombre) + '</strong><br>' + escapar(saludo));
+    /* esto es solo el saludo, no una conversación: al cambiar de idioma se puede repetir */
+    cont.setAttribute('data-saludo', '1');
     actualizarSugerencias();
   }
 
@@ -983,7 +988,7 @@
     if (!actual) { mostrar(false); return; }
     mostrar(true);
     var cont = $('ms-mensajes');
-    var vacio = !cont || !cont.children.length;
+    var vacio = !cont || !cont.children.length || cont.getAttribute('data-saludo') === '1';
     /* si aún no se ha hablado, se vuelve a saludar en el idioma nuevo; si ya hay conversación, no se toca */
     if (vacio) { saludar(); } else { actualizarSugerencias(); }
   }
