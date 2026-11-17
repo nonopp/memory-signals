@@ -72,7 +72,25 @@ body.con-fondo .velo{opacity:1}
 .menu-destinos button[aria-current="true"]{background:rgba(255,255,255,.16);color:var(--texto);border-color:var(--borde)}
 .menu-destinos .punto-menu{width:8px;height:8px;border-radius:50%;background:var(--c);flex:0 0 auto}
 .punto{width:10px;height:10px;border-radius:50%;background:var(--acento);box-shadow:0 0 14px var(--acento)}
-.controles{display:flex;align-items:center;gap:10px}
+.controles{display:flex;align-items:center;gap:10px;position:relative}
+/* texto contextual del altavoz: aparece al pasar el ratón, no es un menú ni un diálogo */
+.ayuda-voz{
+  position:absolute;top:calc(100% + 12px);right:0;z-index:60;
+  width:min(20rem,calc(100vw - 32px));
+  background:rgba(8,14,26,.97);border:1px solid rgba(143,216,255,.34);border-radius:14px;
+  padding:12px 14px;box-shadow:0 18px 44px rgba(0,0,0,.6);
+  color:#dcecf6;font-size:.78rem;line-height:1.45;text-align:left;
+}
+.ayuda-voz::before{
+  content:'';position:absolute;top:-7px;right:20px;width:12px;height:12px;
+  background:rgba(8,14,26,.97);border-left:1px solid rgba(143,216,255,.34);
+  border-top:1px solid rgba(143,216,255,.34);transform:rotate(45deg);
+}
+.ayuda-voz p{margin:0 0 8px}
+.ayuda-voz p:last-child{margin-bottom:0}
+.ayuda-voz-titulo{font-weight:700;color:#8fd8ff;letter-spacing:.04em}
+.ayuda-voz-estado{font-size:.74rem;color:#a9c3cc}
+.ayuda-voz-estado.encendida{color:#63e0c8}
 .nivel{display:flex;background:rgba(255,255,255,.07);border:1px solid var(--borde);border-radius:999px;padding:3px}
 /* selector de idioma: misma forma que el conmutador de nivel, más estrecho */
 .idiomas{display:flex;background:rgba(255,255,255,.07);border:1px solid var(--borde);border-radius:999px;padding:3px;gap:2px}
@@ -721,6 +739,19 @@ code{background:rgba(255,255,255,.09);padding:2px 6px;border-radius:6px;font-siz
 .mapa-pin:not(.activo) .mapa-pin-punto{
   box-shadow:0 0 0 2px rgba(255,255,255,.55),0 0 12px rgba(99,224,200,.85)}
 .mapa-pin:not(.activo) .mapa-pin-etq{opacity:.62}
+/* En los globos el nombre se apaga y solo se enciende cuando el giro trae el punto al centro
+   de la cara visible: con ocho o diez objetos en la misma zona, todos los nombres a la vez
+   eran una maraña ilegible. Al pasar el ratón o con el tabulador se sigue viendo. */
+.mapa-destino:not(.es-espacio) .mapa-pin:not(.activo):not(.etq-cerca):not(:hover):not(:focus-visible) .mapa-pin-etq{opacity:0}
+.mapa-destino:not(.es-espacio) .mapa-pin.etq-cerca .mapa-pin-etq{opacity:1}
+/* si dos nombres coinciden en la ventana, solo se enciende el que no choca */
+.mapa-destino:not(.es-espacio) .mapa-pin.etq-tapada:not(.activo) .mapa-pin-etq{opacity:0}
+/* Color de los puntos por cuerpo: en blanco no se distinguían sobre la cara iluminada.
+   Luna en celeste con aro azul oscuro; Marte en rojo oscuro con aro claro para la cara en sombra. */
+.mapa-destino.cuerpo-luna .mapa-pin-punto{box-shadow:0 0 0 2px rgba(4,20,38,.85),0 0 12px rgba(87,199,255,.9)}
+.mapa-destino.cuerpo-luna .mapa-pin:not(.activo) .mapa-pin-punto::after{border-color:#57c7ff;box-shadow:0 0 10px rgba(87,199,255,.6)}
+.mapa-destino.cuerpo-marte .mapa-pin-punto{box-shadow:0 0 0 2px rgba(255,214,190,.85),0 0 12px rgba(160,31,18,.9)}
+.mapa-destino.cuerpo-marte .mapa-pin:not(.activo) .mapa-pin-punto::after{border-color:#b8362a;box-shadow:0 0 10px rgba(184,54,42,.65)}
 /* el nombre hacia el otro lado cuando el punto está pegado al borde derecho del mapa */
 .mapa-pin.etq-izquierda{flex-direction:row-reverse}
 .mapa-pin:not(.activo) .mapa-pin-punto::after{

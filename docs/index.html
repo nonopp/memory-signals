@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="es" data-i18n-doc-titulo="doc.titulo">
 <head>
-<script>window.__MSV = '3.5.6';</script>
+<script>window.__MSV = '3.6.0';</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Memory Signals · objetos abandonados de la NASA</title>
-<link rel="icon" type="image/png" sizes="64x64" href="img/favicon-64.png?v=3.5.6">
-<link rel="apple-touch-icon" href="img/apple-touch-icon.png?v=3.5.6">
+<link rel="icon" type="image/png" sizes="64x64" href="img/favicon-64.png?v=3.6.0">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png?v=3.6.0">
 <meta name="theme-color" content="#05070f">
 <meta property="og:title" content="Memory Signals">
 <meta property="og:description" content="Los aparatos abandonados de la NASA cuentan su historia en primera persona.">
@@ -18,7 +18,7 @@
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="datos/icono.svg" type="image/svg+xml">
-<link rel="stylesheet" href="css/estilo.css?v=3.5.6">
+<link rel="stylesheet" href="css/estilo.css?v=3.6.0">
 </head>
 <body>
 
@@ -36,8 +36,8 @@
 <header class="barra">
   <button type="button" class="marca" id="btn-inicio" title="Volver al inicio">
     <picture>
-      <source media="(max-width:620px)" srcset="img/logo-emblem.png?v=3.5.6">
-      <img class="marca-logo" src="img/logo-memory-signals.png?v=3.5.6"
+      <source media="(max-width:620px)" srcset="img/logo-emblem.png?v=3.6.0">
+      <img class="marca-logo" src="img/logo-memory-signals.png?v=3.6.0"
            alt="Memory Signals" width="1272" height="499">
     </picture>
   </button>
@@ -52,7 +52,12 @@
       <button type="button" id="btn-explorador" class="nivel-btn activo" aria-pressed="true" data-i18n="explorador">Explorador</button>
       <button type="button" id="btn-cientifico" class="nivel-btn" aria-pressed="false" data-i18n="cientifico">Científico</button>
     </div>
-    <button type="button" id="btn-voz" class="icono" aria-pressed="false" title="Activar o silenciar la voz" data-i18n-title="voz.titulo">🔇<span class="oculto">Voz</span></button>
+    <button type="button" id="btn-voz" class="icono" aria-pressed="false" title="Activar o silenciar la voz" data-i18n-title="voz.titulo" aria-describedby="ayuda-voz">🔇<span class="oculto">Voz</span></button>
+    <div class="ayuda-voz" id="ayuda-voz" role="tooltip" hidden>
+      <p class="ayuda-voz-titulo" data-i18n="voz.ayuda.titulo">La voz</p>
+      <p data-i18n="voz.ayuda.texto">Lee en voz alta lo que dice el astronauta en cada pantalla. Usa la voz del navegador: no hay que instalar ni descargar nada.</p>
+      <p class="ayuda-voz-estado" id="ayuda-voz-estado"></p>
+    </div>
     <a class="btn-participa" href="participa.html" title="Propón un objeto olvidado y aporta material" data-i18n-title="participa.titulo">
       <span aria-hidden="true">＋</span> <span data-i18n="participa">Participa</span><span class="oculto" data-i18n="participa.oculto"> · propón un objeto olvidado</span>
     </a>
@@ -220,12 +225,13 @@
   </div>
 </div>
 
-<script src="js/idioma.js?v=3.5.6"></script>
-<script src="js/escena.js?v=3.5.6"></script>
-<script src="js/visor3d.js?v=3.5.6"></script>
-<script src="js/mapa.js?v=3.5.6"></script>
-<script src="js/hitos.js?v=3.5.6"></script>
-<script src="js/chat.js?v=3.5.6"></script>
-<script src="js/motor.js?v=3.5.6"></script>
+<script src="js/idioma.js?v=3.6.0"></script>
+<script src="js/escena.js?v=3.6.0"></script>
+<script src="js/visor3d.js?v=3.6.0"></script>
+<script src="js/mapa.js?v=3.6.0"></script>
+<script src="js/hitos.js?v=3.6.0"></script>
+<script src="js/chat.js?v=3.6.0"></script>
+<script src="js/motor.js?v=3.6.0"></script>
+<script src="js/ayuda-voz.js?v=3.6.0"></script>
 </body>
 </html>

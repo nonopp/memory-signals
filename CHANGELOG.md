@@ -1,3 +1,9 @@
+## v3.6.0 — 2026-11-17
+
+- **Los puntos del mapa cambian de color**: el tono claro (casi blanco) se perdía sobre la cara iluminada de la Luna. Ahora van en **celeste con aro azul oscuro** en la Luna y en **rojo oscuro con aro claro** en Marte, y la onda del latido va en ese mismo color.
+- **El nombre de cada objeto solo se enciende cuando el giro lo trae al centro** de la cara visible. En la Luna se enciende al llegar al centro y dura 2 s; en Marte empieza 1 s antes y se apaga 1 s después. Con los objetos nuevos amontonados en la misma zona, los nombres a la vez eran una maraña ilegible. Al pasar el ratón o al llegar con el tabulador se sigue viendo, y si dos coinciden en el centro solo se enciende uno.
+- **Texto contextual del altavoz**: al pasar el ratón sobre el icono de la voz sale una explicación de lo que hace —lee en alto lo que dice el astronauta, usa la voz del navegador, los subtítulos siguen visibles— y en qué estado está ahora mismo. Se traduce al cambiar de idioma, incluso con el texto abierto. En pantalla táctil, el toque sigue encendiendo o apagando la voz y deja la explicación cuatro segundos.
+
 ## v3.5.6 — 2026-11-16
 
 - **Infografía española del módulo lunar, traducida de la inglesa corregida** con un pliego de 44 cadenas cerradas: cabecera, seis paneles y las diez etiquetas de la barra de datos. Números a la española (15.103 · 2.445 · 8.248 · 6,65 m³ · 45.000 N · 21,55 kg · 0,67416° N), «Apolo» por «Apollo» y ningún rover: el panel 5 lleva la antena de radar y el ordenador.

@@ -18,6 +18,15 @@
   }
   var quieto = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+  /* Color de los puntos en cada globo. En blanco no se distinguían sobre la cara iluminada. */
+  var PALETA = { luna: '#57c7ff', marte: '#a01f12' };
+  /* Ventana en la que se enciende el nombre, en radianes de giro: el globo gira a 0,04 rad/s
+     (0,0016 cada 40 ms), así que 0,08 rad = 2 s y 0,04 rad = 1 s. */
+  var VENTANA = {
+    luna: { antes: 0.005, despues: 0.08 },  /* al llegar al centro: 2 s */
+    marte: { antes: 0.04, despues: 0.04 }   /* 1 s antes del centro y 1 s después */
+  };
+
   function crear() {
     if (caja) return;
     caja = document.createElement('aside');
@@ -163,7 +172,8 @@
       var b = document.createElement('button');
       b.type = 'button';
       b.className = 'mapa-pin' + (actual && a.id === actual.id ? ' activo' : '');
-      b.style.setProperty('--c', a.color || '#63e0c8');
+      var c = tipo();
+      b.style.setProperty('--c', c === 'espacio' ? (a.color || '#63e0c8') : (PALETA[c] || '#63e0c8'));
       /* desfase del latido: el índice del aparato, para que no vayan todos a la vez */
       b.style.setProperty('--retardo', ((i % 5) * 0.52).toFixed(2) + 's');
       b.setAttribute('aria-label', 'Ir a ' + a.nombre);
@@ -249,6 +259,12 @@
          el borde derecho de la caja, y eso se compensa en el translate. */
       b.el.classList.toggle('etq-izquierda', p.x > t.w * 0.62);
       b.el.style.transform = 'translate(' + (p.x > t.w * 0.62 ? '-100%' : '-50%') + ',-50%) scale(' + (0.8 + 0.25 * p.z) + ')';
+      /* El nombre solo se enciende cuando el giro trae el punto al centro de la cara visible.
+         Con ocho o diez objetos en la misma zona, los nombres a la vez eran una maraña. */
+      var v = VENTANA[tipo()] || VENTANA.luna;
+      var lo = (b.a.mapa.lon * Math.PI / 180) + rot;
+      lo = Math.atan2(Math.sin(lo), Math.cos(lo));
+      b.el.classList.toggle('etq-cerca', p.z > 0 && lo >= -v.antes && lo <= v.despues);
       visibles.push({ el: b.el, x: p.x, y: p.y, z: p.z, activo: b.el.classList.contains('activo') });
     });
     reparteEtiquetas(visibles);
@@ -274,6 +290,8 @@
     caja.style.display = '';
     var c = tipo();
     caja.classList.toggle('es-espacio', c === 'espacio');
+    caja.classList.toggle('cuerpo-luna', c === 'luna');
+    caja.classList.toggle('cuerpo-marte', c === 'marte');
     if (titulo) {
       titulo.textContent = c === 'luna' ? (T('mapa.luna') || 'El mapa de la Luna')
         : c === 'marte' ? (T('mapa.marte') || 'El mapa de Marte') : (T('mapa.espacio') || 'Hacia fuera del sistema solar');
