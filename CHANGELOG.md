@@ -1,3 +1,10 @@
+## v3.9.0 — 2026-11-17
+
+- **El título de cada punto del 3D se enciende al pasar por el centro**: como el modelo gira solo, cada poco se mira en qué parte de la pantalla está cada punto y el que entra en la banda del **10 % central** muestra su título —«Etapa de descenso», «Retrorreflector láser», «Carolyn Porco»— encima de la gota. Se enciende uno solo, el más centrado, para que no se amontonen; al pulsarlo se abre la caja con la explicación, como antes.
+- **El título también sale al pasar el ratón** por encima del punto, y al llegar con el tabulador: no hace falta esperar a que el giro lo traiga al centro. El punto encendido se pone por delante para que su título no quede tapado por los vecinos.
+- **En los mapas el nombre se enciende igual al acercar el ratón**, sin necesidad de que el giro lleve el objeto al centro, y ahora **el propio nombre se puede pulsar**: el blanco del ratón pasa de 9 a 14 px alrededor del punto y la etiqueta, cuando está a la vista, también recibe el clic.
+- **Puntos del Voyager 1 y del Galileo recolocados**: sus modelos llevan el cuerpo en una zona y los mástiles muy largos en otra, y los puntos caían sobre el mástil. Ahora se colocan con una **rejilla de densidad de vértices** que dice dónde hay geometría de verdad: en el Voyager 1 sobre el cuerpo y el plato (z negativa), y en el Galileo sobre la esfera, el brazo y el mástil.
+
 ## v3.8.3 — 2026-11-17
 
 - **La página ya no se queda en una versión vieja**: si el navegador guardó `index.html` en caché y el servidor tiene otra versión, la propia página pregunta por `VERSION` al cargarse y, si no coincide con la suya, se recarga una sola vez con un parámetro nuevo. Antes había que forzar la recarga a mano: quien tuviera la aplicación abierta desde antes seguía viendo el menú y la cabecera antiguos aunque lo publicado ya fuera lo nuevo.

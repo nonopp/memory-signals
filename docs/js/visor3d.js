@@ -77,9 +77,60 @@
       gota.className = 'punto-3d-gota';
       gota.setAttribute('aria-hidden', 'true');
       b.appendChild(gota);
+      /* el título de la pieza, que se enciende al pasar por el centro y al pasar el ratón */
+      var etq = document.createElement('span');
+      etq.className = 'punto-3d-etq';
+      etq.setAttribute('aria-hidden', 'true');
+      etq.textContent = p.titulo;
+      b.appendChild(etq);
       b.addEventListener('click', function (ev) { ev.stopPropagation(); abrirFicha(p); });
       mv.appendChild(b);
     });
+    if (lista.length) { bucleCentro(); }
+  }
+
+  /* ---------- el título del punto que pasa por el centro ----------
+     El modelo gira solo, así que cada poco se mira en qué punto de la pantalla está cada
+     punto: el que entra en la banda del 10 % central enciende su título, los demás lo apagan.
+     Se enciende uno solo —el más centrado—, como en los mapas, para que no se amontonen. */
+  var vigilando = false;
+  function vigilarCentro() {
+    var mv = document.getElementById('mv-objeto');
+    if (!mv) { return; }
+    var puntos = mv.querySelectorAll('.punto-3d');
+    if (!puntos.length) { return; }
+    var caja = mv.getBoundingClientRect();
+    if (!caja.width) { return; }
+    var centro = caja.left + caja.width / 2;
+    var banda = caja.width * 0.10;
+    var mejor = null;
+    var menor = Infinity;
+    for (var i = 0; i < puntos.length; i++) {
+      var r = puntos[i].getBoundingClientRect();
+      if (!r.width && !r.height) { continue; }          // punto escondido tras el modelo
+      var x = r.left + r.width / 2;
+      var d = Math.abs(x - centro);
+      if (d <= banda && d < menor) { menor = d; mejor = puntos[i]; }
+    }
+    for (var j = 0; j < puntos.length; j++) {
+      puntos[j].classList.toggle('cerca', puntos[j] === mejor);
+    }
+  }
+  function bucleCentro() {
+    if (vigilando) { return; }
+    vigilando = true;
+    var ultima = 0;
+    function paso() {
+      var pantalla = document.getElementById('p-objeto');
+      if (!pantalla || !pantalla.classList.contains('activa')) {
+        vigilando = false;
+        return;                                        // fuera de la ficha: se para el bucle
+      }
+      var ahora = Date.now();
+      if (ahora - ultima > 90) { ultima = ahora; vigilarCentro(); }
+      requestAnimationFrame(paso);
+    }
+    requestAnimationFrame(paso);
   }
 
   function pintar(a) {

@@ -520,6 +520,25 @@ code{background:rgba(255,255,255,.09);padding:2px 6px;border-radius:6px;font-siz
 .punto-3d:hover .punto-3d-gota,.punto-3d:focus-visible .punto-3d-gota{
   box-shadow:0 0 0 3px rgba(255,255,255,.5),0 0 22px rgba(87,199,255,1);
 }
+/* el título de la pieza: se enciende cuando el giro trae el punto a la banda central
+   de la pantalla, y también al pasar el ratón o al llegar con el tabulador */
+.punto-3d-etq{
+  position:absolute;left:50%;bottom:calc(100% - 1px);transform:translateX(-50%);
+  white-space:nowrap;max-width:200px;overflow:hidden;text-overflow:ellipsis;
+  font-size:.7rem;font-weight:600;line-height:1.25;letter-spacing:.01em;color:#f2f9ff;
+  background:rgba(4,10,20,.96);border:1px solid rgba(143,216,255,.55);
+  border-radius:999px;padding:4px 11px;pointer-events:none;
+  box-shadow:0 8px 22px rgba(0,0,0,.75),0 0 0 1px rgba(0,0,0,.35);
+  opacity:0;transition:opacity .18s ease;
+}
+.punto-3d.cerca .punto-3d-etq,.punto-3d:hover .punto-3d-etq,.punto-3d:focus-visible .punto-3d-etq{
+  opacity:1;
+}
+.punto-3d.cerca .punto-3d-gota{
+  box-shadow:0 0 0 3px rgba(255,255,255,.45),0 0 24px rgba(87,199,255,1);
+}
+/* el punto encendido va por delante: con varios puntos juntos, su título no queda tapado */
+.punto-3d.cerca,.punto-3d:hover,.punto-3d:focus-visible{z-index:4}
 .punto-3d:hover .punto-3d-gota::after,.punto-3d:focus-visible .punto-3d-gota::after{
   animation-duration:.85s;
 }
@@ -799,7 +818,9 @@ code{background:rgba(255,255,255,.09);padding:2px 6px;border-radius:6px;font-siz
 /* el punto lleva aro blanco y la onda va en el verde de la interfaz: en Marte no hay nada de ese
    color, así que no se confunde con un cráter. El nombre se ve siempre, tenue. */
 /* zona de pulsación alrededor del punto (el nombre no recibe clics, para no tapar al vecino) */
-.mapa-pin-punto::before{content:'';position:absolute;inset:-9px;border-radius:50%;pointer-events:auto}
+.mapa-pin-punto::before{content:'';position:absolute;inset:-14px;border-radius:50%;pointer-events:auto}
+/* cuando el nombre está a la vista también se puede pulsar: sirve de blanco para el ratón */
+.mapa-pin:hover .mapa-pin-etq,.mapa-pin.etq-cerca .mapa-pin-etq,.mapa-pin.activo .mapa-pin-etq{pointer-events:auto;cursor:pointer}
 .mapa-pin:not(.activo) .mapa-pin-punto{
   box-shadow:0 0 0 2px rgba(255,255,255,.55),0 0 12px rgba(99,224,200,.85)}
 .mapa-pin:not(.activo) .mapa-pin-etq{opacity:.62}
