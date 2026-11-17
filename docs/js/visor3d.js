@@ -42,6 +42,46 @@
       .catch(function () { mapa = {}; return mapa; });
   }
 
+  /* ---------- puntos interactivos sobre el modelo ---------- */
+  var ficha = null;
+  function cerrarFicha() {
+    if (!ficha) ficha = document.getElementById('punto-ficha');
+    if (ficha) ficha.hidden = true;
+  }
+  function abrirFicha(p) {
+    if (!ficha) ficha = document.getElementById('punto-ficha');
+    if (!ficha) return;
+    ficha.querySelector('.punto-ficha-titulo').textContent = p.titulo;
+    ficha.querySelector('.punto-ficha-texto').textContent = p.texto;
+    ficha.hidden = false;
+  }
+  /* Los puntos viven en el propio modelo (slots de model-viewer): la librería los pega a una
+     coordenada en 3D y los trae y los lleva con el giro. Solo se ponen si el objeto los trae
+     en datos/contenido.json; si no, el visor se queda como estaba. */
+  function ponerPuntos(mv, a) {
+    Array.prototype.slice.call(mv.querySelectorAll('[slot^="hotspot"]')).forEach(function (n) {
+      n.parentNode.removeChild(n);
+    });
+    cerrarFicha();
+    var lista = (a && a.puntos3d) || [];
+    lista.forEach(function (p, i) {
+      var b = document.createElement('button');
+      b.type = 'button';
+      b.className = 'punto-3d';
+      b.setAttribute('slot', 'hotspot-' + i);
+      b.setAttribute('data-position', p.pos.join(' '));
+      if (p.normal) { b.setAttribute('data-normal', p.normal.join(' ')); }
+      b.setAttribute('aria-label', p.titulo + '. ' + p.texto);
+      b.title = p.titulo;
+      var gota = document.createElement('span');
+      gota.className = 'punto-3d-gota';
+      gota.setAttribute('aria-hidden', 'true');
+      b.appendChild(gota);
+      b.addEventListener('click', function (ev) { ev.stopPropagation(); abrirFicha(p); });
+      mv.appendChild(b);
+    });
+  }
+
   function pintar(a) {
     var mv = document.getElementById('mv-objeto');
     var sin = document.getElementById('visor-sinmodelo');
@@ -86,20 +126,29 @@
       cred.style.display = '';
       cred.textContent = T('visor.modeloCredito') + ' 3D Resources' + (nombreModelo(e) ? ' · ' + nombreModelo(e) : '');
       mv.setAttribute('alt', T('visor.modeloAlt', { objeto: a.nombre }));
+      mv.setAttribute('data-cuerpo', String(a.cuerpo || '').toLowerCase());
       if (mv.getAttribute('src') !== e.glb) mv.setAttribute('src', e.glb);
       try { mv.autoRotate = girando; } catch (err) {}
+      ponerPuntos(mv, a);
     });
   }
 
   function conectarBoton() {
     var b = document.getElementById('visor-girar');
     var mv = document.getElementById('mv-objeto');
-    if (!b || !mv) return;
-    b.addEventListener('click', function () {
-      girando = !girando;
-      b.setAttribute('aria-pressed', girando ? 'true' : 'false');
-      b.style.opacity = girando ? '1' : '.55';
-      try { mv.autoRotate = girando; } catch (err) {}
+    if (b && mv) {
+      b.addEventListener('click', function () {
+        girando = !girando;
+        b.setAttribute('aria-pressed', girando ? 'true' : 'false');
+        b.style.opacity = girando ? '1' : '.55';
+        try { mv.autoRotate = girando; } catch (err) {}
+      });
+    }
+    /* la ficha del punto se cierra con su aspa o con Escape */
+    var cerrar = document.getElementById('punto-ficha-cerrar');
+    if (cerrar) { cerrar.addEventListener('click', cerrarFicha); }
+    document.addEventListener('keydown', function (ev) {
+      if (ev.key === 'Escape') cerrarFicha();
     });
   }
 

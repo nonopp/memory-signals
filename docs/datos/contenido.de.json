@@ -609,7 +609,99 @@
      "fuente": "The Velcro Companies (velcro.com) · swissinfo — Velcro: how the space race helped a Swiss invention catch on"
     }
    ],
-   "nombre_mapa": "Apollo 11"
+   "nombre_mapa": "Apollo 11",
+   "puntos3d": [
+    {
+     "id": "ascenso",
+     "pos": [
+      0.15,
+      3.85,
+      1.05
+     ],
+     "normal": [
+      0.2,
+      0.6,
+      1
+     ],
+     "titulo": "Aufstiegsstufe",
+     "texto": "Die Kabine, in der Armstrong und Aldrin saßen: 6,65 m³ für zwei Personen. Von hier starteten sie, um Columbia im Orbit zu erreichen."
+    },
+    {
+     "id": "descenso",
+     "pos": [
+      -1.75,
+      1.9,
+      1.15
+     ],
+     "normal": [
+      -0.8,
+      0,
+      0.6
+     ],
+     "titulo": "Abstiegsstufe",
+     "texto": "Die Hälfte, die auf dem Mond blieb. Sie trug 8.248 kg Treibstoff für das Bremsmanöver und diente als Startplattform."
+    },
+    {
+     "id": "motor",
+     "pos": [
+      0.0,
+      1.05,
+      0.62
+     ],
+     "normal": [
+      0,
+      -0.2,
+      1
+     ],
+     "titulo": "Abstiegstriebwerk",
+     "texto": "Das Haupttriebwerk mit 45.000 N. Es bremste die Fähre aus dem Orbit und setzte sie am 20. Juli 1969 um 20:17:40 UT im Mare Tranquillitatis ab."
+    },
+    {
+     "id": "lrrr",
+     "pos": [
+      1.5,
+      1.55,
+      0.95
+     ],
+     "normal": [
+      0.6,
+      0,
+      0.8
+     ],
+     "titulo": "Laser-Reflektor",
+     "texto": "Eine Anordnung aus Eckwürfeln, die den Laser genau so zurückwirft, wie er ankommt. Observatorien messen damit noch heute die Entfernung zum Mond."
+    },
+    {
+     "id": "antena",
+     "pos": [
+      0.5,
+      4.45,
+      0.1
+     ],
+     "normal": [
+      0.3,
+      0.9,
+      0.3
+     ],
+     "titulo": "Antennen",
+     "texto": "Das Rendezvous-Radar und die Hochgewinnantenne, über die Stimme und Telemetrie in beide Richtungen liefen."
+    },
+    {
+     "id": "escalerilla",
+     "pos": [
+      0.35,
+      0.75,
+      0.85
+     ],
+     "normal": [
+      0,
+      -0.1,
+      1
+     ],
+     "titulo": "Leiter und Beine",
+     "texto": "Neun Sprossen zum Aussteigen. Apollo 11 hatte keinen Rover: Armstrong und Aldrin gingen zu Fuß und entfernten sich nie mehr als etwa 60 Meter."
+    }
+   ]
   },
   {
    "id": "near-shoemaker",

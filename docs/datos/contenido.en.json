@@ -609,7 +609,99 @@
      "fuente": "The Velcro Companies (velcro.com) · swissinfo — Velcro: how the space race helped a Swiss invention catch on"
     }
    ],
-   "nombre_mapa": "Apollo 11"
+   "nombre_mapa": "Apollo 11",
+   "puntos3d": [
+    {
+     "id": "ascenso",
+     "pos": [
+      0.15,
+      3.85,
+      1.05
+     ],
+     "normal": [
+      0.2,
+      0.6,
+      1
+     ],
+     "titulo": "Ascent stage",
+     "texto": "The cabin where Armstrong and Aldrin rode: 6.65 m³ for two people. From here they lifted off to rejoin Columbia in orbit."
+    },
+    {
+     "id": "descenso",
+     "pos": [
+      -1.75,
+      1.9,
+      1.15
+     ],
+     "normal": [
+      -0.8,
+      0,
+      0.6
+     ],
+     "titulo": "Descent stage",
+     "texto": "The half that stayed on the Moon. It carried 8,248 kg of propellant for the final braking and served as the launch platform."
+    },
+    {
+     "id": "motor",
+     "pos": [
+      0.0,
+      1.05,
+      0.62
+     ],
+     "normal": [
+      0,
+      -0.2,
+      1
+     ],
+     "titulo": "Descent engine",
+     "texto": "The main engine, 45,000 N. It slowed the module from orbit and set it down in the Sea of Tranquility on 20 July 1969 at 20:17:40 UT."
+    },
+    {
+     "id": "lrrr",
+     "pos": [
+      1.5,
+      1.55,
+      0.95
+     ],
+     "normal": [
+      0.6,
+      0,
+      0.8
+     ],
+     "titulo": "Laser retroreflector",
+     "texto": "An array of corner cubes that returns the laser exactly as it arrives. Observatories still use it to measure the distance to the Moon."
+    },
+    {
+     "id": "antena",
+     "pos": [
+      0.5,
+      4.45,
+      0.1
+     ],
+     "normal": [
+      0.3,
+      0.9,
+      0.3
+     ],
+     "titulo": "Antennas",
+     "texto": "The rendezvous radar and the high-gain antenna, which carried voice and telemetry both ways."
+    },
+    {
+     "id": "escalerilla",
+     "pos": [
+      0.35,
+      0.75,
+      0.85
+     ],
+     "normal": [
+      0,
+      -0.1,
+      1
+     ],
+     "titulo": "Ladder and legs",
+     "texto": "Nine rungs to climb down. Apollo 11 carried no rover: Armstrong and Aldrin walked and never went more than about 60 metres from the module."
+    }
+   ]
   },
   {
    "id": "near-shoemaker",

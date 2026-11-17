@@ -609,7 +609,99 @@
      "fuente": "The Velcro Companies (velcro.com) · swissinfo — Velcro: how the space race helped a Swiss invention catch on"
     }
    ],
-   "nombre_mapa": "Apolo 11"
+   "nombre_mapa": "Apolo 11",
+   "puntos3d": [
+    {
+     "id": "ascenso",
+     "pos": [
+      0.15,
+      3.85,
+      1.05
+     ],
+     "normal": [
+      0.2,
+      0.6,
+      1
+     ],
+     "titulo": "Módulo de ascenso",
+     "texto": "La cabina donde iban Armstrong y Aldrin: 6,65 m³ para dos personas. Desde aquí despegaron para volver al Columbia en órbita."
+    },
+    {
+     "id": "descenso",
+     "pos": [
+      -1.75,
+      1.9,
+      1.15
+     ],
+     "normal": [
+      -0.8,
+      0,
+      0.6
+     ],
+     "titulo": "Etapa de descenso",
+     "texto": "La mitad que se quedó en la Luna. Llevaba 8.248 kg de propelente para el frenado final y sirvió de plataforma de lanzamiento."
+    },
+    {
+     "id": "motor",
+     "pos": [
+      0.0,
+      1.05,
+      0.62
+     ],
+     "normal": [
+      0,
+      -0.2,
+      1
+     ],
+     "titulo": "Motor de descenso",
+     "texto": "El motor principal, de 45.000 N. Frenó el módulo desde la órbita y lo posó en el Mar de la Tranquilidad el 20 de julio de 1969, a las 20:17:40 UT."
+    },
+    {
+     "id": "lrrr",
+     "pos": [
+      1.5,
+      1.55,
+      0.95
+     ],
+     "normal": [
+      0.6,
+      0,
+      0.8
+     ],
+     "titulo": "Retrorreflector láser",
+     "texto": "Una matriz de esquinas que devuelve el láser tal como llega. Los observatorios siguen midiendo con ella la distancia a la Luna."
+    },
+    {
+     "id": "antena",
+     "pos": [
+      0.5,
+      4.45,
+      0.1
+     ],
+     "normal": [
+      0.3,
+      0.9,
+      0.3
+     ],
+     "titulo": "Antenas",
+     "texto": "El radar de encuentro con el Columbia y la antena de alta ganancia, que traían y llevaban la voz y la telemetría."
+    },
+    {
+     "id": "escalerilla",
+     "pos": [
+      0.35,
+      0.75,
+      0.85
+     ],
+     "normal": [
+      0,
+      -0.1,
+      1
+     ],
+     "titulo": "Escalerilla y patas",
+     "texto": "Nueve peldaños para bajar del módulo. El Apolo 11 no llevó rover: Armstrong y Aldrin se movieron a pie y no se alejaron más de unos 60 metros."
+    }
+   ]
   },
   {
    "id": "near-shoemaker",

@@ -1,3 +1,9 @@
+## v3.7.0 — 2026-11-17
+
+- **Puntos interactivos en el modelo 3D**, como los del mapa: en el módulo lunar del Apolo 11 hay seis puntos celestes que laten y se mueven con el giro del modelo; al tocarlos se abre una ficha con el nombre de la pieza y una explicación corta. Son la cabina de ascenso, la etapa de descenso, el motor, el retrorreflector láser, las antenas y la escalerilla (con el dato de que el Apolo 11 no llevó rover y no se alejaron más de 60 m).
+- El contenido de cada punto vive en `datos/contenido.json` (y sus versiones en inglés y alemán), en el campo `puntos3d` del aparato: posición y normal en coordenadas del modelo, título y texto. Un aparato sin ese campo se queda como estaba, sin puntos.
+- La ficha se cierra con su aspa, con Escape o al cambiar de objeto, y **se traduce al cambiar de idioma** igual que el resto de la ficha. En Marte los puntos saldrán en el rojo oscuro del mapa.
+
 ## v3.6.1 — 2026-11-17
 
 - **Imagen de vista previa para redes** (`img/og-memory-signals.jpg`, 1200 × 630 con el logotipo sobre el fondo #040d14): es la que se ve al compartir el enlace en WhatsApp, Telegram, X o Facebook. **No sustituye al logotipo de la cabecera**, que sigue siendo `logo-memory-signals.png`.

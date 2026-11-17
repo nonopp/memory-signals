@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="es" data-i18n-doc-titulo="doc.titulo">
 <head>
-<script>window.__MSV = '3.6.1';</script>
+<script>window.__MSV = '3.7.0';</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Memory Signals · objetos abandonados de la NASA</title>
-<link rel="icon" type="image/png" sizes="64x64" href="img/favicon-64.png?v=3.6.1">
-<link rel="apple-touch-icon" href="img/apple-touch-icon.png?v=3.6.1">
+<link rel="icon" type="image/png" sizes="64x64" href="img/favicon-64.png?v=3.7.0">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png?v=3.7.0">
 <meta name="theme-color" content="#05070f">
 <meta name="description" content="Viaja a la Luna, Marte y el espacio profundo para conversar con los aparatos que la NASA dejó allí: 22 objetos abandonados con ficha, modelo 3D, fuentes verificables y chat en tres idiomas. Proyecto del NASA Space Apps Challenge 2026.">
 <link rel="canonical" href="https://nasa.gesemweb.es/app/">
@@ -27,7 +27,7 @@
 <meta name="twitter:description" content="Conversa con el hardware que la NASA dejó en la Luna y en Marte: 22 aparatos con ficha, modelo 3D y fuentes verificables.">
 <meta name="twitter:image" content="https://nasa.gesemweb.es/app/img/og-memory-signals.jpg">
 <link rel="icon" href="datos/icono.svg" type="image/svg+xml">
-<link rel="stylesheet" href="css/estilo.css?v=3.6.1">
+<link rel="stylesheet" href="css/estilo.css?v=3.7.0">
 </head>
 <body>
 
@@ -45,8 +45,8 @@
 <header class="barra">
   <button type="button" class="marca" id="btn-inicio" title="Volver al inicio">
     <picture>
-      <source media="(max-width:620px)" srcset="img/logo-emblem.png?v=3.6.1">
-      <img class="marca-logo" src="img/logo-memory-signals.png?v=3.6.1"
+      <source media="(max-width:620px)" srcset="img/logo-emblem.png?v=3.7.0">
+      <img class="marca-logo" src="img/logo-memory-signals.png?v=3.7.0"
            alt="Memory Signals" width="1272" height="499">
     </picture>
   </button>
@@ -149,6 +149,11 @@
                   <p><span class="sin-modelo-texto">Sin modelo 3D oficial de la NASA para este aparato.</span><br><span class="tenue">La NASA solo publica modelos de algunos objetos.</span></p>
                 </div>
                 <button type="button" class="visor-girar" id="visor-girar" aria-pressed="true" title="Parar o reanudar el giro">⟳</button>
+                <div class="punto-ficha" id="punto-ficha" hidden>
+                  <button type="button" class="punto-ficha-cerrar" id="punto-ficha-cerrar" aria-label="Cerrar"><span aria-hidden="true">×</span></button>
+                  <p class="punto-ficha-titulo"></p>
+                  <p class="punto-ficha-texto"></p>
+                </div>
                 <span class="visor-credito" id="visor-credito"></span>
               </div>
         <!-- los hitos del aparato, en bocadillo: habla él -->
@@ -234,13 +239,13 @@
   </div>
 </div>
 
-<script src="js/idioma.js?v=3.6.1"></script>
-<script src="js/escena.js?v=3.6.1"></script>
-<script src="js/visor3d.js?v=3.6.1"></script>
-<script src="js/mapa.js?v=3.6.1"></script>
-<script src="js/hitos.js?v=3.6.1"></script>
-<script src="js/chat.js?v=3.6.1"></script>
-<script src="js/motor.js?v=3.6.1"></script>
-<script src="js/ayuda-voz.js?v=3.6.1"></script>
+<script src="js/idioma.js?v=3.7.0"></script>
+<script src="js/escena.js?v=3.7.0"></script>
+<script src="js/visor3d.js?v=3.7.0"></script>
+<script src="js/mapa.js?v=3.7.0"></script>
+<script src="js/hitos.js?v=3.7.0"></script>
+<script src="js/chat.js?v=3.7.0"></script>
+<script src="js/motor.js?v=3.7.0"></script>
+<script src="js/ayuda-voz.js?v=3.7.0"></script>
 </body>
 </html>
