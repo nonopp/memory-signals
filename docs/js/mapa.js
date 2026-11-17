@@ -21,11 +21,16 @@
   /* Color de los puntos en cada globo. En blanco no se distinguían sobre la cara iluminada. */
   var PALETA = { luna: '#57c7ff', marte: '#a01f12' };
   /* Ventana en la que se enciende el nombre, en radianes de giro: el globo gira a 0,04 rad/s
-     (0,0016 cada 40 ms), así que 0,08 rad = 2 s y 0,04 rad = 1 s. */
+     (0,0016 cada 40 ms), así que 0,2 rad = 5 s y 0,04 rad = 1 s. */
   var VENTANA = {
-    luna: { antes: 0.005, despues: 0.08 },  /* al llegar al centro: 2 s */
-    marte: { antes: 0.04, despues: 0.04 }   /* 1 s antes del centro y 1 s después */
+    luna: { antes: 0.005, despues: 0.2 },   /* al llegar al centro: 5 s */
+    marte: { antes: 0.04, despues: 0.16 }   /* 1 s antes del centro y 4 s después (5 s en total) */
   };
+  /* Al abrir el mapa se enseñan todos los nombres 5 s, para ver de un vistazo qué hay.
+     Después se apagan y solo se encienden los que el giro va llevando al centro. */
+  var REVELADO = 5000;
+  var revelarHasta = 0;
+  var relojRevelado = null;
 
   function crear() {
     if (caja) return;
@@ -196,16 +201,34 @@
      caben en un puño, y en el cielo profundo se alinean doce). Se coloca primero el nombre del
      objeto abierto y después los demás de delante hacia atrás; el que choca con uno ya puesto se
      queda sin nombre hasta que se pasa el ratón por encima. */
-  function reparteEtiquetas(visibles) {
+  function reparteEtiquetas(visibles, revelando) {
     var puestos = [];
-    visibles.sort(function (x, y) { return (y.activo ? 1 : 0) - (x.activo ? 1 : 0) || y.z - x.z; })
-      .forEach(function (v) {
+    /* en el revelado el orden va por longitud: es fijo y no cambia con el giro, así los nombres
+       no bailan de sitio en cada fotograma mientras el globo da vueltas */
+    if (revelando) {
+      visibles.sort(function (x, y) { return (x.lon || 0) - (y.lon || 0); });
+    } else {
+      visibles.sort(function (x, y) { return (y.activo ? 1 : 0) - (x.activo ? 1 : 0) || y.z - x.z; });
+    }
+    visibles
+      .forEach(function (v, indice) {
         var ancho = anchosEtq.get(v.el);
         if (!ancho) {
           var etq = v.el.querySelector('.mapa-pin-etq');
           ancho = (etq && etq.offsetWidth) || 72;
           anchosEtq.set(v.el, ancho);
         }
+        var dy = 0;
+        /* En el revelado se enseñan todos los nombres y se reparten en tres alturas según su
+           longitud: al ser un orden fijo, cada nombre se queda siempre en su sitio aunque el
+           globo gire, y los que caen en el mismo punto se leen sin taparse. */
+        if (revelando) {
+          dy = ((indice % 3) - 1) * 18;
+          ponerDesfase(v.el, dy);
+          v.el.classList.remove('etq-tapada');
+          return;
+        }
+        ponerDesfase(v.el, 0);
         var r = { x1: v.x - ancho / 2, x2: v.x + ancho / 2, y1: v.y - 9, y2: v.y + 9 };
         var choca = puestos.some(function (c) {
           return !(r.x2 < c.x1 || r.x1 > c.x2 || r.y2 < c.y1 || r.y1 > c.y2);
@@ -215,8 +238,15 @@
       });
   }
 
+  /* el nombre se separa del punto sin mover el punto: el desfase va en la etiqueta */
+  function ponerDesfase(el, dy) {
+    var etq = el.querySelector('.mapa-pin-etq');
+    if (etq) { etq.style.setProperty('--dy', dy + 'px'); }
+  }
+
   function moverPins(t) {
     if (!bolitas.length) return;
+    var revelando = Date.now() < revelarHasta;
     if (tipo() === 'espacio') {
       var lista = aparatos.slice().sort(function (x, y) { return (x.anio || 0) - (y.anio || 0); });
       var n = lista.length;
@@ -233,7 +263,7 @@
         enCielo.push({ el: b.el, x: fx * t.w, y: fy * t.h, z: 1 - i / (n + 1),
                        activo: b.el.classList.contains('activo') });
       });
-      reparteEtiquetas(enCielo);
+      reparteEtiquetas(enCielo, revelando);
       return;
     }
     var g = { cx: t.w / 2, cy: t.h / 2, R: Math.min(t.w, t.h) * 0.42 };
@@ -265,9 +295,10 @@
       var lo = (b.a.mapa.lon * Math.PI / 180) + rot;
       lo = Math.atan2(Math.sin(lo), Math.cos(lo));
       b.el.classList.toggle('etq-cerca', p.z > 0 && lo >= -v.antes && lo <= v.despues);
-      visibles.push({ el: b.el, x: p.x, y: p.y, z: p.z, activo: b.el.classList.contains('activo') });
+      visibles.push({ el: b.el, x: p.x, y: p.y, z: p.z, lon: b.a.mapa.lon,
+                      activo: b.el.classList.contains('activo') });
     });
-    reparteEtiquetas(visibles);
+    reparteEtiquetas(visibles, revelando);
   }
 
   function dibujar() {
@@ -303,7 +334,17 @@
         : (T('mapa.pie') || 'Toca un punto para acercarte a otro aparato. Arrastra para girar.');
     }
     colocar();
+    /* cada vez que se abre el mapa se enseñan todos los nombres unos segundos; después
+       se apagan y vuelve el turno de los que pasan por el centro */
+    revelarHasta = Date.now() + REVELADO;
+    caja.classList.add('revelando');
     dibujar();
+    if (relojRevelado) { clearTimeout(relojRevelado); }
+    relojRevelado = setTimeout(function () {
+      revelarHasta = 0;
+      if (caja) { caja.classList.remove('revelando'); }
+      dibujar();
+    }, REVELADO);
   }
 
   function conectarArrastre() {

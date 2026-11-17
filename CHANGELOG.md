@@ -1,3 +1,8 @@
+## v3.7.1 — 2026-11-17
+
+- **El mapa enseña todos los nombres al abrirse**, durante 5 segundos, repartidos en tres alturas según su longitud para que se lean aunque los objetos estén amontonados. Después se apagan y vuelve el turno de los que el giro lleva al centro.
+- **La ventana del nombre pasa de 2 a 5 segundos**: en la Luna se enciende al llegar al centro y dura 5 s; en Marte empieza 1 s antes del centro y se apaga a los 5 s.
+
 ## v3.7.0 — 2026-11-17
 
 - **Puntos interactivos en el modelo 3D**, como los del mapa: en el módulo lunar del Apolo 11 hay seis puntos celestes que laten y se mueven con el giro del modelo; al tocarlos se abre una ficha con el nombre de la pieza y una explicación corta. Son la cabina de ascenso, la etapa de descenso, el motor, el retrorreflector láser, las antenas y la escalerilla (con el dato de que el Apolo 11 no llevó rover y no se alejaron más de 60 m).

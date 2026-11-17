@@ -795,6 +795,13 @@ code{background:rgba(255,255,255,.09);padding:2px 6px;border-radius:6px;font-siz
 .mapa-destino:not(.es-espacio) .mapa-pin.etq-cerca .mapa-pin-etq{opacity:1}
 /* si dos nombres coinciden en la ventana, solo se enciende el que no choca */
 .mapa-destino:not(.es-espacio) .mapa-pin.etq-tapada:not(.activo) .mapa-pin-etq{opacity:0}
+/* al abrir el mapa, todos los nombres a la vista unos segundos (la cadena larga es para
+   ganar en especificidad a la regla que los mantiene apagados) */
+.mapa-destino:not(.es-espacio).revelando .mapa-pin:not(.activo):not(.etq-cerca):not(:hover):not(:focus-visible) .mapa-pin-etq,
+.mapa-destino:not(.es-espacio).revelando .mapa-pin.etq-cerca .mapa-pin-etq{opacity:1}
+/* el nombre se aparta del punto cuando varios caen en el mismo sitio (solo en el revelado):
+   el desfase va en la etiqueta, así el punto no se mueve de su coordenada */
+.mapa-pin-etq{transform:translateY(var(--dy,0px))}
 /* Color de los puntos por cuerpo: en blanco no se distinguían sobre la cara iluminada.
    Luna en celeste con aro azul oscuro; Marte en rojo oscuro con aro claro para la cara en sombra. */
 .mapa-destino.cuerpo-luna .mapa-pin-punto{box-shadow:0 0 0 2px rgba(4,20,38,.85),0 0 12px rgba(87,199,255,.9)}
