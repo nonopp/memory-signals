@@ -294,9 +294,9 @@ code{background:rgba(255,255,255,.09);padding:2px 6px;border-radius:6px;font-siz
 
 /* pie */
 .pie{position:relative;z-index:10;display:flex;justify-content:space-between;gap:8px 14px;flex-wrap:wrap;
-  padding:16px clamp(16px,4vw,40px);color:var(--texto-suave);font-size:.8rem;border-top:1px solid var(--borde);
+  padding:14px clamp(14px,3vw,32px);color:var(--texto-suave);font-size:.7rem;border-top:1px solid var(--borde);
   align-items:center}
-.pie-derecha{display:inline-flex;flex-wrap:wrap;align-items:center;gap:4px 12px}
+.pie-derecha{display:inline-flex;flex-wrap:nowrap;align-items:center;gap:4px 12px}
 .pie-derecha a{color:var(--texto-suave);text-decoration:none;border-bottom:1px solid rgba(255,255,255,.18)}
 .pie-derecha a:hover,.pie-derecha a:focus-visible{color:var(--acento);border-bottom-color:var(--acento)}
 .oculto{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}

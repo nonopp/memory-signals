@@ -1,3 +1,8 @@
+## v3.11.1 — 2026-11-17
+
+- **El pie cabe en una sola línea.** La letra baja de 0,8 rem a 0,7 rem (11,2 px), el bloque de la derecha ya no se parte en dos filas y se recorta el relleno lateral. Con la letra anterior el pie necesitaba unos 1.330 px de ancho y saltaba a dos líneas por debajo de ~1.350 px; ahora necesita unos 1.150, así que se queda en una línea incluso con la ventana a 1.200 px. En el móvil sigue igual que estaba.
+- **El botón pasa a «← Objetos»** («← Objects» en inglés, «← Objekte» en alemán), que se lee mejor y ocupa menos.
+
 ## v3.11.0 — 2026-11-17
 
 - **Botón «Sketch» en lugar de «Ver infografía»**: en la ficha del objeto, el botón abre el **dibujo técnico a mano alzada** de ese aparato a pantalla completa, con su nombre y un enlace **«Descargar»** que se lleva el JPG, igual que hacía el de la infografía. En alemán el botón dice «Skizze».
