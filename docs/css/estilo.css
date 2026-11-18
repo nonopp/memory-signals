@@ -929,7 +929,8 @@ code{background:rgba(255,255,255,.09);padding:2px 6px;border-radius:6px;font-siz
 /* La imagen cubre toda la pantalla con un velo negro; los contenedores van al 85 % de opacidad
    (15 % de transparencia), de modo que el dibujo se ve entre las columnas pero el texto se lee. */
 body.viendo-objeto{
-  background-image:linear-gradient(rgba(0,0,0,.70),rgba(0,0,0,.70)),url('../img/fondo-blueprint-lm.jpg');
+  background-image:linear-gradient(rgba(0,0,0,.70),rgba(0,0,0,.70)),
+                     var(--fondo-objeto,url('../img/fondo-modulo-lunar.jpg'));
   background-size:cover,cover;background-position:center center,center center;
   background-repeat:no-repeat,no-repeat;background-attachment:fixed,fixed;
 }

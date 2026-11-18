@@ -1,0 +1,113 @@
+{
+ "_nota": "Sketch técnico descargable de cada aparato: un JPG por aparato en docs/img/. Es el dibujo que hace de fondo en la ficha y el que se descarga con el botón «Sketch».",
+ "modulo-lunar": {
+  "archivo": "img/fondo-modulo-lunar.jpg",
+  "ancho": 1920,
+  "alto": 1072
+ },
+ "apolo12-intrepid": {
+  "archivo": "img/fondo-apolo12-intrepid.jpg",
+  "ancho": 1920,
+  "alto": 1072
+ },
+ "apolo14-antares": {
+  "archivo": "img/fondo-apolo14-antares.jpg",
+  "ancho": 1920,
+  "alto": 1072
+ },
+ "apolo16-orion": {
+  "archivo": "img/fondo-apolo16-orion.jpg",
+  "ancho": 1920,
+  "alto": 1072
+ },
+ "apolo17-challenger": {
+  "archivo": "img/fondo-apolo17-challenger.jpg",
+  "ancho": 1920,
+  "alto": 1072
+ },
+ "opportunity": {
+  "archivo": "img/fondo-opportunity.jpg",
+  "ancho": 1920,
+  "alto": 1072
+ },
+ "insight": {
+  "archivo": "img/fondo-insight.jpg",
+  "ancho": 1920,
+  "alto": 1072
+ },
+ "viking": {
+  "archivo": "img/fondo-viking.jpg",
+  "ancho": 1920,
+  "alto": 1072
+ },
+ "ingenuity": {
+  "archivo": "img/fondo-ingenuity.jpg",
+  "ancho": 1920,
+  "alto": 1072
+ },
+ "spirit": {
+  "archivo": "img/fondo-spirit.jpg",
+  "ancho": 1920,
+  "alto": 1072
+ },
+ "voyager1": {
+  "archivo": "img/fondo-voyager1.jpg",
+  "ancho": 1920,
+  "alto": 1072
+ },
+ "near-shoemaker": {
+  "archivo": "img/fondo-near-shoemaker.jpg",
+  "ancho": 1920,
+  "alto": 1072
+ },
+ "pioneer10": {
+  "archivo": "img/fondo-pioneer10.jpg",
+  "ancho": 1920,
+  "alto": 1072
+ },
+ "dawn": {
+  "archivo": "img/fondo-dawn.jpg",
+  "ancho": 1920,
+  "alto": 1072
+ },
+ "kepler": {
+  "archivo": "img/fondo-kepler.jpg",
+  "ancho": 1920,
+  "alto": 1072
+ },
+ "galileo": {
+  "archivo": "img/fondo-galileo.jpg",
+  "ancho": 1920,
+  "alto": 1072
+ },
+ "cassini": {
+  "archivo": "img/fondo-cassini.jpg",
+  "ancho": 1920,
+  "alto": 1072
+ },
+ "huygens": {
+  "archivo": "img/fondo-huygens.jpg",
+  "ancho": 1920,
+  "alto": 1072
+ },
+ "messenger": {
+  "archivo": "img/fondo-messenger.jpg",
+  "ancho": 1920,
+  "alto": 1072
+ },
+ "magellan": {
+  "archivo": "img/fondo-magellan.jpg",
+  "ancho": 1920,
+  "alto": 1072
+ },
+ "skylab": {
+  "archivo": "img/fondo-skylab.jpg",
+  "ancho": 1920,
+  "alto": 1072
+ },
+ "deep-impact": {
+  "archivo": "img/fondo-deep-impact.jpg",
+  "ancho": 1920,
+  "alto": 1194
+ }
+}

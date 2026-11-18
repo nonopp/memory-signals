@@ -1,3 +1,10 @@
+## v3.11.0 — 2026-11-17
+
+- **Botón «Sketch» en lugar de «Ver infografía»**: en la ficha del objeto, el botón abre el **dibujo técnico a mano alzada** de ese aparato a pantalla completa, con su nombre y un enlace **«Descargar»** que se lleva el JPG, igual que hacía el de la infografía. En alemán el botón dice «Skizze».
+- **Los 22 sketches están dentro**: `docs/img/fondo-<id>.jpg`, 1920 px de ancho, entre 320 y 410 KB cada uno. Índice en `docs/datos/sketches.json`.
+- **El fondo de la ficha es el sketch del aparato que se está viendo**, no una imagen fija: al cambiar de objeto cambia el dibujo (el módulo lunar, el Intrepid, el Opportunity…). El velo negro y la opacidad de los paneles, como quedaron en la 3.10.0.
+- El índice de infografías, las imágenes y sus traducciones siguen en el repositorio sin usarse, por si se quieren recuperar.
+
 ## v3.10.0 — 2026-11-17
 
 - **La ficha del objeto se apoya en un plano técnico.** En la pantalla de las tres columnas, el fondo es el plano del módulo lunar (vistas de alzado, perfil y planta, con sus cotas de 7,0 m) a línea blanca: cubre toda la pantalla y lleva un **velo negro al 70 %** encima, con la imagen fija al desplazar.

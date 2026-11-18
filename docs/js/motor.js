@@ -566,7 +566,7 @@
     }
 
     /* visor 3D en el centro, mapa a la izquierda y chat a la derecha */
-    pintarBotonInfografia(a);
+    pintarBotonSketch(a);
     if (window.Visor3D) window.Visor3D.pintar(a);
     if (window.Hitos) window.Hitos.pintar(a);
     if (window.ChatObjeto) {
@@ -690,91 +690,71 @@
   }
   function cerrarFicha() { $('#modal').hidden = true; }
 
-  /* ---------- infografía descargable ---------- */
-  var infografiasListas = null;
-  var infografiaDe = null;   /* la que se está enseñando, para el botón de descargar */
+  /* ---------- el sketch técnico del aparato, para verlo y descargarlo ---------- */
+  var sketchesListos = null;
+  var sketchDe = null;   /* el que se está enseñando, para el botón de descargar */
 
-  function cargarInfografias() {
-    if (infografiasListas) return infografiasListas;
-    infografiasListas = fetch('datos/infografias.json?v=' + (window.__MSV || ''))
+  function cargarSketches() {
+    if (sketchesListos) return sketchesListos;
+    sketchesListos = fetch('datos/sketches.json?v=' + (window.__MSV || ''))
       .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
       .catch(function () { return {}; });
-    return infografiasListas;
+    return sketchesListos;
   }
 
-  /* devuelve la infografía del aparato en el idioma pedido; si no la hay, la española y aviso */
-  function infografiaPara(aparato) {
-    return cargarInfografias().then(function (todas) {
-      var e = todas && todas[aparato.id];
-      if (!e) return null;
-      var l = idiomaActual();
-      var elegida = e[l] || e.es;
-      if (!elegida) return null;
-      return { datos: elegida, idioma: e[l] ? l : 'es', objeto: aparato };
+  /* el sketch del aparato: uno solo, el mismo en los tres idiomas */
+  function sketchPara(aparato) {
+    return cargarSketches().then(function (todos) {
+      var e = todos && todos[aparato.id];
+      if (!e || !e.archivo) return null;
+      return { datos: e, objeto: aparato };
     });
   }
 
-  /* el visor sirve para dos casos: enseñar la infografía o anunciar cuándo estará */
-  function abrirProximamente() {
-    var img = $('#infografia-imagen');
-    img.hidden = true;
-    img.removeAttribute('src');
-    $('#infografia-titulo').textContent = T('infografia.titulo');
-    $('#infografia-descargar').hidden = true;
-    $('#infografia-credito').textContent = '';
-    var aviso = $('#infografia-aviso');
-    aviso.hidden = false;
-    aviso.className = 'infografia-aviso infografia-proximamente';
-    aviso.textContent = T('infografia.proximamente');
-    var nota = $('#infografia-nota');
-    if (nota) {
-      nota.hidden = false;
-      nota.textContent = T('infografia.proximamente.nota');
-    }
-    $('#visor-infografia').hidden = false;
-    $('#infografia-cerrar').focus();
-  }
-
-  function abrirInfografia() {
-    if (!infografiaDe) { abrirProximamente(); return; }
-    var d = infografiaDe.datos;
-    var img = $('#infografia-imagen');
-    $('#infografia-titulo').textContent = d.titulo || T('infografia.titulo');
-    $('#infografia-imagen').src = d.archivo + '?v=' + (window.__MSV || '');
-    img.alt = T('infografia.alt', { objeto: infografiaDe.objeto.nombre });
+  function pintaSketch() {
+    if (!sketchDe) return;
+    var d = sketchDe.datos, img = $('#sketch-imagen');
+    $('#sketch-titulo').textContent = sketchDe.objeto.nombre;
+    img.src = d.archivo + '?v=' + (window.__MSV || '');
+    img.alt = T('sketch.alt', { objeto: sketchDe.objeto.nombre });
     img.hidden = false;
-    var avisoN = $('#infografia-nota'); if (avisoN) { avisoN.hidden = true; avisoN.textContent = ''; }
-    var avisoCaja = $('#infografia-aviso'); avisoCaja.className = 'infografia-aviso';
-    var enlace = $('#infografia-descargar');
+    var aviso = $('#sketch-aviso'); aviso.hidden = true; aviso.textContent = '';
+    var nota = $('#sketch-nota');
+    if (nota) { nota.hidden = false; nota.textContent = T('sketch.nota'); }
+    var enlace = $('#sketch-descargar');
     enlace.hidden = false;
     enlace.href = d.archivo;
     enlace.setAttribute('download', d.archivo.split('/').pop());
-    $('#infografia-credito').textContent = d.creditos || '';
-    var aviso = $('#infografia-aviso');
-    if (infografiaDe.idioma !== idiomaActual()) {
-      aviso.textContent = T('infografia.soloEs');
-      aviso.hidden = false;
-    } else {
-      aviso.hidden = true;
-      aviso.textContent = '';
-    }
-    $('#visor-infografia').hidden = false;
-    $('#infografia-cerrar').focus();
+    $('#sketch-credito').textContent = '';
+    $('#visor-sketch').hidden = false;
+    $('#sketch-cerrar').focus();
   }
-  function cerrarInfografia() {
-    $('#visor-infografia').hidden = true;
-    $('#infografia-imagen').removeAttribute('src');
+
+  function abrirSketch() {
+    if (sketchDe) { pintaSketch(); return; }
+    var a = estado.aparato;
+    if (!a) return;
+    sketchPara(a).then(function (sk) { if (sk) { sketchDe = sk; pintaSketch(); } });
   }
-  function pintarBotonInfografia(a) {
-    var boton = $('#btn-infografia');
+  function cerrarSketch() {
+    $('#visor-sketch').hidden = true;
+    $('#sketch-imagen').removeAttribute('src');
+  }
+  function pintarBotonSketch(a) {
+    var boton = $('#btn-sketch');
     if (!boton) return;
-    /* el botón sale siempre: si el aparato aún no tiene infografía, al pulsarlo se anuncia la fecha */
-    boton.hidden = false;
-    infografiaDe = null;
-    infografiaPara(a).then(function (inf) {
+    boton.hidden = false;      /* los 22 aparatos tienen sketch */
+    sketchDe = null;
+    sketchPara(a).then(function (sk) {
       /* si el visitante ya ha cambiado de objeto mientras se cargaba el índice, no se toca */
-      if (!inf || !estado.aparato || estado.aparato.id !== a.id) return;
-      infografiaDe = inf;
+      if (!sk || !estado.aparato || estado.aparato.id !== a.id) return;
+      sketchDe = sk;
+      /* el sketch del aparato es también el fondo de la ficha.
+         La ruta va absoluta: una url() relativa dentro de una variable CSS se resuelve
+         contra la hoja de estilos (/css/) y no contra la página, y no cargaría. */
+      var urlFondo = new URL(sk.datos.archivo, location.href).href;
+      document.documentElement.style.setProperty(
+        '--fondo-objeto', 'url("' + urlFondo + '?v=' + (window.__MSV || '') + '")');
     });
   }
 
@@ -800,16 +780,16 @@
     $('#btn-cientifico').addEventListener('click', function () { cambiarNivel('cientifico'); });
     $('#btn-voz').addEventListener('click', function () { alternarVoz(false); });
     $('#btn-ficha').addEventListener('click', abrirFicha);
-    if ($('#btn-infografia')) $('#btn-infografia').addEventListener('click', abrirInfografia);
-    if ($('#infografia-cerrar')) $('#infografia-cerrar').addEventListener('click', cerrarInfografia);
-    if ($('#visor-infografia')) {
-      $('#visor-infografia').addEventListener('click', function (ev) {
-        if (ev.target === this || ev.target.classList.contains('infografia-lienzo')) cerrarInfografia();
+    if ($('#btn-sketch')) $('#btn-sketch').addEventListener('click', abrirSketch);
+    if ($('#sketch-cerrar')) $('#sketch-cerrar').addEventListener('click', cerrarSketch);
+    if ($('#visor-sketch')) {
+      $('#visor-sketch').addEventListener('click', function (ev) {
+        if (ev.target === this || ev.target.classList.contains('infografia-lienzo')) cerrarSketch();
       });
     }
     document.addEventListener('keydown', function (ev) {
       if (ev.key !== 'Escape') return;
-      if ($('#visor-infografia') && !$('#visor-infografia').hidden) { cerrarInfografia(); return; }
+      if ($('#visor-sketch') && !$('#visor-sketch').hidden) { cerrarSketch(); return; }
       if ($('#modal') && !$('#modal').hidden) cerrarFicha();
     });
     $('#btn-volver-objetos').addEventListener('click', volverAObjetos);
@@ -881,11 +861,11 @@
         if (typeof pintarMenu === 'function') pintarMenu();
         if (window.ChatObjeto && window.ChatObjeto.rehacer) window.ChatObjeto.rehacer();
         /* si la ficha verificable estaba abierta, se rehace en el idioma nuevo */
-        if ($('#visor-infografia') && !$('#visor-infografia').hidden) {
-          /* la infografía abierta se vuelve a resolver: cambia el idioma de la imagen y el aviso */
-          infografiaPara(estado.aparato).then(function (inf) {
-            infografiaDe = inf || null;
-            abrirInfografia();
+        if ($('#visor-sketch') && !$('#visor-sketch').hidden && estado.aparato) {
+          /* el sketch abierto se repinta con el nombre del aparato en el idioma nuevo */
+          sketchPara(estado.aparato).then(function (sk) {
+            sketchDe = sk || null;
+            if (sketchDe) pintaSketch(); else cerrarSketch();
           });
         }
         var modalAbierto = $('#modal') && !$('#modal').hidden;
