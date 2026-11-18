@@ -1,3 +1,7 @@
+## v3.14.1 — 2026-11-18
+
+- **Los nombres del equipo ya no son botones**: van seguidos, centrados y en **una sola línea**, separados por puntos, sin caja ni borde. En el móvil, donde los cinco nombres no caben de una vez, se centran en las líneas que hagan falta y se cambia el punto por separación para que ninguna línea empiece por un punto suelto.
+
 ## v3.14.0 — 2026-11-18
 
 - **El sketch va en el idioma que se está leyendo**: los 22 dibujos llegan también en **alemán e inglés** (44 imágenes nuevas), así que el fondo de la ficha y lo que descarga el botón «Sketch» cambian con el idioma. Si algún idioma faltara, se cae al español, como en las infografías.

@@ -280,8 +280,11 @@ button.opcion:hover{border-color:var(--acento);background:rgba(99,224,200,.1);tr
 }
 .lista{color:var(--texto-suave);line-height:1.7}
 .titulo-equipo{font-size:1.02rem;margin:1.5em 0 .5em;letter-spacing:.02em;text-transform:uppercase;color:#bcd4f2;font-weight:600}
-.equipo{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:6px 10px}
-.equipo li{background:rgba(26,44,78,.85);border:1px solid var(--borde);border-radius:999px;padding:6px 14px;font-size:.95rem;color:var(--texto)}
+/* los nombres van seguidos, centrados y en una sola línea: sin cajas ni botones */
+.equipo{list-style:none;padding:0;margin:0;display:flex;flex-wrap:nowrap;justify-content:center;
+  align-items:baseline;font-size:.95rem;color:var(--texto)}
+.equipo li{background:none;border:0;border-radius:0;padding:0;white-space:nowrap;color:var(--texto)}
+.equipo li+li::before{content:"·";margin:0 .5em;color:#8fa8c8}
 code{background:rgba(255,255,255,.09);padding:2px 6px;border-radius:6px;font-size:.92em}
 
 /* modal */
@@ -960,3 +963,10 @@ body.viendo-objeto #p-objeto button.secundario{
 body.viendo-objeto #p-objeto .hito-flecha{background:rgba(8,14,26,.85)}
 body.viendo-objeto #p-objeto .hito-punto:not(.activo){background:rgba(8,14,26,.85)}
 body.viendo-objeto #p-objeto .punto-ficha{background:rgba(6,12,24,.92)}
+
+/* en el móvil los cinco nombres no caben en una línea: se centran y pasan a dos */
+@media (max-width:760px){
+  /* sin puntos: al partirse en varias líneas, el punto quedaría al principio de la línea */
+  .equipo{flex-wrap:wrap;font-size:.86rem;row-gap:2px;column-gap:.7em}
+  .equipo li+li::before{content:none;margin:0}
+}
