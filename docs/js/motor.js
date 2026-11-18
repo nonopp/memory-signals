@@ -544,6 +544,8 @@
       orbe.style.background = 'radial-gradient(circle at 34% 30%, #fff, ' + a.color + ' 48%, #12161f 100%)';
     }
     if ($('#t-objeto')) $('#t-objeto').textContent = a.nombre;
+    /* aviso para la analítica: qué aparato se ha abierto (sin datos personales) */
+    try { document.dispatchEvent(new CustomEvent('ms:aparato', { detail: { id: a.id, nombre: a.nombre } })); } catch (e) {}
     if ($('#meta-objeto')) $('#meta-objeto').textContent = a.cuerpo + ' · ' + a.lugar;
     var etq = $('#anio-objeto');
     if (etq) {

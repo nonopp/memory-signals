@@ -1,3 +1,11 @@
+## v3.12.0 — 2026-11-18
+
+- **Analítica de visitas propia y sin cookies.** La app manda las visitas a un **Matomo instalado en srv8** (https://analytics.gesemweb.es, Matomo 5.14.2), dado de alta como tercer sitio, *«Memory Signals · NASA Space Apps 2026»*, con las dos direcciones del proyecto: `nasa.gesemweb.es/app` y `nonopp.github.io/memory-signals`.
+- **Sin cookies y sin banner**: el código va con `disableCookies`, respeta la señal *Do Not Track* del navegador, no usa identificadores que sigan a la persona de una visita a otra, no hay perfilado ni publicidad y no se cruza con otros sitios. Como no se pone ninguna cookie, no hay nada que aceptar.
+- **Cuenta también qué aparato se abre**: al entrar en una ficha se envía una página vista con el nombre del objeto, así se ve qué aparatos se miran más.
+- **Política de privacidad actualizada en los tres idiomas**: se explica qué se mide y qué no, se corrige la frase que decía que no había analítica y se sube la fecha al 18 de noviembre de 2026.
+- El archivo de informes de Matomo ya corría por cron cada hora; no hay que tocar nada más en el servidor.
+
 ## v3.11.1 — 2026-11-17
 
 - **El pie cabe en una sola línea.** La letra baja de 0,8 rem a 0,7 rem (11,2 px), el bloque de la derecha ya no se parte en dos filas y se recorta el relleno lateral. Con la letra anterior el pie necesitaba unos 1.330 px de ancho y saltaba a dos líneas por debajo de ~1.350 px; ahora necesita unos 1.150, así que se queda en una línea incluso con la ventana a 1.200 px. En el móvil sigue igual que estaba.
