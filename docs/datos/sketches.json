@@ -1,112 +1,222 @@
 {
- "_nota": "Sketch técnico descargable de cada aparato: un JPG por aparato en docs/img/. Es el dibujo que hace de fondo en la ficha y el que se descarga con el botón «Sketch».",
+ "_nota": "Sketch técnico descargable de cada aparato, en español, inglés y alemán: un JPG por aparato e idioma en docs/img/. Es el dibujo que hace de fondo en la ficha y el que se descarga con el botón «Sketch». Si falta el idioma, se usa el español.",
  "modulo-lunar": {
   "archivo": "img/fondo-modulo-lunar.jpg",
+  "archivos": {
+   "es": "img/fondo-modulo-lunar.jpg",
+   "en": "img/fondo-modulo-lunar.en.jpg",
+   "de": "img/fondo-modulo-lunar.de.jpg"
+  },
   "ancho": 1920,
   "alto": 1072
  },
  "apolo12-intrepid": {
   "archivo": "img/fondo-apolo12-intrepid.jpg",
+  "archivos": {
+   "es": "img/fondo-apolo12-intrepid.jpg",
+   "en": "img/fondo-apolo12-intrepid.en.jpg",
+   "de": "img/fondo-apolo12-intrepid.de.jpg"
+  },
   "ancho": 1920,
   "alto": 1072
  },
  "apolo14-antares": {
   "archivo": "img/fondo-apolo14-antares.jpg",
+  "archivos": {
+   "es": "img/fondo-apolo14-antares.jpg",
+   "en": "img/fondo-apolo14-antares.en.jpg",
+   "de": "img/fondo-apolo14-antares.de.jpg"
+  },
   "ancho": 1920,
   "alto": 1072
  },
  "apolo16-orion": {
   "archivo": "img/fondo-apolo16-orion.jpg",
+  "archivos": {
+   "es": "img/fondo-apolo16-orion.jpg",
+   "en": "img/fondo-apolo16-orion.en.jpg",
+   "de": "img/fondo-apolo16-orion.de.jpg"
+  },
   "ancho": 1920,
   "alto": 1072
  },
  "apolo17-challenger": {
   "archivo": "img/fondo-apolo17-challenger.jpg",
+  "archivos": {
+   "es": "img/fondo-apolo17-challenger.jpg",
+   "en": "img/fondo-apolo17-challenger.en.jpg",
+   "de": "img/fondo-apolo17-challenger.de.jpg"
+  },
   "ancho": 1920,
   "alto": 1072
  },
  "opportunity": {
   "archivo": "img/fondo-opportunity.jpg",
+  "archivos": {
+   "es": "img/fondo-opportunity.jpg",
+   "en": "img/fondo-opportunity.en.jpg",
+   "de": "img/fondo-opportunity.de.jpg"
+  },
   "ancho": 1920,
   "alto": 1072
  },
  "insight": {
   "archivo": "img/fondo-insight.jpg",
+  "archivos": {
+   "es": "img/fondo-insight.jpg",
+   "en": "img/fondo-insight.en.jpg",
+   "de": "img/fondo-insight.de.jpg"
+  },
   "ancho": 1920,
   "alto": 1072
  },
  "viking": {
   "archivo": "img/fondo-viking.jpg",
+  "archivos": {
+   "es": "img/fondo-viking.jpg",
+   "en": "img/fondo-viking.en.jpg",
+   "de": "img/fondo-viking.de.jpg"
+  },
   "ancho": 1920,
   "alto": 1072
  },
  "ingenuity": {
   "archivo": "img/fondo-ingenuity.jpg",
+  "archivos": {
+   "es": "img/fondo-ingenuity.jpg",
+   "en": "img/fondo-ingenuity.en.jpg",
+   "de": "img/fondo-ingenuity.de.jpg"
+  },
   "ancho": 1920,
   "alto": 1072
  },
  "spirit": {
   "archivo": "img/fondo-spirit.jpg",
+  "archivos": {
+   "es": "img/fondo-spirit.jpg",
+   "en": "img/fondo-spirit.en.jpg",
+   "de": "img/fondo-spirit.de.jpg"
+  },
   "ancho": 1920,
   "alto": 1072
  },
  "voyager1": {
   "archivo": "img/fondo-voyager1.jpg",
+  "archivos": {
+   "es": "img/fondo-voyager1.jpg",
+   "en": "img/fondo-voyager1.en.jpg",
+   "de": "img/fondo-voyager1.de.jpg"
+  },
   "ancho": 1920,
   "alto": 1072
  },
  "near-shoemaker": {
   "archivo": "img/fondo-near-shoemaker.jpg",
+  "archivos": {
+   "es": "img/fondo-near-shoemaker.jpg",
+   "en": "img/fondo-near-shoemaker.en.jpg",
+   "de": "img/fondo-near-shoemaker.de.jpg"
+  },
   "ancho": 1920,
   "alto": 1072
  },
  "pioneer10": {
   "archivo": "img/fondo-pioneer10.jpg",
+  "archivos": {
+   "es": "img/fondo-pioneer10.jpg",
+   "en": "img/fondo-pioneer10.en.jpg",
+   "de": "img/fondo-pioneer10.de.jpg"
+  },
   "ancho": 1920,
   "alto": 1072
  },
  "dawn": {
   "archivo": "img/fondo-dawn.jpg",
+  "archivos": {
+   "es": "img/fondo-dawn.jpg",
+   "en": "img/fondo-dawn.en.jpg",
+   "de": "img/fondo-dawn.de.jpg"
+  },
   "ancho": 1920,
   "alto": 1072
  },
  "kepler": {
   "archivo": "img/fondo-kepler.jpg",
+  "archivos": {
+   "es": "img/fondo-kepler.jpg",
+   "en": "img/fondo-kepler.en.jpg",
+   "de": "img/fondo-kepler.de.jpg"
+  },
   "ancho": 1920,
   "alto": 1072
  },
  "galileo": {
   "archivo": "img/fondo-galileo.jpg",
+  "archivos": {
+   "es": "img/fondo-galileo.jpg",
+   "en": "img/fondo-galileo.en.jpg",
+   "de": "img/fondo-galileo.de.jpg"
+  },
   "ancho": 1920,
   "alto": 1072
  },
  "cassini": {
   "archivo": "img/fondo-cassini.jpg",
+  "archivos": {
+   "es": "img/fondo-cassini.jpg",
+   "en": "img/fondo-cassini.en.jpg",
+   "de": "img/fondo-cassini.de.jpg"
+  },
   "ancho": 1920,
   "alto": 1072
  },
  "huygens": {
   "archivo": "img/fondo-huygens.jpg",
+  "archivos": {
+   "es": "img/fondo-huygens.jpg",
+   "en": "img/fondo-huygens.en.jpg",
+   "de": "img/fondo-huygens.de.jpg"
+  },
   "ancho": 1920,
   "alto": 1072
  },
  "messenger": {
   "archivo": "img/fondo-messenger.jpg",
+  "archivos": {
+   "es": "img/fondo-messenger.jpg",
+   "en": "img/fondo-messenger.en.jpg",
+   "de": "img/fondo-messenger.de.jpg"
+  },
   "ancho": 1920,
   "alto": 1072
  },
  "magellan": {
   "archivo": "img/fondo-magellan.jpg",
+  "archivos": {
+   "es": "img/fondo-magellan.jpg",
+   "en": "img/fondo-magellan.en.jpg",
+   "de": "img/fondo-magellan.de.jpg"
+  },
   "ancho": 1920,
   "alto": 1072
  },
  "skylab": {
   "archivo": "img/fondo-skylab.jpg",
+  "archivos": {
+   "es": "img/fondo-skylab.jpg",
+   "en": "img/fondo-skylab.en.jpg",
+   "de": "img/fondo-skylab.de.jpg"
+  },
   "ancho": 1920,
   "alto": 1072
  },
  "deep-impact": {
   "archivo": "img/fondo-deep-impact.jpg",
+  "archivos": {
+   "es": "img/fondo-deep-impact.jpg",
+   "en": "img/fondo-deep-impact.en.jpg",
+   "de": "img/fondo-deep-impact.de.jpg"
+  },
   "ancho": 1920,
   "alto": 1194
  }

@@ -704,12 +704,18 @@
     return sketchesListos;
   }
 
-  /* el sketch del aparato: uno solo, el mismo en los tres idiomas */
+  /* el sketch del aparato, en el idioma que se está viendo; si falta, el español */
+  function archivoSketch(d) {
+    var a = (d && d.archivos) || {};
+    var idi = idiomaActual() || 'es';
+    return a[idi] || a.es || d.archivo;
+  }
+
   function sketchPara(aparato) {
     return cargarSketches().then(function (todos) {
       var e = todos && todos[aparato.id];
       if (!e || !e.archivo) return null;
-      return { datos: e, objeto: aparato };
+      return { datos: e, archivo: archivoSketch(e), objeto: aparato };
     });
   }
 
@@ -717,7 +723,7 @@
     if (!sketchDe) return;
     var d = sketchDe.datos, img = $('#sketch-imagen');
     $('#sketch-titulo').textContent = sketchDe.objeto.nombre;
-    img.src = d.archivo + '?v=' + (window.__MSV || '');
+    img.src = sketchDe.archivo + '?v=' + (window.__MSV || '');
     img.alt = T('sketch.alt', { objeto: sketchDe.objeto.nombre });
     img.hidden = false;
     var aviso = $('#sketch-aviso'); aviso.hidden = true; aviso.textContent = '';
@@ -725,8 +731,8 @@
     if (nota) { nota.hidden = false; nota.textContent = T('sketch.nota'); }
     var enlace = $('#sketch-descargar');
     enlace.hidden = false;
-    enlace.href = d.archivo;
-    enlace.setAttribute('download', d.archivo.split('/').pop());
+    enlace.href = sketchDe.archivo;
+    enlace.setAttribute('download', sketchDe.archivo.split('/').pop());
     $('#sketch-credito').textContent = '';
     $('#visor-sketch').hidden = false;
     $('#sketch-cerrar').focus();
@@ -754,7 +760,7 @@
       /* el sketch del aparato es también el fondo de la ficha.
          La ruta va absoluta: una url() relativa dentro de una variable CSS se resuelve
          contra la hoja de estilos (/css/) y no contra la página, y no cargaría. */
-      var urlFondo = new URL(sk.datos.archivo, location.href).href;
+      var urlFondo = new URL(sk.archivo, location.href).href;
       document.documentElement.style.setProperty(
         '--fondo-objeto', 'url("' + urlFondo + '?v=' + (window.__MSV || '') + '")');
     });

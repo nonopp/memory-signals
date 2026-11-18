@@ -1,3 +1,9 @@
+## v3.14.0 — 2026-11-18
+
+- **El sketch va en el idioma que se está leyendo**: los 22 dibujos llegan también en **alemán e inglés** (44 imágenes nuevas), así que el fondo de la ficha y lo que descarga el botón «Sketch» cambian con el idioma. Si algún idioma faltara, se cae al español, como en las infografías.
+- Cada imagen se ha dejado en **1920 px de ancho** y JPG progresivo de 280-430 KB; en una visita solo se carga el fondo del aparato que se abre, así que el peso por página no cambia.
+- `docs/datos/sketches.json` pasa a llevar los tres ficheros por aparato en `archivos: {es, en, de}`.
+
 ## v3.13.0 — 2026-11-18
 
 - **El equipo figura en la pantalla «¿Qué es esto?»**: Antonio Pérez, Jesús Serrano, Carlota Díaz, Francisco Díaz y Simon Preißler, como etiquetas bajo el epígrafe *Equipo* (ES) / *Team* (EN, DE). Los nombres no se traducen.
