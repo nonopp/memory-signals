@@ -1,3 +1,11 @@
+## v3.10.0 — 2026-11-17
+
+- **La ficha del objeto se apoya en un plano técnico.** En la pantalla de las tres columnas, el fondo es el plano del módulo lunar (vistas de alzado, perfil y planta, con sus cotas de 7,0 m) a línea blanca: cubre toda la pantalla y lleva un **velo negro al 70 %** encima, con la imagen fija al desplazar.
+- **Los contenedores quedan al 85 % de opacidad** (15 % de transparencia): el título y el año, el mapa del destino, el visor 3D, la tarjeta del carrusel con rabillo, la respuesta del chat y el panel del chat. Así el dibujo se ve en los huecos entre columnas y se adivina detrás de los paneles, sin quitarle sitio al texto.
+- **Los botones y el carrusel recuperan fondo propio**: sobre una imagen, los botones secundarios —«Volver a los objetos», «Ver ficha», «Ver infografía», «Dejarlo aquí»— y las flechas y puntos del carrusel iban transparentes y se los comía el dibujo. Ahora llevan fondo del mismo tono al 85 % y borde visible.
+- La barra de arriba se oscurece un poco en esta pantalla para no mezclarse con el plano.
+- El fondo solo aparece en la ficha del objeto: en la portada, el crucero, los destellos y las demás pantallas todo sigue como estaba.
+
 ## v3.9.2 — 2026-11-17
 
 - **La voz ya no se elige a ciegas.** Antes se cogía la **primera** voz que apareciera en el idioma; en macOS y en iOS esa primera suele ser «Albert», que suena ronco y apagado — de ahí la sensación de afonía en inglés. Ahora se puntúan todas las voces del equipo y se elige la mejor: se descartan las roncas y las de broma (Albert, Fred, Zarvox, Whisper, Bells…), se prefieren las que suenan bien conocidas (Google, Samantha, Daniel, Serena, Zira, Sabina, Anna, Helena, Mónica, Diego…) y las «natural», «neural», «premium» o «enhanced», y en igualdad se prefiere la de red, que en casi todos los equipos suena mejor.

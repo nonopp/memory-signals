@@ -201,6 +201,8 @@
       var foco = destino.querySelector('h1, h2, button');
       if (foco) foco.focus({ preventScroll: true });
     }
+    /* el fondo de plano técnico solo va en la pantalla del objeto */
+    document.body.classList.toggle('viendo-objeto', id === 'objeto');
     if (id !== 'crucero' && id !== 'destellos') window.Escena.parar();
     pintarMenu();
   }
