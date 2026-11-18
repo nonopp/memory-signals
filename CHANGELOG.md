@@ -1,3 +1,8 @@
+## v3.12.1 — 2026-11-18
+
+- **Arreglo de la analítica por aparato.** El aviso de «qué objeto se ha abierto» se perdía: Matomo sustituye `window._paq` cuando carga su propia biblioteca, y el código guardaba una copia local del vector, así que lo que se empujaba después caía en un vector huérfano. Ahora se empuja siempre sobre `window._paq`. Sin esto, el informe de aparatos más vistos se habría quedado vacío.
+- El correo de Matomo sale ya como **Gesemweb · Analítica web** desde `info@gesemweb.net` (IONOS, puerto 587, TLS), y el usuario `nono` tiene ese buzón como dirección de aviso.
+
 ## v3.12.0 — 2026-11-18
 
 - **Analítica de visitas propia y sin cookies.** La app manda las visitas a un **Matomo instalado en srv8** (https://analytics.gesemweb.es, Matomo 5.14.2), dado de alta como tercer sitio, *«Memory Signals · NASA Space Apps 2026»*, con las dos direcciones del proyecto: `nasa.gesemweb.es/app` y `nonopp.github.io/memory-signals`.
