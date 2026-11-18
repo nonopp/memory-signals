@@ -1,3 +1,8 @@
+## v3.13.0 — 2026-11-18
+
+- **El equipo figura en la pantalla «¿Qué es esto?»**: Antonio Pérez, Jesús Serrano, Carlota Díaz, Francisco Díaz y Simon Preißler, como etiquetas bajo el epígrafe *Equipo* (ES) / *Team* (EN, DE). Los nombres no se traducen.
+- Sin roles ni funciones asignadas: solo constan los nombres, que es lo que hay confirmado.
+
 ## v3.12.1 — 2026-11-18
 
 - **Arreglo de la analítica por aparato.** El aviso de «qué objeto se ha abierto» se perdía: Matomo sustituye `window._paq` cuando carga su propia biblioteca, y el código guardaba una copia local del vector, así que lo que se empujaba después caía en un vector huérfano. Ahora se empuja siempre sobre `window._paq`. Sin esto, el informe de aparatos más vistos se habría quedado vacío.
