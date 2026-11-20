@@ -801,6 +801,8 @@ code{background:rgba(255,255,255,.09);padding:2px 6px;border-radius:6px;font-siz
 .mapa-marco{position:relative;width:100%;aspect-ratio:1/1;border-radius:50%;
   overflow:hidden;background:radial-gradient(circle at 50% 45%,#0b1424,#05070f 78%)}
 .mapa-marco canvas{position:absolute;inset:0;width:100%;height:100%;display:block;cursor:grab}
+/* el lienzo del globo 3D va encima del de dibujo y se comía el arrastre: no recibe el ratón */
+.mapa-marco #mapa-globo{pointer-events:none}
 .mapa-marco canvas:active{cursor:grabbing}
 .mapa-pins{position:absolute;inset:0;pointer-events:none}
 .mapa-pin{position:absolute;background:none;border:0;padding:0;cursor:pointer;

@@ -1,3 +1,8 @@
+## v3.15.1 — 2026-11-20
+
+- **Vuelve a poderse girar el globo con el ratón (o con el dedo).** El lienzo del globo 3D va encima del lienzo de dibujo y **se comía el arrastre**: el mapa solo giraba solo, esperando a que cada aparato pasara por el centro. Ahora ese lienzo no recibe el puntero (`pointer-events:none`) y el arrastre llega al de abajo, que es el que tiene el gesto.
+- Comprobado arrastrando de verdad con eventos de ratón: el globo y los pines giran juntos 120 px de recorrido.
+
 ## v3.15.0 — 2026-11-20
 
 - **El globo del mapa ya no es un dibujo: es la Luna y Marte de verdad.** Antes `mapa.js` pintaba una esfera por código y sembraba los cráteres con un generador pseudoaleatorio, así que los accidentes del terreno eran inventados. Ahora la esfera lleva el mapa real de la NASA:
