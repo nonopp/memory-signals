@@ -33,8 +33,8 @@
     "texto_cientifico": "Interessierst du dich für den Weltraum, oder ist das das erste Mal, dass du darüber nachdenkst?"
    },
    "destino_pregunta": {
-    "texto_explorador": "Dann wähle, wohin wir gehen. Zum Mond, nach Mars oder weiter hinaus?",
-    "texto_cientifico": "Wähle ein Ziel. Wir haben drei Routen offen: den Mond, Mars und den tiefen Weltraum."
+    "texto_explorador": "Dann wähle, wohin wir fliegen. Zum Mond, zum Mars oder zu anderen Zielen?",
+    "texto_cientifico": "Wähle ein Ziel. Wir haben drei Routen offen: den Mond, den Mars und weitere Ziele."
    },
    "despegue": {
     "texto_explorador": "Los geht's! Halt dich fest, das wird ruckeln.",

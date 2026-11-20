@@ -33,8 +33,8 @@
     "texto_cientifico": "Are you interested in space, or is this the first time you're thinking about it?"
    },
    "destino_pregunta": {
-    "texto_explorador": "Then choose where we go. The Moon, Mars, or beyond?",
-    "texto_cientifico": "Choose a destination. We have three routes open: the Moon, Mars, and deep space."
+    "texto_explorador": "Then choose where we go. The Moon, Mars or other destinations?",
+    "texto_cientifico": "Choose a destination. We have three routes open: the Moon, Mars and other destinations."
    },
    "despegue": {
     "texto_explorador": "Here we go! Hold on, this pushes.",

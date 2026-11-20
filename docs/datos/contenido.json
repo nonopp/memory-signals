@@ -33,8 +33,8 @@
     "texto_cientifico": "¿Te interesa el espacio, o es la primera vez que te lo planteas?"
    },
    "destino_pregunta": {
-    "texto_explorador": "Entonces elige adónde vamos. ¿La Luna, Marte o más allá?",
-    "texto_cientifico": "Elige destino. Tenemos tres rutas abiertas: la Luna, Marte y el espacio profundo."
+    "texto_explorador": "Entonces elige adónde vamos. ¿La Luna, Marte u otros destinos?",
+    "texto_cientifico": "Elige destino. Tenemos tres rutas abiertas: la Luna, Marte y otros destinos."
    },
    "despegue": {
     "texto_explorador": "¡Allá vamos! Sujétate, que esto empuja.",

@@ -1,3 +1,7 @@
+## v3.17.3 — 2026-11-20
+
+- **Coherencia con el renombrado del tercer destino.** La pantalla de destinos decía «¿La Luna, Marte o más allá?» en modo explorador y «el espacio profundo» en modo científico; ahora dice **«otros destinos»** en los dos registros y en los tres idiomas (`other destinations` / `weitere Ziele`).
+
 ## v3.17.2 — 2026-11-20
 
 - **El tercer destino ya no se llama «fuera del sistema solar».** Había aparatos que sí llegaron a un planeta —MESSENGER se estrelló en Mercurio, Magellan se desintegró en la atmósfera de Venus, Galileo en Júpiter, Cassini en Saturno—, así que el nombre mentía. Pasa a llamarse **«Otros destinos»** (`Other destinations` / `Weitere Ziele`), tanto en la tarjeta del destino como en el título del mapa y en el resumen corto.
