@@ -1,3 +1,14 @@
+## v3.15.0 — 2026-11-20
+
+- **El globo del mapa ya no es un dibujo: es la Luna y Marte de verdad.** Antes `mapa.js` pintaba una esfera por código y sembraba los cráteres con un generador pseudoaleatorio, así que los accidentes del terreno eran inventados. Ahora la esfera lleva el mapa real de la NASA:
+  - **Luna** · LRO **LROC WAC Global Morphology Mosaic** (NASA/USGS, ≈100 m/px).
+  - **Marte** · **Viking MDIM 2.1** en color (NASA/USGS, ≈232 m/px).
+- Se pinta con **WebGL (three.js r128, alojado en el servidor)**, cámara ortográfica con una unidad = un píxel, de modo que **los pines, sus etiquetas, el hover y el reparto de nombres siguen funcionando igual**: la matemática de latitud/longitud no se ha tocado.
+- **Peso contenido**: 1K por defecto (244 KB entre los dos mapas) y 2K solo cuando el globo se pinta por encima de 640 px de diámetro. El prototipo cargaba 18,7 MB de 8K; aquí no hace falta: el mosaico Viking es de 232 m/px y a ese tamaño no gana nada.
+- **Nadie se queda sin mapa**: si el navegador no tiene WebGL o la librería no carga, se queda el globo dibujado de antes. Comprobado bloqueando three.js.
+- **Crédito a la vista** bajo el mapa, en los tres idiomas: «Imagen: NASA/USGS · …».
+- `three.min.js` se pide **solo cuando hace falta el globo**, no al cargar la página, para no frenar la entrada.
+
 ## v3.14.1 — 2026-11-18
 
 - **Los nombres del equipo ya no son botones**: van seguidos, centrados y en **una sola línea**, separados por puntos, sin caja ni borde. En el móvil, donde los cinco nombres no caben de una vez, se centran en las líneas que hagan falta y se cambia el punto por separación para que ninguna línea empiece por un punto suelto.

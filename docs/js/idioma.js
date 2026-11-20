@@ -141,6 +141,8 @@
       "mapa.espacio": "Hacia fuera del sistema solar",
       "mapa.pie.espacio": "Ordenados por año de salida. Toca un punto para acercarte.",
       "mapa.pie": "Toca un punto para acercarte a otro aparato. Arrastra para girar.",
+      "mapa.credito.luna": "Imagen: NASA/USGS · LRO LROC WAC Global Morphology Mosaic (≈100 m/px)",
+      "mapa.credito.marte": "Imagen: NASA/USGS · Viking MDIM 2.1 en color (≈232 m/px)",
       "hud.toca": "toca un punto para acercarte",
       'comun': 'Común'
     },
@@ -275,6 +277,8 @@
       "mapa.espacio": "Out beyond the solar system",
       "mapa.pie.espacio": "Ordered by launch year. Tap a point to move closer.",
       "mapa.pie": "Tap a point to move to another object. Drag to rotate.",
+      "mapa.credito.luna": "Imagery: NASA/USGS · LRO LROC WAC Global Morphology Mosaic (≈100 m/px)",
+      "mapa.credito.marte": "Imagery: NASA/USGS · Viking MDIM 2.1 colour (≈232 m/px)",
       "hud.toca": "tap a point to move closer",
       'comun': 'Shared'
     },
@@ -409,6 +413,8 @@
       "mapa.espacio": "Hinaus aus dem Sonnensystem",
       "mapa.pie.espacio": "Nach Startjahr geordnet. Tippe auf einen Punkt, um näher zu kommen.",
       "mapa.pie": "Tippe auf einen Punkt, um zu einem anderen Gerät zu kommen. Ziehen zum Drehen.",
+      "mapa.credito.luna": "Bild: NASA/USGS · LRO LROC WAC Global Morphology Mosaic (≈100 m/px)",
+      "mapa.credito.marte": "Bild: NASA/USGS · Viking MDIM 2.1 in Farbe (≈232 m/px)",
       "hud.toca": "tippe auf einen Punkt",
       'comun': 'Gemeinsam'
     }

@@ -233,6 +233,9 @@ button.opcion:hover{border-color:var(--acento);background:rgba(99,224,200,.1);tr
 .mapa-destino.en-ventana .mapa-marco{width:auto;height:min(38vh,282px);aspect-ratio:1/1;flex:0 0 auto}
 /* el pie del mapa sobraba dentro de la ventana: al ir al lado, dejaba el planeta descentrado */
 .mapa-destino.en-ventana .mapa-pie{display:none}
+/* crédito de las imágenes reales del globo: la NASA y el USGS son la fuente */
+.mapa-credito{margin:6px 0 0;font-size:.6rem;line-height:1.35;color:#8fa8c8}
+.mapa-destino.en-ventana .mapa-credito{display:none}
 /* la pista que queda es la del HUD: abajo y centrada */
 .ventana-mapa.visible ~ .hud{left:0;right:0;text-align:center}
 /* en la ventana los puntos se ven con su nombre y laten, para que se note que se pueden tocar */

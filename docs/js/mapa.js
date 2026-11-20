@@ -6,7 +6,7 @@
 (function () {
   'use strict';
 
-  var caja, lienzo, ctx, capa, titulo;
+  var caja, lienzo, ctx, capa, titulo, globo;
   var aparatos = [], actual = null, alElegir = null;
   var rot = 0.6, girando = true, arrastrando = false, xInicial = 0, rotInicial = 0;
   /* ancho de cada nombre, medido una vez: leerlo en cada fotograma obligaría a recalcular el diseño */
@@ -41,12 +41,15 @@
       '<h2 class="mapa-titulo" id="mapa-titulo">' + (T('mapa.titulo') || 'Dónde estamos') + '</h2>' +
       '<div class="mapa-marco">' +
         '<canvas id="mapa-lienzo" aria-hidden="true"></canvas>' +
+        '<canvas id="mapa-globo" aria-hidden="true"></canvas>' +
         '<div class="mapa-pins" id="mapa-pins"></div>' +
       '</div>' +
-      '<p class="mapa-pie" id="mapa-pie">Toca un punto para acercarte a otro aparato.</p>';
+      '<p class="mapa-pie" id="mapa-pie">Toca un punto para acercarte a otro aparato.</p>' +
+      '<p class="mapa-credito" id="mapa-credito" hidden></p>';
     var marco = document.getElementById('col-mapa');
     if (marco) marco.appendChild(caja);
     lienzo = document.getElementById('mapa-lienzo');
+    globo = document.getElementById('mapa-globo');
     capa = document.getElementById('mapa-pins');
     titulo = document.getElementById('mapa-titulo');
     ctx = lienzo && lienzo.getContext('2d');
@@ -137,6 +140,124 @@
     ctx.restore();
 
     return { cx: cx, cy: cy, R: R };
+  }
+
+
+  /* ---------- globo con imágenes reales de la NASA ----------
+     Antes el globo se dibujaba por código y los cráteres eran inventados. Ahora la esfera
+     lleva el mapa de verdad:
+       Luna  · LRO LROC WAC Global Morphology Mosaic  (NASA/USGS, ≈100 m/px)
+       Marte · Viking MDIM 2.1 en color               (NASA/USGS, ≈232 m/px)
+     Se pinta con WebGL (three.js). Si el navegador no lo admite o la librería no llega,
+     se queda el globo dibujado de antes: nadie se queda sin mapa. */
+  var MAPAS = {
+    luna:  { 1: 'img/planeta-luna-1k.jpg',  2: 'img/planeta-luna-2k.jpg' },
+    marte: { 1: 'img/planeta-marte-1k.jpg', 2: 'img/planeta-marte-2k.jpg' }
+  };
+  var t3 = { listo: false, roto: false, pedido: false, escena: null, camara: null,
+             malla: null, pintador: null, texturas: {} };
+
+  function hayWebGL() {
+    try {
+      var c = document.createElement('canvas');
+      return !!(window.WebGLRenderingContext &&
+                (c.getContext('webgl') || c.getContext('experimental-webgl')));
+    } catch (e) { return false; }
+  }
+
+  /* la librería se pide solo cuando hace falta el globo, para no frenar la carga */
+  function pedirThree() {
+    if (t3.pedido || t3.roto || window.THREE) return;
+    t3.pedido = true;
+    var s = document.createElement('script');
+    s.src = 'js/vendor/three.min.js?v=' + (window.__MSV || '');
+    s.async = true;
+    s.onload = function () { dibujar(); };
+    s.onerror = function () { t3.roto = true; dibujar(); };
+    document.head.appendChild(s);
+  }
+
+  function prepara3D() {
+    if (t3.listo || t3.roto) return t3.listo;
+    if (!window.THREE || !globo || !hayWebGL()) return false;
+    try {
+      t3.pintador = new THREE.WebGLRenderer({ canvas: globo, alpha: true, antialias: true });
+      t3.pintador.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+      if ('outputEncoding' in t3.pintador) t3.pintador.outputEncoding = THREE.sRGBEncoding;
+      t3.pintador.setClearColor(0x000000, 0);
+      t3.escena = new THREE.Scene();
+      /* cámara ortográfica con una unidad = un píxel CSS: así el disco cae exactamente
+         donde lo espera proyecta(), y los pines siguen clavados sin tocar su matemática */
+      t3.camara = new THREE.OrthographicCamera(-1, 1, 1, -1, 0.1, 100);
+      t3.camara.position.z = 10;
+      t3.malla = new THREE.Mesh(
+        new THREE.SphereGeometry(1, 96, 64),
+        new THREE.MeshPhongMaterial({ color: 0xffffff, shininess: 2, specular: 0x0a0f18 })
+      );
+      t3.escena.add(t3.malla);
+      /* Luz de estudio, no de telescopio: el mapa se lee en una tarjeta oscura y con
+         media esfera a oscuras no se distinguen los mares ni los puntos.
+         (valores probados en una página aparte comparando tres variantes) */
+      var sol = new THREE.DirectionalLight(0xffffff, 0.75);
+      sol.position.set(-0.55, 0.3, 1);
+      t3.escena.add(sol);
+      t3.escena.add(new THREE.AmbientLight(0xffffff, 0.95));
+      t3.listo = true;
+    } catch (e) { t3.roto = true; t3.listo = false; }
+    return t3.listo;
+  }
+
+  function textura(cuerpo, nivel) {
+    var clave = cuerpo + ':' + nivel;
+    if (t3.texturas[clave]) return t3.texturas[clave];
+    var tex = new THREE.TextureLoader().load(MAPAS[cuerpo][nivel]);
+    if ('encoding' in tex) tex.encoding = THREE.sRGBEncoding;
+    try { tex.anisotropy = Math.min(4, t3.pintador.capabilities.getMaxAnisotropy()); } catch (e) {}
+    t3.texturas[clave] = tex;
+    return tex;
+  }
+
+  /* el halo de siempre, dibujado en el lienzo de abajo: el WebGL va encima y es transparente */
+  function pintaHalo(t, cuerpo) {
+    var w = t.w, h = t.h, cx = w / 2, cy = h / 2, R = Math.min(w, h) * 0.42;
+    ctx.clearRect(0, 0, w, h);
+    var halo = ctx.createRadialGradient(cx, cy, R * 0.9, cx, cy, R * 1.5);
+    halo.addColorStop(0, cuerpo === 'marte' ? 'rgba(214,120,80,.20)' : 'rgba(180,205,225,.16)');
+    halo.addColorStop(1, 'rgba(0,0,0,0)');
+    ctx.fillStyle = halo;
+    ctx.beginPath(); ctx.arc(cx, cy, R * 1.5, 0, Math.PI * 2); ctx.fill();
+  }
+
+  function pintaGlobo3D(t, cuerpo) {
+    var w = t.w, h = t.h, R = Math.min(w, h) * 0.42;
+    var cam = t3.camara;
+    cam.left = -w / 2; cam.right = w / 2; cam.top = h / 2; cam.bottom = -h / 2;
+    /* la cámara TIENE que quedar fuera de la esfera: con la cámara dentro solo se ve el
+       borde iluminado y el resto sale negro (fallo detectado en la primera prueba) */
+    cam.near = R * 0.5; cam.far = R * 6;
+    cam.position.z = R * 3;
+    cam.updateProjectionMatrix();
+    t3.pintador.setSize(w, h, false);
+    t3.malla.scale.setScalar(R);
+    /* 2K solo cuando el globo se pinta grande de verdad; el 1K son 244 KB entre los dos */
+    var px = R * 2 * Math.min(window.devicePixelRatio || 1, 2);
+    var tex = textura(cuerpo, px > 640 ? 2 : 1);
+    if (t3.malla.material.map !== tex) {
+      t3.malla.material.map = tex;
+      t3.malla.material.needsUpdate = true;
+    }
+    /* misma orientación que proyecta(): el meridiano 0 al frente y el giro en el mismo sentido */
+    t3.malla.rotation.y = -Math.PI / 2 + rot;
+    t3.pintador.render(t3.escena, cam);
+  }
+
+  function puede3D() {
+    if (t3.roto) return false;
+    if (!t3.listo) {
+      if (!window.THREE) { pedirThree(); return false; }
+      if (!prepara3D()) { if (!t3.listo) return false; }
+    }
+    return true;
   }
 
   /* ---------- cielo profundo: por año de salida ---------- */
@@ -305,7 +426,17 @@
     if (!ctx || !lienzo) return;
     var t = tamano();
     var cuerpo = tipo();
-    if (cuerpo === 'espacio') pintaCielo(t); else pintaGlobo(t, cuerpo);
+    if (cuerpo === 'espacio') {
+      pintaCielo(t);
+      if (globo) globo.style.display = 'none';
+    } else if (puede3D()) {
+      pintaHalo(t, cuerpo);
+      if (globo) globo.style.display = '';
+      pintaGlobo3D(t, cuerpo);
+    } else {
+      pintaGlobo(t, cuerpo);
+      if (globo) globo.style.display = 'none';
+    }
     moverPins(t);
   }
 
@@ -332,6 +463,12 @@
       pie.textContent = c === 'espacio'
         ? (T('mapa.pie.espacio') || 'Ordenados por año de salida. Toca un punto para acercarte.')
         : (T('mapa.pie') || 'Toca un punto para acercarte a otro aparato. Arrastra para girar.');
+    }
+    var credito = document.getElementById('mapa-credito');
+    if (credito) {
+      credito.textContent = c === 'luna' ? T('mapa.credito.luna')
+        : c === 'marte' ? T('mapa.credito.marte') : '';
+      credito.hidden = !credito.textContent;
     }
     colocar();
     /* cada vez que se abre el mapa se enseñan todos los nombres unos segundos; después
