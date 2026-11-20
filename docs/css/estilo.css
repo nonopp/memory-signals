@@ -1001,3 +1001,59 @@ body.viendo-objeto #p-objeto .punto-ficha{background:rgba(6,12,24,.92)}
 .mapa-destino.es-espacio .mapa-pin:focus-visible .mapa-pin-etq,
 .mapa-destino.es-espacio .mapa-pin.activo .mapa-pin-etq{opacity:1}
 .mapa-destino.es-espacio.revelando .mapa-pin .mapa-pin-etq{opacity:1}
+
+/* ---------- buscador de objetos ---------- */
+.icono-btn{background:rgba(10,22,40,.72);border:1px solid var(--borde,rgba(120,200,230,.25));color:var(--tx,#e7f6fb);
+  width:38px;height:38px;border-radius:50%;font-size:19px;line-height:1;cursor:pointer;display:grid;place-items:center}
+.icono-btn:hover{border-color:var(--acento,#63e0c8);color:var(--acento,#63e0c8)}
+.buscador{position:fixed;inset:0;z-index:9000;background:rgba(3,7,14,.78);backdrop-filter:blur(6px);
+  display:flex;align-items:flex-start;justify-content:center;padding:8vh 16px 16px}
+.buscador[hidden]{display:none}
+.buscador-caja{width:min(680px,100%);max-height:80vh;display:flex;flex-direction:column;
+  background:linear-gradient(180deg,rgba(20,34,58,.98),rgba(10,18,32,.98));
+  border:1px solid var(--borde,rgba(120,200,230,.25));border-radius:18px;padding:14px;
+  box-shadow:0 24px 60px rgba(0,0,0,.55)}
+.buscador-barra{display:flex;align-items:center;gap:10px;background:rgba(5,11,22,.9);
+  border:1px solid var(--borde,rgba(120,200,230,.25));border-radius:999px;padding:9px 12px}
+.buscador-lupa{color:var(--acento,#63e0c8);font-size:17px}
+.buscador-barra input{flex:1;min-width:0;background:none;border:0;outline:none;color:var(--tx,#e7f6fb);font:inherit;font-size:15px}
+.buscador-cerrar{background:none;border:0;color:#9fb6cc;font-size:22px;line-height:1;cursor:pointer;padding:0 2px}
+.buscador-cerrar:hover{color:var(--acento,#63e0c8)}
+.buscador-chips{display:flex;gap:7px;flex-wrap:wrap;margin:11px 0 8px}
+.buscador-chip{font-size:12px;border:1px solid var(--borde,rgba(120,200,230,.25));border-radius:999px;
+  padding:5px 11px;background:rgba(5,11,22,.6);color:#bcd6e6;cursor:pointer}
+.buscador-chip.on{background:rgba(99,224,200,.18);border-color:var(--acento,#63e0c8);color:#e8fffa}
+.buscador-cuenta{font-size:11.5px;color:#8fa8c8;margin:0 0 6px;padding-left:2px}
+.buscador-lista{overflow-y:auto;overscroll-behavior:contain;display:flex;flex-direction:column;gap:2px}
+.buscador-res{display:flex;gap:10px;align-items:flex-start;width:100%;text-align:left;background:none;border:0;
+  border-radius:11px;padding:9px 10px;color:inherit;font:inherit;cursor:pointer}
+.buscador-res:hover,.buscador-res.sel{background:rgba(99,224,200,.11)}
+.buscador-res.sel{outline:1px solid rgba(99,224,200,.4)}
+.buscador-punto{width:10px;height:10px;border-radius:50%;flex:0 0 auto;margin-top:5px;box-shadow:0 0 10px currentColor}
+.buscador-textos{display:flex;flex-direction:column;min-width:0}
+.buscador-nombre{font-size:14px;font-weight:600}
+.buscador-meta{font-size:11.5px;color:#8fa8c8}
+.buscador-resumen{font-size:12px;color:#b9cfe0;margin-top:1px;
+  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.buscador-vacio{font-size:13px;color:#ffd479;margin:6px 2px 10px}
+body.buscando{overflow:hidden}
+@media (max-width:640px){
+  .buscador{padding:0;align-items:stretch}
+  .buscador-caja{width:100%;max-height:100%;height:100%;border-radius:0;padding:12px}
+  .buscador-lista{flex:1}
+  .buscador-resumen{-webkit-line-clamp:1}
+}
+
+/* ---------- el cielo dentro de la ventana del crucero ---------- */
+/* El marco era un cuadrado de 282 px en mitad de una ventana de 680×300: los 31 aparatos de
+   «Otros destinos» se apelotonaban en una esquina y sobraba media ventana vacía. En el cielo no
+   hay disco que recortar (a diferencia de la Luna y Marte), así que el marco ocupa la ventana
+   entera y el reparto de pines se hace sobre ese rectángulo. */
+.mapa-destino.en-ventana.es-espacio{position:relative;justify-content:stretch;align-items:stretch}
+.mapa-destino.en-ventana.es-espacio .mapa-marco{
+  flex:1 1 auto;width:100%;height:100%;max-width:none;max-height:none;aspect-ratio:auto;border-radius:12px}
+/* los botones de acercar van sobre el marco, en la esquina, no robando ancho a la lista */
+.mapa-destino.en-ventana.es-espacio .mapa-zum{position:absolute;right:10px;bottom:10px;margin:0;z-index:3}
+@media (max-width:600px){
+  .mapa-destino.en-ventana.es-espacio .mapa-marco{height:100%;min-height:min(34vh,230px)}
+}

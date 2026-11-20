@@ -1,3 +1,14 @@
+## v3.22.0 — 2026-11-20
+
+- **Buscador de objetos** (la opción B, lista con filtros): una lupa en la cabecera —o **Ctrl+K**— abre un panel con el campo de búsqueda, los **chips de filtro** (Todo · La Luna · Marte · Otros destinos · Solo lo que aún funciona) y la lista de resultados, cada uno con su color, `cuerpo · año` y una línea de la ficha.
+  - Busca en **nombre, sitio, año, cuerpo, ficha, personas de la misión e hitos**, sin tildes y sin mayúsculas: «modulo lunar» encuentra «Módulo lunar» y «agua» devuelve 11 objetos.
+  - **Orden por relevancia**: primero la palabra en el nombre, después en el sitio o el cuerpo, y al final los que solo la mencionan en el texto.
+  - Al pulsar un resultado se va **directo a su ficha** (se salta el crucero), con ↑ ↓ y Enter para quien va con teclado.
+  - **Enlace compartible**: `…/?buscar=philae` abre el panel con esa búsqueda hecha.
+  - En móvil el panel ocupa la pantalla completa. Textos en los tres idiomas.
+- **Arreglo de la ventana del crucero**: el mapa se medía con la ventana todavía oculta y caía en el tamaño de reserva (280 px), así que en «Otros destinos» **los 31 pines se apiñaban en una esquina** de un marco que luego era mucho mayor. Ahora la ventana se muestra antes de medir y hay un repintado en el primer fotograma: los pines se reparten por toda la ventana (medido: ocupan de 0 a 549 px de un marco de 646).
+- **El cielo dentro de la ventana ocupa toda la ventana**: en la Luna y Marte manda el disco, pero en el cielo no hay nada que recortar, así que el marco se estira y los botones de acercar van en la esquina, sin robar ancho a la lista.
+
 ## v3.21.0 — 2026-11-20
 
 - **Los 20 objetos nuevos estrenan pines de componentes sobre el modelo 3D**, como los antiguos: se pulsa y sale el nombre de la pieza y para qué servía. En total **60 puntos nuevos** (163 en el catálogo), en los tres idiomas.

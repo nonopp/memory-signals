@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Prueba de buscador (solo diseño)</title>
+<style>
+  :root{--bg:#070b12;--panel:rgba(14,24,44,.92);--borde:rgba(120,200,230,.22);--tx:#e7f6fb;--suave:#8fa8c8;--acento:#63e0c8}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--tx);font:14px/1.45 system-ui,sans-serif;padding:18px}
+  h1{font-size:15px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--acento);margin:0 0 14px}
+  .cols{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;align-items:start}
+  .col{background:linear-gradient(180deg,rgba(26,44,78,.55),rgba(14,24,44,.55));border:1px solid var(--borde);border-radius:16px;padding:14px}
+  .col h2{font-size:12px;margin:0 0 4px;color:#cfe6f5}
+  .col p.nota{font-size:11px;color:var(--suave);margin:0 0 10px}
+  .caja{display:flex;align-items:center;gap:8px;background:rgba(6,14,26,.85);border:1px solid var(--borde);border-radius:999px;padding:8px 12px;margin-bottom:10px}
+  .caja input{flex:1;background:none;border:0;color:var(--tx);font:inherit;outline:none}
+  .caja .lupa{color:var(--acento)}
+  .cuenta{font-size:11px;color:var(--suave);margin:0 0 8px}
+  .grupo{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--acento);margin:10px 0 6px}
+  .res{display:flex;gap:9px;align-items:flex-start;padding:7px 8px;border-radius:10px;cursor:pointer}
+  .res:hover,.res.sel{background:rgba(99,224,200,.10)}
+  .punto{width:10px;height:10px;border-radius:50%;flex:0 0 auto;margin-top:4px;box-shadow:0 0 10px currentColor}
+  .res .nom{font-size:13px;font-weight:600}
+  .res .meta{font-size:11px;color:var(--suave)}
+  .res .resu{font-size:11.5px;color:#b9cfe0;margin-top:1px}
+  .chips{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px}
+  .chip{font-size:11px;border:1px solid var(--borde);border-radius:999px;padding:3px 9px;color:#bcd6e6;background:rgba(6,14,26,.6)}
+  .chip.on{background:rgba(99,224,200,.18);border-color:var(--acento);color:#dff8f2}
+  .campo{position:relative;height:230px;border:1px solid var(--borde);border-radius:12px;background:radial-gradient(circle at 30% 70%,#0b1424,#05070f 78%);overflow:hidden}
+  .mk{position:absolute;width:9px;height:9px;border-radius:50%;transform:translate(-50%,-50%);opacity:.28}
+  .mk.hit{opacity:1;box-shadow:0 0 0 3px rgba(99,224,200,.35),0 0 14px currentColor}
+  .mk.hit::after{content:attr(data-n);position:absolute;left:12px;top:-6px;font-size:9.5px;color:#dff8f2;white-space:nowrap;background:rgba(6,14,26,.85);padding:1px 5px;border-radius:6px;border:1px solid var(--borde)}
+  .vacio{font-size:12px;color:#ffd479;padding:8px 2px}
+  .pie{font-size:11px;color:var(--suave);margin-top:10px;border-top:1px solid var(--borde);padding-top:8px}
+</style>
+</head>
+<body>
+<h1>Buscador · tres formas de mostrar los resultados</h1>
+<div class="cols">
+  <div class="col">
+    <h2>A · Paleta con lista agrupada</h2>
+    <p class="nota">Se abre con la lupa (o Ctrl+K). Resultados agrupados por destino, con la ficha resumida de una línea. Enter abre la ficha.</p>
+    <div class="caja"><span class="lupa">⌕</span><input id="q1" value="voyager" readonly></div>
+    <p class="cuenta" id="c1"></p>
+    <div id="r1"></div>
+    <div class="pie">↑ ↓ para moverse · Enter abre · Esc cierra</div>
+  </div>
+
+  <div class="col">
+    <h2>B · Lista con filtros</h2>
+    <p class="nota">La misma lista, con chips para acotar por destino y por estado. Útil cuando la búsqueda devuelve mucho.</p>
+    <div class="caja"><span class="lupa">⌕</span><input id="q2" value="marte" readonly></div>
+    <div class="chips"><span class="chip on">Todo</span><span class="chip">La Luna</span><span class="chip">Marte</span><span class="chip">Otros destinos</span><span class="chip">Solo lo que aún funciona</span></div>
+    <p class="cuenta" id="c2"></p>
+    <div id="r2"></div>
+  </div>
+
+  <div class="col">
+    <h2>C · Resaltado en el campo de destellos</h2>
+    <p class="nota">Los aciertos se encienden sobre el mapa mental que ya conoce el visitante. Sirve para caer en la cuenta de dónde está cada cosa.</p>
+    <div class="campo" id="campo"></div>
+    <div class="pie" id="c3"></div>
+  </div>
+</div>
+<script>
+const norm = s => (s || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+let DATOS = [];
+const DEST = { luna: 'La Luna', marte: 'Marte', espacio: 'Otros destinos' };
+
+fetch('datos/contenido.json?v=3.21.0').then(r => r.json()).then(d => {
+  const pertenece = {};
+  d.destinos.forEach(x => x.aparatos.forEach(id => pertenece[id] = x.id));
+  DATOS = d.aparatos.map(a => ({
+    id: a.id, nombre: a.nombre_mapa || a.nombre, cuerpo: a.cuerpo, anio: a.anio,
+    estado: a.estado, color: a.color, resumen: a.ficha_resumen,
+    destino: pertenece[a.id] || 'espacio',
+    texto: norm([a.nombre, a.nombre_mapa, a.cuerpo, a.lugar, a.anio, a.ficha_resumen,
+                 (a.personas || []).map(p => p.nombre + ' ' + p.papel).join(' '),
+                 (a.hitos || []).map(h => h.titulo + ' ' + h.texto).join(' ')].join(' '))
+  }));
+  pinta();
+});
+
+function busca(q) {
+  const t = norm(q).trim();
+  if (!t) return DATOS.slice(0, 8);
+  return DATOS.filter(a => a.texto.includes(t));
+}
+
+function fila(a, sel) {
+  return `<div class="res${sel ? ' sel' : ''}"><span class="punto" style="background:${a.color};color:${a.color}"></span>
+    <div><div class="nom">${a.nombre}</div>
+    <div class="meta">${a.cuerpo} · ${a.anio}${a.estado === 'funciona' ? ' · sigue funcionando' : ''}</div>
+    <div class="resu">${(a.resumen || '').slice(0, 92)}…</div></div></div>`;
+}
+
+function pinta() {
+  // A
+  const r1 = busca('voyager');
+  document.getElementById('c1').textContent = `${r1.length} de ${DATOS.length} objetos`;
+  let html = '';
+  ['espacio', 'luna', 'marte'].forEach(dst => {
+    const g = r1.filter(a => a.destino === dst);
+    if (!g.length) return;
+    html += `<div class="grupo">${DEST[dst]} · ${g.length}</div>`;
+    html += g.map((a, i) => fila(a, i === 0)).join('');
+  });
+  document.getElementById('r1').innerHTML = html || '<div class="vacio">Nada con «voyager».</div>';
+
+  // B
+  const r2 = busca('marte');
+  document.getElementById('c2').textContent = `${r2.length} de ${DATOS.length} objetos · marte en el nombre, el lugar o la ficha`;
+  document.getElementById('r2').innerHTML = r2.slice(0, 6).map(a => fila(a, false)).join('');
+
+  // C
+  const campo = document.getElementById('campo');
+  const dentro = DATOS.filter(a => a.destino === 'espacio');
+  const r3 = busca('voyager');
+  campo.innerHTML = dentro.map((a, i) => {
+    const col = i % 6, fila_ = Math.floor(i / 6);
+    const x = 12 + col * 15, y = 18 + fila_ * 17;
+    const hit = r3.some(h => h.id === a.id);
+    return `<div class="mk${hit ? ' hit' : ''}" data-n="${a.nombre}" style="left:${x}%;top:${y}%;background:${a.color};color:${a.color}"></div>`;
+  }).join('');
+  document.getElementById('c3').textContent = `${r3.length} acierto(s) encendidos sobre los ${dentro.length} de otros destinos`;
+}
+</script>
+</body>
+</html>

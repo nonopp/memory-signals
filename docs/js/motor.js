@@ -406,10 +406,17 @@
       if (!document.getElementById('p-crucero').classList.contains('activa')) return;
       var hermanos = hermanosDe(d);
       window.MapaObjetos.ancorar(capa);
-      window.MapaObjetos.activar(hermanos, null, cambiarAparato);
+      /* la ventana tiene que estar visible ANTES de activar el mapa: si se mide estando oculta,
+         el marco no tiene tamaño y los pines se reparten sobre los 280 px de reserva; en el cielo,
+         con 31 aparatos, eso los apiñaba en la esquina de un marco que luego era mucho mayor */
       capa.hidden = false;
+      window.MapaObjetos.activar(hermanos, null, cambiarAparato);
       lienzo.classList.add('atenuado');
-      requestAnimationFrame(function () { capa.classList.add('visible'); });
+      requestAnimationFrame(function () {
+        capa.classList.add('visible');
+        /* segunda pasada con el tamaño definitivo ya aplicado por el navegador */
+        window.MapaObjetos.pintar();
+      });
       if (hud) hud.textContent = T('hud.toca') || 'toca un punto para acercarte';
       if (window.Escena) window.Escena.parar();
     }, 2300);
@@ -535,6 +542,32 @@
     ir('objeto');
     pintaObjeto();
   }
+
+
+  /* lo que necesita el buscador: el catálogo, el destino de cada objeto y saltar a su ficha */
+  window.MS_Buscar = {
+    lista: function () { return (datos && datos.aparatos) || []; },
+    nombreDestino: function (id) {
+      var d = ((datos && datos.destinos) || []).filter(function (x) { return x.id === id; })[0];
+      return d ? (d.nombre || '') : '';
+    },
+    destinoDe: function (id) {
+      var d = ((datos && datos.destinos) || []).filter(function (x) {
+        return (x.aparatos || []).indexOf(id) !== -1;
+      })[0];
+      return d ? d.id : 'espacio';
+    },
+    irA: function (id) {
+      var a = ((datos && datos.aparatos) || []).filter(function (x) { return x.id === id; })[0];
+      if (!a) return false;
+      var d = ((datos && datos.destinos) || []).filter(function (x) {
+        return (x.aparatos || []).indexOf(id) !== -1;
+      })[0];
+      if (d) estado.destino = d;
+      cambiarAparato(a);
+      return true;
+    }
+  };
 
   function pintaObjeto() {
     var a = estado.aparato;
