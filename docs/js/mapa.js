@@ -9,6 +9,8 @@
   var caja, lienzo, ctx, capa, titulo, globo;
   var aparatos = [], actual = null, alElegir = null;
   var rot = 0.6, girando = true, arrastrando = false, xInicial = 0, rotInicial = 0;
+  /* acercamiento del globo: con los aparatos apiñados hay que poder separar los pines */
+  var zum = 1, ZUM_MAX = 4, cuerpoAnterior = '';
   /* ancho de cada nombre, medido una vez: leerlo en cada fotograma obligaría a recalcular el diseño */
   var anchosEtq = (typeof WeakMap === 'function') ? new WeakMap() : { get: function () { return null; }, set: function () {} };
   var bolitas = [];
@@ -44,6 +46,12 @@
         '<canvas id="mapa-globo" aria-hidden="true"></canvas>' +
         '<div class="mapa-pins" id="mapa-pins"></div>' +
       '</div>' +
+      '<div class="mapa-zum" hidden>' +
+        '<button type="button" class="mapa-zum-btn" data-zum="1"' +
+          ' aria-label="' + (T('mapa.zum.mas') || 'Acercar') + '" title="' + (T('mapa.zum.mas') || 'Acercar') + '">+</button>' +
+        '<button type="button" class="mapa-zum-btn" data-zum="-1"' +
+          ' aria-label="' + (T('mapa.zum.menos') || 'Alejar') + '" title="' + (T('mapa.zum.menos') || 'Alejar') + '">−</button>' +
+      '</div>' +
       '<p class="mapa-pie" id="mapa-pie">Toca un punto para acercarte a otro aparato.</p>' +
       '<p class="mapa-credito" id="mapa-credito" hidden></p>';
     var marco = document.getElementById('col-mapa');
@@ -53,6 +61,16 @@
     capa = document.getElementById('mapa-pins');
     titulo = document.getElementById('mapa-titulo');
     ctx = lienzo && lienzo.getContext('2d');
+    var capaZum = caja.querySelector('.mapa-zum');
+    if (capaZum) {
+      capaZum.addEventListener('click', function (ev) {
+        var b = ev.target.closest('[data-zum]');
+        if (!b) return;
+        ev.stopPropagation();
+        var signo = Number(b.getAttribute('data-zum'));
+        ponZum(signo > 0 ? zum * 1.5 : zum / 1.5);
+      });
+    }
     conectarArrastre();
     window.addEventListener('resize', pintar);
   }
@@ -61,6 +79,9 @@
     var conMapa = aparatos.filter(function (a) { return a.mapa; })[0];
     return conMapa ? conMapa.mapa.tipo : 'espacio';
   }
+
+  /* el radio del globo, con el acercamiento aplicado: lo usan el dibujo, el 3D y los pines */
+  function radioDe(t) { return Math.min(t.w, t.h) * 0.42 * zum; }
 
   function tamano() {
     var w = lienzo.parentNode.clientWidth || 280;
@@ -92,7 +113,7 @@
   }
 
   function pintaGlobo(t, cuerpo) {
-    var w = t.w, h = t.h, cx = w / 2, cy = h / 2, R = Math.min(w, h) * 0.42;
+    var w = t.w, h = t.h, cx = w / 2, cy = h / 2, R = radioDe(t);
     ctx.clearRect(0, 0, w, h);
 
     /* halo */
@@ -151,8 +172,8 @@
      Se pinta con WebGL (three.js). Si el navegador no lo admite o la librería no llega,
      se queda el globo dibujado de antes: nadie se queda sin mapa. */
   var MAPAS = {
-    luna:  { 1: 'img/planeta-luna-1k.jpg',  2: 'img/planeta-luna-2k.jpg' },
-    marte: { 1: 'img/planeta-marte-1k.jpg', 2: 'img/planeta-marte-2k.jpg' }
+    luna:  { 1: 'img/planeta-luna-1k.jpg',  2: 'img/planeta-luna-2k.jpg',  4: 'img/planeta-luna-4k.jpg' },
+    marte: { 1: 'img/planeta-marte-1k.jpg', 2: 'img/planeta-marte-2k.jpg', 4: 'img/planeta-marte-4k.jpg' }
   };
   var t3 = { listo: false, roto: false, pedido: false, escena: null, camara: null,
              malla: null, pintador: null, texturas: {} };
@@ -219,7 +240,7 @@
 
   /* el halo de siempre, dibujado en el lienzo de abajo: el WebGL va encima y es transparente */
   function pintaHalo(t, cuerpo) {
-    var w = t.w, h = t.h, cx = w / 2, cy = h / 2, R = Math.min(w, h) * 0.42;
+    var w = t.w, h = t.h, cx = w / 2, cy = h / 2, R = radioDe(t);
     ctx.clearRect(0, 0, w, h);
     var halo = ctx.createRadialGradient(cx, cy, R * 0.9, cx, cy, R * 1.5);
     halo.addColorStop(0, cuerpo === 'marte' ? 'rgba(214,120,80,.20)' : 'rgba(180,205,225,.16)');
@@ -229,7 +250,7 @@
   }
 
   function pintaGlobo3D(t, cuerpo) {
-    var w = t.w, h = t.h, R = Math.min(w, h) * 0.42;
+    var w = t.w, h = t.h, R = radioDe(t);
     var cam = t3.camara;
     cam.left = -w / 2; cam.right = w / 2; cam.top = h / 2; cam.bottom = -h / 2;
     /* la cámara TIENE que quedar fuera de la esfera: con la cámara dentro solo se ve el
@@ -239,9 +260,10 @@
     cam.updateProjectionMatrix();
     t3.pintador.setSize(w, h, false);
     t3.malla.scale.setScalar(R);
-    /* 2K solo cuando el globo se pinta grande de verdad; el 1K son 244 KB entre los dos */
+    /* el 1K son 249 KB entre los dos mapas; se sube de nivel solo si el globo se pinta
+       grande de verdad (pantalla grande o mucho acercamiento) */
     var px = R * 2 * Math.min(window.devicePixelRatio || 1, 2);
-    var tex = textura(cuerpo, px > 640 ? 2 : 1);
+    var tex = textura(cuerpo, px > 1100 ? 4 : px > 640 ? 2 : 1);
     if (t3.malla.material.map !== tex) {
       t3.malla.material.map = tex;
       t3.malla.material.needsUpdate = true;
@@ -387,7 +409,7 @@
       reparteEtiquetas(enCielo, revelando);
       return;
     }
-    var g = { cx: t.w / 2, cy: t.h / 2, R: Math.min(t.w, t.h) * 0.42 };
+    var g = { cx: t.w / 2, cy: t.h / 2, R: radioDe(t) };
     var visibles = [];
     bolitas.forEach(function (b) {
       var m = b.a.mapa;
@@ -464,6 +486,14 @@
         ? (T('mapa.pie.espacio') || 'Ordenados por año de salida. Toca un punto para acercarte.')
         : (T('mapa.pie') || 'Toca un punto para acercarte a otro aparato. Arrastra para girar.');
     }
+    /* al cambiar de cuerpo (Luna, Marte, cielo) el zoom vuelve a 1; al saltar de un aparato
+       a otro del mismo cuerpo se conserva, que es cuando hace falta para separar los pines */
+    if (c !== cuerpoAnterior) { zum = 1; cuerpoAnterior = c; }
+    var capaZum = caja.querySelector('.mapa-zum');
+    if (capaZum) {
+      capaZum.hidden = (c === 'espacio');
+      capaZum.classList.toggle('con-zum', zum > 1.01);
+    }
     var credito = document.getElementById('mapa-credito');
     if (credito) {
       credito.textContent = c === 'luna' ? T('mapa.credito.luna')
@@ -484,6 +514,15 @@
     }, REVELADO);
   }
 
+  function ponZum(nuevo) {
+    var z = Math.max(1, Math.min(ZUM_MAX, nuevo));
+    if (Math.abs(z - zum) < 0.001) return;
+    zum = z;
+    var cajaZum = caja && caja.querySelector('.mapa-zum');
+    if (cajaZum) cajaZum.classList.toggle('con-zum', zum > 1.01);
+    dibujar();
+  }
+
   function conectarArrastre() {
     if (!lienzo) return;
     lienzo.style.touchAction = 'pan-y';
@@ -498,6 +537,40 @@
     });
     window.addEventListener('pointerup', function () { arrastrando = false; });
     lienzo.addEventListener('pointerleave', function () { arrastrando = false; });
+    /* rueda del ratón: acerca sin mover la página */
+    lienzo.addEventListener('wheel', function (ev) {
+      if (tipo() === 'espacio') return;
+      ev.preventDefault();
+      ponZum(zum * (ev.deltaY < 0 ? 1.15 : 1 / 1.15));
+    }, { passive: false });
+    /* dos dedos separándose acercan (el gesto va sobre el lienzo, que es el que recibe) */
+    var dedos = {}, distPellizco = 0, zumPellizco = 1;
+    lienzo.addEventListener('pointerdown', function (ev) {
+      if (ev.pointerType === 'mouse' || tipo() === 'espacio') return;
+      dedos[ev.pointerId] = { x: ev.clientX, y: ev.clientY };
+      var ids = Object.keys(dedos);
+      if (ids.length === 2) {
+        var a = dedos[ids[0]], b = dedos[ids[1]];
+        distPellizco = Math.hypot(a.x - b.x, a.y - b.y);
+        zumPellizco = zum;
+        arrastrando = false;
+      }
+    });
+    lienzo.addEventListener('pointermove', function (ev) {
+      if (!dedos[ev.pointerId]) return;
+      dedos[ev.pointerId] = { x: ev.clientX, y: ev.clientY };
+      var ids = Object.keys(dedos);
+      if (ids.length !== 2 || !distPellizco) return;
+      var a = dedos[ids[0]], b = dedos[ids[1]];
+      var d = Math.hypot(a.x - b.x, a.y - b.y);
+      ponZum(zumPellizco * (d / distPellizco));
+    });
+    function sueltaDedo(ev) {
+      delete dedos[ev.pointerId];
+      if (Object.keys(dedos).length < 2) { distPellizco = 0; }
+    }
+    window.addEventListener('pointerup', sueltaDedo);
+    window.addEventListener('pointercancel', sueltaDedo);
   }
 
   /* el mismo mapa sirve en la ficha del objeto y en la ventana del crucero:

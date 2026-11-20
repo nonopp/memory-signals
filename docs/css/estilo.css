@@ -236,6 +236,15 @@ button.opcion:hover{border-color:var(--acento);background:rgba(99,224,200,.1);tr
 /* crédito de las imágenes reales del globo: la NASA y el USGS son la fuente */
 .mapa-credito{margin:6px 0 0;font-size:.6rem;line-height:1.35;color:#8fa8c8}
 .mapa-destino.en-ventana .mapa-credito{display:none}
+
+/* acercar y alejar el globo: con los aparatos apiñados hay que separar los pines para acertar */
+.mapa-zum{display:flex;gap:8px;justify-content:flex-end;margin-top:8px}
+.mapa-zum[hidden]{display:none}
+.mapa-zum-btn{width:30px;height:30px;border-radius:50%;padding:0;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+  border:1px solid rgba(120,200,230,.35);background:rgba(8,16,30,.78);
+  color:#dff2f8;font:600 16px/1 system-ui}
+.mapa-zum-btn:hover,.mapa-zum-btn:focus-visible{background:rgba(30,60,100,.92);border-color:#57c7ff}
 /* la pista que queda es la del HUD: abajo y centrada */
 .ventana-mapa.visible ~ .hud{left:0;right:0;text-align:center}
 /* en la ventana los puntos se ven con su nombre y laten, para que se note que se pueden tocar */
@@ -974,4 +983,10 @@ body.viendo-objeto #p-objeto .punto-ficha{background:rgba(6,12,24,.92)}
   /* sin puntos: al partirse en varias líneas, el punto quedaría al principio de la línea */
   .equipo{flex-wrap:wrap;font-size:.86rem;row-gap:2px;column-gap:.7em}
   .equipo li+li::before{content:none;margin:0}
+}
+
+/* en el móvil los botones de zoom tienen que poder tocarse con el dedo */
+@media (max-width:760px){
+  .mapa-zum-btn{width:34px;height:34px;font-size:18px}
+  .mapa-zum{margin-top:10px}
 }

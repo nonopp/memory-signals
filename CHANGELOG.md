@@ -1,3 +1,13 @@
+## v3.16.0 — 2026-11-20
+
+- **La Luna se ve.** El mosaico LROC es oscuro de verdad (albedo ~0,12) y sobre la tarjeta nocturna quedaba casi negro: se levantan los medios tonos de la textura con una gamma suave (brillo medio 65 → 94 sobre 255), sin tocar el detalle ni inventar nada. Marte se queda como estaba.
+- **Se puede acercar el mapa.** Con pines apiñados (los cuatro sitios del Apolo, los rover de Marte) había que esperar a que el giro los trajera al centro para poder pulsar el correcto. Ahora:
+  - Botones **+ / −** bajo el mapa (0,9× · 1,5× · 2,25× · 3,4× · hasta 4×), cómodos de tocar en móvil.
+  - **Rueda del ratón** sobre el globo y **pellizco** con dos dedos en el móvil.
+  - El acercamiento **se conserva al saltar de un aparato a otro del mismo cuerpo**, que es justo cuando hace falta; solo vuelve a 1 cuando se cambia de cuerpo (Luna, Marte, cielo profundo).
+  - La textura sube a **2K o 4K** sola cuando el globo se pinta grande: el 1K son 249 KB y el 4K solo se descarga si de verdad se acerca a fondo en una pantalla grande.
+- El arrastre sigue funcionando con el zoom puesto: se acerca y se gira con el mismo gesto de siempre.
+
 ## v3.15.1 — 2026-11-20
 
 - **Vuelve a poderse girar el globo con el ratón (o con el dedo).** El lienzo del globo 3D va encima del lienzo de dibujo y **se comía el arrastre**: el mapa solo giraba solo, esperando a que cada aparato pasara por el centro. Ahora ese lienzo no recibe el puntero (`pointer-events:none`) y el arrastre llega al de abajo, que es el que tiene el gesto.
