@@ -23,6 +23,12 @@ Publicado en **dos sitios**, desde el mismo código:
 - https://nonopp.github.io/memory-signals/ — GitHub Pages, se actualiza en cada push a `main`
 - https://nasa.gesemweb.es/app/ — servidor propio, copia estática
 
+## Plan de trabajo
+
+El estado, las decisiones abiertas y las **tandas de objetos pendientes** están en el roadmap del
+proyecto, en la bóveda de trabajo: `Proyectos/NASA-APP/ROADMAP - Memory Signals.md`. Ese documento es
+la fuente única del plan; el `CHANGELOG.md` cuenta lo que ya está publicado y con qué número de versión.
+
 ## Qué tiene dentro
 
 - **Siete pantallas** con una máquina de estados: intro → edad → gusto → destino → crucero →
