@@ -1,3 +1,10 @@
+## v3.21.0 — 2026-11-20
+
+- **Los 20 objetos nuevos estrenan pines de componentes sobre el modelo 3D**, como los antiguos: se pulsa y sale el nombre de la pieza y para qué servía. En total **60 puntos nuevos** (163 en el catálogo), en los tres idiomas.
+  - **Con tres piezas por objeto (12):** Clementine (antena, paneles, cuerpo), Mars Global Surveyor (paneles, antena de alta ganancia, cuerpo con el altímetro MOLA), Pioneer 11 (parabólica, RTG, instrumentos), Ulysses (antena, RTG, cuerpo), Rosetta (antena, paneles de 14 m y el aterrizador Philae), Cluster II, TRMM (paneles, brazo del radar, cuerpo), Van Allen Probes, Stardust, Polar, LADEE y Voyager 2.
+  - **Con un punto honesto (8):** Mir, WMAP, Geotail, TOPEX/Poseidon, Deep Space 1, Spitzer, Suzaku y Compton. La NASA los publica como **una sola malla sin piezas separadas**, así que no se pueden separar componentes: llevan un punto con el nombre de la estructura principal y el aviso de por qué no hay más. Inventar tres pines dentro de una malla única habría puesto etiquetas falsas sobre el dibujo.
+- **De dónde sale cada posición:** del centro de cada pieza en coordenadas de escena, leído del propio GLB (nodos con nombre: `dish`, `panels_01`, `AO_rtg`, `lander`… y mallas con forma inequívoca: discos de antena, paneles planos, mástiles finos). Nada colocado a ojo salvo LADEE y Voyager 2, que se comprobaron sobre el modelo renderizado.
+
 ## v3.20.0 — 2026-11-20
 
 - **Los 20 objetos nuevos estrenan sketch de fondo, en su versión alemana.** El generador devolvió los 20 dibujos con las anotaciones en alemán (comprobado leyendo seis de ellos: «GESAMTHÖHE», «GOLDENE SCHALLPLATTE», «ERDUMFLAUFBAHN»…), así que entran como `fondo-<id>.de.jpg`, igual que el resto del catálogo en su versión alemana. Pesos: **116,7 MB → 6,55 MB** (1920×1080, ~330 KB cada uno).

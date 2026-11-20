@@ -268,8 +268,8 @@
       0.2,
       1
      ],
-     "titulo": "Meridiani Planum",
-     "texto": "They sent me to Meridiani Planum: from orbit, minerals that only form with water were visible. My job was to land and verify it on the ground."
+     "titulo": null,
+     "texto": null
     },
     {
      "id": "noventa",
@@ -283,8 +283,8 @@
       0.02,
       1
      ],
-     "titulo": "Ninety days",
-     "texto": "I was designed to last ninety Martian days. I lasted 5,111 and traveled 45.16 kilometers, the greatest distance driven by a vehicle on another world."
+     "titulo": null,
+     "texto": null
     },
     {
      "id": "meteorito",
@@ -298,8 +298,8 @@
       -0.07,
       1
      ],
-     "titulo": "The meteorite",
-     "texto": "In January 2005, next to my own abandoned heat shield, I found a rock the size of a ball: iron and nickel fallen from the sky, the first meteorite identified on another planet."
+     "titulo": null,
+     "texto": null
     },
     {
      "id": "tormenta",
@@ -313,8 +313,8 @@
       -0.07,
       1
      ],
-     "titulo": "The storm",
-     "texto": "A dust storm shut me down. No contact since June 10, 2018, and NASA declared the mission over on February 13, 2019."
+     "titulo": null,
+     "texto": null
     },
     {
      "id": "squyres",
@@ -328,8 +328,8 @@
       -0.2,
       1
      ],
-     "titulo": "Steve Squyres",
-     "texto": "Steve Squyres was the principal investigator of the two twin rovers, Opportunity and Spirit, which landed on Mars in January 2004."
+     "titulo": null,
+     "texto": null
     }
    ]
   },
@@ -470,8 +470,8 @@
       0.2,
       1
      ],
-     "titulo": "Elysium Planitia",
-     "texto": "I landed in Elysium Planitia, a site chosen for safety, not for its geology: the interesting part wasn't next to me, it was beneath me."
+     "titulo": null,
+     "texto": null
     },
     {
      "id": "sismometro",
@@ -485,8 +485,8 @@
       0.02,
       1
      ],
-     "titulo": "The seismometer",
-     "texto": "I lowered a seismometer to the ground with the arm and listened to the first tremor recorded on another planet. I detected more than 1,300 quakes; the best came from Cerberus Fossae."
+     "titulo": null,
+     "texto": null
     },
     {
      "id": "corteza",
@@ -500,8 +500,8 @@
       -0.07,
       1
      ],
-     "titulo": "The crust",
-     "texto": "Those tremors measured what no one had measured: the crust beneath me is thinner than expected, 25 to 40 kilometers."
+     "titulo": null,
+     "texto": null
     },
     {
      "id": "nucleo",
@@ -515,8 +515,8 @@
       -0.07,
       1
      ],
-     "titulo": "The core",
-     "texto": "Mars's core is molten and enormous, about 1,800 kilometers in radius. We knew it from how the tremors reached it."
+     "titulo": null,
+     "texto": null
     },
     {
      "id": "polvo",
@@ -530,8 +530,8 @@
       -0.2,
       1
      ],
-     "titulo": "The dust",
-     "texto": "I ran out of power because dust covered my solar panels. I stopped responding and the mission ended."
+     "titulo": null,
+     "texto": null
     },
     {
      "id": "banerdt",
@@ -545,8 +545,8 @@
       -0.11,
       1
      ],
-     "titulo": "Bruce Banerdt",
-     "texto": "Bruce Banerdt was the principal investigator of the first mission dedicated to looking inside Mars: its pulse, its temperature and its reflexes."
+     "titulo": null,
+     "texto": null
     }
    ]
   },
@@ -681,8 +681,8 @@
       0,
       1
      ],
-     "titulo": "Jupiter and Saturn",
-     "texto": "I set out in 1977 to teach Jupiter and Saturn up close. At Jupiter I discovered a thin ring and two new moons; at Saturn, five more moons and a ring they called G."
+     "titulo": null,
+     "texto": null
     },
     {
      "id": "disco",
@@ -696,8 +696,8 @@
       0,
       1
      ],
-     "titulo": "The golden record",
-     "texto": "I carry a golden record with greetings in 55 languages, images and sounds of Earth. NASA commissioned it from Carl Sagan, who chose what went inside."
+     "titulo": null,
+     "texto": null
     },
     {
      "id": "heliopausa",
@@ -711,8 +711,8 @@
       0,
       1
      ],
-     "titulo": "The heliopause",
-     "texto": "In August 2012 I crossed the heliopause: I was the first object built by people to leave the Sun's shield."
+     "titulo": null,
+     "texto": null
     },
     {
      "id": "sigo",
@@ -726,8 +726,8 @@
       0,
       1
      ],
-     "titulo": "Still answering",
-     "texto": "I am still in interstellar space, in contact with Earth and with two instruments working. Note: I am not abandoned."
+     "titulo": null,
+     "texto": null
     },
     {
      "id": "contraste",
@@ -741,8 +741,8 @@
       0,
       1
      ],
-     "titulo": "The contrast",
-     "texto": "I am in this catalogue as an honest contrast: the criterion is that the craft no longer works, and I still answer. I may stop doing so soon."
+     "titulo": null,
+     "texto": null
     }
    ]
   },
@@ -889,8 +889,8 @@
       0.6,
       1
      ],
-     "titulo": "Ascent stage",
-     "texto": "The cabin where Armstrong and Aldrin rode: 6.65 m³ for two people. From here they lifted off to rejoin Columbia in orbit."
+     "titulo": null,
+     "texto": null
     },
     {
      "id": "descenso",
@@ -904,8 +904,8 @@
       0,
       0.6
      ],
-     "titulo": "Descent stage",
-     "texto": "The half that stayed on the Moon. It carried 8,248 kg of propellant for the final braking and served as the launch platform."
+     "titulo": null,
+     "texto": null
     },
     {
      "id": "motor",
@@ -919,8 +919,8 @@
       -0.2,
       1
      ],
-     "titulo": "Descent engine",
-     "texto": "The main engine, 45,000 N. It slowed the module from orbit and set it down in the Sea of Tranquility on 20 July 1969 at 20:17:40 UT."
+     "titulo": null,
+     "texto": null
     },
     {
      "id": "lrrr",
@@ -934,8 +934,8 @@
       0,
       0.8
      ],
-     "titulo": "Laser retroreflector",
-     "texto": "An array of corner cubes that returns the laser exactly as it arrives. Observatories still use it to measure the distance to the Moon."
+     "titulo": null,
+     "texto": null
     },
     {
      "id": "antena",
@@ -949,8 +949,8 @@
       0.9,
       0.3
      ],
-     "titulo": "Antennas",
-     "texto": "The rendezvous radar and the high-gain antenna, which carried voice and telemetry both ways."
+     "titulo": null,
+     "texto": null
     },
     {
      "id": "escalerilla",
@@ -964,8 +964,8 @@
       -0.1,
       1
      ],
-     "titulo": "Ladder and legs",
-     "texto": "Nine rungs to climb down. Apollo 11 carried no rover: Armstrong and Aldrin walked and never went more than about 60 metres from the module."
+     "titulo": null,
+     "texto": null
     }
    ]
   },
@@ -1093,8 +1093,8 @@
       0.2,
       1
      ],
-     "titulo": "Eros",
-     "texto": "Eros is a rock 34 kilometers long. I was the first spacecraft in history to orbit an asteroid and the first mission of the Discovery program."
+     "titulo": null,
+     "texto": null
     },
     {
      "id": "posada",
@@ -1108,8 +1108,8 @@
       -0.02,
       1
      ],
-     "titulo": "Unplanned landing",
-     "texto": "I wasn't designed to land, yet I touched down on Eros on February 12, 2001, at 6.4 kilometers per hour. I survived the impact."
+     "titulo": null,
+     "texto": null
     },
     {
      "id": "magnetismo",
@@ -1123,8 +1123,8 @@
       -0.06,
       1
      ],
-     "titulo": "No magnetic field",
-     "texto": "I discovered that Eros has no magnetic field and that its density is similar to that of Earth's crust."
+     "titulo": null,
+     "texto": null
     },
     {
      "id": "congelada",
@@ -1138,8 +1138,8 @@
       -0.06,
       1
      ],
-     "titulo": "Frozen",
-     "texto": "I remain landed on Eros, at minus 173 °C and with no signal since February 28, 2001."
+     "titulo": null,
+     "texto": null
     },
     {
      "id": "shoemaker",
@@ -1153,8 +1153,8 @@
       -0.2,
       1
      ],
-     "titulo": "Eugene Shoemaker",
-     "texto": "Eugene M. Shoemaker was the geologist who studied craters and impacts. NASA named the spacecraft after him in March 2000, three years after his death."
+     "titulo": null,
+     "texto": null
     }
    ]
   },
@@ -1294,8 +1294,8 @@
       0,
       1
      ],
-     "titulo": "The Belt",
-     "texto": "I was the first spacecraft to venture to the outer planets. No one knew if the asteroid belt could be crossed, and I crossed it to reach Jupiter."
+     "titulo": null,
+     "texto": null
     },
     {
      "id": "placa",
@@ -1309,8 +1309,8 @@
       0,
       1
      ],
-     "titulo": "The Plaque",
-     "texto": "I carry a metal plaque with a man, a woman and a map locating Earth and the Sun. It was Carl Sagan's idea: a message of where we come from."
+     "titulo": null,
+     "texto": null
     },
     {
      "id": "jupiter",
@@ -1324,8 +1324,8 @@
       0,
       1
      ],
-     "titulo": "Jupiter",
-     "texto": "On December 4, 1973, I passed 130,354 kilometers from Jupiter and sent the first close-up photos of the planet, with the Great Red Spot clearly visible."
+     "titulo": null,
+     "texto": null
     },
     {
      "id": "silencio",
@@ -1339,8 +1339,8 @@
       0,
       1
      ],
-     "titulo": "No Signal",
-     "texto": "My last signal arrived on January 23, 2003. I continue my course toward the star Aldebaran, in silence."
+     "titulo": null,
+     "texto": null
     },
     {
      "id": "wirth",
@@ -1354,8 +1354,8 @@
       0,
       1
      ],
-     "titulo": "Fred Wirth",
-     "texto": "Fred Wirth was the Pioneer project manager in 1995, more than twenty years after I left Earth."
+     "titulo": null,
+     "texto": null
     }
    ]
   },
@@ -1495,8 +1495,8 @@
       0.0,
       1
      ],
-     "titulo": "Vesta and Ceres",
-     "texto": "They sent me to the two largest bodies in the asteroid belt: Vesta, rocky and dry, and Ceres, primitive and rich in water. Together they account for almost 40% of the belt's mass."
+     "titulo": null,
+     "texto": null
     },
     {
      "id": "ionico",
@@ -1510,8 +1510,8 @@
       0.0,
       1
      ],
-     "titulo": "The ion engine",
-     "texto": "I was propelled by an ion engine that barely pushes, between 19 and 91 millinewtons, but it does so nonstop day after day. With that thrust I orbited an asteroid and then a dwarf planet."
+     "titulo": null,
+     "texto": null
     },
     {
      "id": "rheasilvia",
@@ -1525,8 +1525,8 @@
       0.0,
       1
      ],
-     "titulo": "Rheasilvia",
-     "texto": "On Vesta I found Rheasilvia, a basin 500 kilometers wide and 19 deep."
+     "titulo": null,
+     "texto": null
     },
     {
      "id": "manchas",
@@ -1540,8 +1540,8 @@
       0.22,
       1
      ],
-     "titulo": "The spots on Ceres",
-     "texto": "On Ceres I discovered that the bright spots are salts and that it holds about 25% of its mass in ice."
+     "titulo": null,
+     "texto": null
     },
     {
      "id": "sin-combustible",
@@ -1555,8 +1555,8 @@
       -0.2,
       1
      ],
-     "titulo": "Out of fuel",
-     "texto": "I ran out of fuel in orbit around Ceres. I have not operated since November 1, 2018."
+     "titulo": null,
+     "texto": null
     },
     {
      "id": "equipo",
@@ -1570,8 +1570,8 @@
       -0.2,
       1
      ],
-     "titulo": "Rayman and Russell",
-     "texto": "Marc Rayman was the chief engineer and mission director at JPL; Chris Russell, the principal investigator of the science team."
+     "titulo": null,
+     "texto": null
     }
    ]
   },
@@ -1709,8 +1709,8 @@
       0.18,
       1
      ],
-     "titulo": "Two jobs",
-     "texto": "Each Viking had two jobs: photograph Mars from orbit and look for life in the soil. We were the first landers that truly worked on another planet."
+     "titulo": null,
+     "texto": null
     },
     {
      "id": "experimento",
@@ -1724,8 +1724,8 @@
       -0.1,
       1
      ],
-     "titulo": "The experiment",
-     "texto": "My arm put soil into a tiny lab and the result could be read as a weak sign of life. But the instrument looking for organic matter found nothing."
+     "titulo": null,
+     "texto": null
     },
     {
      "id": "imagenes",
@@ -1739,8 +1739,8 @@
       -0.23,
       1
      ],
-     "titulo": "52,663 images",
-     "texto": "Between the two of us we returned 52,663 images and a map of 97% of the surface of Mars."
+     "titulo": null,
+     "texto": null
     },
     {
      "id": "quietos",
@@ -1754,8 +1754,8 @@
       -0.15,
       1
      ],
-     "titulo": "Still in the dust",
-     "texto": "Viking 1 stopped operating on November 11, 1982. Both landers are still there, on the dust."
+     "titulo": null,
+     "texto": null
     },
     {
      "id": "nombres",
@@ -1769,8 +1769,8 @@
       0.27,
       1
      ],
-     "titulo": "Mutch and Soffen",
-     "texto": "Viking 1 lander has been named after Thomas A. Mutch since 1982 and Viking 2 after Gerald Soffen since 2001."
+     "titulo": null,
+     "texto": null
     }
    ]
   },
@@ -1898,8 +1898,8 @@
       0.26,
       1
      ],
-     "titulo": "150,000 stars",
-     "texto": "I stood still watching 150,000 stars in the constellation Cygnus, waiting for one of them to blink."
+     "titulo": null,
+     "texto": null
     },
     {
      "id": "transito",
@@ -1913,8 +1913,8 @@
       0.11,
       1
      ],
-     "titulo": "The transit",
-     "texto": "I didn't see the planets: I saw the instant one crossed in front of its star and stole a little of its brightness. That blink is called a transit."
+     "titulo": null,
+     "texto": null
     },
     {
      "id": "mundos",
@@ -1928,8 +1928,8 @@
       -0.17,
       1
      ],
-     "titulo": "2,600 worlds",
-     "texto": "When they started thinking of me, no one knew a single planet outside the solar system. In nine years I left more than 2,600."
+     "titulo": null,
+     "texto": null
     },
     {
      "id": "cambio",
@@ -1943,8 +1943,8 @@
       -0.07,
       1
      ],
-     "titulo": "More planets than stars",
-     "texto": "Today we know there are more planets than stars. That change of idea began with the blinks I recorded."
+     "titulo": null,
+     "texto": null
     },
     {
      "id": "apagado",
@@ -1958,8 +1958,8 @@
       -0.04,
       1
      ],
-     "titulo": "Switched off",
-     "texto": "They retired me on October 30, 2018, without fuel. I remain in heliocentric orbit, switched off."
+     "titulo": null,
+     "texto": null
     },
     {
      "id": "borucki",
@@ -1973,8 +1973,8 @@
       -0.26,
       1
      ],
-     "titulo": "William Borucki",
-     "texto": "William Borucki was the founding principal investigator of the mission, at Ames Research Center."
+     "titulo": null,
+     "texto": null
     }
    ]
   },
@@ -2116,8 +2116,8 @@
       0.26,
       1
      ],
-     "titulo": "The test",
-     "texto": "They took me to Mars as a test: five flights in thirty days to see if it was possible to fly where the air is less than one hundredth of Earth's."
+     "titulo": null,
+     "texto": null
     },
     {
      "id": "vuelos",
@@ -2131,8 +2131,8 @@
       0.11,
       1
      ],
-     "titulo": "72 flights",
-     "texto": "I ended up making 72 flights, spent 128.8 minutes in the air and covered 17 kilometers, flying ahead of the rover to scout the terrain."
+     "titulo": null,
+     "texto": null
     },
     {
      "id": "palas",
@@ -2146,8 +2146,8 @@
       0.06,
       1
      ],
-     "titulo": "The blades",
-     "texto": "On my last flight, on January 18, 2024, my blades broke on landing."
+     "titulo": null,
+     "texto": null
     },
     {
      "id": "jezero",
@@ -2161,8 +2161,8 @@
       -0.17,
       1
      ],
-     "titulo": "Standing in Jezero",
-     "texto": "I'm still standing in Jezero crater, still in contact, but I can no longer fly."
+     "titulo": null,
+     "texto": null
     },
     {
      "id": "equipo",
@@ -2176,8 +2176,8 @@
       -0.17,
       1
      ],
-     "titulo": "The team",
-     "texto": "Teddy Tzanetos was the project manager at the Jet Propulsion Laboratory, Dave Lavery the program executive at headquarters and Bill Nelson the administrator who announced the end."
+     "titulo": null,
+     "texto": null
     }
    ]
   },
@@ -2282,8 +2282,8 @@
       0,
       0.6
      ],
-     "titulo": "Descent stage",
-     "texto": "I was the lower half of the Apollo 12 lunar module: I ignited the engine, braked the fall and landed in Oceanus Procellarum."
+     "titulo": null,
+     "texto": null
     },
     {
      "id": "motor",
@@ -2297,8 +2297,8 @@
       -0.2,
       1
      ],
-     "titulo": "Descent engine",
-     "texto": "The engine that braked the fall before I landed on four legs in Oceanus Procellarum."
+     "titulo": null,
+     "texto": null
     },
     {
      "id": "patas",
@@ -2312,8 +2312,8 @@
       -0.1,
       1
      ],
-     "titulo": "Four legs",
-     "texto": "I landed on four legs in November 1969. I am still here, with dust gradually covering me."
+     "titulo": null,
+     "texto": null
     },
     {
      "id": "ascenso",
@@ -2327,8 +2327,8 @@
       0.6,
       1
      ],
-     "titulo": "Ascent stage",
-     "texto": "The upper half lifted off with Conrad and Bean and returned home; with me there was no return ticket."
+     "titulo": null,
+     "texto": null
     },
     {
      "id": "instrumentos",
@@ -2342,8 +2342,8 @@
       0,
       0.8
      ],
-     "titulo": "Instruments",
-     "texto": "They left me with the instruments switched on when they departed: I was too heavy to return to Earth."
+     "titulo": null,
+     "texto": null
     }
    ]
   },
@@ -2448,8 +2448,8 @@
       0,
       0.6
      ],
-     "titulo": "Descent stage",
-     "texto": "The lower half of the Apollo 14 lunar module, landed in the Fra Mauro hills in February 1971."
+     "titulo": null,
+     "texto": null
     },
     {
      "id": "radar",
@@ -2463,8 +2463,8 @@
       0.9,
       0.3
      ],
-     "titulo": "Landing radar",
-     "texto": "The radar wasn't giving Shepard what he expected and he had to correct the trajectory by hand to land me."
+     "titulo": null,
+     "texto": null
     },
     {
      "id": "paquetes",
@@ -2478,8 +2478,8 @@
       0,
       0.8
      ],
-     "titulo": "Experiment packages",
-     "texto": "My two experiment packages were left running on the surface, and I with them."
+     "titulo": null,
+     "texto": null
     },
     {
      "id": "ascenso",
@@ -2493,8 +2493,8 @@
       0.6,
       1
      ],
-     "titulo": "Ascent stage",
-     "texto": "My upper half returned with the crew and later ended up crashing into the Moon."
+     "titulo": null,
+     "texto": null
     }
    ]
   },
@@ -2599,8 +2599,8 @@
       0,
       0.6
      ],
-     "titulo": "Descent stage",
-     "texto": "The lower half of the Apollo 16 lunar module, landed in the Descartes highlands on April 21, 1972."
+     "titulo": null,
+     "texto": null
     },
     {
      "id": "instrumentos",
@@ -2614,8 +2614,8 @@
       0,
       0.8
      ],
-     "titulo": "Instruments",
-     "texto": "The instruments they left beside me stayed here with me, in the Descartes highlands."
+     "titulo": null,
+     "texto": null
     },
     {
      "id": "ascenso",
@@ -2629,8 +2629,8 @@
       0.6,
       1
      ],
-     "titulo": "Ascent stage",
-     "texto": "Young and Duke left in my upper half; that half was released afterwards and crashed into the Moon."
+     "titulo": null,
+     "texto": null
     }
    ]
   },
@@ -2735,8 +2735,8 @@
       0,
       0.6
      ],
-     "titulo": "Descent stage",
-     "texto": "The lower half of the Apollo 17 lunar module, landed in Taurus-Littrow on December 11, 1972."
+     "titulo": null,
+     "texto": null
     },
     {
      "id": "escalerilla",
@@ -2750,8 +2750,8 @@
       -0.1,
       1
      ],
-     "titulo": "Ladder",
-     "texto": "The ladder that rested on me fell out of use when they left. No one has set foot on the Moon since."
+     "titulo": null,
+     "texto": null
     },
     {
      "id": "sismometros",
@@ -2765,8 +2765,8 @@
       0,
       0.8
      ],
-     "titulo": "Seismometers",
-     "texto": "The seismometers left beside me recorded the impact of my upper half against the valley."
+     "titulo": null,
+     "texto": null
     },
     {
      "id": "ascenso",
@@ -2780,8 +2780,8 @@
       0.6,
       1
      ],
-     "titulo": "Ascent stage",
-     "texto": "My upper half was deliberately crashed into the valley so that the seismometers would record the impact."
+     "titulo": null,
+     "texto": null
     },
     {
      "id": "rover",
@@ -2795,8 +2795,8 @@
       -0.2,
       1
      ],
-     "titulo": "The rover",
-     "texto": "Cernan and Schmitt drove the rover across the valley and brought back the oldest sample ever returned from the Moon."
+     "titulo": null,
+     "texto": null
     }
    ]
   },
@@ -2896,8 +2896,8 @@
       0.2,
       1
      ],
-     "titulo": "Gusev Crater",
-     "texto": "I landed in Gusev Crater in January 2004 with a ninety-day plan."
+     "titulo": null,
+     "texto": null
     },
     {
      "id": "anios",
@@ -2911,8 +2911,8 @@
       0.02,
       1
      ],
-     "titulo": "Six and a half years",
-     "texto": "I worked for six and a half years and traveled almost eight kilometers, far more than anyone expected of me."
+     "titulo": null,
+     "texto": null
     },
     {
      "id": "agua",
@@ -2926,8 +2926,8 @@
       -0.07,
       1
      ],
-     "titulo": "Water at Columbia",
-     "texto": "In the Columbia Hills appeared minerals that form with water and rocks altered by it."
+     "titulo": null,
+     "texto": null
     },
     {
      "id": "arena",
@@ -2941,8 +2941,8 @@
       -0.07,
       1
      ],
-     "titulo": "The sand trap",
-     "texto": "In 2009 a wheel sank into a pocket of loose sand. Since then I remained motionless, with the Sun increasingly low."
+     "titulo": null,
+     "texto": null
     },
     {
      "id": "silencio",
@@ -2956,8 +2956,8 @@
       -0.2,
       1
      ],
-     "titulo": "The silence",
-     "texto": "In March 2010 I stopped responding, and NASA declared the mission over in May."
+     "titulo": null,
+     "texto": null
     },
     {
      "id": "squyres",
@@ -2971,8 +2971,8 @@
       -0.11,
       1
      ],
-     "titulo": "Steve Squyres",
-     "texto": "Steve Squyres was the principal investigator of the two twin rovers, Spirit and Opportunity."
+     "titulo": null,
+     "texto": null
     }
    ]
   },
@@ -3070,8 +3070,8 @@
       0,
       1
      ],
-     "titulo": "The antenna",
-     "texto": "The main antenna failed to open and I had to work with the small one. Even so, I reached Jupiter in 1995."
+     "titulo": null,
+     "texto": null
     },
     {
      "id": "sonda",
@@ -3085,8 +3085,8 @@
       0,
       1
      ],
-     "titulo": "The probe",
-     "texto": "I released a probe that entered Jupiter's atmosphere and lasted almost an hour before it stopped transmitting."
+     "titulo": null,
+     "texto": null
     },
     {
      "id": "europa",
@@ -3100,8 +3100,8 @@
       0,
       1
      ],
-     "titulo": "Europa's ocean",
-     "texto": "My magnetic field measurements indicated that beneath Europa's icy crust there is a layer of salty water."
+     "titulo": null,
+     "texto": null
     },
     {
      "id": "ocho-anios",
@@ -3115,8 +3115,8 @@
       0,
       1
      ],
-     "titulo": "Eight years",
-     "texto": "I spent eight years orbiting Jupiter, and that finding changed what we look for in the solar system."
+     "titulo": null,
+     "texto": null
     },
     {
      "id": "final",
@@ -3130,8 +3130,8 @@
       0,
       1
      ],
-     "titulo": "The chosen end",
-     "texto": "I had little fuel left and could have crashed uncontrolled into Europa. NASA crashed me into Jupiter on September 21, 2003."
+     "titulo": null,
+     "texto": null
     },
     {
      "id": "alexander",
@@ -3145,8 +3145,8 @@
       0,
       1
      ],
-     "titulo": "Claudia Alexander",
-     "texto": "Claudia Alexander was the scientist who led the mission during its final phase."
+     "titulo": null,
+     "texto": null
     }
    ]
   },
@@ -3244,8 +3244,8 @@
       0.2,
       1
      ],
-     "titulo": "Huygens",
-     "texto": "I spent thirteen years at Saturn. On my side traveled Huygens, from ESA, which I released in December 2004 to descend to Titan."
+     "titulo": null,
+     "texto": null
     },
     {
      "id": "geiseres",
@@ -3259,8 +3259,8 @@
       -0.02,
       1
      ],
-     "titulo": "The geysers",
-     "texto": "I saw columns of vapor and ice emerging from the south pole of Enceladus and crossed them several times. Inside there were molecules that point to liquid water beneath."
+     "titulo": null,
+     "texto": null
     },
     {
      "id": "gran-final",
@@ -3274,8 +3274,8 @@
       -0.06,
       1
      ],
-     "titulo": "The Grand Finale",
-     "texto": "I had little fuel left, so they plotted 22 orbits that passed between Saturn and the edge of the rings."
+     "titulo": null,
+     "texto": null
     },
     {
      "id": "zambullida",
@@ -3289,8 +3289,8 @@
       -0.06,
       1
      ],
-     "titulo": "The last dive",
-     "texto": "The last orbit put me into Saturn's atmosphere on September 15, 2017. I was destroyed there on purpose."
+     "titulo": null,
+     "texto": null
     },
     {
      "id": "sin-contaminar",
@@ -3304,8 +3304,8 @@
       -0.2,
       1
      ],
-     "titulo": "Without contaminating",
-     "texto": "The end was chosen this way so that no moon with possible life would be contaminated by what I carried."
+     "titulo": null,
+     "texto": null
     },
     {
      "id": "porco",
@@ -3319,8 +3319,8 @@
       0.06,
       1
      ],
-     "titulo": "Carolyn Porco",
-     "texto": "Carolyn Porco was the head of the imaging team throughout the mission."
+     "titulo": null,
+     "texto": null
     }
    ]
   },
@@ -3418,8 +3418,8 @@
       0.26,
       1
      ],
-     "titulo": "Stowaway",
-     "texto": "I traveled as a stowaway on Cassini, from which I was separated on December 25, 2004."
+     "titulo": null,
+     "texto": null
     },
     {
      "id": "caida",
@@ -3433,8 +3433,8 @@
       0.11,
       1
      ],
-     "titulo": "Three-week fall",
-     "texto": "I descended for three weeks, entered Titan's atmosphere and deployed parachutes, with no one able to correct me."
+     "titulo": null,
+     "texto": null
     },
     {
      "id": "aterrizaje",
@@ -3448,8 +3448,8 @@
       -0.17,
       1
      ],
-     "titulo": "The farthest landing",
-     "texto": "On January 14, 2005 I touched down on a world more than a billion kilometers away: the farthest landing ever made on another body."
+     "titulo": null,
+     "texto": null
     },
     {
      "id": "minutos",
@@ -3463,8 +3463,8 @@
       -0.07,
       1
      ],
-     "titulo": "Seventy-two minutes",
-     "texto": "I transmitted from the surface longer than planned. My last signal was received by Cassini, which stored it and passed it on to Earth."
+     "titulo": null,
+     "texto": null
     },
     {
      "id": "sigo",
@@ -3478,8 +3478,8 @@
       -0.04,
       1
      ],
-     "titulo": "I'm still there",
-     "texto": "I'm still on Titan, switched off, on a moon with an atmosphere and lakes."
+     "titulo": null,
+     "texto": null
     },
     {
      "id": "zarnecki",
@@ -3493,8 +3493,8 @@
       -0.26,
       1
      ],
-     "titulo": "John Zarnecki",
-     "texto": "John Zarnecki was the lead for the instrument that measured Titan's surface."
+     "titulo": null,
+     "texto": null
     }
    ]
   },
@@ -3593,8 +3593,8 @@
       0.0,
       1
      ],
-     "titulo": "No direct route",
-     "texto": "The Sun pulls too hard: I passed by Earth, twice by Venus and three times by Mercury before I could brake and stay in orbit in 2011."
+     "titulo": null,
+     "texto": null
     },
     {
      "id": "hielo",
@@ -3608,8 +3608,8 @@
       0.04,
       1
      ],
-     "titulo": "Ice at the poles",
-     "texto": "I found water ice in polar craters where the Sun never shines."
+     "titulo": null,
+     "texto": null
     },
     {
      "id": "volcanes",
@@ -3623,8 +3623,8 @@
       0.2,
       1
      ],
-     "titulo": "Ancient volcanoes",
-     "texto": "The volcanoes I saw rewrote the planet's history; I also confirmed that its core is huge and partly liquid."
+     "titulo": null,
+     "texto": null
     },
     {
      "id": "caida",
@@ -3638,8 +3638,8 @@
       -0.2,
       1
      ],
-     "titulo": "The forced landing",
-     "texto": "On April 30, 2015, I ran out of fuel and crashed into the side facing the Sun."
+     "titulo": null,
+     "texto": null
     },
     {
      "id": "crater",
@@ -3653,8 +3653,8 @@
       -0.07,
       1
      ],
-     "titulo": "My crater",
-     "texto": "The crater where I ended up bears my name."
+     "titulo": null,
+     "texto": null
     },
     {
      "id": "solomon",
@@ -3668,8 +3668,8 @@
       0.07,
       1
      ],
-     "titulo": "Sean Solomon",
-     "texto": "Sean Solomon was the principal investigator of the first spacecraft to go into orbit around Mercury."
+     "titulo": null,
+     "texto": null
     }
    ]
   },
@@ -3767,8 +3767,8 @@
       0.2,
       1
      ],
-     "titulo": "Acid clouds",
-     "texto": "On Venus you can't see the ground: there are acid clouds that block the view. That's why it carried a radar."
+     "titulo": null,
+     "texto": null
     },
     {
      "id": "mapa",
@@ -3782,8 +3782,8 @@
       -0.02,
       1
      ],
-     "titulo": "98% of the map",
-     "texto": "What I drew was the relief, not a photo. I mapped 98% of the planet."
+     "titulo": null,
+     "texto": null
     },
     {
      "id": "aerofrenado",
@@ -3797,8 +3797,8 @@
       -0.06,
       1
      ],
-     "titulo": "Aerobraking",
-     "texto": "To save fuel I passed the spacecraft through the upper atmosphere again and again until the orbit closed: it was the first time that technique was used."
+     "titulo": null,
+     "texto": null
     },
     {
      "id": "final",
@@ -3812,8 +3812,8 @@
       -0.06,
       1
      ],
-     "titulo": "The end",
-     "texto": "When the fuel ran out they sent me into the atmosphere on October 11, 1994. I came apart there."
+     "titulo": null,
+     "texto": null
     },
     {
      "id": "aire",
@@ -3827,8 +3827,8 @@
       -0.2,
       1
      ],
-     "titulo": "It may still be there",
-     "texto": "Part of me may still be in Venus's air."
+     "titulo": null,
+     "texto": null
     },
     {
      "id": "stofan",
@@ -3842,8 +3842,8 @@
       0.06,
       1
      ],
-     "titulo": "Ellen Stofan",
-     "texto": "Ellen Stofan was a scientist on the mission's radar team."
+     "titulo": null,
+     "texto": null
     }
    ]
   },
@@ -3941,8 +3941,8 @@
       0.0,
       1
      ],
-     "titulo": "I launched damaged",
-     "texto": "On reaching orbit I lost a solar panel and the thermal shield. The first crew had to go out and repair me with improvised umbrellas."
+     "titulo": null,
+     "texto": null
     },
     {
      "id": "nueve",
@@ -3956,8 +3956,8 @@
       0.0,
       1
      ],
-     "titulo": "Nine people",
-     "texto": "Three crews lived with me, the last one for almost three months."
+     "titulo": null,
+     "texto": null
     },
     {
      "id": "experimentos",
@@ -3971,8 +3971,8 @@
       0.0,
       1
      ],
-     "titulo": "The experiments",
-     "texto": "Experiments were done on the Sun, on Earth and on how the human body behaves without weight."
+     "titulo": null,
+     "texto": null
     },
     {
      "id": "caida",
@@ -3986,8 +3986,8 @@
       0.22,
       1
      ],
-     "titulo": "I fell over Australia",
-     "texto": "On July 11, 1979 I lost altitude and entered the atmosphere out of control. The pieces fell over Western Australia."
+     "titulo": null,
+     "texto": null
     },
     {
      "id": "multa",
@@ -4001,8 +4001,8 @@
       -0.2,
       1
      ],
-     "titulo": "The fine",
-     "texto": "A town in Western Australia fined the United States for littering."
+     "titulo": null,
+     "texto": null
     },
     {
      "id": "museos",
@@ -4016,8 +4016,8 @@
       -0.2,
       1
      ],
-     "titulo": "In museums",
-     "texto": "My remains ended up in museums. Pete Conrad was the commander of the first crew that repaired me in orbit."
+     "titulo": null,
+     "texto": null
     }
    ]
   },
@@ -4116,8 +4116,8 @@
       0.2,
       1
      ],
-     "titulo": "I shot a comet",
-     "texto": "On July 4, 2005, I released a projectile of almost 400 kilos against comet Tempel 1."
+     "titulo": null,
+     "texto": null
     },
     {
      "id": "crater",
@@ -4131,8 +4131,8 @@
       0.0,
       1
      ],
-     "titulo": "The crater",
-     "texto": "The comet didn't notice, but the crater it opened revealed material from inside."
+     "titulo": null,
+     "texto": null
     },
     {
      "id": "segundo",
@@ -4146,8 +4146,8 @@
       0.04,
       1
      ],
-     "titulo": "Second job",
-     "texto": "With the mission already accomplished, they reused me: I passed near Earth, searched for planets outside the solar system and visited another comet again."
+     "titulo": null,
+     "texto": null
     },
     {
      "id": "perdi",
@@ -4161,8 +4161,8 @@
       0.04,
       1
      ],
-     "titulo": "I got lost",
-     "texto": "In 2013 the antenna stopped pointing well and I lost contact."
+     "titulo": null,
+     "texto": null
     },
     {
      "id": "silencio",
@@ -4176,8 +4176,8 @@
       -0.2,
       1
      ],
-     "titulo": "I don't know if I'm still whole",
-     "texto": "I go around out there, in an orbit around the Sun, in silence. Nobody knows exactly where I am."
+     "titulo": null,
+     "texto": null
     },
     {
      "id": "ahearn",
@@ -4191,8 +4191,8 @@
       -0.07,
       1
      ],
-     "titulo": "Michael A'Hearn",
-     "texto": "Michael A'Hearn was the principal investigator of the mission."
+     "titulo": null,
+     "texto": null
     }
    ]
   },
@@ -4292,6 +4292,53 @@
      "texto": "I ran out of fuel to stay in orbit, so they steered me into the far side. On October 28, 2014, the LRO probe photographed my crater from above.",
      "fuente": "NASA — Planned Impact on Moon's Surface"
     }
+   ],
+   "puntos3d": [
+    {
+     "id": "ladee-p1",
+     "pos": [
+      1.17,
+      18.0,
+      -0.4
+     ],
+     "normal": [
+      0,
+      1,
+      0
+     ],
+     "titulo": "Instrument deck",
+     "texto": "The top platform, with the mass spectrometer and the dust detector that measured the Moon's air and dust."
+    },
+    {
+     "id": "ladee-p2",
+     "pos": [
+      -12.5,
+      8.0,
+      -0.4
+     ],
+     "normal": [
+      -1,
+      0,
+      0
+     ],
+     "titulo": "Laser terminal",
+     "texto": "The laser communication terminal that sent data at 622 megabits per second from lunar orbit."
+    },
+    {
+     "id": "ladee-p3",
+     "pos": [
+      1.17,
+      -24.0,
+      -0.4
+     ],
+     "normal": [
+      0,
+      -1,
+      0
+     ],
+     "titulo": "Engine and body",
+     "texto": "The engine that brought it down to 300 metres on its next-to-last orbit, before the planned crash."
+    }
    ]
   },
   {
@@ -4383,6 +4430,53 @@
      "titulo": "Eleven minutes",
      "texto": "A software error switched a thruster on for eleven minutes. I burned the fuel on a manoeuvre that was not scheduled and lost the asteroid and the mission.",
      "fuente": "NASA History — 30 Years Ago: Clementine Changes Our View of the Moon"
+    }
+   ],
+   "puntos3d": [
+    {
+     "id": "clementine-p1",
+     "pos": [
+      -0.0,
+      -0.62,
+      -0.0
+     ],
+     "normal": [
+      0,
+      -1,
+      0
+     ],
+     "titulo": "Antenna",
+     "texto": "The communications antenna points down in the model. From lunar orbit it sent Earth the images for the first complete map of the Moon."
+    },
+    {
+     "id": "clementine-p2",
+     "pos": [
+      2.05,
+      -0.04,
+      0.17
+     ],
+     "normal": [
+      1,
+      0,
+      0
+     ],
+     "titulo": "Solar panels",
+     "texto": "Two flat wings, 4.1 metres tip to tip. With them it flew for 71 days and 297 lunar orbits."
+    },
+    {
+     "id": "clementine-p3",
+     "pos": [
+      0.0,
+      -0.11,
+      0.17
+     ],
+     "normal": [
+      0,
+      0,
+      1
+     ],
+     "titulo": "Body and shielding",
+     "texto": "The octagonal body is wrapped in gold to reflect heat. Inside sat the 8-kilogram sensor package."
     }
    ]
   },
@@ -4484,6 +4578,53 @@
      "texto": "My magnetometer found alternating bands of magnetization in the crust, up to 1.930 kilometres long: the fossil of the magnetic field of an ancient Mars.",
      "fuente": "JPL — Magnetic Stripes Preserve Record of Ancient Mars"
     }
+   ],
+   "puntos3d": [
+    {
+     "id": "mars-global-surveyor-p1",
+     "pos": [
+      0.0,
+      0.29,
+      -4.6
+     ],
+     "normal": [
+      0,
+      0,
+      -1
+     ],
+     "titulo": "Solar panels",
+     "texto": "The two wings opened only partly: one panel stayed about 20 degrees out of place, so braking in the Martian atmosphere took 17 months instead of 130 days."
+    },
+    {
+     "id": "mars-global-surveyor-p2",
+     "pos": [
+      0.79,
+      -2.55,
+      0.01
+     ],
+     "normal": [
+      0,
+      -1,
+      0
+     ],
+     "titulo": "High-gain antenna",
+     "texto": "The dish that pointed at Earth. Through it came the 240,000 images of Mars."
+    },
+    {
+     "id": "mars-global-surveyor-p3",
+     "pos": [
+      0.0,
+      -0.34,
+      0.0
+     ],
+     "normal": [
+      0,
+      0,
+      1
+     ],
+     "titulo": "Body and altimeter",
+     "texto": "The body carries the MOLA laser altimeter, which measured the relief of Mars to within 30 centimetres."
+    }
    ]
   },
   {
@@ -4583,6 +4724,53 @@
      "titulo": "Leaving home",
      "texto": "On November 5, 2018 I crossed the heliopause. With my twin Voyager 1, I am one of only two spacecraft that have reached the space between the stars.",
      "fuente": "JPL — Voyager 2 Enters Interstellar Space"
+    }
+   ],
+   "puntos3d": [
+    {
+     "id": "voyager2-p1",
+     "pos": [
+      0.0,
+      0.13,
+      0.15
+     ],
+     "normal": [
+      0,
+      1,
+      0
+     ],
+     "titulo": "3.66-metre dish",
+     "texto": "The dish that still points at Earth from interstellar space, with a signal that takes more than 16 hours to arrive."
+    },
+    {
+     "id": "voyager2-p2",
+     "pos": [
+      -0.04,
+      -0.02,
+      -0.08
+     ],
+     "normal": [
+      -1,
+      0,
+      0
+     ],
+     "titulo": "RTG generators",
+     "texto": "The three radioisotope generators on the boom. They lose about 4 watts a year, which is why instruments have to be switched off."
+    },
+    {
+     "id": "voyager2-p3",
+     "pos": [
+      0.03,
+      0.05,
+      0.02
+     ],
+     "normal": [
+      0,
+      0,
+      1
+     ],
+     "titulo": "Science platform",
+     "texto": "The platform with the cameras and sensors, and the Golden Record with Earth's sounds and greetings."
     }
    ]
   },
@@ -4684,6 +4872,53 @@
      "texto": "On September 30, 1995 the mission was closed and on November 24 a few minutes of engineering data came in: my last voice, from more than 6.400 million kilometres away.",
      "fuente": "NASA Science — Pioneer 11"
     }
+   ],
+   "puntos3d": [
+    {
+     "id": "pioneer11-p1",
+     "pos": [
+      -0.0,
+      0.06,
+      -0.37
+     ],
+     "normal": [
+      0,
+      0,
+      -1
+     ],
+     "titulo": "Parabolic dish",
+     "texto": "The 2.74-metre dish, the most visible part of the spacecraft. With it came the 440 images of the Saturn system."
+    },
+    {
+     "id": "pioneer11-p2",
+     "pos": [
+      -0.0,
+      1.23,
+      0.6
+     ],
+     "normal": [
+      0,
+      1,
+      0
+     ],
+     "titulo": "RTG generators",
+     "texto": "The radioisotope thermoelectric generators on a boom. They ran for 22 years against the 21 months planned."
+    },
+    {
+     "id": "pioneer11-p3",
+     "pos": [
+      -0.13,
+      -0.09,
+      -0.02
+     ],
+     "normal": [
+      0,
+      0,
+      1
+     ],
+     "titulo": "Instruments",
+     "texto": "The instrument package, with the particle detectors and the magnetometer that found Saturn's magnetic field."
+    }
    ]
   },
   {
@@ -4783,6 +5018,53 @@
      "titulo": "The last message",
      "texto": "On June 30, 2009 my transmitter was switched off, after more than eighteen and a half years of service: more than four times the planned lifetime. My orbit keeps carrying me away from Earth.",
      "fuente": "JPL — Ulysses Ends Historic Mission"
+    }
+   ],
+   "puntos3d": [
+    {
+     "id": "ulysses-p1",
+     "pos": [
+      -0.0,
+      0.31,
+      -0.0
+     ],
+     "normal": [
+      0,
+      1,
+      0
+     ],
+     "titulo": "High-gain antenna",
+     "texto": "The dish that always pointed at Earth while the spacecraft looped over the Sun's poles."
+    },
+    {
+     "id": "ulysses-p2",
+     "pos": [
+      0.32,
+      -0.0,
+      -3.32
+     ],
+     "normal": [
+      0,
+      0,
+      -1
+     ],
+     "titulo": "RTG generator",
+     "texto": "The radioisotope generator on a separate boom so it would not heat the instruments. It powered 18 and a half years of mission."
+    },
+    {
+     "id": "ulysses-p3",
+     "pos": [
+      0.01,
+      -4.2,
+      0.46
+     ],
+     "normal": [
+      0,
+      0,
+      1
+     ],
+     "titulo": "Body and experiments",
+     "texto": "The long spinning body, with the experiments that measured the solar wind and the dust arriving from outside the Solar System."
     }
    ]
   },
@@ -4884,6 +5166,53 @@
      "texto": "In the Ma'at region I found active pits more than 100 metres across and between 50 and 60 metres deep, with one-metre mounds that could be the pieces the comet was built from.",
      "fuente": "JPL — farewell to Rosetta"
     }
+   ],
+   "puntos3d": [
+    {
+     "id": "rosetta-p1",
+     "pos": [
+      -0.48,
+      0.46,
+      -0.39
+     ],
+     "normal": [
+      0,
+      1,
+      0
+     ],
+     "titulo": "Main dish",
+     "texto": "The steerable 2.2-metre dish that sent 220 gigabytes of comet data."
+    },
+    {
+     "id": "rosetta-p2",
+     "pos": [
+      8.46,
+      -0.12,
+      0.2
+     ],
+     "normal": [
+      1,
+      0,
+      0
+     ],
+     "titulo": "Solar panels",
+     "texto": "The two 14-metre wings. Eight hundred million kilometres from the Sun they produced only 395 watts, so the spacecraft slept for two and a half years."
+    },
+    {
+     "id": "rosetta-p3",
+     "pos": [
+      -0.02,
+      -1.57,
+      0.15
+     ],
+     "normal": [
+      0,
+      -1,
+      0
+     ],
+     "titulo": "Philae lander",
+     "texto": "The robot that dropped onto the comet on 12 November 2014 and bounced twice before settling in a spot with no sunlight."
+    }
    ]
   },
   {
@@ -4984,6 +5313,53 @@
      "texto": "On February 15, 2011 I passed 181 kilometres from comet Tempel 1, the first time one of these bodies has been revisited. On March 24, a final 146-second burn closed the mission.",
      "fuente": "JPL — the comet hunter closes its mission"
     }
+   ],
+   "puntos3d": [
+    {
+     "id": "stardust-p1",
+     "pos": [
+      0.0,
+      0.13,
+      0.15
+     ],
+     "normal": [
+      0,
+      0,
+      1
+     ],
+     "titulo": "Return capsule",
+     "texto": "The 45.7-kilogram capsule that came back to Earth on 15 January 2006 with comet dust inside."
+    },
+    {
+     "id": "stardust-p2",
+     "pos": [
+      1.23,
+      0.13,
+      2.25
+     ],
+     "normal": [
+      1,
+      0,
+      0
+     ],
+     "titulo": "Aerogel collector",
+     "texto": "The aerogel grid, a foam almost as light as air, that trapped more than 10,000 particles from comet Wild 2."
+    },
+    {
+     "id": "stardust-p3",
+     "pos": [
+      0.0,
+      0.58,
+      0.15
+     ],
+     "normal": [
+      0,
+      1,
+      0
+     ],
+     "titulo": "Structure and panels",
+     "texto": "The spacecraft structure, with the panels that carried it to the comet and back."
+    }
    ]
   },
   {
@@ -5079,6 +5455,23 @@
      "titulo": "More than planned",
      "texto": "It was designed for an eleven-month mission and it operated for more than three years. On December 18, 2001 the engine was switched off and, after the failed attempt of March 2002, there was no further contact.",
      "fuente": "JPL — farewell to Deep Space 1"
+    }
+   ],
+   "puntos3d": [
+    {
+     "id": "deep-space-1-p1",
+     "pos": [
+      -0.0,
+      0.776,
+      0.047
+     ],
+     "normal": [
+      0.0,
+      1.0,
+      0.0
+     ],
+     "titulo": "Solar panels",
+     "texto": "The two wings that fed the ion engine. The model is a single mesh."
     }
    ]
   },
@@ -5180,6 +5573,23 @@
      "texto": "On January 30, 2020 I entered safe mode and closed the mission, with more than 16 years of service. My data are still available in the IRSA/IPAC archive.",
      "fuente": "JPL — farewell to Spitzer"
     }
+   ],
+   "puntos3d": [
+    {
+     "id": "spitzer-p1",
+     "pos": [
+      0.0,
+      2.25,
+      -0.023
+     ],
+     "normal": [
+      0.0,
+      1.0,
+      0.0
+     ],
+     "titulo": "Telescope and cryostat",
+     "texto": "The 85-centimetre telescope tube inside the helium cryostat. The model is a single mesh."
+    }
    ]
   },
   {
@@ -5276,6 +5686,23 @@
      "texto": "On August 20, 2010 I took the last science data and on September 8 I fired the thrusters to leave L2. I was left in a parking orbit around the Sun.",
      "fuente": "NASA Goddard — WMAP Project Completes Satellite Operations"
     }
+   ],
+   "puntos3d": [
+    {
+     "id": "wmap-p1",
+     "pos": [
+      -0.415,
+      103.359,
+      -0.877
+     ],
+     "normal": [
+      0.0,
+      1.0,
+      0.0
+     ],
+     "titulo": "Twin dishes",
+     "texto": "The two back-to-back dishes that watched the microwave background at five frequencies. The model is a single mesh and does not allow separating more parts."
+    }
    ]
   },
   {
@@ -5371,6 +5798,23 @@
      "titulo": "Ten years of life",
      "texto": "I lasted ten years, five times my planned life, and JAXA declared the mission complete on August 26, 2015. On January 5, 2025 I disintegrated on re-entering the atmosphere.",
      "fuente": "HEASARC — End of Suzaku Mission"
+    }
+   ],
+   "puntos3d": [
+    {
+     "id": "suzaku-p1",
+     "pos": [
+      -0.019,
+      0.936,
+      -0.733
+     ],
+     "normal": [
+      0.0,
+      1.0,
+      0.0
+     ],
+     "titulo": "X-ray telescopes",
+     "texto": "The four X-ray telescope modules with thin aluminium foils. The model is a single mesh."
     }
    ]
   },
@@ -5472,6 +5916,23 @@
      "texto": "One gyroscope began to fail in April 1999 and was lost in December, and that hastened the end of the mission: four braking burns and a controlled re-entry over the Pacific.",
      "fuente": "HEASARC — CGRO Deorbit"
     }
+   ],
+   "puntos3d": [
+    {
+     "id": "compton-gro-p1",
+     "pos": [
+      -0.141,
+      0.224,
+      0.001
+     ],
+     "normal": [
+      0.0,
+      1.0,
+      0.0
+     ],
+     "titulo": "Instruments",
+     "texto": "The block of four instruments that swept the sky in gamma rays. The model is a single mesh."
+    }
    ]
   },
   {
@@ -5563,6 +6024,23 @@
      "titulo": "The last push",
      "texto": "Progress M43 raised my orbit in October 2000 and M1-5 arrived in January 2001 with 5.900 pounds of propellant. Its three burns on March 23, 2001 brought me down into the South Pacific, in sight of Fiji.",
      "fuente": "NASA History — Space Station Mir Reenters Earth's Atmosphere"
+    }
+   ],
+   "puntos3d": [
+    {
+     "id": "mir-p1",
+     "pos": [
+      449.25,
+      888.54,
+      -936.937
+     ],
+     "normal": [
+      0.0,
+      1.0,
+      0.0
+     ],
+     "titulo": "Station structure",
+     "texto": "The whole station: the core module with its docked modules. Parts cannot be separated here because the model is a single mesh."
     }
    ]
   },
@@ -5659,6 +6137,53 @@
      "titulo": "The return",
      "texto": "In February 2019 we made the final deorbit manoeuvres so as not to leave space junk in orbit. Spacecraft A re-entered on March 11, 2026, earlier than expected because of solar maximum.",
      "fuente": "NASA — Van Allen Probe A to Re-enter Atmosphere"
+    }
+   ],
+   "puntos3d": [
+    {
+     "id": "van-allen-probes-p1",
+     "pos": [
+      0.0,
+      14.3,
+      0.0
+     ],
+     "normal": [
+      0,
+      1,
+      0
+     ],
+     "titulo": "Solar panels",
+     "texto": "The four deployable disc-shaped panels that powered each spacecraft."
+    },
+    {
+     "id": "van-allen-probes-p2",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "normal": [
+      1,
+      0,
+      0
+     ],
+     "titulo": "Electric field antennas",
+     "texto": "The long boom that measured the electric field. With it came the discovery of a third radiation belt around Earth."
+    },
+    {
+     "id": "van-allen-probes-p3",
+     "pos": [
+      0.0,
+      -1.13,
+      0.0
+     ],
+     "normal": [
+      0,
+      -1,
+      0
+     ],
+     "titulo": "Body and instruments",
+     "texto": "The spinning octagonal body, with the instruments that measured the electrons and ions of the belts."
     }
    ]
   },
@@ -5760,6 +6285,23 @@
      "texto": "It was designed for four years and worked for more than thirty. One recorder failed in 2012 and the second in June 2022; ISAS/JAXA closed operations on November 28, 2022.",
      "fuente": "NASA — Geotail operations end"
     }
+   ],
+   "puntos3d": [
+    {
+     "id": "geotail-p1",
+     "pos": [
+      109.277,
+      3678.745,
+      0.607
+     ],
+     "normal": [
+      0.0,
+      1.0,
+      0.0
+     ],
+     "titulo": "Wire booms",
+     "texto": "The two 100-metre booms that measured the electric field in the magnetic tail. The model is a single mesh."
+    }
    ]
   },
   {
@@ -5860,6 +6402,53 @@
      "texto": "Salsa re-entered on September 8, 2024, Samba on August 31, 2026 and Tango on September 1, 2026. That was 26 years of science that ended up producing re-entry data.",
      "fuente": "ESA — Cluster's encore for re-entry science"
     }
+   ],
+   "puntos3d": [
+    {
+     "id": "cluster-ii-p1",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "normal": [
+      0,
+      1,
+      0
+     ],
+     "titulo": "Body",
+     "texto": "The central body of one of the four identical spacecraft flying in a tetrahedral formation."
+    },
+    {
+     "id": "cluster-ii-p2",
+     "pos": [
+      -0.11,
+      0.07,
+      -0.44
+     ],
+     "normal": [
+      0,
+      0,
+      -1
+     ],
+     "titulo": "Rigid booms",
+     "texto": "The magnetometer booms, held away from the body so the spacecraft itself would not disturb the magnetic field measurement."
+    },
+    {
+     "id": "cluster-ii-p3",
+     "pos": [
+      0.0,
+      -0.06,
+      0.0
+     ],
+     "normal": [
+      0,
+      -1,
+      0
+     ],
+     "titulo": "Wire antennas",
+     "texto": "The long antennas that measured the electric field. With them it mapped Earth's magnetosphere in three dimensions."
+    }
    ]
   },
   {
@@ -5955,6 +6544,53 @@
      "titulo": "The engine of the aurora",
      "texto": "In 2000 I identified the Alfvén waves that carry the aurora's energy: they travel at 10.000 km/s at about 30.000-40.000 km altitude, with enough energy to light it.",
      "fuente": "NASA Goddard — Polar, September 2000"
+    }
+   ],
+   "puntos3d": [
+    {
+     "id": "polar-p1",
+     "pos": [
+      0.0,
+      1.16,
+      0.1
+     ],
+     "normal": [
+      0,
+      1,
+      0
+     ],
+     "titulo": "Auroral cameras",
+     "texto": "The cameras that photographed the aurora at different wavelengths while the instruments measured it."
+    },
+    {
+     "id": "polar-p2",
+     "pos": [
+      -6.7,
+      -0.28,
+      -0.0
+     ],
+     "normal": [
+      -1,
+      0,
+      0
+     ],
+     "titulo": "Electric field antennas",
+     "texto": "The 100- and 130-metre booms that measured the electric field in the outer magnetosphere."
+    },
+    {
+     "id": "polar-p3",
+     "pos": [
+      0.0,
+      -0.28,
+      -0.0
+     ],
+     "normal": [
+      0,
+      0,
+      1
+     ],
+     "titulo": "Body",
+     "texto": "The spinning body with its twelve instruments, three of them imagers."
     }
    ]
   },
@@ -6052,6 +6688,53 @@
      "texto": "It ran out of fuel and NASA and JAXA closed the science on April 8, 2015. On June 15 it broke up over the southern Indian Ocean; its successor, GPM, carries the series on.",
      "fuente": "NASA — The TRMM mission ends after 17 years"
     }
+   ],
+   "puntos3d": [
+    {
+     "id": "trmm-p1",
+     "pos": [
+      -66.3,
+      2.1,
+      8.6
+     ],
+     "normal": [
+      -1,
+      0,
+      0
+     ],
+     "titulo": "Solar panels",
+     "texto": "The wing that powered the satellite. With it, the mission ran 17 years against a design life of 3."
+    },
+    {
+     "id": "trmm-p2",
+     "pos": [
+      -27.3,
+      2.1,
+      -84.3
+     ],
+     "normal": [
+      0,
+      0,
+      -1
+     ],
+     "titulo": "Radar arm",
+     "texto": "The arm that held the radar away from the other instruments so its pulses would not interfere with them."
+    },
+    {
+     "id": "trmm-p3",
+     "pos": [
+      37.7,
+      3.5,
+      1.7
+     ],
+     "normal": [
+      0,
+      0,
+      1
+     ],
+     "titulo": "Body and radar",
+     "texto": "The modular body, with the 13.8 GHz precipitation radar: the first time the inside of a storm was seen in three dimensions."
+    }
    ]
   },
   {
@@ -6147,6 +6830,23 @@
      "titulo": "The end",
      "texto": "In December 2001 my successor Jason arrived and we flew in tandem for almost three years. A seized wheel and the last command of January 18, 2006 closed the mission.",
      "fuente": "JPL — The TOPEX/Poseidon mission ends"
+    }
+   ],
+   "puntos3d": [
+    {
+     "id": "topex-poseidon-p1",
+     "pos": [
+      -123.415,
+      142.225,
+      -10.571
+     ],
+     "normal": [
+      0.0,
+      1.0,
+      0.0
+     ],
+     "titulo": "Solar panels",
+     "texto": "The two wings that power the altimetry satellite. The model is a single mesh and does not allow separating the rest."
     }
    ]
   }

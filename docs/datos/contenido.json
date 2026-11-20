@@ -4292,6 +4292,53 @@
      "texto": "Me quedé sin combustible para seguir en órbita, así que me dirigieron contra la cara oculta. El 28 de octubre de 2014, la sonda LRO fotografió mi cráter desde arriba.",
      "fuente": "NASA — Planned Impact on Moon's Surface"
     }
+   ],
+   "puntos3d": [
+    {
+     "id": "ladee-p1",
+     "pos": [
+      1.17,
+      18.0,
+      -0.4
+     ],
+     "normal": [
+      0,
+      1,
+      0
+     ],
+     "titulo": "Cubierta de instrumentos",
+     "texto": "La plataforma de arriba, con el espectrómetro de masas y el detector de polvo que midieron el aire y el polvo de la Luna."
+    },
+    {
+     "id": "ladee-p2",
+     "pos": [
+      -12.5,
+      8.0,
+      -0.4
+     ],
+     "normal": [
+      -1,
+      0,
+      0
+     ],
+     "titulo": "Terminal láser",
+     "texto": "El terminal de comunicación láser que transmitió a 622 megabits por segundo desde la órbita lunar."
+    },
+    {
+     "id": "ladee-p3",
+     "pos": [
+      1.17,
+      -24.0,
+      -0.4
+     ],
+     "normal": [
+      0,
+      -1,
+      0
+     ],
+     "titulo": "Motor y cuerpo",
+     "texto": "El motor que la frenó hasta los 300 metros de altura en su penúltima vuelta, antes de estrellarla a propósito."
+    }
    ]
   },
   {
@@ -4383,6 +4430,53 @@
      "titulo": "Once minutos",
      "texto": "Un error de software encendió un propulsor durante once minutos. Gasté el combustible en una maniobra que no tocaba y perdí el asteroide y la misión.",
      "fuente": "NASA History — 30 Years Ago: Clementine Changes Our View of the Moon"
+    }
+   ],
+   "puntos3d": [
+    {
+     "id": "clementine-p1",
+     "pos": [
+      -0.0,
+      -0.62,
+      -0.0
+     ],
+     "normal": [
+      0,
+      -1,
+      0
+     ],
+     "titulo": "Antena",
+     "texto": "La antena de comunicaciones apunta hacia abajo en el modelo. Desde la órbita lunar enviaba a la Tierra las imágenes del primer mapa completo de la Luna."
+    },
+    {
+     "id": "clementine-p2",
+     "pos": [
+      2.05,
+      -0.04,
+      0.17
+     ],
+     "normal": [
+      1,
+      0,
+      0
+     ],
+     "titulo": "Paneles solares",
+     "texto": "Dos alas planas de 4,1 metros de punta a punta. Con ellas recorrió 71 días y 297 órbitas lunares."
+    },
+    {
+     "id": "clementine-p3",
+     "pos": [
+      0.0,
+      -0.11,
+      0.17
+     ],
+     "normal": [
+      0,
+      0,
+      1
+     ],
+     "titulo": "Cuerpo y blindaje",
+     "texto": "El cuerpo octogonal va forrado de oro para reflejar el calor. Dentro cabía el paquete de sensores de 8 kilos."
     }
    ]
   },
@@ -4484,6 +4578,53 @@
      "texto": "Mi magnetómetro encontró bandas alternas de magnetización en la corteza, de hasta 1.930 kilómetros de largo: el fósil del campo magnético de un Marte antiguo.",
      "fuente": "JPL — Magnetic Stripes Preserve Record of Ancient Mars"
     }
+   ],
+   "puntos3d": [
+    {
+     "id": "mars-global-surveyor-p1",
+     "pos": [
+      0.0,
+      0.29,
+      -4.6
+     ],
+     "normal": [
+      0,
+      0,
+      -1
+     ],
+     "titulo": "Paneles solares",
+     "texto": "Las dos alas se desplegaron a medias: un panel quedó unos 20 grados fuera de sitio y el frenado en la atmósfera de Marte pasó de 130 días a 17 meses."
+    },
+    {
+     "id": "mars-global-surveyor-p2",
+     "pos": [
+      0.79,
+      -2.55,
+      0.01
+     ],
+     "normal": [
+      0,
+      -1,
+      0
+     ],
+     "titulo": "Antena de alta ganancia",
+     "texto": "La antena que apuntaba a la Tierra. Por ella llegaron las 240.000 imágenes de Marte."
+    },
+    {
+     "id": "mars-global-surveyor-p3",
+     "pos": [
+      0.0,
+      -0.34,
+      0.0
+     ],
+     "normal": [
+      0,
+      0,
+      1
+     ],
+     "titulo": "Cuerpo y altímetro",
+     "texto": "En el cuerpo va el altímetro láser MOLA, que midió el relieve de Marte con precisión de 30 centímetros."
+    }
    ]
   },
   {
@@ -4583,6 +4724,53 @@
      "titulo": "Salir de casa",
      "texto": "El 5 de noviembre de 2018 crucé la heliopausa. Soy, con mi gemela Voyager 1, una de las dos únicas naves que han llegado al espacio entre las estrellas.",
      "fuente": "JPL — Voyager 2 Enters Interstellar Space"
+    }
+   ],
+   "puntos3d": [
+    {
+     "id": "voyager2-p1",
+     "pos": [
+      0.0,
+      0.13,
+      0.15
+     ],
+     "normal": [
+      0,
+      1,
+      0
+     ],
+     "titulo": "Antena de 3,66 metros",
+     "texto": "La parabólica que sigue apuntando a la Tierra desde el espacio interestelar, con una señal que tarda más de 16 horas en llegar."
+    },
+    {
+     "id": "voyager2-p2",
+     "pos": [
+      -0.04,
+      -0.02,
+      -0.08
+     ],
+     "normal": [
+      -1,
+      0,
+      0
+     ],
+     "titulo": "Generadores RTG",
+     "texto": "Los tres generadores de radioisótopos del mástil. Cada año pierden unos 4 vatios, y por eso hay que ir apagando instrumentos."
+    },
+    {
+     "id": "voyager2-p3",
+     "pos": [
+      0.03,
+      0.05,
+      0.02
+     ],
+     "normal": [
+      0,
+      0,
+      1
+     ],
+     "titulo": "Plataforma científica",
+     "texto": "La plataforma con las cámaras y los sensores, y el disco de oro con los sonidos y saludos de la Tierra."
     }
    ]
   },
@@ -4684,6 +4872,53 @@
      "texto": "El 30 de septiembre de 1995 se cerró la misión y el 24 de noviembre llegaron unos minutos de datos de ingeniería: mi última voz, a más de 6.400 millones de kilómetros.",
      "fuente": "NASA Science — Pioneer 11"
     }
+   ],
+   "puntos3d": [
+    {
+     "id": "pioneer11-p1",
+     "pos": [
+      -0.0,
+      0.06,
+      -0.37
+     ],
+     "normal": [
+      0,
+      0,
+      -1
+     ],
+     "titulo": "Antena parabólica",
+     "texto": "La parabólica de 2,74 metros, la parte que más se ve de la nave. Con ella envió las 440 imágenes del sistema de Saturno."
+    },
+    {
+     "id": "pioneer11-p2",
+     "pos": [
+      -0.0,
+      1.23,
+      0.6
+     ],
+     "normal": [
+      0,
+      1,
+      0
+     ],
+     "titulo": "Generadores RTG",
+     "texto": "Los generadores termoeléctricos de radioisótopos, montados en un mástil. Funcionaron 22 años, frente a los 21 meses previstos."
+    },
+    {
+     "id": "pioneer11-p3",
+     "pos": [
+      -0.13,
+      -0.09,
+      -0.02
+     ],
+     "normal": [
+      0,
+      0,
+      1
+     ],
+     "titulo": "Instrumentos",
+     "texto": "El paquete de instrumentos, con los detectores de partículas y el magnetómetro que descubrió el campo magnético de Saturno."
+    }
    ]
   },
   {
@@ -4783,6 +5018,53 @@
      "titulo": "El último mensaje",
      "texto": "El 30 de junio de 2009 se apagó mi transmisor, tras más de dieciocho años y medio de servicio: más de cuatro veces la vida útil prevista. Mi órbita sigue alejándome de la Tierra.",
      "fuente": "JPL — Ulysses Ends Historic Mission"
+    }
+   ],
+   "puntos3d": [
+    {
+     "id": "ulysses-p1",
+     "pos": [
+      -0.0,
+      0.31,
+      -0.0
+     ],
+     "normal": [
+      0,
+      1,
+      0
+     ],
+     "titulo": "Antena de alta ganancia",
+     "texto": "La antena que apuntaba siempre a la Tierra mientras la nave daba vueltas sobre los polos del Sol."
+    },
+    {
+     "id": "ulysses-p2",
+     "pos": [
+      0.32,
+      -0.0,
+      -3.32
+     ],
+     "normal": [
+      0,
+      0,
+      -1
+     ],
+     "titulo": "Generador RTG",
+     "texto": "El generador de radioisótopos, en un mástil aparte para no calentar los instrumentos. Alimentó 18 años y medio de misión."
+    },
+    {
+     "id": "ulysses-p3",
+     "pos": [
+      0.01,
+      -4.2,
+      0.46
+     ],
+     "normal": [
+      0,
+      0,
+      1
+     ],
+     "titulo": "Cuerpo y experimentos",
+     "texto": "El cuerpo alargado y giratorio, con los experimentos que midieron el viento solar y el polvo que llega de fuera del sistema solar."
     }
    ]
   },
@@ -4884,6 +5166,53 @@
      "texto": "En la región Ma'at encontré pozos activos de más de 100 metros de diámetro y entre 50 y 60 de profundidad, con montículos de un metro que podrían ser las piezas con las que se formó el cometa.",
      "fuente": "JPL — despedida de Rosetta"
     }
+   ],
+   "puntos3d": [
+    {
+     "id": "rosetta-p1",
+     "pos": [
+      -0.48,
+      0.46,
+      -0.39
+     ],
+     "normal": [
+      0,
+      1,
+      0
+     ],
+     "titulo": "Antena principal",
+     "texto": "La parabólica orientable de 2,2 metros con la que envió 220 gigabytes de datos del cometa."
+    },
+    {
+     "id": "rosetta-p2",
+     "pos": [
+      8.46,
+      -0.12,
+      0.2
+     ],
+     "normal": [
+      1,
+      0,
+      0
+     ],
+     "titulo": "Paneles solares",
+     "texto": "Las dos alas de 14 metros. A 800 millones de kilómetros del Sol solo daban 395 vatios, así que la nave pasó dos años y medio en hibernación."
+    },
+    {
+     "id": "rosetta-p3",
+     "pos": [
+      -0.02,
+      -1.57,
+      0.15
+     ],
+     "normal": [
+      0,
+      -1,
+      0
+     ],
+     "titulo": "Philae, el aterrizador",
+     "texto": "El robot que bajó al cometa el 12 de noviembre de 2014 y rebotó dos veces antes de quedarse en un sitio sin luz."
+    }
    ]
   },
   {
@@ -4984,6 +5313,53 @@
      "texto": "El 15 de febrero de 2011 pasé a 181 kilómetros del cometa Tempel 1, la primera vez que se revisita uno de estos cuerpos. El 24 de marzo, un encendido final de 146 segundos cerró la misión.",
      "fuente": "JPL — el cazador de cometas cierra su misión"
     }
+   ],
+   "puntos3d": [
+    {
+     "id": "stardust-p1",
+     "pos": [
+      0.0,
+      0.13,
+      0.15
+     ],
+     "normal": [
+      0,
+      0,
+      1
+     ],
+     "titulo": "Cápsula de retorno",
+     "texto": "La cápsula de 45,7 kilos que volvió a la Tierra el 15 de enero de 2006 con polvo de cometa dentro."
+    },
+    {
+     "id": "stardust-p2",
+     "pos": [
+      1.23,
+      0.13,
+      2.25
+     ],
+     "normal": [
+      1,
+      0,
+      0
+     ],
+     "titulo": "Colector de aerogel",
+     "texto": "La rejilla con aerogel, una espuma casi tan ligera como el aire, que atrapó más de 10.000 partículas del cometa Wild 2."
+    },
+    {
+     "id": "stardust-p3",
+     "pos": [
+      0.0,
+      0.58,
+      0.15
+     ],
+     "normal": [
+      0,
+      1,
+      0
+     ],
+     "titulo": "Estructura y paneles",
+     "texto": "La estructura de la nave, con los paneles que la llevaron hasta el cometa y de vuelta."
+    }
    ]
   },
   {
@@ -5079,6 +5455,23 @@
      "titulo": "Más de lo previsto",
      "texto": "Estaba diseñada para once meses de misión y operó más de tres años. El 18 de diciembre de 2001 se apagó el motor y, tras el intento fallido de marzo de 2002, ya no hubo más contacto.",
      "fuente": "JPL — despedida de Deep Space 1"
+    }
+   ],
+   "puntos3d": [
+    {
+     "id": "deep-space-1-p1",
+     "pos": [
+      -0.0,
+      0.776,
+      0.047
+     ],
+     "normal": [
+      0.0,
+      1.0,
+      0.0
+     ],
+     "titulo": "Paneles solares",
+     "texto": "Las dos alas que alimentaban el motor iónico. El modelo es una sola malla."
     }
    ]
   },
@@ -5180,6 +5573,23 @@
      "texto": "El 30 de enero de 2020 entré en modo seguro y cerré la misión, con más de 16 años de servicio. Mis datos siguen disponibles en el archivo del IRSA/IPAC.",
      "fuente": "JPL — despedida de Spitzer"
     }
+   ],
+   "puntos3d": [
+    {
+     "id": "spitzer-p1",
+     "pos": [
+      0.0,
+      2.25,
+      -0.023
+     ],
+     "normal": [
+      0.0,
+      1.0,
+      0.0
+     ],
+     "titulo": "Telescopio y criostato",
+     "texto": "El tubo del telescopio de 85 centímetros dentro del criostato de helio. El modelo es una sola malla."
+    }
    ]
   },
   {
@@ -5276,6 +5686,23 @@
      "texto": "El 20 de agosto de 2010 tomé el último dato científico y el 8 de septiembre encendí los propulsores para salir de L2. Quedé en una órbita de aparcamiento alrededor del Sol.",
      "fuente": "NASA Goddard — WMAP Project Completes Satellite Operations"
     }
+   ],
+   "puntos3d": [
+    {
+     "id": "wmap-p1",
+     "pos": [
+      -0.415,
+      103.359,
+      -0.877
+     ],
+     "normal": [
+      0.0,
+      1.0,
+      0.0
+     ],
+     "titulo": "Antenas gemelas",
+     "texto": "Las dos antenas espalda con espalda que miraban el fondo de microondas en cinco frecuencias. El modelo viene en una sola malla y no deja separar más piezas."
+    }
    ]
   },
   {
@@ -5371,6 +5798,23 @@
      "titulo": "Diez años de vida",
      "texto": "Aguanté diez años, cinco veces mi vida prevista, y JAXA declaró completa la misión el 26 de agosto de 2015. El 5 de enero de 2025 me desintegré al reentrar en la atmósfera.",
      "fuente": "HEASARC — End of Suzaku Mission"
+    }
+   ],
+   "puntos3d": [
+    {
+     "id": "suzaku-p1",
+     "pos": [
+      -0.019,
+      0.936,
+      -0.733
+     ],
+     "normal": [
+      0.0,
+      1.0,
+      0.0
+     ],
+     "titulo": "Telescopios de rayos X",
+     "texto": "Los cuatro módulos de telescopios de rayos X, con láminas finas de aluminio. El modelo es una sola malla."
     }
    ]
   },
@@ -5472,6 +5916,23 @@
      "texto": "Un giroscopio empezó a fallar en abril de 1999 y se perdió en diciembre, y eso precipitó el fin de la misión: cuatro encendidos de frenado y una reentrada controlada sobre el Pacífico.",
      "fuente": "HEASARC — CGRO Deorbit"
     }
+   ],
+   "puntos3d": [
+    {
+     "id": "compton-gro-p1",
+     "pos": [
+      -0.141,
+      0.224,
+      0.001
+     ],
+     "normal": [
+      0.0,
+      1.0,
+      0.0
+     ],
+     "titulo": "Instrumentos",
+     "texto": "El bloque de los cuatro instrumentos que barrieron el cielo en rayos gamma. El modelo es una sola malla."
+    }
    ]
   },
   {
@@ -5563,6 +6024,23 @@
      "titulo": "El último empujón",
      "texto": "El Progress M43 me subió de órbita en octubre de 2000 y el M1-5 llegó en enero de 2001 con 5.900 libras de propelente. Sus tres encendidos del 23 de marzo de 2001 me hundieron en el Pacífico sur, a la vista de Fiyi.",
      "fuente": "NASA History — Space Station Mir Reenters Earth's Atmosphere"
+    }
+   ],
+   "puntos3d": [
+    {
+     "id": "mir-p1",
+     "pos": [
+      449.25,
+      888.54,
+      -936.937
+     ],
+     "normal": [
+      0.0,
+      1.0,
+      0.0
+     ],
+     "titulo": "Estructura de la estación",
+     "texto": "La estación entera: el bloque central con los módulos acoplados. Aquí no se puede separar pieza por pieza porque el modelo viene en una sola malla."
     }
    ]
   },
@@ -5659,6 +6137,53 @@
      "titulo": "El regreso",
      "texto": "En febrero de 2019 hicimos las maniobras finales de deorbitación para no dejar chatarra espacial en órbita. La nave A reentró el 11 de marzo de 2026, antes de lo previsto por el máximo solar.",
      "fuente": "NASA — Van Allen Probe A to Re-enter Atmosphere"
+    }
+   ],
+   "puntos3d": [
+    {
+     "id": "van-allen-probes-p1",
+     "pos": [
+      0.0,
+      14.3,
+      0.0
+     ],
+     "normal": [
+      0,
+      1,
+      0
+     ],
+     "titulo": "Paneles solares",
+     "texto": "Los cuatro paneles desplegables, en forma de discos, que daban energía a cada nave."
+    },
+    {
+     "id": "van-allen-probes-p2",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "normal": [
+      1,
+      0,
+      0
+     ],
+     "titulo": "Antenas del campo eléctrico",
+     "texto": "El mástil largo que medía el campo eléctrico. Con él se descubrió un tercer cinturón de radiación alrededor de la Tierra."
+    },
+    {
+     "id": "van-allen-probes-p3",
+     "pos": [
+      0.0,
+      -1.13,
+      0.0
+     ],
+     "normal": [
+      0,
+      -1,
+      0
+     ],
+     "titulo": "Cuerpo e instrumentos",
+     "texto": "El cuerpo octogonal giratorio, con los instrumentos que midieron los electrones y los iones de los cinturones."
     }
    ]
   },
@@ -5760,6 +6285,23 @@
      "texto": "Estaba diseñado para cuatro años y funcionó más de treinta. Falló un grabador en 2012 y el segundo en junio de 2022; el ISAS/JAXA cerró las operaciones el 28 de noviembre de 2022.",
      "fuente": "NASA — Terminan las operaciones de Geotail"
     }
+   ],
+   "puntos3d": [
+    {
+     "id": "geotail-p1",
+     "pos": [
+      109.277,
+      3678.745,
+      0.607
+     ],
+     "normal": [
+      0.0,
+      1.0,
+      0.0
+     ],
+     "titulo": "Antenas de hilo",
+     "texto": "Los dos brazos de 100 metros que medían el campo eléctrico en la cola magnética. El modelo es una sola malla."
+    }
    ]
   },
   {
@@ -5860,6 +6402,53 @@
      "texto": "Salsa reentró el 8 de septiembre de 2024, Samba el 31 de agosto de 2026 y Tango el 1 de septiembre de 2026. Fueron 26 años de ciencia que acabaron dando datos de reentrada.",
      "fuente": "ESA — El encore de Cluster para la ciencia de reentrada"
     }
+   ],
+   "puntos3d": [
+    {
+     "id": "cluster-ii-p1",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "normal": [
+      0,
+      1,
+      0
+     ],
+     "titulo": "Cuerpo",
+     "texto": "El cuerpo central de una de las cuatro naves idénticas que volaban en formación tetraédrica."
+    },
+    {
+     "id": "cluster-ii-p2",
+     "pos": [
+      -0.11,
+      0.07,
+      -0.44
+     ],
+     "normal": [
+      0,
+      0,
+      -1
+     ],
+     "titulo": "Mástiles rígidos",
+     "texto": "Los mástiles del magnetómetro, que iban separados del cuerpo para que la propia nave no alterase la medida del campo magnético."
+    },
+    {
+     "id": "cluster-ii-p3",
+     "pos": [
+      0.0,
+      -0.06,
+      0.0
+     ],
+     "normal": [
+      0,
+      -1,
+      0
+     ],
+     "titulo": "Antenas de hilo",
+     "texto": "Las antenas largas que medían el campo eléctrico. Con ellas cartografió la magnetosfera terrestre en tres dimensiones."
+    }
    ]
   },
   {
@@ -5955,6 +6544,53 @@
      "titulo": "El motor de la aurora",
      "texto": "En 2000 identifiqué las ondas de Alfvén que transportan la energía de la aurora: viajan a 10.000 km/s a unos 30.000-40.000 km de altitud, con energía suficiente para encenderla.",
      "fuente": "NASA Goddard — Polar, septiembre de 2000"
+    }
+   ],
+   "puntos3d": [
+    {
+     "id": "polar-p1",
+     "pos": [
+      0.0,
+      1.16,
+      0.1
+     ],
+     "normal": [
+      0,
+      1,
+      0
+     ],
+     "titulo": "Cámaras de la aurora",
+     "texto": "Las cámaras que fotografiaron la aurora en distintas longitudes de onda mientras los instrumentos la medían."
+    },
+    {
+     "id": "polar-p2",
+     "pos": [
+      -6.7,
+      -0.28,
+      -0.0
+     ],
+     "normal": [
+      -1,
+      0,
+      0
+     ],
+     "titulo": "Antenas de campo eléctrico",
+     "texto": "Los mástiles de 100 y 130 metros que medían el campo eléctrico en la magnetosfera exterior."
+    },
+    {
+     "id": "polar-p3",
+     "pos": [
+      0.0,
+      -0.28,
+      -0.0
+     ],
+     "normal": [
+      0,
+      0,
+      1
+     ],
+     "titulo": "Cuerpo",
+     "texto": "El cuerpo giratorio con los doce instrumentos, tres de ellos de imagen."
     }
    ]
   },
@@ -6052,6 +6688,53 @@
      "texto": "Se quedó sin combustible y la NASA y la JAXA cerraron la ciencia el 8 de abril de 2015. El 15 de junio se desintegró sobre el Índico Sur; su relevo, GPM, sigue la serie.",
      "fuente": "NASA — La misión TRMM termina tras 17 años"
     }
+   ],
+   "puntos3d": [
+    {
+     "id": "trmm-p1",
+     "pos": [
+      -66.3,
+      2.1,
+      8.6
+     ],
+     "normal": [
+      -1,
+      0,
+      0
+     ],
+     "titulo": "Paneles solares",
+     "texto": "El ala que daba energía al satélite. Con ella funcionó 17 años, frente a los 3 de diseño."
+    },
+    {
+     "id": "trmm-p2",
+     "pos": [
+      -27.3,
+      2.1,
+      -84.3
+     ],
+     "normal": [
+      0,
+      0,
+      -1
+     ],
+     "titulo": "Brazo del radar",
+     "texto": "El brazo que separaba el radar de los demás instrumentos para que sus emisiones no los interferasen."
+    },
+    {
+     "id": "trmm-p3",
+     "pos": [
+      37.7,
+      3.5,
+      1.7
+     ],
+     "normal": [
+      0,
+      0,
+      1
+     ],
+     "titulo": "Cuerpo y radar",
+     "texto": "El cuerpo modular, con el radar de precipitación de 13,8 GHz: la primera vez que se vio el interior de una tormenta en tres dimensiones."
+    }
    ]
   },
   {
@@ -6147,6 +6830,23 @@
      "titulo": "El final",
      "texto": "En diciembre de 2001 llegó mi sucesor Jason y volamos en tándem casi tres años. Una rueda bloqueada y el último comando del 18 de enero de 2006 cerraron la misión.",
      "fuente": "JPL — Termina la misión TOPEX/Poseidon"
+    }
+   ],
+   "puntos3d": [
+    {
+     "id": "topex-poseidon-p1",
+     "pos": [
+      -123.415,
+      142.225,
+      -10.571
+     ],
+     "normal": [
+      0.0,
+      1.0,
+      0.0
+     ],
+     "titulo": "Paneles solares",
+     "texto": "Las dos alas que dan energía al satélite de altimetría. El modelo es una sola malla y no deja separar el resto de piezas."
     }
    ]
   }
