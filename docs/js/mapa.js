@@ -9,8 +9,12 @@
   var caja, lienzo, ctx, capa, titulo, globo;
   var aparatos = [], actual = null, alElegir = null;
   var rot = 0.6, girando = true, arrastrando = false, xInicial = 0, rotInicial = 0;
-  /* acercamiento del globo: con los aparatos apiñados hay que poder separar los pines */
-  var zum = 1, ZUM_MAX = 4, cuerpoAnterior = '';
+  /* acercamiento: en el globo separa los pines apiñados; en el cielo (fuera del sistema solar)
+     hace lo mismo, con más recorrido porque allí los doce objetos van en fila */
+  var zum = 1, ZUM_MAX = 4, ZUM_ESPACIO = 6, cuerpoAnterior = '';
+  /* desplazamiento del cielo cuando está acercado: sin él, lo que se sale del marco no se alcanza.
+     `ultimoArrastre` evita que soltar un arrastre encima de un pin cuente como pulsación. */
+  var desp = { x: 0, y: 0 }, despInicial = { x: 0, y: 0 }, yInicial = 0, ultimoArrastre = 0;
   /* ancho de cada nombre, medido una vez: leerlo en cada fotograma obligaría a recalcular el diseño */
   var anchosEtq = (typeof WeakMap === 'function') ? new WeakMap() : { get: function () { return null; }, set: function () {} };
   var bolitas = [];
@@ -332,6 +336,8 @@
                     (a.nombre_mapa || a.nombre) + '</span>';
       b.addEventListener('click', function (ev) {
         ev.stopPropagation();
+        /* acabas de desplazar el cielo: soltar encima de un pin no es elegirlo */
+        if (Date.now() - ultimoArrastre < 300) return;
         if (actual && a.id === actual.id) return;
         if (alElegir) alElegir(a);
       });
@@ -391,6 +397,12 @@
     if (!bolitas.length) return;
     var revelando = Date.now() < revelarHasta;
     if (tipo() === 'espacio') {
+      /* el marco del cielo es rectangular (sin disco que recorte), así que acercar separa los
+         pines del centro y desplazar los lleva de un extremo a otro. El desplazamiento se
+         limita a lo que sobresale del marco: nunca se pierden los extremos de la fila. */
+      var topeX = (t.w / 2) * (zum - 1), topeY = (t.h / 2) * (zum - 1);
+      desp.x = Math.max(-topeX, Math.min(topeX, desp.x));
+      desp.y = Math.max(-topeY, Math.min(topeY, desp.y));
       var lista = aparatos.slice().sort(function (x, y) { return (x.anio || 0) - (y.anio || 0); });
       var n = lista.length;
       var enCielo = [];
@@ -399,11 +411,13 @@
         if (!b) return;
         var fx = 0.22 + (n === 1 ? 0.2 : (i / (n - 1)) * 0.66);
         var fy = 0.74 - (n === 1 ? 0 : (i / (n - 1)) * 0.52);
-        b.el.style.left = (fx * t.w) + 'px';
-        b.el.style.top = (fy * t.h) + 'px';
+        var x = t.w / 2 + (fx * t.w - t.w / 2) * zum + desp.x;
+        var y = t.h / 2 + (fy * t.h - t.h / 2) * zum + desp.y;
+        b.el.style.left = x + 'px';
+        b.el.style.top = y + 'px';
         b.el.style.opacity = '1';
         b.el.style.transform = 'translate(-50%,-50%)';
-        enCielo.push({ el: b.el, x: fx * t.w, y: fy * t.h, z: 1 - i / (n + 1),
+        enCielo.push({ el: b.el, x: x, y: y, z: 1 - i / (n + 1),
                        activo: b.el.classList.contains('activo') });
       });
       reparteEtiquetas(enCielo, revelando);
@@ -488,10 +502,10 @@
     }
     /* al cambiar de cuerpo (Luna, Marte, cielo) el zoom vuelve a 1; al saltar de un aparato
        a otro del mismo cuerpo se conserva, que es cuando hace falta para separar los pines */
-    if (c !== cuerpoAnterior) { zum = 1; cuerpoAnterior = c; }
+    if (c !== cuerpoAnterior) { zum = 1; desp.x = 0; desp.y = 0; cuerpoAnterior = c; }
     var capaZum = caja.querySelector('.mapa-zum');
     if (capaZum) {
-      capaZum.hidden = (c === 'espacio');
+      capaZum.hidden = false;
       capaZum.classList.toggle('con-zum', zum > 1.01);
     }
     var credito = document.getElementById('mapa-credito');
@@ -515,9 +529,13 @@
   }
 
   function ponZum(nuevo) {
-    var z = Math.max(1, Math.min(ZUM_MAX, nuevo));
+    /* el cielo admite más recorrido que el globo: allí los doce objetos van en fila y hay que
+       separarlos de verdad para acertar con el dedo */
+    var tope = tipo() === 'espacio' ? ZUM_ESPACIO : ZUM_MAX;
+    var z = Math.max(1, Math.min(tope, nuevo));
     if (Math.abs(z - zum) < 0.001) return;
     zum = z;
+    if (z <= 1.01) { desp.x = 0; desp.y = 0; }
     var cajaZum = caja && caja.querySelector('.mapa-zum');
     if (cajaZum) cajaZum.classList.toggle('con-zum', zum > 1.01);
     dibujar();
@@ -527,11 +545,26 @@
     if (!lienzo) return;
     lienzo.style.touchAction = 'pan-y';
     lienzo.addEventListener('pointerdown', function (ev) {
-      if (tipo() === 'espacio') return;
+      if (tipo() === 'espacio') {
+        /* en el cielo el arrastre desplaza la fila de pines (solo tiene sentido acercado) */
+        if (zum <= 1.01) return;
+        arrastrando = true;
+        xInicial = ev.clientX; yInicial = ev.clientY;
+        despInicial.x = desp.x; despInicial.y = desp.y;
+        return;
+      }
       arrastrando = true; xInicial = ev.clientX; rotInicial = rot;
     });
     window.addEventListener('pointermove', function (ev) {
       if (!arrastrando) return;
+      if (tipo() === 'espacio') {
+        var dx = ev.clientX - xInicial, dy = ev.clientY - yInicial;
+        if (Math.abs(dx) > 5 || Math.abs(dy) > 5) ultimoArrastre = Date.now();
+        desp.x = despInicial.x + dx;
+        desp.y = despInicial.y + dy;
+        dibujar();
+        return;
+      }
       rot = rotInicial + (ev.clientX - xInicial) * 0.006;
       dibujar();
     });
@@ -539,14 +572,13 @@
     lienzo.addEventListener('pointerleave', function () { arrastrando = false; });
     /* rueda del ratón: acerca sin mover la página */
     lienzo.addEventListener('wheel', function (ev) {
-      if (tipo() === 'espacio') return;
       ev.preventDefault();
       ponZum(zum * (ev.deltaY < 0 ? 1.15 : 1 / 1.15));
     }, { passive: false });
     /* dos dedos separándose acercan (el gesto va sobre el lienzo, que es el que recibe) */
     var dedos = {}, distPellizco = 0, zumPellizco = 1;
     lienzo.addEventListener('pointerdown', function (ev) {
-      if (ev.pointerType === 'mouse' || tipo() === 'espacio') return;
+      if (ev.pointerType === 'mouse') return;
       dedos[ev.pointerId] = { x: ev.clientX, y: ev.clientY };
       var ids = Object.keys(dedos);
       if (ids.length === 2) {

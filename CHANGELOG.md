@@ -1,3 +1,14 @@
+## v3.17.0 — 2026-11-20
+
+- **«Fuera del sistema solar» también se acerca y se desplaza.** Los doce objetos del cielo profundo van en fila con ~17 px entre pin y pin, así que se pisaban y no había manera de acertar con el dedo. Ahora:
+  - Botones **+ / −** también en el cielo, con recorrido hasta **6×** (el globo se queda en 4×, que allí basta).
+  - **Rueda del ratón** sobre el mapa y **pellizco** con dos dedos, igual que en el globo.
+  - **Arrastrar desplaza la fila** cuando está acercada, y el desplazamiento se limita a lo que sobresale del marco: nunca se pierden los extremos.
+  - Al alejar del todo la fila vuelve sola a su sitio; al cambiar de cuerpo (Luna, Marte, cielo) el zoom y el desplazamiento vuelven a 1.
+  - Soltar un arrastre encima de un pin **no** elige ese aparato (umbral de 5 px): era la forma más fácil de acabar en el objeto equivocado.
+  - No se toca la matemática del mapa: el marco del cielo es rectangular (no hay disco que recorte) y los pines son botones colocados en píxeles.
+- **En la ficha del objeto, el orbe a la izquierda.** La bola de Luna/Marte estaba encima del título; ahora va a la izquierda y el título, el subtítulo y el año quedan a su derecha, centrados en vertical con ella (escritorio y móvil).
+
 ## v3.16.0 — 2026-11-20
 
 - **La Luna se ve.** El mosaico LROC es oscuro de verdad (albedo ~0,12) y sobre la tarjeta nocturna quedaba casi negro: se levantan los medios tonos de la textura con una gamma suave (brillo medio 65 → 94 sobre 255), sin tocar el detalle ni inventar nada. Marte se queda como estaba.
