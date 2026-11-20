@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es" data-i18n-doc-titulo="doc.titulo">
 <head>
-<script>window.__MSV = '3.22.1';</script>
+<script>window.__MSV = '3.22.2';</script>
 <script>
 /* El navegador puede guardar esta página en caché y seguir sirviendo la versión vieja aunque
    el servidor ya tenga otra: aquí se pregunta al servidor qué versión hay y, si es distinta de
@@ -28,8 +28,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Memory Signals · objetos abandonados de la NASA</title>
-<link rel="icon" type="image/png" sizes="64x64" href="img/favicon-64.png?v=3.22.1">
-<link rel="apple-touch-icon" href="img/apple-touch-icon.png?v=3.22.1">
+<link rel="icon" type="image/png" sizes="64x64" href="img/favicon-64.png?v=3.22.2">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png?v=3.22.2">
 <meta name="theme-color" content="#05070f">
 <meta name="description" content="Viaja a la Luna, Marte y el espacio profundo para conversar con los aparatos que la NASA dejó allí: 22 objetos abandonados con ficha, modelo 3D, fuentes verificables y chat en tres idiomas. Proyecto del NASA Space Apps Challenge 2026.">
 <link rel="canonical" href="https://nasa.gesemweb.es/app/">
@@ -50,7 +50,7 @@
 <meta name="twitter:description" content="Conversa con el hardware que la NASA dejó en la Luna y en Marte: 22 aparatos con ficha, modelo 3D y fuentes verificables.">
 <meta name="twitter:image" content="https://nasa.gesemweb.es/app/img/og-memory-signals-v2.jpg">
 <link rel="icon" href="datos/icono.svg" type="image/svg+xml">
-<link rel="stylesheet" href="css/estilo.css?v=3.22.1">
+<link rel="stylesheet" href="css/estilo.css?v=3.22.2">
 </head>
 <body>
 
@@ -68,7 +68,7 @@
 <header class="barra">
   <button type="button" class="marca" id="btn-inicio" title="Volver al inicio">
     <picture>
-      <img class="marca-logo" src="img/logo-memory-signals.png?v=3.22.1"
+      <img class="marca-logo" src="img/logo-memory-signals.png?v=3.22.2"
            alt="Memory Signals" width="1272" height="499">
     </picture>
   </button>
@@ -79,9 +79,16 @@
       <button type="button" id="btn-buscar" class="icono-btn" aria-label="Buscar objetos" data-i18n-aria="buscar.abrir" title="Buscar (Ctrl+K)">
         <span aria-hidden="true">⌕</span>
       </button>
-      <div class="nivel" role="group" aria-label="Nivel de lectura" data-i18n-aria="objeto.nivel">
-        <button type="button" id="btn-explorador" class="nivel-btn activo" aria-pressed="true" data-i18n="explorador">Explorador</button>
-        <button type="button" id="btn-cientifico" class="nivel-btn" aria-pressed="false" data-i18n="cientifico">Científico</button>
+      <!-- nivel + participar: en escritorio van sueltos (display:contents) y en móvil forman
+           la segunda línea, para que la lupa y el altavoz suban a la primera y no se salga nadie -->
+      <div class="franja-nivel">
+        <div class="nivel" role="group" aria-label="Nivel de lectura" data-i18n-aria="objeto.nivel">
+          <button type="button" id="btn-explorador" class="nivel-btn activo" aria-pressed="true" data-i18n="explorador">Explorador</button>
+          <button type="button" id="btn-cientifico" class="nivel-btn" aria-pressed="false" data-i18n="cientifico">Científico</button>
+        </div>
+        <a class="btn-participa" href="participa.html" title="Propón un objeto olvidado y aporta material" data-i18n-title="participa.titulo">
+          <span aria-hidden="true">＋</span> <span data-i18n="participa">Participa</span><span class="oculto" data-i18n="participa.oculto"> · propón un objeto olvidado</span>
+        </a>
       </div>
       <button type="button" id="btn-voz" class="icono" aria-pressed="false" title="Activar o silenciar la voz" data-i18n-title="voz.titulo" aria-describedby="ayuda-voz">🔇<span class="oculto">Voz</span></button>
       <div class="ayuda-voz" id="ayuda-voz" role="tooltip" hidden>
@@ -89,9 +96,6 @@
         <p data-i18n="voz.ayuda.texto">Lee en voz alta lo que dice el astronauta en cada pantalla. Usa la voz del navegador: no hay que instalar ni descargar nada.</p>
         <p class="ayuda-voz-estado" id="ayuda-voz-estado"></p>
       </div>
-      <a class="btn-participa" href="participa.html" title="Propón un objeto olvidado y aporta material" data-i18n-title="participa.titulo">
-        <span aria-hidden="true">＋</span> <span data-i18n="participa">Participa</span><span class="oculto" data-i18n="participa.oculto"> · propón un objeto olvidado</span>
-      </a>
     </div>
   </div>
   <!-- el selector de idiomas va aparte: en móvil comparte la primera línea con el logotipo -->
@@ -276,15 +280,15 @@
   </div>
 </div>
 
-<script src="js/idioma.js?v=3.22.1"></script>
-<script src="js/escena.js?v=3.22.1"></script>
-<script src="js/visor3d.js?v=3.22.1"></script>
-<script src="js/mapa.js?v=3.22.1"></script>
-<script src="js/hitos.js?v=3.22.1"></script>
-<script src="js/chat.js?v=3.22.1"></script>
-<script src="js/motor.js?v=3.22.1"></script>
-<script src="js/buscador.js?v=3.22.1"></script>
-<script src="js/ayuda-voz.js?v=3.22.1"></script>
-  <script src="js/analitica.js?v=3.22.1"></script>
+<script src="js/idioma.js?v=3.22.2"></script>
+<script src="js/escena.js?v=3.22.2"></script>
+<script src="js/visor3d.js?v=3.22.2"></script>
+<script src="js/mapa.js?v=3.22.2"></script>
+<script src="js/hitos.js?v=3.22.2"></script>
+<script src="js/chat.js?v=3.22.2"></script>
+<script src="js/motor.js?v=3.22.2"></script>
+<script src="js/buscador.js?v=3.22.2"></script>
+<script src="js/ayuda-voz.js?v=3.22.2"></script>
+  <script src="js/analitica.js?v=3.22.2"></script>
 </body>
 </html>

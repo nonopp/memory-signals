@@ -1,3 +1,9 @@
+## v3.22.2 — 2026-11-20
+
+- **La lupa de la cabecera, más grande** (19 → 25 px), y centrada en el círculo.
+- **Cabecera en móvil reordenada**: la lupa y el altavoz suben a la **primera línea** (con el logotipo y los idiomas) y la segunda queda para **Explorador/Científico y Participa**. Antes «Participa» se salía de la pantalla: llegaba a x=417 en un ancho de 390. Medido ahora en 390 px: la primera línea ocupa 8–376 y la segunda 14–290, **ningún botón fuera**. En pantallas de menos de 400 px el nivel se parte en dos líneas si hace falta.
+- En escritorio no cambia nada: una sola línea, mismo orden.
+
 ## v3.22.1 — 2026-11-20
 
 - **La lupa del buscador, más grande** (17 → 23 px): en la barra del campo se veía pequeña al lado del texto.

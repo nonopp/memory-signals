@@ -1002,9 +1002,12 @@ body.viendo-objeto #p-objeto .punto-ficha{background:rgba(6,12,24,.92)}
 .mapa-destino.es-espacio .mapa-pin.activo .mapa-pin-etq{opacity:1}
 .mapa-destino.es-espacio.revelando .mapa-pin .mapa-pin-etq{opacity:1}
 
+.franja-nivel{display:contents}
+
 /* ---------- buscador de objetos ---------- */
 .icono-btn{background:rgba(10,22,40,.72);border:1px solid var(--borde,rgba(120,200,230,.25));color:var(--tx,#e7f6fb);
-  width:38px;height:38px;border-radius:50%;font-size:19px;line-height:1;cursor:pointer;display:grid;place-items:center}
+  width:38px;height:38px;border-radius:50%;font-size:25px;line-height:1;cursor:pointer;display:grid;place-items:center}
+.icono-btn span{transform:translateY(-1px)}
 .icono-btn:hover{border-color:var(--acento,#63e0c8);color:var(--acento,#63e0c8)}
 .buscador{position:fixed;inset:0;z-index:9000;background:rgba(3,7,14,.78);backdrop-filter:blur(6px);
   display:flex;align-items:flex-start;justify-content:center;padding:8vh 16px 16px}
@@ -1056,4 +1059,28 @@ body.buscando{overflow:hidden}
 .mapa-destino.en-ventana.es-espacio .mapa-zum{position:absolute;right:10px;bottom:10px;margin:0;z-index:3}
 @media (max-width:600px){
   .mapa-destino.en-ventana.es-espacio .mapa-marco{height:100%;min-height:min(34vh,230px)}
+}
+
+/* ---------- cabecera en móvil ---------- */
+/* La segunda línea se desbordaba: «Participa» acababa en x=417 sobre una pantalla de 390.
+   Ahora la primera línea es logotipo · lupa · altavoz · idiomas, y la segunda el nivel de
+   lectura con «Participa». La lista de destinos, cuando aparece, va en su propia franja. */
+@media (max-width:760px){
+  .opciones,.controles{display:contents}
+  .barra{row-gap:8px}
+  .marca{order:1;margin-right:auto}
+  #btn-buscar{order:2;flex:0 0 auto}
+  #btn-voz{order:3;flex:0 0 auto}
+  .idiomas{order:4;flex:0 0 auto;margin-left:2px}
+  .franja-nivel{display:flex;align-items:center;gap:8px;order:5;flex:1 1 100%;min-width:0}
+  .franja-nivel .nivel{flex:0 0 auto}
+  .franja-nivel .btn-participa{flex:0 0 auto}
+  .menu-destinos{order:6;flex:1 1 100%;justify-content:flex-start;overflow-x:auto;max-width:100%}
+  .ayuda-voz{order:7}
+}
+@media (max-width:400px){
+  /* pantallas muy estrechas: el nivel se parte en dos y «Participa» sigue entrando */
+  .franja-nivel{flex-wrap:wrap;row-gap:6px}
+  .nivel-btn{font-size:.72rem;padding:6px 8px}
+  .franja-nivel .btn-participa{font-size:.78rem;padding:7px 10px}
 }
