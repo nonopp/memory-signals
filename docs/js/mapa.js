@@ -409,8 +409,18 @@
       lista.forEach(function (a, i) {
         var b = bolitas.filter(function (x) { return x.a.id === a.id; })[0];
         if (!b) return;
-        var fx = 0.22 + (n === 1 ? 0.2 : (i / (n - 1)) * 0.66);
-        var fy = 0.74 - (n === 1 ? 0 : (i / (n - 1)) * 0.52);
+        /* la fila única se abre en varias cuando hay muchos objetos: con 31 aparatos en una sola
+           diagonal quedaban a 6 px y no había quien acertara con el dedo */
+        var filas = n <= 12 ? 1 : (n <= 24 ? 2 : 3);
+        var porFila = Math.ceil(n / filas);
+        var fila = Math.floor(i / porFila);
+        var col = i % porFila;
+        var enFila = Math.min(porFila, n - fila * porFila);
+        var pasoX = porFila > 1 ? 0.68 / (porFila - 1) : 0;
+        var fx = 0.5 - ((enFila - 1) * pasoX) / 2 + col * pasoX;
+        var fy = filas === 1
+          ? 0.74 - (n === 1 ? 0 : (i / (n - 1)) * 0.52)
+          : 0.28 + fila * (0.46 / (filas - 1));
         var x = t.w / 2 + (fx * t.w - t.w / 2) * zum + desp.x;
         var y = t.h / 2 + (fy * t.h - t.h / 2) * zum + desp.y;
         b.el.style.left = x + 'px';

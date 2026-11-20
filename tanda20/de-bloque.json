@@ -1,0 +1,1958 @@
+{
+ "aparatos": [
+  {
+   "id": "ladee",
+   "nombre": "LADEE",
+   "nombre_mapa": "LADEE",
+   "cuerpo": "Mond",
+   "lugar": "Auf der Rückseite eingeschlagen, neben dem Krater Sundman V",
+   "anio": 2013,
+   "anio_tipo": "lanzamiento",
+   "estado": "tot",
+   "estado_texto": {
+    "texto_explorador": "Sie ist im April 2014 absichtlich auf dem Mond eingeschlagen. Später fotografierte eine andere Sonde die Einschlagstelle.",
+    "texto_cientifico": "Geplanter Einschlag am 18. April 2014 auf der Mondrückseite am östlichen Rand des Kraters Sundman V; die Sonde LRO fotografierte die Stelle am 28. Oktober 2014."
+   },
+   "ficha_resumen": "Sie maß die Luft des Mondes, die es fast nicht gibt: Seine Exosphäre hat den 25 billionsten Teil der Dichte der Erdatmosphäre. Am Ende schlug sie wie geplant auf der Rückseite ein.",
+   "color": "#9fb6cc",
+   "personas": [
+    {
+     "nombre": "Rick Elphic",
+     "papel": "Wissenschaftler des Projekts LADEE am Ames Research Center der NASA"
+    },
+    {
+     "nombre": "Butler Hine",
+     "papel": "Projektleiter von LADEE am Ames Research Center der NASA"
+    },
+    {
+     "nombre": "Don Cornwell",
+     "papel": "Leiter des Laser-Kommunikationsexperiments LLCD am Goddard Space Flight Center"
+    }
+   ],
+   "fuentes": [
+    {
+     "texto": "NASA Science — LADEE",
+     "url": "https://science.nasa.gov/mission/ladee/in-depth"
+    },
+    {
+     "texto": "NASA — die LADEE-Mission endet mit einem geplanten Einschlag auf dem Mond",
+     "url": "https://www.nasa.gov/news-release/nasa-completes-ladee-mission-with-planned-impact-on-moons-surface"
+    },
+    {
+     "texto": "NASA — das Laser-Kommunikationssystem stellt einen Rekord auf",
+     "url": "https://www.nasa.gov/news-release/nasa-laser-communication-system-sets-record-with-data-transmissions-to-and-from-moon/"
+    }
+   ],
+   "turnos": [
+    {
+     "id": "ladee1",
+     "pregunta": "Ich liege mit dem Gesicht nach unten, auf der Seite, die man von der Erde aus nie sieht. Weißt du, wo ich gelandet bin?",
+     "opciones": [
+      "Auf der Rückseite des Mondes",
+      "In einem Krater des Mars"
+     ],
+     "texto_explorador": "Auf der Rückseite des Mondes, neben dem Krater Sundman V. Ich bin am 18. April 2014 absichtlich mit 5.800 Kilometern pro Stunde eingeschlagen. Auf meinem vorletzten Umlauf kam ich dem Boden bis auf 300 Meter nah.",
+     "texto_cientifico": "Ich schlug am 18. April 2014 wie geplant am östlichen Rand des Kraters Sundman V auf der Mondrückseite ein, mit rund 5.800 km/h. Auf meiner vorletzten Umlaufbahn sank ich auf 300 m über der Oberfläche."
+    },
+    {
+     "id": "ladee2",
+     "pregunta": "Hier oben gibt es keine Luft. Was kann man dann überhaupt messen?",
+     "opciones": [
+      "Welche Gase übrig bleiben und woher sie kommen",
+      "Die Temperatur der Sonne"
+     ],
+     "texto_explorador": "Es bleibt sehr wenig übrig, aber es bleibt etwas. Ich fand Helium, Neon und Argon. Helium und Neon kommen mit dem Sonnenwind; das Argon stammt aus den Gesteinen des Mondes selbst.",
+     "texto_cientifico": "Die Mond-Exosphäre hat den 25 billionsten Teil der Dichte der Erdatmosphäre. Mein Massenspektrometer wies Helium, Neon und Argon-40 nach: Helium und Neon aus dem Sonnenwind, Argon aus dem radioaktiven Zerfall des Kaliums im Gestein, bei einer Verweilzeit des Heliums von nur wenigen Tagen."
+    },
+    {
+     "id": "ladee3",
+     "pregunta": "Die Apollo-Astronauten erzählten, sie sähen vor Sonnenaufgang ein Leuchten. Hast du es auch gesehen?",
+     "opciones": [
+      "Nein, ich fand nichts dergleichen",
+      "Ja, es war schwebender Staub"
+     ],
+     "texto_explorador": "Es zeigte sich nicht. Ich suchte nach Mondstaub, der durch Elektrizität schwebt, und fand keinen. Was ich aber sah, waren mehr als 11.000 Einschläge von Staubkörnern auf meinem Detektor.",
+     "texto_cientifico": "Ich fand keinen Beleg für das aus der Apollo-Ära beschriebene Leuchten vor Sonnenaufgang: Die Hypothese von Staub, der durch elektrostatische Aufladung schwebt, blieb ohne instrumentelle Stütze. Mein Detektor LDEX registrierte mehr als 11.000 Partikeleinschläge, und das Spektrometer UVS nahm mehr als 700.000 Spektren auf."
+    }
+   ],
+   "mapa": {
+    "tipo": "luna",
+    "lat": 11.849,
+    "lon": -93.25
+   },
+   "hitos": [
+    {
+     "titulo": "Mein Auftrag",
+     "texto": "Die Mond-Exosphäre zu untersuchen, diese so dünne Gasschicht, die fast nicht existiert, und den Staub, der über der Oberfläche schwebt. Ich war die erste von Wallops aus zum Mond gestartete Sonde.",
+     "fuente": "NASA Science — LADEE"
+    },
+    {
+     "titulo": "Daten per Laser",
+     "texto": "Mein Experiment LLCD übertrug Daten per Laser aus der Mondumlaufbahn mit 622 Mbps im Downlink und 20 Mbps im Uplink, über eine Entfernung von 385.000 Kilometern.",
+     "fuente": "NASA — Laser Communication System Sets Record"
+    },
+    {
+     "titulo": "Wie ich endete",
+     "texto": "Mir ging der Treibstoff aus, um weiter im Orbit zu bleiben, also steuerten sie mich gegen die Rückseite. Am 28. Oktober 2014 fotografierte die Sonde LRO meinen Krater von oben.",
+     "fuente": "NASA — Planned Impact on Moon's Surface"
+    }
+   ]
+  },
+  {
+   "id": "clementine",
+   "nombre": "Clementine",
+   "nombre_mapa": "Clementine",
+   "cuerpo": "Sonnenumlaufbahn",
+   "lugar": "Verloren im Sonnenorbit nach einem Fehler im Mai 1994",
+   "anio": 1994,
+   "anio_tipo": "lanzamiento",
+   "estado": "verlassen",
+   "estado_texto": {
+    "texto_explorador": "Ein Fehler in ihrem Computer ließ sie mitten in der Mission ohne Treibstoff zurück. Am Ende kreiste sie um die Sonne, und dort ist sie noch heute.",
+    "texto_cientifico": "Ein Softwarefehler am 7. Mai 1994 zündete 11 Minuten lang ein Triebwerk und verbrauchte den gesamten Treibstoff; am 20. Juli 1994 schickte sie die Mondgravitation auf eine heliozentrische Umlaufbahn."
+   },
+   "ficha_resumen": "Sie erstellte die erste Höhenkarte des ganzen Mondes und suchte Eis an seinen Polen. Ein elfminütiger Softwarefehler ließ sie ohne Treibstoff zurück und schickte sie auf eine Reise um die Sonne.",
+   "color": "#c9c2a6",
+   "personas": [
+    {
+     "nombre": "Paul D. Spudis",
+     "papel": "stellvertretender Leiter des wissenschaftlichen Teams von Clementine 1994 (Lunar and Planetary Institute)"
+    },
+    {
+     "nombre": "Richard Truly",
+     "papel": "NASA-Administrator, der 1990 eine gemeinsame Mondmission mit dem Verteidigungsministerium prüfen ließ"
+    }
+   ],
+   "fuentes": [
+    {
+     "texto": "NASA NSSDCA — Clementine",
+     "url": "https://nssdc.gsfc.nasa.gov/planetary/clementine.html"
+    },
+    {
+     "texto": "NASA History — 30 Jahre Clementine",
+     "url": "https://www.nasa.gov/history/30-years-ago-clementine-changes-our-view-of-the-moon/"
+    },
+    {
+     "texto": "Lunar and Planetary Institute — Clementine",
+     "url": "https://www.lpi.usra.edu/lunar/missions/clementine/overview"
+    }
+   ],
+   "turnos": [
+    {
+     "id": "clementine1",
+     "pregunta": "Man kennt mich wegen meiner Karte des Mondes, aber ich war zu einem anderen Ziel unterwegs. Weißt du, zu welchem?",
+     "opciones": [
+      "Zu einem Asteroiden",
+      "Zum Mars"
+     ],
+     "texto_explorador": "Ich sollte am Asteroiden Geographos vorbeifliegen. Ein Fehler in meinem Computer zündete elf Minuten lang ein Triebwerk, ich verbrauchte den ganzen Treibstoff und konnte nicht mehr hinfliegen.",
+     "texto_cientifico": "Mein Ziel war der Asteroid 1620 Geographos. Am 7. Mai 1994 löste ein Softwarefehler eine 11-minütige Triebwerkszündung aus, die den Treibstoff aufbrauchte und den Vorbeiflug absagte; anschließend rotierte ich mit 80 U/min ohne Lageregelung."
+    },
+    {
+     "id": "clementine2",
+     "pregunta": "Was habe ich noch geschafft, bevor ich verloren ging?",
+     "opciones": [
+      "Eine vollständige Karte des Mondes",
+      "Fotos der Wolken der Venus"
+     ],
+     "texto_explorador": "Anderthalb Millionen Bilder. Damit entstand die erste Höhenkarte des ganzen Mondes, und es zeigte sich, dass es an den Polen in Kratern, in die nie die Sonne scheint, verborgenes Eis geben kann.",
+     "texto_cientifico": "Ich lieferte rund 1,6 Millionen Bilder in 71 Tagen und 297 Mondumläufen. Mein Laseraltimeter erzeugte die erste globale topografische Karte des Mondes, und mein bistatisches Radar legte Wassereis in permanent beschatteten Kratern des Südpols nahe."
+    },
+    {
+     "id": "clementine3",
+     "pregunta": "Und wo bist du jetzt?",
+     "opciones": [
+      "Ich kreise um die Sonne",
+      "Im Mond begraben"
+     ],
+     "texto_explorador": "Ich kreise um die Sonne. Im Juli 1994 gab mir der Mond einen Schubs und warf mich aus seiner Umlaufbahn; seitdem reise ich um die Sonne.",
+     "texto_cientifico": "Am 20. Juli 1994 brachte mich die Mondgravitation auf eine heliozentrische Umlaufbahn. Zwischen Februar und Mai 1995 gab es kurze Kontakte ohne verwertbare Daten: Die Telemetrie war seit dem Fehler vom Juni 1994 unlesbar."
+    }
+   ],
+   "mapa": {
+    "tipo": "espacio"
+   },
+   "hitos": [
+    {
+     "titulo": "Mein Auftrag",
+     "texto": "Die NASA und das US-Verteidigungsministerium taten sich für eine Doppelmission zusammen: Militärtechnik im Weltraum erproben und nebenbei den ganzen Mond kartieren.",
+     "fuente": "NASA History — 30 Years Ago: Clementine Changes Our View of the Moon"
+    },
+    {
+     "titulo": "Die fehlende Karte",
+     "texto": "Vor mir deckten die Höhendaten des Mondes nur den Streifen am Äquator ab. Mein Laseraltimeter vermaß das Relief des gesamten Globus, Pole eingeschlossen.",
+     "fuente": "NASA NSSDCA — Clementine"
+    },
+    {
+     "titulo": "Elf Minuten",
+     "texto": "Ein Softwarefehler zündete elf Minuten lang ein Triebwerk. Ich verbrauchte den Treibstoff in einem Manöver, das gar nicht anstand, und verlor den Asteroiden und die Mission.",
+     "fuente": "NASA History — 30 Years Ago: Clementine Changes Our View of the Moon"
+    }
+   ]
+  },
+  {
+   "id": "mars-global-surveyor",
+   "nombre": "Mars Global Surveyor",
+   "nombre_mapa": "Global Surveyor",
+   "cuerpo": "Mars",
+   "lugar": "Im Orbit um den Mars, seit November 2006 ohne Signal",
+   "anio": 1996,
+   "anio_tipo": "lanzamiento",
+   "estado": "tot",
+   "estado_texto": {
+    "texto_explorador": "Er antwortete im November 2006 nicht mehr, nach neun Jahren Arbeit. Er kreist weiter ausgeschaltet um den Mars.",
+    "texto_cientifico": "Letztes Signal am 2. November 2006; ein Softwarefehler überhitzte eine Batterie, und die Sonde verlor die Lageregelung. Die NASA erklärte die Mission am 14. November 2006 für beendet."
+   },
+   "ficha_resumen": "Er fand die Rinnen, durch die auf dem Mars noch immer Wasser fließt, und erstellte die Höhenkarte des ganzen Planeten. Geplant war ein Marsjahr, gearbeitet hat er viermal so lange.",
+   "color": "#d1743f",
+   "personas": [
+    {
+     "nombre": "David Smith",
+     "papel": "wissenschaftlicher Leiter des Laseraltimeters MOLA (NASA Goddard Space Flight Center)"
+    },
+    {
+     "nombre": "Philip Christensen",
+     "papel": "wissenschaftlicher Leiter des thermischen Spektrometers TES (Arizona State University)"
+    },
+    {
+     "nombre": "Jack Connerney",
+     "papel": "Wissenschaftler am Magnetometer von Mars Global Surveyor (NASA Goddard)"
+    },
+    {
+     "nombre": "Michael Meyer",
+     "papel": "Chefwissenschaftler des Mars-Erkundungsprogramms der NASA im Jahr 2006"
+    }
+   ],
+   "fuentes": [
+    {
+     "texto": "NASA Science — Mars Global Surveyor",
+     "url": "https://science.nasa.gov/mission/mars-global-surveyor/"
+    },
+    {
+     "texto": "JPL — Bilder legen nahe, dass auf dem Mars noch Wasser fließt",
+     "url": "https://www.jpl.nasa.gov/news/nasa-images-suggest-water-still-flows-in-brief-spurts-on-mars/"
+    },
+    {
+     "texto": "JPL — Bericht über die wahrscheinlichen Ursachen des Verlusts der Sonde",
+     "url": "https://www.jpl.nasa.gov/news/report-reveals-likely-causes-of-mars-spacecraft-loss/"
+    }
+   ],
+   "turnos": [
+    {
+     "id": "mgs1",
+     "pregunta": "Ich stehe nicht auf dem Mars: Ich kreise ausgeschaltet weiter. Wusstest du das?",
+     "opciones": [
+      "Nein, ich dachte, du stehst auf dem Boden",
+      "Ja, du bist ein Orbiter"
+     ],
+     "texto_explorador": "Ich bin ein Orbiter. Neun Jahre lang kreiste ich in 378 Kilometern Höhe um den Mars und fotografierte den Boden immer wieder von oben.",
+     "texto_cientifico": "Ich war ein Orbiter auf einer sonnensynchronen polaren Umlaufbahn in rund 378 km Höhe. Meine Primärmission umfasste ein Marsjahr (687 Tage), und ich war mehr als viermal so lange in Betrieb."
+    },
+    {
+     "id": "mgs2",
+     "pregunta": "Es heißt, ich hätte fließendes Wasser auf dem Mars gefunden. Wie sieht man das von oben?",
+     "opciones": [
+      "Indem man Fotos derselben Rinne vergleicht",
+      "Indem man den Regen misst"
+     ],
+     "texto_explorador": "Indem man Fotos vergleicht. In derselben Rinne erschienen einige Jahre später helle Flecken, wo vorher nichts war: Wasser, das einen Hang hinunterläuft und schnell wieder trocknet.",
+     "texto_cientifico": "Der Vergleich von Bildern der Mars Orbiter Camera aus den Jahren 2004 und 2005 zeigte kurze, neue Ausstöße in Hangrinnen: ein Beleg für flüssiges Wasser, das gelegentlich an der Marsoberfläche fließt."
+    },
+    {
+     "id": "mgs3",
+     "pregunta": "Und warum schickten sie den Rover Opportunity ausgerechnet nach Meridiani Planum?",
+     "opciones": [
+      "Wegen meines Hämatits",
+      "Weil es nahe am Äquator lag"
+     ],
+     "texto_explorador": "Wegen meines Hämatits: eine 500 Kilometer große Fläche voll mit einem Mineral, das sich auf der Erde in heißem Wasser bildet. Dieser Fund bestimmte den Landeplatz.",
+     "texto_cientifico": "Mein Spektrometer TES entdeckte nahe dem Äquator eine Lagerstätte kristallinen Hämatits von rund 500 km Durchmesser, den ersten klaren Beleg für ein früheres hydrothermales System. Dieses Ergebnis führte zur Wahl von Meridiani Planum für Opportunity."
+    }
+   ],
+   "mapa": {
+    "tipo": "espacio"
+   },
+   "hitos": [
+    {
+     "titulo": "Mein Auftrag",
+     "texto": "Nach dem Scheitern von Mars Observer zum Mars zurückzukehren und ihn vollständig zu kartieren: Relief, Mineralien, Magnetismus und Klima, über ein Marsjahr hinweg.",
+     "fuente": "NASA Science — Mars Global Surveyor"
+    },
+    {
+     "titulo": "Die Karte eines Planeten",
+     "texto": "Mein Altimeter MOLA vermaß die Höhen des Mars mit einer Genauigkeit von rund 30 Zentimetern. Der gesamte Höhenunterschied des Planeten beträgt etwa 30 Kilometer, anderthalbmal so viel wie auf der Erde.",
+     "fuente": "NASA Science — Mars Global Surveyor"
+    },
+    {
+     "titulo": "Die Streifen des Dynamos",
+     "texto": "Mein Magnetometer fand abwechselnde Magnetisierungsbänder in der Kruste, bis zu 1.930 Kilometer lang: das Fossil des Magnetfelds eines früheren Mars.",
+     "fuente": "JPL — Magnetic Stripes Preserve Record of Ancient Mars"
+    }
+   ]
+  },
+  {
+   "id": "voyager2",
+   "nombre": "Voyager 2",
+   "nombre_mapa": "Voyager 2",
+   "cuerpo": "Interstellarer Raum",
+   "lugar": "Seit November 2018 im interstellaren Raum",
+   "anio": 1977,
+   "anio_tipo": "lanzamiento",
+   "estado": "funktioniert",
+   "estado_texto": {
+    "texto_explorador": "Sie spricht weiter mit der Erde, allerdings immer leiser und von immer weiter weg. Sie ist die einzige Sonde, die alle vier Gasriesen besucht hat.",
+    "texto_cientifico": "Interstellare Mission läuft: Sie durchquerte die Heliopause am 5. November 2018 und entfernt sich mit rund 3,1 AE pro Jahr von der Sonne, 48 Grad südlich der Ekliptik. Die Ingenieure hoffen, den Kontakt bis 2036 zu halten."
+   },
+   "ficha_resumen": "Die einzige Sonde, die an Jupiter, Saturn, Uranus und Neptun vorbeigeflogen ist. Sie verließ 2018 das Sonnensystem und sendet weiter Daten aus dem interstellaren Raum.",
+   "color": "#8fb7e8",
+   "personas": [
+    {
+     "nombre": "Edward Stone",
+     "papel": "Wissenschaftler des Voyager-Projekts von 1972 bis zu seinem Ruhestand 2022 (JPL-Direktor von 1991 bis 2001)"
+    },
+    {
+     "nombre": "Linda Spilker",
+     "papel": "Wissenschaftlerin des Voyager-Projekts seit 2022"
+    },
+    {
+     "nombre": "Suzanne Dodd",
+     "papel": "Projektleiterin von Voyager am Jet Propulsion Laboratory"
+    },
+    {
+     "nombre": "John Richardson",
+     "papel": "wissenschaftlicher Leiter des Plasmaexperiments (PLS) am MIT"
+    }
+   ],
+   "fuentes": [
+    {
+     "texto": "NASA Science — Voyager 2",
+     "url": "https://science.nasa.gov/mission/voyager/voyager-2"
+    },
+    {
+     "texto": "JPL — Voyager 2 erreicht den interstellaren Raum",
+     "url": "https://www.jpl.nasa.gov/news/nasas-voyager-2-probe-enters-interstellar-space/"
+    },
+    {
+     "texto": "NASA Science — häufig gestellte Fragen zu Voyager",
+     "url": "https://science.nasa.gov/mission/voyager/frequently-asked-questions/"
+    }
+   ],
+   "turnos": [
+    {
+     "id": "voyager2-1",
+     "pregunta": "Ich bin die einzige Sonde, die allen vier Gasriesen nahe gekommen ist. Welche sind das deiner Meinung nach?",
+     "opciones": [
+      "Jupiter, Saturn, Uranus und Neptun",
+      "Mars, Venus, Erde und Merkur"
+     ],
+     "texto_explorador": "Jupiter, Saturn, Uranus und Neptun. Bei Uranus und Neptun war vor mir niemand, und danach ist auch niemand zurückgekehrt.",
+     "texto_cientifico": "Ich flog an Jupiter (1979), Saturn (1981), Uranus (1986) und Neptun (1989) vorbei. Bei Uranus entdeckte ich 10 Monde und 2 Ringe und maß ein Magnetfeld, das um 55 Grad gegen die Rotationsachse geneigt ist."
+    },
+    {
+     "id": "voyager2-2",
+     "pregunta": "Woher weißt du, dass du das Sonnensystem schon verlassen hast?",
+     "opciones": [
+      "Weil kein Sonnenwind mehr ankommt",
+      "Weil die Sterne zu Ende gingen"
+     ],
+     "texto_explorador": "Weil mein Plasmainstrument den Sonnenwind nicht mehr spürte: Erst fiel er steil ab, dann blieb nichts mehr. Das passiert, wenn man die Blase durchquert, die die Sonne im Raum bildet.",
+     "texto_cientifico": "Am 5. November 2018 registrierte mein Plasmaexperiment einen abrupten Abfall des Sonnenwinds und danach völlige Abwesenheit von Fluss: der direkte Beleg für die Durchquerung der Heliopause, die am 10. Dezember 2018 bekannt gegeben wurde."
+    },
+    {
+     "id": "voyager2-3",
+     "pregunta": "Wie lange brauchen deine Nachrichten bis nach Hause?",
+     "opciones": [
+      "Mehr als sechzehn Stunden",
+      "Etwa zehn Minuten"
+     ],
+     "texto_explorador": "Mehr als sechzehn Stunden, als ich das Sonnensystem verließ, und jedes Jahr ein bisschen mehr. Das Licht, das ich sende, braucht diese ganze Zeit, nur um die Erde zu erreichen.",
+     "texto_cientifico": "Beim Durchqueren der Heliopause war ich rund 18.000 Millionen Kilometer entfernt: Das Signal brauchte 16,5 Stunden bis zur Erde. Ich entferne mich mit 15,4 km/s von der Sonne, rund 3,1 AE pro Jahr."
+    }
+   ],
+   "mapa": {
+    "tipo": "espacio"
+   },
+   "hitos": [
+    {
+     "titulo": "Die große Tour",
+     "texto": "Ich nutzte eine Planetenkonstellation, die sich nur alle 176 Jahre ergibt, um vier Gasriesen mit einer einzigen Sonde und einem einzigen Treibstoffvorrat zu besuchen.",
+     "fuente": "NASA Science — Voyager 2"
+    },
+    {
+     "titulo": "Die Ringe und der dunkle Fleck",
+     "texto": "Bei Neptun entdeckte ich vier neue Ringe und den Großen Dunklen Fleck und maß Winde von 1.100 Kilometern pro Stunde. Auf Triton fand ich den kältesten bekannten Körper.",
+     "fuente": "NASA Science — Voyager 2"
+    },
+    {
+     "titulo": "Das Zuhause verlassen",
+     "texto": "Am 5. November 2018 durchquerte ich die Heliopause. Zusammen mit meiner Zwillingssonde Voyager 1 bin ich eine der beiden einzigen Sonden, die in den Raum zwischen den Sternen vorgedrungen sind.",
+     "fuente": "JPL — Voyager 2 Enters Interstellar Space"
+    }
+   ]
+  },
+  {
+   "id": "pioneer11",
+   "nombre": "Pioneer 11",
+   "nombre_mapa": "Pioneer 11",
+   "cuerpo": "Interstellarer Raum",
+   "lugar": "Auf dem Weg aus dem Sonnensystem hinaus, seit 1995 stumm",
+   "anio": 1973,
+   "anio_tipo": "lanzamiento",
+   "estado": "tot",
+   "estado_texto": {
+    "texto_explorador": "Seit dreißig Jahren spricht sie mit niemandem mehr. Sie entfernt sich weiter auf eigene Faust von der Sonne, mit der Plakette, die erzählt, woher sie kommt.",
+    "texto_cientifico": "Letzte Telemetrie am 24. November 1995 in 44,1 AE Entfernung. Sie fliegt auf einer hyperbolischen Fluchtbahn aus dem Sonnensystem; Schätzungen zufolge wird sie in fast vier Millionen Jahren nahe am Stern Lambda Aquilae vorbeiziehen."
+   },
+   "ficha_resumen": "Die erste Sonde, die Saturn erreichte, und die erste, die die Pole des Jupiter fotografierte. Sie trägt eine Plakette mit einer Karte, die erzählt, woher sie kommt. Seit 1995 ist sie stumm.",
+   "color": "#b7a98c",
+   "personas": [
+    {
+     "nombre": "Carl Sagan",
+     "papel": "Entwickler der Plakette der Pioneer-Sonden zusammen mit Frank Drake und Linda Salzman Sagan"
+    },
+    {
+     "nombre": "Frank Drake",
+     "papel": "Entwickler der Plakette mit den Angaben zur Herkunft der Sonden"
+    },
+    {
+     "nombre": "Linda Salzman Sagan",
+     "papel": "Entwicklerin der Plakette der Pioneer-Sonden"
+    },
+    {
+     "nombre": "Fred Wirth",
+     "papel": "Projektleiter von Pioneer im Jahr 1995"
+    }
+   ],
+   "fuentes": [
+    {
+     "texto": "NASA Science — Pioneer 11",
+     "url": "https://science.nasa.gov/mission/pioneer-11/"
+    },
+    {
+     "texto": "NASA History — 45 Jahre Pioneer 11",
+     "url": "https://www.nasa.gov/history/45-years-ago-pioneer-11-launched-to-study-jupiter-and-saturn/"
+    },
+    {
+     "texto": "NASA — Pioneer 11, die erste Sonde bei Saturn",
+     "url": "https://www.nasa.gov/solar-system/planets/saturn/40-years-ago-pioneer-11-first-to-explore-saturn/"
+    }
+   ],
+   "turnos": [
+    {
+     "id": "pioneer11-1",
+     "pregunta": "Ich war die erste Sonde der Geschichte, die Saturn erreichte. Was fand ich dort?",
+     "opciones": [
+      "Einen neuen Ring und einen Mond",
+      "Nichts, Saturn war leer"
+     ],
+     "texto_explorador": "Einen neuen Ring, den F-Ring, und einen kleinen Mond, den noch niemand gesehen hatte. Außerdem fand ich den ersten klaren Hinweis darauf, dass Saturn ein eigenes Magnetfeld hat.",
+     "texto_cientifico": "Am 31. August 1979 entdeckte ich in 1,5 Millionen km Entfernung den Bugstoß von Saturn, den ersten schlüssigen Beleg für sein Magnetfeld; ich fand den F-Ring und einen Mond von rund 200 km Durchmesser und nahm 440 Bilder des Systems auf."
+    },
+    {
+     "id": "pioneer11-2",
+     "pregunta": "Vor Saturn kamst du an Jupiter vorbei. Was hast du aus so großer Nähe gesehen?",
+     "opciones": [
+      "Seine Pole, zum ersten Mal",
+      "Nur Wolken"
+     ],
+     "texto_explorador": "Seine Pole. Ich flog in 42.500 Kilometern Abstand an den Wolken vorbei, dreimal näher als meine Schwester Pioneer 10, und von dort sieht man die Regionen oben und unten am Planeten.",
+     "texto_cientifico": "Beim Vorbeiflug am 3. Dezember 1974 kam ich den Wolken bis auf 42.500 km nahe, mit mehr als 171.000 km/h: die ersten Bilder der Polarregionen des Jupiter und rund 200 Aufnahmen seiner Monde."
+    },
+    {
+     "id": "pioneer11-3",
+     "pregunta": "Du trägst eine Plakette mit Zeichnungen an Bord. Was erklären sie?",
+     "opciones": [
+      "Woher wir kommen und wann",
+      "Der Name des Kapitäns"
+     ],
+     "texto_explorador": "Woher wir kommen. Sie zeigt zwei menschliche Figuren, die Position der Sonne und Markierungen, die unseren Stern im Verhältnis zu vierzehn Pulsaren verorten: eine Karte für den, der sie findet.",
+     "texto_cientifico": "Die Plakette der Pioneer-Sonden, entworfen von Carl Sagan, Frank Drake und Linda Salzman Sagan, zeigt ein menschliches Paar, den Umriss der Sonde, die Position der Sonne und ihre Lage relativ zu 14 Pulsaren."
+    }
+   ],
+   "mapa": {
+    "tipo": "espacio"
+   },
+   "hitos": [
+    {
+     "titulo": "Mein Auftrag",
+     "texto": "Den Weg von Pioneer 10 bis zum Jupiter zu folgen und, wenn die Durchquerung des Asteroidengürtels gut ging, ihren Schwung zu nutzen, um Saturn zu erreichen.",
+     "fuente": "NASA History — 45 Years Ago: Pioneer 11 Launched"
+    },
+    {
+     "titulo": "Den Gürtel durchqueren",
+     "texto": "Im März 1974 durchquerte ich den Asteroidengürtel ohne Schaden. Ohne diese Erkenntnis hätte sich keine spätere Mission hindurchgetraut.",
+     "fuente": "NASA History — 45 Years Ago: Pioneer 11 Launched"
+    },
+    {
+     "titulo": "Die letzte Nachricht",
+     "texto": "Am 30. September 1995 wurde die Mission beendet, und am 24. November kamen einige Minuten technischer Daten an: meine letzte Stimme, aus mehr als 6.400 Millionen Kilometern Entfernung.",
+     "fuente": "NASA Science — Pioneer 11"
+    }
+   ]
+  },
+  {
+   "id": "ulysses",
+   "nombre": "Ulysses",
+   "nombre_mapa": "Ulysses",
+   "cuerpo": "Weltraum",
+   "lugar": "Auf einer heliozentrischen Umlaufbahn über den Polen der Sonne, seit 2009 stumm",
+   "anio": 1990,
+   "anio_tipo": "lanzamiento",
+   "estado": "tot",
+   "estado_texto": {
+    "texto_explorador": "Ich antwortete am 30. Juni 2009 nicht mehr, nach mehr als achtzehn Jahren Arbeit. Ich kreise weiter um die Sonne und ziehe dabei über ihre Pole.",
+    "texto_cientifico": "Die Mission endete am 30. Juni 2009: Um 20:09 UTC wurde der Wechsel auf die Antenne mit geringer Richtwirkung befohlen, um 20:15 UTC das Abschalten des Senders. Meine heliozentrische Umlaufbahn entfernt mich weiter von der Erde."
+   },
+   "ficha_resumen": "Sie war die erste Sonde, die die Pole der Sonne anblickte, über und unter der Ebene der Planeten, und dort wehte der Sonnenwind doppelt so schnell. Geplant waren fünf Jahre, daraus wurden mehr als achtzehn.",
+   "color": "#d9a04c",
+   "personas": [
+    {
+     "nombre": "Richard Marsden",
+     "papel": "Missionsleiter und Projektwissenschaftler von Ulysses bei der Europäischen Weltraumorganisation (ESA)"
+    },
+    {
+     "nombre": "Ed Smith",
+     "papel": "Projektwissenschaftler von Ulysses am Jet Propulsion Laboratory (JPL) der NASA"
+    },
+    {
+     "nombre": "Arik Posner",
+     "papel": "Programmwissenschaftler für Ulysses im NASA-Hauptquartier"
+    },
+    {
+     "nombre": "Nigel Angold",
+     "papel": "Betriebsleiter der Ulysses-Mission bei der Europäischen Weltraumorganisation (ESA)"
+    }
+   ],
+   "fuentes": [
+    {
+     "texto": "NASA Science — Ulysses",
+     "url": "https://science.nasa.gov/mission/ulysses/"
+    },
+    {
+     "texto": "JPL — die Sonde Ulysses beendet ihre historische Mission der Entdeckungen",
+     "url": "https://www.jpl.nasa.gov/news/ulysses-spacecraft-ends-historic-mission-of-discovery/"
+    },
+    {
+     "texto": "ESA — Überblick über die Ulysses-Mission",
+     "url": "https://www.esa.int/missions/about-us/directorates/science/ulysses-overview"
+    }
+   ],
+   "turnos": [
+    {
+     "id": "ulysses1",
+     "pregunta": "Um die Pole der Sonne zu sehen, musste ich die Ebene verlassen, in der die Planeten kreisen. Wie habe ich das geschafft?",
+     "opciones": [
+      "Mit dem Schwung des Jupiter",
+      "Mit einer riesigen Rakete"
+     ],
+     "texto_explorador": "Mit dem Schwung des Jupiter. Ich flog in 378.400 Kilometern Abstand am Planeten vorbei, und seine Schwerkraft schleuderte mich über die Ebene der anderen hinaus, wie ein Stein, der aus einer Schleuder geschossen wird.",
+     "texto_cientifico": "Am 8. Februar 1992 flog ich in rund 378.400 km Abstand an Jupiter vorbei. Sein Gravitationsschwung brachte mich auf eine geneigte heliozentrische Umlaufbahn außerhalb der Ekliptik: Ich war die fünfte Sonde bei Jupiter und die erste, die die Sonne von oben und von unten betrachtete."
+    },
+    {
+     "id": "ulysses2",
+     "pregunta": "Von oben weht der Sonnenwind anders als am Äquator. Wie viel schneller spürte ich ihn an den Polen?",
+     "opciones": [
+      "Etwa doppelt so schnell",
+      "Etwa halb so schnell"
+     ],
+     "texto_explorador": "Etwa doppelt so schnell. Oben wehte er mit rund 750 Kilometern pro Sekunde, am Äquator mit rund 350: der Unterschied zwischen einem Sturm und einer leichten Brise.",
+     "texto_cientifico": "Mit der ersten dreidimensionalen Karte der Heliosphäre maß ich in den Polarregionen rund 750 km/s gegenüber rund 350 km/s des äquatorialen Windes. Das polare Magnetfeld erwies sich als viel schwächer als angenommen und kehrt sich alle elf Jahre um."
+    },
+    {
+     "id": "ulysses3",
+     "pregunta": "Weißt du, wie mein Abschied aussah? Ich hatte nicht erwartet, unterwegs so etwas anzutreffen.",
+     "opciones": [
+      "Den Schweif von drei Kometen durchqueren",
+      "Auf einem Asteroiden landen"
+     ],
+     "texto_explorador": "Den Schweif von drei Kometen durchqueren, ohne es zu suchen. Ich entdeckte, dass diese Schweife viel länger sind als gedacht, wie eine Rauchfahne, die viel weiter reicht als erwartet.",
+     "texto_cientifico": "Unerwartet durchquerte ich die Schweife der Kometen Hyakutake (Mai 1996), McNaught-Hartley (1999) und McNaught (2007) und zeigte, dass Kometenschweife viel länger sind als erwartet. Außerdem registrierte ich mehr als 1.800 Gammastrahlenausbrüche."
+    }
+   ],
+   "mapa": {
+    "tipo": "espacio"
+   },
+   "hitos": [
+    {
+     "titulo": "Mein Auftrag",
+     "texto": "Die Sonne über und unter der Ebene der Planeten zu untersuchen, was keine Sonde zuvor getan hatte. Sie wurde am 6. Oktober 1990 im Frachtraum der Raumfähre Discovery gestartet.",
+     "fuente": "NASA Science — Ulysses"
+    },
+    {
+     "titulo": "Die Pole der Sonne",
+     "texto": "Zwischen 1994 und 1995 zog ich über den Südpol und den Nordpol der Sonne und erreichte 80,2 Grad heliografischer Breite. Am 12. März 1995 kam ich der Sonne bis auf rund 200 Millionen Kilometer nahe.",
+     "fuente": "NASA Science — Ulysses"
+    },
+    {
+     "titulo": "Die letzte Nachricht",
+     "texto": "Am 30. Juni 2009 wurde mein Sender abgeschaltet, nach mehr als achtzehneinhalb Jahren Dienst: mehr als das Vierfache der geplanten Lebensdauer. Meine Umlaufbahn entfernt mich weiter von der Erde.",
+     "fuente": "JPL — Ulysses Ends Historic Mission"
+    }
+   ]
+  },
+  {
+   "id": "rosetta",
+   "nombre": "Rosetta",
+   "nombre_mapa": "Rosetta",
+   "cuerpo": "Weltraum",
+   "lugar": "Auf dem Kometen 67P/Churyumov-Gerasimenko aufgesetzt, in der Region Ma'at",
+   "anio": 2004,
+   "anio_tipo": "lanzamiento",
+   "estado": "tot",
+   "estado_texto": {
+    "texto_explorador": "Ich stieg langsam hinab und berührte meinen Kometen am 30. September 2016. Beim Aufsetzen auf dem Boden verstummte ich, und dort bin ich noch, an einem Ort namens Ma'at.",
+    "texto_cientifico": "Kontrollierter Abstieg und Aufsetzen am 30. September 2016 in der Region Ma'at, neben der Grube Deir el-Medina; am Tag zuvor war ich rund 23 km vom Kern entfernt. Die Mission endete mit diesem geplanten Aufschlag."
+   },
+   "ficha_resumen": "Sie war die erste Sonde, die einen Kometen umkreiste, und die erste, die einen Roboter auf seiner Oberfläche absetzte. Im Eis von 67P fand sie Glycin, einen der Bausteine, aus denen Leben entsteht.",
+   "color": "#8e9ba6",
+   "personas": [
+    {
+     "nombre": "Kathrin Altwegg",
+     "papel": "wissenschaftliche Leiterin des Instruments ROSINA an der Universität Bern, für die Europäische Weltraumorganisation"
+    },
+    {
+     "nombre": "Mark Hofstadter",
+     "papel": "wissenschaftlicher Leiter des Instruments MIRO am Jet Propulsion Laboratory (JPL) der NASA"
+    },
+    {
+     "nombre": "Bonnie Buratti",
+     "papel": "Wissenschaftlerin des NASA-Projekts Rosetta am Jet Propulsion Laboratory (JPL)"
+    },
+    {
+     "nombre": "Art Chmielewski",
+     "papel": "Leiter des NASA-Projekts Rosetta am Jet Propulsion Laboratory (JPL)"
+    }
+   ],
+   "fuentes": [
+    {
+     "texto": "NASA Science — Rosetta und Philae",
+     "url": "https://science.nasa.gov/mission/rosetta-philae/"
+    },
+    {
+     "texto": "JPL — Abschied von Rosetta, die ESA-Mission endet auf dem Kometen",
+     "url": "https://www.jpl.nasa.gov/news/farewell-rosetta-esa-mission-to-end-on-comet-surface/"
+    },
+    {
+     "texto": "ESA — das Wasser des Rosetta-Kometen entfacht die Debatte über den Ursprung der Ozeane neu",
+     "url": "https://sci.esa.int/web/rosetta/-/55116-rosetta-fuels-debate-on-origin-of-earths-oceans"
+    }
+   ],
+   "turnos": [
+    {
+     "id": "rosetta1",
+     "pregunta": "Ich erreichte einen Kometen und flog nicht wie die anderen weiter. Was tat ich, was niemand zuvor getan hatte?",
+     "opciones": [
+      "Ich kreiste um ihn",
+      "Ich zerschellte an ihm"
+     ],
+     "texto_explorador": "Ich kreiste um ihn. Ich war die erste Sonde, die einen Kometen umrundete und ihn auf seinem Weg begleitete, wie ein kleiner Mond um einen Berg aus Eis und Staub.",
+     "texto_cientifico": "Am 6. August 2014 wurde ich die erste Sonde, die einen Kometen umkreiste und ihn auf seiner Bahn geleitete: Ich begleitete 67P/Churyumov-Gerasimenko bis zu seinem Perihel am 13. August 2015 und auch auf seinem Rückweg."
+    },
+    {
+     "id": "rosetta2",
+     "pregunta": "Ich analysierte das Wasser meines Kometen, und es kam etwas Merkwürdiges heraus. Was war daran besonders?",
+     "opciones": [
+      "Es war anders als das Wasser der Ozeane",
+      "Es war salzig wie das Meer"
+     ],
+     "texto_explorador": "Es war anders als das Wasser der Ozeane. Sein Wasserstoff war schwerer als der in den Meeren der Erde, deshalb hat dieser Komet das Wasser, das wir trinken, offenbar nicht gebracht.",
+     "texto_cientifico": "Mit dem Instrument ROSINA maß ich ein Verhältnis von Deuterium zu Wasserstoff, das mehr als dreimal so hoch ist wie in den irdischen Ozeanen: 67P passt nicht als Hauptquelle des Wassers der Erde, und die Debatte über seinen Ursprung bleibt offen."
+    },
+    {
+     "id": "rosetta3",
+     "pregunta": "Vor meinem Abschied fand ich ein für das Leben sehr wichtiges Molekül. Welches war es?",
+     "opciones": [
+      "Glycin, eine Aminosäure",
+      "Haushaltszucker"
+     ],
+     "texto_explorador": "Glycin, die einfachste Aminosäure: einer der Bausteine, aus denen Proteine aufgebaut werden. Zum ersten Mal wurde eine in der Gaswolke eines Kometen gefunden.",
+     "texto_cientifico": "2016 wies ich eindeutig Glycin in der Koma des Kometen nach, das erste Mal, dass eine Aminosäure in einem solchen Körper gefunden wurde. Auf der Oberfläche identifizierte das Instrument COSAC von Philae 16 organische Verbindungen, vier davon nie zuvor auf Kometen gesehen."
+    }
+   ],
+   "mapa": {
+    "tipo": "espacio"
+   },
+   "hitos": [
+    {
+     "titulo": "Mein Auftrag",
+     "texto": "Den Kometen 67P/Churyumov-Gerasimenko erreichen, ihn umkreisen und den Lander Philae auf seiner Oberfläche absetzen. Ich legte 7.900 Millionen Kilometer zurück und sammelte 220 GB Daten.",
+     "fuente": "ESA — Rosetta"
+    },
+    {
+     "titulo": "Der erste Roboter",
+     "texto": "Am 12. November 2014 trennte sich Philae von mir und setzte auf dem Kometen auf: Er machte die ersten Bilder von der Oberfläche eines solchen Körpers und absolvierte rund 80 % seiner ersten wissenschaftlichen Sequenz.",
+     "fuente": "NASA Science — Rosetta und Philae"
+    },
+    {
+     "titulo": "Die Gruben von Ma'at",
+     "texto": "In der Region Ma'at fand ich aktive Gruben von mehr als 100 Metern Durchmesser und 50 bis 60 Metern Tiefe, mit ein Meter hohen Hügeln, die die Bausteine sein könnten, aus denen der Komet entstand.",
+     "fuente": "JPL — Abschied von Rosetta"
+    }
+   ]
+  },
+  {
+   "id": "stardust",
+   "nombre": "Stardust",
+   "nombre_mapa": "Stardust",
+   "cuerpo": "Weltraum",
+   "lugar": "Ihre Sonde blieb ohne Treibstoff im Sonnenorbit zurück; die Kapsel mit den Proben liegt in Houston",
+   "anio": 1999,
+   "anio_tipo": "lanzamiento",
+   "estado": "tot",
+   "estado_texto": {
+    "texto_explorador": "Ich endete am 24. März 2011 mit einer letzten Triebwerkszündung. Ich blieb ohne Treibstoff und stumm zurück und kreise um die Sonne, aber meine Fracht kam nach Hause.",
+    "texto_cientifico": "Letzte Übertragung am 24. März 2011, nach einer abschließenden Zündung von 146 Sekunden, die den Treibstoff aufbrauchte, empfangen in 312 Millionen km Entfernung von der Erde. Die Sonde blieb unkontrolliert auf einer heliozentrischen Umlaufbahn; die Kapsel war seit 2006 in Houston."
+   },
+   "ficha_resumen": "Sie brachte zum ersten Mal Kometenstaub zur Erde: mehr als zehntausend Partikel, gefangen in einem Schaum, der fast so leicht ist wie Luft. Darunter war Glycin.",
+   "color": "#7fb0c6",
+   "personas": [
+    {
+     "nombre": "Don Brownlee",
+     "papel": "wissenschaftlicher Leiter von Stardust an der University of Washington"
+    },
+    {
+     "nombre": "Tim Larson",
+     "papel": "Projektleiter von Stardust-NExT am Jet Propulsion Laboratory (JPL) der NASA"
+    },
+    {
+     "nombre": "Eileen Stansbery",
+     "papel": "Leiterin der Probenkuration am Johnson Space Center der NASA"
+    },
+    {
+     "nombre": "Jamie Elsila",
+     "papel": "Wissenschaftlerin am Goddard Space Flight Center der NASA, die den Fund von Glycin bekannt gab"
+    }
+   ],
+   "fuentes": [
+    {
+     "texto": "NASA Science — Stardust",
+     "url": "https://science.nasa.gov/mission/stardust/"
+    },
+    {
+     "texto": "JPL — der altgediente Kometenjäger beendet seine Mission",
+     "url": "https://www.jpl.nasa.gov/news/nasas-venerable-comet-hunter-wraps-up-mission/"
+    },
+    {
+     "texto": "JPL — zehn Jahre nach der Rückkehr der Stardust-Proben",
+     "url": "https://jpl.nasa.gov/news/nasas-stardust-sample-return-was-10-years-ago-today"
+    }
+   ],
+   "turnos": [
+    {
+     "id": "stardust1",
+     "pregunta": "Ich flog sehr nah an einem Kometen vorbei, um seinen Staub einzufangen. Womit habe ich ihn gesammelt?",
+     "opciones": [
+      "In einem ultraleichten Schaum, dem Aerogel",
+      "In einem Luftsack"
+     ],
+     "texto_explorador": "In einem Schaum, der fast so leicht ist wie Luft: dem Aerogel. Die Körner drangen in ihn ein und wurden abgebremst, ohne zu zerbrechen, wie eine Fliege, die in den Honig fällt.",
+     "texto_cientifico": "Am 2. Januar 2004 flog ich in rund 250 km Abstand am Kern des Kometen Wild 2 vorbei und fing seine Körner in einem Aerogel aus Siliziumdioxid ein, in dem sie stecken blieben, ohne zu schmelzen. Eine Kapsel brachte sie zur Erde und ermöglichte die Analyse im Labor."
+    },
+    {
+     "id": "stardust2",
+     "pregunta": "Und was kam in diesem Staub zum Vorschein, als man ihn auf der Erde öffnete?",
+     "opciones": [
+      "Glycin, eine Aminosäure",
+      "Nur Gestein, nichts weiter"
+     ],
+     "texto_explorador": "Glycin, die einfachste Aminosäure. Im Staub meines Kometen steckte einer der Grundbausteine für Proteine, und zum ersten Mal wurde einer in einem Kometen gefunden.",
+     "texto_cientifico": "In den Proben von Wild 2 wurde Glycin identifiziert, die erste in einem Kometen gefundene Aminosäure, zusammen mit einer großen Vielfalt organischer Verbindungen. Im August 2014 wurden sieben interstellare Staubpartikel im gesammelten Material bekannt gegeben."
+    },
+    {
+     "id": "stardust3",
+     "pregunta": "Am Ende meiner Mission besuchte ich noch einmal einen Kometen. Wozu?",
+     "opciones": [
+      "Um einen Krater einer anderen Mission zu fotografieren",
+      "Um mehr Staub zu sammeln"
+     ],
+     "texto_explorador": "Um den Krater zu sehen, den eine andere Mission Jahre zuvor ausgehoben hatte. Es war das erste Mal, dass eine Sonde zu einem Kometen zurückkehrte, und ich fotografierte ihn aus 181 Kilometern Entfernung.",
+     "texto_cientifico": "Am 15. Februar 2011 flog ich in 181 km Abstand am Kometen Tempel 1 vorbei: der erste Besuch bei einem bereits erforschten Kometen. Ich fotografierte den Krater, den der Impaktor von Deep Impact hinterließ, und kartierte zuvor ungesehene Gebiete."
+    }
+   ],
+   "mapa": {
+    "tipo": "espacio"
+   },
+   "hitos": [
+    {
+     "titulo": "Mein Auftrag",
+     "texto": "Zum Kometen Wild 2 fliegen, Staub aus seiner Spur sammeln und ihn in einer Kapsel zur Erde bringen. Sie startete am 7. Februar 1999 von Cape Canaveral.",
+     "fuente": "NASA Science — Stardust"
+    },
+    {
+     "titulo": "Körner im Aerogel",
+     "texto": "Am 2. Januar 2004 flog ich in rund 250 Kilometern Abstand am Kern vorbei und fing mehr als 10.000 Partikel größer als ein Mikrometer ein. Am 15. Januar 2006 landete die Kapsel um 10:10 UTC in Utah.",
+     "fuente": "JPL — zehn Jahre nach der Rückkehr der Proben"
+    },
+    {
+     "titulo": "Zurück zu einem Kometen",
+     "texto": "Am 15. Februar 2011 flog ich in 181 Kilometern Abstand am Kometen Tempel 1 vorbei, das erste Mal, dass ein solcher Körper erneut besucht wurde. Am 24. März beendete eine abschließende Zündung von 146 Sekunden die Mission.",
+     "fuente": "JPL — der Kometenjäger beendet seine Mission"
+    }
+   ]
+  },
+  {
+   "id": "deep-space-1",
+   "nombre": "Deep Space 1",
+   "nombre_mapa": "Deep Space 1",
+   "cuerpo": "Weltraum",
+   "lugar": "Im Sonnenorbit, seit Dezember 2001 mit abgeschaltetem Triebwerk",
+   "anio": 1998,
+   "anio_tipo": "lanzamiento",
+   "estado": "tot",
+   "estado_texto": {
+    "texto_explorador": "Ich schaltete mein Triebwerk am 18. Dezember 2001 ab und beendete meine Arbeit. Den Funkempfänger ließ ich eingeschaltet, falls mich jemand irgendwann rufen will.",
+    "texto_cientifico": "Endgültige Abschaltung des Ionentriebwerks am 18. Dezember 2001, nach 16.265 Betriebsstunden und rund 4,3 km/s Geschwindigkeitsänderung. Ein Kontaktversuch im März 2002 blieb ohne Erfolg."
+   },
+   "ficha_resumen": "Sie flog mit einem Triebwerk, das mit Xenon-Ionen schob, fast ohne Kraft, aber ohne Pause, und testete zwölf neue Technologien auf einmal. Außerdem steuerte sie sich selbst, ohne Hilfe von der Erde.",
+   "color": "#7f8fd6",
+   "personas": [
+    {
+     "nombre": "Marc Rayman",
+     "papel": "Projektleiter von Deep Space 1 am Jet Propulsion Laboratory (JPL) der NASA"
+    },
+    {
+     "nombre": "Colleen Hartman",
+     "papel": "Leiterin der Abteilung für die Erforschung des Sonnensystems der NASA in Washington"
+    },
+    {
+     "nombre": "Charles Elachi",
+     "papel": "Direktor des Jet Propulsion Laboratory (JPL) der NASA"
+    }
+   ],
+   "fuentes": [
+    {
+     "texto": "NASA Science — Deep Space 1",
+     "url": "https://science.nasa.gov/mission/deep-space-1/"
+    },
+    {
+     "texto": "JPL — Kurzangaben zu Deep Space 1",
+     "url": "https://www.jpl.nasa.gov/nmp/ds1/quick_facts.html"
+    },
+    {
+     "texto": "JPL — Abschied von der erfolgreichen Mission Deep Space 1",
+     "url": "https://www.jpl.nasa.gov/news/nasa-bids-farewell-to-the-successful-deep-space-1-mission/"
+    }
+   ],
+   "turnos": [
+    {
+     "id": "deep-space-1-1",
+     "pregunta": "Mein Triebwerk loderte nicht: Es schob mit einem Strahl aus Xenon-Ionen, sehr sanft, aber stetig. Was erreichte ich damit?",
+     "opciones": [
+      "Einen winzigen Schub über sehr lange Zeit",
+      "Eine enorme Geschwindigkeit in einer Sekunde"
+     ],
+     "texto_explorador": "Einen winzigen Schub über sehr lange Zeit. Das ist wie ein Wagen, den man tagelang ununterbrochen schiebt: Es wird immer weniger spürbar, aber am Ende erreicht er eine Geschwindigkeit, die nicht mehr aufhört.",
+     "texto_cientifico": "Mein Ionentriebwerk erreichte einen spezifischen Impuls von 3.100 Sekunden, bis zu zehnmal so viel wie chemische Treibstoffe. Es lief im November 1998 vierzehn Tage ununterbrochen und sammelte insgesamt 16.265 Betriebsstunden."
+    },
+    {
+     "id": "deep-space-1-2",
+     "pregunta": "Eines Tages fiel einer meiner Sternsensoren aus. Was machte das Team da mit mir?",
+     "opciones": [
+      "Es baute meine Orientierung ohne ihn neu auf",
+      "Es schaltete mich für immer ab"
+     ],
+     "texto_explorador": "Es baute meine Orientierung ohne diesen Sensor neu auf. Sie programmierten mich so, dass ich mich mit anderen Daten lenke, und ich flog weiter: Von der Erde aus retteten sie meine Mission, mit Uhrmachergeduld.",
+     "texto_cientifico": "Am 11. November 1999 fiel mein Sternsensor aus. Das Team baute das Lageregelungssystem ohne ihn neu auf, gestützt auf die autonome Navigationssoftware AutoNav, die später als Grundlage für die Mission Deep Impact diente."
+    },
+    {
+     "id": "deep-space-1-3",
+     "pregunta": "Am Ende meiner Mission flog ich an einem Kometen vorbei. Was habe ich von dort wohl mitgebracht?",
+     "opciones": [
+      "Fotos vom Kern des Kometen",
+      "Ein Stück Eis"
+     ],
+     "texto_explorador": "Seine Fotos. Ich flog in 2.171 Kilometern Abstand am Kern des Kometen Borrelly vorbei und brachte Aufnahmen seines dunklen Herzstücks mit, von den besten, die bis dahin entstanden waren.",
+     "texto_cientifico": "Am 22. September 2001 flog ich in 2.171 km Abstand am Kern des Kometen Borrelly vorbei, mit 16,58 km/s Relativgeschwindigkeit: Ich lieferte einige der besten bis dahin gewonnenen Kometenbilder sowie direkt am Kern aufgenommene Daten."
+    }
+   ],
+   "mapa": {
+    "tipo": "espacio"
+   },
+   "hitos": [
+    {
+     "titulo": "Mein Auftrag",
+     "texto": "Zwölf risikoreiche Technologien auf einmal im Flug zu erproben, darunter ein Ionentriebwerk und ein Programm, das die Sonde ohne Hilfe von der Erde lenkte. Alle zwölf Tests gelangen.",
+     "fuente": "JPL — Deep Space 1 Quick Facts"
+    },
+    {
+     "titulo": "Schieben ohne Pause",
+     "texto": "Mein Xenon-Triebwerk kam auf 16.265 Stunden und eine Geschwindigkeitsänderung von rund 4,3 km/s, die größte, die je eine Sonde mit eigenem Antrieb erreicht hat. Ich verbrauchte 90 % des mitgeführten Xenons.",
+     "fuente": "NASA Science — Deep Space 1"
+    },
+    {
+     "titulo": "Mehr als geplant",
+     "texto": "Geplant waren elf Monate Mission, sie war mehr als drei Jahre in Betrieb. Am 18. Dezember 2001 wurde das Triebwerk abgeschaltet, und nach dem gescheiterten Versuch vom März 2002 gab es keinen Kontakt mehr.",
+     "fuente": "JPL — Abschied von Deep Space 1"
+    }
+   ]
+  },
+  {
+   "id": "spitzer",
+   "nombre": "Spitzer",
+   "nombre_mapa": "Spitzer",
+   "cuerpo": "Weltraum",
+   "lugar": "Auf einer Sonnenumlaufbahn hinter der Erde, seit Januar 2020 im Sicherheitsmodus",
+   "anio": 2003,
+   "anio_tipo": "lanzamiento",
+   "estado": "tot",
+   "estado_texto": {
+    "texto_explorador": "Ich ging am 30. Januar 2020 in den Sicherheitsmodus und betreibe keine Wissenschaft mehr. Ich kreise ein wenig hinter der Erde um die Sonne, mit geschlossenen Augen.",
+    "texto_cientifico": "Am 30. Januar 2020 ging sie in den Sicherheitsmodus und die Mission endete, nach mehr als 16 Jahren statt der geplanten zweieinhalb. Ihre Daten liegen weiter im Archiv des IRSA/IPAC in Caltech."
+   },
+   "ficha_resumen": "Es war das erste Teleskop, das Licht von einem Planeten eines anderen Sterns nachwies, und jenes, das sieben erdgroße Welten um eine einzige Sonne ankündigte. Geplant waren zweieinhalb Jahre, gearbeitet hat es mehr als sechzehn.",
+   "color": "#e0864f",
+   "personas": [
+    {
+     "nombre": "Joseph Hunt",
+     "papel": "Projektleiter von Spitzer am Jet Propulsion Laboratory (JPL) der NASA"
+    },
+    {
+     "nombre": "Mike Werner",
+     "papel": "Projektwissenschaftler von Spitzer am Jet Propulsion Laboratory (JPL) der NASA"
+    },
+    {
+     "nombre": "Suzanne Dodd",
+     "papel": "frühere Missionsleiterin von Spitzer am Jet Propulsion Laboratory (JPL)"
+    },
+    {
+     "nombre": "Paul Hertz",
+     "papel": "Direktor der Abteilung Astrophysik der NASA"
+    }
+   ],
+   "fuentes": [
+    {
+     "texto": "NASA Science — Spitzer",
+     "url": "https://science.nasa.gov/mission/spitzer/"
+    },
+    {
+     "texto": "JPL — das Weltraumteleskop Spitzer beendet eine Mission der Entdeckungen",
+     "url": "https://www.jpl.nasa.gov/news/nasas-spitzer-space-telescope-ends-mission-of-astronomical-discovery/"
+    },
+    {
+     "texto": "JPL — fünfzehn große Entdeckungen von Spitzer",
+     "url": "https://www.jpl.nasa.gov/news/15-of-spitzers-greatest-discoveries-from-15-years-in-space/"
+    }
+   ],
+   "turnos": [
+    {
+     "id": "spitzer1",
+     "pregunta": "Meine Augen sehen nur Wärme, nicht Licht wie deine. Wozu ist es gut, den Himmel so zu betrachten?",
+     "opciones": [
+      "Um das Kalte und das hinter dem Staub Verborgene zu sehen",
+      "Um die hellsten Sterne besser zu sehen"
+     ],
+     "texto_explorador": "Um das Kalte und das hinter dem Staub Verborgene zu sehen. Staub blockiert das normale Licht, lässt aber Wärme durch, deshalb kann ich in die Wolken hineinschauen, in denen Sterne entstehen.",
+     "texto_cientifico": "Mein 85-cm-Teleskop beobachtete im Infraroten, wo Staub durchsichtig ist und kalte Körper strahlen. Ich arbeitete bei 5 K, gekühlt von 360 Litern flüssigen Heliums, die am 15. Mai 2009 zur Neige gingen und die warme Phase einleiteten."
+    },
+    {
+     "id": "spitzer2",
+     "pregunta": "Um einen kleinen roten Stern fand ich etwas ganz Besonderes. Was war es?",
+     "opciones": [
+      "Sieben Planeten von der Größe der Erde",
+      "Einen Ring wie den des Saturn"
+     ],
+     "texto_explorador": "Sieben Gesteinsplaneten von der Größe der Erde, alle um denselben Stern. Drei von ihnen liegen in dem Bereich, in dem Wasser flüssig sein könnte, weder zu heiß noch zu kalt.",
+     "texto_cientifico": "Im Februar 2017 kündigte ich das erste bekannte System mit sieben erdgroßen Planeten um denselben Stern an, TRAPPIST-1; drei davon liegen in der habitablen Zone, wo flüssiges Wasser an der Oberfläche möglich ist."
+    },
+    {
+     "id": "spitzer3",
+     "pregunta": "Kurz bevor ich einschlief, entdeckte ich einen neuen Ring bei Saturn. Wie war er beschaffen?",
+     "opciones": [
+      "Riesig und aus dünnem Staub",
+      "Hell und aus kompaktem Eis"
+     ],
+     "texto_explorador": "Riesig und aus dünnem Staub, so locker, dass er kaum auffällt. Er misst etwa das 300-Fache der Breite des Saturn, ist also eher eine hauchfeine Wolke als ein Ring, wie man ihn kennt.",
+     "texto_cientifico": "2009 entdeckte ich einen dünnen Ring des Saturn, den Phoebe-Ring, mit etwa dem 300-Fachen des Planetendurchmessers: eine Struktur aus verteiltem Staub, ganz anders als die hellen Ringe, die man mit einem normalen Teleskop sieht."
+    }
+   ],
+   "mapa": {
+    "tipo": "espacio"
+   },
+   "hitos": [
+    {
+     "titulo": "Mein Auftrag",
+     "texto": "Das Universum im Infraroten beobachten, als viertes der Großen Observatorien der NASA. Es startete am 25. August 2003 und erhielt am 18. Dezember den Namen Spitzer.",
+     "fuente": "NASA Science — Spitzer"
+    },
+    {
+     "titulo": "Die Kälte war zu Ende",
+     "texto": "Am 15. Mai 2009 ging das flüssige Helium aus, das meine Instrumente auf 5 K kühlte. Ich arbeitete mit zwei Modulen des Hauptinstruments in der sogenannten warmen Phase weiter.",
+     "fuente": "JPL — fünfzehn große Entdeckungen von Spitzer"
+    },
+    {
+     "titulo": "Der letzte Befehl",
+     "texto": "Am 30. Januar 2020 ging ich in den Sicherheitsmodus und beendete die Mission, nach mehr als 16 Jahren Dienst. Meine Daten sind weiter im Archiv des IRSA/IPAC verfügbar.",
+     "fuente": "JPL — Abschied von Spitzer"
+    }
+   ]
+  },
+  {
+   "id": "wmap",
+   "nombre": "Wilkinson Microwave Anisotropy Probe (WMAP)",
+   "nombre_mapa": "WMAP",
+   "cuerpo": "Erdumlaufbahn",
+   "lugar": "Seit September 2010 auf einer Parkbahn um die Sonne",
+   "anio": 2001,
+   "anio_tipo": "lanzamiento",
+   "estado": "tot",
+   "estado_texto": {
+    "texto_explorador": "Sie machte das älteste Bild des Universums und ging 2010 in Rente. Jetzt kreist sie abgeschaltet um die Sonne, ohne mit jemandem zu sprechen.",
+    "texto_cientifico": "Sie beendete die Datennahme am 20. August 2010, nach neun Jahren Messung des kosmischen Mikrowellenhintergrunds von L2 aus; am 8. September 2010 wechselte sie auf eine heliozentrische Parkbahn."
+   },
+   "ficha_resumen": "Sie datierte das Universum: 13.770 Millionen Jahre, mit nur 4,6 % normaler Atome. Neun Jahre lang beobachtete sie vom Punkt L2 aus und wurde 2010 abgeschaltet.",
+   "color": "#5d7fc4",
+   "personas": [
+    {
+     "nombre": "Charles L. Bennett",
+     "papel": "wissenschaftlicher Leiter von WMAP an der Johns Hopkins University"
+    },
+    {
+     "nombre": "Gary Hinshaw",
+     "papel": "Astrophysiker am Goddard Space Flight Center und Verantwortlicher der Mission"
+    },
+    {
+     "nombre": "David T. Wilkinson",
+     "papel": "Professor in Princeton und Instrumentwissenschaftler von WMAP; er starb im September 2002, und die Sonde wurde ihm zu Ehren umbenannt"
+    }
+   ],
+   "fuentes": [
+    {
+     "texto": "NASA Science — WMAP",
+     "url": "https://science.nasa.gov/mission/wmap/wmap-overview/"
+    },
+    {
+     "texto": "NASA Goddard — WMAP schließt seine Satellitenoperationen ab",
+     "url": "https://www.nasa.gov/centers-and-facilities/goddard/nasas-wmap-project-completes-satellite-operations/"
+    },
+    {
+     "texto": "NASA NSSDC — WMAP",
+     "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2001-027A"
+    }
+   ],
+   "turnos": [
+    {
+     "id": "wmap1",
+     "pregunta": "Anfangs hieß ich MAP. Weißt du, warum man meinen Namen änderte?",
+     "opciones": [
+      "Wegen eines Wissenschaftlers, der gestorben war",
+      "Wegen eines Schulwettbewerbs"
+     ],
+     "texto_explorador": "Wegen David Wilkinson, eines Wissenschaftlers aus Princeton, der an meinen Instrumenten arbeitete. Er starb im September 2002, und seitdem trage ich seinen vollständigen Namen.",
+     "texto_cientifico": "Ich wurde zu Ehren von David T. Wilkinson in WMAP umbenannt, des Instrumentwissenschaftlers in Princeton, der im September 2002 starb. Ich war die erste Sonde, die den Lagrange-Punkt L2 von Erde und Sonne in 1,5 Millionen Kilometern Entfernung als Beobachtungsstation nutzte."
+    },
+    {
+     "id": "wmap2",
+     "pregunta": "Was kann man erfahren, wenn man den ganzen Himmel auf einmal betrachtet?",
+     "opciones": [
+      "Das Alter des Universums",
+      "Die Farbe der Sterne"
+     ],
+     "texto_explorador": "Das Alter des Universums. Meine Aufgabe war der kosmische Mikrowellenhintergrund, das älteste Licht, das es gibt, und aus dem Vergleich seiner warmen und kalten Flecken ergab sich die Rechnung.",
+     "texto_cientifico": "Ich maß Temperaturunterschiede des kosmischen Hintergrunds zwischen 2,7251 K und 2,7249 K, also Millionstel Grad, in fünf Frequenzbändern von 22 bis 90 GHz. Daraus ergab sich ein Alter von 13.770 Millionen Jahren mit 0,5 % Unsicherheit."
+    },
+    {
+     "id": "wmap3",
+     "pregunta": "Woraus besteht das Universum wirklich?",
+     "opciones": [
+      "Vor allem aus Dingen, die wir nicht sehen",
+      "Fast alles ist Staub und Gas"
+     ],
+     "texto_explorador": "Aus Dingen, die wir nicht sehen. Atome, Sterne und Planeten sind der kleine Teil: Der Rest ist dunkle Materie und dunkle Energie, und sie strahlen kein Licht ab.",
+     "texto_cientifico": "Meine abschließende Bestandsaufnahme des Universums: 4,6 % Atome, 25,0 % dunkle Materie und fast 70 % dunkle Energie. Ich verkleinerte den zulässigen Bereich der kosmologischen Parameter um einen Faktor von mehr als 68.000."
+    }
+   ],
+   "mapa": {
+    "tipo": "espacio"
+   },
+   "hitos": [
+    {
+     "titulo": "Mein Auftrag",
+     "texto": "Den kosmischen Mikrowellenhintergrund messen, um daraus die Parameter des Universums, sein Alter und seine Zusammensetzung abzuleiten. Vorgeschlagen 1995, genehmigt 1996, gestartet am 30. Juni 2001 unter dem Namen MAP.",
+     "fuente": "NASA Science — WMAP"
+    },
+    {
+     "titulo": "Station in L2",
+     "texto": "Ich war die erste Sonde, die den Punkt L2 von Erde und Sonne als Beobachtungsplattform nutzte, 1,5 Millionen Kilometer von der Erde entfernt und stets mit dem Rücken zu Sonne und Erde.",
+     "fuente": "NASA Science — WMAP"
+    },
+    {
+     "titulo": "Die Abschaltung",
+     "texto": "Am 20. August 2010 nahm ich das letzte wissenschaftliche Datum auf, und am 8. September zündete ich die Triebwerke, um L2 zu verlassen. Ich blieb auf einer Parkbahn um die Sonne.",
+     "fuente": "NASA Goddard — WMAP Project Completes Satellite Operations"
+    }
+   ]
+  },
+  {
+   "id": "suzaku",
+   "nombre": "Suzaku (ASTRO-E2)",
+   "nombre_mapa": "Suzaku",
+   "cuerpo": "Erdumlaufbahn",
+   "lugar": "Beim Wiedereintritt in die Atmosphäre am 5. Januar 2025 verglüht",
+   "anio": 2005,
+   "anio_tipo": "lanzamiento",
+   "estado": "tot",
+   "estado_texto": {
+    "texto_explorador": "Sie stürzte im Januar 2025 wieder auf die Erde, zwanzig Jahre nach ihrem Start. Vorher verstummte sie 2015, und ihre Agentur gab die Rückgewinnung auf.",
+    "texto_cientifico": "Röntgenobservatorium von JAXA: Eine Fehlfunktion im Juni 2015 führte zum Ende der Mission am 26. August 2015 und zum Wiedereintritt in die Atmosphäre mit vollständiger Zerstörung am 5. Januar 2025."
+   },
+   "ficha_resumen": "Sie beobachtete den Himmel zehn Jahre lang in Röntgenlicht, fünfmal länger als geplant, und maß den Spin supermassereicher schwarzer Löcher. Japan leitete sie; die NASA stellte die Teleskope.",
+   "color": "#c85a3c",
+   "personas": [
+    {
+     "nombre": "Robert Petre",
+     "papel": "Leiter des Laboratoriums für Röntgenastrophysik am Goddard Space Flight Center der NASA"
+    },
+    {
+     "nombre": "Aurora Simionescu",
+     "papel": "Astrophysikerin bei JAXA in Sagamihara, die die Untersuchung des Virgo-Haufens mit Suzaku leitete"
+    },
+    {
+     "nombre": "Hiroya Yamaguchi",
+     "papel": "Astrophysiker am Goddard Space Flight Center der NASA und leitender Wissenschaftler der Untersuchung des Überrests 3C 397"
+    }
+   ],
+   "fuentes": [
+    {
+     "texto": "NASA Science — Suzaku",
+     "url": "https://science.nasa.gov/mission/suzaku/"
+    },
+    {
+     "texto": "HEASARC — Ende der Suzaku-Mission",
+     "url": "https://heasarc.gsfc.nasa.gov/docs/suzaku/news/endofmission.html"
+    },
+    {
+     "texto": "NASA — Suzaku findet die gleiche chemische Mischung auf der größten kosmischen Skala",
+     "url": "https://www.nasa.gov/universe/suzaku-finds-common-chemical-makeup-at-largest-cosmic-scales/"
+    }
+   ],
+   "turnos": [
+    {
+     "id": "suzaku1",
+     "pregunta": "Ich war keine NASA-Mission. Weißt du, wer das Kommando hatte?",
+     "opciones": [
+      "Japan, mit der NASA als Partner",
+      "Die NASA, mit Japan als Partner"
+     ],
+     "texto_explorador": "Japan: JAXA mit ihrer Agentur ISAS leitete mich. Die NASA war Partner. Sie stellte die Röntgenteleskope und die Software und betreute mich von ihrem Gastzentrum in Goddard aus.",
+     "texto_cientifico": "Die Mission führte JAXA/ISAS. Die NASA steuerte die Röntgenteleskope und die Software zur Datenverarbeitung bei und betrieb das US-Gastzentrum (GOF) am Goddard Space Flight Center, das das Ende der Mission bekannt gab."
+    },
+    {
+     "id": "suzaku2",
+     "pregunta": "Was sieht man mit Röntgenlicht, was man mit normalem Licht nicht sieht?",
+     "opciones": [
+      "Sehr heißes Gas zwischen den Galaxien",
+      "Die Oberfläche der Planeten"
+     ],
+     "texto_explorador": "Sehr heißes Gas. Ich betrachtete den Virgo-Galaxienhaufen in 54 Millionen Lichtjahren Entfernung und fand Eisen, Magnesium, Silizium und Schwefel überall ähnlich verteilt, bis zu 5 Millionen Lichtjahre vom Zentrum entfernt.",
+     "texto_cientifico": "Im Virgo-Haufen wies ich erstmals Eisen, Magnesium, Silizium und Schwefel über die gesamte Ausdehnung des Haufens nach, mit Beobachtungsarmen von bis zu 5 Millionen Lichtjahren: Die chemische Mischung ist auf den größten kosmischen Skalen homogen."
+    },
+    {
+     "id": "suzaku3",
+     "pregunta": "Wie unterscheidet man eine Supernova eines Weißen Zwergs von einer, die von selbst explodiert?",
+     "opciones": [
+      "Am Zustand des Eisens",
+      "An ihrer Farbe"
+     ],
+     "texto_explorador": "Am Eisen: Je nachdem, wie es ionisiert ist, weiß man, welche Art von Explosion es war. Im Überrest 3C 397 gab es zu viel Mangan und Nickel, und das verriet einen einzelnen Weißen Zwerg.",
+     "texto_cientifico": "Der Ionisationszustand des Eisens trennt Überreste vom Typ Ia von denen einer Kernkollaps-Supernova. In 3C 397, rund 33.000 Lichtjahre entfernt, deutet der Überschuss an Mangan und Nickel auf einen Weißen Zwerg hin, der Materie ansammelte, bis er sich 1,4 Sonnenmassen näherte."
+    }
+   ],
+   "mapa": {
+    "tipo": "espacio"
+   },
+   "hitos": [
+    {
+     "titulo": "Mein Auftrag",
+     "texto": "Das Universum in Röntgenlicht über einen enormen Bereich von 0,2 bis 600 keV beobachten, mit vier CCD-Kameras und einem Hochenergiedetektor. Gestartet am 10. Juli 2005 als ASTRO-E2.",
+     "fuente": "NASA Science — Suzaku"
+    },
+    {
+     "titulo": "Das verlorene Kältemittel",
+     "texto": "Mein Mikrokalorimeter-Spektrometer XRS verlor sein gesamtes Kältemittel, bevor die Routinebeobachtungen begannen, und das Instrument war unbrauchbar. Ich arbeitete mit den CCD-Kameras weiter.",
+     "fuente": "NASA Science — Suzaku"
+    },
+    {
+     "titulo": "Zehn Jahre Leben",
+     "texto": "Ich hielt zehn Jahre durch, fünfmal so lange wie geplant, und JAXA erklärte die Mission am 26. August 2015 für abgeschlossen. Am 5. Januar 2025 verglühte ich beim Wiedereintritt in die Atmosphäre.",
+     "fuente": "HEASARC — End of Suzaku Mission"
+    }
+   ]
+  },
+  {
+   "id": "compton-gro",
+   "nombre": "Compton Gamma Ray Observatory (CGRO)",
+   "nombre_mapa": "Compton",
+   "cuerpo": "Erdumlaufbahn",
+   "lugar": "Beim Wiedereintritt über dem Pazifik zerstört, 3.862 km südöstlich von Hawaii",
+   "anio": 1991,
+   "anio_tipo": "lanzamiento",
+   "estado": "tot",
+   "estado_texto": {
+    "texto_explorador": "Sie steuerten mich im Juni 2000 in den Pazifik, als eines meiner drei Kreiselinstrumente ausfiel. Beim Eintritt in die Luft zerbrach ich.",
+    "texto_cientifico": "Der Ausfall des dritten Kreisels im Dezember 1999 führte zu einem kontrollierten Wiedereintritt: vier Bremszündungen und Zerstörung über dem Pazifik am 4. Juni 2000, mit Trümmern 3.862 km südöstlich von Hawaii."
+   },
+   "ficha_resumen": "Es wog 16 Tonnen und war das größte bis 1999 gestartete astrophysikalische Observatorium. Es durchmusterte den Himmel im Gammabereich, bewies, dass die Ausbrüche aus anderen Galaxien kommen, und endete im Pazifik.",
+   "color": "#9a6ad0",
+   "personas": [
+    {
+     "nombre": "Neil Gehrels",
+     "papel": "Projektwissenschaftler von Compton am Goddard Space Flight Center der NASA"
+    },
+    {
+     "nombre": "Gerald Fishman",
+     "papel": "leitete das Experiment BATSE, das am Marshall Space Flight Center der NASA entwickelt wurde"
+    },
+    {
+     "nombre": "Carl Fichtel",
+     "papel": "leitete das Instrument EGRET am Goddard Space Flight Center"
+    },
+    {
+     "nombre": "James Kurfess",
+     "papel": "leitete das Instrument OSSE am Naval Research Laboratory"
+    }
+   ],
+   "fuentes": [
+    {
+     "texto": "NASA Science — Compton Gamma Ray Observatory",
+     "url": "https://science.nasa.gov/mission/cgro/"
+    },
+    {
+     "texto": "NASA — 25 Jahre bahnbrechende Gammastrahlenforschung",
+     "url": "https://www.nasa.gov/universe/nasa-celebrates-25-years-of-breakthrough-gamma-ray-science/"
+    },
+    {
+     "texto": "HEASARC — der kontrollierte Wiedereintritt von Compton",
+     "url": "https://heasarc.gsfc.nasa.gov/docs/cgro/deorbit/return.html"
+    }
+   ],
+   "turnos": [
+    {
+     "id": "compton1",
+     "pregunta": "Man startete mich in einem Space Shuttle. Weißt du, wie ich ins All kam?",
+     "opciones": [
+      "Im Frachtraum der Atlantis, mit einem zusätzlichen Außenbordeinsatz",
+      "Mit einer Delta-II-Rakete"
+     ],
+     "texto_explorador": "Im Frachtraum der Atlantis, im April 1991. Beim Ausfahren meiner Antenne klemmte sie, und zwei Astronauten mussten aussteigen, um sie zu lösen: der erste nicht geplante Außenbordeinsatz der NASA seit fast sechs Jahren.",
+     "texto_cientifico": "Ich flog am 5. April 1991 mit STS-37, dem achten Flug der Atlantis, und wurde am 7. April ausgesetzt. Jerry Ross und Jay Apt machten einen nicht geplanten Außenbordeinsatz, um meine klemmende Hochgewinnantenne zu lösen."
+    },
+    {
+     "id": "compton2",
+     "pregunta": "Die Gammastrahlenausbrüche dauerten Sekunden, und niemand wusste, woher sie kamen. Was fand ich heraus?",
+     "opciones": [
+      "Dass sie aus fernen Galaxien kommen",
+      "Dass sie von der Sonne kommen"
+     ],
+     "texto_explorador": "Dass sie von sehr weit her kommen. Mein Instrument BATSE sah sie über den ganzen Himmel verteilt, ohne Häufung im Band unserer Galaxie. Kämen sie von hier, klebten sie an der Milchstraße.",
+     "texto_cientifico": "BATSE bewies, dass die Ausbrüche über den ganzen Himmel verteilt sind und nicht der Struktur der Milchstraße folgen: Sie ereignen sich in fernen Galaxien. EGRET entdeckte zudem eine neue Klasse aktiver Galaxien, die Blazare, und fünf Gammastrahlen-Pulsare."
+    },
+    {
+     "id": "compton3",
+     "pregunta": "Und was tat ein Gammastrahlen-Observatorium, das nach unten auf die Erde schaute?",
+     "opciones": [
+      "Gewitter beobachten",
+      "Nichts, es schaute immer in die Tiefe des Himmels"
+     ],
+     "texto_explorador": "Gewitter beobachten. Ich entdeckte überraschend, dass Blitze in den Wolken auch Gammastrahlung aussenden, und so erwies sich die Erde als weitere Quelle in dieser Farbe.",
+     "texto_cientifico": "Überraschend wies ich Gammastrahlung aus irdischen Gewittern nach. Mein Instrument OSSE kartierte außerdem die Gammastrahlung einer Antimateriewolke, die das Zentrum unserer Galaxie umgibt."
+    }
+   ],
+   "mapa": {
+    "tipo": "espacio"
+   },
+   "hitos": [
+    {
+     "titulo": "Vier Instrumente",
+     "texto": "Ich trug BATSE, OSSE, COMPTEL und EGRET, die zusammen den Bereich von 20.000 eV bis 30 GeV abdeckten, mit mehr als zehnmal der Empfindlichkeit früherer Missionen.",
+     "fuente": "NASA Science — CGRO"
+    },
+    {
+     "titulo": "Der Himmel, der sich veränderte",
+     "texto": "Ich machte die erste Durchmusterung des ganzen Himmels in Gammastrahlung, und es erschienen Hunderte neuer Quellen: Der Gamma-Himmel erwies sich als viel dynamischer und vielfältiger als erwartet.",
+     "fuente": "NASA — 25 Years of Breakthrough Gamma-Ray Science"
+    },
+    {
+     "titulo": "Ohne Kreisel",
+     "texto": "Ein Kreisel begann im April 1999 zu versagen und ging im Dezember verloren, und das beschleunigte das Ende der Mission: vier Bremszündungen und ein kontrollierter Wiedereintritt über dem Pazifik.",
+     "fuente": "HEASARC — CGRO Deorbit"
+    }
+   ]
+  },
+  {
+   "id": "mir",
+   "nombre": "Mir",
+   "nombre_mapa": "Mir",
+   "cuerpo": "Erdumlaufbahn",
+   "lugar": "Beim Wiedereintritt über dem Südpazifik zerstört, östlich von Neuseeland",
+   "anio": 1986,
+   "anio_tipo": "lanzamiento",
+   "estado": "tot",
+   "estado_texto": {
+    "texto_explorador": "Sie wurde im März 2001 absichtlich zum Absturz gebracht und zerbrach über dem Südpazifik. Sie war fünfzehn Jahre alt, dreimal so lange, wie sie ausgelegt war.",
+    "texto_cientifico": "Kontrolliertes Deorbitieren am 23. März 2001: Der Frachter Progress M1-5 zündete dreimal; die Station trat in rund 62 Meilen Höhe ein und begann bei etwa 50 Meilen über dem Südpazifik zu zerbrechen."
+   },
+   "ficha_resumen": "Sie war die erste modulare Raumstation, und 104 Kosmonauten und Astronauten aus 13 Ländern gingen durch sie. Auf ihr wurden die 437 Tage am Stück von Valeri Polyakov erreicht, ein Rekord, der bis heute gilt.",
+   "color": "#7fb0a8",
+   "personas": [
+    {
+     "nombre": "Norman Thagard",
+     "papel": "NASA-Astronaut, der 1995 den ersten Langzeitaufenthalt der Behörde auf der Mir begann"
+    },
+    {
+     "nombre": "Shannon Lucid",
+     "papel": "NASA-Astronautin; 1996 stellte sie mit 188 Tagen, 4 Stunden und 0 Minuten im Orbit den Rekord für die längste Aufenthaltsdauer einer Frau auf"
+    },
+    {
+     "nombre": "Frank Culbertson",
+     "papel": "Programmleiter von Shuttle-Mir bei der NASA"
+    }
+   ],
+   "fuentes": [
+    {
+     "texto": "NASA History — die Raumstation Mir tritt in die Atmosphäre ein",
+     "url": "https://www.nasa.gov/history/20-years-ago-space-station-mir-reenters-earths-atmosphere/"
+    },
+    {
+     "texto": "NASA History — offizielle Geschichte des Shuttle-Mir-Programms",
+     "url": "https://www.nasa.gov/history/SP-4225/mir/mir.htm"
+    }
+   ],
+   "turnos": [
+    {
+     "id": "mir1",
+     "pregunta": "Ich war nicht von der NASA. Weißt du, wem ich gehörte?",
+     "opciones": [
+      "Der Sowjetunion und später Russland",
+      "Der NASA, mit europäischen Partnern"
+     ],
+     "texto_explorador": "Der Sowjetunion und später Russland. Die NASA kam als Partner: Zwischen 1995 und 1998 flogen neun Space Shuttles zu mir, und sieben ihrer Astronauten blieben zum Leben hier.",
+     "texto_cientifico": "Ich war das sowjetische und dann das russische Programm. Die NASA beteiligte sich mit dem Shuttle-Mir-Programm: neun angedockte Shuttle-Missionen und sieben Astronauten in Langzeitaufenthalten zwischen 1995 und 1998. Alles Weitere gehörte zum russischen Programm."
+    },
+    {
+     "id": "mir2",
+     "pregunta": "Hier wurde der Rekord für die längste ununterbrochene Zeit im Weltraum aufgestellt. Wie viele Tage sind es deiner Meinung nach?",
+     "opciones": [
+      "437 Tage",
+      "180 Tage"
+     ],
+     "texto_explorador": "437 Tage, 17 Stunden und 38 Minuten. Valeri Polyakov hielt sie, und niemand hat sie bis heute übertroffen. Zuvor waren hier bereits 326 und dann 366 Tage erreicht worden.",
+     "texto_cientifico": "Valeri Polyakov war 437 Tage, 17 Stunden und 38 Minuten an Bord, laut NASA der weiterhin gültige Rekord. Die Station hatte zuvor Marken von 326 und 366 Tagen gesammelt; 1996 kam Shannon Lucid auf 188 Tage, 4 Stunden und 0 Minuten."
+    },
+    {
+     "id": "mir3",
+     "pregunta": "Wie konnte ich nach einem Brand und einem Zusammenstoß weiterarbeiten?",
+     "opciones": [
+      "Weil ich standhielt und als Testfeld diente",
+      "Weil es keinen schweren Unfall gab"
+     ],
+     "texto_explorador": "Weil ich standhielt. Ein gefährlicher Brand und eine beinahe katastrophale Kollision warfen mich nicht aus dem Betrieb. Das machte mich zum Belastungstest für die Station, die danach kam.",
+     "texto_cientifico": "Ein gefährlicher Brand und eine beinahe katastrophale Kollision nahmen mich nicht außer Betrieb: Ich diente als Testfeld für die Widerstandsfähigkeit der ISS, und 42 meiner Besucher flogen später auf ihr."
+    }
+   ],
+   "mapa": {
+    "tipo": "espacio"
+   },
+   "hitos": [
+    {
+     "titulo": "Fünfzehn Jahre oben",
+     "texto": "Ich verbrachte 15 Jahre im Orbit, dreimal so lange wie geplant: 86.331 Umkreisungen und 2.200 Millionen zurückgelegte Meilen, in etwa 250 Meilen Höhe und mit 17.885 mph.",
+     "fuente": "NASA History — Space Station Mir Reenters Earth's Atmosphere"
+    },
+    {
+     "titulo": "Zuhause für viele",
+     "texto": "104 Kosmonauten und Astronauten aus 13 Ländern und Weltraumagenturen gingen durch mich. Im Weltraum zog ich die erste Weizenernte von Samen zu Samen.",
+     "fuente": "NASA History — Shuttle-Mir"
+    },
+    {
+     "titulo": "Der letzte Schubs",
+     "texto": "Progress M43 hob meine Umlaufbahn im Oktober 2000 an, und M1-5 kam im Januar 2001 mit 5.900 Pfund Treibstoff. Seine drei Zündungen am 23. März 2001 brachten mich über dem Südpazifik zum Absturz, in Sichtweite von Fidschi.",
+     "fuente": "NASA History — Space Station Mir Reenters Earth's Atmosphere"
+    }
+   ]
+  },
+  {
+   "id": "van-allen-probes",
+   "nombre": "Van Allen Probes (RBSP A y B)",
+   "nombre_mapa": "Van Allen",
+   "cuerpo": "Erdumlaufbahn",
+   "lugar": "Sonde A trat am 11. März 2026 über dem östlichen Pazifik wieder ein; Sonde B ist weiter im Orbit",
+   "anio": 2012,
+   "anio_tipo": "lanzamiento",
+   "estado": "tot",
+   "estado_texto": {
+    "texto_explorador": "Es waren zwei Sonden, und sie wurden 2019 abgeschaltet, nach fast sieben Jahren, in denen sie die Strahlungsgürtel abhörten. Sonde A ist bereits abgestürzt; Sonde B ist noch oben, abgeschaltet.",
+    "texto_cientifico": "Abschaltung von Sonde B am 19. Juli 2019 und von Sonde A am 18. Oktober 2019, nach fast sieben Jahren Daten; Sonde A trat am 11. März 2026 über dem östlichen Pazifik wieder ein."
+   },
+   "ficha_resumen": "Zwei Zwillingssonden, die einen dritten Strahlungsgürtel um die Erde entdeckten. Geplant für zwei Jahre, hielten sie fast sieben durch; die letzte wurde 2019 abgeschaltet.",
+   "color": "#4fb3b8",
+   "personas": [
+    {
+     "nombre": "Nelofar Mosavi",
+     "papel": "Projektleiterin der Van Allen Probes am Applied Physics Laboratory der Johns Hopkins University"
+    },
+    {
+     "nombre": "David Sibeck",
+     "papel": "Missionswissenschaftler am Goddard Space Flight Center der NASA"
+    },
+    {
+     "nombre": "Sasha Ukhorskiy",
+     "papel": "Projektwissenschaftler am Applied Physics Laboratory, wo die Sonden entworfen und gebaut wurden"
+    }
+   ],
+   "fuentes": [
+    {
+     "texto": "NASA Science — Van Allen Probes",
+     "url": "https://science.nasa.gov/mission/van-allen-probes/"
+    },
+    {
+     "texto": "NASA — zehn Ergebnisse der Mission Van Allen Probes",
+     "url": "https://www.nasa.gov/solar-system/ten-highlights-from-nasas-van-allen-probes-mission/"
+    },
+    {
+     "texto": "NASA — Sonde A der Van Allen Probes tritt wieder in die Atmosphäre ein",
+     "url": "https://www.nasa.gov/missions/van-allen-probes/nasa-van-allen-probe-a-to-re-enter-atmosphere/"
+    }
+   ],
+   "turnos": [
+    {
+     "id": "vanallen1",
+     "pregunta": "Wenige Tage nach der Ankunft sahen wir schon etwas, das auf keiner Karte stand. Was war es?",
+     "opciones": [
+      "Ein dritter Strahlungsgürtel",
+      "Ein neuer Staubring"
+     ],
+     "texto_explorador": "Ein dritter Strahlungsgürtel, dicht an den beiden anderen. Er erscheint, wenn die Sonne unruhig wird, und löst sich danach wieder auf; niemand hatte ihn je so deutlich entstehen sehen.",
+     "texto_cientifico": "Tage nach dem Start bewiesen wir die Existenz eines dritten, flüchtigen Strahlungsgürtels, der sich in Zeiten hoher Sonnenaktivität bilden kann. Das war unser erstes Ergebnis, und es stand in keinem früheren Modell."
+    },
+    {
+     "id": "vanallen2",
+     "pregunta": "Wie werden die Elektronen der Gürtel auf enorme Energien beschleunigt?",
+     "opciones": [
+      "Durch Plasmawellen",
+      "Allein durch den Sonnenwind"
+     ],
+     "texto_explorador": "Durch Plasmawellen. Sonde B sah siebentausend elektrische Pulse pro Minute, die zusammen in sechs Minuten eine Million Volt ergaben: genug, um Elektronen auf fast Lichtgeschwindigkeit zu bringen.",
+     "texto_cientifico": "Sonde B registrierte 7.000 Pulse elektrostatischer Doppelschichten pro Minute, die in sechs Minuten eine Million Volt ergaben, genug, um Elektronen auf relativistische Energien zu beschleunigen. Choruswellen im sehr niedrigen Frequenzbereich heben sie zudem innerhalb von Stunden auf Millionen Elektronenvolt."
+    },
+    {
+     "id": "vanallen3",
+     "pregunta": "Und wie endete die Mission?",
+     "opciones": [
+      "Abgeschaltet 2019, und eine ist schon abgestürzt",
+      "Beide funktionieren noch"
+     ],
+     "texto_explorador": "Abgeschaltet. Sonde B schlief am 19. Juli 2019 ein, Sonde A am 18. Oktober. Sonde A verglühte am 11. März 2026 über dem östlichen Pazifik; Sonde B kreist weiter, abgeschaltet.",
+     "texto_cientifico": "Man schaltete uns ab, als der Treibstoff zu Ende ging: Sonde B am 19. Juli 2019 und Sonde A am 18. Oktober 2019, nach fast sieben Jahren Daten statt der zwei vorgesehenen. Sonde A trat am 11. März 2026 um 6:37 EDT bei 2 Grad Süd und 255,3 Grad Ost wieder ein; Sonde B sollte nicht vor 2030 abstürzen."
+    }
+   ],
+   "mapa": {
+    "tipo": "espacio"
+   },
+   "hitos": [
+    {
+     "titulo": "Unser Auftrag",
+     "texto": "Die Strahlungsgürtel der Erde überwachen, jene Region, in der sich geladene Teilchen sammeln, die Satelliten und Astronauten schaden können. Wir wurden am 30. August 2012 gemeinsam gestartet.",
+     "fuente": "NASA Science — Van Allen Probes"
+    },
+    {
+     "titulo": "Der dritte Gürtel",
+     "texto": "Wenige Tage nach der Ankunft hatten wir bereits einen dritten, flüchtigen Strahlungsgürtel gesehen, der sich bei intensiver Sonnenaktivität bildet und danach wieder auflöst.",
+     "fuente": "NASA — Ten Highlights, Van Allen Probes"
+    },
+    {
+     "titulo": "Die Rückkehr",
+     "texto": "Im Februar 2019 führten wir die abschließenden Deorbit-Manöver durch, um keinen Weltraumschrott im Orbit zu lassen. Sonde A trat am 11. März 2026 wieder ein, früher als wegen des Sonnenmaximums erwartet.",
+     "fuente": "NASA — Van Allen Probe A to Re-enter Atmosphere"
+    }
+   ]
+  },
+  {
+   "id": "geotail",
+   "nombre": "Geotail",
+   "nombre_mapa": "Geotail",
+   "cuerpo": "Erdumlaufbahn",
+   "lugar": "Auf einer elliptischen Erdumlaufbahn, seit 28. November 2022 abgeschaltet",
+   "anio": 1992,
+   "anio_tipo": "lanzamiento",
+   "estado": "tot",
+   "estado_texto": {
+    "texto_explorador": "Er sendete im November 2022 nicht mehr, nach mehr als dreißig Jahren Arbeit. Er ist weiter auf seiner Umlaufbahn, abgeschaltet, ohne dass ihn jemand zum Absturz gebracht hat.",
+    "texto_cientifico": "Betriebsende am 28. November 2022, nachdem am 28. Juni 2022 sein zweiter Datenschreiber ausgefallen war; er war mehr als 30 Jahre in Betrieb statt der geplanten 4 und befindet sich weiter auf einer elliptischen Umlaufbahn von 9 x 30 Erdradien."
+   },
+   "ficha_resumen": "Es war die erste gemeinsame Mission Japans und der NASA und für vier Jahre gedacht: Sie dauerte mehr als dreißig. Er lokalisierte den Punkt, an dem das Magnetfeld der Erde aufreißt und sich wieder verbindet, in 80.000 bis 120.000 Meilen Entfernung.",
+   "color": "#6b8cae",
+   "personas": [
+    {
+     "nombre": "Guan Le",
+     "papel": "US-Projektwissenschaftler für Geotail am Goddard Space Flight Center der NASA, seit 2008"
+    },
+    {
+     "nombre": "Iku Shinohara",
+     "papel": "japanischer Projektleiter von Geotail bei ISAS/JAXA"
+    },
+    {
+     "nombre": "Masaki Fujimoto",
+     "papel": "japanischer Projektwissenschaftler für Geotail bei ISAS/JAXA"
+    },
+    {
+     "nombre": "Donald H. Fairfield",
+     "papel": "erster US-Projektwissenschaftler für Geotail am Goddard Space Flight Center"
+    }
+   ],
+   "fuentes": [
+    {
+     "texto": "NASA Science — Geotail",
+     "url": "https://science.nasa.gov/mission/geotail/"
+    },
+    {
+     "texto": "NASA — die Operationen von Geotail enden nach 30 Jahren",
+     "url": "https://www.nasa.gov/science-research/heliophysics/nasas-geotail-mission-operations-come-to-an-end-after-30-years/"
+    },
+    {
+     "texto": "ISAS/JAXA — Ende der Geotail-Operationen",
+     "url": "https://www.isas.jaxa.jp/en/topics/003261.html"
+    }
+   ],
+   "turnos": [
+    {
+     "id": "geotail1",
+     "pregunta": "Weißt du, wem ich gehöre? Keine einzelne Agentur hat mich gebaut.",
+     "opciones": [
+      "Japan und den USA",
+      "Nur den USA"
+     ],
+     "texto_explorador": "Japan und den USA. Ich war die erste Mission, die sie gemeinsam durchführten: Japan stellte die Sonde und die Steuerung vom Boden, die USA die Instrumente und die Bahnverfolgung. Deshalb nennt man mich die Mission der zwei Flaggen.",
+     "texto_cientifico": "Ich war die erste gemeinsame Mission des japanischen ISAS und der NASA, im Rahmen des ISTP-Projekts. Ich wog 1.009 kg, rotierte mit 20 U/min, entfaltete Antennen von 100 Metern Spannweite und trug sieben Instrumente: MGF, LEP, EFD, EPIC, HEP, PWI und CPI."
+    },
+    {
+     "id": "geotail2",
+     "pregunta": "Man sagt, ich hätte die genaue Stelle gefunden, an der das Magnetfeld der Erde aufreißt. Wo liegt sie?",
+     "opciones": [
+      "Hinter der Erde, im Magnetschweif",
+      "Direkt über dem Äquator"
+     ],
+     "texto_explorador": "Hinter der Erde, im Magnetschweif. Dort, zwischen 80.000 und 120.000 Meilen, reißt das Feld auf und verbindet sich wieder, und ich sah es mit Polarlichtern über den Polen zusammenfallen. Dieses Ergebnis bestimmte später die Umlaufbahn der Mission MMS.",
+     "texto_cientifico": "Ich lokalisierte die magnetische Rekonnexion im Schweif, zwischen 80.000 und 120.000 Meilen von der Erde, und beobachtete Rekonnexionen zeitgleich mit Polarlichtern, die die Mission Polar und Beobachter am Boden gleichzeitig bestätigten, mit Plasmoiden, die von diesen Stellen ausgestoßen wurden."
+    },
+    {
+     "id": "geotail3",
+     "pregunta": "Was fand ich außer dem Magnetschild noch, ohne dass es jemand von mir verlangt hatte?",
+     "opciones": [
+      "Sauerstoff und Silizium auf dem Mond",
+      "Einen Staubring um die Erde"
+     ],
+     "texto_explorador": "Bei meinen Vorbeiflügen am Mond roch ich seine Luft: Ich fand Sauerstoff, Silizium, Natrium und Aluminium in der Mondatmosphäre. Niemand hatte mich danach geschickt; es kam als Geschenk, bei den Manövern, mit denen ich die Umlaufbahn wechselte.",
+     "texto_cientifico": "In meiner Phase der Mondvorbeiflüge identifizierte ich Sauerstoff, Silizium, Natrium und Aluminium in der Exosphäre des Mondes, ein ungeplanter Fund. Diese fast monatlichen Vorbeiflüge hoben mein Apogäum bis auf 1,4 Millionen Kilometer an."
+    }
+   ],
+   "mapa": {
+    "tipo": "espacio"
+   },
+   "hitos": [
+    {
+     "titulo": "Zwei Flaggen",
+     "texto": "Ich war das erste gemeinsame Projekt des japanischen ISAS und der NASA im Programm ISTP: Japan baute und steuerte die Sonde, die USA steuerten Instrumente und Bahnverfolgung bei.",
+     "fuente": "NASA Science — Geotail"
+    },
+    {
+     "titulo": "Der Ort der Rekonnexion",
+     "texto": "Ich lokalisierte die magnetische Rekonnexion zwischen 80.000 und 120.000 Meilen auf der Nachtseite und sah sie mit Polarlichtern über den Polen zusammenfallen. Dieser Fund bestimmte die Umlaufbahn von MMS.",
+     "fuente": "NASA — Geotail: 20 Jahre im Orbit"
+    },
+    {
+     "titulo": "Dreißig Jahre, nicht vier",
+     "texto": "Geplant für vier Jahre, arbeitete er mehr als dreißig. 2012 fiel ein Datenschreiber aus, im Juni 2022 der zweite; ISAS/JAXA beendete den Betrieb am 28. November 2022.",
+     "fuente": "NASA — Die Operationen von Geotail enden"
+    }
+   ]
+  },
+  {
+   "id": "cluster-ii",
+   "nombre": "Cluster II",
+   "nombre_mapa": "Cluster II",
+   "cuerpo": "Erdumlaufbahn",
+   "lugar": "Bei gezielten Wiedereintritten über dem Südpazifik verglüht, die letzte am 1. September 2026",
+   "anio": 2000,
+   "anio_tipo": "lanzamiento",
+   "estado": "tot",
+   "estado_texto": {
+    "texto_explorador": "Keine der vier ist mehr übrig. Sie verglühten zwischen 2024 und 2026 absichtlich über dem Südpazifik, um keinen Müll um die Erde kreisen zu lassen.",
+    "texto_cientifico": "Gezielte Wiedereintritte über dem Südpazifik: Salsa am 8. September 2024, Rumba 2025, Samba am 31. August 2026 und Tango am 1. September 2026, dessen Signal fünfzehn Minuten vor dem Eintritt in die Atmosphäre verloren ging."
+   },
+   "ficha_resumen": "Vier identische Sonden im Formationsflug, um den Magnetschild der Erde dreidimensional zu vermessen. Geplant für zwei Jahre, hielten sie vierundzwanzig durch; am Ende verglühten sie absichtlich über dem Pazifik.",
+   "color": "#9aa9c0",
+   "personas": [
+    {
+     "nombre": "Philippe Escoubet",
+     "papel": "Projektwissenschaftler von Cluster bei der Europäischen Weltraumorganisation (ESA)"
+    },
+    {
+     "nombre": "Bruno Sousa",
+     "papel": "Betriebsleiter der Cluster-Sonden bei der ESA"
+    },
+    {
+     "nombre": "Rolf Densing",
+     "papel": "Direktor für Betrieb der ESA"
+    },
+    {
+     "nombre": "Carole Mundell",
+     "papel": "Direktorin für Wissenschaft der ESA"
+    }
+   ],
+   "fuentes": [
+    {
+     "texto": "NASA Science — Cluster",
+     "url": "https://science.nasa.gov/mission/cluster/"
+    },
+    {
+     "texto": "ESA — Cluster II im Betriebszentrum ESOC",
+     "url": "https://esoc.esa.int/index.php/content/cluster-ii"
+    },
+    {
+     "texto": "ESA — der letzte Abschied des Cluster-Betriebsteams",
+     "url": "https://esa.int/articles/about-us/directorates/science/cluster/after-26-years-in-space-the-cluster-operations-team-says-a-last-goodbye"
+    }
+   ],
+   "turnos": [
+    {
+     "id": "cluster-ii1",
+     "pregunta": "Ich bin nicht allein: Wir sind vier gleiche. Wozu dient der Formationsflug?",
+     "opciones": [
+      "Um den Raum dreidimensional zu vermessen",
+      "Um schärfere Fotos zu machen"
+     ],
+     "texto_explorador": "Um dreidimensional zu messen. Mit vier gleichen Sonden in unterschiedlichen Abständen weiß man, wo jede Grenze des Magnetschilds verläuft und wie er sich im Raum ändert, nicht nur an einem einzelnen Punkt.",
+     "texto_cientifico": "Mit vier identischen Sonden in Tetraederformation und elf gleichen Instrumenten an Bord jeder einzelnen vermaß ich die Magnetosphäre dreidimensional. Die Abstände reichten von 3 bis 60.000 Kilometern: 2013 kamen zwei Sonden auf 4 km Abstand, 2015 auf 6 km."
+    },
+    {
+     "id": "cluster-ii2",
+     "pregunta": "Mein Name klingt englisch, aber schau, von welcher Agentur ich komme.",
+     "opciones": [
+      "Von der ESA, mit Beteiligung der NASA",
+      "Nur von der NASA"
+     ],
+     "texto_explorador": "Von der ESA, der europäischen Weltraumorganisation, mit Beteiligung der NASA. Europa baute die vier Sonden und steuert sie vom Boden aus; die USA wirkten bei den Instrumenten und bei den Daten mit, die ich verteile.",
+     "texto_cientifico": "Ich war eine Mission der ESA mit Beteiligung der NASA. Es waren vier Sonden, Rumba, Salsa, Samba und Tango, mit je elf Instrumenten, auf einer polaren Umlaufbahn von 4 x 19,6 Erdradien, mit einer Periode von rund 57 Stunden und 90,7 Grad Bahnneigung."
+    },
+    {
+     "id": "cluster-ii3",
+     "pregunta": "Weißt du, was ich am letzten Tag meines Lebens tat?",
+     "opciones": [
+      "Einen gezielten Wiedereintritt über dem Pazifik",
+      "Eine sanfte Landung in Australien"
+     ],
+     "texto_explorador": "Ich verglühte absichtlich über dem Südpazifik. Laut ESA war es der erste gezielte Wiedereintritt der Geschichte, und ein Forschungsflugzeug filmte mich, während ich in großer Höhe in Stücke zerbrach.",
+     "texto_cientifico": "Salsa vollzog am 8. September 2024 den ersten gezielten Wiedereintritt der ESA über dem Südpazifik. In dieser Kampagne beobachteten 29 der 30 Instrumente des Flugzeugs ROSIE Samba und Tango im Schnitt rund 50 Sekunden lang, und dieses Ende war auch Wissenschaft."
+    }
+   ],
+   "mapa": {
+    "tipo": "espacio"
+   },
+   "hitos": [
+    {
+     "titulo": "Vier, die verloren gingen",
+     "texto": "Die vier ursprünglichen Sonden wurden am 4. Juni 1996 beim Jungfernflug der Ariane 5 zerstört. Die Mission wurde komplett neu aufgebaut und im Jahr 2000 erneut gestartet.",
+     "fuente": "ESA — Der letzte Abschied des Cluster-Teams"
+    },
+    {
+     "titulo": "Der Schild in 3D",
+     "texto": "Sie war die erste Mission, die die Magnetosphäre der Erde dreidimensional untersuchte, modellierte und kartierte. Sie entdeckte, dass kaltes Plasma bis zu 70 % der Zeit ihr Volumen beherrscht.",
+     "fuente": "ESA — Cluster, 20 Jahre Erforschung der Magnetosphäre"
+    },
+    {
+     "titulo": "Wie wir endeten",
+     "texto": "Salsa trat am 8. September 2024 wieder ein, Samba am 31. August 2026 und Tango am 1. September 2026. Das waren 26 Jahre Wissenschaft, die am Ende Daten zum Wiedereintritt lieferten.",
+     "fuente": "ESA — Die Zugabe von Cluster für die Wiedereintrittsforschung"
+    }
+   ]
+  },
+  {
+   "id": "polar",
+   "nombre": "Polar",
+   "nombre_mapa": "Polar",
+   "cuerpo": "Erdumlaufbahn",
+   "lugar": "Weiter auf Erdumlaufbahn, seit 28. April 2008 außer Betrieb",
+   "anio": 1996,
+   "anio_tipo": "lanzamiento",
+   "estado": "tot",
+   "estado_texto": {
+    "texto_explorador": "Er funktionierte ab April 2008 nicht mehr, nach zwölf Jahren. Er kreist weiter um die Erde, abgeschaltet und ohne jemandem Daten zu senden.",
+    "texto_cientifico": "Betriebsende am 28. April 2008, mehr als zwölf Jahre nach dem Start statt der geplanten zwei; er bleibt auf seiner elliptischen polaren Umlaufbahn von 9 x 1,8 Erdradien mit 86 Grad Bahnneigung."
+   },
+   "ficha_resumen": "Er fotografierte das Polarlicht und maß es gleichzeitig, mit zwölf Instrumenten. So fand er die Wellen, die ihm die Energie zum Leuchten bringen: Sie kommen mit 10.000 Kilometern pro Sekunde herab.",
+   "color": "#7fa88f",
+   "personas": [
+    {
+     "nombre": "John Wygant",
+     "papel": "Forscher an der University of Minnesota, Autor des Ergebnisses über die Alfvén-Wellen, die das Polarlicht speisen"
+    },
+    {
+     "nombre": "L. A. Frank",
+     "papel": "Forscher an der University of Iowa, Mitautor der Studie, die den Beginn der Teilstürme neu verortete"
+    },
+    {
+     "nombre": "J. B. Sigwarth",
+     "papel": "Forscher an der University of Iowa, Mitautor der Studie mit Bildern des Instruments VIS"
+    }
+   ],
+   "fuentes": [
+    {
+     "texto": "NASA Goddard — Polar, Überblick über das Projekt",
+     "url": "https://pwg.gsfc.nasa.gov/istp/polar/overview.html"
+    },
+    {
+     "texto": "NASA Goddard — Polar, Ergebnisse vom April 2000",
+     "url": "https://pwg.gsfc.nasa.gov/istp/polar/2000apr.html"
+    },
+    {
+     "texto": "NASA Goddard — Polar, Ergebnisse vom März 2001",
+     "url": "https://pwg.gsfc.nasa.gov/istp/polar/2001mar.html"
+    }
+   ],
+   "turnos": [
+    {
+     "id": "polar1",
+     "pregunta": "Weißt du, warum ich Kameras trug und nicht nur Sensoren?",
+     "opciones": [
+      "Um das Polarlicht zu sehen und gleichzeitig zu messen",
+      "Um schöne Fotos von der Erde zu machen"
+     ],
+     "texto_explorador": "Um das Polarlicht zu sehen und gleichzeitig zu messen. Drei meiner zwölf Instrumente waren Kameras; die anderen neun maßen Teilchen und Felder genau dort, wo ich war. So ließ sich verbinden, was man sah, mit dem, was geschah.",
+     "texto_cientifico": "Ich trug zwölf Instrumente: drei zur Abbildung des Polarlichts in verschiedenen Wellenlängen und neun zur Messung vor Ort. Diese Kombination erlaubte es erstmals, das Leuchten oben mit den im selben Moment gemessenen Feldern und Teilchen in Verbindung zu bringen."
+    },
+    {
+     "id": "polar2",
+     "pregunta": "Was zündet das Polarlicht? Ich fand den Weg, auf dem die Energie ankommt.",
+     "opciones": [
+      "Alfvén-Wellen",
+      "Der Sonnenwind, der die Luft schiebt"
+     ],
+     "texto_explorador": "Alfvén-Wellen. Ich sah sie in 30.000 bis 40.000 Kilometern Höhe, mit 10.000 Kilometern pro Sekunde herabkommend, mit Energie im Überfluss, um alle bekannten Mechanismen des Polarlichts zu speisen und fast die gesamte, die in einem magnetischen Teilsturm freigesetzt wird.",
+     "texto_cientifico": "Ich identifizierte Oberflächen-Alfvén-Wellen in 30.000-40.000 km Höhe, die sich mit 10.000 km/s bewegen; ihre Energie reicht aus, um alle bekannten Mechanismen der Polarlichtbeschleunigung zu speisen und den größten Teil der in magnetischen Teilstürmen freigesetzten Energie."
+    },
+    {
+     "id": "polar3",
+     "pregunta": "Wo beginnt ein magnetischer Teilsturm wirklich?",
+     "opciones": [
+      "Zwischen 5 und 10 Erdradien",
+      "Direkt an der Oberfläche der Sonne"
+     ],
+     "texto_explorador": "Näher als gedacht: zwischen 5 und 10 Erdradien, im Bereich des Ringstroms, nicht an der Neutralinie weiter draußen. Ich bestimmte den Ort mit 20 Kilometern Genauigkeit, indem ich die Ionosphäre betrachtete.",
+     "texto_cientifico": "Meine Bilder des Instruments VIS legten den Beginn der Teilstürme auf 5 bis 10 Re fest, im Bereich des Ringstroms, mit 20 km Genauigkeit in der Ionosphäre, entgegen der bei 20-30 Re liegenden Neutralinie."
+    }
+   ],
+   "mapa": {
+    "tipo": "espacio"
+   },
+   "hitos": [
+    {
+     "titulo": "Zwölf Augen",
+     "texto": "Ich flog mit zwölf Instrumenten, drei davon Kameras des Polarlichts in verschiedenen Wellenlängen: das erste Mal, dass dasselbe Phänomen gleichzeitig gesehen und gemessen wurde.",
+     "fuente": "NASA Goddard — Polar, Überblick"
+    },
+    {
+     "titulo": "Die Rekonnexion, gesehen",
+     "texto": "Im Jahr 2000 veröffentlichte ich die erste experimentelle Dokumentation der stoßfreien magnetischen Rekonnexion: 3,5 Stunden vollständiger Daten, rund 2 Millionen Messwerte, bestätigten 12 theoretische Vorhersagen.",
+     "fuente": "NASA Goddard — Polar, April 2000"
+    },
+    {
+     "titulo": "Der Motor des Polarlichts",
+     "texto": "Im Jahr 2000 identifizierte ich die Alfvén-Wellen, die die Energie des Polarlichts transportieren: Sie reisen mit 10.000 km/s in rund 30.000-40.000 km Höhe, mit genug Energie, um es zu zünden.",
+     "fuente": "NASA Goddard — Polar, September 2000"
+    }
+   ]
+  },
+  {
+   "id": "trmm",
+   "nombre": "TRMM",
+   "nombre_mapa": "TRMM",
+   "cuerpo": "Erdumlaufbahn",
+   "lugar": "Beim Wiedereintritt über dem südlichen Indischen Ozean am 15. Juni 2015 verglüht",
+   "anio": 1997,
+   "anio_tipo": "lanzamiento",
+   "estado": "tot",
+   "estado_texto": {
+    "texto_explorador": "Ihr ging im April 2015 der Treibstoff aus, und zwei Monate später stürzte sie ab. Der größte Teil verglühte am 15. Juni in der Atmosphäre, über dem südlichen Indischen Ozean.",
+    "texto_cientifico": "NASA und JAXA beendeten die wissenschaftlichen Operationen am 8. April 2015, als der Treibstoff zu Ende ging; der unkontrollierte Wiedereintritt erfolgte am 15. Juni 2015 um 23:55 EDT über dem südlichen Indischen Ozean."
+   },
+   "ficha_resumen": "Sie brachte das erste Regenradar in die Umlaufbahn und zeigte das Innere der Gewitter dreidimensional. Geplant für drei Jahre, arbeitete sie siebzehn, bis ihr der Treibstoff ausging.",
+   "color": "#4f9ec4",
+   "personas": [
+    {
+     "nombre": "Scott Braun",
+     "papel": "Projektwissenschaftler von TRMM am Goddard Space Flight Center der NASA"
+    },
+    {
+     "nombre": "George Huffman",
+     "papel": "Forscher und Meteorologe am Goddard Space Flight Center der NASA"
+    },
+    {
+     "nombre": "Stephen Bilanow",
+     "papel": "Mitarbeiter des Precipitation Processing System der NASA"
+    }
+   ],
+   "fuentes": [
+    {
+     "texto": "NASA GPM — TRMM",
+     "url": "https://gpm.nasa.gov/missions/trmm"
+    },
+    {
+     "texto": "NASA GPM — die TRMM-Sonde tritt über den Tropen wieder ein",
+     "url": "https://gpm.nasa.gov/gpm-news/trmm-spacecraft-re-enters-over-tropics"
+    },
+    {
+     "texto": "NASA — die Regenmission TRMM endet nach 17 Jahren",
+     "url": "https://www.nasa.gov/technology/the-trmm-rainfall-mission-comes-to-an-end-after-17-years/"
+    }
+   ],
+   "turnos": [
+    {
+     "id": "trmm1",
+     "pregunta": "Weißt du, was ich an Bord hatte, das noch niemand zuvor in den Orbit gebracht hatte?",
+     "opciones": [
+      "Ein Radar, das den Regen durchdringt",
+      "Ein Teleskop, um die Wolken zu betrachten"
+     ],
+     "texto_explorador": "Ein Regenradar. Es arbeitete bei 13,8 Gigahertz, hatte eine Fußspur von 5 Kilometern und löste bis auf 250 Meter auf: Damit sieht man das Innere eines Gewitters und nicht nur seine Oberfläche.",
+     "texto_cientifico": "Ich war der erste Satellit mit einem Niederschlagsradar im Orbit: 13,8 GHz, 5 km Fußspur und 250 m vertikale Auflösung, bei einer Schwadbreite von 250 km. Mein Radiometer TMI überstrich 880 km, mehr als dreimal so breit."
+    },
+    {
+     "id": "trmm2",
+     "pregunta": "Man startete mich von Japan aus. Wem gehöre ich also?",
+     "opciones": [
+      "Der NASA und der JAXA, je zur Hälfte",
+      "Nur der NASA"
+     ],
+     "texto_explorador": "Der NASA und der japanischen Agentur JAXA, je zur Hälfte. Japan stellte die Rakete und das Radar, die USA die Sonde und die übrigen Instrumente. Ich war der erste Regensatellit, den die beiden Agenturen gemeinsam bauten.",
+     "texto_cientifico": "Ich war eine gemeinsame Mission von NASA und JAXA: Japan steuerte das Niederschlagsradar und den Start auf einer H-II-Rakete von Tanegashima am 27. November 1997 bei, und die Sonde wurde fast vollständig am Goddard Space Flight Center gebaut."
+    },
+    {
+     "id": "trmm3",
+     "pregunta": "Hast du je ein berühmtes Unwetter von innen gesehen?",
+     "opciones": [
+      "Den Hurrikan Katrina",
+      "Einen Schneesturm in der Sahara"
+     ],
+     "texto_explorador": "Den Hurrikan Katrina, am 28. August 2005. Ich sah sein Inneres: die heißen Türme, die rund um das Auge aufsteigen und den stärksten Regen ablassen. Diese Art, Hurrikane zu betrachten, veränderte sich für immer.",
+     "texto_cientifico": "Am 28. August 2005 gewann ich die dreidimensionale Struktur des Regens des Hurrikans Katrina, einschließlich seiner heißen Türme am Auge. Ich deckte 35 Grad Nord bis 35 Grad Süd ab, wo mehr als zwei Drittel des weltweiten Regens fällt, mit Raten, die manchmal 100 mm pro Stunde überschreiten."
+    }
+   ],
+   "mapa": {
+    "tipo": "espacio"
+   },
+   "hitos": [
+    {
+     "titulo": "Regen in 3D",
+     "texto": "Das erste Niederschlagsradar im Orbit verwandelte Regen in Volumenbilder: Zum ersten Mal sah man die innere Struktur der Gewitter, Schicht für Schicht.",
+     "fuente": "NASA GPM — TRMM"
+    },
+    {
+     "titulo": "Fast live",
+     "texto": "Von Monatsmittelwerten in Zellen von rund 500 km ging sie zu Regenabschätzungen alle drei Stunden über, fast in Echtzeit, und ihre Daten flossen in die Zyklonvorhersagen des National Hurricane Center ein.",
+     "fuente": "NASA GPM — TRMM"
+    },
+    {
+     "titulo": "Das Ende",
+     "texto": "Ihr ging der Treibstoff aus, und NASA und JAXA beendeten die Wissenschaft am 8. April 2015. Am 15. Juni verglühte sie über dem südlichen Indischen Ozean; ihr Nachfolger GPM führt die Reihe fort.",
+     "fuente": "NASA — Die TRMM-Mission endet nach 17 Jahren"
+    }
+   ]
+  },
+  {
+   "id": "topex-poseidon",
+   "nombre": "TOPEX/Poseidon",
+   "nombre_mapa": "TOPEX/Poseidon",
+   "cuerpo": "Erdumlaufbahn",
+   "lugar": "Weiter im Orbit in rund 1.336 km Höhe, seit 2006 ohne Manövrierfähigkeit",
+   "anio": 1992,
+   "anio_tipo": "lanzamiento",
+   "estado": "tot",
+   "estado_texto": {
+    "texto_explorador": "Er antwortete im Januar 2006 nicht mehr, als ein Schwungrad blockierte und er sich nicht mehr ausrichten konnte. Er ist weiter im Orbit, in 1.336 Kilometern Höhe, ohne manövrieren zu können.",
+    "texto_cientifico": "Er verlor die Manövrierfähigkeit, als am 9. Oktober sein Nickrad blockierte; der letzte Befehl wurde ihm am 18. Januar 2006 übermittelt, nach 13 Jahren, 5 Monaten und 7 Tagen Mission, und er bleibt in rund 1.336 km Höhe im Orbit."
+   },
+   "ficha_resumen": "Er maß die Höhe des Meeres mit vier Zentimetern Genauigkeit und porträtierte das große El Niño von 1997 vollständig. Geplant für drei Jahre, war er dreizehn im Einsatz, bis ein Rad blockierte.",
+   "color": "#3f8f8a",
+   "personas": [
+    {
+     "nombre": "Lee-Lueng Fu",
+     "papel": "Projektwissenschaftler von Topex/Poseidon am Jet Propulsion Laboratory der NASA"
+    },
+    {
+     "nombre": "Yves Menard",
+     "papel": "Projektwissenschaftler von Topex/Poseidon am Centre National d'Etudes Spatiales (CNES) in Toulouse"
+    },
+    {
+     "nombre": "Mary Cleave",
+     "papel": "stellvertretende Administratorin der Direktion für Wissenschaftsmissionen der NASA"
+    }
+   ],
+   "fuentes": [
+    {
+     "texto": "JPL — die ozeanografische Mission TOPEX/Poseidon der NASA endet",
+     "url": "https://www.jpl.nasa.gov/news/nasas-topexposeidon-oceanography-mission-ends/"
+    },
+    {
+     "texto": "NASA Sea Level Change — Zusammenfassung von TOPEX/Poseidon",
+     "url": "https://sealevel.jpl.nasa.gov/missions/topex-poseidon/summary/"
+    },
+    {
+     "texto": "JPL — Mission TOPEX/Poseidon",
+     "url": "https://www.jpl.nasa.gov/missions/topex-poseidon/"
+    }
+   ],
+   "turnos": [
+    {
+     "id": "topex-poseidon1",
+     "pregunta": "Wie genau lässt sich das Meer deiner Meinung nach aus dem Weltraum messen?",
+     "opciones": [
+      "Auf vier Zentimeter",
+      "Auf vier Meter"
+     ],
+     "texto_explorador": "Auf vier Zentimeter. Mein Altimeter sandte einen Radarimpuls aus und maß, wie lange er für die Rückkehr brauchte; damit kennt man die Meereshöhe an jedem Punkt des Planeten und sieht, wie sie über die Jahre steigt oder fällt. Ich entstand aus einer Vereinbarung zwischen der NASA und dem französischen CNES.",
+     "texto_cientifico": "Mein Radaraltimeter erreichte eine Genauigkeit von 4,2 cm und maß den Meeresspiegel mit einer Genauigkeit besser als 5 cm, wobei er denselben Zyklus alle 10 Tage wiederholte und in jedem Zyklus mehr als 98 % der geplanten wissenschaftlichen Daten lieferte."
+    },
+    {
+     "id": "topex-poseidon2",
+     "pregunta": "Weißt du, welches berühmte Ereignis ich von Anfang bis Ende porträtierte?",
+     "opciones": [
+      "Das große El Niño von 1997-1998",
+      "Ein Hochwasser des Amazonas"
+     ],
+     "texto_explorador": "Das große El Niño von 1997 und 1998, das stärkste seit hundert Jahren. Zum ersten Mal sah man es von oben vollständig, und es zeigte sich, dass seine Wirkungen nicht in den Tropen bleiben: Sie reichen viel weiter, als man dachte.",
+     "texto_cientifico": "Ich verfolgte das größte El Niño seit hundert Jahren, das von 1997-1998, und half, es vorherzusagen: Ich lieferte die erste globale Perspektive des Phänomens und zeigte, dass seine Wirkungen nicht auf die Tropen beschränkt sind. Meine Daten stehen in mehr als 2.100 Veröffentlichungen von 600 Wissenschaftlern aus 54 Ländern."
+    },
+    {
+     "id": "topex-poseidon3",
+     "pregunta": "Ich hatte Energie im Überfluss. Warum funktionierte ich dann nicht mehr?",
+     "opciones": [
+      "Ein Schwungrad blockierte",
+      "Der Treibstoff ging aus"
+     ],
+     "texto_explorador": "Ein Schwungrad blockierte, und ich konnte die Paneele und Antennen nicht mehr ausrichten. Ohne Manövrierfähigkeit gibt es keine Daten: Der letzte Befehl erreichte mich am 18. Januar 2006, nach gut dreizehn Jahren Arbeit.",
+     "texto_cientifico": "Am 9. Oktober blockierte mein Nickrad, und ich verlor die Manövrierfähigkeit. Am 18. Januar 2006 um 09:41:18 PST erhielt ich den letzten Befehl: 13 Jahre, 5 Monate, 7 Tage, 17 Stunden und 33 Minuten Mission."
+    }
+   ],
+   "mapa": {
+    "tipo": "espacio"
+   },
+   "hitos": [
+    {
+     "titulo": "Zwei Agenturen, eine Mission",
+     "texto": "Die NASA begann 1979 mit der Entwicklung von Topex, und das französische CNES plante Poseidon für sich. 1983 führten sie beide Projekte zu einem einzigen zusammen, das am 10. August 1992 gestartet wurde.",
+     "fuente": "NASA Sea Level Change — TOPEX/Poseidon"
+    },
+    {
+     "titulo": "Das Meer, Zentimeter für Zentimeter",
+     "texto": "Mein Radaraltimeter maß die Höhe der Ozeanoberfläche mit 4,2 cm Genauigkeit und erzeugte die genauesten globalen Gezeitenkarten, die bis dahin entstanden waren.",
+     "fuente": "JPL — Mission TOPEX/Poseidon"
+    },
+    {
+     "titulo": "Das Ende",
+     "texto": "Im Dezember 2001 kam mein Nachfolger Jason, und wir flogen fast drei Jahre im Tandem. Ein blockiertes Rad und der letzte Befehl vom 18. Januar 2006 beendeten die Mission.",
+     "fuente": "JPL — Die Mission TOPEX/Poseidon endet"
+    }
+   ]
+  }
+ ]
+}

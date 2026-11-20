@@ -1,0 +1,336 @@
+{
+ "aparatos": [
+  {
+   "id": "geotail",
+   "nombre": "Geotail",
+   "nombre_mapa": "Geotail",
+   "cuerpo": "Órbita terrestre",
+   "lugar": "En órbita terrestre elíptica, apagado desde el 28 de noviembre de 2022",
+   "anio": 1992,
+   "anio_tipo": "lanzamiento",
+   "estado": "muerto",
+   "estado_texto": {
+    "texto_explorador": "Dejó de transmitir en noviembre de 2022, tras más de treinta años de trabajo. Sigue en su órbita, apagado, sin que nadie lo haya desorbitado.",
+    "texto_cientifico": "Fin de operaciones el 28 de noviembre de 2022, después de fallar su segundo grabador de datos el 28 de junio de 2022; operó más de 30 años frente a los 4 previstos y continúa en una órbita elíptica de 9 x 30 radios terrestres."
+   },
+   "ficha_resumen": "Fue la primera misión conjunta de Japón y la NASA y estaba pensada para cuatro años: duró más de treinta. Localizó el punto donde el campo magnético terrestre se rompe y se vuelve a unir, a 80.000-120.000 millas.",
+   "color": "#6b8cae",
+   "personas": [
+    { "nombre": "Guan Le", "papel": "científico del proyecto Geotail por Estados Unidos en el Goddard Space Flight Center de la NASA, desde 2008" },
+    { "nombre": "Iku Shinohara", "papel": "director del proyecto Geotail por Japón en el ISAS/JAXA" },
+    { "nombre": "Masaki Fujimoto", "papel": "científico del proyecto Geotail por Japón en el ISAS/JAXA" },
+    { "nombre": "Donald H. Fairfield", "papel": "primer científico del proyecto Geotail por Estados Unidos en el Goddard Space Flight Center" }
+   ],
+   "fuentes": [
+    { "texto": "NASA Science — Geotail", "url": "https://science.nasa.gov/mission/geotail/" },
+    { "texto": "NASA — terminan las operaciones de Geotail tras 30 años", "url": "https://www.nasa.gov/science-research/heliophysics/nasas-geotail-mission-operations-come-to-an-end-after-30-years/" },
+    { "texto": "ISAS/JAXA — fin de las operaciones de Geotail", "url": "https://www.isas.jaxa.jp/en/topics/003261.html" }
+   ],
+   "turnos": [
+    {
+     "id": "geotail1",
+     "pregunta": "¿Sabes de quién soy? No me construyó una sola agencia.",
+     "opciones": [
+      "De Japón y Estados Unidos",
+      "Solo de Estados Unidos"
+     ],
+     "texto_explorador": "De Japón y de Estados Unidos. Fui la primera misión que hicieron juntos: Japón puso la nave y el control desde tierra, y Estados Unidos, los instrumentos y el seguimiento. Por eso me llaman la misión de las dos banderas.",
+     "texto_cientifico": "Fui la primera misión conjunta del ISAS japonés y la NASA, dentro del proyecto ISTP. Pesaba 1.009 kg, giraba a 20 rpm, desplegaba antenas de 100 metros punta a punta y llevaba siete instrumentos: MGF, LEP, EFD, EPIC, HEP, PWI y CPI."
+    },
+    {
+     "id": "geotail2",
+     "pregunta": "Dicen que encontré el sitio exacto donde el campo magnético de la Tierra se rompe. ¿Dónde queda?",
+     "opciones": [
+      "Detrás de la Tierra, en la cola magnética",
+      "Justo encima del ecuador"
+     ],
+     "texto_explorador": "Detrás de la Tierra, en la cola magnética. Allí, entre 80.000 y 120.000 millas, el campo se rompe y se vuelve a unir, y lo vi coincidir con auroras sobre los polos. Ese resultado guió después la órbita de la misión MMS.",
+     "texto_cientifico": "Localicé la reconexión magnética en la cola, entre 80.000 y 120.000 millas de la Tierra, y observé reconexiones coincidentes con auroras polares confirmadas a la vez por la misión Polar y por observadores en tierra, con plasmoides expulsados desde esos puntos."
+    },
+    {
+     "id": "geotail3",
+     "pregunta": "Además del escudo magnético, ¿qué encontré sin que nadie me lo hubiera pedido?",
+     "opciones": [
+      "Oxígeno y silicio en la Luna",
+      "Un anillo de polvo alrededor de la Tierra"
+     ],
+     "texto_explorador": "En mis pasos cerca de la Luna olí su aire: encontré oxígeno, silicio, sodio y aluminio en la atmósfera lunar. Nadie me había mandado a buscarlo; salió como regalo, en las maniobras que hacía para cambiar de órbita.",
+     "texto_cientifico": "En mi fase de sobrevuelos lunares identifiqué oxígeno, silicio, sodio y aluminio en la exosfera de la Luna, un hallazgo fuera de lo previsto. Aquellos pasos, casi mensuales, llegaron a elevar mi apogeo hasta 1,4 millones de kilómetros."
+    }
+   ],
+   "mapa": {
+    "tipo": "espacio"
+   },
+   "hitos": [
+    { "titulo": "Dos banderas", "texto": "Fui el primer proyecto conjunto del ISAS japonés y la NASA, dentro del programa ISTP: Japón construyó y controló la nave y Estados Unidos aportó instrumentos y seguimiento.", "fuente": "NASA Science — Geotail" },
+    { "titulo": "El lugar de la reconexión", "texto": "Localicé la reconexión magnética entre 80.000 y 120.000 millas, en el lado nocturno, y la vi coincidir con auroras sobre los polos. Ese hallazgo guió la órbita de MMS.", "fuente": "NASA — Geotail: 20 años en órbita" },
+    { "titulo": "Treinta años, no cuatro", "texto": "Estaba diseñado para cuatro años y funcionó más de treinta. Falló un grabador en 2012 y el segundo en junio de 2022; el ISAS/JAXA cerró las operaciones el 28 de noviembre de 2022.", "fuente": "NASA — Terminan las operaciones de Geotail" }
+   ]
+  },
+  {
+   "id": "cluster-ii",
+   "nombre": "Cluster II",
+   "nombre_mapa": "Cluster II",
+   "cuerpo": "Órbita terrestre",
+   "lugar": "Desintegradas en reentradas dirigidas sobre el Pacífico Sur, la última el 1 de septiembre de 2026",
+   "anio": 2000,
+   "anio_tipo": "lanzamiento",
+   "estado": "muerto",
+   "estado_texto": {
+    "texto_explorador": "Ya no queda ninguna de las cuatro. Se desintegraron a propósito sobre el Pacífico Sur entre 2024 y 2026, para no dejar basura rondando la Tierra.",
+    "texto_cientifico": "Reentradas dirigidas sobre el Pacífico Sur: Salsa el 8 de septiembre de 2024, Rumba en 2025, Samba el 31 de agosto de 2026 y Tango el 1 de septiembre de 2026, cuya señal se perdió quince minutos antes de entrar en la atmósfera."
+   },
+   "ficha_resumen": "Cuatro naves idénticas volando en formación para medir en tres dimensiones el escudo magnético de la Tierra. Iban a durar dos años y aguantaron veinticuatro; al final se desintegraron a propósito sobre el Pacífico.",
+   "color": "#9aa9c0",
+   "personas": [
+    { "nombre": "Philippe Escoubet", "papel": "científico del proyecto Cluster en la Agencia Espacial Europea (ESA)" },
+    { "nombre": "Bruno Sousa", "papel": "director de operaciones de las naves Cluster en la ESA" },
+    { "nombre": "Rolf Densing", "papel": "director de Operaciones de la ESA" },
+    { "nombre": "Carole Mundell", "papel": "directora de Ciencia de la ESA" }
+   ],
+   "fuentes": [
+    { "texto": "NASA Science — Cluster", "url": "https://science.nasa.gov/mission/cluster/" },
+    { "texto": "ESA — Cluster II en el centro de operaciones ESOC", "url": "https://esoc.esa.int/index.php/content/cluster-ii" },
+    { "texto": "ESA — la última despedida del equipo de operaciones de Cluster", "url": "https://esa.int/articles/about-us/directorates/science/cluster/after-26-years-in-space-the-cluster-operations-team-says-a-last-goodbye" }
+   ],
+   "turnos": [
+    {
+     "id": "cluster-ii1",
+     "pregunta": "No estoy sola: somos cuatro iguales. ¿Para qué sirve volar en formación?",
+     "opciones": [
+      "Para medir el espacio en tres dimensiones",
+      "Para hacer fotos más nítidas"
+     ],
+     "texto_explorador": "Para medir en tres dimensiones. Con cuatro naves iguales separadas por distancias distintas se sabe por dónde pasa cada frontera del escudo magnético y cómo cambia en el espacio, no solo en un punto suelto.",
+     "texto_cientifico": "Con cuatro naves idénticas en formación tetraédrica y once instrumentos iguales en cada una medí la magnetosfera en tres dimensiones. Las separaciones iban de 3 a 60.000 kilómetros: en 2013 dos naves quedaron a 4 km y en 2015, a 6 km."
+    },
+    {
+     "id": "cluster-ii2",
+     "pregunta": "Mi nombre suena a inglés, pero mira de qué agencia soy.",
+     "opciones": [
+      "De la ESA, con participación de la NASA",
+      "Solo de la NASA"
+     ],
+     "texto_explorador": "De la ESA, la agencia espacial europea, con participación de la NASA. Europa construyó las cuatro naves y las controla desde tierra; Estados Unidos colaboró en los instrumentos y en los datos que reparto.",
+     "texto_cientifico": "Fui una misión de la ESA con participación de la NASA. Eran cuatro naves, Rumba, Salsa, Samba y Tango, con once instrumentos cada una, en una órbita polar de 4 x 19,6 radios terrestres, con periodo de unas 57 horas e inclinación de 90,7 grados."
+    },
+    {
+     "id": "cluster-ii3",
+     "pregunta": "¿Sabes qué hice el último día de mi vida?",
+     "opciones": [
+      "Una reentrada dirigida sobre el Pacífico",
+      "Un aterrizaje suave en Australia"
+     ],
+     "texto_explorador": "Me desintegré a propósito sobre el Pacífico Sur. Fue la primera reentrada dirigida de la historia según la ESA, y un avión de investigación me grabó mientras me rompía en trozos a gran altura.",
+     "texto_cientifico": "Salsa hizo el 8 de septiembre de 2024 la primera reentrada dirigida de la ESA sobre el Pacífico Sur. En aquella campaña, 29 de los 30 instrumentos del avión ROSIE observaron Samba y Tango durante unos 50 segundos de media, y ese final también fue ciencia."
+    }
+   ],
+   "mapa": {
+    "tipo": "espacio"
+   },
+   "hitos": [
+    { "titulo": "Cuatro que se perdieron", "texto": "Las cuatro naves originales se destruyeron el 4 de junio de 1996, en el vuelo inaugural del Ariane 5. La misión se rehízo entera y volvió a lanzarse en el año 2000.", "fuente": "ESA — La última despedida del equipo de Cluster" },
+    { "titulo": "El escudo en 3D", "texto": "Fue la primera misión que estudió, modeló y cartografió en tres dimensiones la magnetosfera terrestre. Descubrió que el plasma frío domina su volumen hasta el 70% del tiempo.", "fuente": "ESA — Cluster, 20 años estudiando la magnetosfera" },
+    { "titulo": "Cómo terminamos", "texto": "Salsa reentró el 8 de septiembre de 2024, Samba el 31 de agosto de 2026 y Tango el 1 de septiembre de 2026. Fueron 26 años de ciencia que acabaron dando datos de reentrada.", "fuente": "ESA — El encore de Cluster para la ciencia de reentrada" }
+   ]
+  },
+  {
+   "id": "polar",
+   "nombre": "Polar",
+   "nombre_mapa": "Polar",
+   "cuerpo": "Órbita terrestre",
+   "lugar": "Sigue en órbita terrestre, sin operaciones desde el 28 de abril de 2008",
+   "anio": 1996,
+   "anio_tipo": "lanzamiento",
+   "estado": "muerto",
+   "estado_texto": {
+    "texto_explorador": "Dejó de funcionar en abril de 2008, después de doce años. Sigue dando vueltas a la Tierra, apagado y sin mandar datos a nadie.",
+    "texto_cientifico": "Fin de las operaciones el 28 de abril de 2008, más de doce años después de su lanzamiento frente a los dos años previstos; continúa en su órbita elíptica polar de 9 x 1,8 radios terrestres, con 86 grados de inclinación."
+   },
+   "ficha_resumen": "Fotografió la aurora y la midió al mismo tiempo, con doce instrumentos. Así encontró las ondas que le llevan la energía que la enciende: bajan a 10.000 kilómetros por segundo.",
+   "color": "#7fa88f",
+   "personas": [
+    { "nombre": "John Wygant", "papel": "investigador de la Universidad de Minnesota, autor del resultado sobre las ondas de Alfvén que alimentan la aurora" },
+    { "nombre": "L. A. Frank", "papel": "investigador de la Universidad de Iowa, coautor del estudio que reubicó el inicio de las subtormentas" },
+    { "nombre": "J. B. Sigwarth", "papel": "investigador de la Universidad de Iowa, coautor del estudio con imágenes del instrumento VIS" }
+   ],
+   "fuentes": [
+    { "texto": "NASA Goddard — Polar, visión general del proyecto", "url": "https://pwg.gsfc.nasa.gov/istp/polar/overview.html" },
+    { "texto": "NASA Goddard — Polar, resultados de abril de 2000", "url": "https://pwg.gsfc.nasa.gov/istp/polar/2000apr.html" },
+    { "texto": "NASA Goddard — Polar, resultados de marzo de 2001", "url": "https://pwg.gsfc.nasa.gov/istp/polar/2001mar.html" }
+   ],
+   "turnos": [
+    {
+     "id": "polar1",
+     "pregunta": "¿Sabes por qué llevaba cámaras, y no solo sensores?",
+     "opciones": [
+      "Para ver la aurora y medirla a la vez",
+      "Para sacar fotos bonitas de la Tierra"
+     ],
+     "texto_explorador": "Para ver la aurora y medirla al mismo tiempo. Tres de mis doce instrumentos eran cámaras; los otros nueve medían partículas y campos justo en el sitio donde yo estaba. Así se podía unir lo que se veía con lo que pasaba.",
+     "texto_cientifico": "Llevé doce instrumentos: tres de imagen de la aurora en distintas longitudes de onda y nueve de medida in situ. Esa combinación permitió relacionar por primera vez lo que brillaba arriba con los campos y las partículas medidos en el mismo instante."
+    },
+    {
+     "id": "polar2",
+     "pregunta": "¿Qué enciende la aurora? Yo encontré el camino por el que llega la energía.",
+     "opciones": [
+      "Ondas de Alfvén",
+      "El viento solar empujando el aire"
+     ],
+     "texto_explorador": "Ondas de Alfvén. Las vi a 30.000 o 40.000 kilómetros de altura, bajando a 10.000 kilómetros por segundo, con energía de sobra para encender todos los mecanismos de aurora que conocemos y casi toda la que se libera en una subtormenta.",
+     "texto_cientifico": "Identifiqué ondas de Alfvén de superficie a 30.000-40.000 km de altitud, viajando a 10.000 km/s; su energía basta para alimentar todos los mecanismos de aceleración auroral conocidos y la mayor parte de la liberada en las subtormentas."
+    },
+    {
+     "id": "polar3",
+     "pregunta": "¿Dónde empieza de verdad una subtormenta?",
+     "opciones": [
+      "Entre 5 y 10 radios terrestres",
+      "Pegada a la superficie del Sol"
+     ],
+     "texto_explorador": "Más cerca de lo que se creía: entre 5 y 10 radios terrestres, en la región de la corriente anular, no en la línea neutra de más allá. Lo situé con 20 kilómetros de precisión mirando la ionosfera.",
+     "texto_cientifico": "Mis imágenes del instrumento VIS fijaron el inicio de las subtormentas entre 5 y 10 Re, en la región de la corriente anular, con 20 km de precisión en la ionosfera, en contra de la línea neutra situada a 20-30 Re."
+    }
+   ],
+   "mapa": {
+    "tipo": "espacio"
+   },
+   "hitos": [
+    { "titulo": "Doce ojos", "texto": "Volé con doce instrumentos, tres de ellos cámaras de la aurora en distintas longitudes de onda: la primera vez que se veía y se medía el mismo fenómeno a la vez.", "fuente": "NASA Goddard — Polar, visión general" },
+    { "titulo": "La reconexión, vista", "texto": "En 2000 publiqué la primera documentación experimental de la reconexión magnética sin colisiones: 3,5 horas de datos completos, unos 2 millones de datos, confirmaron 12 predicciones teóricas.", "fuente": "NASA Goddard — Polar, abril de 2000" },
+    { "titulo": "El motor de la aurora", "texto": "En 2000 identifiqué las ondas de Alfvén que transportan la energía de la aurora: viajan a 10.000 km/s a unos 30.000-40.000 km de altitud, con energía suficiente para encenderla.", "fuente": "NASA Goddard — Polar, septiembre de 2000" }
+   ]
+  },
+  {
+   "id": "trmm",
+   "nombre": "TRMM",
+   "nombre_mapa": "TRMM",
+   "cuerpo": "Órbita terrestre",
+   "lugar": "Desintegrada al reentrar sobre el Índico Sur el 15 de junio de 2015",
+   "anio": 1997,
+   "anio_tipo": "lanzamiento",
+   "estado": "muerto",
+   "estado_texto": {
+    "texto_explorador": "Se quedó sin combustible en abril de 2015 y cayó dos meses después. La mayor parte se quemó en la atmósfera el 15 de junio, sobre el Índico Sur.",
+    "texto_cientifico": "La NASA y la JAXA cerraron las operaciones científicas el 8 de abril de 2015 al agotarse el combustible; la reentrada no controlada ocurrió el 15 de junio de 2015 a las 23:55 EDT sobre el Índico Sur."
+   },
+   "ficha_resumen": "Llevó a la órbita el primer radar de lluvia y enseñó el interior de las tormentas en tres dimensiones. Iba a durar tres años y trabajó diecisiete, hasta que se quedó sin combustible.",
+   "color": "#4f9ec4",
+   "personas": [
+    { "nombre": "Scott Braun", "papel": "científico del proyecto TRMM en el Goddard Space Flight Center de la NASA" },
+    { "nombre": "George Huffman", "papel": "meteorólogo investigador en el Goddard Space Flight Center de la NASA" },
+    { "nombre": "Stephen Bilanow", "papel": "miembro del Precipitation Processing System de la NASA" }
+   ],
+   "fuentes": [
+    { "texto": "NASA GPM — TRMM", "url": "https://gpm.nasa.gov/missions/trmm" },
+    { "texto": "NASA GPM — la nave TRMM reentra sobre los trópicos", "url": "https://gpm.nasa.gov/gpm-news/trmm-spacecraft-re-enters-over-tropics" },
+    { "texto": "NASA — la misión de lluvia TRMM termina tras 17 años", "url": "https://www.nasa.gov/technology/the-trmm-rainfall-mission-comes-to-an-end-after-17-years/" }
+   ],
+   "turnos": [
+    {
+     "id": "trmm1",
+     "pregunta": "¿Sabes qué llevaba dentro que nadie había puesto antes en órbita?",
+     "opciones": [
+      "Un radar que atraviesa la lluvia",
+      "Un telescopio para mirar las nubes"
+     ],
+     "texto_explorador": "Un radar de lluvia. Funcionaba a 13,8 gigahercios, miraba una huella de 5 kilómetros y bajaba hasta 250 metros de detalle: con eso se ve el interior de una tormenta, y no solo su superficie.",
+     "texto_cientifico": "Fui el primer satélite con un radar de precipitación en órbita: 13,8 GHz, huella de 5 km y resolución vertical de 250 m, con una franja de 250 km. Mi radiómetro TMI barría 880 km, más de tres veces esa anchura."
+    },
+    {
+     "id": "trmm2",
+     "pregunta": "Me lanzaron desde Japón. ¿De quién soy entonces?",
+     "opciones": [
+      "De la NASA y la JAXA, a medias",
+      "Solo de la NASA"
+     ],
+     "texto_explorador": "De la NASA y la agencia japonesa JAXA, a medias. Japón puso el cohete y el radar; Estados Unidos, la nave y los demás instrumentos. Fui el primer satélite de lluvia construido entre las dos agencias.",
+     "texto_cientifico": "Fui una misión conjunta de la NASA y la JAXA: Japón aportó el radar de precipitación y el lanzamiento en un cohete H-II desde Tanegashima el 27 de noviembre de 1997, y la nave se construyó casi por completo en el Goddard Space Flight Center."
+    },
+    {
+     "id": "trmm3",
+     "pregunta": "¿Viste alguna tormenta famosa desde dentro?",
+     "opciones": [
+      "El huracán Katrina",
+      "Una tormenta de nieve en el Sáhara"
+     ],
+     "texto_explorador": "El huracán Katrina, el 28 de agosto de 2005. Le vi el interior: las torres calientes que suben alrededor del ojo y sueltan la lluvia más fuerte. Esa manera de mirar los huracanes cambió para siempre.",
+     "texto_cientifico": "El 28 de agosto de 2005 obtuve la estructura tridimensional de la lluvia del huracán Katrina, incluidas sus torres calientes junto al ojo. Cubría de 35 grados norte a 35 sur, donde cae más de dos tercios de la lluvia mundial, con tasas que a veces pasan de 100 mm por hora."
+    }
+   ],
+   "mapa": {
+    "tipo": "espacio"
+   },
+   "hitos": [
+    { "titulo": "Lluvia en 3D", "texto": "El primer radar de precipitación en órbita convirtió la lluvia en imágenes de volumen: por primera vez se vio la estructura interna de las tormentas, capa a capa.", "fuente": "NASA GPM — TRMM" },
+    { "titulo": "Casi en directo", "texto": "Pasó de dar medias mensuales en celdas de unos 500 km a estimaciones de lluvia cada tres horas, casi en tiempo real, y sus datos entraron en los pronósticos de ciclones del National Hurricane Center.", "fuente": "NASA GPM — TRMM" },
+    { "titulo": "El final", "texto": "Se quedó sin combustible y la NASA y la JAXA cerraron la ciencia el 8 de abril de 2015. El 15 de junio se desintegró sobre el Índico Sur; su relevo, GPM, sigue la serie.", "fuente": "NASA — La misión TRMM termina tras 17 años" }
+   ]
+  },
+  {
+   "id": "topex-poseidon",
+   "nombre": "TOPEX/Poseidon",
+   "nombre_mapa": "TOPEX/Poseidon",
+   "cuerpo": "Órbita terrestre",
+   "lugar": "Sigue en órbita a unos 1.336 km, sin capacidad de maniobra desde 2006",
+   "anio": 1992,
+   "anio_tipo": "lanzamiento",
+   "estado": "muerto",
+   "estado_texto": {
+    "texto_explorador": "Dejó de responder en enero de 2006, cuando se le bloqueó una rueda de giro y ya no pudo apuntar. Sigue en órbita, a 1.336 kilómetros, sin poder maniobrar.",
+    "texto_cientifico": "Perdió la capacidad de maniobrar al bloquearse su rueda de cabeceo el 9 de octubre; el último comando se le transmitió el 18 de enero de 2006, tras 13 años, 5 meses y 7 días de misión, y sigue en órbita a unos 1.336 km."
+   },
+   "ficha_resumen": "Midió la altura del mar con cuatro centímetros de precisión y retrató entero el gran El Niño de 1997. Iba a durar tres años y estuvo trece, hasta que se le bloqueó una rueda.",
+   "color": "#3f8f8a",
+   "personas": [
+    { "nombre": "Lee-Lueng Fu", "papel": "científico del proyecto Topex/Poseidon en el Jet Propulsion Laboratory de la NASA" },
+    { "nombre": "Yves Menard", "papel": "científico del proyecto Topex/Poseidon en el Centre National d'Etudes Spatiales (CNES), en Toulouse" },
+    { "nombre": "Mary Cleave", "papel": "administradora asociada de la Dirección de Misiones Científicas de la NASA" }
+   ],
+   "fuentes": [
+    { "texto": "JPL — termina la misión oceanográfica TOPEX/Poseidon de la NASA", "url": "https://www.jpl.nasa.gov/news/nasas-topexposeidon-oceanography-mission-ends/" },
+    { "texto": "NASA Sea Level Change — resumen de TOPEX/Poseidon", "url": "https://sealevel.jpl.nasa.gov/missions/topex-poseidon/summary/" },
+    { "texto": "JPL — misión TOPEX/Poseidon", "url": "https://www.jpl.nasa.gov/missions/topex-poseidon/" }
+   ],
+   "turnos": [
+    {
+     "id": "topex-poseidon1",
+     "pregunta": "¿Con cuánta precisión crees que se puede medir el mar desde el espacio?",
+     "opciones": [
+      "Con cuatro centímetros",
+      "Con cuatro metros"
+     ],
+     "texto_explorador": "Con cuatro centímetros. Mi altímetro lanzaba un pulso de radar y medía cuánto tardaba en volver; con eso se sabe la altura del mar en cualquier punto del planeta y se ve cómo sube o baja con los años. Nací de un acuerdo entre la NASA y el CNES francés.",
+     "texto_cientifico": "Mi altímetro de radar alcanzó una precisión de 4,2 cm y midió el nivel del mar con exactitud mejor de 5 cm, repitiendo el mismo ciclo cada 10 días y entregando más del 98% de los datos científicos previstos en cada ciclo."
+    },
+    {
+     "id": "topex-poseidon2",
+     "pregunta": "¿Sabes qué episodio famoso retraté de principio a fin?",
+     "opciones": [
+      "El gran El Niño de 1997-1998",
+      "Una crecida del Amazonas"
+     ],
+     "texto_explorador": "El gran El Niño de 1997 y 1998, el mayor en cien años. Por primera vez se vio entero desde arriba y se comprobó que sus efectos no se quedan en los trópicos: llegan mucho más lejos de lo que se pensaba.",
+     "texto_cientifico": "Seguí y ayudé a pronosticar el mayor El Niño en cien años, el de 1997-1998: di la primera perspectiva global del fenómeno y mostré que sus efectos no se limitan a los trópicos. Mis datos están en más de 2.100 publicaciones de 600 científicos de 54 países."
+    },
+    {
+     "id": "topex-poseidon3",
+     "pregunta": "Tenía energía de sobra. Entonces, ¿por qué dejé de funcionar?",
+     "opciones": [
+      "Se me bloqueó una rueda de giro",
+      "Se me acabó el combustible"
+     ],
+     "texto_explorador": "Se me bloqueó una rueda de giro y dejé de poder apuntar los paneles y las antenas. Sin poder maniobrar no hay datos: el último comando me llegó el 18 de enero de 2006, después de trece años largos de trabajo.",
+     "texto_cientifico": "El 9 de octubre se bloqueó mi rueda de cabeceo y perdí la capacidad de maniobrar. El 18 de enero de 2006, a las 09:41:18 PST, recibí el último comando: 13 años, 5 meses, 7 días, 17 horas y 33 minutos de misión."
+    }
+   ],
+   "mapa": {
+    "tipo": "espacio"
+   },
+   "hitos": [
+    { "titulo": "Dos agencias, una misión", "texto": "La NASA empezó a desarrollar Topex en 1979 y el CNES francés planeaba Poseidon por su cuenta. En 1983 fusionaron los dos proyectos en uno solo, lanzado el 10 de agosto de 1992.", "fuente": "NASA Sea Level Change — TOPEX/Poseidon" },
+    { "titulo": "El mar, centímetro a centímetro", "texto": "Mi altímetro de radar midió la altura de la superficie del océano con 4,2 cm de precisión y produjo los mapas globales de mareas más exactos hechos hasta entonces.", "fuente": "JPL — Misión TOPEX/Poseidon" },
+    { "titulo": "El final", "texto": "En diciembre de 2001 llegó mi sucesor Jason y volamos en tándem casi tres años. Una rueda bloqueada y el último comando del 18 de enero de 2006 cerraron la misión.", "fuente": "JPL — Termina la misión TOPEX/Poseidon" }
+   ]
+  }
+ ]
+}

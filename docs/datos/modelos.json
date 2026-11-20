@@ -157,5 +157,105 @@
   "nombre_modelo": "Deep Impact (EPOXI)",
   "credito": "NASA 3D Resources · Deep Impact",
   "nota": null
+ },
+ "ladee": {
+  "glb": "modelos/ladee.glb",
+  "nombre_modelo": "Lunar Atmosphere and Dust Environment Explorer (LADEE)",
+  "verificado": "NASA 3D Resources"
+ },
+ "clementine": {
+  "glb": "modelos/clementine.glb",
+  "nombre_modelo": "Clementine",
+  "verificado": "NASA 3D Resources"
+ },
+ "mars-global-surveyor": {
+  "glb": "modelos/mars-global-surveyor.glb",
+  "nombre_modelo": "Mars Global Surveyor",
+  "verificado": "NASA 3D Resources"
+ },
+ "voyager2": {
+  "glb": "modelos/voyager2.glb",
+  "nombre_modelo": "Voyager Probe (A)",
+  "verificado": "NASA 3D Resources"
+ },
+ "pioneer11": {
+  "glb": "modelos/pioneer11.glb",
+  "nombre_modelo": "Pioneer 10 (modelo de la sonda gemela)",
+  "verificado": "NASA 3D Resources"
+ },
+ "ulysses": {
+  "glb": "modelos/ulysses.glb",
+  "nombre_modelo": "Ulysses",
+  "verificado": "NASA 3D Resources"
+ },
+ "rosetta": {
+  "glb": "modelos/rosetta.glb",
+  "nombre_modelo": "Rosetta",
+  "verificado": "NASA 3D Resources"
+ },
+ "stardust": {
+  "glb": "modelos/stardust.glb",
+  "nombre_modelo": "Stardust capsule closed",
+  "verificado": "NASA 3D Resources"
+ },
+ "deep-space-1": {
+  "glb": "modelos/deep-space-1.glb",
+  "nombre_modelo": "Deep Space 1",
+  "verificado": "NASA 3D Resources"
+ },
+ "spitzer": {
+  "glb": "modelos/spitzer.glb",
+  "nombre_modelo": "Spitzer Space Telescope",
+  "verificado": "NASA 3D Resources"
+ },
+ "wmap": {
+  "glb": "modelos/wmap.glb",
+  "nombre_modelo": "Wilkinson Microwave Anisotropy Probe (WMAP)",
+  "verificado": "NASA 3D Resources"
+ },
+ "suzaku": {
+  "glb": "modelos/suzaku.glb",
+  "nombre_modelo": "Suzaku",
+  "verificado": "NASA 3D Resources"
+ },
+ "compton-gro": {
+  "glb": "modelos/compton-gro.glb",
+  "nombre_modelo": "Gamma Ray Observatory",
+  "verificado": "NASA 3D Resources"
+ },
+ "mir": {
+  "glb": "modelos/mir.glb",
+  "nombre_modelo": "Mir",
+  "verificado": "NASA 3D Resources"
+ },
+ "van-allen-probes": {
+  "glb": "modelos/van-allen-probes.glb",
+  "nombre_modelo": "Van Allen Probes",
+  "verificado": "NASA 3D Resources"
+ },
+ "geotail": {
+  "glb": "modelos/geotail.glb",
+  "nombre_modelo": "GeoTailSAT",
+  "verificado": "NASA 3D Resources"
+ },
+ "cluster-ii": {
+  "glb": "modelos/cluster-ii.glb",
+  "nombre_modelo": "Cluster II",
+  "verificado": "NASA 3D Resources"
+ },
+ "polar": {
+  "glb": "modelos/polar.glb",
+  "nombre_modelo": "Polar",
+  "verificado": "NASA 3D Resources"
+ },
+ "trmm": {
+  "glb": "modelos/trmm.glb",
+  "nombre_modelo": "Tropical Rainfall Measuring Mission (TRMM)",
+  "verificado": "NASA 3D Resources"
+ },
+ "topex-poseidon": {
+  "glb": "modelos/topex-poseidon.glb",
+  "nombre_modelo": "TOPEX-Poseidon",
+  "verificado": "NASA 3D Resources"
  }
 }

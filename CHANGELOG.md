@@ -1,3 +1,13 @@
+## v3.18.0 — 2026-11-20
+
+- **El catálogo pasa de 22 a 42 aparatos** con una tanda de 20 objetos que tienen modelo 3D oficial de la NASA. Entran en los tres idiomas con su ficha, su guion de conversación, sus hitos y sus fuentes.
+  - **Luna:** LADEE (impactada junto al cráter Sundman V, con su punto en el globo).
+  - **Marte:** Mars Global Surveyor, que sigue en órbita sin señal desde 2006.
+  - **Otros destinos:** Voyager 2, Pioneer 11, Ulysses, Rosetta, Stardust, Deep Space 1, Spitzer, WMAP, Suzaku, Compton Gamma Ray Observatory, Mir, Van Allen Probes, Geotail, Cluster II, Polar, TRMM y TOPEX/Poseidon.
+- **Modelos aligerados de 20,7 MB a 5,6 MB** bajando solo las texturas incrustadas a 512 px (Stardust 3,7 MB → 291 KB; Ulysses 2,4 MB → 169 KB), sin tocar la geometría. Los 20 se verifican al cargar en el visor.
+- **El mapa del cielo y el campo de destellos se adaptan al número de objetos.** Con 31 aparatos, la fila única de puntos dejaba 6 px entre pin y pin: ahora el cielo se abre en **tres filas** (18 px de separación mínima) y los destellos reparten en **cinco columnas** (siete filas en vez de once).
+- **Pendiente declarado:** estos 20 objetos entran sin los puntos interactivos sobre el modelo 3D (`puntos3d`), que hay que colocar mirando cada modelo pieza a pieza. Se añadirán en una pasada posterior.
+
 ## v3.17.3 — 2026-11-20
 
 - **Coherencia con el renombrado del tercer destino.** La pantalla de destinos decía «¿La Luna, Marte o más allá?» en modo explorador y «el espacio profundo» en modo científico; ahora dice **«otros destinos»** en los dos registros y en los tres idiomas (`other destinations` / `weitere Ziele`).

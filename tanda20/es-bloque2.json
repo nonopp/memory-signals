@@ -1,0 +1,500 @@
+{
+ "aparatos": [
+  {
+   "id": "ulysses",
+   "nombre": "Ulysses",
+   "nombre_mapa": "Ulysses",
+   "cuerpo": "Espacio",
+   "lugar": "En órbita heliocéntrica sobre los polos del Sol, en silencio desde 2009",
+   "anio": 1990,
+   "anio_tipo": "lanzamiento",
+   "estado": "muerto",
+   "estado_texto": {
+    "texto_explorador": "Dejé de responder el 30 de junio de 2009, después de más de dieciocho años de trabajo. Sigo dando vueltas al Sol, pasando por encima de sus polos.",
+    "texto_cientifico": "La misión terminó el 30 de junio de 2009: se ordenó el paso a la antena de baja ganancia a las 20:09 UTC y el apagado del transmisor a las 20:15 UTC. Su órbita heliocéntrica la aleja de la Tierra."
+   },
+   "ficha_resumen": "Fue la primera nave en mirar los polos del Sol, por encima y por debajo del plano de los planetas, y allí el viento solar soplaba al doble de velocidad. Iba a durar cinco años y duró más de dieciocho.",
+   "color": "#d9a04c",
+   "personas": [
+    {
+     "nombre": "Richard Marsden",
+     "papel": "jefe de misión y científico del proyecto Ulysses en la Agencia Espacial Europea (ESA)"
+    },
+    {
+     "nombre": "Ed Smith",
+     "papel": "científico del proyecto Ulysses en el Laboratorio de Propulsión a Chorro (JPL) de la NASA"
+    },
+    {
+     "nombre": "Arik Posner",
+     "papel": "científico del programa Ulysses en la sede central de la NASA"
+    },
+    {
+     "nombre": "Nigel Angold",
+     "papel": "jefe de operaciones de la misión Ulysses en la Agencia Espacial Europea (ESA)"
+    }
+   ],
+   "fuentes": [
+    {
+     "texto": "NASA Science — Ulysses",
+     "url": "https://science.nasa.gov/mission/ulysses/"
+    },
+    {
+     "texto": "JPL — la nave Ulysses termina su histórica misión de descubrimientos",
+     "url": "https://www.jpl.nasa.gov/news/ulysses-spacecraft-ends-historic-mission-of-discovery/"
+    },
+    {
+     "texto": "ESA — visión general de la misión Ulysses",
+     "url": "https://www.esa.int/missions/about-us/directorates/science/ulysses-overview"
+    }
+   ],
+   "turnos": [
+    {
+     "id": "ulysses1",
+     "pregunta": "Para mirar los polos del Sol tuve que salir del plano donde giran los planetas. ¿Cómo lo conseguí?",
+     "opciones": [
+      "Con el empujón de Júpiter",
+      "Con un cohete gigantesco"
+     ],
+     "texto_explorador": "Con el empujón de Júpiter. Pasé a 378.400 kilómetros del planeta y su gravedad me lanzó por encima del plano de los demás, como una piedra que sale despedida de una honda.",
+     "texto_cientifico": "El 8 de febrero de 1992 sobrevolé Júpiter a unos 378.400 km. Su asistencia gravitatoria me llevó a una órbita heliocéntrica inclinada, fuera de la eclíptica: fui la quinta nave en llegar a Júpiter y la primera en mirar el Sol desde arriba y desde abajo."
+    },
+    {
+     "id": "ulysses2",
+     "pregunta": "Desde arriba, el viento del Sol no sopla igual que en el ecuador. ¿Cuánto más rápido lo noté en los polos?",
+     "opciones": [
+      "Unas dos veces más rápido",
+      "Unas dos veces más lento"
+     ],
+     "texto_explorador": "Unas dos veces más rápido. Arriba soplaba a unos 750 kilómetros por segundo y en el ecuador a unos 350: la diferencia entre un vendaval y una brisa suave.",
+     "texto_cientifico": "Con el primer mapa tridimensional de la heliosfera medí unos 750 km/s en las regiones polares frente a unos 350 km/s del viento ecuatorial. El campo magnético polar resultó mucho más débil de lo que se suponía y se invierte cada once años."
+    },
+    {
+     "id": "ulysses3",
+     "pregunta": "¿Sabes cuál fue mi despedida? No esperaba encontrarme algo así por donde iba.",
+     "opciones": [
+      "Atravesar la cola de tres cometas",
+      "Aterrizar en un asteroide"
+     ],
+     "texto_explorador": "Atravesar la cola de tres cometas sin buscarlo. Descubrí que esas colas son mucho más largas de lo que se pensaba, como un rastro de humo que llega mucho más lejos de lo previsto.",
+     "texto_cientifico": "Atravesé de forma imprevista las colas de los cometas Hyakutake (mayo de 1996), McNaught-Hartley (1999) y McNaught (2007), y mostré que las colas cometarias son mucho más largas de lo esperado. También registré más de 1.800 estallidos de rayos gamma."
+    }
+   ],
+   "mapa": {
+    "tipo": "espacio"
+   },
+   "hitos": [
+    {
+     "titulo": "Mi encargo",
+     "texto": "Estudiar el Sol por encima y por debajo del plano de los planetas, algo que ninguna nave había hecho. Se lanzó en la bodega del transbordador Discovery el 6 de octubre de 1990.",
+     "fuente": "NASA Science — Ulysses"
+    },
+    {
+     "titulo": "Los polos del Sol",
+     "texto": "Entre 1994 y 1995 pasé sobre el polo sur y el polo norte del Sol y llegué a 80,2 grados de latitud solar. El 12 de marzo de 1995 me acerqué a unos 200 millones de kilómetros del Sol.",
+     "fuente": "NASA Science — Ulysses"
+    },
+    {
+     "titulo": "El último mensaje",
+     "texto": "El 30 de junio de 2009 se apagó mi transmisor, tras más de dieciocho años y medio de servicio: más de cuatro veces la vida útil prevista. Mi órbita sigue alejándome de la Tierra.",
+     "fuente": "JPL — Ulysses Ends Historic Mission"
+    }
+   ]
+  },
+  {
+   "id": "rosetta",
+   "nombre": "Rosetta",
+   "nombre_mapa": "Rosetta",
+   "cuerpo": "Espacio",
+   "lugar": "Posada sobre el cometa 67P/Churyumov-Gerasimenko, en la región Ma'at",
+   "anio": 2004,
+   "anio_tipo": "lanzamiento",
+   "estado": "muerto",
+   "estado_texto": {
+    "texto_explorador": "Bajé despacio hasta tocar mi cometa el 30 de septiembre de 2016. Dejé de responder al llegar al suelo y ahí sigo, en un lugar llamado Ma'at.",
+    "texto_cientifico": "Descenso controlado y toma de contacto el 30 de septiembre de 2016 en la región Ma'at, junto al pozo Deir el-Medina; el día anterior estaba a unos 23 km del núcleo. La misión concluyó con ese impacto planeado."
+   },
+   "ficha_resumen": "Fue la primera nave en orbitar un cometa y la primera en posar un robot en su superficie. En el hielo de 67P encontró glicina, una de las piezas con las que se construye la vida.",
+   "color": "#8e9ba6",
+   "personas": [
+    {
+     "nombre": "Kathrin Altwegg",
+     "papel": "investigadora principal del instrumento ROSINA en la Universidad de Berna, para la Agencia Espacial Europea"
+    },
+    {
+     "nombre": "Mark Hofstadter",
+     "papel": "investigador principal del instrumento MIRO en el Laboratorio de Propulsión a Chorro (JPL) de la NASA"
+    },
+    {
+     "nombre": "Bonnie Buratti",
+     "papel": "científica del proyecto Rosetta de la NASA en el Laboratorio de Propulsión a Chorro (JPL)"
+    },
+    {
+     "nombre": "Art Chmielewski",
+     "papel": "jefe del proyecto Rosetta de la NASA en el Laboratorio de Propulsión a Chorro (JPL)"
+    }
+   ],
+   "fuentes": [
+    {
+     "texto": "NASA Science — Rosetta y Philae",
+     "url": "https://science.nasa.gov/mission/rosetta-philae/"
+    },
+    {
+     "texto": "JPL — despedida de Rosetta, la misión de la ESA termina sobre el cometa",
+     "url": "https://www.jpl.nasa.gov/news/farewell-rosetta-esa-mission-to-end-on-comet-surface/"
+    },
+    {
+     "texto": "ESA — el agua del cometa de Rosetta reabre el debate sobre el origen de los océanos",
+     "url": "https://sci.esa.int/web/rosetta/-/55116-rosetta-fuels-debate-on-origin-of-earths-oceans"
+    }
+   ],
+   "turnos": [
+    {
+     "id": "rosetta1",
+     "pregunta": "Llegué hasta un cometa y no seguí de largo como las demás. ¿Qué hice que nadie había hecho antes?",
+     "opciones": [
+      "Ponerme a dar vueltas a su alrededor",
+      "Estrellarme contra él"
+     ],
+     "texto_explorador": "Ponerme a dar vueltas a su alrededor. Fui la primera nave que orbitó un cometa y que lo acompañó por su camino, como una luna pequeña girando alrededor de una montaña de hielo y polvo.",
+     "texto_cientifico": "El 6 de agosto de 2014 me convertí en la primera nave en orbitar un cometa y en escoltarlo durante su recorrido: acompañé al 67P/Churyumov-Gerasimenko hasta su perihelio, el 13 de agosto de 2015, y también en su regreso."
+    },
+    {
+     "id": "rosetta2",
+     "pregunta": "Analicé el agua de mi cometa y salió algo raro. ¿Qué tenía de especial?",
+     "opciones": [
+      "Era distinta del agua de los océanos",
+      "Estaba salada como el mar"
+     ],
+     "texto_explorador": "Que era distinta del agua de los océanos. Su hidrógeno pesaba más que el de los mares de la Tierra, así que este cometa no parece haber traído el agua que bebemos.",
+     "texto_cientifico": "Con el instrumento ROSINA medí una relación entre deuterio e hidrógeno más de tres veces mayor que la de los océanos terrestres: el 67P no encaja como fuente principal del agua de la Tierra y el debate sobre su origen sigue abierto."
+    },
+    {
+     "id": "rosetta3",
+     "pregunta": "Antes de despedirme encontré una molécula muy importante para la vida. ¿Cuál era?",
+     "opciones": [
+      "Glicina, un aminoácido",
+      "Azúcar de mesa"
+     ],
+     "texto_explorador": "Glicina, el aminoácido más sencillo: una de las piezas con las que se arman las proteínas. Era la primera vez que se encontraba una en la nube de gas de un cometa.",
+     "texto_cientifico": "En 2016 detecté de forma inequívoca glicina en la coma del cometa, la primera vez que se hallaba un aminoácido en uno de estos cuerpos. En la superficie, el instrumento COSAC de Philae identificó 16 compuestos orgánicos, cuatro nunca vistos en cometas."
+    }
+   ],
+   "mapa": {
+    "tipo": "espacio"
+   },
+   "hitos": [
+    {
+     "titulo": "Mi encargo",
+     "texto": "Alcanzar el cometa 67P/Churyumov-Gerasimenko, ponerme en órbita a su alrededor y posar en su superficie el aterrizador Philae. Recorrí 7.900 millones de kilómetros y reuní 220 GB de datos.",
+     "fuente": "ESA — Rosetta"
+    },
+    {
+     "titulo": "El primer robot",
+     "texto": "El 12 de noviembre de 2014 Philae se separó de mí y tomó contacto con el cometa: hizo las primeras imágenes desde la superficie de uno de estos cuerpos y completó cerca del 80% de su primera secuencia científica.",
+     "fuente": "NASA Science — Rosetta y Philae"
+    },
+    {
+     "titulo": "Los pozos de Ma'at",
+     "texto": "En la región Ma'at encontré pozos activos de más de 100 metros de diámetro y entre 50 y 60 de profundidad, con montículos de un metro que podrían ser las piezas con las que se formó el cometa.",
+     "fuente": "JPL — despedida de Rosetta"
+    }
+   ]
+  },
+  {
+   "id": "stardust",
+   "nombre": "Stardust",
+   "nombre_mapa": "Stardust",
+   "cuerpo": "Espacio",
+   "lugar": "Su nave quedó sin combustible en órbita solar; la cápsula con las muestras está en Houston",
+   "anio": 1999,
+   "anio_tipo": "lanzamiento",
+   "estado": "muerto",
+   "estado_texto": {
+    "texto_explorador": "Terminé el 24 de marzo de 2011 con un último encendido. Me quedé sin combustible y en silencio, dando vueltas al Sol, pero mi carga llegó a casa.",
+    "texto_cientifico": "Última transmisión el 24 de marzo de 2011, tras un encendido final de 146 segundos que agotó el propelente, recibida a 312 millones de km de la Tierra. La nave quedó sin control en órbita heliocéntrica; la cápsula estaba en Houston desde 2006."
+   },
+   "ficha_resumen": "Trajo a la Tierra, por primera vez, polvo de un cometa: más de diez mil partículas atrapadas en una espuma casi tan ligera como el aire. Entre ellas había glicina.",
+   "color": "#7fb0c6",
+   "personas": [
+    {
+     "nombre": "Don Brownlee",
+     "papel": "investigador principal de Stardust en la Universidad de Washington"
+    },
+    {
+     "nombre": "Tim Larson",
+     "papel": "jefe del proyecto Stardust-NExT en el Laboratorio de Propulsión a Chorro (JPL) de la NASA"
+    },
+    {
+     "nombre": "Eileen Stansbery",
+     "papel": "responsable de la curatoria de las muestras en el Centro Espacial Johnson de la NASA"
+    },
+    {
+     "nombre": "Jamie Elsila",
+     "papel": "investigadora del Centro Goddard de la NASA que anunció el hallazgo de glicina"
+    }
+   ],
+   "fuentes": [
+    {
+     "texto": "NASA Science — Stardust",
+     "url": "https://science.nasa.gov/mission/stardust/"
+    },
+    {
+     "texto": "JPL — el veterano cazador de cometas cierra su misión",
+     "url": "https://www.jpl.nasa.gov/news/nasas-venerable-comet-hunter-wraps-up-mission/"
+    },
+    {
+     "texto": "JPL — diez años del regreso de las muestras de Stardust",
+     "url": "https://jpl.nasa.gov/news/nasas-stardust-sample-return-was-10-years-ago-today"
+    }
+   ],
+   "turnos": [
+    {
+     "id": "stardust1",
+     "pregunta": "Pasé muy cerca de un cometa para atrapar su polvo. ¿En qué lo recogí?",
+     "opciones": [
+      "En una espuma ultraligera, el aerogel",
+      "En una bolsa de aire"
+     ],
+     "texto_explorador": "En una espuma casi tan ligera como el aire: el aerogel. Los granos se hundieron en ella y se quedaron frenados sin romperse, como una mosca que cae en la miel.",
+     "texto_cientifico": "El 2 de enero de 2004 pasé a unos 250 km del núcleo del cometa Wild 2 y capturé sus granos en un aerogel de sílice, donde quedaron incrustados sin fundirse. Una cápsula los trajo a la Tierra y permitió analizarlos en el laboratorio."
+    },
+    {
+     "id": "stardust2",
+     "pregunta": "¿Y qué apareció dentro de ese polvo cuando lo abrieron en la Tierra?",
+     "opciones": [
+      "Glicina, un aminoácido",
+      "Solo roca sin nada más"
+     ],
+     "texto_explorador": "Glicina, el aminoácido más sencillo. En el polvo de mi cometa había una de las piezas básicas para armar proteínas, y era la primera vez que se encontraba una en un cometa.",
+     "texto_cientifico": "En las muestras del Wild 2 se identificó glicina, el primer aminoácido hallado en un cometa, junto a una amplia variedad de compuestos orgánicos. En agosto de 2014 se anunciaron siete partículas de polvo interestelar entre el material recogido."
+    },
+    {
+     "id": "stardust3",
+     "pregunta": "Al final de mi vida volví a visitar un cometa. ¿Para qué?",
+     "opciones": [
+      "Para fotografiar un cráter de otra misión",
+      "Para recoger más polvo"
+     ],
+     "texto_explorador": "Para ver el cráter que otra misión había excavado años antes. Fue la primera vez que una nave volvía a un cometa, y lo fotografié desde 181 kilómetros de distancia.",
+     "texto_cientifico": "El 15 de febrero de 2011 sobrevolé el cometa Tempel 1 a 181 km: fue la primera visita a un cometa ya explorado. Fotografié el cráter que dejó el impactador de Deep Impact y cartografié zonas que no se habían visto antes."
+    }
+   ],
+   "mapa": {
+    "tipo": "espacio"
+   },
+   "hitos": [
+    {
+     "titulo": "Mi encargo",
+     "texto": "Ir al cometa Wild 2, recoger polvo de su estela y traerlo a la Tierra en una cápsula. Se lanzó el 7 de febrero de 1999 desde Cabo Cañaveral.",
+     "fuente": "NASA Science — Stardust"
+    },
+    {
+     "titulo": "Granos en el aerogel",
+     "texto": "El 2 de enero de 2004 pasé a unos 250 kilómetros del núcleo y atrapé más de 10.000 partículas mayores de un micrómetro. El 15 de enero de 2006 la cápsula aterrizó en Utah a las 10:10 UTC.",
+     "fuente": "JPL — diez años del regreso de las muestras"
+    },
+    {
+     "titulo": "Volver a un cometa",
+     "texto": "El 15 de febrero de 2011 pasé a 181 kilómetros del cometa Tempel 1, la primera vez que se revisita uno de estos cuerpos. El 24 de marzo, un encendido final de 146 segundos cerró la misión.",
+     "fuente": "JPL — el cazador de cometas cierra su misión"
+    }
+   ]
+  },
+  {
+   "id": "deep-space-1",
+   "nombre": "Deep Space 1",
+   "nombre_mapa": "Deep Space 1",
+   "cuerpo": "Espacio",
+   "lugar": "En órbita solar, con el motor apagado desde diciembre de 2001",
+   "anio": 1998,
+   "anio_tipo": "lanzamiento",
+   "estado": "muerto",
+   "estado_texto": {
+    "texto_explorador": "Apagué mi motor el 18 de diciembre de 2001 y terminé mi trabajo. Dejé encendido el receptor de radio por si alguien, algún día, quiere llamarme.",
+    "texto_cientifico": "Apagado definitivo del motor iónico el 18 de diciembre de 2001, tras 16.265 horas de funcionamiento y unos 4,3 km/s de cambio de velocidad. Un intento de contacto en marzo de 2002 no tuvo éxito."
+   },
+   "ficha_resumen": "Voló con un motor que empujaba con iones de xenón, casi sin fuerza pero sin parar, y probó doce tecnologías nuevas de una sola vez. Además se guiaba sola, sin ayuda desde Tierra.",
+   "color": "#7f8fd6",
+   "personas": [
+    {
+     "nombre": "Marc Rayman",
+     "papel": "jefe del proyecto Deep Space 1 en el Laboratorio de Propulsión a Chorro (JPL) de la NASA"
+    },
+    {
+     "nombre": "Colleen Hartman",
+     "papel": "directora de la División de Exploración del Sistema Solar de la NASA, en Washington"
+    },
+    {
+     "nombre": "Charles Elachi",
+     "papel": "director del Laboratorio de Propulsión a Chorro (JPL) de la NASA"
+    }
+   ],
+   "fuentes": [
+    {
+     "texto": "NASA Science — Deep Space 1",
+     "url": "https://science.nasa.gov/mission/deep-space-1/"
+    },
+    {
+     "texto": "JPL — datos breves de Deep Space 1",
+     "url": "https://www.jpl.nasa.gov/nmp/ds1/quick_facts.html"
+    },
+    {
+     "texto": "JPL — despedida de la exitosa misión Deep Space 1",
+     "url": "https://www.jpl.nasa.gov/news/nasa-bids-farewell-to-the-successful-deep-space-1-mission/"
+    }
+   ],
+   "turnos": [
+    {
+     "id": "deep-space-1-1",
+     "pregunta": "Mi motor no hacía llamaradas: empujaba con un chorro de iones de xenón, muy suave pero constante. ¿Qué conseguí así?",
+     "opciones": [
+      "Un empujón diminuto durante muchísimo tiempo",
+      "Una velocidad enorme en un segundo"
+     ],
+     "texto_explorador": "Un empujón diminuto durante muchísimo tiempo. Es como empujar un carrito sin parar durante días: cada vez se nota menos, pero al final coge una velocidad que no se acaba.",
+     "texto_cientifico": "Mi motor iónico alcanzó un impulso específico de 3.100 segundos, hasta diez veces el de los propelentes químicos. Funcionó catorce días seguidos en noviembre de 1998 y acumuló 16.265 horas de operación."
+    },
+    {
+     "id": "deep-space-1-2",
+     "pregunta": "Un día me quedé sin uno de mis sensores de estrellas. ¿Qué hizo el equipo conmigo?",
+     "opciones": [
+      "Rehacer mi forma de orientarme sin él",
+      "Apagarme para siempre"
+     ],
+     "texto_explorador": "Rehacer mi forma de orientarme sin ese sensor. Me programaron para guiarme con otros datos y seguí volando: me salvaron la misión desde la Tierra, con paciencia de relojero.",
+     "texto_cientifico": "El 11 de noviembre de 1999 falló mi sensor de estrellas. El equipo reconstruyó el sistema de control de actitud sin él, apoyándose en el software de navegación autónoma AutoNav, que después sirvió de base para la misión Deep Impact."
+    },
+    {
+     "id": "deep-space-1-3",
+     "pregunta": "Al final de mi vida pasé junto a un cometa. ¿Qué crees que me traje de allí?",
+     "opciones": [
+      "Fotos del corazón del cometa",
+      "Un trozo de hielo"
+     ],
+     "texto_explorador": "Sus fotos. Pasé a 2.171 kilómetros del núcleo del cometa Borrelly y traje imágenes de su corazón oscuro, de las mejores que se habían hecho hasta entonces.",
+     "texto_cientifico": "El 22 de septiembre de 2001 sobrevolé el cometa Borrelly a 2.171 km del núcleo y 16,58 km/s de velocidad relativa: devolví algunas de las mejores imágenes de un cometa obtenidas hasta entonces, además de datos tomados junto al núcleo."
+    }
+   ],
+   "mapa": {
+    "tipo": "espacio"
+   },
+   "hitos": [
+    {
+     "titulo": "Mi encargo",
+     "texto": "Probar en vuelo doce tecnologías de alto riesgo de una sola vez, entre ellas un motor iónico y un programa que guiaba la nave sin ayuda desde Tierra. Las doce pruebas salieron bien.",
+     "fuente": "JPL — Deep Space 1 Quick Facts"
+    },
+    {
+     "titulo": "Empujar sin parar",
+     "texto": "Mi motor de xenón sumó 16.265 horas y un cambio de velocidad de unos 4,3 km/s, el mayor logrado por una nave con propulsión propia. Gasté el 90% del xenón que llevaba.",
+     "fuente": "NASA Science — Deep Space 1"
+    },
+    {
+     "titulo": "Más de lo previsto",
+     "texto": "Estaba diseñada para once meses de misión y operó más de tres años. El 18 de diciembre de 2001 se apagó el motor y, tras el intento fallido de marzo de 2002, ya no hubo más contacto.",
+     "fuente": "JPL — despedida de Deep Space 1"
+    }
+   ]
+  },
+  {
+   "id": "spitzer",
+   "nombre": "Spitzer",
+   "nombre_mapa": "Spitzer",
+   "cuerpo": "Espacio",
+   "lugar": "En órbita solar rezagada respecto a la Tierra, en modo seguro desde enero de 2020",
+   "anio": 2003,
+   "anio_tipo": "lanzamiento",
+   "estado": "muerto",
+   "estado_texto": {
+    "texto_explorador": "Entré en modo seguro el 30 de enero de 2020 y ya no hago ciencia. Doy vueltas al Sol un poco por detrás de la Tierra, con los ojos cerrados.",
+    "texto_cientifico": "El 30 de enero de 2020 pasó a modo seguro y terminó la misión, tras más de 16 años frente a los dos años y medio previstos. Sus datos siguen en el archivo del IRSA/IPAC, en Caltech."
+   },
+   "ficha_resumen": "Fue el primer telescopio que detectó luz de un planeta de otra estrella y el que anunció siete mundos del tamaño de la Tierra alrededor de un solo sol. Debía durar dos años y medio y trabajó más de dieciséis.",
+   "color": "#e0864f",
+   "personas": [
+    {
+     "nombre": "Joseph Hunt",
+     "papel": "jefe del proyecto Spitzer en el Laboratorio de Propulsión a Chorro (JPL) de la NASA"
+    },
+    {
+     "nombre": "Mike Werner",
+     "papel": "científico del proyecto Spitzer en el Laboratorio de Propulsión a Chorro (JPL) de la NASA"
+    },
+    {
+     "nombre": "Suzanne Dodd",
+     "papel": "antigua jefa de misión de Spitzer en el Laboratorio de Propulsión a Chorro (JPL)"
+    },
+    {
+     "nombre": "Paul Hertz",
+     "papel": "director de Astrofísica de la NASA"
+    }
+   ],
+   "fuentes": [
+    {
+     "texto": "NASA Science — Spitzer",
+     "url": "https://science.nasa.gov/mission/spitzer/"
+    },
+    {
+     "texto": "JPL — el telescopio espacial Spitzer termina una misión de descubrimientos",
+     "url": "https://www.jpl.nasa.gov/news/nasas-spitzer-space-telescope-ends-mission-of-astronomical-discovery/"
+    },
+    {
+     "texto": "JPL — quince grandes descubrimientos de Spitzer",
+     "url": "https://www.jpl.nasa.gov/news/15-of-spitzers-greatest-discoveries-from-15-years-in-space/"
+    }
+   ],
+   "turnos": [
+    {
+     "id": "spitzer1",
+     "pregunta": "Mis ojos solo ven calor, no luz como los tuyos. ¿Para qué sirve mirar así el cielo?",
+     "opciones": [
+      "Para ver lo frío y lo escondido tras el polvo",
+      "Para ver mejor las estrellas más brillantes"
+     ],
+     "texto_explorador": "Para ver lo frío y lo escondido detrás del polvo. El polvo tapa la luz normal pero deja pasar el calor, así que puedo mirar dentro de las nubes donde nacen las estrellas.",
+     "texto_cientifico": "Mi telescopio de 85 cm observaba en el infrarrojo, donde el polvo resulta transparente y los cuerpos fríos emiten. Trabajé a 5 K, enfriado por 360 litros de helio líquido que se agotaron el 15 de mayo de 2009 y dieron paso a la fase cálida."
+    },
+    {
+     "id": "spitzer2",
+     "pregunta": "Alrededor de una estrella pequeña y roja encontré algo muy especial. ¿Qué era?",
+     "opciones": [
+      "Siete planetas del tamaño de la Tierra",
+      "Un anillo como el de Saturno"
+     ],
+     "texto_explorador": "Siete planetas rocosos del tamaño de la Tierra, todos alrededor de la misma estrella. Tres de ellos están en la franja donde el agua podría estar líquida, ni muy caliente ni muy fría.",
+     "texto_cientifico": "En febrero de 2017 anuncié el primer sistema conocido de siete planetas del tamaño de la Tierra alrededor de una misma estrella, TRAPPIST-1; tres de ellos están en la zona habitable, donde el agua líquida es posible en superficie."
+    },
+    {
+     "id": "spitzer3",
+     "pregunta": "Antes de quedarme dormido descubrí un anillo nuevo en Saturno. ¿Cómo era?",
+     "opciones": [
+      "Gigantesco y hecho de polvo tenue",
+      "Brillante y de hielo compacto"
+     ],
+     "texto_explorador": "Gigantesco y hecho de polvo tenue, tan suelto que apenas se nota. Mide unas 300 veces el ancho de Saturno, así que es más una nube finísima que un anillo de los de siempre.",
+     "texto_cientifico": "En 2009 descubrí un anillo tenue de Saturno, el anillo de Febe, con unas 300 veces el diámetro del planeta: una estructura de polvo disperso, muy distinta de los anillos brillantes que se ven con un telescopio normal."
+    }
+   ],
+   "mapa": {
+    "tipo": "espacio"
+   },
+   "hitos": [
+    {
+     "titulo": "Mi encargo",
+     "texto": "Observar el universo en infrarrojo como cuarto de los Grandes Observatorios de la NASA. Se lanzó el 25 de agosto de 2003 y el 18 de diciembre recibió el nombre de Spitzer.",
+     "fuente": "NASA Science — Spitzer"
+    },
+    {
+     "titulo": "Se acabó el frío",
+     "texto": "El 15 de mayo de 2009 se agotó el helio líquido que enfriaba mis instrumentos a 5 K. Seguí trabajando con dos módulos del instrumento principal en la llamada fase cálida.",
+     "fuente": "JPL — quince grandes descubrimientos de Spitzer"
+    },
+    {
+     "titulo": "La última orden",
+     "texto": "El 30 de enero de 2020 entré en modo seguro y cerré la misión, con más de 16 años de servicio. Mis datos siguen disponibles en el archivo del IRSA/IPAC.",
+     "fuente": "JPL — despedida de Spitzer"
+    }
+   ]
+  }
+ ]
+}

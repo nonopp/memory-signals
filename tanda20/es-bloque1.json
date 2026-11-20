@@ -1,0 +1,281 @@
+{
+ "aparatos": [
+  {
+   "id": "ladee",
+   "nombre": "LADEE",
+   "nombre_mapa": "LADEE",
+   "cuerpo": "Luna",
+   "lugar": "Impactada en la cara oculta, junto al cráter Sundman V",
+   "anio": 2013,
+   "anio_tipo": "lanzamiento",
+   "estado": "muerto",
+   "estado_texto": {
+    "texto_explorador": "Se estrelló a propósito contra la Luna en abril de 2014. Después, otra sonda fotografió el sitio del golpe.",
+    "texto_cientifico": "Impacto planeado el 18 de abril de 2014 en la cara oculta, en el borde oriental del cráter Sundman V; la sonda LRO fotografió el lugar el 28 de octubre de 2014."
+   },
+   "ficha_resumen": "Midió el aire de la Luna, que casi no existe: su exosfera tiene la 25 billonésima parte de la densidad de la atmósfera terrestre. Terminó estrellada contra la cara oculta, como estaba previsto.",
+   "color": "#9fb6cc",
+   "personas": [
+    {"nombre": "Rick Elphic", "papel": "científico del proyecto LADEE en el Ames Research Center de la NASA"},
+    {"nombre": "Butler Hine", "papel": "director del proyecto LADEE en el Ames Research Center de la NASA"},
+    {"nombre": "Don Cornwell", "papel": "director del experimento de comunicación láser LLCD en el Goddard Space Flight Center"}
+   ],
+   "fuentes": [
+    {"texto": "NASA Science — LADEE", "url": "https://science.nasa.gov/mission/ladee/in-depth"},
+    {"texto": "NASA — la misión LADEE termina con un impacto planeado en la Luna", "url": "https://www.nasa.gov/news-release/nasa-completes-ladee-mission-with-planned-impact-on-moons-surface"},
+    {"texto": "NASA — el sistema de comunicación láser bate un récord", "url": "https://www.nasa.gov/news-release/nasa-laser-communication-system-sets-record-with-data-transmissions-to-and-from-moon/"}
+   ],
+   "turnos": [
+    {
+     "id": "ladee1",
+     "pregunta": "Estoy boca abajo, en la cara que nunca se ve desde la Tierra. ¿Sabes dónde he acabado?",
+     "opciones": ["En la cara oculta de la Luna", "En un cráter de Marte"],
+     "texto_explorador": "En la cara oculta de la Luna, junto al cráter Sundman V. Me estrellé a propósito el 18 de abril de 2014, a 5.800 kilómetros por hora. En mi penúltima vuelta pasé a solo 300 metros del suelo.",
+     "texto_cientifico": "Impacté de forma planeada en el borde oriental del cráter Sundman V, en la cara oculta, el 18 de abril de 2014 a unos 5.800 km/h. En mi penúltima órbita bajé a 300 m de la superficie."
+    },
+    {
+     "id": "ladee2",
+     "pregunta": "Aquí arriba no hay aire. ¿Qué se puede medir entonces?",
+     "opciones": ["Qué gases quedan y de dónde vienen", "La temperatura del Sol"],
+     "texto_explorador": "Queda muy poquito, pero queda. Encontré helio, neón y argón. El helio y el neón llegan con el viento del Sol; el argón sale de las propias rocas de la Luna.",
+     "texto_cientifico": "La exosfera lunar tiene una 25 billonésima parte de la densidad de la atmósfera terrestre. Mi espectrómetro de masas identificó helio, neón y argón-40: helio y neón del viento solar, argón del decaimiento radiactivo del potasio de las rocas, con una residencia del helio de solo unos días."
+    },
+    {
+     "id": "ladee3",
+     "pregunta": "Los astronautas del Apolo decían que veían un resplandor antes del amanecer. ¿Lo viste tú?",
+     "opciones": ["No, no encontré nada parecido", "Sí, era polvo levitando"],
+     "texto_explorador": "No apareció. Buscaba polvo de la Luna flotando por electricidad y no lo encontré. Lo que sí vi fueron más de 11.000 impactos de granos de polvo contra mi detector.",
+     "texto_cientifico": "No hallé evidencia del resplandor previo al amanecer descrito en la era Apolo: la hipótesis del polvo levitando por carga electrostática quedó sin apoyo instrumental. Mi detector LDEX registró más de 11.000 impactos de partículas y el espectrómetro UVS tomó más de 700.000 espectros."
+    }
+   ],
+   "mapa": {"tipo": "luna", "lat": 11.849, "lon": -93.25},
+   "hitos": [
+    {"titulo": "Mi encargo", "texto": "Estudiar la exosfera lunar, esa capa de gas tan tenue que casi no existe, y el polvo que flota sobre la superficie. Fui la primera nave lanzada hacia la Luna desde Wallops.", "fuente": "NASA Science — LADEE"},
+    {"titulo": "Datos por láser", "texto": "Mi experimento LLCD transmitió datos con láser desde la órbita lunar a 622 Mbps de bajada y 20 de subida, a 385.000 kilómetros de distancia.", "fuente": "NASA — Laser Communication System Sets Record"},
+    {"titulo": "Cómo terminé", "texto": "Me quedé sin combustible para seguir en órbita, así que me dirigieron contra la cara oculta. El 28 de octubre de 2014, la sonda LRO fotografió mi cráter desde arriba.", "fuente": "NASA — Planned Impact on Moon's Surface"}
+   ]
+  },
+  {
+   "id": "clementine",
+   "nombre": "Clementine",
+   "nombre_mapa": "Clementine",
+   "cuerpo": "Órbita solar",
+   "lugar": "Perdida en órbita alrededor del Sol tras un fallo en mayo de 1994",
+   "anio": 1994,
+   "anio_tipo": "lanzamiento",
+   "estado": "abandonado",
+   "estado_texto": {
+    "texto_explorador": "Un fallo de su ordenador la dejó sin combustible a mitad de misión. Terminó dando vueltas al Sol, y sigue ahí.",
+    "texto_cientifico": "Un fallo informático el 7 de mayo de 1994 disparó un propulsor durante 11 minutos y agotó el combustible; el 20 de julio de 1994 la gravedad lunar la envió a una órbita heliocéntrica."
+   },
+   "ficha_resumen": "Hizo el primer mapa de alturas de toda la Luna y buscó hielo en sus polos. Un fallo de software de once minutos la dejó sin combustible y la mandó a dar vueltas al Sol.",
+   "color": "#c9c2a6",
+   "personas": [
+    {"nombre": "Paul D. Spudis", "papel": "subdirector del equipo científico de Clementine en 1994 (Lunar and Planetary Institute)"},
+    {"nombre": "Richard Truly", "papel": "administrador de la NASA que pidió en 1990 estudiar una misión lunar conjunta con el Departamento de Defensa"}
+   ],
+   "fuentes": [
+    {"texto": "NASA NSSDCA — Clementine", "url": "https://nssdc.gsfc.nasa.gov/planetary/clementine.html"},
+    {"texto": "NASA History — 30 años de Clementine", "url": "https://www.nasa.gov/history/30-years-ago-clementine-changes-our-view-of-the-moon/"},
+    {"texto": "Lunar and Planetary Institute — Clementine", "url": "https://www.lpi.usra.edu/lunar/missions/clementine/overview"}
+   ],
+   "turnos": [
+    {
+     "id": "clementine1",
+     "pregunta": "Me conocen por mi mapa de la Luna, pero yo iba a otro sitio. ¿Sabes a cuál?",
+     "opciones": ["A un asteroide", "A Marte"],
+     "texto_explorador": "Iba a volar junto al asteroide Geographos. Un fallo de mi ordenador encendió un motor durante once minutos, gasté todo el combustible y ya no pude llegar.",
+     "texto_cientifico": "Mi destino era el asteroide 1620 Geographos. El 7 de mayo de 1994 un fallo informático provocó un encendido de 11 minutos que agotó el propelente y canceló el sobrevuelo; quedé girando a 80 rpm sin control de giro."
+    },
+    {
+     "id": "clementine2",
+     "pregunta": "Antes de perderme, ¿qué dejé hecho?",
+     "opciones": ["Un mapa completo de la Luna", "Fotos de las nubes de Venus"],
+     "texto_explorador": "Un millón y medio de imágenes. Con ellas se hizo el primer mapa de alturas de toda la Luna, y se vio que en los polos puede haber hielo escondido en cráteres donde nunca da el sol.",
+     "texto_cientifico": "Devolví alrededor de 1,6 millones de imágenes en 71 días y 297 órbitas lunares. Mi altímetro láser produjo el primer mapa topográfico global de la Luna y mi radar bistático sugirió hielo de agua en cráteres en sombra permanente del polo sur."
+    },
+    {
+     "id": "clementine3",
+     "pregunta": "¿Y ahora dónde estás?",
+     "opciones": ["Dando vueltas al Sol", "Enterrada en la Luna"],
+     "texto_explorador": "Dando vueltas al Sol. En julio de 1994 la Luna me dio un empujón y me sacó de su órbita; desde entonces viajo alrededor del Sol.",
+     "texto_cientifico": "El 20 de julio de 1994 la gravedad lunar me impulsó a una órbita heliocéntrica. Hubo contactos breves entre febrero y mayo de 1995, sin datos útiles: la telemetría era ininteligible desde el fallo de junio de 1994."
+    }
+   ],
+   "mapa": {"tipo": "espacio"},
+   "hitos": [
+    {"titulo": "Mi encargo", "texto": "La NASA y el Departamento de Defensa de Estados Unidos se juntaron para una misión doble: probar tecnología militar en el espacio y, de paso, cartografiar la Luna entera.", "fuente": "NASA History — 30 Years Ago: Clementine Changes Our View of the Moon"},
+    {"titulo": "El mapa que faltaba", "texto": "Antes de mí, los datos de altura de la Luna solo cubrían la franja del ecuador. Mi altímetro láser midió el relieve de todo el globo, polos incluidos.", "fuente": "NASA NSSDCA — Clementine"},
+    {"titulo": "Once minutos", "texto": "Un error de software encendió un propulsor durante once minutos. Gasté el combustible en una maniobra que no tocaba y perdí el asteroide y la misión.", "fuente": "NASA History — 30 Years Ago: Clementine Changes Our View of the Moon"}
+   ]
+  },
+  {
+   "id": "mars-global-surveyor",
+   "nombre": "Mars Global Surveyor",
+   "nombre_mapa": "Global Surveyor",
+   "cuerpo": "Marte",
+   "lugar": "En órbita de Marte, sin señal desde noviembre de 2006",
+   "anio": 1996,
+   "anio_tipo": "lanzamiento",
+   "estado": "muerto",
+   "estado_texto": {
+    "texto_explorador": "Dejó de responder en noviembre de 2006, después de nueve años trabajando. Sigue dando vueltas a Marte, apagado.",
+    "texto_cientifico": "Última señal el 2 de noviembre de 2006; un error de software sobrecalentó una batería y la nave perdió el control de orientación. La NASA declaró el fin de la misión el 14 de noviembre de 2006."
+   },
+   "ficha_resumen": "Encontró los barrancos por los que todavía corre agua en Marte y levantó el mapa de alturas del planeta entero. Iba a durar un año marciano y trabajó cuatro veces más.",
+   "color": "#d1743f",
+   "personas": [
+    {"nombre": "David Smith", "papel": "investigador principal del altímetro láser MOLA (NASA Goddard Space Flight Center)"},
+    {"nombre": "Philip Christensen", "papel": "investigador principal del espectrómetro térmico TES (Arizona State University)"},
+    {"nombre": "Jack Connerney", "papel": "investigador del magnetómetro de Mars Global Surveyor (NASA Goddard)"},
+    {"nombre": "Michael Meyer", "papel": "científico principal del programa de exploración de Marte de la NASA en 2006"}
+   ],
+   "fuentes": [
+    {"texto": "NASA Science — Mars Global Surveyor", "url": "https://science.nasa.gov/mission/mars-global-surveyor/"},
+    {"texto": "JPL — las imágenes sugieren que el agua aún fluye en Marte", "url": "https://www.jpl.nasa.gov/news/nasa-images-suggest-water-still-flows-in-brief-spurts-on-mars/"},
+    {"texto": "JPL — informe sobre las causas de la pérdida de la nave", "url": "https://www.jpl.nasa.gov/news/report-reveals-likely-causes-of-mars-spacecraft-loss/"}
+   ],
+   "turnos": [
+    {
+     "id": "mgs1",
+     "pregunta": "Yo no estoy posado en Marte: sigo dando vueltas, apagado. ¿Lo sabías?",
+     "opciones": ["No, creía que estabas en el suelo", "Sí, eres un orbitador"],
+     "texto_explorador": "Soy un orbitador. Di vueltas a Marte durante nueve años, a 378 kilómetros de altura, fotografiando el suelo una y otra vez desde arriba.",
+     "texto_cientifico": "Fui un orbitador en una órbita polar sincronizada con el Sol a unos 378 km. Mi misión primaria era un año marciano (687 días) y operé más de cuatro veces esa duración."
+    },
+    {
+     "id": "mgs2",
+     "pregunta": "Se dice que encontré agua corriendo en Marte. ¿Cómo se ve eso desde arriba?",
+     "opciones": ["Comparando fotos del mismo barranco", "Midiendo la lluvia"],
+     "texto_explorador": "Comparando fotos. En el mismo barranco, unos años después, aparecían manchas claras donde antes no había nada: agua que baja por una ladera y se seca enseguida.",
+     "texto_cientifico": "Comparando imágenes de la Mars Orbiter Camera entre 2004 y 2005 se vieron brotes breves y nuevos en barrancos de ladera: evidencia de agua líquida que fluye de forma ocasional en la superficie marciana."
+    },
+    {
+     "id": "mgs3",
+     "pregunta": "¿Y por qué mandaron el rover Opportunity justo a Meridiani Planum?",
+     "opciones": ["Por mi hematita", "Porque estaba cerca del ecuador"],
+     "texto_explorador": "Por mi hematita: una zona de 500 kilómetros llena de un mineral que en la Tierra se forma en agua caliente. Ese hallazgo eligió el sitio del aterrizaje.",
+     "texto_cientifico": "Mi espectrómetro TES detectó un depósito de hematita cristalina de unos 500 km de diámetro cerca del ecuador, primera evidencia clara de un sistema hidrotermal antiguo. Ese resultado llevó a elegir Meridiani Planum para Opportunity."
+    }
+   ],
+   "mapa": {"tipo": "espacio"},
+   "hitos": [
+    {"titulo": "Mi encargo", "texto": "Volver a Marte después del fracaso de Mars Observer y cartografiarlo entero: relieve, minerales, magnetismo y clima, durante un año marciano.", "fuente": "NASA Science — Mars Global Surveyor"},
+    {"titulo": "El mapa de un planeta", "texto": "Mi altímetro MOLA midió la altura de Marte con precisión de unos 30 centímetros. El desnivel total del planeta son unos 30 kilómetros, una vez y media el de la Tierra.", "fuente": "NASA Science — Mars Global Surveyor"},
+    {"titulo": "Las rayas del dínamo", "texto": "Mi magnetómetro encontró bandas alternas de magnetización en la corteza, de hasta 1.930 kilómetros de largo: el fósil del campo magnético de un Marte antiguo.", "fuente": "JPL — Magnetic Stripes Preserve Record of Ancient Mars"}
+   ]
+  },
+  {
+   "id": "voyager2",
+   "nombre": "Voyager 2",
+   "nombre_mapa": "Voyager 2",
+   "cuerpo": "Espacio interestelar",
+   "lugar": "En el espacio interestelar desde noviembre de 2018",
+   "anio": 1977,
+   "anio_tipo": "lanzamiento",
+   "estado": "funciona",
+   "estado_texto": {
+    "texto_explorador": "Sigue hablando con la Tierra, aunque cada vez más bajito y desde más lejos. Es la única nave que ha visitado los cuatro planetas gigantes.",
+    "texto_cientifico": "Misión interestelar en curso: cruzó la heliopausa el 5 de noviembre de 2018 y se aleja del Sol a unas 3,1 UA al año, 48 grados al sur de la eclíptica. Los ingenieros esperan mantener el contacto hasta 2036."
+   },
+   "ficha_resumen": "La única nave que ha pasado cerca de Júpiter, Saturno, Urano y Neptuno. Salió del sistema solar en 2018 y sigue enviando datos desde el espacio interestelar.",
+   "color": "#8fb7e8",
+   "personas": [
+    {"nombre": "Edward Stone", "papel": "científico del proyecto Voyager desde 1972 hasta su retirada en 2022 (director del JPL entre 1991 y 2001)"},
+    {"nombre": "Linda Spilker", "papel": "científica del proyecto Voyager desde 2022"},
+    {"nombre": "Suzanne Dodd", "papel": "directora del proyecto Voyager en el Jet Propulsion Laboratory"},
+    {"nombre": "John Richardson", "papel": "investigador principal del experimento de plasma (PLS) del MIT"}
+   ],
+   "fuentes": [
+    {"texto": "NASA Science — Voyager 2", "url": "https://science.nasa.gov/mission/voyager/voyager-2"},
+    {"texto": "JPL — Voyager 2 entra en el espacio interestelar", "url": "https://www.jpl.nasa.gov/news/nasas-voyager-2-probe-enters-interstellar-space/"},
+    {"texto": "NASA Science — preguntas frecuentes de Voyager", "url": "https://science.nasa.gov/mission/voyager/frequently-asked-questions/"}
+   ],
+   "turnos": [
+    {
+     "id": "voyager2-1",
+     "pregunta": "Soy la única nave que ha estado cerca de los cuatro planetas gigantes. ¿Cuáles crees que son?",
+     "opciones": ["Júpiter, Saturno, Urano y Neptuno", "Marte, Venus, la Tierra y Mercurio"],
+     "texto_explorador": "Júpiter, Saturno, Urano y Neptuno. En Urano y en Neptuno no había estado nadie antes que yo, y tampoco ha vuelto nadie después.",
+     "texto_cientifico": "Sobrevolé Júpiter (1979), Saturno (1981), Urano (1986) y Neptuno (1989). En Urano descubrí 10 lunas y 2 anillos y medí un campo magnético inclinado 55 grados respecto al eje de rotación."
+    },
+    {
+     "id": "voyager2-2",
+     "pregunta": "¿Cómo sabes que ya has salido del sistema solar?",
+     "opciones": ["Porque dejó de llegar viento solar", "Porque se acabaron las estrellas"],
+     "texto_explorador": "Porque mi instrumento de plasma dejó de notar el viento del Sol: primero cayó en picado y después no quedó nada. Eso pasa cuando cruzas la burbuja que el Sol hace en el espacio.",
+     "texto_cientifico": "El 5 de noviembre de 2018 mi experimento de plasma detectó una caída brusca del viento solar y después ausencia total de flujo: la evidencia directa del cruce de la heliopausa, anunciada el 10 de diciembre de 2018."
+    },
+    {
+     "id": "voyager2-3",
+     "pregunta": "¿Cuánto tardan tus mensajes en llegar a casa?",
+     "opciones": ["Más de dieciséis horas", "Unos diez minutos"],
+     "texto_explorador": "Más de dieciséis horas cuando salí del sistema solar, y cada año un poco más. La luz que envío tarda todo ese tiempo solo en llegar a la Tierra.",
+     "texto_cientifico": "Al cruzar la heliopausa estaba a unos 18.000 millones de kilómetros: la señal tardaba 16,5 horas en llegar. Me alejo a 15,4 km/s del Sol, unas 3,1 UA al año."
+    }
+   ],
+   "mapa": {"tipo": "espacio"},
+   "hitos": [
+    {"titulo": "El gran tour", "texto": "Aproveché una alineación de los planetas que ocurre una vez cada 176 años para visitar cuatro gigantes con una sola nave y una sola reserva de combustible.", "fuente": "NASA Science — Voyager 2"},
+    {"titulo": "Los anillos y el punto oscuro", "texto": "En Neptuno descubrí cuatro anillos nuevos y el Gran Punto Oscuro, y medí vientos de 1.100 kilómetros por hora. En Tritón encontré el cuerpo más frío que se conoce.", "fuente": "NASA Science — Voyager 2"},
+    {"titulo": "Salir de casa", "texto": "El 5 de noviembre de 2018 crucé la heliopausa. Soy, con mi gemela Voyager 1, una de las dos únicas naves que han llegado al espacio entre las estrellas.", "fuente": "JPL — Voyager 2 Enters Interstellar Space"}
+   ]
+  },
+  {
+   "id": "pioneer11",
+   "nombre": "Pioneer 11",
+   "nombre_mapa": "Pioneer 11",
+   "cuerpo": "Espacio interestelar",
+   "lugar": "De camino fuera del sistema solar, en silencio desde 1995",
+   "anio": 1973,
+   "anio_tipo": "lanzamiento",
+   "estado": "muerto",
+   "estado_texto": {
+    "texto_explorador": "Hace treinta años que no habla con nadie. Sigue alejándose del Sol por su cuenta, con la placa que dice de dónde viene.",
+    "texto_cientifico": "Última telemetría el 24 de noviembre de 1995, a 44,1 UA. Viaja en trayectoria hiperbólica de escape del sistema solar; se estima que pasará cerca de la estrella Lambda Aquilae dentro de casi cuatro millones de años."
+   },
+   "ficha_resumen": "La primera nave que llegó a Saturno y la primera que fotografió los polos de Júpiter. Lleva una placa con un mapa que dice de dónde viene. No habla desde 1995.",
+   "color": "#b7a98c",
+   "personas": [
+    {"nombre": "Carl Sagan", "papel": "diseñador de la placa de las Pioneer junto a Frank Drake y Linda Salzman Sagan"},
+    {"nombre": "Frank Drake", "papel": "diseñador de la placa con la información sobre el origen de las naves"},
+    {"nombre": "Linda Salzman Sagan", "papel": "diseñadora de la placa de las Pioneer"},
+    {"nombre": "Fred Wirth", "papel": "director del proyecto Pioneer en 1995"}
+   ],
+   "fuentes": [
+    {"texto": "NASA Science — Pioneer 11", "url": "https://science.nasa.gov/mission/pioneer-11/"},
+    {"texto": "NASA History — 45 años de Pioneer 11", "url": "https://www.nasa.gov/history/45-years-ago-pioneer-11-launched-to-study-jupiter-and-saturn/"},
+    {"texto": "NASA — Pioneer 11, primera en explorar Saturno", "url": "https://www.nasa.gov/solar-system/planets/saturn/40-years-ago-pioneer-11-first-to-explore-saturn/"}
+   ],
+   "turnos": [
+    {
+     "id": "pioneer11-1",
+     "pregunta": "Fui la primera nave de la historia en llegar a Saturno. ¿Qué encontré allí?",
+     "opciones": ["Un anillo nuevo y una luna", "Nada, Saturno estaba vacío"],
+     "texto_explorador": "Un anillo nuevo, el anillo F, y una luna pequeña que nadie había visto. También noté el primer indicio claro de que Saturno tiene su propio campo magnético.",
+     "texto_cientifico": "Detecté el arco de choque de Saturno el 31 de agosto de 1979, a 1,5 millones de km, primera evidencia concluyente de su campo magnético; descubrí el anillo F y una luna de unos 200 km, y tomé 440 imágenes del sistema."
+    },
+    {
+     "id": "pioneer11-2",
+     "pregunta": "Antes de Saturno pasaste por Júpiter. ¿Qué viste desde tan cerca?",
+     "opciones": ["Sus polos, por primera vez", "Solo nubes"],
+     "texto_explorador": "Sus polos. Pasé a 42.500 kilómetros de las nubes, tres veces más cerca que mi hermana Pioneer 10, y desde ahí se ven las regiones de arriba y de abajo del planeta.",
+     "texto_cientifico": "En el sobrevuelo del 3 de diciembre de 1974 pasé a 42.500 km de las nubes a más de 171.000 km/h: primeras imágenes de las regiones polares de Júpiter y unas 200 imágenes de sus lunas."
+    },
+    {
+     "id": "pioneer11-3",
+     "pregunta": "Llevas una placa con dibujos. ¿Qué explican?",
+     "opciones": ["De dónde venimos y cuándo", "El nombre del capitán"],
+     "texto_explorador": "De dónde venimos. Lleva dos figuras humanas, la posición del Sol y unas marcas que sitúan nuestra estrella respecto a catorce púlsares: un mapa para quien lo encuentre.",
+     "texto_cientifico": "La placa de las Pioneer, diseñada por Carl Sagan, Frank Drake y Linda Salzman Sagan, muestra una pareja humana, la silueta de la nave, la posición del Sol y su situación relativa respecto a 14 púlsares."
+    }
+   ],
+   "mapa": {"tipo": "espacio"},
+   "hitos": [
+    {"titulo": "Mi encargo", "texto": "Seguir el camino de Pioneer 10 hasta Júpiter y, si el paso por el cinturón de asteroides salía bien, usar su empujón para llegar a Saturno.", "fuente": "NASA History — 45 Years Ago: Pioneer 11 Launched"},
+    {"titulo": "Cruzar el cinturón", "texto": "En marzo de 1974 atravesé el cinturón de asteroides sin daños. Sin ese dato, ninguna misión posterior se habría atrevido a cruzar.", "fuente": "NASA History — 45 Years Ago: Pioneer 11 Launched"},
+    {"titulo": "El último mensaje", "texto": "El 30 de septiembre de 1995 se cerró la misión y el 24 de noviembre llegaron unos minutos de datos de ingeniería: mi última voz, a más de 6.400 millones de kilómetros.", "fuente": "NASA Science — Pioneer 11"}
+   ]
+  }
+ ]
+}

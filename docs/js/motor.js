@@ -454,14 +454,18 @@
      reparten en filas de tres, y si hay pocos se usan las de siempre. */
   function posicionesDestellos(n) {
     if (n <= POSICIONES.length) return POSICIONES.slice(0, n);
-    var filas = Math.ceil(n / 3);
+    /* con muchos objetos, más columnas por fila: con 3 fijas y 31 aparatos salían 11 filas
+       apretadas en media pantalla y las etiquetas se pisaban */
+    var cols = n <= 12 ? 3 : (n <= 24 ? 4 : 5);
+    var filas = Math.ceil(n / cols);
     var salida = [];
     for (var i = 0; i < n; i++) {
-      var fila = Math.floor(i / 3), col = i % 3;
-      var enFila = Math.min(3, n - fila * 3);
-      /* si la última fila lleva uno o dos, se centran */
-      var centro = enFila === 1 ? 0.5 : (enFila === 2 ? 0.38 + col * 0.24 : 0.2 + col * 0.3);
-      var y = filas === 1 ? 0.72 : 0.4 + (fila / (filas - 1)) * 0.5;
+      var fila = Math.floor(i / cols), col = i % cols;
+      var enFila = Math.min(cols, n - fila * cols);
+      /* paso fijo por columna y fila centrada: la última fila, con menos, no queda descolgada */
+      var paso = cols > 1 ? 0.62 / (cols - 1) : 0;
+      var centro = 0.5 - ((enFila - 1) * paso) / 2 + col * paso;
+      var y = filas === 1 ? 0.62 : 0.2 + (fila / (filas - 1)) * 0.65;
       salida.push({ x: centro + (fila % 2 ? 0.03 : -0.03), y: y });
     }
     return salida;
