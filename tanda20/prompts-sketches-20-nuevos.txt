@@ -1,0 +1,370 @@
+MEMORY SIGNALS · SKETCHS DE FONDO PARA LOS 20 OBJETOS NUEVOS
+===========================================================
+
+QUÉ ES
+------
+El dibujo técnico que va de fondo en la pantalla de cada objeto (detrás de los paneles).
+Se genera fuera, en un generador de imágenes, y se guarda como:
+
+    docs/img/fondo-<id>.jpg          (16:9, 2560 x 1440)
+    docs/img/fondo-<id>.en.jpg       (si se quiere la versión inglesa)
+    docs/img/fondo-<id>.de.jpg       (si se quiere la versión alemana)
+
+CÓMO SE USA
+-----------
+1. Copia UN bloque completo (desde "Genera un Sketch…" hasta "Sin colores.") y pégalo tal cual.
+   No hay que añadirle nada más.
+2. Cada bloque lleva ya el nombre del aparato, el sitio y el año, la designación técnica en inglés
+   entre paréntesis (es lo que hace que dibuje ESE aparato y no un cohete genérico) y un código
+   (MS-23 … MS-42) que el generador debe escribir DENTRO del dibujo, como una anotación más.
+   Ese código es lo que permite emparejar cada imagen con su objeto cuando los ficheros llegan
+   con nombres tipo "image (7).png".
+3. Si quieres la versión inglesa o alemana, repite el mismo bloque y añade al final una de estas
+   dos líneas, sin cambiar nada más:
+        Escribe todas las anotaciones y cotas del dibujo en inglés.
+        Beschrifte alle Anmerkungen und Maße der Zeichnung auf Deutsch.
+4. Los 20 bloques van a continuación, en orden de código. Cada bloque es independiente.
+
+CÓDIGO · OBJETO · FICHERO
+-------------------------
+   MS-23   LADEE                            fondo-ladee.jpg
+   MS-24   Clementine                        fondo-clementine.jpg
+   MS-25   Mars Global Surveyor              fondo-mars-global-surveyor.jpg
+   MS-26   Voyager 2                         fondo-voyager2.jpg
+   MS-27   Pioneer 11                        fondo-pioneer11.jpg
+   MS-28   Ulysses                           fondo-ulysses.jpg
+   MS-29   Rosetta                           fondo-rosetta.jpg
+   MS-30   Stardust                          fondo-stardust.jpg
+   MS-31   Deep Space 1                      fondo-deep-space-1.jpg
+   MS-32   Spitzer                           fondo-spitzer.jpg
+   MS-33   WMAP                              fondo-wmap.jpg
+   MS-34   Suzaku                            fondo-suzaku.jpg
+   MS-35   Compton Gamma Ray Observatory     fondo-compton-gro.jpg
+   MS-36   Mir                               fondo-mir.jpg
+   MS-37   Van Allen Probes                  fondo-van-allen-probes.jpg
+   MS-38   Geotail                           fondo-geotail.jpg
+   MS-39   Cluster II                        fondo-cluster-ii.jpg
+   MS-40   Polar                             fondo-polar.jpg
+   MS-41   TRMM                              fondo-trmm.jpg
+   MS-42   TOPEX/Poseidon                    fondo-topex-poseidon.jpg
+
+
+=== BLOQUE 1 · MS-23 · LADEE ===
+
+Genera un Sketch técnico de diseño industrial del siguiente aparato: LADEE, Lunar Atmosphere and Dust Environment Explorer (LADEE spacecraft, modular bus with four liquid thrusters and the Lunar Laser Communication Demonstration terminal), en órbita de la Luna, 2013.
+
+Dibujo técnico a mano alzada con vistas ortogonales, perspectiva 3D, cotas, anotaciones, líneas de referencia y detalles constructivos.
+
+Estética: fondo negro mate, trazos blancos, líneas finas y precisas, sombreados mediante rayado blanco y aspecto de plano técnico profesional.
+
+Distribuye las diferentes vistas libremente. Incluye cotas y especificaciones técnicas directamente sobre los dibujos, mediante líneas de referencia.
+
+Traza en una esquina, suelto y con el mismo trazo que las demás anotaciones, este código: MS-23 · LADEE. No es un título: es una nota técnica más del plano.
+
+Sin títulos, marcos, recuadros, tablas, leyendas ni cajas de información. Únicamente dibujos técnicos, cotas y anotaciones integradas en ellos. Sin colores.
+
+
+=== BLOQUE 2 · MS-24 · CLEMENTINE ===
+
+Genera un Sketch técnico de diseño industrial del siguiente aparato: Clementine, Deep Space Program Science Experiment (Clementine spacecraft, octagonal bus with two solar panels and a sensor package for lunar mapping), en órbita de la Luna, 1994.
+
+Dibujo técnico a mano alzada con vistas ortogonales, perspectiva 3D, cotas, anotaciones, líneas de referencia y detalles constructivos.
+
+Estética: fondo negro mate, trazos blancos, líneas finas y precisas, sombreados mediante rayado blanco y aspecto de plano técnico profesional.
+
+Distribuye las diferentes vistas libremente. Incluye cotas y especificaciones técnicas directamente sobre los dibujos, mediante líneas de referencia.
+
+Traza en una esquina, suelto y con el mismo trazo que las demás anotaciones, este código: MS-24 · CLEMENTINE. No es un título: es una nota técnica más del plano.
+
+Sin títulos, marcos, recuadros, tablas, leyendas ni cajas de información. Únicamente dibujos técnicos, cotas y anotaciones integradas en ellos. Sin colores.
+
+
+=== BLOQUE 3 · MS-25 · MARS GLOBAL SURVEYOR ===
+
+Genera un Sketch técnico de diseño industrial del siguiente aparato: Mars Global Surveyor, orbiter (Mars Global Surveyor spacecraft, rectangular bus with two solar wings, high-gain dish and the MOLA laser altimeter), en órbita de Marte, 1996.
+
+Dibujo técnico a mano alzada con vistas ortogonales, perspectiva 3D, cotas, anotaciones, líneas de referencia y detalles constructivos.
+
+Estética: fondo negro mate, trazos blancos, líneas finas y precisas, sombreados mediante rayado blanco y aspecto de plano técnico profesional.
+
+Distribuye las diferentes vistas libremente. Incluye cotas y especificaciones técnicas directamente sobre los dibujos, mediante líneas de referencia.
+
+Traza en una esquina, suelto y con el mismo trazo que las demás anotaciones, este código: MS-25 · GLOBAL SURVEYOR. No es un título: es una nota técnica más del plano.
+
+Sin títulos, marcos, recuadros, tablas, leyendas ni cajas de información. Únicamente dibujos técnicos, cotas y anotaciones integradas en ellos. Sin colores.
+
+
+=== BLOQUE 4 · MS-26 · VOYAGER 2 ===
+
+Genera un Sketch técnico de diseño industrial del siguiente aparato: Voyager 2 spacecraft (Voyager 2, bus with the 3.66 m high-gain antenna, three radioisotope thermoelectric generators on a boom, the science scan platform and the Golden Record), en el espacio interestelar, 1977.
+
+Dibujo técnico a mano alzada con vistas ortogonales, perspectiva 3D, cotas, anotaciones, líneas de referencia y detalles constructivos.
+
+Estética: fondo negro mate, trazos blancos, líneas finas y precisas, sombreados mediante rayado blanco y aspecto de plano técnico profesional.
+
+Distribuye las diferentes vistas libremente. Incluye cotas y especificaciones técnicas directamente sobre los dibujos, mediante líneas de referencia.
+
+Traza en una esquina, suelto y con el mismo trazo que las demás anotaciones, este código: MS-26 · VOYAGER 2. No es un título: es una nota técnica más del plano.
+
+Sin títulos, marcos, recuadros, tablas, leyendas ni cajas de información. Únicamente dibujos técnicos, cotas y anotaciones integradas en ellos. Sin colores.
+
+
+=== BLOQUE 5 · MS-27 · PIONEER 11 ===
+
+Genera un Sketch técnico de diseño industrial del siguiente aparato: Pioneer 11 (Pioneer-G spacecraft, spun-stabilized bus with a 2.74 m parabolic dish, four solar panels and the Pioneer plaque on the antenna support), rumbo al espacio interestelar, 1973.
+
+Dibujo técnico a mano alzada con vistas ortogonales, perspectiva 3D, cotas, anotaciones, líneas de referencia y detalles constructivos.
+
+Estética: fondo negro mate, trazos blancos, líneas finas y precisas, sombreados mediante rayado blanco y aspecto de plano técnico profesional.
+
+Distribuye las diferentes vistas libremente. Incluye cotas y especificaciones técnicas directamente sobre los dibujos, mediante líneas de referencia.
+
+Traza en una esquina, suelto y con el mismo trazo que las demás anotaciones, este código: MS-27 · PIONEER 11. No es un título: es una nota técnica más del plano.
+
+Sin títulos, marcos, recuadros, tablas, leyendas ni cajas de información. Únicamente dibujos técnicos, cotas y anotaciones integradas en ellos. Sin colores.
+
+
+=== BLOQUE 6 · MS-28 · ULYSSES ===
+
+Genera un Sketch técnico de diseño industrial del siguiente aparato: Ulysses solar probe (Ulysses spacecraft, ESA/NASA, cylindrical body with the 1.65 m high-gain antenna, radioisotope thermoelectric generator on a boom and the RTG-powered science payload), en órbita polar alrededor del Sol, 1990.
+
+Dibujo técnico a mano alzada con vistas ortogonales, perspectiva 3D, cotas, anotaciones, líneas de referencia y detalles constructivos.
+
+Estética: fondo negro mate, trazos blancos, líneas finas y precisas, sombreados mediante rayado blanco y aspecto de plano técnico profesional.
+
+Distribuye las diferentes vistas libremente. Incluye cotas y especificaciones técnicas directamente sobre los dibujos, mediante líneas de referencia.
+
+Traza en una esquina, suelto y con el mismo trazo que las demás anotaciones, este código: MS-28 · ULYSSES. No es un título: es una nota técnica más del plano.
+
+Sin títulos, marcos, recuadros, tablas, leyendas ni cajas de información. Únicamente dibujos técnicos, cotas y anotaciones integradas en ellos. Sin colores.
+
+
+=== BLOQUE 7 · MS-29 · ROSETTA ===
+
+Genera un Sketch técnico de diseño industrial del siguiente aparato: Rosetta comet orbiter (Rosetta spacecraft, ESA, box-shaped bus with two 14 m solar wings, steerable 2.2 m high-gain dish and the Philae lander attached to its side), posada sobre el cometa 67P/Churyumov-Gerasimenko, 2004.
+
+Dibujo técnico a mano alzada con vistas ortogonales, perspectiva 3D, cotas, anotaciones, líneas de referencia y detalles constructivos.
+
+Estética: fondo negro mate, trazos blancos, líneas finas y precisas, sombreados mediante rayado blanco y aspecto de plano técnico profesional.
+
+Distribuye las diferentes vistas libremente. Incluye cotas y especificaciones técnicas directamente sobre los dibujos, mediante líneas de referencia.
+
+Traza en una esquina, suelto y con el mismo trazo que las demás anotaciones, este código: MS-29 · ROSETTA. No es un título: es una nota técnica más del plano.
+
+Sin títulos, marcos, recuadros, tablas, leyendas ni cajas de información. Únicamente dibujos técnicos, cotas y anotaciones integradas en ellos. Sin colores.
+
+
+=== BLOQUE 8 · MS-30 · STARDUST ===
+
+Genera un Sketch técnico de diseño industrial del siguiente aparato: Stardust sample return spacecraft (Stardust, with the 254 kg main bus, two solar panels, the 45.7 kg return capsule with its heat shield, and the aerogel collector grid), en órbita solar, 1999.
+
+Dibujo técnico a mano alzada con vistas ortogonales, perspectiva 3D, cotas, anotaciones, líneas de referencia y detalles constructivos.
+
+Estética: fondo negro mate, trazos blancos, líneas finas y precisas, sombreados mediante rayado blanco y aspecto de plano técnico profesional.
+
+Distribuye las diferentes vistas libremente. Incluye cotas y especificaciones técnicas directamente sobre los dibujos, mediante líneas de referencia.
+
+Traza en una esquina, suelto y con el mismo trazo que las demás anotaciones, este código: MS-30 · STARDUST. No es un título: es una nota técnica más del plano.
+
+Sin títulos, marcos, recuadros, tablas, leyendas ni cajas de información. Únicamente dibujos técnicos, cotas y anotaciones integradas en ellos. Sin colores.
+
+
+=== BLOQUE 9 · MS-31 · DEEP SPACE 1 ===
+
+Genera un Sketch técnico de diseño industrial del siguiente aparato: Deep Space 1 technology demonstrator (DS1, compact octagonal bus with two solar wings and the NSTAR ion propulsion engine at the rear), en órbita solar, 1998.
+
+Dibujo técnico a mano alzada con vistas ortogonales, perspectiva 3D, cotas, anotaciones, líneas de referencia y detalles constructivos.
+
+Estética: fondo negro mate, trazos blancos, líneas finas y precisas, sombreados mediante rayado blanco y aspecto de plano técnico profesional.
+
+Distribuye las diferentes vistas libremente. Incluye cotas y especificaciones técnicas directamente sobre los dibujos, mediante líneas de referencia.
+
+Traza en una esquina, suelto y con el mismo trazo que las demás anotaciones, este código: MS-31 · DEEP SPACE 1. No es un título: es una nota técnica más del plano.
+
+Sin títulos, marcos, recuadros, tablas, leyendas ni cajas de información. Únicamente dibujos técnicos, cotas y anotaciones integradas en ellos. Sin colores.
+
+
+=== BLOQUE 10 · MS-32 · SPITZER ===
+
+Genera un Sketch técnico de diseño industrial del siguiente aparato: Spitzer Space Telescope (SIRTF, cryogenic infrared observatory with an 85 cm telescope inside a cylindrical cryostat and a solar panel, drifting in an Earth-trailing orbit), 2003.
+
+Dibujo técnico a mano alzada con vistas ortogonales, perspectiva 3D, cotas, anotaciones, líneas de referencia y detalles constructivos.
+
+Estética: fondo negro mate, trazos blancos, líneas finas y precisas, sombreados mediante rayado blanco y aspecto de plano técnico profesional.
+
+Distribuye las diferentes vistas libremente. Incluye cotas y especificaciones técnicas directamente sobre los dibujos, mediante líneas de referencia.
+
+Traza en una esquina, suelto y con el mismo trazo que las demás anotaciones, este código: MS-32 · SPITZER. No es un título: es una nota técnica más del plano.
+
+Sin títulos, marcos, recuadros, tablas, leyendas ni cajas de información. Únicamente dibujos técnicos, cotas y anotaciones integradas en ellos. Sin colores.
+
+
+=== BLOQUE 11 · MS-33 · WMAP ===
+
+Genera un Sketch técnico de diseño industrial del siguiente aparato: Wilkinson Microwave Anisotropy Probe (WMAP, spacecraft with two back-to-back Gregorian dish reflectors on a central structure, surrounded by solar panels and thermal shielding), en órbita de aparcamiento alrededor del Sol, 2001.
+
+Dibujo técnico a mano alzada con vistas ortogonales, perspectiva 3D, cotas, anotaciones, líneas de referencia y detalles constructivos.
+
+Estética: fondo negro mate, trazos blancos, líneas finas y precisas, sombreados mediante rayado blanco y aspecto de plano técnico profesional.
+
+Distribuye las diferentes vistas libremente. Incluye cotas y especificaciones técnicas directamente sobre los dibujos, mediante líneas de referencia.
+
+Traza en una esquina, suelto y con el mismo trazo que las demás anotaciones, este código: MS-33 · WMAP. No es un título: es una nota técnica más del plano.
+
+Sin títulos, marcos, recuadros, tablas, leyendas ni cajas de información. Únicamente dibujos técnicos, cotas y anotaciones integradas en ellos. Sin colores.
+
+
+=== BLOQUE 12 · MS-34 · SUZAKU ===
+
+Genera un Sketch técnico de diseño industrial del siguiente aparato: Suzaku X-ray observatory (ASTRO-E2, JAXA, box-shaped satellite with four thin-foil X-ray telescope modules and the hard X-ray detector on an extendable optical bench), antes de desintegrarse en la atmósfera, 2005.
+
+Dibujo técnico a mano alzada con vistas ortogonales, perspectiva 3D, cotas, anotaciones, líneas de referencia y detalles constructivos.
+
+Estética: fondo negro mate, trazos blancos, líneas finas y precisas, sombreados mediante rayado blanco y aspecto de plano técnico profesional.
+
+Distribuye las diferentes vistas libremente. Incluye cotas y especificaciones técnicas directamente sobre los dibujos, mediante líneas de referencia.
+
+Traza en una esquina, suelto y con el mismo trazo que las demás anotaciones, este código: MS-34 · SUZAKU. No es un título: es una nota técnica más del plano.
+
+Sin títulos, marcos, recuadros, tablas, leyendas ni cajas de información. Únicamente dibujos técnicos, cotas y anotaciones integradas en ellos. Sin colores.
+
+
+=== BLOQUE 13 · MS-35 · COMPTON GAMMA RAY OBSERVATORY ===
+
+Genera un Sketch técnico de diseño industrial del siguiente aparato: Compton Gamma Ray Observatory (CGRO, 17-tonne observatory with four instruments — BATSE, OSSE, COMPTEL and EGRET — mounted on a rectangular bus with two solar arrays), desintegrado en la reentrada, 1991.
+
+Dibujo técnico a mano alzada con vistas ortogonales, perspectiva 3D, cotas, anotaciones, líneas de referencia y detalles constructivos.
+
+Estética: fondo negro mate, trazos blancos, líneas finas y precisas, sombreados mediante rayado blanco y aspecto de plano técnico profesional.
+
+Distribuye las diferentes vistas libremente. Incluye cotas y especificaciones técnicas directamente sobre los dibujos, mediante líneas de referencia.
+
+Traza en una esquina, suelto y con el mismo trazo que las demás anotaciones, este código: MS-35 · COMPTON. No es un título: es una nota técnica más del plano.
+
+Sin títulos, marcos, recuadros, tablas, leyendas ni cajas de información. Únicamente dibujos técnicos, cotas y anotaciones integradas en ellos. Sin colores.
+
+
+=== BLOQUE 14 · MS-36 · MIR ===
+
+Genera un Sketch técnico de diseño industrial del siguiente aparato: Mir space station (Mir, modular Soviet-Russian station: core block with the Kvant, Kvant-2, Kristall, Spektr and Priroda modules, the Soyuz crew ship and the Progress cargo ship docked), desintegrada en la reentrada, 1986.
+
+Dibujo técnico a mano alzada con vistas ortogonales, perspectiva 3D, cotas, anotaciones, líneas de referencia y detalles constructivos.
+
+Estética: fondo negro mate, trazos blancos, líneas finas y precisas, sombreados mediante rayado blanco y aspecto de plano técnico profesional.
+
+Distribuye las diferentes vistas libremente. Incluye cotas y especificaciones técnicas directamente sobre los dibujos, mediante líneas de referencia.
+
+Traza en una esquina, suelto y con el mismo trazo que las demás anotaciones, este código: MS-36 · MIR. No es un título: es una nota técnica más del plano.
+
+Sin títulos, marcos, recuadros, tablas, leyendas ni cajas de información. Únicamente dibujos técnicos, cotas y anotaciones integradas en ellos. Sin colores.
+
+
+=== BLOQUE 15 · MS-37 · VAN ALLEN PROBES ===
+
+Genera un Sketch técnico de diseño industrial del siguiente aparato: Van Allen Probes (Radiation Belt Storm Probes A and B, octagonal spin-stabilized spacecraft with four deployable solar panels and long electric field antennas), en órbita terrestre, 2012.
+
+Dibujo técnico a mano alzada con vistas ortogonales, perspectiva 3D, cotas, anotaciones, líneas de referencia y detalles constructivos.
+
+Estética: fondo negro mate, trazos blancos, líneas finas y precisas, sombreados mediante rayado blanco y aspecto de plano técnico profesional.
+
+Distribuye las diferentes vistas libremente. Incluye cotas y especificaciones técnicas directamente sobre los dibujos, mediante líneas de referencia.
+
+Traza en una esquina, suelto y con el mismo trazo que las demás anotaciones, este código: MS-37 · VAN ALLEN PROBES. No es un título: es una nota técnica más del plano.
+
+Sin títulos, marcos, recuadros, tablas, leyendas ni cajas de información. Únicamente dibujos técnicos, cotas y anotaciones integradas en ellos. Sin colores.
+
+
+=== BLOQUE 16 · MS-38 · GEOTAIL ===
+
+Genera un Sketch técnico de diseño industrial del siguiente aparato: Geotail spacecraft (Geotail, ISTP, spin-stabilized cylindrical body with two 100 m wire boom antennas and two 6 m masts), en órbita terrestre, 1992.
+
+Dibujo técnico a mano alzada con vistas ortogonales, perspectiva 3D, cotas, anotaciones, líneas de referencia y detalles constructivos.
+
+Estética: fondo negro mate, trazos blancos, líneas finas y precisas, sombreados mediante rayado blanco y aspecto de plano técnico profesional.
+
+Distribuye las diferentes vistas libremente. Incluye cotas y especificaciones técnicas directamente sobre los dibujos, mediante líneas de referencia.
+
+Traza en una esquina, suelto y con el mismo trazo que las demás anotaciones, este código: MS-38 · GEOTAIL. No es un título: es una nota técnica más del plano.
+
+Sin títulos, marcos, recuadros, tablas, leyendas ni cajas de información. Únicamente dibujos técnicos, cotas y anotaciones integradas en ellos. Sin colores.
+
+
+=== BLOQUE 17 · MS-39 · CLUSTER II ===
+
+Genera un Sketch técnico de diseño industrial del siguiente aparato: Cluster II spacecraft (one of the four identical ESA probes — Salsa, Samba, Rumba or Tango — with a cylindrical body, four long wire booms and two rigid magnetometer booms), en órbita terrestre, 2000.
+
+Dibujo técnico a mano alzada con vistas ortogonales, perspectiva 3D, cotas, anotaciones, líneas de referencia y detalles constructivos.
+
+Estética: fondo negro mate, trazos blancos, líneas finas y precisas, sombreados mediante rayado blanco y aspecto de plano técnico profesional.
+
+Distribuye las diferentes vistas libremente. Incluye cotas y especificaciones técnicas directamente sobre los dibujos, mediante líneas de referencia.
+
+Traza en una esquina, suelto y con el mismo trazo que las demás anotaciones, este código: MS-39 · CLUSTER II. No es un título: es una nota técnica más del plano.
+
+Sin títulos, marcos, recuadros, tablas, leyendas ni cajas de información. Únicamente dibujos técnicos, cotas y anotaciones integradas en ellos. Sin colores.
+
+
+=== BLOQUE 18 · MS-40 · POLAR ===
+
+Genera un Sketch técnico de diseño industrial del siguiente aparato: Polar spacecraft (Polar, ISTP, octagonal spinning body with two 100 m electric field antennas, four wire booms and the three auroral imaging cameras), en órbita terrestre, 1996.
+
+Dibujo técnico a mano alzada con vistas ortogonales, perspectiva 3D, cotas, anotaciones, líneas de referencia y detalles constructivos.
+
+Estética: fondo negro mate, trazos blancos, líneas finas y precisas, sombreados mediante rayado blanco y aspecto de plano técnico profesional.
+
+Distribuye las diferentes vistas libremente. Incluye cotas y especificaciones técnicas directamente sobre los dibujos, mediante líneas de referencia.
+
+Traza en una esquina, suelto y con el mismo trazo que las demás anotaciones, este código: MS-40 · POLAR. No es un título: es una nota técnica más del plano.
+
+Sin títulos, marcos, recuadros, tablas, leyendas ni cajas de información. Únicamente dibujos técnicos, cotas y anotaciones integradas en ellos. Sin colores.
+
+
+=== BLOQUE 19 · MS-41 · TRMM ===
+
+Genera un Sketch técnico de diseño industrial del siguiente aparato: TRMM satellite (Tropical Rainfall Measuring Mission, NASA-JAXA, box-shaped modular satellite with the precipitation radar antenna, the TMI microwave radiometer and one solar wing), desintegrada en la reentrada, 1997.
+
+Dibujo técnico a mano alzada con vistas ortogonales, perspectiva 3D, cotas, anotaciones, líneas de referencia y detalles constructivos.
+
+Estética: fondo negro mate, trazos blancos, líneas finas y precisas, sombreados mediante rayado blanco y aspecto de plano técnico profesional.
+
+Distribuye las diferentes vistas libremente. Incluye cotas y especificaciones técnicas directamente sobre los dibujos, mediante líneas de referencia.
+
+Traza en una esquina, suelto y con el mismo trazo que las demás anotaciones, este código: MS-41 · TRMM. No es un título: es una nota técnica más del plano.
+
+Sin títulos, marcos, recuadros, tablas, leyendas ni cajas de información. Únicamente dibujos técnicos, cotas y anotaciones integradas en ellos. Sin colores.
+
+
+=== BLOQUE 20 · MS-42 · TOPEX/POSEIDON ===
+
+Genera un Sketch técnico de diseño industrial del siguiente aparato: TOPEX/Poseidon ocean altimetry satellite (NASA-CNES, box-shaped bus with two solar wings, the dual-frequency radar altimeter antenna pointing to nadir and the microwave radiometer), en órbita terrestre, 1992.
+
+Dibujo técnico a mano alzada con vistas ortogonales, perspectiva 3D, cotas, anotaciones, líneas de referencia y detalles constructivos.
+
+Estética: fondo negro mate, trazos blancos, líneas finas y precisas, sombreados mediante rayado blanco y aspecto de plano técnico profesional.
+
+Distribuye las diferentes vistas libremente. Incluye cotas y especificaciones técnicas directamente sobre los dibujos, mediante líneas de referencia.
+
+Traza en una esquina, suelto y con el mismo trazo que las demás anotaciones, este código: MS-42 · TOPEX POSEIDON. No es un título: es una nota técnica más del plano.
+
+Sin títulos, marcos, recuadros, tablas, leyendas ni cajas de información. Únicamente dibujos técnicos, cotas y anotaciones integradas en ellos. Sin colores.
+
+
+=== SI QUIERES EL AIRE DE CUADERNO (opcional) ===
+
+Añade esta línea al final de cualquier bloque, sin cambiar el resto:
+
+Trazo de lápiz o estilógrafo con grosor variable, pequeñas imperfecciones de dibujo hecho a mano, sombreado a rayado espaciado y márgenes vacíos amplios alrededor del aparato; evita el detalle menudísimo, que a este tamaño no se lee.
+
+
+=== POR QUÉ EL PROMPT ES ASÍ (para que no se cambie a la ligera) ===
+
+- En la app el dibujo lleva encima un velo negro al 70 % y los paneles van al 85 %: de la imagen llega
+  menos de un tercio de su fuerza. Una foto o una ilustración a color se ve como un borrón; la línea
+  blanca es lo único que se lee.
+- Pocas vistas y grandes (una perspectiva 3/4 protagonista y dos ortogonales como mucho): con muchas
+  vistas el fondo se convierte en ruido detrás del texto.
+- Cotas pocas y grandes: las anotaciones pequeñas no se leen.
+- «Sin títulos, marcos ni leyendas» es obligatorio: cualquier caja de información choca con los paneles
+  de la app y parece parte de la interfaz.
+- El código MS-xx va DENTRO del dibujo porque las imágenes vuelven con nombres tipo "image (7).png";
+  el código es lo único que permite emparejarlas con su objeto.

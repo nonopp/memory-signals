@@ -910,7 +910,8 @@ code{background:rgba(255,255,255,.09);padding:2px 6px;border-radius:6px;font-siz
 }
 
 /* en el espacio no hay globo: el marco va rectangular */
-.mapa-destino.es-espacio .mapa-marco{border-radius:14px;aspect-ratio:4/3}
+/* el cielo de otros destinos lleva 31 pines: cuadrado da un tercio mas de area que 4/3 */
+.mapa-destino.es-espacio .mapa-marco{border-radius:14px;aspect-ratio:1/1}
 
 /* ---------- visor de la infografía ---------- */
 .visor-infografia{position:fixed;inset:0;z-index:70;background:rgba(8,12,20,.96);display:flex;flex-direction:column;padding:12px 12px 8px;overflow:auto}
@@ -992,3 +993,11 @@ body.viendo-objeto #p-objeto .punto-ficha{background:rgba(6,12,24,.92)}
   .mapa-zum-btn{width:34px;height:34px;font-size:18px}
   .mapa-zum{margin-top:10px}
 }
+
+/* El cielo de otros destinos lleva 31 pines: después del revelado, el nombre solo se enciende en el
+   objeto abierto y al pasar el ratón. Con los 31 nombres fijos, el mapa era un muro de texto. */
+.mapa-destino.es-espacio .mapa-pin:not(.activo):not(:hover):not(:focus-visible) .mapa-pin-etq{opacity:0}
+.mapa-destino.es-espacio .mapa-pin:hover .mapa-pin-etq,
+.mapa-destino.es-espacio .mapa-pin:focus-visible .mapa-pin-etq,
+.mapa-destino.es-espacio .mapa-pin.activo .mapa-pin-etq{opacity:1}
+.mapa-destino.es-espacio.revelando .mapa-pin .mapa-pin-etq{opacity:1}

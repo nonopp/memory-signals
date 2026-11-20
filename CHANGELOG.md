@@ -1,3 +1,8 @@
+## v3.19.0 — 2026-11-20
+
+- **El mapa de «otros destinos» se reparte por todo el marco.** Con 31 objetos, las tres filas dejaban 19 px entre pin y pin y se pisaban. Ahora los pines se colocan en una **cuadrícula holgada** calculada a partir del número de objetos (7 columnas × 5 filas con 31), con un desorden fijo pequeño para que no parezca una tabla, y el marco del cielo pasa a **cuadrado** en la ficha: un tercio más de superficie. Medido: **34 px de separación mínima** y ninguna pareja por debajo de 32 px (antes 19).
+- **Los nombres ya no forman un muro.** En el cielo había 31 etiquetas fijas al 62 % de opacidad. Ahora, tras el revelado de los primeros segundos, **solo se enciende el nombre del objeto abierto y el del pin bajo el ratón o el foco**.
+
 ## v3.18.0 — 2026-11-20
 
 - **El catálogo pasa de 22 a 42 aparatos** con una tanda de 20 objetos que tienen modelo 3D oficial de la NASA. Entran en los tres idiomas con su ficha, su guion de conversación, sus hitos y sus fuentes.

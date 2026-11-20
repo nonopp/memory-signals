@@ -409,18 +409,17 @@
       lista.forEach(function (a, i) {
         var b = bolitas.filter(function (x) { return x.a.id === a.id; })[0];
         if (!b) return;
-        /* la fila única se abre en varias cuando hay muchos objetos: con 31 aparatos en una sola
-           diagonal quedaban a 6 px y no había quien acertara con el dedo */
-        var filas = n <= 12 ? 1 : (n <= 24 ? 2 : 3);
-        var porFila = Math.ceil(n / filas);
-        var fila = Math.floor(i / porFila);
-        var col = i % porFila;
-        var enFila = Math.min(porFila, n - fila * porFila);
-        var pasoX = porFila > 1 ? 0.68 / (porFila - 1) : 0;
-        var fx = 0.5 - ((enFila - 1) * pasoX) / 2 + col * pasoX;
-        var fy = filas === 1
-          ? 0.74 - (n === 1 ? 0 : (i / (n - 1)) * 0.52)
-          : 0.28 + fila * (0.46 / (filas - 1));
+        /* reparto en cuadrícula holgada con un desorden fijo (mismo dibujo siempre) que ocupa todo
+           el marco: con 31 aparatos, tres filas dejaban 19 px entre pin y pin y se pisaban */
+        var cols = Math.max(1, Math.round(Math.sqrt(n * (t.w / t.h) * 1.15)));
+        var filas = Math.ceil(n / cols);
+        var col = i % cols, fila = Math.floor(i / cols);
+        var enFila = Math.min(cols, n - fila * cols);
+        var pasoX = 0.88 / cols, pasoY = 0.82 / Math.max(1, filas);
+        var jx = (((i * 37) % 7) / 6 - 0.5) * pasoX * 0.18;
+        var jy = (((i * 53) % 7) / 6 - 0.5) * pasoY * 0.18;
+        var fx = 0.06 + pasoX / 2 + col * pasoX + (cols - enFila) * pasoX / 2 + jx;
+        var fy = 0.09 + pasoY / 2 + fila * pasoY + jy;
         var x = t.w / 2 + (fx * t.w - t.w / 2) * zum + desp.x;
         var y = t.h / 2 + (fy * t.h - t.h / 2) * zum + desp.y;
         b.el.style.left = x + 'px';
