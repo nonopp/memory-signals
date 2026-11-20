@@ -9,7 +9,7 @@
   var caja, lienzo, ctx, capa, titulo, globo;
   var aparatos = [], actual = null, alElegir = null;
   var rot = 0.6, girando = true, arrastrando = false, xInicial = 0, rotInicial = 0;
-  /* acercamiento: en el globo separa los pines apiñados; en el cielo (fuera del sistema solar)
+  /* acercamiento: en el globo separa los pines apiñados; en el cielo de otros destinos
      hace lo mismo, con más recorrido porque allí los doce objetos van en fila */
   var zum = 1, ZUM_MAX = 4, ZUM_ESPACIO = 6, cuerpoAnterior = '';
   /* desplazamiento del cielo cuando está acercado: sin él, lo que se sale del marco no se alcanza.
@@ -492,7 +492,7 @@
     caja.classList.toggle('cuerpo-marte', c === 'marte');
     if (titulo) {
       titulo.textContent = c === 'luna' ? (T('mapa.luna') || 'El mapa de la Luna')
-        : c === 'marte' ? (T('mapa.marte') || 'El mapa de Marte') : (T('mapa.espacio') || 'Hacia fuera del sistema solar');
+        : c === 'marte' ? (T('mapa.marte') || 'El mapa de Marte') : (T('mapa.espacio') || 'Otros destinos');
     }
     var pie = document.getElementById('mapa-pie');
     if (pie) {

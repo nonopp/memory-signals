@@ -95,7 +95,7 @@
   },
   {
    "id": "espacio",
-   "nombre": "Tiefenraum",
+   "nombre": "Weitere Ziele",
    "aparatos": [
     "voyager1",
     "near-shoemaker",
@@ -111,7 +111,7 @@
     "deep-impact"
    ],
    "color": "#4f7fb8",
-   "corto": "Tiefenraum"
+   "corto": "Weitere"
   }
  ],
  "aparatos": [

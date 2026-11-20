@@ -95,7 +95,7 @@
   },
   {
    "id": "espacio",
-   "nombre": "Deep space",
+   "nombre": "Other destinations",
    "aparatos": [
     "voyager1",
     "near-shoemaker",
@@ -111,7 +111,7 @@
     "deep-impact"
    ],
    "color": "#4f7fb8",
-   "corto": "Deep space"
+   "corto": "Others"
   }
  ],
  "aparatos": [

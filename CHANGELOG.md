@@ -1,3 +1,8 @@
+## v3.17.2 — 2026-11-20
+
+- **El tercer destino ya no se llama «fuera del sistema solar».** Había aparatos que sí llegaron a un planeta —MESSENGER se estrelló en Mercurio, Magellan se desintegró en la atmósfera de Venus, Galileo en Júpiter, Cassini en Saturno—, así que el nombre mentía. Pasa a llamarse **«Otros destinos»** (`Other destinations` / `Weitere Ziele`), tanto en la tarjeta del destino como en el título del mapa y en el resumen corto.
+- Se mantienen **tres destinos**: La Luna · Marte · Otros destinos. Descartadas por ahora las variantes de un destino por mundo (obligaría a ocho pantallas y cinco de ellas con un solo objeto) y la de un mapa por mundos.
+
 ## v3.17.1 — 2026-11-20
 
 - **La tarjeta que se ve al compartir el enlace cambia de dirección** (`img/og-memory-signals-v2.jpg`, mismo dibujo sobre fondo oscuro). Las redes —WhatsApp la primera— guardan la vista previa por URL y no vuelven a mirarla durante días: con una dirección nueva se ven obligadas a bajarla otra vez. El fichero antiguo se queda en el repo, pero ninguna etiqueta lo usa ya.
