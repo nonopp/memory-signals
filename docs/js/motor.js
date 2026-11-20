@@ -708,18 +708,25 @@
     return sketchesListos;
   }
 
-  /* el sketch del aparato, en el idioma que se está viendo; si falta, el español */
+  /* El sketch del aparato en el idioma que se está viendo. Si ese idioma no existe todavía, se usa
+     el que haya y se dice en el visor: hay aparatos cuyo dibujo solo está en alemán. */
   function archivoSketch(d) {
     var a = (d && d.archivos) || {};
     var idi = idiomaActual() || 'es';
-    return a[idi] || a.es || d.archivo;
+    if (a[idi]) return { ruta: a[idi], idioma: idi };
+    if (a.es) return { ruta: a.es, idioma: 'es' };
+    var otros = Object.keys(a);
+    if (otros.length) return { ruta: a[otros[0]], idioma: otros[0] };
+    return d.archivo ? { ruta: d.archivo, idioma: idi } : null;
   }
 
   function sketchPara(aparato) {
     return cargarSketches().then(function (todos) {
       var e = todos && todos[aparato.id];
       if (!e || !e.archivo) return null;
-      return { datos: e, archivo: archivoSketch(e), objeto: aparato };
+      var f = archivoSketch(e);
+      if (!f) return null;
+      return { datos: e, archivo: f.ruta, idiomaArchivo: f.idioma, objeto: aparato };
     });
   }
 
@@ -730,7 +737,13 @@
     img.src = sketchDe.archivo + '?v=' + (window.__MSV || '');
     img.alt = T('sketch.alt', { objeto: sketchDe.objeto.nombre });
     img.hidden = false;
-    var aviso = $('#sketch-aviso'); aviso.hidden = true; aviso.textContent = '';
+    /* si el dibujo está en otro idioma, se dice: el visitante no debe pensar que se ha equivocado */
+    var aviso = $('#sketch-aviso');
+    var idiActual = idiomaActual() || 'es';
+    var textoAviso = (sketchDe.idiomaArchivo && sketchDe.idiomaArchivo !== idiActual)
+      ? T('sketch.aviso.' + sketchDe.idiomaArchivo) : '';
+    aviso.textContent = textoAviso || '';
+    aviso.hidden = !textoAviso;
     var nota = $('#sketch-nota');
     if (nota) { nota.hidden = false; nota.textContent = T('sketch.nota'); }
     var enlace = $('#sketch-descargar');

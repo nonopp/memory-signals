@@ -1,3 +1,9 @@
+## v3.20.0 — 2026-11-20
+
+- **Los 20 objetos nuevos estrenan sketch de fondo, en su versión alemana.** El generador devolvió los 20 dibujos con las anotaciones en alemán (comprobado leyendo seis de ellos: «GESAMTHÖHE», «GOLDENE SCHALLPLATTE», «ERDUMFLAUFBAHN»…), así que entran como `fondo-<id>.de.jpg`, igual que el resto del catálogo en su versión alemana. Pesos: **116,7 MB → 6,55 MB** (1920×1080, ~330 KB cada uno).
+- **El visor dice en qué idioma está el dibujo cuando no coincide con la interfaz.** Si alguien mira la ficha en español o en inglés y abre el sketch de estos 20, aparece el aviso de que el dibujo está en alemán; en la versión alemana no hay aviso. Antes, un dibujo de otro idioma se colaba sin explicación.
+- Faltan por tanto las versiones **española e inglesa** de estos 20 dibujos (el resto del catálogo las tiene). El botón y el fondo funcionan ya con la alemana.
+
 ## v3.19.0 — 2026-11-20
 
 - **El mapa de «otros destinos» se reparte por todo el marco.** Con 31 objetos, las tres filas dejaban 19 px entre pin y pin y se pisaban. Ahora los pines se colocan en una **cuadrícula holgada** calculada a partir del número de objetos (7 columnas × 5 filas con 31), con un desorden fijo pequeño para que no parezca una tabla, y el marco del cielo pasa a **cuadrado** en la ficha: un tercio más de superficie. Medido: **34 px de separación mínima** y ninguna pareja por debajo de 32 px (antes 19).

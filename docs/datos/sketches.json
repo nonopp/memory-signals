@@ -219,5 +219,185 @@
   },
   "ancho": 1920,
   "alto": 1194
+ },
+ "ladee": {
+  "archivo": "img/fondo-ladee.de.jpg",
+  "archivos": {
+   "de": "img/fondo-ladee.de.jpg"
+  },
+  "ancho": 1920,
+  "alto": 1080,
+  "nota": "Solo versión alemana por ahora: es la que devolvió el generador."
+ },
+ "clementine": {
+  "archivo": "img/fondo-clementine.de.jpg",
+  "archivos": {
+   "de": "img/fondo-clementine.de.jpg"
+  },
+  "ancho": 1920,
+  "alto": 1080,
+  "nota": "Solo versión alemana por ahora: es la que devolvió el generador."
+ },
+ "mars-global-surveyor": {
+  "archivo": "img/fondo-mars-global-surveyor.de.jpg",
+  "archivos": {
+   "de": "img/fondo-mars-global-surveyor.de.jpg"
+  },
+  "ancho": 1920,
+  "alto": 1080,
+  "nota": "Solo versión alemana por ahora: es la que devolvió el generador."
+ },
+ "voyager2": {
+  "archivo": "img/fondo-voyager2.de.jpg",
+  "archivos": {
+   "de": "img/fondo-voyager2.de.jpg"
+  },
+  "ancho": 1920,
+  "alto": 1080,
+  "nota": "Solo versión alemana por ahora: es la que devolvió el generador."
+ },
+ "pioneer11": {
+  "archivo": "img/fondo-pioneer11.de.jpg",
+  "archivos": {
+   "de": "img/fondo-pioneer11.de.jpg"
+  },
+  "ancho": 1920,
+  "alto": 1080,
+  "nota": "Solo versión alemana por ahora: es la que devolvió el generador."
+ },
+ "ulysses": {
+  "archivo": "img/fondo-ulysses.de.jpg",
+  "archivos": {
+   "de": "img/fondo-ulysses.de.jpg"
+  },
+  "ancho": 1920,
+  "alto": 1080,
+  "nota": "Solo versión alemana por ahora: es la que devolvió el generador."
+ },
+ "rosetta": {
+  "archivo": "img/fondo-rosetta.de.jpg",
+  "archivos": {
+   "de": "img/fondo-rosetta.de.jpg"
+  },
+  "ancho": 1920,
+  "alto": 1080,
+  "nota": "Solo versión alemana por ahora: es la que devolvió el generador."
+ },
+ "stardust": {
+  "archivo": "img/fondo-stardust.de.jpg",
+  "archivos": {
+   "de": "img/fondo-stardust.de.jpg"
+  },
+  "ancho": 1920,
+  "alto": 1080,
+  "nota": "Solo versión alemana por ahora: es la que devolvió el generador."
+ },
+ "deep-space-1": {
+  "archivo": "img/fondo-deep-space-1.de.jpg",
+  "archivos": {
+   "de": "img/fondo-deep-space-1.de.jpg"
+  },
+  "ancho": 1920,
+  "alto": 1080,
+  "nota": "Solo versión alemana por ahora: es la que devolvió el generador."
+ },
+ "spitzer": {
+  "archivo": "img/fondo-spitzer.de.jpg",
+  "archivos": {
+   "de": "img/fondo-spitzer.de.jpg"
+  },
+  "ancho": 1920,
+  "alto": 1080,
+  "nota": "Solo versión alemana por ahora: es la que devolvió el generador."
+ },
+ "wmap": {
+  "archivo": "img/fondo-wmap.de.jpg",
+  "archivos": {
+   "de": "img/fondo-wmap.de.jpg"
+  },
+  "ancho": 1920,
+  "alto": 1080,
+  "nota": "Solo versión alemana por ahora: es la que devolvió el generador."
+ },
+ "suzaku": {
+  "archivo": "img/fondo-suzaku.de.jpg",
+  "archivos": {
+   "de": "img/fondo-suzaku.de.jpg"
+  },
+  "ancho": 1920,
+  "alto": 1080,
+  "nota": "Solo versión alemana por ahora: es la que devolvió el generador."
+ },
+ "compton-gro": {
+  "archivo": "img/fondo-compton-gro.de.jpg",
+  "archivos": {
+   "de": "img/fondo-compton-gro.de.jpg"
+  },
+  "ancho": 1920,
+  "alto": 1080,
+  "nota": "Solo versión alemana por ahora: es la que devolvió el generador."
+ },
+ "mir": {
+  "archivo": "img/fondo-mir.de.jpg",
+  "archivos": {
+   "de": "img/fondo-mir.de.jpg"
+  },
+  "ancho": 1920,
+  "alto": 1080,
+  "nota": "Solo versión alemana por ahora: es la que devolvió el generador."
+ },
+ "van-allen-probes": {
+  "archivo": "img/fondo-van-allen-probes.de.jpg",
+  "archivos": {
+   "de": "img/fondo-van-allen-probes.de.jpg"
+  },
+  "ancho": 1920,
+  "alto": 1080,
+  "nota": "Solo versión alemana por ahora: es la que devolvió el generador."
+ },
+ "geotail": {
+  "archivo": "img/fondo-geotail.de.jpg",
+  "archivos": {
+   "de": "img/fondo-geotail.de.jpg"
+  },
+  "ancho": 1920,
+  "alto": 1080,
+  "nota": "Solo versión alemana por ahora: es la que devolvió el generador."
+ },
+ "cluster-ii": {
+  "archivo": "img/fondo-cluster-ii.de.jpg",
+  "archivos": {
+   "de": "img/fondo-cluster-ii.de.jpg"
+  },
+  "ancho": 1920,
+  "alto": 1080,
+  "nota": "Solo versión alemana por ahora: es la que devolvió el generador."
+ },
+ "polar": {
+  "archivo": "img/fondo-polar.de.jpg",
+  "archivos": {
+   "de": "img/fondo-polar.de.jpg"
+  },
+  "ancho": 1920,
+  "alto": 1080,
+  "nota": "Solo versión alemana por ahora: es la que devolvió el generador."
+ },
+ "trmm": {
+  "archivo": "img/fondo-trmm.de.jpg",
+  "archivos": {
+   "de": "img/fondo-trmm.de.jpg"
+  },
+  "ancho": 1920,
+  "alto": 1080,
+  "nota": "Solo versión alemana por ahora: es la que devolvió el generador."
+ },
+ "topex-poseidon": {
+  "archivo": "img/fondo-topex-poseidon.de.jpg",
+  "archivos": {
+   "de": "img/fondo-topex-poseidon.de.jpg"
+  },
+  "ancho": 1920,
+  "alto": 1080,
+  "nota": "Solo versión alemana por ahora: es la que devolvió el generador."
  }
 }
