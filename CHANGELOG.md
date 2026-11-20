@@ -1,3 +1,7 @@
+## v3.17.1 — 2026-11-20
+
+- **La tarjeta que se ve al compartir el enlace cambia de dirección** (`img/og-memory-signals-v2.jpg`, mismo dibujo sobre fondo oscuro). Las redes —WhatsApp la primera— guardan la vista previa por URL y no vuelven a mirarla durante días: con una dirección nueva se ven obligadas a bajarla otra vez. El fichero antiguo se queda en el repo, pero ninguna etiqueta lo usa ya.
+
 ## v3.17.0 — 2026-11-20
 
 - **«Fuera del sistema solar» también se acerca y se desplaza.** Los doce objetos del cielo profundo van en fila con ~17 px entre pin y pin, así que se pisaban y no había manera de acertar con el dedo. Ahora:
