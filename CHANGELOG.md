@@ -1,3 +1,10 @@
+## v3.22.3 — 2026-11-20
+
+- **Textos corregidos que se habían quedado viejos con el catálogo:**
+  - «Participa» decía *«la historia de diez aparatos»* y *«el mismo formato que usan los diez aparatos»*. Ahora no lleva número: **«los aparatos que la NASA dejó donde llegó»** y «los objetos de la aplicación». Un número escrito en el texto envejece a cada tanda; el recuento real ya lo da el catálogo.
+  - Corregido en las tres lenguas (español, inglés y alemán) y también en el texto de reserva del HTML.
+  - **Descripción para compartir** (`og:description` y `twitter:description`): decía «22 aparatos» y «en la Luna y en Marte». Ahora **«más de cuarenta aparatos»** y **«por el sistema solar»**.
+
 ## v3.22.2 — 2026-11-20
 
 - **La lupa de la cabecera, más grande** (19 → 25 px), y centrada en el círculo.
