@@ -1015,7 +1015,7 @@ body.viendo-objeto #p-objeto .punto-ficha{background:rgba(6,12,24,.92)}
   box-shadow:0 24px 60px rgba(0,0,0,.55)}
 .buscador-barra{display:flex;align-items:center;gap:10px;background:rgba(5,11,22,.9);
   border:1px solid var(--borde,rgba(120,200,230,.25));border-radius:999px;padding:9px 12px}
-.buscador-lupa{color:var(--acento,#63e0c8);font-size:17px}
+.buscador-lupa{color:var(--acento,#63e0c8);font-size:23px;line-height:1;margin-left:2px}
 .buscador-barra input{flex:1;min-width:0;background:none;border:0;outline:none;color:var(--tx,#e7f6fb);font:inherit;font-size:15px}
 .buscador-cerrar{background:none;border:0;color:#9fb6cc;font-size:22px;line-height:1;cursor:pointer;padding:0 2px}
 .buscador-cerrar:hover{color:var(--acento,#63e0c8)}

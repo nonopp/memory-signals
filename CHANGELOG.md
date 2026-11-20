@@ -1,3 +1,7 @@
+## v3.22.1 — 2026-11-20
+
+- **La lupa del buscador, más grande** (17 → 23 px): en la barra del campo se veía pequeña al lado del texto.
+
 ## v3.22.0 — 2026-11-20
 
 - **Buscador de objetos** (la opción B, lista con filtros): una lupa en la cabecera —o **Ctrl+K**— abre un panel con el campo de búsqueda, los **chips de filtro** (Todo · La Luna · Marte · Otros destinos · Solo lo que aún funciona) y la lista de resultados, cada uno con su color, `cuerpo · año` y una línea de la ficha.
