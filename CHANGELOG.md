@@ -1,3 +1,10 @@
+## v3.24.0 — 2026-11-20
+
+- **Los 20 sketches de fondo en inglés** (MS-23 a MS-42). Con esto **los 42 objetos del catálogo tienen el dibujo en los tres idiomas**: español, inglés y alemán. Ya no hay ningún aviso de «este dibujo está en otro idioma» en ninguna versión.
+  - **Peso:** 110 MB de originales (2730×1536) → **7,2 MB** publicados (1920×1080, ~370 KB cada uno).
+  - **Fichero mal nombrado corregido:** el paquete traía `MS-42-fondo-trmm.jpg`, pero la lámina es de **TOPEX/Poseidon** (altimetría oceánica). Se publicó en su sitio correcto, `fondo-topex-poseidon.en.jpg`. El MS-41 sí es TRMM.
+  - **Aviso de idioma:** las claves `sketch.aviso.*` se quedan en el código para futuras tandas que lleguen en un solo idioma, pero hoy no se muestra ninguna.
+
 ## v3.23.0 — 2026-11-20
 
 - **Los 20 sketches de fondo en español**, los de los objetos MS-23 a MS-42. Ya se ven en la versión española de cada ficha (LADEE, Clementine, Mars Global Surveyor, Voyager 2, Pioneer 11, Ulysses, Rosetta, Stardust, Deep Space 1, Spitzer, WMAP, Suzaku, Compton, Mir, Van Allen Probes, Geotail, Cluster II, Polar, TRMM y TOPEX/Poseidon).
