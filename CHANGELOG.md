@@ -1,3 +1,10 @@
+## v3.17.0 — 2026-11-21
+
+- **Segundo cómic: Dawn.** Página A4 de nueve viñetas más franja de cierre, con los textos en español, inglés y alemán, y las diez imágenes del encargo nuevo: la idea sin el aparato construido, los planos, la sala de montaje, el lanzamiento con el aparato dentro de la cofia, la travesía, la llegada, el motor iónico en órbita, el final en Ceres y el detalle de lo que queda.
+- Textos escritos **solo con los datos de la ficha** (40 % de la masa del cinturón, 19–91 mN del motor iónico, Rheasilvia de 500 × 19 km, 25 % de hielo en Ceres, 1 de noviembre de 2018) y fuentes al pie.
+- PDF de una sola página en los tres idiomas, verificado: **1 página, 1123 px de alto, 10 imágenes cargadas**.
+- Las diez viñetas normalizadas a 840 px para la web y 1200 px para el PDF.
+
 ## v3.25.2 — 2026-11-20
 
 - **El cómic ya no se cierra al cambiar de idioma.** Al cambiar de lengua, el motor repinta la ficha y vuelve a avisar del mismo objeto; el visor interpretaba ese aviso como «cambio de objeto» y cerraba el cómic, dejándolo además con los textos del idioma anterior. Ahora distingue las dos cosas: si el objeto es el mismo, **se vuelve a montar traducido**; si es otro, se cierra.

@@ -213,5 +213,213 @@
    "en": "pdf/comic-voyager2-en.pdf",
    "de": "pdf/comic-voyager2-de.pdf"
   }
+ },
+ "dawn": {
+  "anio": 2007,
+  "cuerpo": "Ceres",
+  "titulo": {
+   "es": "La que se quedó dando vueltas",
+   "en": "The one that kept circling",
+   "de": "Die weiterkreiste"
+  },
+  "subtitulo": {
+   "es": "Primera nave que orbitó un asteroide del cinturón principal y primera que llegó a un planeta enano",
+   "en": "First spacecraft to orbit a main-belt asteroid and first to reach a dwarf planet",
+   "de": "Erste Sonde, die einen Asteroid des Hauptgürtels umkreiste und einen Zwergplaneten erreichte"
+  },
+  "marca": {
+   "es": "Memory Signals",
+   "en": "Memory Signals",
+   "de": "Memory Signals"
+  },
+  "marca_url": "nasa.gesemweb.es/app",
+  "imagenes": [
+   "img/comic/dawn-v01.jpg",
+   "img/comic/dawn-v02.jpg",
+   "img/comic/dawn-v03.jpg",
+   "img/comic/dawn-v04.jpg",
+   "img/comic/dawn-v05.jpg",
+   "img/comic/dawn-v06.jpg",
+   "img/comic/dawn-v07.jpg",
+   "img/comic/dawn-v08.jpg",
+   "img/comic/dawn-v09.jpg"
+  ],
+  "franja": "img/comic/dawn-v10.jpg",
+  "vinetas": [
+   {
+    "n": 1,
+    "momento": "origen",
+    "cartela": {
+     "es": "2007. Vesta y Ceres suman casi el 40 % de la masa del cinturón de asteroides.",
+     "en": "2007. Vesta and Ceres hold nearly 40% of the asteroid belt's mass.",
+     "de": "2007. Vesta und Ceres vereinen fast 40 % der Masse des Asteroidengürtels."
+    },
+    "bocadillo": {
+     "es": "Me enviaron a los dos cuerpos más grandes del cinturón.",
+     "en": "They sent me to the two largest bodies in the belt.",
+     "de": "Sie schickten mich zu den beiden größten Körpern des Gürtels."
+    },
+    "dato": {
+     "es": "≈40 % del cinturón",
+     "en": "≈40% of the belt",
+     "de": "≈40 % des Gürtels"
+    }
+   },
+   {
+    "n": 2,
+    "momento": "diseño",
+    "cartela": {
+     "es": "Orbitar dos mundos con un solo depósito de combustible.",
+     "en": "To orbit two worlds on a single tank of fuel.",
+     "de": "Zwei Welten mit einem einzigen Tank umkreisen."
+    },
+    "bocadillo": {
+     "es": "Para eso hacía falta un motor que gastara muy poco.",
+     "en": "That called for an engine that used very little.",
+     "de": "Dafür brauchte es ein Triebwerk, das sehr wenig verbraucht."
+    },
+    "dato": {
+     "es": "un solo depósito",
+     "en": "one single tank",
+     "de": "ein einziger Tank"
+    }
+   },
+   {
+    "n": 3,
+    "momento": "quienes",
+    "cartela": {
+     "es": "En el JPL: Marc Rayman dirigió la misión y Chris Russell lideró la ciencia.",
+     "en": "At JPL: Marc Rayman led the mission and Chris Russell led the science.",
+     "de": "Beim JPL: Marc Rayman leitete die Mission, Chris Russell die Wissenschaft."
+    },
+    "bocadillo": {
+     "es": "Me construyeron para no tener prisa.",
+     "en": "They built me so I would never be in a hurry.",
+     "de": "Sie bauten mich, damit ich es nie eilig habe."
+    },
+    "dato": null
+   },
+   {
+    "n": 4,
+    "momento": "lanzamiento",
+    "cartela": {
+     "es": "2007. Salgo hacia el cinturón de asteroides.",
+     "en": "2007. I set out for the asteroid belt.",
+     "de": "2007. Ich mache mich auf den Weg zum Asteroidengürtel."
+    },
+    "bocadillo": {
+     "es": "Nadie había orbitado todavía un asteroide del cinturón principal.",
+     "en": "No one had yet orbited a main-belt asteroid.",
+     "de": "Noch niemand hatte einen Asteroid des Hauptgürtels umkreist."
+    },
+    "dato": {
+     "es": "2007",
+     "en": "2007",
+     "de": "2007"
+    }
+   },
+   {
+    "n": 5,
+    "momento": "camino",
+    "cartela": {
+     "es": "Camino del cinturón, con el motor encendido casi todo el tiempo.",
+     "en": "Bound for the belt, engine firing almost the whole way.",
+     "de": "Unterwegs zum Gürtel, das Triebwerk fast ständig gezündet."
+    },
+    "bocadillo": {
+     "es": "Apenas empujo, pero no me paro nunca.",
+     "en": "I barely push, but I never stop.",
+     "de": "Ich schiebe kaum, aber ich halte nie an."
+    },
+    "dato": null
+   },
+   {
+    "n": 6,
+    "momento": "llegada",
+    "cartela": {
+     "es": "Primera nave que orbita un cuerpo del cinturón principal.",
+     "en": "First spacecraft to orbit a body of the main belt.",
+     "de": "Erste Sonde, die einen Körper des Hauptgürtels umkreist."
+    },
+    "bocadillo": {
+     "es": "Por primera vez, una nave se queda dando vueltas a una roca del cinturón.",
+     "en": "For the first time, a spacecraft stays circling a rock in the belt.",
+     "de": "Zum ersten Mal kreist eine Sonde dauerhaft um einen Brocken des Gürtels."
+    },
+    "dato": null
+   },
+   {
+    "n": 7,
+    "momento": "trabajo",
+    "cartela": {
+     "es": "El motor iónico empuja entre 19 y 91 milinewtons, sin parar.",
+     "en": "The ion engine pushes between 19 and 91 millinewtons, without stopping.",
+     "de": "Das Ionentriebwerk schiebt zwischen 19 und 91 Millinewton, ohne Pause."
+    },
+    "bocadillo": {
+     "es": "Con el mismo combustible orbité un asteroide, salí y orbité un planeta enano.",
+     "en": "On the same fuel I orbited an asteroid, left it and orbited a dwarf planet.",
+     "de": "Mit demselben Treibstoff umkreiste ich einen Asteroiden, flog weiter und umkreiste einen Zwergplaneten."
+    },
+    "dato": {
+     "es": "19–91 mN",
+     "en": "19–91 mN",
+     "de": "19–91 mN"
+    }
+   },
+   {
+    "n": 8,
+    "momento": "final",
+    "cartela": {
+     "es": "En órbita de Ceres, sin funcionar desde el 1 de noviembre de 2018.",
+     "en": "In orbit around Ceres, silent since 1 November 2018.",
+     "de": "Im Orbit um Ceres, seit dem 1. November 2018 außer Betrieb."
+    },
+    "bocadillo": {
+     "es": "Me quedé sin combustible justo donde tenía que quedarme.",
+     "en": "I ran out of fuel exactly where I was meant to stay.",
+     "de": "Der Treibstoff ging mir genau dort aus, wo ich bleiben sollte."
+    },
+    "dato": {
+     "es": "1-11-2018",
+     "en": "1 Nov 2018",
+     "de": "1.11.2018"
+    }
+   },
+   {
+    "n": 9,
+    "momento": "queda",
+    "cartela": {
+     "es": "En Vesta encontré Rheasilvia: 500 km de ancho y 19 de profundidad.",
+     "en": "At Vesta I found Rheasilvia: 500 km wide and 19 km deep.",
+     "de": "Auf Vesta fand ich Rheasilvia: 500 km breit und 19 km tief."
+    },
+    "bocadillo": {
+     "es": "Bajo mí, Ceres guarda cerca del 25 % de su masa en hielo.",
+     "en": "Beneath me, Ceres keeps nearly 25% of its mass in ice.",
+     "de": "Unter mir bewahrt Ceres fast 25 % seiner Masse als Eis."
+    },
+    "dato": {
+     "es": "≈25 % de hielo",
+     "en": "≈25% ice",
+     "de": "≈25 % Eis"
+    }
+   }
+  ],
+  "cierre": {
+   "es": "Ya no hablo con nadie, pero sigo dando vueltas a Ceres.",
+   "en": "I no longer talk to anyone, but I am still circling Ceres.",
+   "de": "Ich spreche mit niemandem mehr, aber ich kreise weiter um Ceres."
+  },
+  "fuentes": [
+   "https://science.nasa.gov/mission/dawn/",
+   "https://science.nasa.gov/mission/dawn/objectives/",
+   "https://science.nasa.gov/mission/dawn/science/ceres/"
+  ],
+  "pdf": {
+   "es": "pdf/comic-dawn-es.pdf",
+   "en": "pdf/comic-dawn-en.pdf",
+   "de": "pdf/comic-dawn-de.pdf"
+  }
  }
 }
