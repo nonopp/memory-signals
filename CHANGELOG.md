@@ -1,3 +1,11 @@
+## v3.25.3 — 2026-11-21
+
+- **Los cómics de Dawn y NEAR Shoemaker vuelven a la web**, con su botón «Cómic» en la ficha de cada objeto. Página A4 de nueve viñetas más la franja de cierre, textos en español, inglés y alemán, datos solo de la ficha y fuentes al pie.
+- Dawn: la idea, los planos, el montaje, el lanzamiento, la travesía, la llegada, el motor iónico en órbita, el final en Ceres y el detalle de lo que queda. Cifras de la ficha: 40 % de la masa del cinturón, 19–91 mN, Rheasilvia 500 × 19 km, 25 % de hielo, 1 de noviembre de 2018.
+- NEAR Shoemaker: el despacho de 1996, los planos, el montaje, el lanzamiento, el camino, la llegada a Eros, la posada, el final sin señal y el detalle. Cifras: 34 km de largo, 6,4 km/h, −173 °C, 28 de febrero de 2001.
+- PDF de una sola página en los tres idiomas, verificado: **1 página, 1123 px de alto, 10 imágenes cargadas**.
+- Se numeran **desde la 3.25.2** y hacia delante: la vez anterior quedaron como 3.17.0 y 3.18.0, por debajo de la versión publicada, y la mezcla de cachés rompió la cabecera. Esos tres commits se revirtieron.
+
 ## v3.25.2 — 2026-11-20
 
 - **El cómic ya no se cierra al cambiar de idioma.** Al cambiar de lengua, el motor repinta la ficha y vuelve a avisar del mismo objeto; el visor interpretaba ese aviso como «cambio de objeto» y cerraba el cómic, dejándolo además con los textos del idioma anterior. Ahora distingue las dos cosas: si el objeto es el mismo, **se vuelve a montar traducido**; si es otro, se cierra.
