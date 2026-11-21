@@ -1,3 +1,9 @@
+## v3.25.1 — 2026-11-20
+
+- **El dato técnico de cada viñeta, traducido.** La etiqueta azul oscuro con letra clara («Cruce de la heliopausa») se había guardado como texto suelto, no en los tres idiomas, así que en la versión inglesa y en la alemana salía en español. Ahora lleva `{es, en, de}` como la cartela y el bocadillo: *Heliopause crossing* / *Überquerung der Heliopause*.
+- **Los tres PDF regenerados** con los datos traducidos (siguen siendo de una sola página).
+- **Corregido en la plantilla de la skill** `ilustracion-con-guion`: el dato se traduce igual que el resto de campos, y se arregla la «segunda página fantasma» que provocaba un nodo de texto suelto al imprimir con `printToPDF`.
+
 ## v3.25.0 — 2026-11-20
 
 - **El cómic del objeto, dentro de la web.** Botón nuevo **Cómic / Cartoon / Comic** en la ficha, antes de «Sketch» y de «Dejarlo aquí». Al pulsarlo se despliega **a ancho completo**, debajo del contenedor del objeto:

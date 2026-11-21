@@ -1,0 +1,47 @@
+MEMORY SIGNALS · ENCARGO DE VIÑETAS · ÍNDICE
+41 objetos · 10 viñetas cada uno = 410 imágenes
+
+Un fichero por objeto. Dentro, cada viñeta es un bloque autocontenido: se copia
+y se pega tal cual en el generador. El orden es por destino y año.
+
+  01-near-shoemaker.txt        NEAR Shoemaker · 1996 · Asteroide Eros
+  02-dawn.txt                  Dawn · 2007 · Ceres
+  03-skylab.txt                Skylab · 1973 · Espacio
+  04-voyager1.txt              Voyager 1 · 1977 · Espacio
+  05-galileo.txt               Galileo · 1989 · Espacio
+  06-magellan.txt              Magellan · 1989 · Espacio
+  07-ulysses.txt               Ulysses · 1990 · Espacio
+  08-cassini.txt               Cassini · 1997 · Espacio
+  09-huygens.txt               Huygens · 1997 · Espacio
+  10-deep-space-1.txt          Deep Space 1 · 1998 · Espacio
+  11-stardust.txt              Stardust · 1999 · Espacio
+  12-spitzer.txt               Spitzer · 2003 · Espacio
+  13-messenger.txt             MESSENGER · 2004 · Espacio
+  14-rosetta.txt               Rosetta · 2004 · Espacio
+  15-deep-impact.txt           Deep Impact · 2005 · Espacio
+  16-pioneer10.txt             Pioneer 10 · 1972 · Espacio interestelar
+  17-pioneer11.txt             Pioneer 11 · 1973 · Espacio interestelar
+  18-kepler.txt                Telescopio Kepler · 2009 · Espacio profundo
+  19-modulo-lunar.txt          Módulo lunar del Apolo 11 · 1969 · Luna
+  20-apolo12-intrepid.txt      Etapa de descenso del Intrepid · 1969 · Luna
+  21-apolo14-antares.txt       Etapa de descenso del Antares · 1971 · Luna
+  22-apolo16-orion.txt         Etapa de descenso del Orion · 1972 · Luna
+  23-apolo17-challenger.txt    Etapa de descenso del Challenger · 1972 · Luna
+  24-ladee.txt                 LADEE · 2013 · Luna
+  25-viking.txt                Viking 1 y 2 · 1975 · Marte
+  26-mars-global-surveyor.txt  Mars Global Surveyor · 1996 · Marte
+  27-opportunity.txt           Opportunity · 2004 · Marte
+  28-spirit.txt                Spirit · 2004 · Marte
+  29-insight.txt               InSight · 2018 · Marte
+  30-ingenuity.txt             Helicóptero Ingenuity · 2020 · Marte
+  31-clementine.txt            Clementine · 1994 · Órbita solar
+  32-mir.txt                   Mir · 1986 · Órbita terrestre
+  33-compton-gro.txt           Compton Gamma Ray Observatory (CGRO) · 1991 · Órbita terrestre
+  34-geotail.txt               Geotail · 1992 · Órbita terrestre
+  35-topex-poseidon.txt        TOPEX/Poseidon · 1992 · Órbita terrestre
+  36-polar.txt                 Polar · 1996 · Órbita terrestre
+  37-trmm.txt                  TRMM · 1997 · Órbita terrestre
+  38-cluster-ii.txt            Cluster II · 2000 · Órbita terrestre
+  39-wmap.txt                  Wilkinson Microwave Anisotropy Probe (WMAP) · 2001 · Órbita terrestre
+  40-suzaku.txt                Suzaku (ASTRO-E2) · 2005 · Órbita terrestre
+  41-van-allen-probes.txt      Van Allen Probes (RBSP A y B) · 2012 · Órbita terrestre

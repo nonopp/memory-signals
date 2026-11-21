@@ -14,14 +14,21 @@
    "de": "Die einzige Sonde, die alle vier Riesen besucht hat, spricht noch"
   },
   "imagenes": [
-   "img/comic/voyager2-v01.jpg", "img/comic/voyager2-v02.jpg", "img/comic/voyager2-v03.jpg",
-   "img/comic/voyager2-v04.jpg", "img/comic/voyager2-v05.jpg", "img/comic/voyager2-v06.jpg",
-   "img/comic/voyager2-v07.jpg", "img/comic/voyager2-v08.jpg", "img/comic/voyager2-v09.jpg"
+   "img/comic/voyager2-v01.jpg",
+   "img/comic/voyager2-v02.jpg",
+   "img/comic/voyager2-v03.jpg",
+   "img/comic/voyager2-v04.jpg",
+   "img/comic/voyager2-v05.jpg",
+   "img/comic/voyager2-v06.jpg",
+   "img/comic/voyager2-v07.jpg",
+   "img/comic/voyager2-v08.jpg",
+   "img/comic/voyager2-v09.jpg"
   ],
   "franja": "img/comic/voyager2-v10.jpg",
   "vinetas": [
    {
-    "n": 1, "momento": "origen",
+    "n": 1,
+    "momento": "origen",
     "cartela": {
      "es": "1972. Los planetas iban a alinearse. Una vez cada 176 años.",
      "en": "1972. The planets were about to line up. Once every 176 years.",
@@ -32,10 +39,15 @@
      "en": "If we were not there, there would be no second chance.",
      "de": "Wären wir nicht dabei, gäbe es keine zweite Chance."
     },
-    "dato": "176 años"
+    "dato": {
+     "es": "176 años",
+     "en": "176 years",
+     "de": "176 Jahre"
+    }
    },
    {
-    "n": 2, "momento": "diseño",
+    "n": 2,
+    "momento": "diseño",
     "cartela": {
      "es": "El problema no era el viaje: era caber y seguir apuntando.",
      "en": "The hard part was not the trip: it was fitting in and still aiming.",
@@ -46,10 +58,15 @@
      "en": "Three and a half metres of dish that must never stop looking at Earth.",
      "de": "Dreieinhalb Meter Antenne, die nie aufhören dürfen, zur Erde zu schauen."
     },
-    "dato": "Antena de 3,66 m"
+    "dato": {
+     "es": "Antena de 3,66 m",
+     "en": "3.66 m dish",
+     "de": "3,66-m-Antenne"
+    }
    },
    {
-    "n": 3, "momento": "quienes",
+    "n": 3,
+    "momento": "quienes",
     "cartela": {
      "es": "Jet Propulsion Laboratory · Pasadena, 1976",
      "en": "Jet Propulsion Laboratory · Pasadena, 1976",
@@ -60,10 +77,15 @@
      "en": "Every gold blanket they put on me is a layer against the Sun.",
      "de": "Jede Golddecke, die sie mir anlegen, ist eine Schicht gegen die Sonne."
     },
-    "dato": "Pasadena, 1976"
+    "dato": {
+     "es": "Pasadena, 1976",
+     "en": "Pasadena, 1976",
+     "de": "Pasadena, 1976"
+    }
    },
    {
-    "n": 4, "momento": "lanzamiento",
+    "n": 4,
+    "momento": "lanzamiento",
     "cartela": {
      "es": "20 de agosto de 1977 · Cabo Cañaveral",
      "en": "20 August 1977 · Cape Canaveral",
@@ -74,10 +96,15 @@
      "en": "Sixteen days later my twin left. I went first.",
      "de": "Sechzehn Tage später startete meine Zwillingsschwester. Ich war zuerst dran."
     },
-    "dato": "20 de agosto de 1977"
+    "dato": {
+     "es": "20 de agosto de 1977",
+     "en": "20 August 1977",
+     "de": "20. August 1977"
+    }
    },
    {
-    "n": 5, "momento": "camino",
+    "n": 5,
+    "momento": "camino",
     "cartela": {
      "es": "Cuatro gigantes con una sola reserva de combustible.",
      "en": "Four giants on a single tank of fuel.",
@@ -88,10 +115,15 @@
      "en": "Twelve years of travel to see Jupiter, Saturn, Uranus and Neptune.",
      "de": "Zwölf Jahre Reise, um Jupiter, Saturn, Uranus und Neptun zu sehen."
     },
-    "dato": "1977-1989"
+    "dato": {
+     "es": "1977-1989",
+     "en": "1977-1989",
+     "de": "1977-1989"
+    }
    },
    {
-    "n": 6, "momento": "llegada",
+    "n": 6,
+    "momento": "llegada",
     "cartela": {
      "es": "1981. Saturno.",
      "en": "1981. Saturn.",
@@ -102,10 +134,15 @@
      "en": "The rings are thin as paper and wide as a country.",
      "de": "Die Ringe sind dünn wie Papier und breit wie ein Land."
     },
-    "dato": "1981"
+    "dato": {
+     "es": "1981",
+     "en": "1981",
+     "de": "1981"
+    }
    },
    {
-    "n": 7, "momento": "trabajo",
+    "n": 7,
+    "momento": "trabajo",
     "cartela": {
      "es": "1989. Neptuno.",
      "en": "1989. Neptune.",
@@ -116,10 +153,15 @@
      "en": "Four new rings, a dark spot and winds of 1,100 km/h.",
      "de": "Vier neue Ringe, ein dunkler Fleck und Winde von 1.100 km/h."
     },
-    "dato": "Vientos de 1.100 km/h"
+    "dato": {
+     "es": "Vientos de 1.100 km/h",
+     "en": "Winds of 1,100 km/h",
+     "de": "Winde von 1.100 km/h"
+    }
    },
    {
-    "n": 8, "momento": "final",
+    "n": 8,
+    "momento": "final",
     "cartela": {
      "es": "5 de noviembre de 2018.",
      "en": "5 November 2018.",
@@ -130,10 +172,15 @@
      "en": "The solar wind stopped all at once. I was no longer home.",
      "de": "Der Sonnenwind hörte auf einen Schlag auf. Ich war nicht mehr zu Hause."
     },
-    "dato": "Cruce de la heliopausa"
+    "dato": {
+     "es": "Cruce de la heliopausa",
+     "en": "Heliopause crossing",
+     "de": "Überquerung der Heliopause"
+    }
    },
    {
-    "n": 9, "momento": "queda",
+    "n": 9,
+    "momento": "queda",
     "cartela": {
      "es": "Sigo ahí fuera, y cada año me alejo más del Sol.",
      "en": "I am still out here, and every year I move further from the Sun.",
@@ -144,7 +191,11 @@
      "en": "The light I send takes more than sixteen hours to reach Earth.",
      "de": "Das Licht, das ich sende, braucht über sechzehn Stunden bis zur Erde."
     },
-    "dato": "Más de 16 horas"
+    "dato": {
+     "es": "Más de 16 horas",
+     "en": "More than 16 hours",
+     "de": "Mehr als 16 Stunden"
+    }
    }
   ],
   "cierre": {

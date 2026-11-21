@@ -78,7 +78,7 @@
         '<img src="' + img + '?v=' + v + '" alt="' + (T('comic.vineta', { n: vi.n }) || ('Viñeta ' + vi.n)) +
           '" width="840" height="1120" loading="lazy">' +
         '<figcaption class="cartela">' + texto(vi.cartela) +
-          (vi.dato ? '<span class="dato-vineta">' + vi.dato + '</span>' : '') + '</figcaption>' +
+          (texto(vi.dato) ? '<span class="dato-vineta">' + texto(vi.dato) + '</span>' : '') + '</figcaption>' +
         (texto(vi.bocadillo) ? '<p class="bocadillo">' + texto(vi.bocadillo) + '</p>' : '') +
       '</figure>';
     }).join('');
