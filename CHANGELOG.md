@@ -1,3 +1,11 @@
+## v3.23.0 — 2026-11-20
+
+- **Los 20 sketches de fondo en español**, los de los objetos MS-23 a MS-42. Ya se ven en la versión española de cada ficha (LADEE, Clementine, Mars Global Surveyor, Voyager 2, Pioneer 11, Ulysses, Rosetta, Stardust, Deep Space 1, Spitzer, WMAP, Suzaku, Compton, Mir, Van Allen Probes, Geotail, Cluster II, Polar, TRMM y TOPEX/Poseidon).
+  - **Peso:** 116 MB de originales (2730×1536) → **7,1 MB** publicados (1920×1080, ~370 KB cada uno). La geometría del dibujo no se toca: solo se reduce y se recomprime.
+  - **Aviso de idioma automático:** en español se ve el dibujo español sin aviso; en inglés se sigue viendo el español con el aviso «This drawing is in Spanish…»; en alemán, el alemán. La clave `sketch.aviso.es` añadida a los tres idiomas.
+  - **Ulysses venía dos veces** en el paquete (`MS-28- fondo-ulysses.jpg` y `MS-28-fondo-ulysses.jpg`). Se publicó la segunda: la primera tiene las etiquetas más apretadas y restos en inglés («SUN») y una errata («PROPELENTE»).
+- **Falta la versión inglesa** de estos 20 dibujos: es lo único que queda de la tanda.
+
 ## v3.22.3 — 2026-11-20
 
 - **Textos corregidos que se habían quedado viejos con el catálogo:**

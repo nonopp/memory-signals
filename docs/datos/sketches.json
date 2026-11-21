@@ -221,183 +221,203 @@
   "alto": 1194
  },
  "ladee": {
-  "archivo": "img/fondo-ladee.de.jpg",
+  "archivo": "img/fondo-ladee.jpg",
   "archivos": {
+   "es": "img/fondo-ladee.jpg",
    "de": "img/fondo-ladee.de.jpg"
   },
   "ancho": 1920,
   "alto": 1080,
-  "nota": "Solo versión alemana por ahora: es la que devolvió el generador."
+  "nota": "Faltan las versiones inglesa. Español y alemán publicados."
  },
  "clementine": {
-  "archivo": "img/fondo-clementine.de.jpg",
+  "archivo": "img/fondo-clementine.jpg",
   "archivos": {
+   "es": "img/fondo-clementine.jpg",
    "de": "img/fondo-clementine.de.jpg"
   },
   "ancho": 1920,
   "alto": 1080,
-  "nota": "Solo versión alemana por ahora: es la que devolvió el generador."
+  "nota": "Faltan las versiones inglesa. Español y alemán publicados."
  },
  "mars-global-surveyor": {
-  "archivo": "img/fondo-mars-global-surveyor.de.jpg",
+  "archivo": "img/fondo-mars-global-surveyor.jpg",
   "archivos": {
+   "es": "img/fondo-mars-global-surveyor.jpg",
    "de": "img/fondo-mars-global-surveyor.de.jpg"
   },
   "ancho": 1920,
   "alto": 1080,
-  "nota": "Solo versión alemana por ahora: es la que devolvió el generador."
+  "nota": "Faltan las versiones inglesa. Español y alemán publicados."
  },
  "voyager2": {
-  "archivo": "img/fondo-voyager2.de.jpg",
+  "archivo": "img/fondo-voyager2.jpg",
   "archivos": {
+   "es": "img/fondo-voyager2.jpg",
    "de": "img/fondo-voyager2.de.jpg"
   },
   "ancho": 1920,
   "alto": 1080,
-  "nota": "Solo versión alemana por ahora: es la que devolvió el generador."
+  "nota": "Faltan las versiones inglesa. Español y alemán publicados."
  },
  "pioneer11": {
-  "archivo": "img/fondo-pioneer11.de.jpg",
+  "archivo": "img/fondo-pioneer11.jpg",
   "archivos": {
+   "es": "img/fondo-pioneer11.jpg",
    "de": "img/fondo-pioneer11.de.jpg"
   },
   "ancho": 1920,
   "alto": 1080,
-  "nota": "Solo versión alemana por ahora: es la que devolvió el generador."
+  "nota": "Faltan las versiones inglesa. Español y alemán publicados."
  },
  "ulysses": {
-  "archivo": "img/fondo-ulysses.de.jpg",
+  "archivo": "img/fondo-ulysses.jpg",
   "archivos": {
+   "es": "img/fondo-ulysses.jpg",
    "de": "img/fondo-ulysses.de.jpg"
   },
   "ancho": 1920,
   "alto": 1080,
-  "nota": "Solo versión alemana por ahora: es la que devolvió el generador."
+  "nota": "Faltan las versiones inglesa. Español y alemán publicados."
  },
  "rosetta": {
-  "archivo": "img/fondo-rosetta.de.jpg",
+  "archivo": "img/fondo-rosetta.jpg",
   "archivos": {
+   "es": "img/fondo-rosetta.jpg",
    "de": "img/fondo-rosetta.de.jpg"
   },
   "ancho": 1920,
   "alto": 1080,
-  "nota": "Solo versión alemana por ahora: es la que devolvió el generador."
+  "nota": "Faltan las versiones inglesa. Español y alemán publicados."
  },
  "stardust": {
-  "archivo": "img/fondo-stardust.de.jpg",
+  "archivo": "img/fondo-stardust.jpg",
   "archivos": {
+   "es": "img/fondo-stardust.jpg",
    "de": "img/fondo-stardust.de.jpg"
   },
   "ancho": 1920,
   "alto": 1080,
-  "nota": "Solo versión alemana por ahora: es la que devolvió el generador."
+  "nota": "Faltan las versiones inglesa. Español y alemán publicados."
  },
  "deep-space-1": {
-  "archivo": "img/fondo-deep-space-1.de.jpg",
+  "archivo": "img/fondo-deep-space-1.jpg",
   "archivos": {
+   "es": "img/fondo-deep-space-1.jpg",
    "de": "img/fondo-deep-space-1.de.jpg"
   },
   "ancho": 1920,
   "alto": 1080,
-  "nota": "Solo versión alemana por ahora: es la que devolvió el generador."
+  "nota": "Faltan las versiones inglesa. Español y alemán publicados."
  },
  "spitzer": {
-  "archivo": "img/fondo-spitzer.de.jpg",
+  "archivo": "img/fondo-spitzer.jpg",
   "archivos": {
+   "es": "img/fondo-spitzer.jpg",
    "de": "img/fondo-spitzer.de.jpg"
   },
   "ancho": 1920,
   "alto": 1080,
-  "nota": "Solo versión alemana por ahora: es la que devolvió el generador."
+  "nota": "Faltan las versiones inglesa. Español y alemán publicados."
  },
  "wmap": {
-  "archivo": "img/fondo-wmap.de.jpg",
+  "archivo": "img/fondo-wmap.jpg",
   "archivos": {
+   "es": "img/fondo-wmap.jpg",
    "de": "img/fondo-wmap.de.jpg"
   },
   "ancho": 1920,
   "alto": 1080,
-  "nota": "Solo versión alemana por ahora: es la que devolvió el generador."
+  "nota": "Faltan las versiones inglesa. Español y alemán publicados."
  },
  "suzaku": {
-  "archivo": "img/fondo-suzaku.de.jpg",
+  "archivo": "img/fondo-suzaku.jpg",
   "archivos": {
+   "es": "img/fondo-suzaku.jpg",
    "de": "img/fondo-suzaku.de.jpg"
   },
   "ancho": 1920,
   "alto": 1080,
-  "nota": "Solo versión alemana por ahora: es la que devolvió el generador."
+  "nota": "Faltan las versiones inglesa. Español y alemán publicados."
  },
  "compton-gro": {
-  "archivo": "img/fondo-compton-gro.de.jpg",
+  "archivo": "img/fondo-compton-gro.jpg",
   "archivos": {
+   "es": "img/fondo-compton-gro.jpg",
    "de": "img/fondo-compton-gro.de.jpg"
   },
   "ancho": 1920,
   "alto": 1080,
-  "nota": "Solo versión alemana por ahora: es la que devolvió el generador."
+  "nota": "Faltan las versiones inglesa. Español y alemán publicados."
  },
  "mir": {
-  "archivo": "img/fondo-mir.de.jpg",
+  "archivo": "img/fondo-mir.jpg",
   "archivos": {
+   "es": "img/fondo-mir.jpg",
    "de": "img/fondo-mir.de.jpg"
   },
   "ancho": 1920,
   "alto": 1080,
-  "nota": "Solo versión alemana por ahora: es la que devolvió el generador."
+  "nota": "Faltan las versiones inglesa. Español y alemán publicados."
  },
  "van-allen-probes": {
-  "archivo": "img/fondo-van-allen-probes.de.jpg",
+  "archivo": "img/fondo-van-allen-probes.jpg",
   "archivos": {
+   "es": "img/fondo-van-allen-probes.jpg",
    "de": "img/fondo-van-allen-probes.de.jpg"
   },
   "ancho": 1920,
   "alto": 1080,
-  "nota": "Solo versión alemana por ahora: es la que devolvió el generador."
+  "nota": "Faltan las versiones inglesa. Español y alemán publicados."
  },
  "geotail": {
-  "archivo": "img/fondo-geotail.de.jpg",
+  "archivo": "img/fondo-geotail.jpg",
   "archivos": {
+   "es": "img/fondo-geotail.jpg",
    "de": "img/fondo-geotail.de.jpg"
   },
   "ancho": 1920,
   "alto": 1080,
-  "nota": "Solo versión alemana por ahora: es la que devolvió el generador."
+  "nota": "Faltan las versiones inglesa. Español y alemán publicados."
  },
  "cluster-ii": {
-  "archivo": "img/fondo-cluster-ii.de.jpg",
+  "archivo": "img/fondo-cluster-ii.jpg",
   "archivos": {
+   "es": "img/fondo-cluster-ii.jpg",
    "de": "img/fondo-cluster-ii.de.jpg"
   },
   "ancho": 1920,
   "alto": 1080,
-  "nota": "Solo versión alemana por ahora: es la que devolvió el generador."
+  "nota": "Faltan las versiones inglesa. Español y alemán publicados."
  },
  "polar": {
-  "archivo": "img/fondo-polar.de.jpg",
+  "archivo": "img/fondo-polar.jpg",
   "archivos": {
+   "es": "img/fondo-polar.jpg",
    "de": "img/fondo-polar.de.jpg"
   },
   "ancho": 1920,
   "alto": 1080,
-  "nota": "Solo versión alemana por ahora: es la que devolvió el generador."
+  "nota": "Faltan las versiones inglesa. Español y alemán publicados."
  },
  "trmm": {
-  "archivo": "img/fondo-trmm.de.jpg",
+  "archivo": "img/fondo-trmm.jpg",
   "archivos": {
+   "es": "img/fondo-trmm.jpg",
    "de": "img/fondo-trmm.de.jpg"
   },
   "ancho": 1920,
   "alto": 1080,
-  "nota": "Solo versión alemana por ahora: es la que devolvió el generador."
+  "nota": "Faltan las versiones inglesa. Español y alemán publicados."
  },
  "topex-poseidon": {
-  "archivo": "img/fondo-topex-poseidon.de.jpg",
+  "archivo": "img/fondo-topex-poseidon.jpg",
   "archivos": {
+   "es": "img/fondo-topex-poseidon.jpg",
    "de": "img/fondo-topex-poseidon.de.jpg"
   },
   "ancho": 1920,
   "alto": 1080,
-  "nota": "Solo versión alemana por ahora: es la que devolvió el generador."
+  "nota": "Faltan las versiones inglesa. Español y alemán publicados."
  }
 }
