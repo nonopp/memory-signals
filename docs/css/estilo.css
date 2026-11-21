@@ -1149,3 +1149,9 @@ body.buscando{overflow:hidden}
   .comic-pie{flex-direction:column;align-items:stretch}
   .comic-pdf{justify-content:center}
 }
+
+/* aviso al copiar el enlace del objeto (lo pinta js/url-objeto.js) */
+.aviso-compartir{position:fixed;left:50%;bottom:26px;transform:translateX(-50%);z-index:9500;
+  background:rgba(5,11,22,.95);border:1px solid var(--acento,#63e0c8);color:var(--tx,#e7f6fb);
+  padding:10px 18px;border-radius:999px;font-size:14px;box-shadow:0 10px 30px rgba(0,0,0,.45);
+  max-width:calc(100% - 32px);text-align:center}

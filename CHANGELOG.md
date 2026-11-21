@@ -1,3 +1,13 @@
+## v3.26.0 — 2026-11-21
+
+- **Cada objeto tiene su dirección, y se puede compartir.** La app escucha `ms:aparato` y escribe `?objeto=<id>` con `history.replaceState` (sin recargar ni llenar el historial); al salir del objeto la dirección vuelve a la portada. El módulo nuevo es `js/url-objeto.js` y no toca el motor.
+- **Enlace directo**: `?objeto=near-shoemaker` abre esa ficha al cargar (espera a que el catálogo esté cargado, y si el id no existe avisa en vez de quedarse en blanco). Comprobado: al recargar el enlace compartido se abre el mismo objeto.
+- **Metas por objeto en tiempo de ejecución**: título, `description`, `og:title`, `og:description`, `og:url`, `og:image` (el sketch del objeto), `twitter:card` y `canonical` pasan a hablar del objeto; al salir se restauran los de la portada.
+- **Botón «Compartir»** en las acciones de la ficha: usa la hoja del sistema (`navigator.share`) si existe y, si no, copia el enlace con aviso «Enlace copiado».
+- **42 páginas estáticas** en `objeto/<id>/` generadas desde el catálogo por `herramientas/genera-paginas-objeto.py`: título, descripción, `canonical`, `hreflang` es/en/de, `og`/`twitter`, datos estructurados JSON-LD (`CreativeWork` con lugar, año, personas y citas), el resumen, los hitos y las fuentes en HTML real — para que los buscadores y las previsualizaciones de WhatsApp y Telegram no vean solo la portada — y un botón que abre la app en ese objeto.
+- **Índice `objetos/`** con los 42, enlazado desde el pie, y **`sitemap.xml`** (46 direcciones) + **`robots.txt`**.
+- Corregido de paso: la descripción de la portada decía **22 objetos** y el catálogo tiene **42**.
+
 ## v3.25.3 — 2026-11-21
 
 - **Los cómics de Dawn y NEAR Shoemaker vuelven a la web**, con su botón «Cómic» en la ficha de cada objeto. Página A4 de nueve viñetas más la franja de cierre, textos en español, inglés y alemán, datos solo de la ficha y fuentes al pie.

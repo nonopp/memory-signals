@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es" data-i18n-doc-titulo="doc.titulo">
 <head>
-<script>window.__MSV = '3.25.3';</script>
+<script>window.__MSV = '3.26.0';</script>
 <script>
 /* El navegador puede guardar esta página en caché y seguir sirviendo la versión vieja aunque
    el servidor ya tenga otra: aquí se pregunta al servidor qué versión hay y, si es distinta de
@@ -28,10 +28,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Memory Signals · objetos abandonados de la NASA</title>
-<link rel="icon" type="image/png" sizes="64x64" href="img/favicon-64.png?v=3.25.3">
-<link rel="apple-touch-icon" href="img/apple-touch-icon.png?v=3.25.3">
+<link rel="icon" type="image/png" sizes="64x64" href="img/favicon-64.png?v=3.26.0">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png?v=3.26.0">
 <meta name="theme-color" content="#05070f">
-<meta name="description" content="Viaja a la Luna, Marte y el espacio profundo para conversar con los aparatos que la NASA dejó allí: 22 objetos abandonados con ficha, modelo 3D, fuentes verificables y chat en tres idiomas. Proyecto del NASA Space Apps Challenge 2026.">
+<meta name="description" content="Viaja a la Luna, Marte y el espacio profundo para conversar con los aparatos que la NASA dejó allí: 42 objetos abandonados con ficha, modelo 3D, fuentes verificables y chat en tres idiomas. Proyecto del NASA Space Apps Challenge 2026.">
 <link rel="canonical" href="https://nasa.gesemweb.es/app/">
 <meta property="og:site_name" content="Memory Signals">
 <meta property="og:type" content="website">
@@ -50,7 +50,7 @@
 <meta name="twitter:description" content="Conversa con el hardware que la NASA dejó por el sistema solar: más de cuarenta aparatos con ficha, modelo 3D y fuentes verificables.">
 <meta name="twitter:image" content="https://nasa.gesemweb.es/app/img/og-memory-signals-v2.jpg">
 <link rel="icon" href="datos/icono.svg" type="image/svg+xml">
-<link rel="stylesheet" href="css/estilo.css?v=3.25.3">
+<link rel="stylesheet" href="css/estilo.css?v=3.26.0">
 </head>
 <body>
 
@@ -68,7 +68,7 @@
 <header class="barra">
   <button type="button" class="marca" id="btn-inicio" title="Volver al inicio">
     <picture>
-      <img class="marca-logo" src="img/logo-memory-signals.png?v=3.25.3"
+      <img class="marca-logo" src="img/logo-memory-signals.png?v=3.26.0"
            alt="Memory Signals" width="1272" height="499">
     </picture>
   </button>
@@ -202,6 +202,7 @@
           <button type="button" class="secundario" id="btn-volver-objetos" data-i18n="destino.volver">← Volver a los objetos</button>
           <button type="button" class="secundario" id="btn-ficha" data-i18n="objeto.ficha">Ver ficha</button>
           <button type="button" class="secundario" id="btn-comic" data-i18n="comic.boton" aria-expanded="false" aria-controls="comic" hidden>Cómic</button>
+          <button type="button" class="secundario" id="btn-compartir" data-i18n="objeto.compartir">Compartir</button>
           <button type="button" class="secundario" id="btn-sketch" data-i18n="objeto.sketch">Sketch</button>
           <button type="button" class="secundario" data-ir="pausa" data-i18n="pausa.dejarlo">Dejarlo aquí</button>
         </div>
@@ -252,6 +253,7 @@
     <button type="button" class="pie-link" data-ir="ficha-proyecto" data-i18n="que.es.esto">¿Qué es esto?</button>
     <a href="participa.html" data-i18n="participa">Participa</a>
     <a href="privacidad.html" data-i18n="privacidad">Privacidad</a>
+    <a href="objetos/" data-i18n="pie.indice">Índice de objetos</a>
     <span id="pie-nivel">nivel: explorador</span>
     <span id="pie-version" title="versión de la aplicación" data-i18n-title="pie.version">v—</span>
   </span>
@@ -281,16 +283,17 @@
   </div>
 </div>
 
-<script src="js/idioma.js?v=3.25.3"></script>
-<script src="js/escena.js?v=3.25.3"></script>
-<script src="js/visor3d.js?v=3.25.3"></script>
-<script src="js/mapa.js?v=3.25.3"></script>
-<script src="js/hitos.js?v=3.25.3"></script>
-<script src="js/chat.js?v=3.25.3"></script>
-<script src="js/motor.js?v=3.25.3"></script>
-<script src="js/buscador.js?v=3.25.3"></script>
-<script src="js/comic.js?v=3.25.3"></script>
-<script src="js/ayuda-voz.js?v=3.25.3"></script>
-  <script src="js/analitica.js?v=3.25.3"></script>
+<script src="js/idioma.js?v=3.26.0"></script>
+<script src="js/escena.js?v=3.26.0"></script>
+<script src="js/visor3d.js?v=3.26.0"></script>
+<script src="js/mapa.js?v=3.26.0"></script>
+<script src="js/hitos.js?v=3.26.0"></script>
+<script src="js/chat.js?v=3.26.0"></script>
+<script src="js/motor.js?v=3.26.0"></script>
+<script src="js/buscador.js?v=3.26.0"></script>
+<script src="js/comic.js?v=3.26.0"></script>
+<script src="js/url-objeto.js?v=3.26.0"></script>
+<script src="js/ayuda-voz.js?v=3.26.0"></script>
+  <script src="js/analitica.js?v=3.26.0"></script>
 </body>
 </html>
