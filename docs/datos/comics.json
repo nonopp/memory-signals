@@ -421,5 +421,207 @@
    "en": "pdf/comic-dawn-en.pdf",
    "de": "pdf/comic-dawn-de.pdf"
   }
+ },
+ "near-shoemaker": {
+  "anio": 1996,
+  "cuerpo": "Asteroide Eros",
+  "titulo": {
+   "es": "La que se posó sin deber",
+   "en": "The one that landed when it shouldn't",
+   "de": "Die landete, obwohl sie es nicht sollte"
+  },
+  "subtitulo": {
+   "es": "Primera nave que orbitó un asteroide y primera que se posó en uno",
+   "en": "First spacecraft to orbit an asteroid and first to land on one",
+   "de": "Erste Sonde, die einen Asteroiden umkreiste und auf einem landete"
+  },
+  "marca": {
+   "es": "Memory Signals",
+   "en": "Memory Signals",
+   "de": "Memory Signals"
+  },
+  "marca_url": "nasa.gesemweb.es/app",
+  "imagenes": [
+   "img/comic/near-shoemaker-v01.jpg",
+   "img/comic/near-shoemaker-v02.jpg",
+   "img/comic/near-shoemaker-v03.jpg",
+   "img/comic/near-shoemaker-v04.jpg",
+   "img/comic/near-shoemaker-v05.jpg",
+   "img/comic/near-shoemaker-v06.jpg",
+   "img/comic/near-shoemaker-v07.jpg",
+   "img/comic/near-shoemaker-v08.jpg",
+   "img/comic/near-shoemaker-v09.jpg"
+  ],
+  "franja": "img/comic/near-shoemaker-v10.jpg",
+  "vinetas": [
+   {
+    "n": 1,
+    "momento": "origen",
+    "cartela": {
+     "es": "1996. Primera misión del programa Discovery.",
+     "en": "1996. The first mission of the Discovery programme.",
+     "de": "1996. Die erste Mission des Discovery-Programms."
+    },
+    "bocadillo": {
+     "es": "Me enviaron a orbitar una piedra de 34 kilómetros de largo.",
+     "en": "They sent me to orbit a rock 34 kilometres long.",
+     "de": "Sie schickten mich, einen 34 Kilometer langen Brocken zu umkreisen."
+    },
+    "dato": {
+     "es": "34 km",
+     "en": "34 km",
+     "de": "34 km"
+    }
+   },
+   {
+    "n": 2,
+    "momento": "diseño",
+    "cartela": {
+     "es": "Nadie había orbitado aún un asteroide. No estaba diseñada para aterrizar.",
+     "en": "No one had orbited an asteroid yet. She was not designed to land.",
+     "de": "Noch niemand hatte einen Asteroiden umkreist. Sie war nicht zum Landen gebaut."
+    },
+    "bocadillo": {
+     "es": "Me hicieron para mirar de cerca, no para bajar.",
+     "en": "They built me to look closely, not to go down.",
+     "de": "Sie bauten mich zum Nahen Hinsehen, nicht zum Hinuntergehen."
+    },
+    "dato": null
+   },
+   {
+    "n": 3,
+    "momento": "quienes",
+    "cartela": {
+     "es": "En marzo de 2000 la NASA me puso el nombre de Eugene M. Shoemaker, geólogo (1928-1997).",
+     "en": "In March 2000 NASA named me after Eugene M. Shoemaker, geologist (1928-1997).",
+     "de": "Im März 2000 benannte mich die NASA nach Eugene M. Shoemaker, Geologe (1928-1997)."
+    },
+    "bocadillo": {
+     "es": "Llevo el nombre de un geólogo.",
+     "en": "I carry the name of a geologist.",
+     "de": "Ich trage den Namen eines Geologen."
+    },
+    "dato": null
+   },
+   {
+    "n": 4,
+    "momento": "lanzamiento",
+    "cartela": {
+     "es": "1996. Salgo hacia Eros.",
+     "en": "1996. I set out for Eros.",
+     "de": "1996. Ich starte Richtung Eros."
+    },
+    "bocadillo": {
+     "es": "El destino era una piedra, no un planeta.",
+     "en": "The destination was a rock, not a planet.",
+     "de": "Das Ziel war ein Brocken, kein Planet."
+    },
+    "dato": {
+     "es": "1996",
+     "en": "1996",
+     "de": "1996"
+    }
+   },
+   {
+    "n": 5,
+    "momento": "camino",
+    "cartela": {
+     "es": "Camino de Eros, con el destino aún como un punto de luz.",
+     "en": "Bound for Eros, the destination still a point of light.",
+     "de": "Unterwegs zu Eros, das Ziel noch ein Lichtpunkt."
+    },
+    "bocadillo": {
+     "es": "Por delante, mucho vacío.",
+     "en": "Ahead of me, a great deal of void.",
+     "de": "Vor mir lag viel Leere."
+    },
+    "dato": null
+   },
+   {
+    "n": 6,
+    "momento": "llegada",
+    "cartela": {
+     "es": "Llego a Eros: primera nave en orbitar un asteroide.",
+     "en": "I arrive at Eros: the first spacecraft to orbit an asteroid.",
+     "de": "Ich erreiche Eros: erste Sonde im Orbit um einen Asteroiden."
+    },
+    "bocadillo": {
+     "es": "Por primera vez, una nave se queda dando vueltas a una piedra.",
+     "en": "For the first time, a spacecraft stays circling a rock.",
+     "de": "Zum ersten Mal kreist eine Sonde um einen Brocken."
+    },
+    "dato": null
+   },
+   {
+    "n": 7,
+    "momento": "trabajo",
+    "cartela": {
+     "es": "12 de febrero de 2001: me poso a 6,4 kilómetros por hora.",
+     "en": "12 February 2001: I touch down at 6.4 kilometres per hour.",
+     "de": "12. Februar 2001: Ich setze mit 6,4 Kilometern pro Stunde auf."
+    },
+    "bocadillo": {
+     "es": "No estaba diseñada para aterrizar y aun así me posé.",
+     "en": "I was not designed to land and yet I landed.",
+     "de": "Ich war nicht zum Landen gebaut und landete doch."
+    },
+    "dato": {
+     "es": "6,4 km/h",
+     "en": "6.4 km/h",
+     "de": "6,4 km/h"
+    }
+   },
+   {
+    "n": 8,
+    "momento": "final",
+    "cartela": {
+     "es": "Sobreviví al golpe y seguí enviando datos dos semanas más.",
+     "en": "I survived the impact and kept sending data for two more weeks.",
+     "de": "Ich überstand den Aufprall und sendete noch zwei Wochen Daten."
+    },
+    "bocadillo": {
+     "es": "Sin señal desde el 28 de febrero de 2001.",
+     "en": "Silent since 28 February 2001.",
+     "de": "Seit dem 28. Februar 2001 kein Signal mehr."
+    },
+    "dato": {
+     "es": "28-2-2001",
+     "en": "28 Feb 2001",
+     "de": "28.2.2001"
+    }
+   },
+   {
+    "n": 9,
+    "momento": "queda",
+    "cartela": {
+     "es": "Sigo posada en Eros, congelada a −173 °C.",
+     "en": "I am still on Eros, frozen at −173 °C.",
+     "de": "Ich liege noch auf Eros, bei −173 °C eingefroren."
+    },
+    "bocadillo": {
+     "es": "Eros no tiene campo magnético: lo comprobé antes de bajar.",
+     "en": "Eros has no magnetic field: I checked before going down.",
+     "de": "Eros hat kein Magnetfeld: das prüfte ich vor der Landung."
+    },
+    "dato": {
+     "es": "−173 °C",
+     "en": "−173 °C",
+     "de": "−173 °C"
+    }
+   }
+  ],
+  "cierre": {
+   "es": "La primera en orbitar una piedra y la primera en posarse en ella.",
+   "en": "The first to orbit a rock and the first to land on one.",
+   "de": "Die erste im Orbit um einen Brocken und die erste, die auf ihm landete."
+  },
+  "fuentes": [
+   "https://science.nasa.gov/mission/near-shoemaker/"
+  ],
+  "pdf": {
+   "es": "pdf/comic-near-shoemaker-es.pdf",
+   "en": "pdf/comic-near-shoemaker-en.pdf",
+   "de": "pdf/comic-near-shoemaker-de.pdf"
+  }
  }
 }

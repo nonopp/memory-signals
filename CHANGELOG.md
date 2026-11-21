@@ -1,3 +1,10 @@
+## v3.18.0 — 2026-11-21
+
+- **Tercer cómic: NEAR Shoemaker.** Página A4 de nueve viñetas más franja, con los textos en español, inglés y alemán y las diez imágenes: el despacho de 1996, los planos, el montaje, el lanzamiento, el camino, la llegada a Eros, la posada del 12 de febrero de 2001, el final sin señal y el detalle de lo que queda.
+- Textos **solo con los datos de la ficha** (34 km de largo, 6,4 km/h de la posada, −173 °C, 28 de febrero de 2001, el nombre puesto en marzo de 2000) y la fuente al pie.
+- PDF de una sola página en los tres idiomas, verificado: **1 página, 1123 px, 10 imágenes cargadas**.
+- El botón del cómic aparece ya en los tres objetos: Voyager 2, Dawn y NEAR Shoemaker.
+
 ## v3.17.0 — 2026-11-21
 
 - **Segundo cómic: Dawn.** Página A4 de nueve viñetas más franja de cierre, con los textos en español, inglés y alemán, y las diez imágenes del encargo nuevo: la idea sin el aparato construido, los planos, la sala de montaje, el lanzamiento con el aparato dentro de la cofia, la travesía, la llegada, el motor iónico en órbita, el final en Ceres y el detalle de lo que queda.
