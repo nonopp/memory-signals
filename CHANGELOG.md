@@ -1,11 +1,18 @@
-## v3.18.0 — 2026-11-21
+## v3.26.1 — 2026-11-21
+
+- **La lupa de la cabecera, arreglada.** Era el carácter `⌕`, que no está en todas las fuentes: cuando falta, el navegador pinta un recuadro con un signo de interrogación y el botón parece roto. Ahora es un **icono SVG** dibujado con el mismo trazo, que no depende de ninguna fuente. El mismo cambio dentro del panel del buscador.
+- **Una sola «×» en el campo de búsqueda.** Salían dos: la nativa del `input type="search"` y la del botón de cerrar. Se oculta la nativa.
+- Sin cambios de comportamiento: el buscador filtra igual (comprobado en escritorio a 1280 px y en móvil a 390 px; «near» devuelve 1 de 42 objetos).
+- Numeración: las dos entradas de los cómics pasan a **3.25.3** y **3.26.0**, porque la flota iba por la 3.25.2 y no debía retroceder.
+
+## v3.26.0 — 2026-11-21
 
 - **Tercer cómic: NEAR Shoemaker.** Página A4 de nueve viñetas más franja, con los textos en español, inglés y alemán y las diez imágenes: el despacho de 1996, los planos, el montaje, el lanzamiento, el camino, la llegada a Eros, la posada del 12 de febrero de 2001, el final sin señal y el detalle de lo que queda.
 - Textos **solo con los datos de la ficha** (34 km de largo, 6,4 km/h de la posada, −173 °C, 28 de febrero de 2001, el nombre puesto en marzo de 2000) y la fuente al pie.
 - PDF de una sola página en los tres idiomas, verificado: **1 página, 1123 px, 10 imágenes cargadas**.
 - El botón del cómic aparece ya en los tres objetos: Voyager 2, Dawn y NEAR Shoemaker.
 
-## v3.17.0 — 2026-11-21
+## v3.25.3 — 2026-11-21
 
 - **Segundo cómic: Dawn.** Página A4 de nueve viñetas más franja de cierre, con los textos en español, inglés y alemán, y las diez imágenes del encargo nuevo: la idea sin el aparato construido, los planos, la sala de montaje, el lanzamiento con el aparato dentro de la cofia, la travesía, la llegada, el motor iónico en órbita, el final en Ceres y el detalle de lo que queda.
 - Textos escritos **solo con los datos de la ficha** (40 % de la masa del cinturón, 19–91 mN del motor iónico, Rheasilvia de 500 × 19 km, 25 % de hielo en Ceres, 1 de noviembre de 2018) y fuentes al pie.

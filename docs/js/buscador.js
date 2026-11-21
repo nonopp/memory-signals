@@ -41,7 +41,7 @@
     panel.innerHTML =
       '<div class="buscador-caja">' +
         '<div class="buscador-barra">' +
-          '<span class="buscador-lupa" aria-hidden="true">⌕</span>' +
+          '<span class="buscador-lupa" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21"/></svg></span>' +
           '<input type="search" id="buscador-campo" autocomplete="off" spellcheck="false" aria-label="' +
             (T('buscar.abrir') || 'Buscar') + '">' +
           '<button type="button" class="buscador-cerrar" id="buscador-cerrar" aria-label="' +

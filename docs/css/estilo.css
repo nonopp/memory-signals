@@ -1008,6 +1008,7 @@ body.viendo-objeto #p-objeto .punto-ficha{background:rgba(6,12,24,.92)}
 .icono-btn{background:rgba(10,22,40,.72);border:1px solid var(--borde,rgba(120,200,230,.25));color:var(--tx,#e7f6fb);
   width:38px;height:38px;border-radius:50%;font-size:25px;line-height:1;cursor:pointer;display:grid;place-items:center}
 .icono-btn span{transform:translateY(-1px)}
+.icono-btn svg{display:block}
 .icono-btn:hover{border-color:var(--acento,#63e0c8);color:var(--acento,#63e0c8)}
 .buscador{position:fixed;inset:0;z-index:9000;background:rgba(3,7,14,.78);backdrop-filter:blur(6px);
   display:flex;align-items:flex-start;justify-content:center;padding:8vh 16px 16px}
@@ -1018,8 +1019,11 @@ body.viendo-objeto #p-objeto .punto-ficha{background:rgba(6,12,24,.92)}
   box-shadow:0 24px 60px rgba(0,0,0,.55)}
 .buscador-barra{display:flex;align-items:center;gap:10px;background:rgba(5,11,22,.9);
   border:1px solid var(--borde,rgba(120,200,230,.25));border-radius:999px;padding:9px 12px}
-.buscador-lupa{color:var(--acento,#63e0c8);font-size:23px;line-height:1;margin-left:2px}
+.buscador-lupa{color:var(--acento,#63e0c8);line-height:0;margin-left:2px;display:flex;align-items:center}
 .buscador-barra input{flex:1;min-width:0;background:none;border:0;outline:none;color:var(--tx,#e7f6fb);font:inherit;font-size:15px}
+/* sin la «×» nativa del campo: ya hay un botón de cerrar y salían dos */
+.buscador-barra input::-webkit-search-cancel-button,
+.buscador-barra input::-webkit-search-decoration{-webkit-appearance:none;appearance:none;display:none}
 .buscador-cerrar{background:none;border:0;color:#9fb6cc;font-size:22px;line-height:1;cursor:pointer;padding:0 2px}
 .buscador-cerrar:hover{color:var(--acento,#63e0c8)}
 .buscador-chips{display:flex;gap:7px;flex-wrap:wrap;margin:11px 0 8px}
