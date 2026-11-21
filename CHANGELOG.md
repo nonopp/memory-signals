@@ -1,3 +1,14 @@
+## v3.25.0 — 2026-11-20
+
+- **El cómic del objeto, dentro de la web.** Botón nuevo **Cómic / Cartoon / Comic** en la ficha, antes de «Sketch» y de «Dejarlo aquí». Al pulsarlo se despliega **a ancho completo**, debajo del contenedor del objeto:
+  - **Escritorio:** rejilla **3 × 3** con las nueve viñetas y, debajo, la **franja de cierre** con la frase final.
+  - **Móvil:** **una viñeta por fila**, a ancho completo, para leerlas sin hacer zoom.
+  - **Texto real**, no incrustado en el dibujo: bocadillos, cartelas y un dato técnico por viñeta, en español, inglés y alemán. Se puede buscar, traducir y corregir sin regenerar ni un dibujo.
+  - **Al final, el PDF del idioma en curso** para descargar, más las fuentes de la NASA.
+- **Primera historia: Voyager 2**, con sus 10 escenas. Los ficheros: `datos/comics.json` (el guion en tres idiomas), `img/comic/voyager2-v01…v10.jpg` (1,5 MB en total) y `pdf/comic-voyager2-{es,en,de}.pdf` (A4, una sola página, ~4,2 MB cada uno).
+- **El botón solo aparece si ese objeto tiene cómic.** Con los otros 41 no se muestra: no hay botones que no lleven a nada.
+- Cuando lleguen más historias solo hay que añadirlas a `comics.json` con sus viñetas y su PDF; el visor las recoge sin tocar código.
+
 ## v3.24.0 — 2026-11-20
 
 - **Los 20 sketches de fondo en inglés** (MS-23 a MS-42). Con esto **los 42 objetos del catálogo tienen el dibujo en los tres idiomas**: español, inglés y alemán. Ya no hay ningún aviso de «este dibujo está en otro idioma» en ninguna versión.

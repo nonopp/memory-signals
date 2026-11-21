@@ -1084,3 +1084,68 @@ body.buscando{overflow:hidden}
   .nivel-btn{font-size:.72rem;padding:6px 8px}
   .franja-nivel .btn-participa{font-size:.78rem;padding:7px 10px}
 }
+
+/* ---------- el cómic del objeto ---------- */
+.comic{margin-top:22px;padding:18px;border-radius:18px;
+  background:linear-gradient(180deg,rgba(20,34,58,.92),rgba(9,16,28,.96));
+  border:1px solid rgba(120,200,230,.22)}
+.comic[hidden]{display:none}
+.comic-cabecera{display:flex;align-items:flex-start;justify-content:space-between;gap:14px;margin-bottom:14px}
+.comic-titulo{margin:0;font-size:1.25rem;color:#eaf6fb;letter-spacing:.01em}
+.comic-subtitulo{margin:3px 0 0;font-size:.86rem;color:#8fa8c8}
+.comic-cerrar{flex:0 0 auto;width:36px;height:36px;border-radius:50%;cursor:pointer;
+  background:rgba(8,16,30,.8);border:1px solid rgba(120,200,230,.3);color:#dff2f8;font-size:20px;line-height:1}
+.comic-cerrar:hover{border-color:#63e0c8;color:#63e0c8}
+
+/* rejilla 3x3 en escritorio; una columna en móvil */
+.comic-rejilla{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.vineta{position:relative;margin:0;border-radius:10px;overflow:hidden;background:#f2ebdc;
+  border:2px solid #1b1b1b;line-height:0}
+.vineta img{display:block;width:100%;height:auto}
+/* la cartela del narrador, arriba a la izquierda */
+.cartela{position:absolute;left:8px;top:8px;max-width:66%;margin:0;line-height:1.25;
+  background:#f7f2e6;border:1.5px solid #1b1b1b;border-radius:3px;padding:5px 8px;
+  font-size:.72rem;color:#1b1b1b}
+/* el bocadillo del aparato, abajo */
+.bocadillo{position:absolute;left:8px;bottom:26px;max-width:82%;margin:0;line-height:1.3;
+  background:#fffdf7;border:1.8px solid #1b1b1b;border-radius:14px;padding:7px 11px;
+  font-size:.76rem;color:#1b1b1b;box-shadow:0 2px 0 rgba(0,0,0,.25)}
+.bocadillo::after{content:'';position:absolute;left:18px;bottom:-9px;width:12px;height:12px;
+  background:#fffdf7;border-right:1.8px solid #1b1b1b;border-bottom:1.8px solid #1b1b1b;
+  transform:rotate(38deg)}
+/* el dato técnico, abajo a la derecha */
+.dato-vineta{display:inline-block;margin-top:4px;background:#14213d;color:#63e0c8;
+  border:1px solid rgba(27,27,27,.6);border-radius:999px;padding:1px 8px;
+  font-size:.64rem;letter-spacing:.04em;font-weight:700}
+
+/* franja de cierre */
+.comic-franja{position:relative;margin:10px 0 0;border-radius:10px;overflow:hidden;
+  border:2px solid #1b1b1b;background:#14213d;line-height:0}
+.comic-franja[hidden]{display:none}
+.comic-franja img{display:block;width:100%;height:auto}
+.comic-cierre{position:absolute;left:0;right:0;bottom:0;margin:0;padding:12px 16px;
+  font-size:1rem;font-style:italic;color:#eaf6fb;text-align:right;line-height:1.35;
+  text-shadow:0 2px 10px rgba(0,0,0,.9)}
+
+/* pie: descarga y fuentes */
+.comic-pie{margin-top:14px;display:flex;flex-wrap:wrap;align-items:center;gap:12px;justify-content:space-between}
+.comic-pdf{display:inline-flex;align-items:center;gap:7px;text-decoration:none;
+  background:linear-gradient(135deg,#63e0c8,#4fb6ff);color:#04121a;font-weight:700;
+  font-size:.86rem;padding:9px 16px;border-radius:999px}
+.comic-pdf:hover{filter:brightness(1.08)}
+.comic-fuentes{margin:0;font-size:.72rem;color:#8fa8c8;flex:1 1 260px}
+.comic-fuentes a{color:#8fd8ff;text-decoration:none}
+.comic-fuentes a:hover{text-decoration:underline}
+
+@media (max-width:760px){
+  .comic{padding:12px;border-radius:14px}
+  .comic-titulo{font-size:1.05rem}
+  /* en el móvil, una viñeta por fila, a ancho completo: se lee sin hacer zoom */
+  .comic-rejilla{grid-template-columns:1fr;gap:12px}
+  .cartela{font-size:.78rem;max-width:80%}
+  .bocadillo{font-size:.82rem;max-width:86%}
+  .dato-vineta{font-size:.7rem}
+  .comic-cierre{font-size:.92rem;padding:10px 12px}
+  .comic-pie{flex-direction:column;align-items:stretch}
+  .comic-pdf{justify-content:center}
+}

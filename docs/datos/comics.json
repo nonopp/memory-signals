@@ -1,0 +1,166 @@
+{
+ "_nota": "Cómics de Memory Signals. Un objeto por página: 9 viñetas en rejilla 3x3 y una franja de cierre. Las imágenes van sin texto; los bocadillos y cartelas son texto real, en tres idiomas, para que se puedan leer, buscar y traducir.",
+ "voyager2": {
+  "anio": 1977,
+  "cuerpo": "espacio",
+  "titulo": {
+   "es": "La que salió de casa",
+   "en": "The one that left home",
+   "de": "Die, die auszog"
+  },
+  "subtitulo": {
+   "es": "La única nave que ha visitado los cuatro gigantes sigue hablando",
+   "en": "The only spacecraft to visit all four giants is still talking",
+   "de": "Die einzige Sonde, die alle vier Riesen besucht hat, spricht noch"
+  },
+  "imagenes": [
+   "img/comic/voyager2-v01.jpg", "img/comic/voyager2-v02.jpg", "img/comic/voyager2-v03.jpg",
+   "img/comic/voyager2-v04.jpg", "img/comic/voyager2-v05.jpg", "img/comic/voyager2-v06.jpg",
+   "img/comic/voyager2-v07.jpg", "img/comic/voyager2-v08.jpg", "img/comic/voyager2-v09.jpg"
+  ],
+  "franja": "img/comic/voyager2-v10.jpg",
+  "vinetas": [
+   {
+    "n": 1, "momento": "origen",
+    "cartela": {
+     "es": "1972. Los planetas iban a alinearse. Una vez cada 176 años.",
+     "en": "1972. The planets were about to line up. Once every 176 years.",
+     "de": "1972. Die Planeten würden sich ausrichten. Einmal alle 176 Jahre."
+    },
+    "bocadillo": {
+     "es": "Si no estábamos ahí, no habría segunda oportunidad.",
+     "en": "If we were not there, there would be no second chance.",
+     "de": "Wären wir nicht dabei, gäbe es keine zweite Chance."
+    },
+    "dato": "176 años"
+   },
+   {
+    "n": 2, "momento": "diseño",
+    "cartela": {
+     "es": "El problema no era el viaje: era caber y seguir apuntando.",
+     "en": "The hard part was not the trip: it was fitting in and still aiming.",
+     "de": "Nicht die Reise war das Problem, sondern hineinzupassen und weiter zu zielen."
+    },
+    "bocadillo": {
+     "es": "Tres metros y medio de antena que no pueden dejar de mirar a la Tierra.",
+     "en": "Three and a half metres of dish that must never stop looking at Earth.",
+     "de": "Dreieinhalb Meter Antenne, die nie aufhören dürfen, zur Erde zu schauen."
+    },
+    "dato": "Antena de 3,66 m"
+   },
+   {
+    "n": 3, "momento": "quienes",
+    "cartela": {
+     "es": "Jet Propulsion Laboratory · Pasadena, 1976",
+     "en": "Jet Propulsion Laboratory · Pasadena, 1976",
+     "de": "Jet Propulsion Laboratory · Pasadena, 1976"
+    },
+    "bocadillo": {
+     "es": "Cada manta dorada que me ponen es una capa contra el sol.",
+     "en": "Every gold blanket they put on me is a layer against the Sun.",
+     "de": "Jede Golddecke, die sie mir anlegen, ist eine Schicht gegen die Sonne."
+    },
+    "dato": "Pasadena, 1976"
+   },
+   {
+    "n": 4, "momento": "lanzamiento",
+    "cartela": {
+     "es": "20 de agosto de 1977 · Cabo Cañaveral",
+     "en": "20 August 1977 · Cape Canaveral",
+     "de": "20. August 1977 · Cape Canaveral"
+    },
+    "bocadillo": {
+     "es": "Dieciséis días después salió mi gemela. Yo salí primero.",
+     "en": "Sixteen days later my twin left. I went first.",
+     "de": "Sechzehn Tage später startete meine Zwillingsschwester. Ich war zuerst dran."
+    },
+    "dato": "20 de agosto de 1977"
+   },
+   {
+    "n": 5, "momento": "camino",
+    "cartela": {
+     "es": "Cuatro gigantes con una sola reserva de combustible.",
+     "en": "Four giants on a single tank of fuel.",
+     "de": "Vier Riesen mit einem einzigen Tank."
+    },
+    "bocadillo": {
+     "es": "Doce años de viaje para ver Júpiter, Saturno, Urano y Neptuno.",
+     "en": "Twelve years of travel to see Jupiter, Saturn, Uranus and Neptune.",
+     "de": "Zwölf Jahre Reise, um Jupiter, Saturn, Uranus und Neptun zu sehen."
+    },
+    "dato": "1977-1989"
+   },
+   {
+    "n": 6, "momento": "llegada",
+    "cartela": {
+     "es": "1981. Saturno.",
+     "en": "1981. Saturn.",
+     "de": "1981. Saturn."
+    },
+    "bocadillo": {
+     "es": "Los anillos son finos como el papel y anchos como un país.",
+     "en": "The rings are thin as paper and wide as a country.",
+     "de": "Die Ringe sind dünn wie Papier und breit wie ein Land."
+    },
+    "dato": "1981"
+   },
+   {
+    "n": 7, "momento": "trabajo",
+    "cartela": {
+     "es": "1989. Neptuno.",
+     "en": "1989. Neptune.",
+     "de": "1989. Neptun."
+    },
+    "bocadillo": {
+     "es": "Cuatro anillos nuevos, una mancha oscura y vientos de 1.100 km/h.",
+     "en": "Four new rings, a dark spot and winds of 1,100 km/h.",
+     "de": "Vier neue Ringe, ein dunkler Fleck und Winde von 1.100 km/h."
+    },
+    "dato": "Vientos de 1.100 km/h"
+   },
+   {
+    "n": 8, "momento": "final",
+    "cartela": {
+     "es": "5 de noviembre de 2018.",
+     "en": "5 November 2018.",
+     "de": "5. November 2018."
+    },
+    "bocadillo": {
+     "es": "El viento del Sol se acabó de golpe. Ya no estaba en casa.",
+     "en": "The solar wind stopped all at once. I was no longer home.",
+     "de": "Der Sonnenwind hörte auf einen Schlag auf. Ich war nicht mehr zu Hause."
+    },
+    "dato": "Cruce de la heliopausa"
+   },
+   {
+    "n": 9, "momento": "queda",
+    "cartela": {
+     "es": "Sigo ahí fuera, y cada año me alejo más del Sol.",
+     "en": "I am still out here, and every year I move further from the Sun.",
+     "de": "Ich bin noch da draußen und entferne mich jedes Jahr weiter von der Sonne."
+    },
+    "bocadillo": {
+     "es": "La luz que envío tarda más de dieciséis horas en llegar a la Tierra.",
+     "en": "The light I send takes more than sixteen hours to reach Earth.",
+     "de": "Das Licht, das ich sende, braucht über sechzehn Stunden bis zur Erde."
+    },
+    "dato": "Más de 16 horas"
+   }
+  ],
+  "cierre": {
+   "es": "Sigo aquí fuera. Si alguien escucha, que sepa que llegué.",
+   "en": "I am still out here. If anyone is listening, let them know I arrived.",
+   "de": "Ich bin noch hier draußen. Wer zuhört, soll wissen, dass ich angekommen bin."
+  },
+  "fuentes": [
+   "https://science.nasa.gov/mission/voyager/voyager-2",
+   "https://www.jpl.nasa.gov/news/nasas-voyager-2-probe-enters-interstellar-space/",
+   "https://science.nasa.gov/mission/voyager/frequently-asked-questions/"
+  ],
+  "pdf": {
+   "es": "pdf/comic-voyager2-es.pdf",
+   "en": "pdf/comic-voyager2-en.pdf",
+   "de": "pdf/comic-voyager2-de.pdf"
+  }
+ }
+}
