@@ -1,3 +1,8 @@
+## v3.25.2 — 2026-11-20
+
+- **El cómic ya no se cierra al cambiar de idioma.** Al cambiar de lengua, el motor repinta la ficha y vuelve a avisar del mismo objeto; el visor interpretaba ese aviso como «cambio de objeto» y cerraba el cómic, dejándolo además con los textos del idioma anterior. Ahora distingue las dos cosas: si el objeto es el mismo, **se vuelve a montar traducido**; si es otro, se cierra.
+- Comprobado en los tres idiomas con el cómic abierto: la viñeta 8 pasa de *5 de noviembre de 2018 · Cruce de la heliopausa* a *5 November 2018 · Heliopause crossing* y a *5. November 2018 · Überquerung der Heliopause*, y el enlace del PDF cambia al idioma en curso.
+
 ## v3.25.1 — 2026-11-20
 
 - **El dato técnico de cada viñeta, traducido.** La etiqueta azul oscuro con letra clara («Cruce de la heliopausa») se había guardado como texto suelto, no en los tres idiomas, así que en la versión inglesa y en la alemana salía en español. Ahora lleva `{es, en, de}` como la cartela y el bocadillo: *Heliopause crossing* / *Überquerung der Heliopause*.

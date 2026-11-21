@@ -132,15 +132,25 @@
 
   document.addEventListener('ms:aparato', function (ev) {
     var id = (ev && ev.detail && ev.detail.id) || '';
+    var anterior = objetoActual;
     objetoActual = id;
     cargar().then(function () {
       if (!boton) boton = document.getElementById('btn-comic');
       if (!boton) return;
-      var tiene = hayComic(id);
-      boton.hidden = !tiene;
-      boton.setAttribute('aria-expanded', 'false');
-      /* si cambias de objeto, el cómic anterior se cierra */
-      if (abierto) { abierto = false; if (seccion) seccion.hidden = true; }
+      boton.hidden = !hayComic(id);
+      /* cambiar de IDIOMA también repinta la ficha y vuelve a emitir el mismo aparato: en ese caso
+         el cómic no se cierra, se vuelve a montar con los textos del idioma nuevo. Solo se cierra
+         cuando de verdad se cambia de objeto. */
+      if (abierto && anterior !== id) {
+        abierto = false;
+        if (seccion) seccion.hidden = true;
+        boton.setAttribute('aria-expanded', 'false');
+      } else if (abierto && seccion) {
+        montar(id);
+        boton.setAttribute('aria-expanded', 'true');
+      } else {
+        boton.setAttribute('aria-expanded', 'false');
+      }
     });
   });
 
