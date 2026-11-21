@@ -192,6 +192,15 @@ def pagina_objeto(a, sitio, textos, idbase):
     elif not isinstance(estado, str):
         estado = ""
 
+    # el estado acaba en punto y seguido, sin duplicar el que ya trae el texto
+    estado_txt = estado.strip()
+    if estado_txt.endswith((".", "!", "?")):
+        estado_html = estado_txt + " "
+    elif estado_txt:
+        estado_html = estado_txt + ". "
+    else:
+        estado_html = ""
+
     return """<!DOCTYPE html>
 <html lang="{lang}">
 <head>
@@ -263,7 +272,7 @@ def pagina_objeto(a, sitio, textos, idbase):
         cuerpo=e(a.get("cuerpo") or ""),
         anio=e(a.get("anio") or ""),
         lugar=e(a.get("lugar") or ""),
-        estado=e(estado + (". " if estado else "")),
+        estado=e(estado_html),
         personas_html=e(("Personas: " + personas) if personas else ""),
         nombre=e(nombre),
         id=e(ident),

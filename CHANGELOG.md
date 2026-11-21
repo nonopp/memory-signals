@@ -1,3 +1,8 @@
+## v3.26.1 — 2026-11-21
+
+- **Arreglado el punto doble** en las páginas de objeto: el texto de estado ya terminaba en punto y se le añadía otro («… desde el 1 de noviembre de 2018..»). Ahora se comprueba antes de añadir la separación.
+- Comprobado en las 42 páginas regeneradas: `… sin funcionar desde el 1 de noviembre de 2018. Personas: Marc Rayman, Chris Russell`.
+
 ## v3.26.0 — 2026-11-21
 
 - **Cada objeto tiene su dirección, y se puede compartir.** La app escucha `ms:aparato` y escribe `?objeto=<id>` con `history.replaceState` (sin recargar ni llenar el historial); al salir del objeto la dirección vuelve a la portada. El módulo nuevo es `js/url-objeto.js` y no toca el motor.
