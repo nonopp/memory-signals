@@ -156,7 +156,7 @@ FISICO_GENERICO = (
     'solares, antena y mantas térmicas: cuenta las alas y los mástiles del dibujo de referencia '
     'y repite esa cifra exacta, sin añadir ni quitar ninguna. La antena es la de la lámina y '
     'solo esa: si en la referencia no hay una parabólica grande, NO dibujes ninguna parabólica '
-    'grande. Si el aparato no se parece al de la referencia, la viñeta no vale'
+    'grande. Si el aparato no se parece al de la referencia, la viñeta no vale.'
 )
 
 
@@ -504,8 +504,7 @@ def escribe_objeto(a, ruta):
             elif num == 2:
                 lineas.append(f'FIDELIDAD (solo para los dibujos del papel): {fisico(a)}.')
             else:
-                lineas.append(f'FIDELIDAD: {fisico(a)}. Si el aparato no se parece al de la '
-                              'referencia, la viñeta no vale.')
+                lineas.append(f'FIDELIDAD: {fisico(a)}')
             lineas.append('')
             lineas.append(f'ENCUADRE: {ENCUADRES[i]}')
             lineas.append('')
