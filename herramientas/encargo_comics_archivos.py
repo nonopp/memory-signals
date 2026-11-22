@@ -43,7 +43,7 @@ ESTILO: línea clara negra de grosor variable, relleno plano. Paleta cerrada: az
 papel hueso #F2EBDC para las estrellas. Sin marcos, sin firmas."""
 
 MOMENTOS = [
-    'ORIGEN · la idea y la intención',
+    'EL OBJETIVO · qué querían averiguar',
     'LOS PLANOS · el proceso de diseño',
     'LAS MANOS · quiénes y dónde lo hicieron',
     'EL DÍA · el lanzamiento',
@@ -58,8 +58,8 @@ MOMENTOS = [
 # Un encuadre por viñeta, distinto de todos los demás: es lo que impide que dos viñetas
 # seguidas salgan gemelas aunque la escena cambie.
 ENCUADRES = [
-    'plano medio de un despacho de los años 90, cámara a la altura de la mesa, la figura '
-    'sentada de tres cuartos y el papel en primer término',
+    'plano documental abierto del motivo que se quería estudiar, cámara a su altura y '
+    'sin ninguna figura humana en primer término: manda el fenómeno, no una persona',
     'plano cenital (vista de pájaro) de la mesa de dibujo, con las manos y los dibujos '
     'ocupando todo el encuadre y ninguna cara visible',
     'plano general a pie de suelo, en contrapicado suave, con el aparato entero y dos '
@@ -85,9 +85,9 @@ ENCUADRES = [
 
 # Qué se ve del aparato en cada viñeta. Antes de la 3 no está construido.
 ESTADO_APARATO = [
-    'NO APARECE construido. Solo se ven bocetos a lápiz sobre papel: una forma pequeña y '
-    'angular junto a una roca de silueta irregular, con flechas y círculos. Nada de metal, '
-    'nada de paneles reales.',
+    'NO SE VE, y no porque esté escondido: esta viñeta es del objetivo y no del aparato, '
+    'que todavía no existía. Ningún boceto, ningún plano, ninguna maqueta y ninguna '
+    'persona en el encuadre.',
     'NO APARECE construido. Se ven dibujos técnicos: el aparato de perfil y en sección, a '
     'escala, con cotas y líneas de referencia; como mucho, una maqueta de madera y cartón '
     'sin paneles ni mantas.',
@@ -109,6 +109,11 @@ ESTADO_APARATO = [
 EPOCA_INTERIOR = """AMBIENTACIÓN DE INTERIOR (no improvisar): {epoca}. Ropa de trabajo de la época, mobiliario
 de oficina o taller de la época, papel, lápiz, regla de cálculo y pizarra. Luz de fluorescente
 o de ventana, sin efectos modernos."""
+
+EPOCA_OBJETIVO = """AMBIENTACIÓN (no improvisar): el objetivo, no una oficina. Nada de mobiliario, papel,
+lápiz, regla de cálculo, pizarra ni fluorescente: el encuadre lo ocupa el fenómeno o el lugar que
+se quería estudiar, con luz real y sin ninguna persona. Si es el Sol o un cuerpo celeste, luz dura
+y fondo negro; si es un lugar de la Tierra, su cielo y su horizonte de verdad."""
 
 EPOCA_FUERA = """AMBIENTACIÓN DE EXTERIOR (no improvisar): {epoca}, pero en el vacío o en el destino. Sin
 atmósfera no hay cielo azul: el fondo es negro con estrellas o el terreno desnudo del destino.
@@ -239,17 +244,91 @@ def elige_hito(hitos):
     fisicas = ('posé', 'posarse', 'posó', 'aterriz', 'tocó', 'tocar', 'despleg', 'infl',
                'midi', 'medir', 'fotografi', 'dispar', 'instal', 'enterr', 'dejó', 'dejé',
                'recorri', 'perfor', 'clav')
+    # el hito que cuenta PARA QUÉ servía la misión vale más que el que cuenta una avería
+    trabajo = ('experiment', 'estudi', 'observ', 'analiz', 'investig', 'medici', 'registr',
+               'midier', 'enseñ', 'descubr')
     flojas = ('primera misión', 'primer', 'primera nave', 'mi encargo', 'fui la')
     mejor, puntos_mejor = None, -1
     for h in hitos[:4]:
         titulo = str(h.get('titulo', '')).lower()
         texto = str(h.get('texto', '')).lower()
         puntos = 3 * sum(1 for k in fisicas if k in texto)
+        puntos += 3 * sum(1 for k in trabajo if k in texto)
         puntos -= 2 * sum(1 for k in flojas if k in titulo or k in texto[:60])
         puntos += 1 * sum(1 for k in ('orbit', 'primera', 'primer') if k in texto)
         if puntos > puntos_mejor:
             mejor, puntos_mejor = h, puntos
     return mejor
+
+
+# El objetivo de cada misión, en una línea, y qué se dibuja para contarlo sin el aparato.
+# La clave es el id del catálogo. Si un objeto no está aquí, se usa su resumen de ficha y el
+# destino visto de cerca: lo que NO se hace nunca es volver al despacho con el mismo hombre.
+OBJETIVO = {
+    'skylab': {
+        'texto': 'observar el Sol y la Tierra desde fuera de la atmósfera y medir cómo se '
+                 'comporta el cuerpo humano cuando no pesa nada',
+        'visual': 'el disco del Sol enorme y recortado contra el negro, con manchas y '
+                  'fulguraciones bien dibujadas, y el limbo azul de la Tierra cruzando el '
+                  'tercio inferior del encuadre con sus nubes y sus océanos',
+    },
+}
+
+
+MUNDOS = ('luna', 'marte', 'eros', 'ceres', 'júpiter', 'jupiter', 'saturno', 'titán',
+          'titan', 'mercurio', 'venus', 'cometa')
+
+
+def clasifica_destino(a):
+    """Devuelve (tipo, nombre del destino) para no hablar de «cráteres» en una estación en
+    órbita terrestre ni de «suelo» en una sonda que va por el espacio interestelar.
+
+    tipos: 'tierra_orbita' · 'mundo' · 'vacio'"""
+    cuerpo = (a.get('cuerpo') or '').strip()
+    lugar = (a.get('lugar') or '').strip()
+    bajo = (cuerpo + ' ' + lugar).lower()
+    if 'órbita de la tierra' in bajo or 'órbita terrestre' in bajo:
+        return 'tierra_orbita', 'la Tierra'
+    if any(m in bajo for m in MUNDOS):
+        # el nombre del mundo, sin la frase entera del lugar
+        for m in MUNDOS:
+            if m in bajo:
+                nombre = {'jupiter': 'Júpiter', 'titan': 'Titán'}.get(m, m)
+                if 'cometa' in bajo and 'cometa' in m:
+                    return 'mundo', 'el cometa'
+                return 'mundo', nombre.capitalize()
+    if cuerpo and cuerpo.lower() not in ('espacio', 'espacio interestelar', 'espacio profundo',
+                                         'órbita solar'):
+        return 'mundo', cuerpo
+    return 'vacio', 'el vacío'
+
+
+EDITORIALES = ('ojo al criterio', 'no consta', 'sin dato', 'aviso', 'nota:')
+
+
+def objetivo_de_reserva(a):
+    """Para qué se construyó, sacado de la ficha sin las notas editoriales.
+
+    Algunos resúmenes empiezan con una advertencia del catálogo («Ojo al criterio: Voyager 1 no
+    está abandonada»), que no sirve como objetivo. Se descartan esas frases y, si no queda
+    ninguna, se usa el primer hito de la misión."""
+    hitos = a.get('hitos') or []
+    if hitos:
+        # el primer hito casi siempre cuenta el encargo: es el mejor «para qué»
+        texto_hito = ' '.join(str(hitos[0].get('texto') or '').split())
+        primera = re.split(r'(?<=[.!?])\s+', texto_hito)
+        if primera and len(primera[0]) > 25:
+            frase = primera[0].rstrip('.!?…')
+            return frase + '.'
+    resumen = ' '.join((a.get('ficha_resumen') or '').split())
+    frases_resumen = [f.strip().rstrip('.') + '.' for f in re.split(r'(?<=[.!?])\s+', resumen) if f.strip()]
+    limpias = [f for f in frases_resumen
+               if not any(m in f.lower() for m in EDITORIALES)
+               and not any(v in f.lower() for v in ('sigue en contacto', 'puede dejar de responder'))
+               and len(f) > 25]
+    if limpias:
+        return limpias[0]
+    return ''
 
 
 def escenas(a, d):
@@ -258,12 +337,18 @@ def escenas(a, d):
     lugar = a.get('lugar') or ''
     e = []
 
-    # 1 · ORIGEN — la idea, sin aparato construido
-    e.append('la idea, todavía sin aparato: ' + (frases(a.get('ficha_resumen'), 1) or
-              '[SIN DATO EN LA FICHA]') +
-             ' Lo que se dibuja es el MOMENTO en que a alguien se le ocurre la misión: un '
-             'despacho modesto con papeles, un cuaderno abierto con bocetos a lápiz y la '
-             'ventana al fondo.')
+    # 1 · EL OBJETIVO — para qué se construyó, sin aparato y sin gente genérica
+    objetivo = OBJETIVO.get(a['id'], {})
+    texto_obj = objetivo.get('texto') or objetivo_de_reserva(a) or '[SIN DATO EN LA FICHA]'
+    texto_obj = texto_obj.rstrip('.!?…')          # el punto lo pone la frase que lo envuelve
+    visual_obj = objetivo.get('visual') or (
+        f'el destino ({cuerpo}) visto de cerca y sin el aparato: su superficie, su luz y su '
+        'escala, para que se entienda qué se quería estudiar allí')
+    e.append('el objetivo de la misión, es decir para qué se construyó: ' + texto_obj + '. '
+             'En esta viñeta NO SE VE el aparato ni nada construido: todavía no existía, y lo '
+             'que se cuenta es lo que se quería averiguar. Se dibuja ' + visual_obj + '. '
+             'Sin personas: nada de despachos, escritorios, pizarras, planos, papeles ni nadie '
+             'señalando dibujos.')
 
     # 2 · LOS PLANOS — diseño, todavía sin aparato real
     e.append('la mesa de dibujo técnico: el aparato dibujado de perfil y en sección, con '
@@ -285,32 +370,64 @@ def escenas(a, d):
              'El aparato no se ve: va dentro. [El sitio exacto de lanzamiento no está en la '
              'ficha]')
 
+    # 5 y 6 · el destino no es el mismo para una estación en órbita terrestre, para una sonda
+    # que llega a otro mundo y para una que se va al vacío: cada una se cuenta a su manera.
+    tipo, destino_nombre = clasifica_destino(a)
+
     # 5 · EL CAMINO — travesía en vacío, sin nadie
-    e.append(f'la travesía hacia {cuerpo}: el aparato SOLO en el vacío, sin tierra ni naves, '
-             'con el destino aún como una luz pequeña y lejana. Nada de personas ni de '
-             'interiores de cabina.')
+    if tipo == 'tierra_orbita':
+        e.append('la travesía hasta la órbita: el aparato SOLO en el vacío, con la Tierra '
+                 'creciendo abajo, cada vez más grande y más azul, y ninguna otra nave. Nada de '
+                 'personas ni de interiores de cabina.')
+    elif tipo == 'mundo':
+        e.append(f'la travesía hacia {destino_nombre}: el aparato SOLO en el vacío, sin tierra ni '
+                 'naves, con el destino aún como una luz pequeña y lejana. Nada de personas ni de '
+                 'interiores de cabina.')
+    else:
+        e.append('la travesía por el vacío: el aparato SOLO, con el Sol convertido en una luz '
+                 'pequeña y dura a su espalda y ni una sola roca alrededor. Nada de personas ni de '
+                 'interiores de cabina.')
 
     # 6 · LA LLEGADA — primer plano del destino, no del aparato entero
-    e.append(f'la llegada a {cuerpo}: la superficie del destino vista muy de cerca, con sus '
-             'piedras, sus cráteres y su textura, y del aparato solo una esquina o la punta de '
-             'un panel entrando por el borde del encuadre, a punto de tocarla. El aparato NO se '
-             've entero: esta viñeta es del suelo, no del aparato.')
+    if tipo == 'tierra_orbita':
+        e.append('la llegada a la órbita: la Tierra vista muy de cerca, con sus océanos, sus '
+                 'nubes y el limbo azul cruzando el encuadre, y del aparato solo una esquina o la '
+                 'punta de un panel entrando por un borde. El aparato NO se ve entero: esta '
+                 'viñeta es de la Tierra, no del aparato.')
+    elif tipo == 'mundo':
+        e.append(f'la llegada a {destino_nombre}: la superficie del destino vista muy de cerca, '
+                 'con sus piedras, sus cráteres y su textura, y del aparato solo una esquina o la '
+                 'punta de un panel entrando por el borde del encuadre, a punto de tocarla. El '
+                 'aparato NO se ve entero: esta viñeta es del suelo, no del aparato.')
+    else:
+        e.append('la llegada al destino: el vacío visto muy de cerca, negro y con unas pocas '
+                 'estrellas fijas, y del aparato solo una esquina o la punta de un panel entrando '
+                 'por el borde del encuadre. El aparato NO se ve entero: esta viñeta es del vacío, '
+                 'no del aparato.')
 
     # 7 · LO QUE HIZO — una escena cerrada
+    textos_hitos = ' '.join(str(h.get('texto', '')) for h in (a.get('hitos') or [])).lower()
+    se_poso = any(k in textos_hitos for k in ('posé', 'posó', 'posarse', 'aterriz', 'tocó el suelo'))
+    # solo se apoya en el suelo el que de verdad se posó; los orbitadores y las sondas de paso
+    # van suspendidos, sin inventar un aterrizaje que no ocurrió
+    apoyo = ('Apoyado de verdad sobre el terreno: la base tocando el suelo, sin aire debajo, y la '
+             'sombra naciendo de ese punto de contacto.' if se_poso else
+             'Sin apoyarse en nada: el aparato suspendido sobre el paisaje del destino, que pasa '
+             'justo debajo, y su sombra proyectada sobre el terreno o sobre las nubes.')
     h = elige_hito(d['hitos'])
     if h:
         e.append(f'UNA sola escena, sin alternativas: {h.get("titulo", "")} — '
                  f'{frases(h.get("texto"), 1, 200).rstrip(".")}. Se dibuja el APARATO EN EL DESTINO '
-                 'haciendo ese trabajo, de cerca y sin nadie alrededor: nada de salas de '
-                 'reuniones, conferencias, aulas ni gente sentada. Apoyado de verdad sobre el '
-                 'terreno: la base tocando el suelo, sin aire debajo, y la sombra naciendo de '
-                 'ese punto de contacto.')
+                 f'haciendo ese trabajo —que es justo para lo que se construyó: {texto_obj}—, '
+                 'de cerca y sin nadie alrededor: nada de salas de '
+                 'reuniones, conferencias, aulas ni gente sentada. ' + apoyo)
     else:
         e.append('[SIN DATOS EN LA FICHA]')
 
     # 8 · EL FINAL
-    e.append(f'el final: {frases(d["estado_texto"], 1) or "[SIN DATO]"}. El aparato solo, en '
-             'el destino, sin nadie alrededor y sin señales de actividad.')
+    final_txt = (frases(d['estado_texto'], 1) or '[SIN DATO]').rstrip('.')
+    e.append(f'el final: {final_txt}. El aparato solo, en el destino, sin nadie alrededor y sin '
+             'señales de actividad.')
 
     # 9 · LO QUE QUEDA — detalle, no el conjunto
     e.append(f'{lugar} · {d["matiz"]}. Se cuenta con un detalle muy cerrado del aparato, no '
@@ -343,13 +460,14 @@ def escribe_objeto(a, ruta):
     lineas.append('    añadiendo "sin texto, sin letras, sin números".')
     lineas.append('')
     lineas.append('DOS REGLAS DE LA SERIE (valen para las diez viñetas)')
-    lineas.append('  · El aparato NO está construido en las viñetas 1 y 2: allí solo hay bocetos')
-    lineas.append('    a lápiz y dibujos técnicos. Aparece construido por primera vez en la 3.')
+    lineas.append('  · En la viñeta 1 NO hay aparato, ni bocetos, ni planos, ni personas: se cuenta')
+    lineas.append('    el OBJETIVO de la misión. El aparato aparece por primera vez dibujado en la 2')
+    lineas.append('    y construido y real en la 3.')
     lineas.append('  · Los personajes no se nombran: se describen por su oficio y su ropa.')
     lineas.append('  · A partir de la viñeta 4 el aparato está FUERA de la Tierra: en vuelo, en')
     lineas.append('    órbita o en el destino. Nunca en interiores ni entre gente con bata.')
-    lineas.append('    Los interiores solo existen en las viñetas 1, 2 y 3 (despacho, mesa de')
-    lineas.append('    dibujo y sala de montaje).')
+    lineas.append('    Los interiores solo existen en las viñetas 2 y 3 (mesa de dibujo y sala')
+    lineas.append('    de montaje). La 1 no es un interior: es el objetivo, y va sin gente.')
     lineas.append('')
     lineas.append('DÓNDE ESTÁ / CÓMO ACABÓ')
     lineas.append(f'  {a.get("lugar")} · estado: {a.get("estado")}')
@@ -374,12 +492,16 @@ def escribe_objeto(a, ruta):
         else:
             lineas.append(f'APARATO EN ESTA VIÑETA: {ESTADO_APARATO[i]}')
             lineas.append('')
-            if num == 4:
-                lineas.append('FIDELIDAD: no aplica al aparato, que no se ve. Sí al cohete: un '
-                              'cuerpo central cilíndrico, dos aceleradores laterales adosados al '
-                              'cuerpo y una cofia en punta, cerrada. Nada de satélites montados '
-                              'por fuera ni de piezas sueltas.')
-            elif num <= 2:
+            if num == 1:
+                lineas.append('FIDELIDAD: no aplica. En esta viñeta no hay aparato, ni dibujo, ni '
+                              'maqueta: solo lo que la misión quería estudiar.')
+                lineas.append('')
+            elif num == 4:
+                lineas.append('FIDELIDAD: no aplica al aparato, que no se ve. Sí al cohete: un solo '
+                              'cuerpo central cilíndrico, con los aceleradores laterales SOLO si el '
+                              'cohete de la época y del país los llevaba; cofia en punta y cerrada. '
+                              'Nada de satélites montados por fuera ni de piezas sueltas.')
+            elif num == 2:
                 lineas.append(f'FIDELIDAD (solo para los dibujos del papel): {fisico(a)}.')
             else:
                 lineas.append(f'FIDELIDAD: {fisico(a)}. Si el aparato no se parece al de la '
@@ -394,10 +516,17 @@ def escribe_objeto(a, ruta):
                 lineas.append('')
             if 4 <= num <= 9:
                 lineas.append(EPOCA_FUERA.format(epoca=f'año {a.get("anio") or ""}'.strip()))
+            elif num == 1:
+                lineas.append(EPOCA_OBJETIVO)
             else:
                 lineas.append(EPOCA_INTERIOR.format(epoca=f'hacia {a.get("anio") or "la fecha del objeto"}'))
             lineas.append('')
             lineas.append(PROHIBIDO)
+            if num == 1:
+                lineas.append('')
+                lineas.append('ADEMÁS, EN ESTA VIÑETA 1: prohibido el despacho, la mesa de trabajo, el '
+                              'cuaderno de bocetos, la pizarra, la regla de cálculo y cualquier '
+                              'persona. No es una escena de oficina: es el objetivo de la misión.')
         lineas.append('')
         lineas.append('No incluyas texto, letras, números, logotipos ni firmas en la imagen.')
 
