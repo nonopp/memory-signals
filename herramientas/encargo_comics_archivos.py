@@ -249,7 +249,8 @@ def elige_hito(hitos):
                'midier', 'enseñ', 'descubr')
     flojas = ('primera misión', 'primer', 'primera nave', 'mi encargo', 'fui la')
     mejor, puntos_mejor = None, -1
-    for h in hitos[:4]:
+    candidatos = hitos[1:5] if len(hitos) > 2 else hitos[:2]   # el primero es el encargo
+    for posicion, h in enumerate(candidatos):
         titulo = str(h.get('titulo', '')).lower()
         texto = str(h.get('texto', '')).lower()
         puntos = 3 * sum(1 for k in fisicas if k in texto)
@@ -341,9 +342,18 @@ def escenas(a, d):
     objetivo = OBJETIVO.get(a['id'], {})
     texto_obj = objetivo.get('texto') or objetivo_de_reserva(a) or '[SIN DATO EN LA FICHA]'
     texto_obj = texto_obj.rstrip('.!?…')          # el punto lo pone la frase que lo envuelve
-    visual_obj = objetivo.get('visual') or (
-        f'el destino ({cuerpo}) visto de cerca y sin el aparato: su superficie, su luz y su '
-        'escala, para que se entienda qué se quería estudiar allí')
+    tipo_destino, _nombre_destino = clasifica_destino(a)
+    if objetivo.get('visual'):
+        visual_obj = objetivo['visual']
+    elif tipo_destino == 'tierra_orbita':
+        visual_obj = ('la Tierra vista desde fuera de la atmósfera, con sus océanos, sus nubes y '
+                      'el limbo azul, sin ninguna nave en el encuadre')
+    elif tipo_destino == 'mundo':
+        visual_obj = (f'la superficie de {_nombre_destino} vista de cerca y sin el aparato: su '
+                      'terreno, su luz y su escala, para que se entienda qué se quería estudiar allí')
+    else:
+        visual_obj = ('el vacío negro con unas pocas estrellas fijas y el Sol convertido en una '
+                      'luz dura y pequeña, sin ninguna nave y sin ningún suelo en el encuadre')
     e.append('el objetivo de la misión, es decir para qué se construyó: ' + texto_obj + '. '
              'En esta viñeta NO SE VE el aparato ni nada construido: todavía no existía, y lo '
              'que se cuenta es lo que se quería averiguar. Se dibuja ' + visual_obj + '. '
@@ -407,19 +417,51 @@ def escenas(a, d):
 
     # 7 · LO QUE HIZO — una escena cerrada
     textos_hitos = ' '.join(str(h.get('texto', '')) for h in (a.get('hitos') or [])).lower()
-    se_poso = any(k in textos_hitos for k in ('posé', 'posó', 'posarse', 'aterriz', 'tocó el suelo'))
+    lugar_min = (a.get('lugar') or '').lower()
+    # está en el suelo si lo dice el texto o si el destino es un mundo y no está en órbita:
+    # así los rovers (Opportunity, Spirit, InSight) no salen «suspendidos» por no usar la
+    # palabra «posarse» en su ficha
+    # pisó el suelo: lo dice el texto, o el sitio donde está es un punto con nombre en la
+    # superficie (un planum, un cráter, un mar lunar). Un orbitador de Júpiter o de Venus no
+    # aparece «apoyado» por el simple hecho de que su lugar sea el planeta
+    PUNTOS_EN_TIERRA = ('planum', 'planitia', 'gusev', 'mar de la', 'tranquilidad', 'procellarum',
+                        'fra mauro', 'descartes', 'taurus-littrow', 'jezero', 'posad')
+    se_poso = (any(k in textos_hitos for k in ('posé', 'posó', 'posarse', 'aterriz', 'aluniz', 'tocó el suelo'))
+               or any(m in lugar_min for m in PUNTOS_EN_TIERRA))
+    # estos acaban estrellados o en órbita aunque su ficha mencione un aterrizaje ajeno
+    # (Cassini soltó a Huygens, Stardust trajo una cápsula): nunca salen «apoyados»
+    if a['id'] in ('cassini', 'galileo', 'magellan', 'messenger', 'stardust', 'deep-impact',
+                   'clementine', 'ulysses', 'spitzer', 'kepler'):
+        se_poso = False
+    # «estrellado» solo si el sitio donde ESTÁ ahora es un impacto; quien se desintegró al
+    # reentrar trabajó en órbita y así se dibuja en la viñeta de su trabajo
+    impacto = 'impact' in lugar_min
+    orbita = tipo == 'tierra_orbita'      # una estación en órbita terrestre no se apoya en nada
     # solo se apoya en el suelo el que de verdad se posó; los orbitadores y las sondas de paso
     # van suspendidos, sin inventar un aterrizaje que no ocurrió
-    apoyo = ('Apoyado de verdad sobre el terreno: la base tocando el suelo, sin aire debajo, y la '
-             'sombra naciendo de ese punto de contacto.' if se_poso else
-             'Sin apoyarse en nada: el aparato suspendido sobre el paisaje del destino, que pasa '
-             'justo debajo, y su sombra proyectada sobre el terreno o sobre las nubes.')
+    if impacto:
+        apoyo = ('Sobre el terreno pero sin posarse: el aparato estrellado contra la superficie, con '
+                 'los restos esparcidos y el polvo levantado alrededor.')
+    elif se_poso:
+        apoyo = ('Apoyado de verdad sobre el terreno: la base tocando el suelo, sin aire debajo, y '
+                 'la sombra naciendo de ese punto de contacto.')
+    elif orbita or tipo == 'mundo':
+        apoyo = ('En órbita, sin tocar nada: el aparato con la superficie del destino pasando justo '
+                 'debajo y ninguna sombra suya proyectada sobre ella.')
+    elif tipo == 'vacio':
+        apoyo = ('En el vacío, sin nada cerca: ni suelo, ni nubes, ni superficie bajo el aparato; '
+                 'solo estrellas fijas alrededor.')
+    else:
+        apoyo = ('Sin apoyarse en nada: el aparato suspendido sobre el paisaje del destino, que '
+                 'pasa justo debajo, y su sombra proyectada sobre el terreno o sobre las nubes.')
     h = elige_hito(d['hitos'])
     if h:
         e.append(f'UNA sola escena, sin alternativas: {h.get("titulo", "")} — '
                  f'{frases(h.get("texto"), 1, 200).rstrip(".")}. Se dibuja el APARATO EN EL DESTINO '
-                 f'haciendo ese trabajo —que es justo para lo que se construyó: {texto_obj}—, '
-                 'de cerca y sin nadie alrededor: nada de salas de '
+                 + (f'haciendo ese trabajo —que es justo para lo que se construyó: {texto_obj}—, '
+                    if texto_obj and texto_obj.lower()[:40] not in str(h.get('texto', '')).lower()
+                    else 'haciendo ese trabajo, ')
+                 + 'de cerca y sin nadie alrededor: nada de salas de '
                  'reuniones, conferencias, aulas ni gente sentada. ' + apoyo)
     else:
         e.append('[SIN DATOS EN LA FICHA]')
