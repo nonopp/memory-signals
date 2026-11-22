@@ -623,5 +623,204 @@
    "en": "pdf/comic-near-shoemaker-en.pdf",
    "de": "pdf/comic-near-shoemaker-de.pdf"
   }
+ },
+ "skylab": {
+  "anio": 1973,
+  "cuerpo": "Órbita de la Tierra",
+  "titulo": {
+   "es": "La casa que cayó sobre Australia",
+   "en": "The house that fell on Australia",
+   "de": "Das Haus, das auf Australien fiel"
+  },
+  "subtitulo": {
+   "es": "La primera estación espacial de Estados Unidos: nueve personas viviendo en órbita",
+   "en": "The first US space station: nine people living in orbit",
+   "de": "Die erste US-Raumstation: neun Menschen im Orbit"
+  },
+  "marca": {
+   "es": "Memory Signals",
+   "en": "Memory Signals",
+   "de": "Memory Signals"
+  },
+  "marca_url": "nasa.gesemweb.es/app",
+  "imagenes": [
+   "img/comic/skylab-v01.jpg",
+   "img/comic/skylab-v02.jpg",
+   "img/comic/skylab-v03.jpg",
+   "img/comic/skylab-v04.jpg",
+   "img/comic/skylab-v05.jpg",
+   "img/comic/skylab-v06.jpg",
+   "img/comic/skylab-v07.jpg",
+   "img/comic/skylab-v08.jpg",
+   "img/comic/skylab-v09.jpg"
+  ],
+  "franja": "img/comic/skylab-v10.jpg",
+  "vinetas": [
+   {
+    "n": 1,
+    "momento": "objetivo",
+    "cartela": {
+     "es": "1973. Una casa en el espacio para mirar el Sol y la Tierra desde fuera de la atmósfera.",
+     "en": "1973. A house in space to watch the Sun and the Earth from outside the atmosphere.",
+     "de": "1973. Ein Haus im All, um Sonne und Erde von außerhalb der Atmosphäre zu beobachten."
+    },
+    "bocadillo": {
+     "es": "Me construyeron para averiguar qué le hace el espacio al cuerpo humano.",
+     "en": "They built me to find out what space does to the human body.",
+     "de": "Man baute mich, um herauszufinden, was der Weltraum mit dem menschlichen Körper macht."
+    },
+    "dato": {
+     "es": "1973",
+     "en": "1973",
+     "de": "1973"
+    }
+   },
+   {
+    "n": 2,
+    "momento": "diseño",
+    "cartela": {
+     "es": "Se diseñó como un taller: laboratorio, observatorio solar y vivienda a la vez.",
+     "en": "She was designed as a workshop: laboratory, solar observatory and home at once.",
+     "de": "Sie wurde als Werkstatt entworfen: Labor, Sonnenobservatorium und Wohnung zugleich."
+    },
+    "bocadillo": {
+     "es": "No era una cápsula para dos días: era una casa para vivir meses.",
+     "en": "I was not a capsule for two days: I was a house to live in for months.",
+     "de": "Ich war keine Kapsel für zwei Tage: ich war ein Haus für Monate."
+    },
+    "dato": null
+   },
+   {
+    "n": 3,
+    "momento": "quienes",
+    "cartela": {
+     "es": "Pete Conrad, comandante de la primera tripulación, sería el primero en entrar.",
+     "en": "Pete Conrad, commander of the first crew, would be the first one inside.",
+     "de": "Pete Conrad, Kommandant der ersten Mannschaft, sollte als Erster hineingehen."
+    },
+    "bocadillo": {
+     "es": "Tardé en dejarles entrar: no estaba en condiciones.",
+     "en": "I took my time letting them in: I was not fit for visitors.",
+     "de": "Ich ließ sie erst spät hinein: ich war nicht in Ordnung."
+    },
+    "dato": null
+   },
+   {
+    "n": 4,
+    "momento": "lanzamiento",
+    "cartela": {
+     "es": "1973. Salgo hacia la órbita sin nadie a bordo.",
+     "en": "1973. I set out for orbit with nobody aboard.",
+     "de": "1973. Ich starte ohne Besatzung in den Orbit."
+    },
+    "bocadillo": {
+     "es": "En el despegue perdí parte de lo que me protegía.",
+     "en": "During the launch I lost part of what protected me.",
+     "de": "Beim Start verlor ich einen Teil meines Schutzes."
+    },
+    "dato": {
+     "es": "1973",
+     "en": "1973",
+     "de": "1973"
+    }
+   },
+   {
+    "n": 5,
+    "momento": "camino",
+    "cartela": {
+     "es": "Camino de la órbita, sin un panel solar y con el escudo térmico dañado.",
+     "en": "Bound for orbit, short one solar panel and with the heat shield damaged.",
+     "de": "Unterwegs zum Orbit, ohne ein Solarmodul und mit beschädigtem Hitzeschild."
+    },
+    "bocadillo": {
+     "es": "Sin escudo, el Sol me calentaba más de la cuenta.",
+     "en": "Without the shield, the Sun heated me far too much.",
+     "de": "Ohne den Schild heizte mich die Sonne viel zu sehr auf."
+    },
+    "dato": null
+   },
+   {
+    "n": 6,
+    "momento": "llegada",
+    "cartela": {
+     "es": "Llego a la órbita dañada: falta un panel y el escudo.",
+     "en": "I arrive in orbit damaged: a panel and the shield are missing.",
+     "de": "Ich erreiche den Orbit beschädigt: ein Modul und der Schild fehlen."
+    },
+    "bocadillo": {
+     "es": "La primera tripulación salió a repararme con paraguas improvisados antes de poder entrar.",
+     "en": "The first crew went outside to fix me with improvised parasols before they could come in.",
+     "de": "Die erste Mannschaft stieg aus und reparierte mich mit behelfsmäßigen Sonnenschirmen."
+    },
+    "dato": null
+   },
+   {
+    "n": 7,
+    "momento": "trabajo",
+    "cartela": {
+     "es": "Tres tripulaciones, nueve personas; la última se quedó casi tres meses.",
+     "en": "Three crews, nine people; the last one stayed almost three months.",
+     "de": "Drei Mannschaften, neun Menschen; die letzte blieb fast drei Monate."
+    },
+    "bocadillo": {
+     "es": "Aquí se hicieron los experimentos: el Sol, la Tierra y el cuerpo humano sin peso.",
+     "en": "The experiments happened here: the Sun, the Earth and the human body in weightlessness.",
+     "de": "Hier liefen die Experimente: Sonne, Erde und der menschliche Körper ohne Schwerkraft."
+    },
+    "dato": {
+     "es": "9 personas",
+     "en": "9 people",
+     "de": "9 Menschen"
+    }
+   },
+   {
+    "n": 8,
+    "momento": "final",
+    "cartela": {
+     "es": "11 de julio de 1979: pierdo altura y entro en la atmósfera sin control.",
+     "en": "11 July 1979: I lose altitude and re-enter the atmosphere out of control.",
+     "de": "11. Juli 1979: Ich verliere Höhe und trete unkontrolliert in die Atmosphäre ein."
+    },
+    "bocadillo": {
+     "es": "Mis trozos cayeron sobre Australia Occidental y un pueblo me multó por tirar basura.",
+     "en": "My pieces fell over Western Australia and a town fined me for littering.",
+     "de": "Meine Teile fielen über Westaustralien, und ein Ort verhängte ein Bußgeld wegen Müll."
+    },
+    "dato": {
+     "es": "11-7-1979",
+     "en": "11 Jul 1979",
+     "de": "11.7.1979"
+    }
+   },
+   {
+    "n": 9,
+    "momento": "queda",
+    "cartela": {
+     "es": "Los fragmentos recuperados están hoy en museos.",
+     "en": "The recovered fragments are in museums today.",
+     "de": "Die geborgenen Fragmente liegen heute in Museen."
+    },
+    "bocadillo": {
+     "es": "Sigo repartida en vitrinas, en trozos.",
+     "en": "I am still spread across display cases, in pieces.",
+     "de": "Ich liege noch immer in Stücken in Vitrinen."
+    },
+    "dato": null
+   }
+  ],
+  "cierre": {
+   "es": "La primera casa de Estados Unidos en el espacio acabó en un museo.",
+   "en": "The first American home in space ended up in a museum.",
+   "de": "Das erste amerikanische Zuhause im All landete in einem Museum."
+  },
+  "fuentes": [
+   "https://www.nasa.gov/skylab/",
+   "https://www.nasa.gov/history/skylab/"
+  ],
+  "pdf": {
+   "es": "pdf/comic-skylab-es.pdf",
+   "en": "pdf/comic-skylab-en.pdf",
+   "de": "pdf/comic-skylab-de.pdf"
+  }
  }
 }

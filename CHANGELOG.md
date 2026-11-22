@@ -1,3 +1,9 @@
+## v3.27.0 — 2026-11-22
+
+- **Cuarto cómic: Skylab** (*La casa que cayó sobre Australia*), con su botón en la ficha. Nueve viñetas más franja, textos en español, inglés y alemán, y PDF de una página en los tres idiomas (verificado: 1 página, 1123 px, 10 imágenes).
+- La serie estrena el **guion nuevo**: la viñeta 1 cuenta **el objetivo de la misión** —observar el Sol y la Tierra desde fuera de la atmósfera y medir el cuerpo humano sin peso— en vez del despacho con el mismo hombre de siempre; la 6 llega a la órbita con la Tierra de cerca y no a un suelo con cráteres; la 7 cuenta el **trabajo** (tres tripulaciones, nueve personas, los experimentos) y no la avería; y la 8 es la reentrada sobre Australia con la multa del pueblo.
+- Datos solo de la ficha: 1973, un panel solar y el escudo perdidos, los paraguas improvisados de la primera tripulación, nueve personas y casi tres meses, el 11 de julio de 1979 y los fragmentos en museos. Fuentes al pie.
+
 ## v3.26.1 — 2026-11-21
 
 - **Arreglado el punto doble** en las páginas de objeto: el texto de estado ya terminaba en punto y se le añadía otro («… desde el 1 de noviembre de 2018..»). Ahora se comprueba antes de añadir la separación.

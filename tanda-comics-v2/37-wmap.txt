@@ -1,0 +1,380 @@
+==============================================================================
+WILKINSON MICROWAVE ANISOTROPY PROBE (WMAP) · 2001 · Órbita terrestre
+==============================================================================
+
+ANTES DE EMPEZAR
+  · Lámina de referencia (adjúntala en las diez viñetas):
+      https://nasa.gesemweb.es/app/img/fondo-wmap.jpg
+  · Formato vertical 3:4. La viñeta 10 es una franja apaisada 6:1.
+  · Guarda cada imagen como wmap-v01.jpg … wmap-v10.jpg
+  · Si sale texto, letras o números dentro del dibujo, no vale: se regenera
+    añadiendo "sin texto, sin letras, sin números".
+
+DOS REGLAS DE LA SERIE (valen para las diez viñetas)
+  · En la viñeta 1 NO hay aparato, ni bocetos, ni planos, ni personas: se cuenta
+    el OBJETIVO de la misión. El aparato aparece por primera vez dibujado en la 2
+    y construido y real en la 3.
+  · Los personajes no se nombran: se describen por su oficio y su ropa.
+  · A partir de la viñeta 4 el aparato está FUERA de la Tierra: en vuelo, en
+    órbita o en el destino. Nunca en interiores ni entre gente con bata.
+    Los interiores solo existen en las viñetas 2 y 3 (mesa de dibujo y sala
+    de montaje). La 1 no es un interior: es el objetivo, y va sin gente.
+
+DÓNDE ESTÁ / CÓMO ACABÓ
+  En una órbita de aparcamiento alrededor del Sol desde septiembre de 2010 · estado: muerto
+  Cifras disponibles (una por viñeta como máximo): 13.770 millones, 4,6%, 1,5 millones
+
+
+------------------------------------------------------------------------------
+VIÑETA 1 de 10 · EL OBJETIVO · qué querían averiguar
+------------------------------------------------------------------------------
+Viñeta de cómic documental, color plano, formato vertical 3:4, sin texto.
+
+ESTILO: línea clara negra de grosor variable sobre papel hueso #F2EBDC, relleno plano sin
+degradados, sombras con trama de puntos del mismo tono. Paleta cerrada: papel hueso #F2EBDC,
+azul noche #14213D, cian #63E0C8, ocre dorado #C9A227, rojo #C1442E, negro tinta #1B1B1B solo
+en la línea. Cómic europeo claro, figuras humanas proporcionadas, sin caricatura, perspectiva
+correcta y escala real entre el aparato y las personas. Sin marcos, sin firmas, sin marcas de
+agua.
+
+APARATO EN ESTA VIÑETA: NO SE VE, y no porque esté escondido: esta viñeta es del objetivo y no del aparato, que todavía no existía. Ningún boceto, ningún plano, ninguna maqueta y ninguna persona en el encuadre.
+
+FIDELIDAD: no aplica. En esta viñeta no hay aparato, ni dibujo, ni maqueta: solo lo que la misión quería estudiar.
+
+
+ENCUADRE: plano documental abierto del motivo que se quería estudiar, cámara a su altura y sin ninguna figura humana en primer término: manda el fenómeno, no una persona
+
+ESCENA: el objetivo de la misión, es decir para qué se construyó: Medir el fondo cósmico de microondas para sacar de ahí los parámetros del universo, su edad y su composición. En esta viñeta NO SE VE el aparato ni nada construido: todavía no existía, y lo que se cuenta es lo que se quería averiguar. Se dibuja el destino (Órbita terrestre) visto de cerca y sin el aparato: su superficie, su luz y su escala, para que se entienda qué se quería estudiar allí. Sin personas: nada de despachos, escritorios, pizarras, planos, papeles ni nadie señalando dibujos.
+
+AMBIENTACIÓN (no improvisar): el objetivo, no una oficina. Nada de mobiliario, papel,
+lápiz, regla de cálculo, pizarra ni fluorescente: el encuadre lo ocupa el fenómeno o el lugar que
+se quería estudiar, con luz real y sin ninguna persona. Si es el Sol o un cuerpo celeste, luz dura
+y fondo negro; si es un lugar de la Tierra, su cielo y su horizonte de verdad.
+
+PROHIBIDO: pantallas planas, luces LED, portátiles actuales, tablets, móviles, cámaras
+digitales modernas, proyectores de vídeo, relojes digitales, ropa deportiva actual,
+auriculares inalámbricos, logotipos de marcas y cualquier texto. En el lanzamiento, tampoco:
+el aparato montado por fuera del cohete, con paneles o antena desplegados. Desde la viñeta 4:
+interiores de cualquier tipo, salas blancas, laboratorios, talleres, salas de control,
+pantallas de control, pizarras y personas con bata alrededor del aparato.
+
+ADEMÁS, EN ESTA VIÑETA 1: prohibido el despacho, la mesa de trabajo, el cuaderno de bocetos, la pizarra, la regla de cálculo y cualquier persona. No es una escena de oficina: es el objetivo de la misión.
+
+No incluyas texto, letras, números, logotipos ni firmas en la imagen.
+
+------------------------------------------------------------------------------
+VIÑETA 2 de 10 · LOS PLANOS · el proceso de diseño
+------------------------------------------------------------------------------
+Viñeta de cómic documental, color plano, formato vertical 3:4, sin texto.
+
+ESTILO: línea clara negra de grosor variable sobre papel hueso #F2EBDC, relleno plano sin
+degradados, sombras con trama de puntos del mismo tono. Paleta cerrada: papel hueso #F2EBDC,
+azul noche #14213D, cian #63E0C8, ocre dorado #C9A227, rojo #C1442E, negro tinta #1B1B1B solo
+en la línea. Cómic europeo claro, figuras humanas proporcionadas, sin caricatura, perspectiva
+correcta y escala real entre el aparato y las personas. Sin marcos, sin firmas, sin marcas de
+agua.
+
+APARATO EN ESTA VIÑETA: NO APARECE construido. Se ven dibujos técnicos: el aparato de perfil y en sección, a escala, con cotas y líneas de referencia; como mucho, una maqueta de madera y cartón sin paneles ni mantas.
+
+FIDELIDAD (solo para los dibujos del papel): el aparato de la lámina adjunta, con el MISMO número y la MISMA posición de paneles solares, antena y mantas térmicas: cuenta las alas y los mástiles del dibujo de referencia y repite esa cifra exacta, sin añadir ni quitar ninguna. La antena es la de la lámina y solo esa: si en la referencia no hay una parabólica grande, NO dibujes ninguna parabólica grande. Si el aparato no se parece al de la referencia, la viñeta no vale..
+
+ENCUADRE: plano cenital (vista de pájaro) de la mesa de dibujo, con las manos y los dibujos ocupando todo el encuadre y ninguna cara visible
+
+ESCENA: la mesa de dibujo técnico: el aparato dibujado de perfil y en sección, con cotas, radios y líneas de referencia; al lado una maqueta de madera y cartón sin acabado. Manos con lápiz, regla de cálculo, goma y tazas de café. [SIN DATO EN LA FICHA: el problema de ingeniería concreto hay que sacarlo de las fuentes, no inventarlo]
+
+AMBIENTACIÓN DE INTERIOR (no improvisar): hacia 2001. Ropa de trabajo de la época, mobiliario
+de oficina o taller de la época, papel, lápiz, regla de cálculo y pizarra. Luz de fluorescente
+o de ventana, sin efectos modernos.
+
+PROHIBIDO: pantallas planas, luces LED, portátiles actuales, tablets, móviles, cámaras
+digitales modernas, proyectores de vídeo, relojes digitales, ropa deportiva actual,
+auriculares inalámbricos, logotipos de marcas y cualquier texto. En el lanzamiento, tampoco:
+el aparato montado por fuera del cohete, con paneles o antena desplegados. Desde la viñeta 4:
+interiores de cualquier tipo, salas blancas, laboratorios, talleres, salas de control,
+pantallas de control, pizarras y personas con bata alrededor del aparato.
+
+No incluyas texto, letras, números, logotipos ni firmas en la imagen.
+
+------------------------------------------------------------------------------
+VIÑETA 3 de 10 · LAS MANOS · quiénes y dónde lo hicieron
+------------------------------------------------------------------------------
+Viñeta de cómic documental, color plano, formato vertical 3:4, sin texto.
+
+ESTILO: línea clara negra de grosor variable sobre papel hueso #F2EBDC, relleno plano sin
+degradados, sombras con trama de puntos del mismo tono. Paleta cerrada: papel hueso #F2EBDC,
+azul noche #14213D, cian #63E0C8, ocre dorado #C9A227, rojo #C1442E, negro tinta #1B1B1B solo
+en la línea. Cómic europeo claro, figuras humanas proporcionadas, sin caricatura, perspectiva
+correcta y escala real entre el aparato y las personas. Sin marcos, sin firmas, sin marcas de
+agua.
+
+APARATO EN ESTA VIÑETA: APARECE construido y real, por primera vez en la serie: montado y reconocible, con sus paneles, su antena y sus mantas térmicas.
+
+FIDELIDAD: el aparato de la lámina adjunta, con el MISMO número y la MISMA posición de paneles solares, antena y mantas térmicas: cuenta las alas y los mástiles del dibujo de referencia y repite esa cifra exacta, sin añadir ni quitar ninguna. La antena es la de la lámina y solo esa: si en la referencia no hay una parabólica grande, NO dibujes ninguna parabólica grande. Si el aparato no se parece al de la referencia, la viñeta no vale.
+
+ENCUADRE: plano general a pie de suelo, en contrapicado suave, con el aparato entero y dos operarios trabajando en alturas distintas (uno en el suelo, otro subido a un escalón)
+
+ESCENA: la sala blanca o el taller donde se montó, con el aparato YA construido y personas trabajando en él a distintas alturas: tres personas del equipo, sin nombre y sin rasgos reconocibles, descritas por lo que hacen y por su ropa de trabajo (investigador principal de wmap en la johns hopkins university; astrofísico del goddard space flight center y responsable de la misión; profesor de princeton y científico del instrumento de wmap). Nadie mira a cámara. Herramientas de mano, escalón, guantes y fundas de plástico, cajas de piezas al fondo.
+
+AMBIENTACIÓN DE INTERIOR (no improvisar): hacia 2001. Ropa de trabajo de la época, mobiliario
+de oficina o taller de la época, papel, lápiz, regla de cálculo y pizarra. Luz de fluorescente
+o de ventana, sin efectos modernos.
+
+PROHIBIDO: pantallas planas, luces LED, portátiles actuales, tablets, móviles, cámaras
+digitales modernas, proyectores de vídeo, relojes digitales, ropa deportiva actual,
+auriculares inalámbricos, logotipos de marcas y cualquier texto. En el lanzamiento, tampoco:
+el aparato montado por fuera del cohete, con paneles o antena desplegados. Desde la viñeta 4:
+interiores de cualquier tipo, salas blancas, laboratorios, talleres, salas de control,
+pantallas de control, pizarras y personas con bata alrededor del aparato.
+
+No incluyas texto, letras, números, logotipos ni firmas en la imagen.
+
+------------------------------------------------------------------------------
+VIÑETA 4 de 10 · EL DÍA · el lanzamiento
+------------------------------------------------------------------------------
+Viñeta de cómic documental, color plano, formato vertical 3:4, sin texto.
+
+ESTILO: línea clara negra de grosor variable sobre papel hueso #F2EBDC, relleno plano sin
+degradados, sombras con trama de puntos del mismo tono. Paleta cerrada: papel hueso #F2EBDC,
+azul noche #14213D, cian #63E0C8, ocre dorado #C9A227, rojo #C1442E, negro tinta #1B1B1B solo
+en la línea. Cómic europeo claro, figuras humanas proporcionadas, sin caricatura, perspectiva
+correcta y escala real entre el aparato y las personas. Sin marcos, sin firmas, sin marcas de
+agua.
+
+APARATO EN ESTA VIÑETA: NO SE VE. El aparato va DENTRO de la cofia del cohete, plegado y cerrado: en el encuadre solo aparece el cohete completo con su punta, la torre, el humo y el público.
+
+FIDELIDAD: no aplica al aparato, que no se ve. Sí al cohete: un solo cuerpo central cilíndrico, con los aceleradores laterales SOLO si el cohete de la época y del país los llevaba; cofia en punta y cerrada. Nada de satélites montados por fuera ni de piezas sueltas.
+
+ENCUADRE: plano lejano y contrapicado desde el suelo, el cohete ocupando el tercio superior y una multitud pequeña en la base
+
+ESCENA: el día del lanzamiento (2001): el cohete elevándose con la cofia cerrada y la llamarada debajo, la torre de servicio a la izquierda, el humo cubriendo la plataforma y una fila de público de espaldas tras la valla. El aparato no se ve: va dentro. [El sitio exacto de lanzamiento no está en la ficha]
+
+DÓNDE ESTÁ EL APARATO (regla de la serie): a partir de la viñeta 4 el aparato está SIEMPRE
+fuera de la Tierra —en vuelo, en órbita o en el destino—. Nada de interiores: ni salas
+blancas, ni laboratorios, ni talleres, ni salas de control, ni gente con bata alrededor.
+
+AMBIENTACIÓN DE EXTERIOR (no improvisar): año 2001, pero en el vacío o en el destino. Sin
+atmósfera no hay cielo azul: el fondo es negro con estrellas o el terreno desnudo del destino.
+Luz dura de una sola dirección, sombras muy marcadas y limpias. Sin polvo ambiental, sin niebla,
+sin reflejos de ventana. Ninguna persona alrededor.
+
+PROHIBIDO: pantallas planas, luces LED, portátiles actuales, tablets, móviles, cámaras
+digitales modernas, proyectores de vídeo, relojes digitales, ropa deportiva actual,
+auriculares inalámbricos, logotipos de marcas y cualquier texto. En el lanzamiento, tampoco:
+el aparato montado por fuera del cohete, con paneles o antena desplegados. Desde la viñeta 4:
+interiores de cualquier tipo, salas blancas, laboratorios, talleres, salas de control,
+pantallas de control, pizarras y personas con bata alrededor del aparato.
+
+No incluyas texto, letras, números, logotipos ni firmas en la imagen.
+
+------------------------------------------------------------------------------
+VIÑETA 5 de 10 · EL CAMINO · la travesía al destino
+------------------------------------------------------------------------------
+Viñeta de cómic documental, color plano, formato vertical 3:4, sin texto.
+
+ESTILO: línea clara negra de grosor variable sobre papel hueso #F2EBDC, relleno plano sin
+degradados, sombras con trama de puntos del mismo tono. Paleta cerrada: papel hueso #F2EBDC,
+azul noche #14213D, cian #63E0C8, ocre dorado #C9A227, rojo #C1442E, negro tinta #1B1B1B solo
+en la línea. Cómic europeo claro, figuras humanas proporcionadas, sin caricatura, perspectiva
+correcta y escala real entre el aparato y las personas. Sin marcos, sin firmas, sin marcas de
+agua.
+
+APARATO EN ESTA VIÑETA: APARECE entero, en silencio, iluminado por un solo lado.
+
+FIDELIDAD: el aparato de la lámina adjunta, con el MISMO número y la MISMA posición de paneles solares, antena y mantas térmicas: cuenta las alas y los mástiles del dibujo de referencia y repite esa cifra exacta, sin añadir ni quitar ninguna. La antena es la de la lámina y solo esa: si en la referencia no hay una parabólica grande, NO dibujes ninguna parabólica grande. Si el aparato no se parece al de la referencia, la viñeta no vale.
+
+ENCUADRE: primer plano: el aparato GRANDE, ocupando medio encuadre, y el destino reducido a un punto de luz lejano al fondo; el vacío por medio
+
+ESCENA: la travesía hasta la órbita: el aparato SOLO en el vacío, con la Tierra creciendo abajo, cada vez más grande y más azul, y ninguna otra nave. Nada de personas ni de interiores de cabina.
+
+DÓNDE ESTÁ EL APARATO (regla de la serie): a partir de la viñeta 4 el aparato está SIEMPRE
+fuera de la Tierra —en vuelo, en órbita o en el destino—. Nada de interiores: ni salas
+blancas, ni laboratorios, ni talleres, ni salas de control, ni gente con bata alrededor.
+
+AMBIENTACIÓN DE EXTERIOR (no improvisar): año 2001, pero en el vacío o en el destino. Sin
+atmósfera no hay cielo azul: el fondo es negro con estrellas o el terreno desnudo del destino.
+Luz dura de una sola dirección, sombras muy marcadas y limpias. Sin polvo ambiental, sin niebla,
+sin reflejos de ventana. Ninguna persona alrededor.
+
+PROHIBIDO: pantallas planas, luces LED, portátiles actuales, tablets, móviles, cámaras
+digitales modernas, proyectores de vídeo, relojes digitales, ropa deportiva actual,
+auriculares inalámbricos, logotipos de marcas y cualquier texto. En el lanzamiento, tampoco:
+el aparato montado por fuera del cohete, con paneles o antena desplegados. Desde la viñeta 4:
+interiores de cualquier tipo, salas blancas, laboratorios, talleres, salas de control,
+pantallas de control, pizarras y personas con bata alrededor del aparato.
+
+No incluyas texto, letras, números, logotipos ni firmas en la imagen.
+
+------------------------------------------------------------------------------
+VIÑETA 6 de 10 · LA LLEGADA · las primeras horas
+------------------------------------------------------------------------------
+Viñeta de cómic documental, color plano, formato vertical 3:4, sin texto.
+
+ESTILO: línea clara negra de grosor variable sobre papel hueso #F2EBDC, relleno plano sin
+degradados, sombras con trama de puntos del mismo tono. Paleta cerrada: papel hueso #F2EBDC,
+azul noche #14213D, cian #63E0C8, ocre dorado #C9A227, rojo #C1442E, negro tinta #1B1B1B solo
+en la línea. Cómic europeo claro, figuras humanas proporcionadas, sin caricatura, perspectiva
+correcta y escala real entre el aparato y las personas. Sin marcos, sin firmas, sin marcas de
+agua.
+
+APARATO EN ESTA VIÑETA: APARECE pequeño y completo, ya en el destino.
+
+FIDELIDAD: el aparato de la lámina adjunta, con el MISMO número y la MISMA posición de paneles solares, antena y mantas térmicas: cuenta las alas y los mástiles del dibujo de referencia y repite esa cifra exacta, sin añadir ni quitar ninguna. La antena es la de la lámina y solo esa: si en la referencia no hay una parabólica grande, NO dibujes ninguna parabólica grande. Si el aparato no se parece al de la referencia, la viñeta no vale.
+
+ENCUADRE: plano detalle a ras de suelo: la superficie del destino ocupa dos tercios del encuadre, en primer término piedras y cráteres, y del aparato SOLO entra una parte por un borde; no se ve entero ni centrado
+
+ESCENA: la llegada a la órbita: la Tierra vista muy de cerca, con sus océanos, sus nubes y el limbo azul cruzando el encuadre, y del aparato solo una esquina o la punta de un panel entrando por un borde. El aparato NO se ve entero: esta viñeta es de la Tierra, no del aparato.
+
+DÓNDE ESTÁ EL APARATO (regla de la serie): a partir de la viñeta 4 el aparato está SIEMPRE
+fuera de la Tierra —en vuelo, en órbita o en el destino—. Nada de interiores: ni salas
+blancas, ni laboratorios, ni talleres, ni salas de control, ni gente con bata alrededor.
+
+AMBIENTACIÓN DE EXTERIOR (no improvisar): año 2001, pero en el vacío o en el destino. Sin
+atmósfera no hay cielo azul: el fondo es negro con estrellas o el terreno desnudo del destino.
+Luz dura de una sola dirección, sombras muy marcadas y limpias. Sin polvo ambiental, sin niebla,
+sin reflejos de ventana. Ninguna persona alrededor.
+
+PROHIBIDO: pantallas planas, luces LED, portátiles actuales, tablets, móviles, cámaras
+digitales modernas, proyectores de vídeo, relojes digitales, ropa deportiva actual,
+auriculares inalámbricos, logotipos de marcas y cualquier texto. En el lanzamiento, tampoco:
+el aparato montado por fuera del cohete, con paneles o antena desplegados. Desde la viñeta 4:
+interiores de cualquier tipo, salas blancas, laboratorios, talleres, salas de control,
+pantallas de control, pizarras y personas con bata alrededor del aparato.
+
+No incluyas texto, letras, números, logotipos ni firmas en la imagen.
+
+------------------------------------------------------------------------------
+VIÑETA 7 de 10 · LO QUE HIZO · su trabajo
+------------------------------------------------------------------------------
+Viñeta de cómic documental, color plano, formato vertical 3:4, sin texto.
+
+ESTILO: línea clara negra de grosor variable sobre papel hueso #F2EBDC, relleno plano sin
+degradados, sombras con trama de puntos del mismo tono. Paleta cerrada: papel hueso #F2EBDC,
+azul noche #14213D, cian #63E0C8, ocre dorado #C9A227, rojo #C1442E, negro tinta #1B1B1B solo
+en la línea. Cómic europeo claro, figuras humanas proporcionadas, sin caricatura, perspectiva
+correcta y escala real entre el aparato y las personas. Sin marcos, sin firmas, sin marcas de
+agua.
+
+APARATO EN ESTA VIÑETA: APARECE según la escena elegida.
+
+FIDELIDAD: el aparato de la lámina adjunta, con el MISMO número y la MISMA posición de paneles solares, antena y mantas térmicas: cuenta las alas y los mástiles del dibujo de referencia y repite esa cifra exacta, sin añadir ni quitar ninguna. La antena es la de la lámina y solo esa: si en la referencia no hay una parabólica grande, NO dibujes ninguna parabólica grande. Si el aparato no se parece al de la referencia, la viñeta no vale.
+
+ENCUADRE: plano medio cercano al destino: si el aparato está posado o sobre una superficie, a ras del suelo con su sombra sobre el terreno y el horizonte al fondo; si orbita, en órbita baja con la superficie del destino pasando justo debajo. Interiores y salas, prohibidos
+
+ESCENA: UNA sola escena, sin alternativas: Mi encargo — Medir el fondo cósmico de microondas para sacar de ahí los parámetros del universo, su edad y su composición. Se dibuja el APARATO EN EL DESTINO haciendo ese trabajo —que es justo para lo que se construyó: Medir el fondo cósmico de microondas para sacar de ahí los parámetros del universo, su edad y su composición—, de cerca y sin nadie alrededor: nada de salas de reuniones, conferencias, aulas ni gente sentada. Sin apoyarse en nada: el aparato suspendido sobre el paisaje del destino, que pasa justo debajo, y su sombra proyectada sobre el terreno o sobre las nubes.
+
+DÓNDE ESTÁ EL APARATO (regla de la serie): a partir de la viñeta 4 el aparato está SIEMPRE
+fuera de la Tierra —en vuelo, en órbita o en el destino—. Nada de interiores: ni salas
+blancas, ni laboratorios, ni talleres, ni salas de control, ni gente con bata alrededor.
+
+AMBIENTACIÓN DE EXTERIOR (no improvisar): año 2001, pero en el vacío o en el destino. Sin
+atmósfera no hay cielo azul: el fondo es negro con estrellas o el terreno desnudo del destino.
+Luz dura de una sola dirección, sombras muy marcadas y limpias. Sin polvo ambiental, sin niebla,
+sin reflejos de ventana. Ninguna persona alrededor.
+
+PROHIBIDO: pantallas planas, luces LED, portátiles actuales, tablets, móviles, cámaras
+digitales modernas, proyectores de vídeo, relojes digitales, ropa deportiva actual,
+auriculares inalámbricos, logotipos de marcas y cualquier texto. En el lanzamiento, tampoco:
+el aparato montado por fuera del cohete, con paneles o antena desplegados. Desde la viñeta 4:
+interiores de cualquier tipo, salas blancas, laboratorios, talleres, salas de control,
+pantallas de control, pizarras y personas con bata alrededor del aparato.
+
+No incluyas texto, letras, números, logotipos ni firmas en la imagen.
+
+------------------------------------------------------------------------------
+VIÑETA 8 de 10 · EL FINAL · cómo acabó la misión
+------------------------------------------------------------------------------
+Viñeta de cómic documental, color plano, formato vertical 3:4, sin texto.
+
+ESTILO: línea clara negra de grosor variable sobre papel hueso #F2EBDC, relleno plano sin
+degradados, sombras con trama de puntos del mismo tono. Paleta cerrada: papel hueso #F2EBDC,
+azul noche #14213D, cian #63E0C8, ocre dorado #C9A227, rojo #C1442E, negro tinta #1B1B1B solo
+en la línea. Cómic europeo claro, figuras humanas proporcionadas, sin caricatura, perspectiva
+correcta y escala real entre el aparato y las personas. Sin marcos, sin firmas, sin marcas de
+agua.
+
+APARATO EN ESTA VIÑETA: APARECE entero y quieto, sin luz de instrumentos.
+
+FIDELIDAD: el aparato de la lámina adjunta, con el MISMO número y la MISMA posición de paneles solares, antena y mantas térmicas: cuenta las alas y los mástiles del dibujo de referencia y repite esa cifra exacta, sin añadir ni quitar ninguna. La antena es la de la lámina y solo esa: si en la referencia no hay una parabólica grande, NO dibujes ninguna parabólica grande. Si el aparato no se parece al de la referencia, la viñeta no vale.
+
+ENCUADRE: plano general muy abierto, en el que el aparato es DIMINUTO y casi se pierde entre las estrellas o sobre el paisaje: el vacío manda en el encuadre y el aparato es una figura pequeña, sin nadie
+
+ESCENA: el final: Tomó la foto más antigua del universo y se jubiló en 2010. El aparato solo, en el destino, sin nadie alrededor y sin señales de actividad.
+
+DÓNDE ESTÁ EL APARATO (regla de la serie): a partir de la viñeta 4 el aparato está SIEMPRE
+fuera de la Tierra —en vuelo, en órbita o en el destino—. Nada de interiores: ni salas
+blancas, ni laboratorios, ni talleres, ni salas de control, ni gente con bata alrededor.
+
+AMBIENTACIÓN DE EXTERIOR (no improvisar): año 2001, pero en el vacío o en el destino. Sin
+atmósfera no hay cielo azul: el fondo es negro con estrellas o el terreno desnudo del destino.
+Luz dura de una sola dirección, sombras muy marcadas y limpias. Sin polvo ambiental, sin niebla,
+sin reflejos de ventana. Ninguna persona alrededor.
+
+PROHIBIDO: pantallas planas, luces LED, portátiles actuales, tablets, móviles, cámaras
+digitales modernas, proyectores de vídeo, relojes digitales, ropa deportiva actual,
+auriculares inalámbricos, logotipos de marcas y cualquier texto. En el lanzamiento, tampoco:
+el aparato montado por fuera del cohete, con paneles o antena desplegados. Desde la viñeta 4:
+interiores de cualquier tipo, salas blancas, laboratorios, talleres, salas de control,
+pantallas de control, pizarras y personas con bata alrededor del aparato.
+
+No incluyas texto, letras, números, logotipos ni firmas en la imagen.
+
+------------------------------------------------------------------------------
+VIÑETA 9 de 10 · LO QUE QUEDA · dónde está ahora
+------------------------------------------------------------------------------
+Viñeta de cómic documental, color plano, formato vertical 3:4, sin texto.
+
+ESTILO: línea clara negra de grosor variable sobre papel hueso #F2EBDC, relleno plano sin
+degradados, sombras con trama de puntos del mismo tono. Paleta cerrada: papel hueso #F2EBDC,
+azul noche #14213D, cian #63E0C8, ocre dorado #C9A227, rojo #C1442E, negro tinta #1B1B1B solo
+en la línea. Cómic europeo claro, figuras humanas proporcionadas, sin caricatura, perspectiva
+correcta y escala real entre el aparato y las personas. Sin marcos, sin firmas, sin marcas de
+agua.
+
+APARATO EN ESTA VIÑETA: APARECE muy recortado: solo una pieza o una esquina, para que se reconozca por el detalle y no por el conjunto.
+
+FIDELIDAD: el aparato de la lámina adjunta, con el MISMO número y la MISMA posición de paneles solares, antena y mantas térmicas: cuenta las alas y los mástiles del dibujo de referencia y repite esa cifra exacta, sin añadir ni quitar ninguna. La antena es la de la lámina y solo esa: si en la referencia no hay una parabólica grande, NO dibujes ninguna parabólica grande. Si el aparato no se parece al de la referencia, la viñeta no vale.
+
+ENCUADRE: plano muy cerrado de una sola pieza del aparato, la luz ya apagada, con la superficie del destino fuera de foco al fondo
+
+ESCENA: En una órbita de aparcamiento alrededor del Sol desde septiembre de 2010 · el aparato apagado o destruido, sin ninguna luz. Se cuenta con un detalle muy cerrado del aparato, no con el conjunto: así se reconoce sin repetir las viñetas anteriores.
+
+DÓNDE ESTÁ EL APARATO (regla de la serie): a partir de la viñeta 4 el aparato está SIEMPRE
+fuera de la Tierra —en vuelo, en órbita o en el destino—. Nada de interiores: ni salas
+blancas, ni laboratorios, ni talleres, ni salas de control, ni gente con bata alrededor.
+
+AMBIENTACIÓN DE EXTERIOR (no improvisar): año 2001, pero en el vacío o en el destino. Sin
+atmósfera no hay cielo azul: el fondo es negro con estrellas o el terreno desnudo del destino.
+Luz dura de una sola dirección, sombras muy marcadas y limpias. Sin polvo ambiental, sin niebla,
+sin reflejos de ventana. Ninguna persona alrededor.
+
+PROHIBIDO: pantallas planas, luces LED, portátiles actuales, tablets, móviles, cámaras
+digitales modernas, proyectores de vídeo, relojes digitales, ropa deportiva actual,
+auriculares inalámbricos, logotipos de marcas y cualquier texto. En el lanzamiento, tampoco:
+el aparato montado por fuera del cohete, con paneles o antena desplegados. Desde la viñeta 4:
+interiores de cualquier tipo, salas blancas, laboratorios, talleres, salas de control,
+pantallas de control, pizarras y personas con bata alrededor del aparato.
+
+No incluyas texto, letras, números, logotipos ni firmas en la imagen.
+
+------------------------------------------------------------------------------
+VIÑETA 10 de 10 · CIERRE · franja apaisada con la frase final
+------------------------------------------------------------------------------
+Franja de cómic documental, color plano, formato horizontal apaisado 6:1, sin texto.
+
+ESTILO: línea clara negra de grosor variable, relleno plano. Paleta cerrada: azul noche
+#14213D de fondo, negro tinta #1B1B1B para la línea, cian #63E0C8 para un único punto de luz,
+papel hueso #F2EBDC para las estrellas. Sin marcos, sin firmas.
+
+APARATO: APARECE solo como silueta en línea fina, sin relleno.
+
+ESCENA: franja 6:1 casi vacía: la silueta del aparato en línea fina a la izquierda y el resto libre para la frase de cierre
+
+No incluyas texto, letras, números, logotipos ni firmas en la imagen.
+
+FUENTES DE LOS DATOS DE ESTE OBJETO
+  · https://science.nasa.gov/mission/wmap/wmap-overview/
+  · https://www.nasa.gov/centers-and-facilities/goddard/nasas-wmap-project-completes-satellite-operations/
+  · https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2001-027A
+
+CUANDO TENGAS LAS DIEZ: pásamelas y escribo los textos de los bocadillos y las
+cartelas en español, inglés y alemán, y monto la página A4 y la versión web.
