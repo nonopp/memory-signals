@@ -1,3 +1,8 @@
+## v3.30.0 — 2026-11-23
+
+- **Los fondos de los once objetos nuevos, en los tres idiomas**: los sketches técnicos de Landsat 1 a 5, Jason-1, QuikSCAT, SeaStar, SORCE, SWAS y WIRE, con las anotaciones en español, inglés y alemán. 33 imágenes a 1920 x 1080, entre 356 y 468 KB cada una.
+- El catálogo queda con **sketch en el 100 % de los objetos**: 53 de 53. Cada uno con su botón «Sketch» y su dibujo de fondo en la ficha.
+
 ## v3.29.2 — 2026-11-23
 
 - Corregida la altura de los dos pines de los paneles de **SeaStar**: estaban a 20 unidades y los paneles van en un plano a 1,2, así que no se veían sobre el ala. Ahora caen encima de los dos brazos del aspa.

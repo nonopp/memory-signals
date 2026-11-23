@@ -419,5 +419,115 @@
   },
   "ancho": 1920,
   "alto": 1080
+ },
+ "landsat-1": {
+  "archivo": "img/fondo-landsat-1.jpg",
+  "archivos": {
+   "es": "img/fondo-landsat-1.jpg",
+   "en": "img/fondo-landsat-1.en.jpg",
+   "de": "img/fondo-landsat-1.de.jpg"
+  },
+  "ancho": 1920,
+  "alto": 1080
+ },
+ "landsat-2": {
+  "archivo": "img/fondo-landsat-2.jpg",
+  "archivos": {
+   "es": "img/fondo-landsat-2.jpg",
+   "en": "img/fondo-landsat-2.en.jpg",
+   "de": "img/fondo-landsat-2.de.jpg"
+  },
+  "ancho": 1920,
+  "alto": 1080
+ },
+ "landsat-3": {
+  "archivo": "img/fondo-landsat-3.jpg",
+  "archivos": {
+   "es": "img/fondo-landsat-3.jpg",
+   "en": "img/fondo-landsat-3.en.jpg",
+   "de": "img/fondo-landsat-3.de.jpg"
+  },
+  "ancho": 1920,
+  "alto": 1080
+ },
+ "landsat-4": {
+  "archivo": "img/fondo-landsat-4.jpg",
+  "archivos": {
+   "es": "img/fondo-landsat-4.jpg",
+   "en": "img/fondo-landsat-4.en.jpg",
+   "de": "img/fondo-landsat-4.de.jpg"
+  },
+  "ancho": 1920,
+  "alto": 1080
+ },
+ "landsat-5": {
+  "archivo": "img/fondo-landsat-5.jpg",
+  "archivos": {
+   "es": "img/fondo-landsat-5.jpg",
+   "en": "img/fondo-landsat-5.en.jpg",
+   "de": "img/fondo-landsat-5.de.jpg"
+  },
+  "ancho": 1920,
+  "alto": 1080
+ },
+ "jason-1": {
+  "archivo": "img/fondo-jason-1.jpg",
+  "archivos": {
+   "es": "img/fondo-jason-1.jpg",
+   "en": "img/fondo-jason-1.en.jpg",
+   "de": "img/fondo-jason-1.de.jpg"
+  },
+  "ancho": 1920,
+  "alto": 1080
+ },
+ "quikscat": {
+  "archivo": "img/fondo-quikscat.jpg",
+  "archivos": {
+   "es": "img/fondo-quikscat.jpg",
+   "en": "img/fondo-quikscat.en.jpg",
+   "de": "img/fondo-quikscat.de.jpg"
+  },
+  "ancho": 1920,
+  "alto": 1080
+ },
+ "seastar": {
+  "archivo": "img/fondo-seastar.jpg",
+  "archivos": {
+   "es": "img/fondo-seastar.jpg",
+   "en": "img/fondo-seastar.en.jpg",
+   "de": "img/fondo-seastar.de.jpg"
+  },
+  "ancho": 1920,
+  "alto": 1080
+ },
+ "sorce": {
+  "archivo": "img/fondo-sorce.jpg",
+  "archivos": {
+   "es": "img/fondo-sorce.jpg",
+   "en": "img/fondo-sorce.en.jpg",
+   "de": "img/fondo-sorce.de.jpg"
+  },
+  "ancho": 1920,
+  "alto": 1080
+ },
+ "swas": {
+  "archivo": "img/fondo-swas.jpg",
+  "archivos": {
+   "es": "img/fondo-swas.jpg",
+   "en": "img/fondo-swas.en.jpg",
+   "de": "img/fondo-swas.de.jpg"
+  },
+  "ancho": 1920,
+  "alto": 1080
+ },
+ "wire": {
+  "archivo": "img/fondo-wire.jpg",
+  "archivos": {
+   "es": "img/fondo-wire.jpg",
+   "en": "img/fondo-wire.en.jpg",
+   "de": "img/fondo-wire.de.jpg"
+  },
+  "ancho": 1920,
+  "alto": 1080
  }
 }
