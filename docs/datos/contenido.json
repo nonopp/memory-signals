@@ -6879,7 +6879,68 @@
    "mapa": {
     "tipo": "espacio"
    },
-   "puntos3d": [],
+   "puntos3d": [
+    {
+     "id": "cuerpo",
+     "pos": [
+      0.0,
+      0.9,
+      0.4
+     ],
+     "normal": [
+      0.0,
+      0.91,
+      0.41
+     ],
+     "titulo": "El cuerpo",
+     "texto": "Mi cuerpo venía del diseño de los satélites meteorológicos Nimbus, una estructura ya probada en órbita. Sobre esa base se montó todo lo que después cambió la forma de mirar la Tierra."
+    },
+    {
+     "id": "alas",
+     "pos": [
+      -0.02,
+      3.8,
+      1.8
+     ],
+     "normal": [
+      -0.0,
+      0.9,
+      0.43
+     ],
+     "titulo": "Las alas solares",
+     "texto": "Dos alas solares me daban la corriente que necesitaban mis instrumentos. Estaba diseñado para un año, y aguanté cinco años y medio."
+    },
+    {
+     "id": "mss",
+     "pos": [
+      0.0,
+      0.9,
+      -1.2
+     ],
+     "normal": [
+      0.0,
+      0.6,
+      -0.8
+     ],
+     "titulo": "El escáner multiespectral",
+     "texto": "El MSS entregó mi primera imagen el 25 de julio de 1972: el área de Dallas-Fort Worth, en falso color. Con él llegué a más de 300.000 escenas."
+    },
+    {
+     "id": "rbv",
+     "pos": [
+      0.7,
+      0.9,
+      -0.7
+     ],
+     "normal": [
+      0.52,
+      0.67,
+      -0.52
+     ],
+     "titulo": "Las cámaras RBV",
+     "texto": "Llevaba además tres cámaras de tubo, las RBV, con las que se podía fotografiar la Tierra. Se usaron menos que el escáner."
+    }
+   ],
    "personas": [
     {
      "nombre": "Virginia T. Norwood",
@@ -6961,7 +7022,68 @@
    "mapa": {
     "tipo": "espacio"
    },
-   "puntos3d": [],
+   "puntos3d": [
+    {
+     "id": "cuerpo",
+     "pos": [
+      0.0,
+      0.9,
+      0.4
+     ],
+     "normal": [
+      0.0,
+      0.91,
+      0.41
+     ],
+     "titulo": "El cuerpo",
+     "texto": "Mi cuerpo y mis instrumentos eran los mismos que los de mi hermano. Esa igualdad era el plan: nuestras fotos tenían que poder compararse sin dudar del aparato."
+    },
+    {
+     "id": "alas",
+     "pos": [
+      -0.02,
+      3.8,
+      1.8
+     ],
+     "normal": [
+      -0.0,
+      0.9,
+      0.43
+     ],
+     "titulo": "Las alas solares",
+     "texto": "Dos alas solares y un año de vida prevista, como Landsat 1. Al final duré siete."
+    },
+    {
+     "id": "mss",
+     "pos": [
+      0.0,
+      0.9,
+      -1.2
+     ],
+     "normal": [
+      0.0,
+      0.6,
+      -0.8
+     ],
+     "titulo": "El escáner multiespectral",
+     "texto": "Mi escáner repetía la misma medida que el de Landsat 1, en la misma franja y con los mismos filtros, para que el registro no se rompiera cuando él fallara."
+    },
+    {
+     "id": "rbv",
+     "pos": [
+      0.7,
+      0.9,
+      -0.7
+     ],
+     "normal": [
+      0.52,
+      0.67,
+      -0.52
+     ],
+     "titulo": "Las cámaras RBV",
+     "texto": "Con mis cámaras y mi escáner se alimentó el primer gran inventario de cosechas, centrado en el trigo, que demostró que se podía prever una cosecha con un año de antelación."
+    }
+   ],
    "personas": [
     {
      "nombre": "Charles M. MacKenzie",
@@ -7043,7 +7165,68 @@
    "mapa": {
     "tipo": "espacio"
    },
-   "puntos3d": [],
+   "puntos3d": [
+    {
+     "id": "cuerpo",
+     "pos": [
+      0.0,
+      0.9,
+      0.4
+     ],
+     "normal": [
+      0.0,
+      0.91,
+      0.41
+     ],
+     "titulo": "El cuerpo",
+     "texto": "El cuerpo era el mismo de la serie, pero mi RBV se rediseñó con dos cámaras pancromáticas capaces de 40 metros, el doble de detalle que mis hermanos."
+    },
+    {
+     "id": "alas",
+     "pos": [
+      -0.02,
+      3.8,
+      1.8
+     ],
+     "normal": [
+      -0.0,
+      0.9,
+      0.43
+     ],
+     "titulo": "Las alas solares",
+     "texto": "Mis alas solares eran las mismas de la serie. Con su energía seguí observando hasta que me dejaron en espera en marzo de 1983."
+    },
+    {
+     "id": "mss",
+     "pos": [
+      0.0,
+      0.9,
+      -1.2
+     ],
+     "normal": [
+      0.0,
+      0.6,
+      -0.8
+     ],
+     "titulo": "El escáner multiespectral",
+     "texto": "Mi escáner tenía una banda más que los de mis hermanos. La quinta, la térmica, se estropeó poco después del lanzamiento y nunca pude entregar imágenes de calor."
+    },
+    {
+     "id": "rbv",
+     "pos": [
+      0.7,
+      0.9,
+      -0.7
+     ],
+     "normal": [
+      0.52,
+      0.67,
+      -0.52
+     ],
+     "titulo": "Las cámaras pancromáticas",
+     "texto": "Mis dos cámaras pancromáticas fueron mi mejor instrumento: 40 metros de detalle en una sola banda, con las que se afinaría la cartografía."
+    }
+   ],
    "personas": [
     {
      "nombre": "Stanley C. Freden",
@@ -7121,7 +7304,68 @@
    "mapa": {
     "tipo": "espacio"
    },
-   "puntos3d": [],
+   "puntos3d": [
+    {
+     "id": "cuerpo",
+     "pos": [
+      0.2,
+      0.5,
+      -0.05
+     ],
+     "normal": [
+      0.37,
+      0.92,
+      -0.09
+     ],
+     "titulo": "El cuerpo",
+     "texto": "Mi cuerpo era el módulo MMS, más ligero y pensado para poder cambiar de instrumentos. Con él bajé la órbita a 705 kilómetros."
+    },
+    {
+     "id": "ala",
+     "pos": [
+      -0.1,
+      0.08,
+      2.5
+     ],
+     "normal": [
+      -0.04,
+      0.03,
+      1.0
+     ],
+     "titulo": "El ala solar",
+     "texto": "Llevaba una sola ala solar grande en un lateral, en lugar de las dos que llevaban mis hermanos."
+    },
+    {
+     "id": "tm",
+     "pos": [
+      0.5,
+      -0.08,
+      0.06
+     ],
+     "normal": [
+      0.98,
+      -0.16,
+      0.12
+     ],
+     "titulo": "El Thematic Mapper",
+     "texto": "El Thematic Mapper, con siete bandas y 30 metros de detalle, entregó el 25 de julio de 1982 la primera imagen del programa en color natural."
+    },
+    {
+     "id": "nadir",
+     "pos": [
+      0.2,
+      -0.36,
+      -0.05
+     ],
+     "normal": [
+      0.48,
+      -0.87,
+      -0.12
+     ],
+     "titulo": "La mirada al nadir",
+     "texto": "El instrumento miraba al suelo sin descanso: su banda térmica medía el calor de la superficie con 120 metros por píxel."
+    }
+   ],
    "personas": [
     {
      "nombre": "Howard Heuberger",
@@ -7199,7 +7443,68 @@
    "mapa": {
     "tipo": "espacio"
    },
-   "puntos3d": [],
+   "puntos3d": [
+    {
+     "id": "cuerpo",
+     "pos": [
+      0.2,
+      0.5,
+      -0.05
+     ],
+     "normal": [
+      0.37,
+      0.92,
+      -0.09
+     ],
+     "titulo": "El cuerpo",
+     "texto": "El mismo bus modular que Landsat 4, con sitio para el escáner y para el Thematic Mapper."
+    },
+    {
+     "id": "ala",
+     "pos": [
+      -0.1,
+      0.08,
+      2.5
+     ],
+     "normal": [
+      -0.04,
+      0.03,
+      1.0
+     ],
+     "titulo": "El ala solar",
+     "texto": "Una sola ala solar a un lado. Con ella aguanté casi veintinueve años en servicio."
+    },
+    {
+     "id": "tm",
+     "pos": [
+      0.5,
+      -0.08,
+      0.06
+     ],
+     "normal": [
+      0.98,
+      -0.16,
+      0.12
+     ],
+     "titulo": "El Thematic Mapper",
+     "texto": "Mi Thematic Mapper captó el 6 de marzo de 1984 el lago Superior helado. Sumé 3.870.273 escenas: el archivo que hoy sigue consultándose."
+    },
+    {
+     "id": "nadir",
+     "pos": [
+      0.2,
+      -0.36,
+      -0.05
+     ],
+     "normal": [
+      0.48,
+      -0.87,
+      -0.12
+     ],
+     "titulo": "La mirada al nadir",
+     "texto": "Miraba al nadir con 30 metros por píxel en el visible y 120 en la banda térmica. De ahí salieron casi cuatro millones de fotos de la Tierra."
+    }
+   ],
    "personas": [
     {
      "nombre": "Jim Irons",
@@ -7273,7 +7578,83 @@
    "mapa": {
     "tipo": "espacio"
    },
-   "puntos3d": [],
+   "puntos3d": [
+    {
+     "id": "cuerpo",
+     "pos": [
+      0.0,
+      37.6,
+      0.0
+     ],
+     "normal": [
+      0.0,
+      1.0,
+      0.0
+     ],
+     "titulo": "El cuerpo",
+     "texto": "Mi cuerpo era una caja compacta de la NASA y el CNES, con los instrumentos de altimetría en la cara que miraba al mar."
+    },
+    {
+     "id": "altimetro",
+     "pos": [
+      -70.0,
+      37.75,
+      0.0
+     ],
+     "normal": [
+      -0.88,
+      0.47,
+      0.0
+     ],
+     "titulo": "El altímetro Poseidón-2",
+     "texto": "El Poseidón-2 emitía en dos frecuencias para medir el nivel del mar sin que el vapor de agua falseara la medida."
+    },
+    {
+     "id": "ala",
+     "pos": [
+      0.75,
+      -19.8,
+      290.0
+     ],
+     "normal": [
+      0.0,
+      -0.07,
+      1.0
+     ],
+     "titulo": "El ala solar",
+     "texto": "Mis dos alas solares se desplegaron ya en órbita. Con su energía volví a volar sobre la misma traza que TOPEX/Poseidon, un minuto por delante."
+    },
+    {
+     "id": "ala2",
+     "pos": [
+      0.75,
+      -19.8,
+      -290.0
+     ],
+     "normal": [
+      0.0,
+      -0.07,
+      -1.0
+     ],
+     "titulo": "El ala de babor",
+     "texto": "Volé así casi un año y medio, en pareja con mi predecesor, para comparar las dos medidas en las mismas condiciones y empalmar veinte años de registro sin saltos."
+    },
+    {
+     "id": "base",
+     "pos": [
+      0.0,
+      -70.0,
+      0.0
+     ],
+     "normal": [
+      0.0,
+      -1.0,
+      0.0
+     ],
+     "titulo": "La cara de tierra",
+     "texto": "Abajo llevaba el retroreflector láser y las antenas de DORIS, con las que las estaciones de tierra me seguían y me corregían la órbita."
+    }
+   ],
    "personas": [
     {
      "nombre": "Lee-Lueng Fu",
@@ -7351,7 +7732,83 @@
    "mapa": {
     "tipo": "espacio"
    },
-   "puntos3d": [],
+   "puntos3d": [
+    {
+     "id": "antena",
+     "pos": [
+      0.0,
+      1.21,
+      0.05
+     ],
+     "normal": [
+      0.0,
+      1.0,
+      0.04
+     ],
+     "titulo": "La antena del dispersómetro",
+     "texto": "Mi antena de dispersómetro giraba sin parar y barría una franja de 1.800 kilómetros de ancho, con unas 400.000 mediciones de viento al día."
+    },
+    {
+     "id": "cuerpo",
+     "pos": [
+      0.0,
+      -0.38,
+      0.0
+     ],
+     "normal": [
+      0.0,
+      -1.0,
+      0.0
+     ],
+     "titulo": "El cuerpo",
+     "texto": "Mi cuerpo era una caja de recuperación rápida: se construyó en poco tiempo para tapar el hueco que había dejado NSCAT."
+    },
+    {
+     "id": "ala",
+     "pos": [
+      3.7,
+      0.7,
+      0.0
+     ],
+     "normal": [
+      0.98,
+      0.19,
+      0.0
+     ],
+     "titulo": "El ala de estribor",
+     "texto": "Los paneles me daban la energía. Yo no necesitaba apuntar: mi antena medía rozando el mar, de día y de noche y a través de las nubes."
+    },
+    {
+     "id": "ala2",
+     "pos": [
+      -3.7,
+      0.7,
+      0.0
+     ],
+     "normal": [
+      -0.98,
+      0.19,
+      0.0
+     ],
+     "titulo": "El ala de babor",
+     "texto": "Con la antena girando gastaba casi toda mi potencia. Aun así operé diez años, frente a los dos o tres que se esperaban de mí."
+    },
+    {
+     "id": "nadir",
+     "pos": [
+      0.0,
+      -2.4,
+      0.0
+     ],
+     "normal": [
+      0.0,
+      -1.0,
+      0.0
+     ],
+     "titulo": "La cara al nadir",
+     "texto": "En noviembre de 2009 se secó el lubricante de la antena y dejé de poder medir el viento. Seguí encendido nueve años más, sirviendo de regla de calibración a otros dispersómetros."
+    }
+   ],
    "personas": [
     {
      "nombre": "Michael Freilich",
@@ -7433,7 +7890,68 @@
    "mapa": {
     "tipo": "espacio"
    },
-   "puntos3d": [],
+   "puntos3d": [
+    {
+     "id": "cuerpo",
+     "pos": [
+      0.0,
+      60.0,
+      0.0
+     ],
+     "normal": [
+      0.0,
+      1.0,
+      0.0
+     ],
+     "titulo": "El cuerpo",
+     "texto": "Mi cuerpo era pequeño, del tamaño de un armario. Casi todo lo que llevaba dentro era el sensor SeaWiFS."
+    },
+    {
+     "id": "sensor",
+     "pos": [
+      0.0,
+      83.0,
+      0.0
+     ],
+     "normal": [
+      0.0,
+      1.0,
+      0.0
+     ],
+     "titulo": "El sensor SeaWiFS",
+     "texto": "El SeaWiFS miraba al mar en ocho bandas, entre 402 y 885 nanómetros, y con ese color se calcula la clorofila del agua."
+    },
+    {
+     "id": "panel",
+     "pos": [
+      -90.0,
+      20.0,
+      0.0
+     ],
+     "normal": [
+      -0.98,
+      0.22,
+      0.0
+     ],
+     "titulo": "El panel solar",
+     "texto": "Cuatro paneles en aspa me daban la corriente. Fueron suficientes para trece años, frente a los cinco que se esperaban."
+    },
+    {
+     "id": "panel2",
+     "pos": [
+      90.0,
+      20.0,
+      0.0
+     ],
+     "normal": [
+      0.98,
+      0.22,
+      0.0
+     ],
+     "titulo": "El otro panel",
+     "texto": "Con esa mirada continua se vio por primera vez cómo cambia la vida del océano con las estaciones y con El Niño."
+    }
+   ],
    "personas": [
     {
      "nombre": "Gene Carl Feldman",
@@ -7507,7 +8025,68 @@
    "mapa": {
     "tipo": "espacio"
    },
-   "puntos3d": [],
+   "puntos3d": [
+    {
+     "id": "cuerpo",
+     "pos": [
+      0.0,
+      -10.0,
+      0.0
+     ],
+     "normal": [
+      0.0,
+      -1.0,
+      0.0
+     ],
+     "titulo": "El cuerpo",
+     "texto": "Mi cuerpo era una caja compacta con cuatro instrumentos, y todos miraban al mismo sitio: el Sol."
+    },
+    {
+     "id": "instrumentos",
+     "pos": [
+      0.0,
+      35.8,
+      0.0
+     ],
+     "normal": [
+      0.0,
+      1.0,
+      0.0
+     ],
+     "titulo": "Los cuatro instrumentos",
+     "texto": "Medía la energía del Sol en rayos X, ultravioleta, visible e infrarrojo, y también la radiación total que llega a la Tierra."
+    },
+    {
+     "id": "panel",
+     "pos": [
+      100.0,
+      35.8,
+      40.0
+     ],
+     "normal": [
+      0.88,
+      0.32,
+      0.35
+     ],
+     "titulo": "El panel solar",
+     "texto": "Seis paneles en aspa me daban la corriente. No necesitaba apuntar con precisión: miraba al Sol sin moverme."
+    },
+    {
+     "id": "panel2",
+     "pos": [
+      -100.0,
+      35.8,
+      -40.0
+     ],
+     "normal": [
+      -0.88,
+      0.32,
+      -0.35
+     ],
+     "titulo": "El otro panel",
+     "texto": "Estuve diecisiete años midiendo, más de un ciclo solar completo, hasta que me apagaron en febrero de 2020."
+    }
+   ],
    "personas": [
     {
      "nombre": "Gary J. Rottman",
@@ -7589,7 +8168,68 @@
    "mapa": {
     "tipo": "espacio"
    },
-   "puntos3d": [],
+   "puntos3d": [
+    {
+     "id": "telescopio",
+     "pos": [
+      0.0,
+      18.0,
+      0.0
+     ],
+     "normal": [
+      0.0,
+      1.0,
+      0.0
+     ],
+     "titulo": "El telescopio",
+     "texto": "Mi telescopio submilimétrico medía 55 por 71 centímetros y buscaba agua y oxígeno molecular en las nubes donde nacen las estrellas."
+    },
+    {
+     "id": "cuerpo",
+     "pos": [
+      -1.0,
+      0.0,
+      0.0
+     ],
+     "normal": [
+      -1.0,
+      0.0,
+      0.0
+     ],
+     "titulo": "El cuerpo",
+     "texto": "Dentro de mi cuerpo iban receptores enfriados para oír señales muy débiles, las del gas frío de la Vía Láctea."
+    },
+    {
+     "id": "panel",
+     "pos": [
+      -5.9,
+      2.4,
+      35.0
+     ],
+     "normal": [
+      -0.17,
+      0.07,
+      0.98
+     ],
+     "titulo": "El panel solar",
+     "texto": "Cuatro paneles solares en dos brazos me daban la corriente. Con ellos cartografié más de cien nubes moleculares."
+    },
+    {
+     "id": "panel2",
+     "pos": [
+      -5.9,
+      2.4,
+      -35.0
+     ],
+     "normal": [
+      -0.17,
+      0.07,
+      -0.98
+     ],
+     "titulo": "El otro panel",
+     "texto": "En junio de 2005 me despertaron para medir el agua del cometa Tempel 1 antes, durante y después del impacto de Deep Impact."
+    }
+   ],
    "personas": [
     {
      "nombre": "Gary J. Melnick",
@@ -7667,7 +8307,68 @@
    "mapa": {
     "tipo": "espacio"
    },
-   "puntos3d": [],
+   "puntos3d": [
+    {
+     "id": "telescopio",
+     "pos": [
+      0.0,
+      12.0,
+      0.0
+     ],
+     "normal": [
+      0.0,
+      1.0,
+      0.0
+     ],
+     "titulo": "El telescopio",
+     "texto": "Mi telescopio tenía 30 centímetros de apertura y un campo de 32 por 32 minutos de arco, pensado para contar galaxias con brotes de formación estelar."
+    },
+    {
+     "id": "cuerpo",
+     "pos": [
+      0.0,
+      -14.0,
+      0.0
+     ],
+     "normal": [
+      0.0,
+      -1.0,
+      0.0
+     ],
+     "titulo": "El criostato",
+     "texto": "Detrás del telescopio llevaba un depósito de hidrógeno sólido, que era lo que debía mantenerlo helado."
+    },
+    {
+     "id": "panel",
+     "pos": [
+      14.0,
+      -5.0,
+      -8.5
+     ],
+     "normal": [
+      0.82,
+      -0.29,
+      -0.5
+     ],
+     "titulo": "El panel solar",
+     "texto": "Cuatro paneles solares me daban la energía. La necesitaba sobre todo para mantener el refrigerante."
+    },
+    {
+     "id": "panel2",
+     "pos": [
+      -14.0,
+      -5.0,
+      -8.5
+     ],
+     "normal": [
+      -0.82,
+      -0.29,
+      -0.5
+     ],
+     "titulo": "El otro panel",
+     "texto": "La cubierta del telescopio se soltó antes de tiempo: perdí el hidrógeno sólido en horas y con él todo mi programa infrarrojo."
+    }
+   ],
    "personas": [
     {
      "nombre": "Perry Hacking",

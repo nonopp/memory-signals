@@ -1,3 +1,9 @@
+## v3.29.0 — 2026-11-23
+
+- **Los once objetos nuevos ya tienen pines sobre el modelo**: entre cuatro y cinco por aparato, con el nombre de la pieza y una explicación corta en primera persona (el cuerpo, las alas solares, el escáner, el altímetro, la antena, el criostato…).
+- Cada pin está colocado **sobre la pieza real** del modelo oficial de la NASA, comprobado uno a uno abriendo el modelo y viendo dónde caía la chincheta antes de darlo por bueno.
+- El catálogo entero queda con pines: **53 de 53 objetos**.
+
 ## v3.28.1 — 2026-11-23
 
 - **Las once fichas nuevas ya están en los tres idiomas**: inglés y alemán añadidos al catálogo, traducidos con el mismo tono en primera persona y sin tocar cifras ni fechas. En inglés y alemán el catálogo pasa de 42 a **53 objetos** y el destino «otros» de 31 a **42**.

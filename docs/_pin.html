@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><title>pin</title>
+<style>
+ body{margin:0;background:#111}
+ model-viewer{width:660px;height:500px;background:#000}
+ .p{position:absolute;left:0;top:0;width:18px;height:18px;margin:-9px 0 0 -9px;border-radius:50%;
+    background:#ff3d3d;border:2px solid #fff;color:#fff;font:bold 10px/14px system-ui;text-align:center;
+    box-shadow:0 0 6px #000;z-index:9}
+</style>
+<script type="module" src="/js/model-viewer.min.js"></script>
+</head><body>
+<model-viewer id="mv" camera-controls interaction-prompt="none" shadow-intensity="0" exposure="1.1"
+  alt="" field-of-view="30deg" loading="eager" reveal="auto" style="width:660px;height:500px"></model-viewer>
+<script>
+const q = new URLSearchParams(location.search);
+const mv = document.getElementById('mv');
+mv.src = '/modelos/' + (q.get('m') || 'quikscat.glb');
+const orbit = q.get('o'); if (orbit) { mv.cameraOrbit = orbit; }
+window.__nube = function(nx, ny){
+  const r = mv.getBoundingClientRect(), pts = [];
+  for (let i=1;i<=nx;i++) for (let j=1;j<=ny;j++){
+    const p = mv.positionAndNormalFromPoint(Math.round(r.width*i/(nx+1)), Math.round(r.height*j/(ny+1)));
+    if (p && p.position) pts.push([p.position.x, p.position.y, p.position.z]);
+  }
+  return pts;
+};
+/* pone chinchetas en una lista de posiciones [[x,y,z],...] y devuelve cuántas */
+window.__pines = function(lista){
+  document.querySelectorAll('[slot^="hotspot"]').forEach(n=>n.remove());
+  lista.forEach((p,i)=>{
+    const b = document.createElement('div');
+    b.className='p'; b.setAttribute('slot','hotspot-'+i);
+    b.setAttribute('data-position', p.join(' '));
+    b.textContent = String(i+1);
+    mv.appendChild(b);
+  });
+  return lista.length;
+};
+/* dónde acaba cada chincheta en pantalla, en píxeles */
+window.__donde = function(){
+  return [...mv.querySelectorAll('[slot^="hotspot"]')].map(n=>{
+    const r = n.getBoundingClientRect(); return [Math.round(r.left+r.width/2), Math.round(r.top+r.height/2)];
+  });
+};
+window.__caja = function(){ const d = mv.getDimensions()||{}; return {s:[d.x,d.y,d.z]}; };
+window.__listo = false;
+mv.addEventListener('load', ()=>{ window.__listo = true; });
+</script>
+</body></html>

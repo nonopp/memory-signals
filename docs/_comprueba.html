@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><title>comprueba pines</title>
+<style>
+ body{margin:0;background:#0a0a0a;color:#eee;font:13px system-ui}
+ #r{display:grid;grid-template-columns:1fr 1fr;gap:2px}
+ .c{position:relative;background:#000}
+ model-viewer{display:block;width:100%;height:330px;background:#000}
+ .n{position:absolute;left:6px;top:3px;font:12px monospace;color:#6ff;z-index:5}
+ .p{position:absolute;left:0;top:0;width:18px;height:18px;margin:-9px 0 0 -9px;border-radius:50%;
+    background:#ff3d3d;border:2px solid #fff;color:#fff;font:bold 10px/14px system-ui;text-align:center;z-index:9}
+</style>
+<script type="module" src="/js/model-viewer.min.js"></script>
+</head><body>
+<div id="r"></div>
+<script>
+const SET = [
+ {m:'landsat-1-2-3-ligero.glb', o:'35deg 12deg auto', p:[[0,1.0,0],[-0.02,3.5,1.6],[0.2,-0.55,0.3],[0,1.9,-0.9]]},
+ {m:'landsat-4-5-ligero.glb',   o:'35deg 15deg auto', p:[[0.2,0.5,-0.05],[-0.1,0.08,2.2],[0.5,-0.08,0.06],[0.2,-0.36,-0.05]]},
+ {m:'jason-1.glb',              o:'40deg 15deg auto', p:[[0,37.6,0],[-54.8,37.75,0],[0.75,-19.8,290],[0.75,-19.8,-290],[0,-75,0]]},
+ {m:'quikscat.glb',             o:'35deg 15deg auto', p:[[0,1.21,0.05],[0,-0.38,0],[3.7,0.7,0],[-3.7,0.7,0],[0,-2.4,0]]},
+ {m:'seastar.glb',              o:'35deg 15deg auto', p:[[0,60,0],[0,83,0],[-90,20,0],[90,20,0]]},
+ {m:'sorce.glb',                o:'35deg 15deg auto', p:[[0,-10,0],[0,35.8,0],[100,35.8,40],[-100,35.8,-40]]},
+ {m:'swas.glb',                 o:'35deg 12deg auto', p:[[0,18,0],[-1,0,0],[-5.9,2.4,30],[-5.9,2.4,-30]]},
+ {m:'wire.glb',                 o:'35deg 15deg auto', p:[[0,15,0],[0,-12,0],[-14,-5,-8.5],[14,-5,-8.5]]}
+];
+const d = new URLSearchParams(location.search);
+const desde = +(d.get('desde')||0), hasta = +(d.get('hasta')||4);
+const rej = document.getElementById('r');
+SET.slice(desde,hasta).forEach(function(cfg){
+  const c = document.createElement('div'); c.className='c';
+  c.innerHTML = '<span class="n">'+cfg.m+'</span><model-viewer camera-orbit="'+cfg.o+
+    '" interaction-prompt="none" shadow-intensity="0" exposure="1.1" alt="" field-of-view="30deg" loading="eager" reveal="auto"></model-viewer>';
+  rej.appendChild(c);
+  const mv = c.querySelector('model-viewer');
+  mv.src = '/modelos/' + cfg.m;
+  mv.addEventListener('load', function(){
+    cfg.p.forEach(function(p,i){
+      const b=document.createElement('div'); b.className='p'; b.setAttribute('slot','hotspot-'+i);
+      b.setAttribute('data-position', p.join(' ')); b.textContent=String(i+1); mv.appendChild(b);
+    });
+  });
+});
+</script>
+</body></html>

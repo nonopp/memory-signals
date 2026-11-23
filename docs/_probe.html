@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8">
+<title>probe</title>
+<style>
+ body{margin:0;background:#111;color:#eee;font:13px system-ui;display:grid;grid-template-columns:repeat(2,1fr);gap:4px}
+ .c{position:relative;background:#000;border:1px solid #333}
+ model-viewer{width:100%;height:300px;background:#050505}
+ .n{position:absolute;left:6px;top:4px;font-size:13px;color:#7ff;z-index:5}
+</style>
+<script type="module" src="/js/model-viewer.min.js"></script>
+</head><body>
+<div id="rejilla"></div>
+<script>
+const modelos = [
+ ["landsat-1-2-3-ligero.glb","landsat 1-2-3"],
+ ["landsat-4-5-ligero.glb","landsat 4-5"],
+ ["jason-1.glb","jason-1"],
+ ["quikscat.glb","quikscat"],
+ ["seastar.glb","seastar"],
+ ["sorce.glb","sorce"],
+ ["swas.glb","swas"],
+ ["wire.glb","wire"]
+];
+const orb = new URLSearchParams(location.search).get('o') || '35deg 20deg auto';
+const rej = document.getElementById('rejilla');
+for (const [f,n] of modelos){
+  const d = document.createElement('div'); d.className='c';
+  d.innerHTML = `<span class="n">${n}</span>
+    <model-viewer src="/modelos/${f}" camera-orbit="${orb}" interaction-prompt="none"
+      exposure="1.1" shadow-intensity="0" disable-tap environment-image="neutral"
+      camera-target="auto auto auto"></model-viewer>`;
+  rej.appendChild(d);
+}
+window.__listo = false;
+setTimeout(()=>{ window.__listo = true; }, 100);
+</script>
+</body></html>

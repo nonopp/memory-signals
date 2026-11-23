@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><title>nube</title>
+<style>body{margin:0;background:#111}model-viewer{width:640px;height:480px;background:#000}</style>
+<script type="module" src="/js/model-viewer.min.js"></script>
+</head><body>
+<model-viewer id="mv" camera-controls interaction-prompt="none" shadow-intensity="0" exposure="1.1"
+  alt="" field-of-view="30deg" loading="eager" reveal="auto" style="width:640px;height:480px"></model-viewer>
+<script>
+const mv = document.getElementById('mv');
+mv.src = '/modelos/' + (new URLSearchParams(location.search).get('m') || 'quikscat.glb');
+/* Devuelve la caja del modelo y una nube de puntos de su SUPERFICIE en coordenadas del modelo,
+   sacada con positionAndNormalFromPoint sobre una rejilla de la pantalla. */
+window.__nube = function(nx, ny){
+  const r = mv.getBoundingClientRect();
+  const pts = [];
+  for (let i=1;i<=nx;i++) for (let j=1;j<=ny;j++){
+    const x = Math.round(r.width  * i / (nx+1));
+    const y = Math.round(r.height * j / (ny+1));
+    const p = mv.positionAndNormalFromPoint(x, y);
+    if (p && p.position) pts.push([p.position.x, p.position.y, p.position.z,
+                                  p.normal ? p.normal.x : 0, p.normal ? p.normal.y : 0, p.normal ? p.normal.z : 0]);
+  }
+  return pts;
+};
+window.__caja = function(){
+  const d = mv.getDimensions() || {};
+  const esVec = (v) => v && (typeof v.x === 'number');
+  const tam = esVec(d) ? [d.x, d.y, d.z] : (d.size ? [d.size.x, d.size.y, d.size.z] : [null,null,null]);
+  let cen = [null,null,null];
+  try { const c = mv.getBoundingBoxCenter(); if (esVec(c)) cen = [c.x, c.y, c.z]; } catch(e) {}
+  if (cen[0] === null && d.center) cen = [d.center.x, d.center.y, d.center.z];
+  return {c: cen, s: tam, loaded: !!mv.loaded};
+};
+window.__listo = false;
+mv.addEventListener('load', ()=>{ window.__listo = true; });
+</script>
+</body></html>
