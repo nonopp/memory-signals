@@ -1,3 +1,7 @@
+## v3.29.1 — 2026-11-23
+
+- **Los pines de los once objetos nuevos también en inglés y alemán**: mismos nombres de pieza y mismas explicaciones, traducidos sin tocar cifras, fechas ni unidades. Los 46 pines conservan las posiciones del modelo, así que caen en el mismo sitio en los tres idiomas.
+
 ## v3.29.0 — 2026-11-23
 
 - **Los once objetos nuevos ya tienen pines sobre el modelo**: entre cuatro y cinco por aparato, con el nombre de la pieza y una explicación corta en primera persona (el cuerpo, las alas solares, el escáner, el altímetro, la antena, el criostato…).
