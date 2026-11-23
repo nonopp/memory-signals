@@ -7910,14 +7910,14 @@
     {
      "id": "panel",
      "pos": [
-      -90.0,
-      20.0,
-      0.0
+      -80.0,
+      1.2,
+      85.0
      ],
      "normal": [
-      -0.98,
-      0.22,
-      0.0
+      -0.69,
+      0.01,
+      0.73
      ],
      "titulo": "The solar panel",
      "texto": "Four panels in a cross gave me power. They were enough for thirteen years, against the five that were expected."
@@ -7925,14 +7925,14 @@
     {
      "id": "panel2",
      "pos": [
-      90.0,
-      20.0,
-      0.0
+      80.0,
+      1.2,
+      -85.0
      ],
      "normal": [
-      0.98,
-      0.22,
-      0.0
+      0.69,
+      0.01,
+      -0.73
      ],
      "titulo": "The other panel",
      "texto": "With that continuous gaze it was seen for the first time how the life of the ocean changes with the seasons and with El Niño."

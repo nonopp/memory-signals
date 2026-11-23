@@ -1,3 +1,7 @@
+## v3.29.2 — 2026-11-23
+
+- Corregida la altura de los dos pines de los paneles de **SeaStar**: estaban a 20 unidades y los paneles van en un plano a 1,2, así que no se veían sobre el ala. Ahora caen encima de los dos brazos del aspa.
+
 ## v3.29.1 — 2026-11-23
 
 - **Los pines de los once objetos nuevos también en inglés y alemán**: mismos nombres de pieza y mismas explicaciones, traducidos sin tocar cifras, fechas ni unidades. Los 46 pines conservan las posiciones del modelo, así que caen en el mismo sitio en los tres idiomas.

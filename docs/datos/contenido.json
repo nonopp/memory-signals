@@ -7924,14 +7924,14 @@
     {
      "id": "panel",
      "pos": [
-      -90.0,
-      20.0,
-      0.0
+      -80.0,
+      1.2,
+      85.0
      ],
      "normal": [
-      -0.98,
-      0.22,
-      0.0
+      -0.69,
+      0.01,
+      0.73
      ],
      "titulo": "El panel solar",
      "texto": "Cuatro paneles en aspa me daban la corriente. Fueron suficientes para trece años, frente a los cinco que se esperaban."
@@ -7939,14 +7939,14 @@
     {
      "id": "panel2",
      "pos": [
-      90.0,
-      20.0,
-      0.0
+      80.0,
+      1.2,
+      -85.0
      ],
      "normal": [
-      0.98,
-      0.22,
-      0.0
+      0.69,
+      0.01,
+      -0.73
      ],
      "titulo": "El otro panel",
      "texto": "Con esa mirada continua se vio por primera vez cómo cambia la vida del océano con las estaciones y con El Niño."

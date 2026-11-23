@@ -7910,14 +7910,14 @@
     {
      "id": "panel",
      "pos": [
-      -90.0,
-      20.0,
-      0.0
+      -80.0,
+      1.2,
+      85.0
      ],
      "normal": [
-      -0.98,
-      0.22,
-      0.0
+      -0.69,
+      0.01,
+      0.73
      ],
      "titulo": "Das Solarpaneel",
      "texto": "Vier Paneele in Kreuzform gaben mir den Strom. Sie reichten für dreizehn Jahre, gegenüber den fünf, die erwartet wurden."
@@ -7925,14 +7925,14 @@
     {
      "id": "panel2",
      "pos": [
-      90.0,
-      20.0,
-      0.0
+      80.0,
+      1.2,
+      -85.0
      ],
      "normal": [
-      0.98,
-      0.22,
-      0.0
+      0.69,
+      0.01,
+      -0.73
      ],
      "titulo": "Das andere Paneel",
      "texto": "Mit diesem ununterbrochenen Blick sah man zum ersten Mal, wie sich das Leben des Ozeans mit den Jahreszeiten und mit El Niño verändert."
