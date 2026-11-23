@@ -257,5 +257,60 @@
   "glb": "modelos/topex-poseidon.glb",
   "nombre_modelo": "TOPEX-Poseidon",
   "verificado": "NASA 3D Resources"
+ },
+ "landsat-1": {
+  "glb": "modelos/landsat-1-2-3-ligero.glb",
+  "nombre_modelo": "Landsat 1, 2, and 3",
+  "verificado": "NASA 3D Resources"
+ },
+ "landsat-2": {
+  "glb": "modelos/landsat-1-2-3-ligero.glb",
+  "nombre_modelo": "Landsat 1, 2, and 3",
+  "verificado": "NASA 3D Resources"
+ },
+ "landsat-3": {
+  "glb": "modelos/landsat-1-2-3-ligero.glb",
+  "nombre_modelo": "Landsat 1, 2, and 3",
+  "verificado": "NASA 3D Resources"
+ },
+ "landsat-4": {
+  "glb": "modelos/landsat-4-5-ligero.glb",
+  "nombre_modelo": "Landsat 4 and 5",
+  "verificado": "NASA 3D Resources"
+ },
+ "landsat-5": {
+  "glb": "modelos/landsat-4-5-ligero.glb",
+  "nombre_modelo": "Landsat 4 and 5",
+  "verificado": "NASA 3D Resources"
+ },
+ "jason-1": {
+  "glb": "modelos/jason-1.glb",
+  "nombre_modelo": "Jason 1",
+  "verificado": "NASA 3D Resources"
+ },
+ "quikscat": {
+  "glb": "modelos/quikscat.glb",
+  "nombre_modelo": "Quick Scatterometer (QuikSCAT)",
+  "verificado": "NASA 3D Resources"
+ },
+ "seastar": {
+  "glb": "modelos/seastar.glb",
+  "nombre_modelo": "SeaStar",
+  "verificado": "NASA 3D Resources"
+ },
+ "sorce": {
+  "glb": "modelos/sorce.glb",
+  "nombre_modelo": "Solar Radiation and Climate Experiment (SORCE)",
+  "verificado": "NASA 3D Resources"
+ },
+ "swas": {
+  "glb": "modelos/swas.glb",
+  "nombre_modelo": "Submillimeter Wave Astronomy Satellite (SWAS)",
+  "verificado": "NASA 3D Resources"
+ },
+ "wire": {
+  "glb": "modelos/wire.glb",
+  "nombre_modelo": "Wide-Field Infrared Explorer (WIRE)",
+  "verificado": "NASA 3D Resources"
  }
 }

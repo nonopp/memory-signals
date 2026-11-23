@@ -1,3 +1,11 @@
+## v3.28.0 — 2026-11-23
+
+- **Once objetos nuevos en el catálogo, todos con modelo 3D oficial**: Landsat 1, 2, 3, 4 y 5, Jason-1, QuikSCAT, SeaStar (SeaWiFS), SORCE, SWAS y WIRE. El catálogo pasa de **42 a 53 objetos**.
+- Datos investigados y contrastados con documentación oficial (NASA, NSSDCA, USGS, JPL, LASP, CfA) y **fuentes al pie en cada ficha**: fecha de lanzamiento, misión, fin de operaciones, personas responsables, hitos y estado real de cada aparato.
+- **Modelos de NASA 3D Resources**, aligerados los dos que pesaban: Landsat 1-2-3 de 16,35 a **1,47 MB** y Landsat 4-5 de 11,07 a **1,57 MB** con gltf-transform. Los ocho modelos nuevos suman 9 MB y están validados como glTF 2.0.
+- Las 42 páginas estáticas por objeto pasan a **53**, y el sitemap de 46 a **57 direcciones**.
+- Pendiente: las versiones en inglés y alemán de las once fichas (de momento el catálogo nuevo solo se ve en español).
+
 ## v3.27.0 — 2026-11-22
 
 - **Cuarto cómic: Skylab** (*La casa que cayó sobre Australia*), con su botón en la ficha. Nueve viñetas más franja, textos en español, inglés y alemán, y PDF de una página en los tres idiomas (verificado: 1 página, 1123 px, 10 imágenes).
