@@ -1,3 +1,8 @@
+## v3.28.1 — 2026-11-23
+
+- **Las once fichas nuevas ya están en los tres idiomas**: inglés y alemán añadidos al catálogo, traducidos con el mismo tono en primera persona y sin tocar cifras ni fechas. En inglés y alemán el catálogo pasa de 42 a **53 objetos** y el destino «otros» de 31 a **42**.
+- Se conservan los identificadores de los turnos en español para que los botones de respuesta sigan casando con las opciones.
+
 ## v3.28.0 — 2026-11-23
 
 - **Once objetos nuevos en el catálogo, todos con modelo 3D oficial**: Landsat 1, 2, 3, 4 y 5, Jason-1, QuikSCAT, SeaStar (SeaWiFS), SORCE, SWAS y WIRE. El catálogo pasa de **42 a 53 objetos**.

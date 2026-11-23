@@ -128,7 +128,18 @@
     "cluster-ii",
     "polar",
     "trmm",
-    "topex-poseidon"
+    "topex-poseidon",
+    "landsat-1",
+    "landsat-2",
+    "landsat-3",
+    "landsat-4",
+    "landsat-5",
+    "jason-1",
+    "quikscat",
+    "seastar",
+    "sorce",
+    "swas",
+    "wire"
    ],
    "color": "#4f7fb8",
    "corto": "Others"
@@ -6847,6 +6858,854 @@
      ],
      "titulo": "Solar panels",
      "texto": "The two wings that power the altimetry satellite. The model is a single mesh and does not allow separating the rest."
+    }
+   ]
+  },
+  {
+   "id": "landsat-1",
+   "nombre": "Landsat 1",
+   "nombre_mapa": "Landsat 1",
+   "cuerpo": "Earth orbit",
+   "lugar": "Sun-synchronous polar orbit, 897-917 km, 99.1° inclination",
+   "anio": 1972,
+   "anio_tipo": "lanzamiento",
+   "estado": "abandonado",
+   "estado_texto": {
+    "texto_explorador": "They switched me off on January 6, 1978. The precession of my orbit left me under the Sun for longer and longer, I overheated and there was no way left to keep looking. Since then I drift in silence, with no official source saying when I will come down.",
+    "texto_cientifico": "Inoperative satellite since January 6, 1978, switched off because the accumulated precession of its orbital plane left it exposed to the Sun almost constantly and caused overheating. The date of its atmospheric reentry does not appear in the sources consulted."
+   },
+   "ficha_resumen": "It lifted off as ERTS-1 and was the first satellite conceived to watch over the planet's landmasses, with an RBV and a multispectral MSS scanner on board. It outlived its one-year design and kept observing until January 1978, when overheating forced it into silence.",
+   "color": "#4f8f5a",
+   "mapa": {
+    "tipo": "espacio"
+   },
+   "puntos3d": [],
+   "personas": [
+    {
+     "nombre": "Virginia T. Norwood",
+     "papel": "designer of the Multispectral Scanner (MSS) that flew on Landsat 1; NASA recognises her as the mother of Landsat"
+    },
+    {
+     "nombre": "Charles M. MacKenzie",
+     "papel": "project manager at NASA's Goddard Space Flight Center"
+    },
+    {
+     "nombre": "Stanley C. Freden",
+     "papel": "project scientist at NASA's Goddard Space Flight Center"
+    }
+   ],
+   "fuentes": [
+    {
+     "texto": "NASA Landsat Science — Landsat 1",
+     "url": "https://landsat.gsfc.nasa.gov/satellites/landsat-1/"
+    },
+    {
+     "texto": "USGS — Landsat 1",
+     "url": "https://www.usgs.gov/landsat-missions/landsat-1"
+    },
+    {
+     "texto": "NSSDCA — Landsat 1 (1972-058A)",
+     "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1972-058A"
+    }
+   ],
+   "hitos": [
+    {
+     "titulo": "The first look",
+     "texto": "On July 25, 1972 my MSS scanner delivered the first image in the Landsat archive: the Dallas-Fort Worth area, in Texas, in false colour. Before 1973 was out it had covered almost the whole of the Earth's surface, much of it with few clouds."
+    },
+    {
+     "titulo": "Blackout from overheating",
+     "texto": "The accumulated precession of my orbital plane meant I saw sunlight almost constantly and the temperature became unbearable. On January 6, 1978 they switched me off, five and a half years after my launch and a long way from the one year of life they had planned for me."
+    }
+   ],
+   "turnos": [
+    {
+     "id": "landsat-1_1",
+     "pregunta": "What was I called when I lifted off?",
+     "opciones": [
+      "ERTS-1",
+      "Landsat A"
+     ],
+     "texto_explorador": "ERTS-1, Earth Resources Technology Satellite. The Landsat surname came later, with the series already under way.",
+     "texto_cientifico": "It was launched as ERTS-1 on July 23, 1972; NASA adopted the name Landsat in 1975, with the series already in orbit."
+    },
+    {
+     "id": "landsat-1_2",
+     "pregunta": "Why did they switch me off in 1978?",
+     "opciones": [
+      "I overheated because of my orbit",
+      "I ran out of fuel"
+     ],
+     "texto_explorador": "I overheated. The precession of my orbit left me under the Sun for longer and longer and the temperature became unbearable.",
+     "texto_cientifico": "The accumulated precession of the orbital plane increased continuous solar exposure; overheating forced the satellite to be switched off on January 6, 1978."
+    }
+   ]
+  },
+  {
+   "id": "landsat-2",
+   "nombre": "Landsat 2",
+   "nombre_mapa": "Landsat 2",
+   "cuerpo": "Earth orbit",
+   "lugar": "Sun-synchronous polar orbit at 917 km, 99.2° inclination",
+   "anio": 1975,
+   "anio_tipo": "lanzamiento",
+   "estado": "abandonado",
+   "estado_texto": {
+    "texto_explorador": "I stopped being of use in February 1982, when my yaw control began to fail and no one could point me any more. I was officially decommissioned in July 1983 and no one has called me since.",
+    "texto_cientifico": "Retired from operations on February 28, 1982 because of yaw control problems and officially decommissioned on July 27, 1983, according to the USGS. The date of its atmospheric reentry does not appear in the sources consulted."
+   },
+   "ficha_resumen": "It was the second of the series and the twin that allowed two Earth-observation satellites to look at the same time, with the RBV and MSS inherited from Landsat 1. It lasted seven years against the single year of design planned and kept the record going when its predecessor went dark.",
+   "color": "#5aa06a",
+   "mapa": {
+    "tipo": "espacio"
+   },
+   "puntos3d": [],
+   "personas": [
+    {
+     "nombre": "Charles M. MacKenzie",
+     "papel": "project manager at NASA's Goddard Space Flight Center"
+    },
+    {
+     "nombre": "Stanley C. Freden",
+     "papel": "project scientist at NASA's Goddard Space Flight Center"
+    },
+    {
+     "nombre": "James C. Welch",
+     "papel": "program director at NASA Headquarters"
+    }
+   ],
+   "fuentes": [
+    {
+     "texto": "NASA Landsat Science — Landsat 2",
+     "url": "https://landsat.gsfc.nasa.gov/satellites/landsat-2/"
+    },
+    {
+     "texto": "USGS — Landsat 2",
+     "url": "https://www.usgs.gov/landsat-missions/landsat-2"
+    },
+    {
+     "texto": "NSSDCA — Landsat 2 (1975-004A)",
+     "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1975-004A"
+    }
+   ],
+   "hitos": [
+    {
+     "titulo": "Two pairs of eyes on the same ground",
+     "texto": "I flew in tandem with Landsat 1 for almost three years, in an orbit offset nine days from its own. That brought the constellation's revisit time down from eighteen to nine days and reduced the risk of losing coverage if one of the two failed."
+    },
+    {
+     "titulo": "Watching the world's harvest",
+     "texto": "My data fed the Large Area Crop Inventory Experiment (LACIE), the first big interagency crop-monitoring campaign, centred on wheat. With them it was shown that agricultural yields could be forecast a year in advance."
+    }
+   ],
+   "turnos": [
+    {
+     "id": "landsat-2_1",
+     "pregunta": "What do you gain by flying in tandem with another Landsat?",
+     "opciones": [
+      "Seeing the same place every 9 days",
+      "Seeing twice the area"
+     ],
+     "texto_explorador": "I brought the revisit time down from eighteen to nine days: my brother and I passed over the same place nine days apart.",
+     "texto_cientifico": "It flew in tandem with Landsat 1 in an orbit offset by nine days, reducing revisit from 18 to 9 days and the risk of losing coverage."
+    },
+    {
+     "id": "landsat-2_2",
+     "pregunta": "Why was I retired?",
+     "opciones": [
+      "My yaw control failed",
+      "The scanner broke"
+     ],
+     "texto_explorador": "My yaw control began to fail and there was no way to point me properly any more. They decommissioned me in 1983.",
+     "texto_cientifico": "Retired from operations on February 28, 1982 because of yaw control problems and decommissioned on July 27, 1983."
+    }
+   ]
+  },
+  {
+   "id": "landsat-3",
+   "nombre": "Landsat 3",
+   "nombre_mapa": "Landsat 3",
+   "cuerpo": "Earth orbit",
+   "lugar": "Sun-synchronous polar orbit at 917 km, 99.2° inclination",
+   "anio": 1978,
+   "anio_tipo": "lanzamiento",
+   "estado": "abandonado",
+   "estado_texto": {
+    "texto_explorador": "They put me in standby mode in March 1983 and decommissioned me in September of that same year. Not even my thermal band ever worked: it failed shortly after they released me into orbit.",
+    "texto_cientifico": "Placed in standby mode on March 31, 1983 and decommissioned on September 7, 1983, according to the USGS; its MSS thermal band and its redesigned RBV never performed as expected. The date of its atmospheric reentry does not appear in the sources consulted."
+   },
+   "ficha_resumen": "It was the third unit of the series and carried the family's first attempt to measure the heat of the surface, with a thermal band that was lost almost as soon as it lifted off. Its job was to keep the image record begun by its two brothers going while the programme passed from NASA's hands to NOAA's.",
+   "color": "#6aab6f",
+   "mapa": {
+    "tipo": "espacio"
+   },
+   "puntos3d": [],
+   "personas": [
+    {
+     "nombre": "Stanley C. Freden",
+     "papel": "project scientist at NASA's Goddard Space Flight Center"
+    },
+    {
+     "nombre": "James C. Welch",
+     "papel": "program director at NASA Headquarters"
+    }
+   ],
+   "fuentes": [
+    {
+     "texto": "NASA Landsat Science — Landsat 3",
+     "url": "https://landsat.gsfc.nasa.gov/satellites/landsat-3/"
+    },
+    {
+     "texto": "USGS — Landsat 3",
+     "url": "https://www.usgs.gov/landsat-missions/landsat-3"
+    },
+    {
+     "texto": "NSSDCA — Landsat 3 (1978-026A)",
+     "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1978-026A"
+    }
+   ],
+   "hitos": [
+    {
+     "titulo": "Instruments left half-done",
+     "texto": "My RBV was redesigned with two panchromatic cameras capable of 40 m resolution, twice that of my predecessors'. My MSS's fifth band, the thermal one, however, failed shortly after launch and I could never deliver images of heat."
+    },
+    {
+     "titulo": "The handover to NOAA",
+     "texto": "In March 1983 they put me in standby mode and in September they decommissioned me. That same year Landsat operations passed from NASA to NOAA, while the USGS went on guarding the data archive."
+    }
+   ],
+   "turnos": [
+    {
+     "id": "landsat-3_1",
+     "pregunta": "Which of my instruments never worked?",
+     "opciones": [
+      "The thermal band",
+      "Both cameras"
+     ],
+     "texto_explorador": "The thermal band. It failed shortly after launch, so I could never measure the heat of the surface.",
+     "texto_cientifico": "MSS thermal band 8, between 10.4 and 12.6 µm, failed shortly after launch. The redesigned RBV did deliver 40 m resolution."
+    },
+    {
+     "id": "landsat-3_2",
+     "pregunta": "Who took over operations in 1983?",
+     "opciones": [
+      "NOAA",
+      "ESA"
+     ],
+     "texto_explorador": "NOAA. That year the programme changed hands and the USGS stayed behind looking after the archive.",
+     "texto_cientifico": "In 1983 Landsat operations passed from NASA to NOAA, with the USGS in charge of the data archive."
+    }
+   ]
+  },
+  {
+   "id": "landsat-4",
+   "nombre": "Landsat 4",
+   "nombre_mapa": "Landsat 4",
+   "cuerpo": "Earth orbit",
+   "lugar": "Sun-synchronous polar orbit at 705 km, 98.2° inclination",
+   "anio": 1982,
+   "anio_tipo": "lanzamiento",
+   "estado": "abandonado",
+   "estado_texto": {
+    "texto_explorador": "I suffered failures in my solar panels and in my downlink before I had been in orbit a year, and even so I kept working through relays until in 1993 the last route for sending data ran out. I held on in orbit, in silence, until they decommissioned me in June 2001.",
+    "texto_cientifico": "Its sensors stopped collecting data at the end of 1993, after its last downlink capability failed, and the satellite stayed in orbit for housekeeping telemetry until its final decommissioning on June 15, 2001. The date of its atmospheric reentry does not appear in the sources consulted."
+   },
+   "ficha_resumen": "It was the first Landsat of a new generation, with the Thematic Mapper, a seven-band instrument that multiplied the detail of the view of the ground. With it came the programme's first natural-colour images and the first GPS receiver to fly on a civil satellite.",
+   "color": "#4a90a4",
+   "mapa": {
+    "tipo": "espacio"
+   },
+   "puntos3d": [],
+   "personas": [
+    {
+     "nombre": "Howard Heuberger",
+     "papel": "researcher at NASA's Goddard Space Flight Center on the Landsat 4 GPS experiment"
+    },
+    {
+     "nombre": "Leonard Church",
+     "papel": "researcher at NASA's Goddard Space Flight Center on the Landsat 4 GPS experiment"
+    }
+   ],
+   "fuentes": [
+    {
+     "texto": "NASA Landsat Science — Landsat 4",
+     "url": "https://landsat.gsfc.nasa.gov/satellites/landsat-4/"
+    },
+    {
+     "texto": "USGS — Landsat 4",
+     "url": "https://www.usgs.gov/landsat-missions/landsat-4"
+    },
+    {
+     "texto": "NASA Science — Landsat 4",
+     "url": "https://science.nasa.gov/mission/landsat-4/"
+    }
+   ],
+   "hitos": [
+    {
+     "titulo": "The natural colour of the planet",
+     "texto": "On July 25, 1982 my Thematic Mapper delivered the first image that could be shown in natural colour, with eastern Lake Erie, Toledo, Detroit and Windsor in the frame. My seven bands, with 30 m of detail in the visible and the infrared, opened up applications the MSS could not reach, such as bathymetry and reef mapping."
+    },
+    {
+     "titulo": "The first civil GPS in orbit",
+     "texto": "I was the first civil satellite to carry a GPS receiver on board, when only four of the twenty-four planned satellites were operational. The Goddard researchers showed that it could work out my position to within 50 m and my speed to within six centimetres per second."
+    }
+   ],
+   "turnos": [
+    {
+     "id": "landsat-4_1",
+     "pregunta": "What did I bring that no earlier Landsat had?",
+     "opciones": [
+      "The Thematic Mapper",
+      "A rain radar"
+     ],
+     "texto_explorador": "The Thematic Mapper: seven bands and the programme's first natural-colour image, with 30 metres of detail.",
+     "texto_cientifico": "The seven-band TM, with 30 m in the reflective bands and 120 m in the thermal one, gave the first natural-colour image and opened up applications such as bathymetry."
+    },
+    {
+     "id": "landsat-4_2",
+     "pregunta": "What did I carry on board that had never flown on a civil satellite?",
+     "opciones": [
+      "A GPS receiver",
+      "A weather radar"
+     ],
+     "texto_explorador": "A GPS receiver, when there were only four satellites of the constellation up there.",
+     "texto_cientifico": "First GPS receiver on a civil satellite; with four satellites visible, an error of 50 m in position and 6 cm/s in velocity was demonstrated."
+    }
+   ]
+  },
+  {
+   "id": "landsat-5",
+   "nombre": "Landsat 5",
+   "nombre_mapa": "Landsat 5",
+   "cuerpo": "Earth orbit",
+   "lugar": "Sun-synchronous polar orbit at 705 km, 98.2° inclination",
+   "anio": 1984,
+   "anio_tipo": "lanzamiento",
+   "estado": "abandonado",
+   "estado_texto": {
+    "texto_explorador": "They switched me off on June 5, 2013, after almost twenty-nine years. I was built for three. Now I go round in silence, and my almost four million pictures are still telling how the Earth changed without me.",
+    "texto_cientifico": "Deactivated on June 5, 2013 after almost 29 years of service, ten times its three-year design life. It was left without data acquisition or transmission and its archive of 3.870.273 TM and MSS scenes remains a continuous, calibrated record of the Earth's surface."
+   },
+   "ficha_resumen": "It was an Earth-observation satellite launched on March 1, 1984 with the MSS and TM instruments, designed for three years and operational for almost twenty-nine. It gathered some 3.8 million scenes and holds the Guinness record as the longest-operating Earth-observation satellite.",
+   "color": "#57a7b8",
+   "mapa": {
+    "tipo": "espacio"
+   },
+   "puntos3d": [],
+   "personas": [
+    {
+     "nombre": "Jim Irons",
+     "papel": "Landsat 8 project scientist at NASA; he noted that Landsat 5's longevity prevented a data gap after the loss of Landsat 6 in 1993"
+    }
+   ],
+   "fuentes": [
+    {
+     "texto": "NASA Science — Landsat 5",
+     "url": "https://science.nasa.gov/mission/landsat-5/"
+    },
+    {
+     "texto": "NASA Landsat Science — Landsat 5",
+     "url": "https://landsat.gsfc.nasa.gov/satellites/landsat-5"
+    },
+    {
+     "texto": "USGS — Landsat 5",
+     "url": "https://www.usgs.gov/landsat-missions/landsat-5"
+    }
+   ],
+   "hitos": [
+    {
+     "titulo": "First image, March 6, 1984",
+     "texto": "Five days after launch, the Thematic Mapper captured frozen Lake Superior, northern Minnesota and the Apostle Islands, in Wisconsin, with bands 4-3-2: one of the mission's first clear images."
+    },
+    {
+     "titulo": "Guinness record and deactivation",
+     "texto": "With almost 29 years in service I earned the Guinness record as the longest-lived Earth-observation satellite and they deactivated me on June 5, 2013. My big auxiliary fuel tank, meant for in-orbit repairs that never happened, made it possible to stretch the mission out for decades."
+    }
+   ],
+   "turnos": [
+    {
+     "id": "landsat-5_1",
+     "pregunta": "How long did I last against what was planned?",
+     "opciones": [
+      "Almost 29 years, for three",
+      "Ten years, for five"
+     ],
+     "texto_explorador": "Almost twenty-nine years. I was built for three.",
+     "texto_cientifico": "Operational from March 1, 1984 to June 5, 2013: 29 years against a design life of three."
+    },
+    {
+     "id": "landsat-5_2",
+     "pregunta": "What record do I hold?",
+     "opciones": [
+      "The longest-lived observation satellite",
+      "The fastest in orbit"
+     ],
+     "texto_explorador": "The Guinness record as the longest-operating Earth-observation satellite.",
+     "texto_cientifico": "With 3.870.273 scenes archived and almost 29 years, it holds the Guinness record for longevity among Earth-observation satellites."
+    }
+   ]
+  },
+  {
+   "id": "jason-1",
+   "nombre": "Jason-1",
+   "nombre_mapa": "Jason-1",
+   "cuerpo": "Earth orbit",
+   "lugar": "Vandenberg Air Force Base, California, on board a Delta II",
+   "anio": 2001,
+   "anio_tipo": "lanzamiento",
+   "estado": "abandonado",
+   "estado_texto": {
+    "texto_explorador": "I stopped hearing from the ground on June 21, 2013 and they switched me off on July 1. I drift inert in a graveyard orbit: I will not come home for a thousand years, and even so my record of sea level keeps rising without me.",
+    "texto_cientifico": "Contact was lost on June 21, 2013 because of the irreversible failure of its last transmitter, after the backup one had failed in September 2005. It was passivated on July 1, 2013 in its graveyard orbit: with no attitude control, its batteries ran down and it was left inert, with no atmospheric reentry expected for at least 1.000 years."
+   },
+   "ficha_resumen": "It was NASA and CNES's ocean altimetry satellite that continued the TOPEX/Poseidon series by measuring sea level, wind speed and wave height across more than 95 % of the ice-free ocean every ten days. Designed for three to five years, it operated for eleven and a half and was deactivated in July 2013.",
+   "color": "#2f8fbf",
+   "mapa": {
+    "tipo": "espacio"
+   },
+   "puntos3d": [],
+   "personas": [
+    {
+     "nombre": "Lee-Lueng Fu",
+     "papel": "Jason-1 project scientist at JPL; he pushed for the tandem flight with TOPEX/Poseidon to calibrate both altimeters"
+    },
+    {
+     "nombre": "Mark Fujishin",
+     "papel": "Jason-1 project manager at JPL"
+    }
+   ],
+   "fuentes": [
+    {
+     "texto": "NASA JPL — Jason-1",
+     "url": "https://www.jpl.nasa.gov/missions/jason-1/"
+    },
+    {
+     "texto": "NASA JPL — Long-Running Jason-1 Ocean Satellite Takes Final Bow",
+     "url": "https://www.jpl.nasa.gov/news/long-running-jason-1-ocean-satellite-takes-final-bow/"
+    },
+    {
+     "texto": "NASA JPL Ocean Surface Topography from Space — Jason-1, Summary",
+     "url": "https://sealevel.jpl.nasa.gov/missions/jason-1/summary/"
+    }
+   ],
+   "hitos": [
+    {
+     "titulo": "Tandem flight with TOPEX/Poseidon",
+     "texto": "In January 2002 I reached my operational orbit of 1.337 km and flew over the same track as TOPEX/Poseidon barely one minute apart, which made it possible to compare both measurements in almost identical conditions and to splice together a climate record of more than twenty years without jumps."
+    },
+    {
+     "titulo": "Final geodetic mission and loss of contact",
+     "texto": "In the spring of 2012 I was moved to my graveyard orbit and repurposed to study the marine gravity field; the first complete 406-day geodetic cycle ended on June 17, 2013 and four days later contact was lost for good."
+    }
+   ],
+   "turnos": [
+    {
+     "id": "jason-1_1",
+     "pregunta": "What did I measure every ten days?",
+     "opciones": [
+      "Sea level",
+      "Air temperature"
+     ],
+     "texto_explorador": "Sea level, wave height and surface wind, over more than 95 % of the ice-free ocean.",
+     "texto_cientifico": "Ocean altimetry: sea level, wind and waves over more than 95 % of the ice-free ocean every 10 days."
+    },
+    {
+     "id": "jason-1_2",
+     "pregunta": "Why did I stop talking?",
+     "opciones": [
+      "My last transmitter failed",
+      "My battery ran out"
+     ],
+     "texto_explorador": "My last transmitter failed; the backup had already gone in 2005. They passivated me on July 1, 2013.",
+     "texto_cientifico": "Loss of contact on June 21, 2013 due to failure of the last transmitter; passivated on July 1 in a graveyard orbit, with no reentry expected for at least 1.000 years."
+    }
+   ]
+  },
+  {
+   "id": "quikscat",
+   "nombre": "QuikSCAT",
+   "nombre_mapa": "QuikSCAT",
+   "cuerpo": "Earth orbit",
+   "lugar": "Vandenberg Air Force Base, California, on board a Titan II",
+   "anio": 1999,
+   "anio_tipo": "lanzamiento",
+   "estado": "abandonado",
+   "estado_texto": {
+    "texto_explorador": "In 2009 my antenna stopped and in 2018 they shut me down for good. I spent almost twenty years measuring winds nobody could see, and when the world wrote me off I went on serving as a ruler for those who came after.",
+    "texto_cientifico": "On November 23, 2009 its spinning antenna stopped at 0 rpm and it could no longer resolve wind vectors; the instrument stayed switched on and was used as a calibration standard until it was turned off on October 2, 2018 under its end-of-mission plan. The satellite remains inoperative in orbit."
+   },
+   "ficha_resumen": "It was a fast-recovery mission launched on June 19, 1999 to make up for the loss of NSCAT, with the SeaWinds scatterometer on board. Designed for two or three years, it measured surface wind over more than 90 % of the ice-free ocean every day for a decade and then served nine more years as a calibration reference.",
+   "color": "#3f9ec4",
+   "mapa": {
+    "tipo": "espacio"
+   },
+   "puntos3d": [],
+   "personas": [
+    {
+     "nombre": "Michael Freilich",
+     "papel": "original principal investigator of QuikSCAT and later director of NASA's Earth Science Division"
+    },
+    {
+     "nombre": "Ernesto Rodríguez",
+     "papel": "QuikSCAT project scientist at JPL"
+    },
+    {
+     "nombre": "Rob Gaston",
+     "papel": "QuikSCAT project manager at JPL"
+    }
+   ],
+   "fuentes": [
+    {
+     "texto": "NASA JPL PO.DAAC — QuikSCAT",
+     "url": "https://podaac.jpl.nasa.gov/QuikSCAT"
+    },
+    {
+     "texto": "NASA JPL — After Two Long Careers, QuikSCAT Rings Down the Curtain",
+     "url": "https://www.jpl.nasa.gov/news/after-two-long-careers-quikscat-rings-down-the-curtain/"
+    },
+    {
+     "texto": "NSSDCA — QuikSCAT (1999-034A)",
+     "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1999-034A"
+    }
+   ],
+   "hitos": [
+    {
+     "titulo": "A decade measuring the ocean's wind",
+     "texto": "From July 19, 1999 the SeaWinds scatterometer, at 13.4 GHz, swept a 1.800 km swath every day and covered more than 90 % of the Earth's surface, with some 400.000 daily measurements that improved forecasts and made it possible to detect hurricanes on the open sea."
+    },
+    {
+     "titulo": "From observer to calibration standard",
+     "texto": "When the lubricant in the bearings dried up at the end of 2009 the antenna pointed downwards and its swath shrank to about 30 km, but the stability of that measurement turned it into the reference standard against which ESA and ISRO calibrated their scatterometers; the instrument was switched off on October 2, 2018."
+    }
+   ],
+   "turnos": [
+    {
+     "id": "quikscat_1",
+     "pregunta": "What stopped on me in 2009?",
+     "opciones": [
+      "The spinning antenna",
+      "The solar panel"
+     ],
+     "texto_explorador": "The antenna. The lubricant in the bearings dried up and I could no longer measure wind direction.",
+     "texto_cientifico": "On November 23, 2009 the SeaWinds antenna stopped at 0 rpm and the ability to resolve wind vectors was lost."
+    },
+    {
+     "id": "quikscat_2",
+     "pregunta": "What was I good for after I stopped measuring?",
+     "opciones": [
+      "As a calibration standard",
+      "As a radio repeater"
+     ],
+     "texto_explorador": "As a ruler: other scatterometers were calibrated against my measurement.",
+     "texto_cientifico": "With the antenna fixed it served as a calibration reference for ESA and ISRO scatterometers until it was switched off on October 2, 2018."
+    }
+   ]
+  },
+  {
+   "id": "seastar",
+   "nombre": "SeaStar (SeaWiFS)",
+   "nombre_mapa": "SeaStar",
+   "cuerpo": "Earth orbit",
+   "lugar": "Air launch with a Pegasus XL from an L-1011, west coast of the USA",
+   "anio": 1997,
+   "anio_tipo": "lanzamiento",
+   "estado": "abandonado",
+   "estado_texto": {
+    "texto_explorador": "In December 2010 I stopped answering and nobody heard anything at the other end any more. Thirteen years looking at what colour the sea was, and now I am still up there, switched off, while the ocean changes and I cannot tell anyone about it.",
+    "texto_cientifico": "In December 2010 the satellite, by then renamed OrbView-2, lost communications with the ground stations and the mission was formally concluded in February 2011. It operated for more than thirteen years against a five-year design life, leaving behind one of the most complete continuous records of ocean biology available."
+   },
+   "ficha_resumen": "It was the ocean colour sensor on board the SeaStar satellite, later OrbView-2, launched on August 1, 1997 in an air launch. It measured chlorophyll concentration and marine production for more than thirteen years, until contact with the satellite was lost in December 2010.",
+   "color": "#46b39a",
+   "mapa": {
+    "tipo": "espacio"
+   },
+   "puntos3d": [],
+   "personas": [
+    {
+     "nombre": "Gene Carl Feldman",
+     "papel": "SeaWiFS project manager at NASA's Goddard Space Flight Center"
+    }
+   ],
+   "fuentes": [
+    {
+     "texto": "NASA Science — SeaWiFS",
+     "url": "https://science.nasa.gov/mission/seawifs/"
+    },
+    {
+     "texto": "NASA Ocean Color — An Overview of SeaWiFS and the SeaStar Spacecraft",
+     "url": "https://oceancolor.gsfc.nasa.gov/SeaWiFS/SEASTAR/SPACECRAFT.html"
+    },
+    {
+     "texto": "NASA Earthdata — SeaWiFS is Fully Operational",
+     "url": "https://www.earthdata.nasa.gov/news/seawifs-fully-operational"
+    }
+   ],
+   "hitos": [
+    {
+     "titulo": "Global data from September 18, 1997",
+     "texto": "After 32 burns that raised the orbit from the 278 km parking orbit to 705 km, the instrument went into routine operation on September 18, 1997 and began distributing global ocean colour data at 4 km."
+    },
+    {
+     "titulo": "Thirteen years of biological record of the ocean",
+     "texto": "Designed for a minimum of five years, SeaWiFS operated for more than thirteen: it mapped the ocean's greenery, followed the seasonality of blooms and the response of plankton to El Niño and La Niña, and served as technical preparation for MODIS and VIIRS."
+    }
+   ],
+   "turnos": [
+    {
+     "id": "seastar_1",
+     "pregunta": "What was I looking at in the sea?",
+     "opciones": [
+      "Colour and chlorophyll",
+      "Waves and wind"
+     ],
+     "texto_explorador": "Colour: that is how chlorophyll is worked out and how you see where there is plant life in the ocean.",
+     "texto_cientifico": "SeaWiFS measured ocean colour in 8 bands between 402 and 885 nm to derive chlorophyll and primary production."
+    },
+    {
+     "id": "seastar_2",
+     "pregunta": "How was I put into orbit?",
+     "opciones": [
+      "Released from an aircraft",
+      "From a submarine"
+     ],
+     "texto_explorador": "They released me from an aircraft, with a Pegasus rocket that ignited in the air.",
+     "texto_cientifico": "Air launch with a Pegasus XL from an L-1011 on August 1, 1997."
+    }
+   ]
+  },
+  {
+   "id": "sorce",
+   "nombre": "SORCE",
+   "nombre_mapa": "SORCE",
+   "cuerpo": "Earth orbit",
+   "lugar": "Low orbit at 645 km and 40° inclination",
+   "anio": 2003,
+   "anio_tipo": "lanzamiento",
+   "estado": "muerto",
+   "estado_texto": {
+    "texto_explorador": "I have been switched off since February 25, 2020, when NASA passivated me as planned: I no longer measure anything, I am just still up there, in a 645 km orbit.",
+    "texto_cientifico": "Satellite passivated on February 25, 2020 after more than 17 years of total solar irradiance (TSI) and spectral solar irradiance (SSI) observations between 1 and 2400 nm; the shutdown was a planned event after the required overlap with TSIS-1."
+   },
+   "ficha_resumen": "It was a NASA satellite funded and operated by LASP that measured the solar radiation reaching the Earth in X-rays, ultraviolet, visible, near infrared and total radiation, with four instruments. It worked for more than seventeen years, covering two solar cycles, and was passivated in February 2020.",
+   "color": "#d99a3c",
+   "mapa": {
+    "tipo": "espacio"
+   },
+   "puntos3d": [],
+   "personas": [
+    {
+     "nombre": "Gary J. Rottman",
+     "papel": "principal investigator at LASP until his retirement in September 2005"
+    },
+    {
+     "nombre": "Tom Woods",
+     "papel": "project scientist and later principal investigator from 2005"
+    },
+    {
+     "nombre": "Thomas P. Sparn",
+     "papel": "program director at the University of Colorado"
+    }
+   ],
+   "fuentes": [
+    {
+     "texto": "NASA Science — SORCE",
+     "url": "https://science.nasa.gov/mission/sorce/"
+    },
+    {
+     "texto": "LASP — SORCE",
+     "url": "https://lasp.colorado.edu/sorce/"
+    },
+    {
+     "texto": "NSSDCA — SORCE (2003-004A)",
+     "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2003-004A"
+    }
+   ],
+   "hitos": [
+    {
+     "titulo": "Launch into low orbit",
+     "texto": "It lifted off on January 25, 2003 on board a Pegasus XL launched from an L-1011 aircraft, and ended up in an orbit 645 km high and with 40 degrees of inclination."
+    },
+    {
+     "titulo": "End after 17 years of solar data",
+     "texto": "The mission ended on February 25, 2020 with more than seventeen years of total and spectral irradiance measurements, after the overlap with TSIS-1 on the International Space Station."
+    }
+   ],
+   "turnos": [
+    {
+     "id": "sorce_1",
+     "pregunta": "What did I measure?",
+     "opciones": [
+      "All of the Sun's radiation",
+      "The Earth's magnetic field"
+     ],
+     "texto_explorador": "The Sun's radiation: from X-rays and ultraviolet to the infrared and the total energy arriving.",
+     "texto_cientifico": "Total solar irradiance with TIM and spectral irradiance with SIM, SOLSTICE and XPS, between 1 and 2400 nm."
+    },
+    {
+     "id": "sorce_2",
+     "pregunta": "How long did I last?",
+     "opciones": [
+      "17 years, two solar cycles",
+      "5 years, half a cycle"
+     ],
+     "texto_explorador": "Seventeen years, two complete cycles of eleven years each.",
+     "texto_cientifico": "Observations from January 25, 2003 to February 25, 2020: more than 17 years and two solar cycles, passivated after the overlap with TSIS-1."
+    }
+   ]
+  },
+  {
+   "id": "swas",
+   "nombre": "SWAS",
+   "nombre_mapa": "SWAS",
+   "cuerpo": "Earth orbit",
+   "lugar": "Circular orbit at 600 km and 70° inclination",
+   "anio": 1998,
+   "anio_tipo": "lanzamiento",
+   "estado": "muerto",
+   "estado_texto": {
+    "texto_explorador": "I stopped observing on July 21, 2004 and since then I have been sleeping in hibernation; I only woke in the summer of 2005 to watch a probe crash into a comet.",
+    "texto_cientifico": "Its regular science observations stopped on July 21, 2004; in June 2005 it was reactivated for about three months to follow the Deep Impact impact on comet 9P/Tempel 1. No official date of final deactivation or of reentry appears in the sources consulted."
+   },
+   "ficha_resumen": "It was a submillimetre telescope from NASA's Small Explorer programme that measured water, molecular oxygen, atomic carbon and carbon monoxide in interstellar clouds to understand how stars and planets are born. It observed more than a hundred molecular clouds in the Milky Way and in 2005 was reactivated to support Deep Impact.",
+   "color": "#8a6fbf",
+   "mapa": {
+    "tipo": "espacio"
+   },
+   "puntos3d": [],
+   "personas": [
+    {
+     "nombre": "Gary J. Melnick",
+     "papel": "principal investigator at the Smithsonian Astrophysical Observatory"
+    },
+    {
+     "nombre": "Gordon Chin",
+     "papel": "mission scientist at NASA's Goddard Space Flight Center"
+    }
+   ],
+   "fuentes": [
+    {
+     "texto": "NSSDCA — SWAS (1998-071A)",
+     "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1998-071A"
+    },
+    {
+     "texto": "NASA Science — SWAS",
+     "url": "https://science.nasa.gov/mission/swas/"
+    },
+    {
+     "texto": "CfA Harvard & Smithsonian — SWAS",
+     "url": "https://www.cfa.harvard.edu/facilities-technology/telescopes-instruments/submillimeter-wave-astronomy-satellite"
+    }
+   ],
+   "hitos": [
+    {
+     "titulo": "Submillimetre mapping of interstellar clouds",
+     "texto": "With its 55 x 71 cm off-axis Cassegrain telescope it mapped, in five spectral lines — water, molecular oxygen, atomic carbon, 13CO and H2-18O — dozens of giant molecular clouds and dark cores, with maps one degree by one degree."
+    },
+    {
+     "titulo": "Reactivation for comet Tempel 1",
+     "texto": "In June 2005, after a year in standby mode, it operated again for about three months to measure the water production of comet 9P/Tempel 1 before, during and after the Deep Impact impact."
+    }
+   ],
+   "turnos": [
+    {
+     "id": "swas_1",
+     "pregunta": "What was I looking for in the clouds of gas?",
+     "opciones": [
+      "Water and molecular oxygen",
+      "Gamma rays"
+     ],
+     "texto_explorador": "Water and molecular oxygen, among other molecules: what you need to understand how stars and planets are born.",
+     "texto_cientifico": "Five lines: water, O2, C I, 13CO and H2-18O, in more than a hundred molecular clouds."
+    },
+    {
+     "id": "swas_2",
+     "pregunta": "Why did I wake up in 2005?",
+     "opciones": [
+      "To watch a comet impact",
+      "For a repair"
+     ],
+     "texto_explorador": "To watch Deep Impact crash into comet Tempel 1.",
+     "texto_cientifico": "Reactivated in June 2005 for about three months to measure the water production of 9P/Tempel 1 before, during and after the impact."
+    }
+   ]
+  },
+  {
+   "id": "wire",
+   "nombre": "WIRE",
+   "nombre_mapa": "WIRE",
+   "cuerpo": "Earth orbit",
+   "lugar": "Reentered the atmosphere on May 10, 2011",
+   "anio": 1999,
+   "anio_tipo": "lanzamiento",
+   "estado": "desintegrado",
+   "estado_texto": {
+    "texto_explorador": "I burned up in the Earth's atmosphere on May 10, 2011: I no longer exist. Before that I spent years looking at stars it was not my job to look at.",
+    "texto_cientifico": "It lost its solid hydrogen cryogen hours after launch when the telescope cover came off prematurely while the spacecraft was spinning, so it obtained no data for its infrared programme. It was reused for asteroseismology of bright stars and reentered the Earth's atmosphere on May 10, 2011."
+   },
+   "ficha_resumen": "It was an infrared telescope cooled with solid hydrogen, designed to study galaxies with bursts of star formation and to search for protogalaxies. The telescope cover came off prematurely after launch, the coolant ran out and there was no infrared science; the spacecraft was repurposed for asteroseismology until its reentry in 2011.",
+   "color": "#b0635f",
+   "mapa": {
+    "tipo": "espacio"
+   },
+   "puntos3d": [],
+   "personas": [
+    {
+     "nombre": "Perry Hacking",
+     "papel": "principal investigator at NASA's Jet Propulsion Laboratory"
+    },
+    {
+     "nombre": "Samuel H. Moseley",
+     "papel": "mission scientist at NASA's Goddard Space Flight Center"
+    },
+    {
+     "nombre": "James G. Watzin",
+     "papel": "project manager at NASA's Goddard Space Flight Center"
+    }
+   ],
+   "fuentes": [
+    {
+     "texto": "NSSDCA — WIRE (1999-011A)",
+     "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1999-011A"
+    },
+    {
+     "texto": "NASA JPL — Wide-field Infrared Explorer",
+     "url": "https://www.jpl.nasa.gov/missions/wide-field-infrared-explorer-wire/"
+    },
+    {
+     "texto": "NASA Science — WIRE",
+     "url": "https://science.nasa.gov/mission/wire/"
+    }
+   ],
+   "hitos": [
+    {
+     "titulo": "Loss of the coolant after launch",
+     "texto": "The telescope cover came off ahead of time while the spacecraft was still spinning after orbital insertion; sunlight heated the solid hydrogen, outgassing occurred and the spacecraft spun faster than the reaction wheels could brake, with total loss of the coolant."
+    },
+    {
+     "titulo": "Second life and reentry",
+     "texto": "Once control was recovered, it was used for asteroseismology, measuring oscillations of nearby stars; operations passed to the centre at Bowie State University and the telescope reentered the atmosphere on May 10, 2011."
+    }
+   ],
+   "turnos": [
+    {
+     "id": "wire_1",
+     "pregunta": "What happened to me a few hours after lifting off?",
+     "opciones": [
+      "The telescope cover came off",
+      "I ran out of power"
+     ],
+     "texto_explorador": "The telescope cover came off, sunlight heated the solid hydrogen and I lost all my coolant.",
+     "texto_cientifico": "The cover came off during insertion; outgassing sped up the spin, the cryogen was lost and there was no infrared science."
+    },
+    {
+     "id": "wire_2",
+     "pregunta": "How did I end up?",
+     "opciones": [
+      "I burned up in the atmosphere",
+      "I landed in the ocean"
+     ],
+     "texto_explorador": "I burned up in the atmosphere on May 10, 2011, after years of measuring the tremors of stars.",
+     "texto_cientifico": "Reentry on May 10, 2011 after its second life as an asteroseismograph."
     }
    ]
   }

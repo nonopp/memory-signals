@@ -1,0 +1,196 @@
+ENCARGOS DE FONDO · ONCE OBJETOS NUEVOS · Memory Signals
+Generados el 23-11-2026 · plantilla de Nono (sketch técnico industrial, anotaciones en inglés)
+Salida: docs/img/fondo-<id>.jpg a 1920 x 1072 · luego fondo-<id>.en.jpg y fondo-<id>.de.jpg
+
+CÓDIGOS: MS-43 landsat-1 · MS-44 landsat-2 · MS-45 landsat-3 · MS-46 landsat-4 · MS-47 landsat-5
+         MS-48 jason-1 · MS-49 quikscat · MS-50 seastar · MS-51 sorce · MS-52 swas · MS-53 wire
+
+Para la versión española, cambia la última línea por: Escribe todas las anotaciones y cotas del dibujo en español.
+Para la alemana: Schreibe alle Beschriftungen und Maße in der Zeichnung auf Deutsch.
+
+================================================================================
+MS-43 · LANDSAT 1
+================================================================================
+Genera un Sketch técnico de diseño industrial del siguiente aparato: LANDSAT 1 (NASA ERTS-1, Nimbus-derived box-shaped satellite bus with two rectangular solar array wings, the three-camera RBV return-beam vidicon and the four-channel MSS multispectral scanner facing nadir), en órbita terrestre, 1972.
+
+Dibujo técnico a mano alzada con vistas ortogonales, perspectiva 3D, cotas, anotaciones, líneas de referencia y detalles constructivos.
+
+Estética: fondo negro mate, trazos blancos, líneas finas y precisas, sombreados mediante rayado blanco y aspecto de plano técnico profesional.
+
+Distribuye las diferentes vistas libremente. Incluye cotas y especificaciones técnicas directamente sobre los dibujos, mediante líneas de referencia.
+
+Traza en una esquina, suelto y con el mismo trazo que las demás anotaciones, este código: MS-43 · LANDSAT 1. No es un título: es una nota técnica más del plano.
+
+Sin títulos, marcos, recuadros, tablas, leyendas ni cajas de información. Únicamente dibujos técnicos, cotas y anotaciones integradas en ellos. Sin colores.
+
+Write every annotation and dimension in the drawing in English.
+
+================================================================================
+MS-44 · LANDSAT 2
+================================================================================
+Genera un Sketch técnico de diseño industrial del siguiente aparato: LANDSAT 2 (NASA ERTS-B, same Nimbus-derived box-shaped bus as Landsat 1 with two rectangular solar array wings, three-camera RBV return-beam vidicon and four-channel MSS multispectral scanner facing nadir), en órbita terrestre, 1975.
+
+Dibujo técnico a mano alzada con vistas ortogonales, perspectiva 3D, cotas, anotaciones, líneas de referencia y detalles constructivos.
+
+Estética: fondo negro mate, trazos blancos, líneas finas y precisas, sombreados mediante rayado blanco y aspecto de plano técnico profesional.
+
+Distribuye las diferentes vistas libremente. Incluye cotas y especificaciones técnicas directamente sobre los dibujos, mediante líneas de referencia.
+
+Traza en una esquina, suelto y con el mismo trazo que las demás anotaciones, este código: MS-44 · LANDSAT 2. No es un título: es una nota técnica más del plano.
+
+Sin títulos, marcos, recuadros, tablas, leyendas ni cajas de información. Únicamente dibujos técnicos, cotas y anotaciones integradas en ellos. Sin colores.
+
+Write every annotation and dimension in the drawing in English.
+
+================================================================================
+MS-45 · LANDSAT 3
+================================================================================
+Genera un Sketch técnico de diseño industrial del siguiente aparato: LANDSAT 3 (NASA ERTS-C, Nimbus-derived box-shaped bus with two rectangular solar array wings, the redesigned two-camera panchromatic RBV and the five-channel MSS multispectral scanner facing nadir), en órbita terrestre, 1978.
+
+Dibujo técnico a mano alzada con vistas ortogonales, perspectiva 3D, cotas, anotaciones, líneas de referencia y detalles constructivos.
+
+Estética: fondo negro mate, trazos blancos, líneas finas y precisas, sombreados mediante rayado blanco y aspecto de plano técnico profesional.
+
+Distribuye las diferentes vistas libremente. Incluye cotas y especificaciones técnicas directamente sobre los dibujos, mediante líneas de referencia.
+
+Traza en una esquina, suelto y con el mismo trazo que las demás anotaciones, este código: MS-45 · LANDSAT 3. No es un título: es una nota técnica más del plano.
+
+Sin títulos, marcos, recuadros, tablas, leyendas ni cajas de información. Únicamente dibujos técnicos, cotas y anotaciones integradas en ellos. Sin colores.
+
+Write every annotation and dimension in the drawing in English.
+
+================================================================================
+MS-46 · LANDSAT 4
+================================================================================
+Genera un Sketch técnico de diseño industrial del siguiente aparato: LANDSAT 4 (NASA Multimission Modular Spacecraft bus, box-shaped body with a single large solar array wing on one side, the seven-band Thematic Mapper and the MSS scanner facing nadir, plus a GPS receiver antenna), en órbita terrestre, 1982.
+
+Dibujo técnico a mano alzada con vistas ortogonales, perspectiva 3D, cotas, anotaciones, líneas de referencia y detalles constructivos.
+
+Estética: fondo negro mate, trazos blancos, líneas finas y precisas, sombreados mediante rayado blanco y aspecto de plano técnico profesional.
+
+Distribuye las diferentes vistas libremente. Incluye cotas y especificaciones técnicas directamente sobre los dibujos, mediante líneas de referencia.
+
+Traza en una esquina, suelto y con el mismo trazo que las demás anotaciones, este código: MS-46 · LANDSAT 4. No es un título: es una nota técnica más del plano.
+
+Sin títulos, marcos, recuadros, tablas, leyendas ni cajas de información. Únicamente dibujos técnicos, cotas y anotaciones integradas en ellos. Sin colores.
+
+Write every annotation and dimension in the drawing in English.
+
+================================================================================
+MS-47 · LANDSAT 5
+================================================================================
+Genera un Sketch técnico de diseño industrial del siguiente aparato: LANDSAT 5 (NASA Multimission Modular Spacecraft bus, box-shaped body with a single large solar array wing, the seven-band Thematic Mapper and the MSS scanner facing nadir), en órbita terrestre, 1984.
+
+Dibujo técnico a mano alzada con vistas ortogonales, perspectiva 3D, cotas, anotaciones, líneas de referencia y detalles constructivos.
+
+Estética: fondo negro mate, trazos blancos, líneas finas y precisas, sombreados mediante rayado blanco y aspecto de plano técnico profesional.
+
+Distribuye las diferentes vistas libremente. Incluye cotas y especificaciones técnicas directamente sobre los dibujos, mediante líneas de referencia.
+
+Traza en una esquina, suelto y con el mismo trazo que las demás anotaciones, este código: MS-47 · LANDSAT 5. No es un título: es una nota técnica más del plano.
+
+Sin títulos, marcos, recuadros, tablas, leyendas ni cajas de información. Únicamente dibujos técnicos, cotas y anotaciones integradas en ellos. Sin colores.
+
+Write every annotation and dimension in the drawing in English.
+
+================================================================================
+MS-48 · JASON-1
+================================================================================
+Genera un Sketch técnico de diseño industrial del siguiente aparato: JASON-1 ocean altimetry satellite (NASA-CNES, box-shaped bus with two solar array wings, the Poseidon-2 dual-frequency radar altimeter antenna pointing to nadir, the JMR microwave radiometer beside it and the DORIS and laser retroreflector assemblies), en órbita terrestre, 2001.
+
+Dibujo técnico a mano alzada con vistas ortogonales, perspectiva 3D, cotas, anotaciones, líneas de referencia y detalles constructivos.
+
+Estética: fondo negro mate, trazos blancos, líneas finas y precisas, sombreados mediante rayado blanco y aspecto de plano técnico profesional.
+
+Distribuye las diferentes vistas libremente. Incluye cotas y especificaciones técnicas directamente sobre los dibujos, mediante líneas de referencia.
+
+Traza en una esquina, suelto y con el mismo trazo que las demás anotaciones, este código: MS-48 · JASON 1. No es un título: es una nota técnica más del plano.
+
+Sin títulos, marcos, recuadros, tablas, leyendas ni cajas de información. Únicamente dibujos técnicos, cotas y anotaciones integradas en ellos. Sin colores.
+
+Write every annotation and dimension in the drawing in English.
+
+================================================================================
+MS-49 · QUIKSCAT
+================================================================================
+Genera un Sketch técnico de diseño industrial del siguiente aparato: QUIKSCAT ocean wind satellite (NASA, compact box-shaped bus carrying the SeaWinds scatterometer, a large rotating parabolic dish antenna on a short mast, with fixed solar panels and the spin mechanism visible), en órbita terrestre, 1999.
+
+Dibujo técnico a mano alzada con vistas ortogonales, perspectiva 3D, cotas, anotaciones, líneas de referencia y detalles constructivos.
+
+Estética: fondo negro mate, trazos blancos, líneas finas y precisas, sombreados mediante rayado blanco y aspecto de plano técnico profesional.
+
+Distribuye las diferentes vistas libremente. Incluye cotas y especificaciones técnicas directamente sobre los dibujos, mediante líneas de referencia.
+
+Traza en una esquina, suelto y con el mismo trazo que las demás anotaciones, este código: MS-49 · QUIKSCAT. No es un título: es una nota técnica más del plano.
+
+Sin títulos, marcos, recuadros, tablas, leyendas ni cajas de información. Únicamente dibujos técnicos, cotas y anotaciones integradas en ellos. Sin colores.
+
+Write every annotation and dimension in the drawing in English.
+
+================================================================================
+MS-50 · SEASTAR
+================================================================================
+Genera un Sketch técnico de diseño industrial del siguiente aparato: SEASTAR ocean colour satellite (NASA OrbView-2, small box-shaped bus with fixed solar panels and the SeaWiFS eight-band ocean colour scanner with its tilted pointing mirror looking to nadir), en órbita terrestre, 1997.
+
+Dibujo técnico a mano alzada con vistas ortogonales, perspectiva 3D, cotas, anotaciones, líneas de referencia y detalles constructivos.
+
+Estética: fondo negro mate, trazos blancos, líneas finas y precisas, sombreados mediante rayado blanco y aspecto de plano técnico profesional.
+
+Distribuye las diferentes vistas libremente. Incluye cotas y especificaciones técnicas directamente sobre los dibujos, mediante líneas de referencia.
+
+Traza en una esquina, suelto y con el mismo trazo que las demás anotaciones, este código: MS-50 · SEASTAR. No es un título: es una nota técnica más del plano.
+
+Sin títulos, marcos, recuadros, tablas, leyendas ni cajas de información. Únicamente dibujos técnicos, cotas y anotaciones integradas en ellos. Sin colores.
+
+Write every annotation and dimension in the drawing in English.
+
+================================================================================
+MS-51 · SORCE
+================================================================================
+Genera un Sketch técnico de diseño industrial del siguiente aparato: SORCE solar radiation satellite (NASA-LASP, compact box-shaped bus with four Sun-pointing instruments on one face — TIM, SIM, SOLSTICE and XPS — and fixed solar panels), en órbita terrestre, 2003.
+
+Dibujo técnico a mano alzada con vistas ortogonales, perspectiva 3D, cotas, anotaciones, líneas de referencia y detalles constructivos.
+
+Estética: fondo negro mate, trazos blancos, líneas finas y precisas, sombreados mediante rayado blanco y aspecto de plano técnico profesional.
+
+Distribuye las diferentes vistas libremente. Incluye cotas y especificaciones técnicas directamente sobre los dibujos, mediante líneas de referencia.
+
+Traza en una esquina, suelto y con el mismo trazo que las demás anotaciones, este código: MS-51 · SORCE. No es un título: es una nota técnica más del plano.
+
+Sin títulos, marcos, recuadros, tablas, leyendas ni cajas de información. Únicamente dibujos técnicos, cotas y anotaciones integradas en ellos. Sin colores.
+
+Write every annotation and dimension in the drawing in English.
+
+================================================================================
+MS-52 · SWAS
+================================================================================
+Genera un Sketch técnico de diseño industrial del siguiente aparato: SWAS submillimeter wave astronomy satellite (NASA, box-shaped bus carrying an offset Cassegrain submillimeter telescope of 55 x 71 cm aperture, with four solar panels and the cooled receiver assembly), en órbita terrestre, 1998.
+
+Dibujo técnico a mano alzada con vistas ortogonales, perspectiva 3D, cotas, anotaciones, líneas de referencia y detalles constructivos.
+
+Estética: fondo negro mate, trazos blancos, líneas finas y precisas, sombreados mediante rayado blanco y aspecto de plano técnico profesional.
+
+Distribuye las diferentes vistas libremente. Incluye cotas y especificaciones técnicas directamente sobre los dibujos, mediante líneas de referencia.
+
+Traza en una esquina, suelto y con el mismo trazo que las demás anotaciones, este código: MS-52 · SWAS. No es un título: es una nota técnica más del plano.
+
+Sin títulos, marcos, recuadros, tablas, leyendas ni cajas de información. Únicamente dibujos técnicos, cotas y anotaciones integradas en ellos. Sin colores.
+
+Write every annotation and dimension in the drawing in English.
+
+================================================================================
+MS-53 · WIRE
+================================================================================
+Genera un Sketch técnico de diseño industrial del siguiente aparato: WIRE wide-field infrared explorer (NASA, box-shaped bus with a 30 cm aperture infrared telescope, the solid-hydrogen cryostat behind it and four solar panels), en órbita terrestre, 1999.
+
+Dibujo técnico a mano alzada con vistas ortogonales, perspectiva 3D, cotas, anotaciones, líneas de referencia y detalles constructivos.
+
+Estética: fondo negro mate, trazos blancos, líneas finas y precisas, sombreados mediante rayado blanco y aspecto de plano técnico profesional.
+
+Distribuye las diferentes vistas libremente. Incluye cotas y especificaciones técnicas directamente sobre los dibujos, mediante líneas de referencia.
+
+Traza en una esquina, suelto y con el mismo trazo que las demás anotaciones, este código: MS-53 · WIRE. No es un título: es una nota técnica más del plano.
+
+Sin títulos, marcos, recuadros, tablas, leyendas ni cajas de información. Únicamente dibujos técnicos, cotas y anotaciones integradas en ellos. Sin colores.
+
+Write every annotation and dimension in the drawing in English.
