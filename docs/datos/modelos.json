@@ -327,5 +327,15 @@
   "glb": "modelos/maven.glb",
   "nombre_modelo": "Mars Atmosphere and Volatile EvolutioN (MAVEN)",
   "verificado": "NASA 3D Resources"
+ },
+ "juno": {
+  "glb": "modelos/juno.glb",
+  "nombre_modelo": "Juno (A)",
+  "verificado": "NASA 3D Resources"
+ },
+ "osiris-rex": {
+  "glb": "modelos/osiris-rex.glb",
+  "nombre_modelo": "OSIRIS-REx",
+  "verificado": "NASA 3D Resources"
  }
 }
