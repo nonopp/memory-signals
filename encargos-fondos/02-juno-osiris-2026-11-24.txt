@@ -1,0 +1,43 @@
+ENCARGOS DE FONDO · JUNO Y OSIRIS-REX · Memory Signals
+Generados el 24-11-2026 · plantilla de Nono (sketch técnico industrial, anotaciones en inglés)
+Salida: docs/img/fondo-<id>.jpg a 1920 x 1080 · luego fondo-<id>.en.jpg y fondo-<id>.de.jpg
+
+CÓDIGOS: MS-57 juno · MS-58 osiris-rex
+Los tres aparatos de la tanda anterior (Perseverance, MRO y MAVEN) llevan reservados MS-54, MS-55 y MS-56.
+
+Para la versión española, cambia la última línea por: Escribe todas las anotaciones y cotas del dibujo en español.
+Para la alemana: Schreibe alle Beschriftungen und Maße in der Zeichnung auf Deutsch.
+
+================================================================================
+MS-57 · JUNO
+================================================================================
+Genera un Sketch técnico de diseño industrial del siguiente aparato: JUNO (NASA New Frontiers Jupiter orbiter: hexagonal central body with a large high-gain dish antenna on top, three long solar array wings set radially around the body, each one about nine metres long and made of eleven panels, a magnetometer boom on one wing tip and the box-shaped titanium radiation vault inside the body), en órbita de Júpiter, 2016.
+
+Dibujo técnico a mano alzada con vistas ortogonales, perspectiva 3D, cotas, anotaciones, líneas de referencia y detalles constructivos.
+
+Estética: fondo negro mate, trazos blancos, líneas finas y precisas, sombreados mediante rayado blanco y aspecto de plano técnico profesional.
+
+Distribuye las diferentes vistas libremente. Incluye cotas y especificaciones técnicas directamente sobre los dibujos, mediante líneas de referencia.
+
+Traza en una esquina, suelto y con el mismo trazo que las demás anotaciones, este código: MS-57 · JUNO. No es un título: es una nota técnica más del plano.
+
+Sin títulos, marcos, recuadros, tablas, leyendas ni cajas de información. Únicamente dibujos técnicos, cotas y anotaciones integradas en ellos. Sin colores.
+
+Write every annotation and dimension in the drawing in English.
+
+================================================================================
+MS-58 · OSIRIS-REX
+================================================================================
+Genera un Sketch técnico de diseño industrial del siguiente aparato: OSIRIS-REX (NASA New Frontiers asteroid sample-return spacecraft: box-shaped main body, two rectangular solar array wings on opposite sides, a long articulated sampling arm ending in the round TAGSAM collector head, the sample-return capsule sitting on top of the body and the fixed high-gain dish antenna), camino del asteroide Bennu, 2016.
+
+Dibujo técnico a mano alzada con vistas ortogonales, perspectiva 3D, cotas, anotaciones, líneas de referencia y detalles constructivos.
+
+Estética: fondo negro mate, trazos blancos, líneas finas y precisas, sombreados mediante rayado blanco y aspecto de plano técnico profesional.
+
+Distribuye las diferentes vistas libremente. Incluye cotas y especificaciones técnicas directamente sobre los dibujos, mediante líneas de referencia.
+
+Traza en una esquina, suelto y con el mismo trazo que las demás anotaciones, este código: MS-58 · OSIRIS-REX. No es un título: es una nota técnica más del plano.
+
+Sin títulos, marcos, recuadros, tablas, leyendas ni cajas de información. Únicamente dibujos técnicos, cotas y anotaciones integradas en ellos. Sin colores.
+
+Write every annotation and dimension in the drawing in English.
