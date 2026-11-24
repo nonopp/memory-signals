@@ -119,15 +119,39 @@ def carga_json(nombre):
 
 
 def recorta(texto, limite=155):
+    """Descripción que aprovecha el hueco de Google sin cortar una frase por la mitad.
+
+    Antes se cortaba en la última frase completa dentro del límite, y cuando la primera
+    frase era corta la descripción se quedaba en 47-60 caracteres (Galileo, Skylab,
+    Messenger, Apolo 12). Ahora solo se acepta ese corte si deja al menos el 70 % del
+    hueco; si no, se corta por palabra y se marca con puntos suspensivos.
+    """
     texto = " ".join((texto or "").split())
     if len(texto) <= limite:
         return texto
     corte = texto[:limite]
-    for marca in (". ", "; ", ", ", " "):
-        if marca in corte:
-            corte = corte[: corte.rfind(marca)]
-            break
-    return corte.rstrip(" ,;.") + "…"
+    for marca in (". ", "? ", "! ", "; "):
+        i = corte.rfind(marca)
+        if i >= limite * 0.7:
+            return corte[: i + 1].strip()
+    i = corte.rfind(" ")
+    return (corte[:i] if i > 0 else corte).rstrip(" ,;.") + "…"
+
+
+def titulo_para(nombre, cuerpo, limite=60):
+    """Título que no se corta en los resultados de búsqueda.
+
+    Se intenta el completo; si pasa de 60 caracteres se cae el destino, y si aun así
+    no cabe se deja solo el nombre (Google añade el del sitio por su cuenta). Los tres
+    casos de hoy — WMAP, CGRO y Van Allen — se quedaban en 79, 72 y 65 caracteres.
+    """
+    completo = "%s · %s · Memory Signals" % (nombre, cuerpo)
+    if len(completo) <= limite:
+        return completo
+    con_marca = "%s · Memory Signals" % nombre
+    if len(con_marca) <= limite:
+        return con_marca
+    return nombre
 
 
 def e(valor):
@@ -169,7 +193,7 @@ def pagina_objeto(a, sitio, textos, idbase):
     nombre = a.get("nombre") or ident
     resumen_largo = " ".join((a.get("ficha_resumen") or "").split())
     resumen = recorta(resumen_largo)
-    titulo = "%s · %s · Memory Signals" % (nombre, a.get("cuerpo") or "")
+    titulo = titulo_para(nombre, a.get("cuerpo") or "")
     url = sitio + "objeto/" + ident + "/"
     imagen = imagen_social(sitio, ident)
     alternos = "\n".join(

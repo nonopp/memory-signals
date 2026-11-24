@@ -1,3 +1,9 @@
+## v3.30.1 — 2026-11-24
+
+- **Los títulos de las fichas ya no se cortan en Google**: el título se montaba siempre como «nombre · destino · Memory Signals» y en tres casos pasaba de 60 caracteres (WMAP 79, CGRO 72, Van Allen 65), así que el buscador los truncaba. Ahora, si no cabe, se cae el destino y queda «nombre · Memory Signals»; si aún no cabe, solo el nombre. Los 53 títulos quedan en 60 caracteres o menos.
+- **Las descripciones aprovechan el hueco entero**: el recorte buscaba la última frase completa dentro de 155 caracteres y, cuando la primera frase era corta, la descripción se quedaba en 47-60 caracteres (Skylab, Galileo, Messenger y la etapa del Intrepid). Ahora solo acepta ese corte si deja al menos el 70 % del hueco; si no, corta por palabra. Las 57 descripciones quedan entre 103 y 159 caracteres.
+- La descripción de la portada decía «42 objetos» con el catálogo ya en 53, y medía 234 caracteres: reescrita con la cifra buena y 152 caracteres.
+
 ## v3.30.0 — 2026-11-23
 
 - **Los fondos de los once objetos nuevos, en los tres idiomas**: los sketches técnicos de Landsat 1 a 5, Jason-1, QuikSCAT, SeaStar, SORCE, SWAS y WIRE, con las anotaciones en español, inglés y alemán. 33 imágenes a 1920 x 1080, entre 356 y 468 KB cada una.
