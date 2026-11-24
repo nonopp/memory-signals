@@ -1,3 +1,10 @@
+## v3.31.0 — 2026-11-24
+
+- **Los aparatos que siguen funcionando se advierten y se explican**: la web cuenta la historia del equipo que la NASA dejó atrás, así que un aparato en servicio es una excepción y ahora se dice. La ficha lleva un recuadro propio, «Sigue funcionando: por qué está aquí», con la razón por la que aparece en el catálogo; también sale en la página estática del objeto y el buscador lo marca junto a «sigue funcionando».
+- **Voyager 1 y 2 son las dos primeras fichas con ese aviso**, con su texto en los tres idiomas. El motivo es el mismo en las dos: no pueden volver y se están apagando por partes, instrumento a instrumento, para estirar la energía; lo que queda encendido es un resto de lo que fueron.
+- La ficha del proyecto («Qué estás viendo») añade una línea que lo dice antes de entrar en ningún objeto: no todo lo que hay aquí está muerto.
+- **La ficha de Voyager 1 deja de usar el resumen para el criterio**: ese texto («Ojo al criterio: no está abandonada… Se incluye como contraste honesto») pasa al recuadro de excepción, y el resumen vuelve a contar qué hizo la nave.
+
 ## v3.30.1 — 2026-11-24
 
 - **Los títulos de las fichas ya no se cortan en Google**: el título se montaba siempre como «nombre · destino · Memory Signals» y en tres casos pasaba de 60 caracteres (WMAP 79, CGRO 72, Van Allen 65), así que el buscador los truncaba. Ahora, si no cabe, se cae el destino y queda «nombre · Memory Signals»; si aún no cabe, solo el nombre. Los 53 títulos quedan en 60 caracteres o menos.

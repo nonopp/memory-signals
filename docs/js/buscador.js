@@ -137,7 +137,8 @@
         '<span class="buscador-textos">' +
           '<span class="buscador-nombre">' + (a.nombre_mapa || a.nombre) + '</span>' +
           '<span class="buscador-meta">' + a.cuerpo + ' · ' + a.anio +
-            (funciona ? ' · ' + (T('buscar.sigue') || 'sigue funcionando') : '') + '</span>' +
+            (funciona ? ' · ' + (T('buscar.sigue') || 'sigue funcionando') : '') +
+            (a.excepcion ? ' · ' + (T('buscar.excepcion') || 'excepción') : '') + '</span>' +
           '<span class="buscador-resumen">' + (a.ficha_resumen || '') + '</span>' +
         '</span></button>';
     }).join('');

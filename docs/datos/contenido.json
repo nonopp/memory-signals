@@ -572,7 +572,7 @@
     "texto_explorador": "Ojo: sigue funcionando. No es basura espacial.",
     "texto_cientifico": "Activa y en contacto con la Tierra desde el espacio interestelar."
    },
-   "ficha_resumen": "Ojo al criterio: Voyager 1 no está abandonada. Sigue en contacto con la Tierra, pero puede dejar de responder pronto. Se incluye como contraste honesto.",
+   "ficha_resumen": "La primera nave que cruzó la frontera del sistema solar: pasó por Júpiter y Saturno, descubrió los volcanes de Ío y, desde 2012, viaja por el espacio interestelar.",
    "color": "#7fb7ff",
    "personas": [
     {
@@ -755,7 +755,8 @@
      "titulo": "El contraste",
      "texto": "Estoy en este catálogo como contraste honesto: el criterio es que el aparato ya no sirva, y yo todavía respondo. Puede que deje de hacerlo pronto."
     }
-   ]
+   ],
+   "excepcion": "Sigue funcionando, y por eso es una excepción en esta web. Está aquí porque su misión ya no puede volver: la NASA le va apagando los instrumentos uno a uno para que la energía dure, y lo que sigue encendido es un resto de lo que fue. Su historia, en cambio, ya está cerrada."
   },
   {
    "id": "modulo-lunar",
@@ -4783,7 +4784,8 @@
      "titulo": "Plataforma científica",
      "texto": "La plataforma con las cámaras y los sensores, y el disco de oro con los sonidos y saludos de la Tierra."
     }
-   ]
+   ],
+   "excepcion": "Sigue funcionando, y por eso es una excepción en esta web. Está aquí porque ya no puede volver y se está apagando por partes: cada instrumento que se desconecta no se vuelve a encender. Es la única nave que ha visitado los cuatro planetas gigantes, y eso ya no lo repite nadie."
   },
   {
    "id": "pioneer11",

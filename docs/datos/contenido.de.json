@@ -572,7 +572,7 @@
     "texto_explorador": "Achtung: funktioniert weiterhin. Es ist kein Weltraummüll.",
     "texto_cientifico": "Aktiv und im Kontakt mit der Erde aus dem interstellaren Raum."
    },
-   "ficha_resumen": "Achtung: Voyager 1 ist nicht verlassen. Sie steht weiterhin im Kontakt mit der Erde, könnte aber bald aufhören zu antworten. Sie wird als ehrlicher Kontrast betrachtet.",
+   "ficha_resumen": "Die erste Sonde, die die Grenze des Sonnensystems überquerte: Sie flog an Jupiter und Saturn vorbei, entdeckte die Vulkane auf Io und reist seit 2012 durch den interstellaren Raum.",
    "color": "#7fb7ff",
    "personas": [
     {
@@ -755,7 +755,8 @@
      "titulo": null,
      "texto": null
     }
-   ]
+   ],
+   "excepcion": "Sie funktioniert noch, und deshalb ist sie auf dieser Website eine Ausnahme. Sie ist hier, weil ihre Mission nicht mehr zurückkann: Die NASA schaltet ihre Instrumente eines nach dem anderen ab, damit die Energie reicht, und was noch an ist, ist ein Rest von dem, was sie war. Ihre Geschichte dagegen ist schon abgeschlossen."
   },
   {
    "id": "modulo-lunar",
@@ -4783,7 +4784,8 @@
      "titulo": "Wissenschaftsplattform",
      "texto": "Die Plattform mit Kameras und Sensoren sowie die goldene Schallplatte mit Klängen und Grüssen der Erde."
     }
-   ]
+   ],
+   "excepcion": "Sie funktioniert noch, und deshalb ist sie auf dieser Website eine Ausnahme. Sie ist hier, weil sie nicht mehr zurückkann und Stück für Stück abgeschaltet wird: Jedes Instrument, das getrennt wird, geht nie wieder an. Sie ist die einzige Sonde, die alle vier Gasriesen besucht hat, und das wird niemand wiederholen."
   },
   {
    "id": "pioneer11",

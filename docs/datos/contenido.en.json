@@ -572,7 +572,7 @@
     "texto_explorador": "Note: it is still working. It is not space junk.",
     "texto_cientifico": "Active and in contact with Earth from interstellar space."
    },
-   "ficha_resumen": "Note the criteria: Voyager 1 is not abandoned. It is still in contact with Earth, but it may stop responding soon. It is included as an honest contrast.",
+   "ficha_resumen": "The first spacecraft to cross the edge of the solar system: it flew past Jupiter and Saturn, discovered the volcanoes of Io and, since 2012, has been travelling through interstellar space.",
    "color": "#7fb7ff",
    "personas": [
     {
@@ -755,7 +755,8 @@
      "titulo": null,
      "texto": null
     }
-   ]
+   ],
+   "excepcion": "It is still working, which makes it an exception on this site. It is here because its mission can no longer come back: NASA is switching its instruments off one by one so that the power lasts, and what is still on is what is left of what it was. Its story, on the other hand, is already closed."
   },
   {
    "id": "modulo-lunar",
@@ -4783,7 +4784,8 @@
      "titulo": "Science platform",
      "texto": "The platform with the cameras and sensors, and the Golden Record with Earth's sounds and greetings."
     }
-   ]
+   ],
+   "excepcion": "It is still working, which makes it an exception on this site. It is here because it can no longer come back and it is being switched off piece by piece: every instrument that is disconnected will not be switched on again. It is the only spacecraft to have visited all four giant planets, and nobody will repeat that."
   },
   {
    "id": "pioneer11",

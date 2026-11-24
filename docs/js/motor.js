@@ -682,6 +682,19 @@
     estadoTxt.textContent = donde;
     cuerpo.appendChild(estadoTxt);
 
+    /* Aparatos que todavía funcionan: se advierte y se explica por qué están en la web */
+    if (a.excepcion) {
+      var cajaExc = document.createElement('div');
+      cajaExc.className = 'excepcion';
+      var rotExc = document.createElement('strong');
+      rotExc.textContent = T('ficha.excepcion') || 'Sigue funcionando';
+      cajaExc.appendChild(rotExc);
+      var txtExc = document.createElement('p');
+      txtExc.textContent = a.excepcion;
+      cajaExc.appendChild(txtExc);
+      cuerpo.appendChild(cajaExc);
+    }
+
     /* el resumen solo si aporta algo: antes salía repetido cuando faltaba el estado */
     if (a.ficha_resumen && a.ficha_resumen !== donde) {
       var resumen = document.createElement('p');

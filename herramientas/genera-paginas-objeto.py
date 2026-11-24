@@ -46,6 +46,7 @@ TEXTOS = {
         "indice_enlace": "Ver el índice completo",
         "pie": "Proyecto del NASA Space Apps Challenge 2026. Contenido con fuentes citadas.",
         "otros": "Otros objetos",
+        "excepcion": "Sigue funcionando: por qué está aquí",
     },
     "en": {
         "lang": "en",
@@ -60,6 +61,7 @@ TEXTOS = {
         "indice_enlace": "See the full index",
         "pie": "A NASA Space Apps Challenge 2026 project. Content with cited sources.",
         "otros": "Other objects",
+        "excepcion": "Still working: why it is here",
     },
     "de": {
         "lang": "de",
@@ -74,6 +76,7 @@ TEXTOS = {
         "indice_enlace": "Zum vollständigen Index",
         "pie": "Ein Projekt des NASA Space Apps Challenge 2026. Inhalte mit zitierten Quellen.",
         "otros": "Weitere Objekte",
+        "excepcion": "Funktioniert noch: warum sie hier ist",
     },
 }
 
@@ -100,6 +103,9 @@ ul.hitos strong{color:#fff}
 .cta:hover{background:#8af0dc}
 .cta-nota{font-size:13px;color:#9fb6cc;margin:0 0 26px}
 .fuentes li{margin:0 0 6px;font-size:14px;word-break:break-word}
+.excepcion{margin:0 0 18px;padding:12px 16px;border-left:3px solid var(--ocre);background:rgba(201,162,39,.10);border-radius:0 12px 12px 0}
+.excepcion strong{display:block;font-size:12px;text-transform:uppercase;letter-spacing:.09em;color:var(--ocre);margin:0 0 4px}
+.excepcion p{margin:0;font-size:15px}
 .pie{border-top:1px solid rgba(99,224,200,.2);margin-top:34px;padding-top:16px;font-size:13px;color:#9fb6cc}
 .rejilla{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:12px;margin:22px 0 0;padding:0;list-style:none}
 .rejilla a{display:block;text-decoration:none;color:#eaf3f8;border:1px solid rgba(99,224,200,.2);
@@ -216,6 +222,13 @@ def pagina_objeto(a, sitio, textos, idbase):
     elif not isinstance(estado, str):
         estado = ""
 
+    # aviso de excepción: aparatos que siguen funcionando y por qué están en la web
+    excepcion = " ".join((a.get("excepcion") or "").split())
+    excepcion_html = ""
+    if excepcion:
+        excepcion_html = '  <div class="excepcion"><strong>%s</strong><p>%s</p></div>\n' % (
+            e(textos["excepcion"]), e(excepcion))
+
     # el estado acaba en punto y seguido, sin duplicar el que ya trae el texto
     estado_txt = estado.strip()
     if estado_txt.endswith((".", "!", "?")):
@@ -264,6 +277,7 @@ def pagina_objeto(a, sitio, textos, idbase):
   </figure>
   <p class="resumen">{resumen_largo}</p>
   <p>{estado}{personas_html}</p>
+{excepcion_html}
   <h2>{hitos_titulo}</h2>
   <ul class="hitos">
 {hitos}
@@ -297,6 +311,7 @@ def pagina_objeto(a, sitio, textos, idbase):
         anio=e(a.get("anio") or ""),
         lugar=e(a.get("lugar") or ""),
         estado=e(estado_html),
+        excepcion_html=excepcion_html,
         personas_html=e(("Personas: " + personas) if personas else ""),
         nombre=e(nombre),
         id=e(ident),
