@@ -312,5 +312,20 @@
   "glb": "modelos/wire.glb",
   "nombre_modelo": "Wide-Field Infrared Explorer (WIRE)",
   "verificado": "NASA 3D Resources"
+ },
+ "perseverance": {
+  "glb": "modelos/perseverance.glb",
+  "nombre_modelo": "Mars 2020 Perseverance Rover",
+  "verificado": "NASA 3D Resources"
+ },
+ "mro": {
+  "glb": "modelos/mro.glb",
+  "nombre_modelo": "Mars Reconnaissance Orbiter (MRO)",
+  "verificado": "NASA 3D Resources"
+ },
+ "maven": {
+  "glb": "modelos/maven.glb",
+  "nombre_modelo": "Mars Atmosphere and Volatile EvolutioN (MAVEN)",
+  "verificado": "NASA 3D Resources"
  }
 }
