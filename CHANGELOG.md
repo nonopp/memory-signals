@@ -1,3 +1,7 @@
+## v3.31.1 — 2026-11-24
+
+- El aviso de **Voyager 2** repetía en el recuadro lo mismo que ya decía su estado («la única nave que ha visitado los cuatro planetas gigantes»). Ahora el recuadro explica lo que no estaba dicho: que se apaga por partes y que el contacto se calcula que se pierda hacia 2036.
+
 ## v3.31.0 — 2026-11-24
 
 - **Los aparatos que siguen funcionando se advierten y se explican**: la web cuenta la historia del equipo que la NASA dejó atrás, así que un aparato en servicio es una excepción y ahora se dice. La ficha lleva un recuadro propio, «Sigue funcionando: por qué está aquí», con la razón por la que aparece en el catálogo; también sale en la página estática del objeto y el buscador lo marca junto a «sigue funcionando».
