@@ -1,0 +1,112 @@
+ENCARGOS DE FONDO · PENDIENTES Y SIGUIENTE TANDA · Memory Signals
+Generados el 24-11-2026 · plantilla de Nono (sketch técnico industrial, anotaciones en inglés)
+Salida: docs/img/fondo-<id>.jpg a 1920 x 1080 · luego fondo-<id>.en.jpg y fondo-<id>.de.jpg
+
+CÓDIGOS: MS-54 perseverance · MS-55 mro · MS-56 maven · MS-59 curiosity · MS-60 new-horizons · MS-61 dart
+Los tres primeros (tanda 2) siguen sin lámina: su ficha ya está publicada, pero sin figura.
+Los tres últimos son la tanda 4 (convertir .blend/.stl a GLB); sus prompts van aquí para tenerlos listos.
+
+Para la versión española, cambia la última línea por: Escribe todas las anotaciones y cotas del dibujo en español.
+Para la alemana: Schreibe alle Beschriftungen und Maße in der Zeichnung auf Deutsch.
+
+================================================================================
+MS-54 · PERSEVERANCE
+================================================================================
+Genera un Sketch técnico de diseño industrial del siguiente aparato: PERSEVERANCE (NASA Mars 2020 rover: six aluminium wheels with titanium spokes on a rocker-bogie suspension, a radioisotope thermoelectric generator at the rear, a remote sensing mast with stereo cameras and the SuperCam laser, a robotic arm with drill, corer and sample tubes, and a box-shaped body holding the sample caching system and the MOXIE oxygen experiment), en el cráter Jezero, Marte, 2021.
+
+Dibujo técnico a mano alzada con vistas ortogonales, perspectiva 3D, cotas, anotaciones, líneas de referencia y detalles constructivos.
+
+Estética: fondo negro mate, trazos blancos, líneas finas y precisas, sombreados mediante rayado blanco y aspecto de plano técnico profesional.
+
+Distribuye las diferentes vistas libremente. Incluye cotas y especificaciones técnicas directamente sobre los dibujos, mediante líneas de referencia.
+
+Traza en una esquina, suelto y con el mismo trazo que las demás anotaciones, este código: MS-54 · PERSEVERANCE. No es un título: es una nota técnica más del plano.
+
+Sin títulos, marcos, recuadros, tablas, leyendas ni cajas de información. Únicamente dibujos técnicos, cotas y anotaciones integradas en ellos. Sin colores.
+
+Write every annotation and dimension in the drawing in English.
+
+================================================================================
+MS-55 · MRO (MARS RECONNAISSANCE ORBITER)
+================================================================================
+Genera un Sketch técnico de diseño industrial del siguiente aparato: MARS RECONNAISSANCE ORBITER (NASA Mars orbiter: long rectangular body, two solar array wings, the large fixed high-gain dish antenna at one end, the HiRISE telescope inside its cylindrical baffle, the CRISM spectrometer and the SHARAD radar antenna on the instrument deck), en órbita de Marte, 2006.
+
+Dibujo técnico a mano alzada con vistas ortogonales, perspectiva 3D, cotas, anotaciones, líneas de referencia y detalles constructivos.
+
+Estética: fondo negro mate, trazos blancos, líneas finas y precisas, sombreados mediante rayado blanco y aspecto de plano técnico profesional.
+
+Distribuye las diferentes vistas libremente. Incluye cotas y especificaciones técnicas directamente sobre los dibujos, mediante líneas de referencia.
+
+Traza en una esquina, suelto y con el mismo trazo que las demás anotaciones, este código: MS-55 · MRO. No es un título: es una nota técnica más del plano.
+
+Sin títulos, marcos, recuadros, tablas, leyendas ni cajas de información. Únicamente dibujos técnicos, cotas y anotaciones integradas en ellos. Sin colores.
+
+Write every annotation and dimension in the drawing in English.
+
+================================================================================
+MS-56 · MAVEN
+================================================================================
+Genera un Sketch técnico de diseño industrial del siguiente aparato: MAVEN (NASA Mars Atmosphere and Volatile EvolutioN orbiter: box-shaped body, two solar array wings, a fixed high-gain dish antenna, the articulated boom carrying the NGIMS mass spectrometer and the magnetometer sensors mounted on the solar array tips), en órbita de Marte, 2014.
+
+Dibujo técnico a mano alzada con vistas ortogonales, perspectiva 3D, cotas, anotaciones, líneas de referencia y detalles constructivos.
+
+Estética: fondo negro mate, trazos blancos, líneas finas y precisas, sombreados mediante rayado blanco y aspecto de plano técnico profesional.
+
+Distribuye las diferentes vistas libremente. Incluye cotas y especificaciones técnicas directamente sobre los dibujos, mediante líneas de referencia.
+
+Traza en una esquina, suelto y con el mismo trazo que las demás anotaciones, este código: MS-56 · MAVEN. No es un título: es una nota técnica más del plano.
+
+Sin títulos, marcos, recuadros, tablas, leyendas ni cajas de información. Únicamente dibujos técnicos, cotas y anotaciones integradas en ellos. Sin colores.
+
+Write every annotation and dimension in the drawing in English.
+
+================================================================================
+MS-59 · CURIOSITY
+================================================================================
+Genera un Sketch técnico de diseño industrial del siguiente aparato: CURIOSITY (NASA Mars Science Laboratory rover: six aluminium wheels on a rocker-bogie suspension, a radioisotope thermoelectric generator at the rear, a remote sensing mast with the ChemCam laser and stereo cameras, a robotic arm with drill and scoop, and a box-shaped body holding the Sample Analysis at Mars laboratory), en el cráter Gale, Marte, 2012.
+
+Dibujo técnico a mano alzada con vistas ortogonales, perspectiva 3D, cotas, anotaciones, líneas de referencia y detalles constructivos.
+
+Estética: fondo negro mate, trazos blancos, líneas finas y precisas, sombreados mediante rayado blanco y aspecto de plano técnico profesional.
+
+Distribuye las diferentes vistas libremente. Incluye cotas y especificaciones técnicas directamente sobre los dibujos, mediante líneas de referencia.
+
+Traza en una esquina, suelto y con el mismo trazo que las demás anotaciones, este código: MS-59 · CURIOSITY. No es un título: es una nota técnica más del plano.
+
+Sin títulos, marcos, recuadros, tablas, leyendas ni cajas de información. Únicamente dibujos técnicos, cotas y anotaciones integradas en ellos. Sin colores.
+
+Write every annotation and dimension in the drawing in English.
+
+================================================================================
+MS-60 · NEW HORIZONS
+================================================================================
+Genera un Sketch técnico de diseño industrial del siguiente aparato: NEW HORIZONS (NASA Pluto flyby spacecraft: piano-sized aluminium box, one radioisotope thermoelectric generator on a boom at the rear, the large high-gain dish antenna on the top deck, the LORRI telescope in its cylindrical baffle, the RALPH and LEISA spectrometer package and two star trackers), camino de Plutón, 2006.
+
+Dibujo técnico a mano alzada con vistas ortogonales, perspectiva 3D, cotas, anotaciones, líneas de referencia y detalles constructivos.
+
+Estética: fondo negro mate, trazos blancos, líneas finas y precisas, sombreados mediante rayado blanco y aspecto de plano técnico profesional.
+
+Distribuye las diferentes vistas libremente. Incluye cotas y especificaciones técnicas directamente sobre los dibujos, mediante líneas de referencia.
+
+Traza en una esquina, suelto y con el mismo trazo que las demás anotaciones, este código: MS-60 · NEW HORIZONS. No es un título: es una nota técnica más del plano.
+
+Sin títulos, marcos, recuadros, tablas, leyendas ni cajas de información. Únicamente dibujos técnicos, cotas y anotaciones integradas en ellos. Sin colores.
+
+Write every annotation and dimension in the drawing in English.
+
+================================================================================
+MS-61 · DART
+================================================================================
+Genera un Sketch técnico de diseño industrial del siguiente aparato: DART (NASA Double Asteroid Redirection Test impactor: compact box-shaped body, two long roll-out solar arrays, the DRACO camera fixed on the front face, the NEXT-C ion thruster at the rear, star trackers and the LICIACube deployer), en ruta al asteroide Dimorphos, 2021.
+
+Dibujo técnico a mano alzada con vistas ortogonales, perspectiva 3D, cotas, anotaciones, líneas de referencia y detalles constructivos.
+
+Estética: fondo negro mate, trazos blancos, líneas finas y precisas, sombreados mediante rayado blanco y aspecto de plano técnico profesional.
+
+Distribuye las diferentes vistas libremente. Incluye cotas y especificaciones técnicas directamente sobre los dibujos, mediante líneas de referencia.
+
+Traza en una esquina, suelto y con el mismo trazo que las demás anotaciones, este código: MS-61 · DART. No es un título: es una nota técnica más del plano.
+
+Sin títulos, marcos, recuadros, tablas, leyendas ni cajas de información. Únicamente dibujos técnicos, cotas y anotaciones integradas en ellos. Sin colores.
+
+Write every annotation and dimension in the drawing in English.
