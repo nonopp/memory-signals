@@ -529,5 +529,25 @@
   },
   "ancho": 1920,
   "alto": 1080
+ },
+ "juno": {
+  "archivo": "img/fondo-juno.jpg",
+  "archivos": {
+   "es": "img/fondo-juno.jpg",
+   "en": "img/fondo-juno.en.jpg",
+   "de": "img/fondo-juno.de.jpg"
+  },
+  "ancho": 1920,
+  "alto": 1080
+ },
+ "osiris-rex": {
+  "archivo": "img/fondo-osiris-rex.jpg",
+  "archivos": {
+   "es": "img/fondo-osiris-rex.jpg",
+   "en": "img/fondo-osiris-rex.en.jpg",
+   "de": "img/fondo-osiris-rex.de.jpg"
+  },
+  "ancho": 1920,
+  "alto": 1080
  }
 }

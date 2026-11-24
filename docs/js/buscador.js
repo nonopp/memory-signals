@@ -8,6 +8,13 @@
   var panel, entrada, lista, cuenta, chipsCaja, ayuda, abierto = false;
   var filtro = 'todo', seleccion = 0, resultados = [];
 
+  /* El estado viene traducido en cada catálogo («funciona», «works», «funktioniert»): esta es
+     la única lista que hay que tocar si algún día se añade otro idioma. */
+  var EN_SERVICIO = ['funciona', 'works', 'funktioniert'];
+  function sigueFuncionando(a) {
+    return !!a && EN_SERVICIO.indexOf(a.estado) !== -1;
+  }
+
   function T(clave, datos) {
     return (window.MS_Idioma && window.MS_Idioma.t) ? window.MS_Idioma.t(clave, datos) : '';
   }
@@ -99,7 +106,7 @@
     var q = norm(entrada.value).trim();
     var todos = objetos();
     var salida = todos.filter(function (a) {
-      if (filtro === 'funciona') { if (a.estado !== 'funciona') return false; }
+      if (filtro === 'funciona') { if (!sigueFuncionando(a)) return false; }
       else if (filtro !== 'todo') { if (destinoDe(a.id) !== filtro) return false; }
       if (!q) return true;
       return textoDe(a).indexOf(q) !== -1;
@@ -130,7 +137,7 @@
       return;
     }
     lista.innerHTML = resultados.map(function (a, i) {
-      var funciona = a.estado === 'funciona';
+      var funciona = sigueFuncionando(a);
       return '<button type="button" class="buscador-res' + (i === seleccion ? ' sel' : '') +
         '" role="option" aria-selected="' + (i === seleccion) + '" data-id="' + a.id + '">' +
         '<span class="buscador-punto" style="background:' + (a.color || '#63e0c8') + '"></span>' +

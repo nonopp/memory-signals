@@ -164,8 +164,19 @@ def e(valor):
     return html.escape(str(valor if valor is not None else ""), quote=True)
 
 
+def ruta_fondo(ident):
+    return os.path.join(DOCS, "img", "fondo-" + ident + ".jpg")
+
+
 def imagen_social(sitio, ident):
-    return sitio + "img/fondo-" + ident + ".jpg"
+    """Sketch del objeto si ya existe; si no, la lámina genérica del proyecto.
+
+    Un objeto puede tener ficha y modelo 3D antes de que llegue su sketch. En ese caso la
+    página no debe enseñar un <img> roto ni anunciar en redes una imagen que da 404.
+    """
+    if os.path.exists(ruta_fondo(ident)):
+        return sitio + "img/fondo-" + ident + ".jpg"
+    return sitio + "img/og-memory-signals-v2.jpg"
 
 
 def json_ld(a, sitio, ident, resumen):
@@ -202,6 +213,11 @@ def pagina_objeto(a, sitio, textos, idbase):
     titulo = titulo_para(nombre, a.get("cuerpo") or "")
     url = sitio + "objeto/" + ident + "/"
     imagen = imagen_social(sitio, ident)
+    figura = ""
+    if os.path.exists(ruta_fondo(ident)):
+        figura = ('  <figure>\n'
+                  '    <img src="../../img/fondo-%s.jpg" alt="Lámina de %s" width="1200" height="900">\n'
+                  '  </figure>' % (ident, e(nombre)))
     alternos = "\n".join(
         '  <link rel="alternate" hreflang="%s" href="%s?lang=%s">' % (l, url, l) for l in IDIOMAS
     )
@@ -272,9 +288,7 @@ def pagina_objeto(a, sitio, textos, idbase):
 <main>
   <h1>{nombre}</h1>
   <p class="meta">{cuerpo} · {anio} · {lugar}</p>
-  <figure>
-    <img src="../../img/fondo-{id}.jpg" alt="Lámina de {nombre}" width="1200" height="900">
-  </figure>
+{figura}
   <p class="resumen">{resumen_largo}</p>
   <p>{estado}{personas_html}</p>
 {excepcion_html}
@@ -299,6 +313,7 @@ def pagina_objeto(a, sitio, textos, idbase):
         url=e(url),
         alternos=alternos,
         imagen=e(imagen),
+        figura=figura,
         estilo=ESTILO,
         jsonld=json_ld(a, sitio, ident, resumen),
         volver=e(textos["volver"]),

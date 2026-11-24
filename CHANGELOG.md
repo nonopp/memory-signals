@@ -1,3 +1,12 @@
+## v3.32.0 — 2026-11-24
+
+- **Cinco fichas nuevas, en los tres idiomas, y el catálogo pasa de 53 a 58 aparatos.** Marte suma tres — **Perseverance**, **Mars Reconnaissance Orbiter** y **MAVEN** — y el espacio profundo otros dos: **Juno** y **OSIRIS-REx**. Cada una con su modelo 3D, sus hitos citados, sus pines de componentes y su ficha estática.
+- **Modelos**: Perseverance 4,76 MB (Draco y WebP, 44 texturas), MRO 2,53 MB (tal como lo publica la NASA), MAVEN 0,31 MB (rebajado desde 10,47 MB con gltfpack), Juno 0,65 MB y OSIRIS-REx 1,22 MB. Los 58 aparatos del catálogo tienen ya su GLB enlazado.
+- **Aviso de excepción en las que siguen trabajando**: MRO, Perseverance, Juno y OSIRIS-REx llevan el recuadro «Sigue funcionando: por qué está aquí». MAVEN no lo lleva: se perdió el contacto el 6 de diciembre de 2025 y un comité concluyó en febrero de 2026 que no era recuperable.
+- **Los sketches de Juno y OSIRIS-REx (MS-57 y MS-58), en español, inglés y alemán**: seis láminas a 1920 x 1080, entre 383 y 410 KB, con el código del objeto en la esquina. Son ya el fondo de su ficha y lo que se descarga el botón «Sketch».
+- **Una ficha sin sketch ya no enseña una imagen rota**: si el dibujo todavía no existe, la página omite la figura y su `og:image` cae en la lámina del proyecto. Es el caso de MRO, MAVEN y Perseverance, que esperan su sketch.
+- La descripción de la portada decía «53 aparatos»; ahora dice 58.
+
 ## v3.31.1 — 2026-11-24
 
 - El aviso de **Voyager 2** repetía en el recuadro lo mismo que ya decía su estado («la única nave que ha visitado los cuatro planetas gigantes»). Ahora el recuadro explica lo que no estaba dicho: que se apaga por partes y que el contacto se calcula que se pierda hacia 2036.

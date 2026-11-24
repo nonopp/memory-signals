@@ -8411,6 +8411,782 @@
      "texto_cientifico": "Reentry on May 10, 2011 after its second life as an asteroseismograph."
     }
    ]
+  },
+  {
+   "id": "mro",
+   "nombre": "Mars Reconnaissance Orbiter",
+   "nombre_mapa": "MRO",
+   "cuerpo": "Mars",
+   "lugar": "In orbit around Mars since March 10, 2006",
+   "anio": 2006,
+   "anio_tipo": "llegada",
+   "estado": "works",
+   "estado_texto": {
+    "texto_explorador": "I am still in orbit, twenty years later. I am not abandoned: I work, and that is why I am an exception on this site.",
+    "texto_cientifico": "Operational in Martian orbit since March 10, 2006, with the mission extended several times. It is still taking images and acting as a data relay for the missions on the surface."
+   },
+   "ficha_resumen": "The orbiter that put a telescope over Mars: from 300 km, HiRISE can make out objects smaller than a metre. It set out to find where water was and for how long, and ended up as the relay through which almost every machine working on the ground speaks.",
+   "excepcion": "It is still working, which makes it an exception on this site. It is here because the last words of several of the machines that are on this list reached Earth through its antenna: it is the one that listens, and without it half of these stories would never have been known.",
+   "color": "#4a7fb5",
+   "mapa": {
+    "tipo": "espacio"
+   },
+   "hitos": [
+    {
+     "titulo": "HiRISE, the telescope that orbits Mars",
+     "texto": "My HiRISE camera can make out objects smaller than a metre from 300 km up: it has photographed Perseverance's parachute on the ground and the tracks the rovers left.",
+     "fuente": "NASA Science — Mars Reconnaissance Orbiter"
+    },
+    {
+     "titulo": "The maps that chose the landing sites",
+     "texto": "With CRISM and SHARAD I looked for minerals that only form with water, and for ice beneath the surface; my maps were used to choose where Phoenix, Curiosity and Perseverance would set down.",
+     "fuente": "NASA Science — Mars Reconnaissance Orbiter"
+    },
+    {
+     "titulo": "Everyone's relay",
+     "texto": "With my UHF antenna I collect the data from the machines on the surface and pass them on to Earth with my big antenna: Spirit, Opportunity, Phoenix, Curiosity, InSight and Perseverance have all spoken through me.",
+     "fuente": "NASA Science — Mars Reconnaissance Orbiter"
+    }
+   ],
+   "personas": [
+    {
+     "nombre": "Alfred McEwen",
+     "papel": "HiRISE principal investigator at the University of Arizona"
+    },
+    {
+     "nombre": "Richard Zurek",
+     "papel": "project scientist at JPL"
+    }
+   ],
+   "fuentes": [
+    {
+     "texto": "NASA Science — Mars Reconnaissance Orbiter",
+     "url": "https://science.nasa.gov/mission/mars-reconnaissance-orbiter/"
+    },
+    {
+     "texto": "NASA JPL — Mars Reconnaissance Orbiter",
+     "url": "https://www.jpl.nasa.gov/missions/mars-reconnaissance-orbiter/"
+    }
+   ],
+   "turnos": [
+    {
+     "id": "mro_1",
+     "pregunta": "What do you see from up there?",
+     "opciones": [
+      "Objects smaller than a metre",
+      "Only clouds and dust"
+     ],
+     "texto_explorador": "From 300 km up I can make out things smaller than a metre: I have even seen Perseverance's parachute lying on the ground.",
+     "texto_cientifico": "HiRISE resolves about 30 cm per pixel from low Martian orbit, and that is enough to tell rovers, parachutes and layers of rock apart.",
+     "fuente": "https://science.nasa.gov/mission/mars-reconnaissance-orbiter/"
+    },
+    {
+     "id": "mro_2",
+     "pregunta": "Why do the rovers talk through you?",
+     "opciones": [
+      "Because my antenna is bigger",
+      "Because I am faster"
+     ],
+     "texto_explorador": "The rovers have little energy to spare for talking; I pass overhead, pick up their data and send them to Earth with my big antenna.",
+     "texto_cientifico": "The UHF link of the surface vehicles is low power; the orbiter acts as a relay and forwards the data in X band with its high-gain antenna.",
+     "fuente": "https://science.nasa.gov/mission/mars-reconnaissance-orbiter/"
+    },
+    {
+     "id": "mro_3",
+     "pregunta": "How long were you meant to last?",
+     "opciones": [
+      "A little over two years",
+      "Twenty years"
+     ],
+     "texto_explorador": "The prime mission was planned for a little over two years. In 2026 I completed twenty in orbit.",
+     "texto_cientifico": "The prime science phase was planned as a short mission after the 2006 orbital insertion; the mission has been extended again and again and in 2026 it marks twenty years at Mars.",
+     "fuente": "https://science.nasa.gov/mission/mars-reconnaissance-orbiter/"
+    }
+   ],
+   "puntos3d": [
+    {
+     "id": "cuerpo",
+     "pos": [
+      1.38,
+      -1.12,
+      -2.48
+     ],
+     "normal": [
+      0.0,
+      0.0,
+      -1.0
+     ],
+     "titulo": "The body",
+     "texto": "My body carries the electronics, the fuel and the two antennas: the big one for talking to Earth and the UHF one for listening to the rovers."
+    },
+    {
+     "id": "antena",
+     "pos": [
+      -12.55,
+      13.42,
+      -2.52
+     ],
+     "normal": [
+      -1.0,
+      0.0,
+      0.0
+     ],
+     "titulo": "The high-gain antenna",
+     "texto": "This three-metre antenna is the one that sends the images to Earth: without it, HiRISE would have been of no use."
+    },
+    {
+     "id": "panel",
+     "pos": [
+      -4.19,
+      -16.49,
+      -28.15
+     ],
+     "normal": [
+      -1.0,
+      0.0,
+      0.0
+     ],
+     "titulo": "A solar wing",
+     "texto": "My two solar wings unfold one on each side and supply power to the instruments and to the relay."
+    },
+    {
+     "id": "paneles",
+     "pos": [
+      -3.79,
+      -20.88,
+      27.37
+     ],
+     "normal": [
+      -1.0,
+      0.0,
+      0.0
+     ],
+     "titulo": "The port wing",
+     "texto": "With the two wings I charge the batteries during the Martian day, so that I can keep working at night."
+    },
+    {
+     "id": "hirise",
+     "pos": [
+      -2.76,
+      -20.28,
+      -5.59
+     ],
+     "normal": [
+      0.0,
+      -1.0,
+      0.0
+     ],
+     "titulo": "HiRISE",
+     "texto": "HiRISE goes here, my telescope: the instrument that has returned the most images of the surface of Mars."
+    }
+   ]
+  },
+  {
+   "id": "maven",
+   "nombre": "MAVEN",
+   "nombre_mapa": "MAVEN",
+   "cuerpo": "Mars",
+   "lugar": "In orbit around Mars, no signal since December 6, 2025",
+   "anio": 2014,
+   "anio_tipo": "llegada",
+   "estado": "dead",
+   "estado_texto": {
+    "texto_explorador": "I stopped answering on December 6, 2025, as I passed behind Mars. I have not spoken since.",
+    "texto_cientifico": "Signal lost on December 6, 2025 during an occultation behind Mars; a review board concluded in February 2026 that the spacecraft was not recoverable. Eleven years in orbit, a decade more than planned."
+   },
+   "ficha_resumen": "The first mission dedicated to the upper atmosphere of Mars: it measured how much air the planet loses to space, and why. It was meant to last one year and lasted eleven, and along the way it served as a relay for the vehicles on the surface.",
+   "color": "#8e6bb0",
+   "mapa": {
+    "tipo": "espacio"
+   },
+   "hitos": [
+    {
+     "titulo": "Measuring the air that escapes",
+     "texto": "I was the first mission dedicated to the upper atmosphere of Mars: I measured how much gas the solar wind carries away and in what form it leaves.",
+     "fuente": "NASA Science — MAVEN"
+    },
+    {
+     "titulo": "The answer to the lost climate",
+     "texto": "Using argon isotope ratios and loss measurements I showed that Mars lost a good part of its atmosphere to space, and with it its stable liquid water.",
+     "fuente": "NASA Science — MAVEN"
+    },
+    {
+     "titulo": "The last silence",
+     "texto": "On December 6, 2025 I passed behind Mars and never answered again; in February 2026 it was declared that I was not recoverable, after eleven years in orbit.",
+     "fuente": "NASA — NASA Says Farewell to MAVEN, Declares End of Mission"
+    }
+   ],
+   "personas": [
+    {
+     "nombre": "Bruce Jakosky",
+     "papel": "MAVEN principal investigator at LASP, University of Colorado Boulder"
+    },
+    {
+     "nombre": "Shannon Curry",
+     "papel": "principal investigator of the mission since 2021"
+    }
+   ],
+   "fuentes": [
+    {
+     "texto": "NASA Science — MAVEN",
+     "url": "https://science.nasa.gov/mission/maven/"
+    },
+    {
+     "texto": "NASA — NASA Says Farewell to MAVEN, Declares End of Mission",
+     "url": "https://www.nasa.gov/news-release/nasa-says-farewell-to-maven-mars-mission-hosts-media-call-today/"
+    }
+   ],
+   "turnos": [
+    {
+     "id": "maven_1",
+     "pregunta": "What carried off the air of Mars?",
+     "opciones": [
+      "The solar wind",
+      "The gravity of Jupiter"
+     ],
+     "texto_explorador": "The solar wind: it tears ions out of the upper atmosphere and carries them into space. That is what I have been measuring.",
+     "texto_cientifico": "Ion loss driven by the solar wind and by ultraviolet radiation: my job was to quantify that escape and its history.",
+     "fuente": "https://science.nasa.gov/mission/maven/"
+    },
+    {
+     "id": "maven_2",
+     "pregunta": "Why did you fall silent?",
+     "opciones": [
+      "I passed behind Mars and did not come back",
+      "I ran out of fuel"
+     ],
+     "texto_explorador": "I passed behind Mars on December 6, 2025 and never gave a signal again. They have not been able to recover me.",
+     "texto_cientifico": "Signal lost during an occultation on December 6, 2025; the review board of February 2026 concluded that the spacecraft was not recoverable.",
+     "fuente": "https://science.nasa.gov/mission/maven/"
+    },
+    {
+     "id": "maven_3",
+     "pregunta": "How long did your mission last?",
+     "opciones": [
+      "One year",
+      "Eleven years"
+     ],
+     "texto_explorador": "I was designed for one year and lasted eleven: a decade more than the plan said.",
+     "texto_cientifico": "Prime mission of one Martian year; it operated for more than eleven years in orbit, until December 2025.",
+     "fuente": "https://science.nasa.gov/mission/maven/"
+    }
+   ],
+   "puntos3d": [
+    {
+     "id": "maven-p1",
+     "pos": [
+      -0.05,
+      1.35,
+      -0.93
+     ],
+     "normal": [
+      0.0,
+      1.0,
+      0.0
+     ],
+     "titulo": "The whole spacecraft",
+     "texto": "The body with its eight instruments, the four solar wings and the two-metre antenna. NASA's model comes as a single mesh and does not allow more parts to be separated."
+    }
+   ]
+  },
+  {
+   "id": "perseverance",
+   "nombre": "Perseverance",
+   "nombre_mapa": "Perseverance",
+   "cuerpo": "Mars",
+   "lugar": "Jezero Crater, 18.44° N 77.45° E",
+   "anio": 2021,
+   "anio_tipo": "llegada",
+   "estado": "works",
+   "estado_texto": {
+    "texto_explorador": "I am still here and I still move. I am not abandoned: I am working, and that is why I am an exception on this site.",
+    "texto_cientifico": "Operational in Jezero crater since February 18, 2021. In October 2026 my odometer read 45.22 km, the distance record on another world, ahead of Opportunity's 45.16 km."
+   },
+   "ficha_resumen": "The heaviest rover ever to land on Mars: 1,025 kg, 23 cameras and two microphones. It looks for signs of ancient life in the Jezero delta, stores rock cores in sealed tubes and carried Ingenuity, the first helicopter to fly on another world.",
+   "excepcion": "It is still working, which makes it an exception on this site. It is here because it is the successor to Spirit and Opportunity: the same class of machine as the other two, told while it can still move. The day it stops, its story will already be written.",
+   "color": "#c1553a",
+   "mapa": {
+    "tipo": "marte",
+    "lat": 18.4447,
+    "lon": 77.4508
+   },
+   "hitos": [
+    {
+     "titulo": "The seven minutes",
+     "texto": "On February 18, 2021 I entered the atmosphere at about 20,000 km/h and touched down in Jezero seven minutes later: a sky crane lowered me on cables and then flew away so that it would not fall on top of me.",
+     "fuente": "NASA Science — Mars 2020: Perseverance Rover"
+    },
+    {
+     "titulo": "The first sealed tube",
+     "texto": "In September 2021 I drilled my first rock and stored the core in a sealed tube; since then I have been leaving samples on the ground, waiting for a mission to come and collect them.",
+     "fuente": "NASA Science — Mars 2020: Perseverance Rover"
+    },
+    {
+     "titulo": "The distance record",
+     "texto": "In October 2026 my odometer reached 45.22 km and I beat Opportunity's record, which took almost fifteen years to cover 45.16.",
+     "fuente": "NASA Science — Record-Setting Rover: Perseverance Goes the Distance"
+    }
+   ],
+   "personas": [
+    {
+     "nombre": "Ken Farley",
+     "papel": "Mars 2020 project scientist at Caltech"
+    },
+    {
+     "nombre": "Katie Stack Morgan",
+     "papel": "deputy project scientist at JPL; she studies the sedimentary rocks of Jezero"
+    }
+   ],
+   "fuentes": [
+    {
+     "texto": "NASA Science — Mars 2020: Perseverance Rover",
+     "url": "https://science.nasa.gov/mission/mars-2020-perseverance/"
+    },
+    {
+     "texto": "NASA JPL — Mars 2020 Mission",
+     "url": "https://www.jpl.nasa.gov/missions/mars-2020-perseverance/"
+    }
+   ],
+   "turnos": [
+    {
+     "id": "perseverance_1",
+     "pregunta": "What are you looking for in the crater?",
+     "opciones": [
+      "Signs of ancient life",
+      "A place to land"
+     ],
+     "texto_explorador": "I am looking for signs of ancient life in the rocks of the delta: a river used to flow into a lake here, billions of years ago.",
+     "texto_cientifico": "I am looking for biosignatures in the sedimentary rocks of the Jezero delta, a palaeolake from about 3.700 million years ago.",
+     "fuente": "https://science.nasa.gov/mission/mars-2020-perseverance/"
+    },
+    {
+     "id": "perseverance_2",
+     "pregunta": "Why do you keep tubes of rock?",
+     "opciones": [
+      "So they can come back to Earth",
+      "To build a museum on Mars"
+     ],
+     "texto_explorador": "I keep them sealed and leave them on the ground, so that a future mission can pick them up and bring them back to Earth.",
+     "texto_cientifico": "They are rock cores, sealed and deposited in a depot; a sample return campaign would collect them for analysis in laboratories on Earth.",
+     "fuente": "https://science.nasa.gov/mission/mars-2020-perseverance/"
+    },
+    {
+     "id": "perseverance_3",
+     "pregunta": "How do you drive without GPS?",
+     "opciones": [
+      "With cameras and a map",
+      "With a cable from Earth"
+     ],
+     "texto_explorador": "I look with my cameras, I map what is in front of me and the team decides which way to go; then I drive on my own.",
+     "texto_cientifico": "I navigate with navigation images and odometry, and with AutoNav on the difficult stretches; the route is approved by the team on the ground.",
+     "fuente": "https://www.jpl.nasa.gov/missions/mars-2020-perseverance/"
+    }
+   ],
+   "puntos3d": [
+    {
+     "id": "cuerpo",
+     "pos": [
+      0.0,
+      1.5,
+      -0.14
+     ],
+     "normal": [
+      0.0,
+      1.0,
+      0.0
+     ],
+     "titulo": "The body",
+     "texto": "My body is a box 2 by 2.7 metres across, holding the computer, the batteries and the instruments on board."
+    },
+    {
+     "id": "mastil",
+     "pos": [
+      0.08,
+      1.42,
+      0.25
+     ],
+     "normal": [
+      0.0,
+      1.0,
+      0.0
+     ],
+     "titulo": "The camera mast",
+     "texto": "At the top of the mast I carry Mastcam-Z and the two navigation cameras: with them I look before taking each step."
+    },
+    {
+     "id": "torreta",
+     "pos": [
+      0.43,
+      1.45,
+      0.99
+     ],
+     "normal": [
+      0.0,
+      1.0,
+      0.0
+     ],
+     "titulo": "The arm turret",
+     "texto": "At the end of the arm is the turret: that is where the drill, PIXL, SHERLOC and WATSON sit, the tools that look at the rock up close."
+    },
+    {
+     "id": "rtg",
+     "pos": [
+      0.0,
+      1.55,
+      -1.25
+     ],
+     "normal": [
+      0.0,
+      1.0,
+      0.0
+     ],
+     "titulo": "The generator",
+     "texto": "At the back I carry a plutonium thermoelectric generator: it does not depend on the Sun, and that is why I can keep working in a dust storm."
+    },
+    {
+     "id": "antena",
+     "pos": [
+      0.42,
+      1.4,
+      -0.39
+     ],
+     "normal": [
+      0.0,
+      1.0,
+      0.0
+     ],
+     "titulo": "The high-gain antenna",
+     "texto": "With this antenna I talk directly to Earth; the rest of the time I use the orbiters as a relay."
+    }
+   ]
+  },
+  {
+   "id": "juno",
+   "nombre": "Juno",
+   "nombre_mapa": "Juno",
+   "cuerpo": "Space",
+   "lugar": "In polar orbit around Jupiter since July 4, 2016",
+   "anio": 2016,
+   "anio_tipo": "llegada",
+   "estado": "works",
+   "estado_texto": {
+    "texto_explorador": "I am still going round Jupiter, with the mission extended. I am not abandoned: I work, and that is why I am an exception on this site.",
+    "texto_cientifico": "In polar orbit around Jupiter since July 4, 2016. The mission was extended beyond September 2025 and it is still operating in 2026, with the instruments exposed to the radiation of the planet."
+   },
+   "ficha_resumen": "The first spacecraft to go in beneath the clouds of Jupiter: a hexagonal body, three solar wings and a titanium vault for the electronics. It mapped the interior of the planet, its polar cyclones and the volcanoes of Io.",
+   "excepcion": "It is still working, which makes it an exception on this site. It is here because its mission is already over on paper and its ending is written: the radiation of Jupiter is shutting its instruments down one by one, and it will stay in orbit until contact is lost.",
+   "color": "#c9a227",
+   "mapa": {
+    "tipo": "espacio"
+   },
+   "hitos": [
+    {
+     "titulo": "Entering Jupiter's orbit",
+     "texto": "On July 4, 2016 I braked for 35 minutes to settle into a polar orbit around Jupiter, after five years and 2,800 million kilometres.",
+     "fuente": "NASA Science — Juno"
+    },
+    {
+     "titulo": "The cyclones at the poles",
+     "texto": "In my first year I discovered that the poles of Jupiter are covered with giant cyclones packed against one another, something no spacecraft had been able to see before.",
+     "fuente": "NASA Science — Juno"
+    },
+    {
+     "titulo": "The volcanoes of Io",
+     "texto": "In 2023 and 2024 I passed close to Io and photographed erupting volcanoes and lakes of lava: it is the most volcanic body in the solar system.",
+     "fuente": "NASA Science — Juno"
+    }
+   ],
+   "personas": [
+    {
+     "nombre": "Scott Bolton",
+     "papel": "Juno principal investigator at the Southwest Research Institute"
+    },
+    {
+     "nombre": "Steve Levin",
+     "papel": "project scientist at JPL"
+    }
+   ],
+   "fuentes": [
+    {
+     "texto": "NASA Science — Juno",
+     "url": "https://science.nasa.gov/mission/juno/"
+    },
+    {
+     "texto": "NASA JPL — Juno",
+     "url": "https://www.jpl.nasa.gov/missions/juno/"
+    }
+   ],
+   "turnos": [
+    {
+     "id": "juno_1",
+     "pregunta": "Why do you have such big wings?",
+     "opciones": [
+      "Because Jupiter is very far from the Sun",
+      "Because they weigh less"
+     ],
+     "texto_explorador": "Because very little light reaches Jupiter: I need three huge wings to gather enough power. I am the first spacecraft in the outer solar system to fly on solar panels.",
+     "texto_cientifico": "At 5 AU from the Sun the irradiance is about 25 times lower than at Earth; the three wings, about nine metres each, add up to some 60 m² of cells.",
+     "fuente": "https://science.nasa.gov/mission/juno/"
+    },
+    {
+     "id": "juno_2",
+     "pregunta": "What protects you from the radiation?",
+     "opciones": [
+      "A titanium vault",
+      "A shield of ice"
+     ],
+     "texto_explorador": "A titanium vault around the electronics: the brain of the spacecraft sits inside, safe from the radiation of Jupiter.",
+     "texto_cientifico": "A titanium vault one centimetre thick that wraps the computer and the critical electronics, the first use of this shielding in a planetary mission.",
+     "fuente": "https://www.jpl.nasa.gov/missions/juno/"
+    },
+    {
+     "id": "juno_3",
+     "pregunta": "When do you finish?",
+     "opciones": [
+      "When contact is lost",
+      "Next month"
+     ],
+     "texto_explorador": "When contact is lost. My mission has already been extended and I keep going round as long as the instruments hold out.",
+     "texto_cientifico": "The mission was extended beyond September 2025 and continues until the signal is lost; the original plan called for a controlled entry into Jupiter at the end.",
+     "fuente": "https://science.nasa.gov/mission/juno/"
+    }
+   ],
+   "puntos3d": [
+    {
+     "id": "cuerpo",
+     "pos": [
+      0.67,
+      1.22,
+      -0.01
+     ],
+     "normal": [
+      0.0,
+      1.0,
+      0.0
+     ],
+     "titulo": "The body",
+     "texto": "My body is a spinning hexagonal prism: the spacecraft turns to stay stable without using fuel."
+    },
+    {
+     "id": "antena",
+     "pos": [
+      0.01,
+      1.88,
+      0.0
+     ],
+     "normal": [
+      0.0,
+      1.0,
+      0.0
+     ],
+     "titulo": "The high-gain antenna",
+     "texto": "The 2.5-metre antenna sits on top, always pointing at Earth: through it I send the JunoCam images and the data from the instruments."
+    },
+    {
+     "id": "paneles",
+     "pos": [
+      -4.5,
+      0.15,
+      0.0
+     ],
+     "normal": [
+      0.0,
+      1.0,
+      0.0
+     ],
+     "titulo": "The solar wings",
+     "texto": "Three wings of eleven panels each, set out like a star around the body. So little light reaches here that without them there would be no mission."
+    },
+    {
+     "id": "boveda",
+     "pos": [
+      -0.12,
+      -1.2,
+      0.0
+     ],
+     "normal": [
+      0.0,
+      -1.0,
+      0.0
+     ],
+     "titulo": "The vault and the engine",
+     "texto": "Below the body are the main engine and the tanks; inside, the titanium vault protects the electronics from radiation."
+    }
+   ]
+  },
+  {
+   "id": "osiris-rex",
+   "nombre": "OSIRIS-REx",
+   "nombre_mapa": "OSIRIS-REx",
+   "cuerpo": "Space",
+   "lugar": "On its way to the asteroid Apophis, after bringing samples back from Bennu",
+   "anio": 2016,
+   "anio_tipo": "lanzamiento",
+   "estado": "works",
+   "estado_texto": {
+    "texto_explorador": "I am still flying, now on my way to Apophis, but my mission to bring back a sample is already complete. I am not abandoned: I am a reused spacecraft.",
+    "texto_cientifico": "En route to Apophis, with arrival planned for June 2029, after flying past Earth on September 23, 2025. The capsule with 121.6 grams of Bennu returned on September 24, 2023."
+   },
+   "ficha_resumen": "The spacecraft that went to an asteroid, took a sample and brought it back: 121.6 grams of Bennu that landed in the Utah desert in 2023. What stayed in space was not switched off: it is now called OSIRIS-APEX and is on its way to Apophis.",
+   "excepcion": "It is still working, which makes it an exception on this site. It is here because its sample-collection mission is already over: the capsule came back and was opened, and what continues in space is the spacecraft reused for another job, on its way to an asteroid that will pass close to Earth in 2029.",
+   "color": "#b5643c",
+   "mapa": {
+    "tipo": "espacio"
+   },
+   "hitos": [
+    {
+     "titulo": "Reaching Bennu",
+     "texto": "On December 3, 2018 I reached the asteroid Bennu, about 500 metres across, and mapped it for almost two years before choosing where to touch down.",
+     "fuente": "NASA Science — OSIRIS-APEX"
+    },
+    {
+     "titulo": "The touch and the sample",
+     "texto": "On October 20, 2020 I went down to the surface, fired nitrogen and caught dust and stones: 121.6 grams of Bennu, stored in my capsule.",
+     "fuente": "NASA Science — OSIRIS-APEX"
+    },
+    {
+     "titulo": "The capsule came back",
+     "texto": "On September 24, 2023 I released the capsule over the Utah desert; it was opened in Houston and today the sample is being studied in laboratories around the world.",
+     "fuente": "NASA Science — OSIRIS-APEX"
+    },
+    {
+     "titulo": "Second mission: Apophis",
+     "texto": "In September 2025 I passed 3,438 km from Earth and went on towards Apophis, which I will reach in 2029 to see how its close pass by our planet has changed it.",
+     "fuente": "NASA Science — OSIRIS-APEX"
+    }
+   ],
+   "personas": [
+    {
+     "nombre": "Dante Lauretta",
+     "papel": "OSIRIS-REx principal investigator at the University of Arizona"
+    },
+    {
+     "nombre": "Rich Burns",
+     "papel": "project manager at NASA's Goddard Space Flight Center"
+    }
+   ],
+   "fuentes": [
+    {
+     "texto": "NASA Science — OSIRIS-APEX",
+     "url": "https://science.nasa.gov/mission/osiris-apex/"
+    },
+    {
+     "texto": "NASA — OSIRIS-REx",
+     "url": "https://science.nasa.gov/mission/osiris-rex/"
+    }
+   ],
+   "turnos": [
+    {
+     "id": "osiris-rex_1",
+     "pregunta": "How much material did you bring?",
+     "opciones": [
+      "121.6 grams",
+      "Barely a gram"
+     ],
+     "texto_explorador": "121.6 grams of stones and dust from Bennu. I picked up quite a lot more than the mission needed as a minimum.",
+     "texto_cientifico": "The recovered sample mass was 121.6 grams, well above the 60-gram goal of the mission.",
+     "fuente": "https://science.nasa.gov/mission/osiris-apex/"
+    },
+    {
+     "id": "osiris-rex_2",
+     "pregunta": "Where is that sample now?",
+     "opciones": [
+      "In laboratories on Earth",
+      "It is still inside you"
+     ],
+     "texto_explorador": "On Earth: the capsule came down in Utah, was opened in Houston and the stones were shared out among laboratories around the world.",
+     "texto_cientifico": "The capsule landed on September 24, 2023 and the material is kept at the Johnson Space Center; part of it is distributed to international teams.",
+     "fuente": "https://science.nasa.gov/mission/osiris-apex/"
+    },
+    {
+     "id": "osiris-rex_3",
+     "pregunta": "Why are you still in space?",
+     "opciones": [
+      "They reused me for Apophis",
+      "I got lost on the way"
+     ],
+     "texto_explorador": "Because I am still useful: they changed my name and my mission, and now I am going to see what the close pass by Earth does to Apophis.",
+     "texto_cientifico": "The spacecraft, renamed OSIRIS-APEX, will study the changes in Apophis after its approach to Earth in April 2029; arrival is planned for June 2029.",
+     "fuente": "https://science.nasa.gov/mission/osiris-apex/"
+    }
+   ],
+   "puntos3d": [
+    {
+     "id": "cuerpo",
+     "pos": [
+      -5.3,
+      2.06,
+      0.03
+     ],
+     "normal": [
+      -1.0,
+      0.0,
+      0.0
+     ],
+     "titulo": "The body",
+     "texto": "A box with the instruments, the computer and the propulsion system; the capsule with the sample travelled inside it too."
+    },
+    {
+     "id": "antena",
+     "pos": [
+      7.4,
+      2.52,
+      0.0
+     ],
+     "normal": [
+      1.0,
+      0.0,
+      0.0
+     ],
+     "titulo": "The high-gain antenna",
+     "texto": "The fixed two-metre antenna: the images of Bennu came through it, and the data are now sent towards Apophis through it."
+    },
+    {
+     "id": "paneles",
+     "pos": [
+      0.36,
+      -0.7,
+      8.5
+     ],
+     "normal": [
+      0.0,
+      1.0,
+      0.0
+     ],
+     "titulo": "The solar wings",
+     "texto": "Two wings of panels that give the spacecraft its power; they run the instruments and the engines."
+    },
+    {
+     "id": "capsula",
+     "pos": [
+      0.0,
+      7.0,
+      0.0
+     ],
+     "normal": [
+      0.0,
+      1.0,
+      0.0
+     ],
+     "titulo": "The return capsule",
+     "texto": "This is where the Bennu sample was: this capsule separated from me, entered the atmosphere and landed in Utah in September 2023."
+    },
+    {
+     "id": "tagsam",
+     "pos": [
+      0.0,
+      -4.05,
+      0.0
+     ],
+     "normal": [
+      0.0,
+      -1.0,
+      0.0
+     ],
+     "titulo": "The TAGSAM head",
+     "texto": "At the end of the arm is the round head that touched the surface of Bennu and blew nitrogen to lift the dust."
+    }
+   ]
   }
  ],
  "modos": {
